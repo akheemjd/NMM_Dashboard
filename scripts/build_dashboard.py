@@ -5,7 +5,7 @@ Run this to rebuild index.html. Never patch it manually again.
 import json, os
 from datetime import datetime
 
-OUT = os.path.expanduser('~/northern-mile-dashboard/web/index.html')
+OUT = os.path.expanduser('~/northern-mile-dashboard/docs/index.html')
 
 # ── CSS ──
 CSS = """
@@ -217,7 +217,7 @@ $$SCRIPTS$$
 # ── JavaScript ──
 SCRIPTS = """
 <script>
-const DB='../data/';
+const DB='data/';
 const BLUE='#1a3a5c',RED='#c41e3a',MUTED='#6b7280',LIGHT='#eaecf0';
 function ft(iso){return iso?new Date(iso).toLocaleString('en-CA',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'';}
 async function LJ(p){const r=await fetch(p);if(!r.ok)throw Error('HTTP '+r.status);return r.json();}
