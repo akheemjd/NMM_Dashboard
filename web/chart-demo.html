@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Chart Demo</title>
+<style>
+body{background:#fff;font-family:sans-serif;padding:40px}
+h2{color:#1a3a5c;margin-bottom:20px}
+</style></head><body>
+
+<h2>Fuel Prices by Province</h2>
+<svg id="fuelchart" width="800" height="400"></svg>
+
+<script>
+// Brand colors
+const BLUE='#1a3a5c',RED='#c41e3a',MUTED='#6b7280',LIGHT='#f0f2f4';
+
+const provinces=['BC','AB','SK','MB','ON','QC','NB','NS','PE','NL'];
+const diesel=[178.5,158.9,162.3,165.7,171.2,175.8,173.4,174.9,176.1,182.5];
+const gasoline=[185.9,152.4,158.7,160.2,167.8,172.5,169.1,170.3,171.8,178.0];
+
+const svg=document.getElementById('fuelchart');
+const W=800,H=400,pad={top:30,right:120,bottom:50,left:40};
+const pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
+const maxVal=Math.max(...diesel,...gasoline);
+const y=v=>pad.top+ph-(v/maxVal)*ph*0.85;
+const barW=pw/provinces.length*0.28;
+const gap=pw/provinces.length;
+
+// Grid lines
+for(let i=0;i<=4;i++){
+  const gv=Math.round(maxVal*i/4);
+  const gy=y(gv);
+  svg.innerHTML+=`<line x1="${pad.left}" y1="${gy}" x2="${W-pad.right}" y2="${gy}" stroke="${LIGHT}" stroke-width="1"/>`;
+  svg.innerHTML+=`<text x="${pad.left-8}" y="${gy+4}" fill="${MUTED}" font-size="11" text-anchor="end">${gv}</text>`;
+}
+
+// Bars
+provinces.forEach((p,i)=>{
+  const cx=pad.left+gap*i+gap*0.5;
+  const dx=cx-barW*0.6, gx=cx+barW*0.1;
+  // Diesel
+  const dh=y(diesel[i]), gh=y(gasoline[i]);
+  svg.innerHTML+=`<rect x="${dx}" y="${dh}" width="${barW}" height="${H-pad.bottom-dh}" fill="${BLUE}" rx="3"/>`;
+  // Gas
+  svg.innerHTML+=`<rect x="${gx}" y="${gh}" width="${barW}" height="${H-pad.bottom-gh}" fill="${RED}" rx="3"/>`;
+  // Province label
+  svg.innerHTML+=`<text x="${cx}" y="${H-pad.bottom+20}" fill="${BLUE}" font-size="11" font-weight="600" text-anchor="middle">${p}</text>`;
+
+  // Value on tallest bar only
+  const tallest=Math.max(diesel[i],gasoline[i]);
+  const isD=diesel[i]===tallest;
+  if(tallest>=maxVal*0.9){
+    const bx=isD?dx:gx;
+    svg.innerHTML+=`<text x="${bx+barW/2}" y="${y(tallest)-6}" fill="${isD?BLUE:RED}" font-size="10" font-weight="700" text-anchor="middle">${tallest}</text>`;
+  }
+});
+
+// Averages box
+const dAvg=diesel.reduce((a,b)=>a+b)/diesel.length;
+const gAvg=gasoline.reduce((a,b)=>a+b)/gasoline.length;
+const boxX=W-pad.right+10,boxY=pad.top+10;
+svg.innerHTML+=`
+  <rect x="${boxX}" y="${boxY}" width="100" height="42" rx="6" fill="white" stroke="${LIGHT}" stroke-width="1"/>
+  <circle cx="${boxX+10}" cy="${boxY+14}" r="4" fill="${BLUE}"/>
+  <text x="${boxX+20}" y="${boxY+18}" fill="${BLUE}" font-size="11" font-weight="600">Diesel ${dAvg.toFixed(1)}¢</text>
+  <circle cx="${boxX+10}" cy="${boxY+32}" r="4" fill="${RED}"/>
+  <text x="${boxX+20}" y="${boxY+36}" fill="${RED}" font-size="11" font-weight="600">Gas ${gAvg.toFixed(1)}¢</text>
+  <line x1="${pad.left}" y1="${y(dAvg)}" x2="${W-pad.right}" y2="${y(dAvg)}" stroke="${BLUE}" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+  <line x1="${pad.left}" y1="${y(gAvg)}" x2="${W-pad.right}" y2="${y(gAvg)}" stroke="${RED}" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.4"/>
+`;
+
+// Legend
+svg.innerHTML+=`
+  <rect x="${pad.left}" y="${pad.top-8}" width="12" height="12" rx="3" fill="${BLUE}"/>
+  <text x="${pad.left+18}" y="${pad.top+3}" fill="${BLUE}" font-size="11" font-weight="600">Diesel</text>
+  <rect x="${pad.left+70}" y="${pad.top-8}" width="12" height="12" rx="3" fill="${RED}"/>
+  <text x="${pad.left+88}" y="${pad.top+3}" fill="${RED}" font-size="11" font-weight="600">Gasoline</text>
+`;
+</script>
+</body></html>
