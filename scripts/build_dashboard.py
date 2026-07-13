@@ -93,8 +93,8 @@ body{
 
 .leaflet-container{background:#f0f0f0!important;font-family:inherit;z-index:1}
 .leaflet-tile-pane{z-index:1}
+.leaflet-popup-pane{z-index:2000!important}
 .leaflet-control-zoom{z-index:2!important}
-.leaflet-popup-pane{z-index:7!important}
 .leaflet-control-zoom a{background:var(--card)!important;color:var(--text)!important;border-color:var(--light)!important}
 .leaflet-popup-content-wrapper{background:var(--card)!important;border-radius:8px!important;font-size:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)!important}
 

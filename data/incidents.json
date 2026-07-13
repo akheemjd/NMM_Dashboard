@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-274716",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at GUELPH LINE, Milton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.4912624,
-      "lng": -79.98811157,
-      "start": 1783983480,
-      "end": null,
-      "updated": 1783983480
-    },
-    {
       "id": "ON-274709",
       "province": "ON",
       "highway": "HWY 520",
@@ -804,10 +788,26 @@
       "start": 1784167200,
       "end": 1784282400,
       "updated": 1783954320
+    },
+    {
+      "id": "ON-274482",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 400 Southbound  between QUARRY RD/SIMCOE 59 and QUARRY RD/SIMCOE 59, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.767105,
+      "lng": -79.69368,
+      "start": 1784545200,
+      "end": 1784847600,
+      "updated": 1783953360
     }
   ],
   "total": 50,
-  "updated": "2026-07-13T23:07:55.913436+00:00",
+  "updated": "2026-07-13T23:38:54.228980+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
