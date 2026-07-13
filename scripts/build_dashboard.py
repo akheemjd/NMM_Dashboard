@@ -137,7 +137,6 @@ HTML = """<!DOCTYPE html>
     <div class="banner-brand">NORTHERN MILE MEDIA</div>
     <div class="banner-sub">For the people who keep Canada moving</div>
   </div>
-  <span class="pill live">Live Dashboard</span>
 </div>
 
 <div class="main">
