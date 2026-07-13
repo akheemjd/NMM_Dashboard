@@ -249,8 +249,8 @@ function renderExchange(d){
 
   if(hist.length<2)return'<div style="font-size:34px;font-weight:700;color:var(--blue)">1 USD = '+d.current.toFixed(4)+' CAD</div>';
 
-  const vals=hist.map(h=>h.rate);
-  const dates=hist.map(h=>new Date(h.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'}));
+  const vals=hist.map(h=>h.rate).reverse();
+  const dates=hist.map(h=>new Date(h.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})).reverse();
   const minV=Math.min(...vals),maxV=Math.max(...vals),range=maxV-minV||0.001;
   const W=340,H=180,pad={top:14,right:14,bottom:28,left:36};
   const pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
