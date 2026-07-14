@@ -178,14 +178,20 @@ HTML = """<!DOCTYPE html>
 
 <div class="main">
 
-  <div style="text-align:center;padding:16px 18px;margin-bottom:4px;background:var(--bg);border:1px solid var(--light);border-radius:var(--radius)">
-    <div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:2px;">Weekly industry briefing — straight to your inbox</div>
-    <div style="font-size:11px;color:var(--muted);margin-bottom:10px;">Fuel prices, market changes, and what matters this week. No spam. One email, every Wednesday.</div>
+  <div style="background:linear-gradient(135deg,#1a3a5c 0%,#152d4a 100%);border-radius:var(--radius);padding:24px 18px;margin-bottom:14px;color:#fff;text-align:center;">
+    <div style="font-size:17px;font-weight:800;margin-bottom:4px;">📬 The Northern Mile Brief</div>
+    <div style="font-size:13px;color:#8b9ec4;margin-bottom:14px;line-height:1.5;">One email every Wednesday. Fuel prices, market shifts, and what it means for your operation. No fluff. No spam. Unsubscribe anytime.</div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:16px;font-size:10px;color:#8b9ec4;">
+      <div>✓ Weekly fuel &amp; rate snapshot</div>
+      <div>✓ Border crossing outlook</div>
+      <div>✓ Industry news that matters</div>
+    </div>
     <form id="newsletter-form" style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;max-width:420px;margin:0 auto" onsubmit="subscribeNewsletter(event)">
-      <input type="email" id="nl-email" placeholder="Your email address" required style="flex:1;min-width:180px;padding:10px 14px;border:1px solid var(--light);border-radius:6px;font-size:13px;font-family:inherit;background:var(--card);color:var(--text)">
-      <button type="submit" style="padding:10px 20px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Subscribe</button>
+      <input type="email" id="nl-email" placeholder="Your email address" required style="flex:1;min-width:180px;padding:11px 14px;border:1px solid rgba(255,255,255,.2);border-radius:6px;font-size:13px;font-family:inherit;background:rgba(255,255,255,.08);color:#fff">
+      <button type="submit" style="padding:11px 24px;background:#fff;color:#1a3a5c;border:none;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Subscribe free</button>
     </form>
-    <div id="nl-msg" style="font-size:10px;color:var(--green);margin-top:6px;display:none;"></div>
+    <div id="nl-msg" style="font-size:10px;color:#3fb950;margin-top:8px;display:none;"></div>
+    <div style="font-size:9px;color:#8b9ec4;margin-top:10px;">No spam. One email, every Wednesday. Unsubscribe anytime.</div>
   </div>
 
   <div class="card full" id="market-card">
