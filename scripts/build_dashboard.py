@@ -284,7 +284,7 @@ function renderExchange(d){
   const vals=hist.map(h=>h.rate).reverse();
   const dates=hist.map(h=>new Date(h.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})).reverse();
   const minV=Math.min(...vals),maxV=Math.max(...vals),range=maxV-minV||0.001;
-  const W=340,H=170,pad={top:10,right:10,bottom:26,left:36};
+  const W=340,H=150,pad={top:8,right:10,bottom:22,left:36};
   const pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
   const Y=v=>pad.top+ph-(v-minV)/range*ph*0.80;
   const X=i=>pad.left+(i/(vals.length-1))*pw;
