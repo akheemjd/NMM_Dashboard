@@ -44,7 +44,7 @@ body{
 .header-update{font-size:9px;color:var(--muted);white-space:nowrap}
 .card-body{min-height:30px}
 .loading{color:var(--muted);font-style:italic;padding:10px 0}.error{color:var(--red);padding:10px 0}
-#news-card .card-body{max-height:320px;overflow-y:auto}
+#news-card .card-body{max-height:400px;overflow-y:auto}
 .card-footer{font-size:9px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--light);display:flex;justify-content:space-between;align-items:center}
 .card-footer span{font-weight:500}
 
@@ -203,17 +203,16 @@ HTML = """<!DOCTYPE html>
     <div class="card-body"><div class="loading">Loading market data...</div></div>
   </div>
 
-  <div class="grid grid-2" style="margin-top:14px">
-    <div class="card" id="theft-card">
-      <div class="card-header"><h2>Cargo Theft Watch</h2><span class="pill daily">Reference</span></div>
-      <div class="sponsor-line" id="sponsor-theft"></div>
-      <div class="card-body"><div class="loading">Loading theft data...</div></div>
-    </div>
-    <div class="card" id="news-card">
-      <div class="card-header"><h2>Industry Headlines</h2><span class="pill daily">Daily</span></div>
-      <div class="sponsor-line" id="sponsor-headlines"></div>
-      <div class="card-body"><div class="loading">Loading headlines...</div></div>
-    </div>
+  <div class="card full" style="margin-top:14px" id="theft-card">
+    <div class="card-header"><h2>Cargo Theft Watch</h2><span class="pill daily">Reference</span></div>
+    <div class="sponsor-line" id="sponsor-theft"></div>
+    <div class="card-body"><div class="loading">Loading theft data...</div></div>
+  </div>
+
+  <div class="card full" style="margin-top:14px" id="news-card">
+    <div class="card-header"><h2>Industry Headlines</h2><span class="pill daily">Daily</span></div>
+    <div class="sponsor-line" id="sponsor-headlines"></div>
+    <div class="card-body"><div class="loading">Loading headlines...</div></div>
   </div>
 
 </div>
