@@ -1,52 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-275096",
+      "id": "ON-275103",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at Townline Road / Wellington Rd 33 (286KM), Cambridge. 1 left lane closed.",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at MAVIS ROAD, Mississauga. 2 centre lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.420633333,
-      "lng": -80.283305556,
-      "start": 1784064780,
+      "lanes": "2 centre lanes closed",
+      "lat": 43.58580939,
+      "lng": -79.66057369,
+      "start": 1784066520,
       "end": null,
-      "updated": 1784064780
-    },
-    {
-      "id": "ON-275092",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound  at KING ROAD, Burlington. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.32747777,
-      "lng": -79.84362835,
-      "start": 1784064540,
-      "end": null,
-      "updated": 1784064540
+      "updated": 1784066520
     },
     {
       "id": "ON-275089",
       "province": "ON",
       "highway": "HWY 671",
-      "direction": "Southbound",
-      "description": "Collision on HWY 671 Southbound  at SILVER LAKE BOAT LAUNCH SITE (W), Kenora. Lane and SOUTH shoulder closed.",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 671 Both Directions  at SILVER LAKE BOAT LAUNCH SITE (W), Kenora. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
+      "closure": true,
+      "lanes": "All lanes closed",
       "lat": 49.874706173,
       "lng": -94.126640767,
       "start": 1784064240,
       "end": null,
-      "updated": 1784064240
+      "updated": 1784064960
     },
     {
       "id": "ON-275087",
@@ -63,22 +47,6 @@
       "start": 1784064060,
       "end": null,
       "updated": 1784064060
-    },
-    {
-      "id": "ON-275081",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at CREDITVIEW RD., Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.57158919,
-      "lng": -79.67464757,
-      "start": 1784063160,
-      "end": null,
-      "updated": 1784063160
     },
     {
       "id": "ON-275066",
@@ -804,10 +772,42 @@
       "start": 1784509200,
       "end": 1784970000,
       "updated": 1784034060
+    },
+    {
+      "id": "ON-274837",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 410 Southbound  between MAYFIELD ROAD and BOVAIRD DRIVE/N JCT HWY 7, Brampton. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.75677,
+      "lng": -79.79935,
+      "start": 1784509200,
+      "end": 1784970000,
+      "updated": 1784033640
+    },
+    {
+      "id": "ON-274836",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 410 Northbound  between BOVAIRD DRIVE/N JCT HWY 7 and MAYFIELD ROAD, Brampton. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.725464,
+      "lng": -79.76526,
+      "start": 1784512800,
+      "end": 1784973600,
+      "updated": 1784032980
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T21:37:25.403903+00:00",
+  "updated": "2026-07-14T22:07:33.466033+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
