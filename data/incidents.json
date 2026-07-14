@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-274775",
+      "id": "ON-274778",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at Roseville Road, Kitchener. Right lane and right shoulder closed.",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Etobicoke Creek Express to Collector, Mississauga. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.351225,
-      "lng": -80.416886111,
-      "start": 1784006580,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.66153611,
+      "lng": -79.61094444,
+      "start": 1784008440,
       "end": null,
-      "updated": 1784006580
+      "updated": 1784008440
+    },
+    {
+      "id": "ON-274777",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Highway Maintenance on QEW Toronto bound RAMP at CAWTHRA ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.58185825,
+      "lng": -79.58355862,
+      "start": 1784007240,
+      "end": null,
+      "updated": 1784007240
     },
     {
       "id": "ON-274767",
@@ -788,26 +804,10 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783955340
-    },
-    {
-      "id": "ON-274569",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Engineering Investigation on QEW Fort Erie Bound  between DIEPPE ROAD/NORTH SERVICE ROAD and DIEPPE ROAD/NORTH SERVICE ROAD, St. Catharines. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.16737,
-      "lng": -79.20509,
-      "start": 1784167200,
-      "end": 1784282400,
-      "updated": 1783954320
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T05:31:39.516517+00:00",
+  "updated": "2026-07-14T06:01:45.643456+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
