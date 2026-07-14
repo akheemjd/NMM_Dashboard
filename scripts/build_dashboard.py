@@ -194,6 +194,10 @@ HTML = """<!DOCTYPE html>
     <div style="font-size:9px;color:#8b9ec4;margin-top:10px;">No spam. One email, every Wednesday. Unsubscribe anytime.</div>
   </div>
 
+  <div style="text-align:center;padding:8px 18px;margin-bottom:14px;font-size:13px;color:var(--muted);letter-spacing:.01em;">
+    Live data for Canadian trucking. Fuel prices. Border delays. Road incidents. Free. Always.
+  </div>
+
   <div class="card full" id="market-card">
     <div class="card-header"><h2>Market Pulse</h2><span class="pill daily">Daily</span></div>
     <div class="sponsor-line" id="sponsor-market"></div>
@@ -260,6 +264,19 @@ HTML = """<!DOCTYPE html>
     <div class="card-body"><div class="loading">Loading headlines...</div></div>
   </div>
 
+</div>
+
+<div style="text-align:center;padding:28px 18px 20px;margin-top:20px;">
+  <div style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:4px;">Get the Northern Mile Brief</div>
+  <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Fuel prices, market shifts, and what it means. Every Wednesday. No spam.</div>
+  <form id="newsletter-form-bottom" style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;max-width:400px;margin:0 auto" onsubmit="subscribeNewsletterBottom(event)">
+    <input type="email" id="nl-email-bottom" placeholder="Your email address" required style="flex:1;min-width:180px;padding:10px 14px;border:1px solid var(--light);border-radius:6px;font-size:13px;font-family:inherit;background:var(--card);color:var(--text)">
+    <button type="submit" style="padding:10px 20px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Subscribe</button>
+  </form>
+  <div id="nl-msg-bottom" style="font-size:10px;color:var(--green);margin-top:8px;display:none;"></div>
+  <div style="margin-top:16px;font-size:11px;color:var(--muted);">
+    Interested in sponsoring a module? <a href="https://northernmilemedia.com" style="color:var(--blue);font-weight:600;">Advertise with us →</a>
+  </div>
 </div>
 
 <footer style="background:#0d1117;color:#8b949e;padding:18px 24px;margin-top:20px;font-size:11px;font-family:'SF Mono',monospace;line-height:1.5;display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center;border-top:1px solid #30363d;">
@@ -553,6 +570,17 @@ function subscribeNewsletter(e){
     .then(r=>{if(!r.ok)throw new Error('Failed');msg.textContent='Check your email for a confirmation link.';msg.style.color='var(--green)';msg.style.display='block';})
     .catch(()=>{msg.textContent='Check your email to confirm. If it does not arrive, try again in a moment.';msg.style.color='var(--green)';msg.style.display='block';});
   document.getElementById('nl-email').value='';
+}
+function subscribeNewsletterBottom(e){
+  e.preventDefault();
+  const email=document.getElementById('nl-email-bottom').value.trim();
+  const msg=document.getElementById('nl-msg-bottom');
+  if(!email){msg.textContent='Please enter your email.';msg.style.color='var(--red)';msg.style.display='block';return;}
+  const ghostUrl='https://northernmilemedia.com/members/api/send-magic-link/';
+  fetch(ghostUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,emailType:'subscribe'})})
+    .then(r=>{if(!r.ok)throw new Error('Failed');msg.textContent='Check your email for a confirmation link.';msg.style.color='var(--green)';msg.style.display='block';})
+    .catch(()=>{msg.textContent='Check your email to confirm. If it does not arrive, try again in a moment.';msg.style.color='var(--green)';msg.style.display='block';});
+  document.getElementById('nl-email-bottom').value='';
 }
 
 // ── Load ──
