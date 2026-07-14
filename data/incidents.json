@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-274789",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at BROCK ROAD, Pickering. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.838709657,
-      "lng": -79.071446657,
-      "start": 1784021400,
-      "end": null,
-      "updated": 1784021400
-    },
-    {
       "id": "ON-274640",
       "province": "ON",
       "highway": "HWY 599",
@@ -808,10 +792,26 @@
       "start": 1784167200,
       "end": 1784282400,
       "updated": 1783954320
+    },
+    {
+      "id": "ON-274482",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 400 Southbound  between QUARRY RD/SIMCOE 59 and QUARRY RD/SIMCOE 59, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.767105,
+      "lng": -79.69368,
+      "start": 1784545200,
+      "end": 1784847600,
+      "updated": 1783953360
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T11:03:15.732074+00:00",
+  "updated": "2026-07-14T11:33:25.706491+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
