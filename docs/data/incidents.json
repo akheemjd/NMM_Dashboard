@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-274792",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound RAMP at HWY 89/SIMCOE ROAD 89, Innisfil. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.20325334,
+      "lng": -79.65682727,
+      "start": 1784024040,
+      "end": null,
+      "updated": 1784024040
+    },
+    {
       "id": "ON-274789",
       "province": "ON",
       "highway": "HWY 401",
@@ -792,26 +808,10 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783955400
-    },
-    {
-      "id": "ON-274570",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound  between QEW, Oakville and ERIN MILLS PKWY, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.490074,
-      "lng": -79.6733,
-      "start": 1784512800,
-      "end": 1784970000,
-      "updated": 1783955340
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T10:02:57.519960+00:00",
+  "updated": "2026-07-14T10:33:07.582588+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
