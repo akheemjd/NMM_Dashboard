@@ -48,9 +48,13 @@ body{
 .card-footer{font-size:9px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--light);display:flex;justify-content:space-between;align-items:center}
 .card-footer span{font-weight:500}
 
-.sponsor-line{display:none;font-size:9px;color:var(--muted);margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--light)}
-.sponsor-line.active{display:block}
-.sponsor-line span{font-weight:600;color:var(--text)}
+.sponsor-line{display:none;align-items:center;gap:10px;margin-bottom:10px;padding:8px 12px;background:var(--bg);border-radius:6px;font-size:11px;color:var(--muted)}
+.sponsor-line.active{display:flex}
+.sponsor-line img{height:22px;width:auto;flex-shrink:0;opacity:.85}
+.sponsor-line .sponsor-info{display:flex;flex-direction:column;gap:1px}
+.sponsor-line .sponsor-label{font-size:8px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.sponsor-line .sponsor-name{font-size:13px;font-weight:700;color:var(--text)}
+.sponsor-line .sponsor-tagline{font-size:9px;color:var(--muted)}
 
 .inds{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
 .ind{background:var(--bg);border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:5px}
@@ -520,9 +524,16 @@ async function loadAll(){
     const map={incidents:'sponsor-incidents',exchange:'sponsor-exchange',border:'sponsor-border',fuel:'sponsor-fuel',market:'sponsor-market',theft:'sponsor-theft',headlines:'sponsor-headlines'};
     Object.keys(map).forEach(k=>{
       const v=s[k];if(!v)return;const el=document.getElementById(map[k]);if(!el)return;
-      const name=typeof v==='string'?v:v.name;
-      const url=typeof v==='string'?null:v.url||null;
-      el.innerHTML=url?'Presented by <a href="'+url+'" target="_blank" style="color:var(--blue);text-decoration:none;">'+name+'</a>':'Presented by <span>'+name+'</span>';
+      const name=typeof v==='string'?v:v.name||'';
+      const tagline=typeof v==='string'?'':v.tagline||'';
+      const logo=typeof v==='string'?'':v.logo||'';
+      el.innerHTML=''
+        +(logo?'<img src="'+logo+'" alt="'+name+'">':'')
+        +'<div class="sponsor-info">'
+        +'<div class="sponsor-label">Presented by</div>'
+        +'<div class="sponsor-name">'+name+'</div>'
+        +(tagline?'<div class="sponsor-tagline">'+tagline+'</div>':'')
+        +'</div>';
       el.classList.add('active');
     });
   }).catch(()=>{});
