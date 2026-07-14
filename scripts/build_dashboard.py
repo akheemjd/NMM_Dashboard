@@ -178,6 +178,16 @@ HTML = """<!DOCTYPE html>
 
 <div class="main">
 
+  <div style="text-align:center;padding:16px 18px;margin-bottom:4px;background:var(--bg);border:1px solid var(--light);border-radius:var(--radius)">
+    <div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:2px;">Weekly industry briefing — straight to your inbox</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:10px;">Fuel prices, market changes, and what matters this week. No spam. One email, every Wednesday.</div>
+    <form id="newsletter-form" style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;max-width:420px;margin:0 auto" onsubmit="subscribeNewsletter(event)">
+      <input type="email" id="nl-email" placeholder="Your email address" required style="flex:1;min-width:180px;padding:10px 14px;border:1px solid var(--light);border-radius:6px;font-size:13px;font-family:inherit;background:var(--card);color:var(--text)">
+      <button type="submit" style="padding:10px 20px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Subscribe</button>
+    </form>
+    <div id="nl-msg" style="font-size:10px;color:var(--green);margin-top:6px;display:none;"></div>
+  </div>
+
   <div class="card full" id="market-card">
     <div class="card-header"><h2>Market Pulse</h2><span class="pill daily">Daily</span></div>
     <div class="sponsor-line" id="sponsor-market"></div>
@@ -525,6 +535,19 @@ function initCalc(dd,fd){cDists=dd.distances||{};cCities=dd.cities||[];cFuel=fd;
 function gDist(a,b){if(a===b)return 0;return cDists[a+'-'+b]||cDists[b+'-'+a]||null;}
 function gPrice(pr,f){const m={BC:'BC',AB:'AB',SK:'SK',MB:'MB',ON:'ON',QC:'QC',NB:'NB',NS:'NS',PE:'PE',NL:'NL','US-WA':'US-WA','US-OR':'US-OR','US-CA':'US-CA','US-TX':'US-TX','US-MN':'US-MN','US-IL':'US-IL','US-MI':'US-MI','US-NY':'US-NY','US-NJ':'US-NJ','US-GA':'US-GA'};const r=cFuel.provinces[m[pr]||'ON'];return r?f==='diesel'?r.diesel:r.gasoline:null;}
 function rCalc(){const fc=document.getElementById('calc-from').value,tc=document.getElementById('calc-to').value,eff=parseFloat(document.getElementById('calc-eff').value)||35,re=document.getElementById('calc-result');if(fc===tc){re.classList.remove('v');return;}const d=gDist(fc,tc);if(d===null){re.innerHTML='<div class="ccost">Route unavailable</div>';re.classList.add('v');return;}const f=cCities.find(c=>c.code===fc),t=cCities.find(c=>c.code===tc),p1=gPrice(f?f.province:'ON',cType),p2=gPrice(t?t.province:'ON',cType);if(!p1||!p2){re.innerHTML='<div class="ccost">Price unavailable</div>';re.classList.add('v');return;}const ap=(p1+p2)/2,litres=(d/100)*eff,cost=(litres*ap)/100;re.innerHTML='<div class="ccost">$'+cost.toFixed(2)+'</div><div class="cbreak"><strong>'+(f?f.name:fc)+'</strong> → <strong>'+(t?t.name:tc)+'</strong><br>'+d.toLocaleString()+' km &middot; '+eff+' L/100km &middot; '+litres.toFixed(1)+' L<br>'+(cType==='diesel'?'Diesel':'Gasoline')+': '+ap.toFixed(1)+'&cent;/L avg</div>';re.classList.add('v');}
+
+// ── Newsletter ──
+function subscribeNewsletter(e){
+  e.preventDefault();
+  const email=document.getElementById('nl-email').value.trim();
+  const msg=document.getElementById('nl-msg');
+  if(!email){msg.textContent='Please enter your email.';msg.style.color='var(--red)';msg.style.display='block';return;}
+  const ghostUrl='https://northernmilemedia.com/members/api/send-magic-link/';
+  fetch(ghostUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,emailType:'subscribe'})})
+    .then(r=>{if(!r.ok)throw new Error('Failed');msg.textContent='Check your email for a confirmation link.';msg.style.color='var(--green)';msg.style.display='block';})
+    .catch(()=>{msg.textContent='Check your email to confirm. If it does not arrive, try again in a moment.';msg.style.color='var(--green)';msg.style.display='block';});
+  document.getElementById('nl-email').value='';
+}
 
 // ── Load ──
 async function loadAll(){
