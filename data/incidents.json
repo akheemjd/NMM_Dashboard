@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-274782",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.6480224,
+      "lng": -79.6369554,
+      "start": 1784013600,
+      "end": null,
+      "updated": 1784013600
+    },
+    {
       "id": "drivebc.ca/DBC-93571",
       "province": "BC",
       "highway": {
@@ -19,6 +35,38 @@
       "start": "2026-07-13T11:57:56-07:00",
       "end": "",
       "updated": "2026-07-14T00:00:00-07:00"
+    },
+    {
+      "id": "ON-274677",
+      "province": "ON",
+      "highway": "HWY 35",
+      "direction": "Southbound",
+      "description": "Emergency Roadwork on HWY 35 Southbound  at N JCT CTY RD 121, Minden. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 44.939460086,
+      "lng": -78.711941299,
+      "start": 1783975980,
+      "end": null,
+      "updated": 1784012340
+    },
+    {
+      "id": "ON-274764",
+      "province": "ON",
+      "highway": "HWY 7290 (Lake Joseph Rd.)",
+      "direction": "Both Directions",
+      "description": "Building Fire on HWY 7290 (Lake Joseph Rd.) Both Directions  at Beacon LN / Lake Joseph Rd-N Section, Parrysound, Parry Sound. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.271366517,
+      "lng": -79.83087861,
+      "start": 1784000040,
+      "end": null,
+      "updated": 1784012340
     },
     {
       "id": "ON-274780",
@@ -51,38 +99,6 @@
       "start": 1784007240,
       "end": null,
       "updated": 1784007240
-    },
-    {
-      "id": "ON-274764",
-      "province": "ON",
-      "highway": "HWY 7290 (Lake Joseph Rd.)",
-      "direction": "Both Directions",
-      "description": "Building Fire on HWY 7290 (Lake Joseph Rd.) Both Directions  at Beacon LN / Lake Joseph Rd-N Section, Parrysound, Parry Sound. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.271366517,
-      "lng": -79.83087861,
-      "start": 1784000040,
-      "end": null,
-      "updated": 1784000040
-    },
-    {
-      "id": "ON-274677",
-      "province": "ON",
-      "highway": "HWY 35",
-      "direction": "Southbound",
-      "description": "Emergency Roadwork on HWY 35 Southbound  at N JCT CTY RD 121, Minden. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 44.939460086,
-      "lng": -78.711941299,
-      "start": 1783975980,
-      "end": null,
-      "updated": 1783994520
     },
     {
       "id": "ON-274739",
@@ -792,26 +808,10 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783955400
-    },
-    {
-      "id": "ON-274570",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound  between QEW, Oakville and ERIN MILLS PKWY, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.490074,
-      "lng": -79.6733,
-      "start": 1784512800,
-      "end": 1784970000,
-      "updated": 1783955340
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T07:02:05.662574+00:00",
+  "updated": "2026-07-14T07:32:13.561302+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
