@@ -151,25 +151,18 @@ HTML = """<!DOCTYPE html>
 
 <div class="main">
 
-  <div class="card full" id="incidents-card">
-    <div class="card-header"><h2>Road Incidents</h2><span class="pill live">Live</span></div>
-    <div class="sponsor-line" id="sponsor-incidents"></div>
-    <div class="card-body"><div class="loading">Loading incidents...</div></div>
-  </div>
-
-  <div class="card full" style="margin-top:14px" id="exchange-card">
-    <div class="card-header"><h2>USD / CAD</h2><span class="pill live">Live</span></div>
-    <div class="sponsor-line" id="sponsor-exchange"></div>
-    <div class="card-body"><div class="loading">Loading exchange rate...</div></div>
-  </div>
-
-  <div class="card full" style="margin-top:14px" id="border-card">
-    <div class="card-header"><h2>Border Crossings</h2><span class="pill live">Live</span></div>
-    <div class="sponsor-line" id="sponsor-border"></div>
-    <div class="card-body"><div class="loading">Loading border crossings...</div></div>
+  <div class="card full" id="market-card">
+    <div class="card-header"><h2>Market Pulse</h2><span class="pill daily">Daily</span></div>
+    <div class="sponsor-line" id="sponsor-market"></div>
+    <div class="card-body"><div class="loading">Loading market data...</div></div>
   </div>
 
   <div class="grid grid-2" style="margin-top:14px">
+    <div class="card" id="exchange-card">
+      <div class="card-header"><h2>USD / CAD</h2><span class="pill live">Live</span></div>
+      <div class="sponsor-line" id="sponsor-exchange"></div>
+      <div class="card-body"><div class="loading">Loading exchange rate...</div></div>
+    </div>
     <div class="card" id="fuel-card">
       <div class="card-header">
         <h2>Fuel Prices</h2>
@@ -184,6 +177,20 @@ HTML = """<!DOCTYPE html>
       <div class="sponsor-line" id="sponsor-fuel"></div>
       <div class="card-body"><div class="loading">Loading fuel prices...</div></div>
     </div>
+  </div>
+
+  <div class="card full" style="margin-top:14px" id="incidents-card">
+    <div class="card-header"><h2>Road Incidents</h2><span class="pill live">Live</span></div>
+    <div class="sponsor-line" id="sponsor-incidents"></div>
+    <div class="card-body"><div class="loading">Loading incidents...</div></div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top:14px">
+    <div class="card" id="border-card">
+      <div class="card-header"><h2>Border Crossings</h2><span class="pill live">Live</span></div>
+      <div class="sponsor-line" id="sponsor-border"></div>
+      <div class="card-body"><div class="loading">Loading border crossings...</div></div>
+    </div>
     <div class="card" id="calc-card">
       <div class="card-header"><h2>Fuel Cost Calculator</h2><span class="pill live">Live</span></div>
       <div class="card-body">
@@ -196,12 +203,6 @@ HTML = """<!DOCTYPE html>
         <div class="cresult" id="calc-result"></div>
       </div>
     </div>
-  </div>
-
-  <div class="card full" style="margin-top:14px" id="market-card">
-    <div class="card-header"><h2>Market Pulse</h2><span class="pill daily">Daily</span></div>
-    <div class="sponsor-line" id="sponsor-market"></div>
-    <div class="card-body"><div class="loading">Loading market data...</div></div>
   </div>
 
   <div class="card full" style="margin-top:14px" id="theft-card">
