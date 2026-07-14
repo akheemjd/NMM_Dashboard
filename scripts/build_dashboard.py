@@ -216,6 +216,13 @@ HTML = """<!DOCTYPE html>
   </div>
 
 </div>
+
+<footer style="border-top:1px solid var(--light);padding:20px 24px;margin-top:20px;text-align:center;font-size:10px;color:var(--muted);line-height:1.6">
+  <div style="font-weight:600;color:var(--blue);font-size:13px;margin-bottom:4px;">NORTHERN MILE MEDIA</div>
+  <div>For the people who keep Canada moving</div>
+  <div style="margin-top:8px;font-size:9px;">Data updates every 30 minutes &middot; Powered by public data sources &middot; No ads, no paywalls</div>
+</footer>
+
 $$SCRIPTS$$
 </body>
 </html>"""
