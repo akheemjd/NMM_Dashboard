@@ -240,7 +240,7 @@ HTML = """<!DOCTYPE html>
     <a href="https://northernmilemedia.com" style="color:#58a6ff;text-decoration:none;">Blog</a>
     <span style="color:#484f58;">|</span>
     <a href="#" style="color:#58a6ff;text-decoration:none;">Newsletter</a>
-    <a href="https://linkedin.com/company/northern-mile-media" target="_blank" style="color:#58a6ff;text-decoration:none;">LinkedIn</a>
+    <a href="https://www.linkedin.com/company/109885620/" target="_blank" style="color:#58a6ff;text-decoration:none;">LinkedIn</a>
     <a href="https://x.com/northernmile_" target="_blank" style="color:#58a6ff;text-decoration:none;">X</a>
   </div>
 </footer>
