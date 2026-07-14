@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-274759",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at 401, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.71416751,
+      "lng": -79.51573698,
+      "start": 1783997520,
+      "end": null,
+      "updated": 1783997520
+    },
+    {
       "id": "ON-274754",
       "province": "ON",
       "highway": "QEW",
@@ -788,26 +804,10 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783955340
-    },
-    {
-      "id": "ON-274569",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Engineering Investigation on QEW Fort Erie Bound  between DIEPPE ROAD/NORTH SERVICE ROAD and DIEPPE ROAD/NORTH SERVICE ROAD, St. Catharines. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.16737,
-      "lng": -79.20509,
-      "start": 1784167200,
-      "end": 1784282400,
-      "updated": 1783954320
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T02:30:41.750235+00:00",
+  "updated": "2026-07-14T03:00:51.590734+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
