@@ -222,7 +222,7 @@ HTML = """<!DOCTYPE html>
 <footer style="border-top:2px solid var(--light);padding:32px 24px 24px;margin-top:20px;font-size:12px;color:var(--muted);line-height:1.7">
   <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;margin-bottom:20px;">
     <div style="max-width:280px;">
-      <div style="font-weight:800;color:var(--blue);font-size:15px;margin-bottom:4px;">NORTHERN MILE MEDIA</div>
+      <img src="logo.jpg" alt="Northern Mile Media" style="height:52px;width:auto;margin-bottom:8px;display:block;">
       <div style="font-size:11px;">For the people who keep Canada moving. Independent trucking industry news, live data, and analysis. No paywalls. No BS.</div>
     </div>
     <div>
