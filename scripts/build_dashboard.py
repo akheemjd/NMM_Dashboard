@@ -20,12 +20,14 @@ body{
   font-size:14px;line-height:1.5;padding:0;max-width:100%
 }
 .banner{
-  background:var(--card);border-bottom:1px solid var(--light);padding:10px 20px;
+  background:var(--card);border-bottom:1px solid var(--light);padding:14px 24px;
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
   gap:8px;position:sticky;top:0;z-index:1000
 }
-.banner-brand{font-size:15px;font-weight:700;color:var(--blue);letter-spacing:-.01em}
-.banner-sub{font-size:11px;color:var(--muted)}
+.banner-brand{font-size:17px;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1.1}
+.banner-sub{font-size:11px;color:var(--muted);font-weight:400;letter-spacing:.02em}
+.banner-accent{width:3px;height:28px;background:var(--red);border-radius:2px;margin-right:10px;flex-shrink:0}
+.banner-left{display:flex;align-items:center;gap:0}
 .pill{font-size:9px;padding:3px 8px;border-radius:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .pill.live{background:#dcfce7;color:var(--green);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}.pill.daily{background:#dbeafe;color:var(--blue)}
@@ -133,9 +135,12 @@ HTML = """<!DOCTYPE html>
 <body>
 
 <div class="banner">
-  <div>
-    <div class="banner-brand">NORTHERN MILE MEDIA</div>
-    <div class="banner-sub">For the people who keep Canada moving</div>
+  <div class="banner-left">
+    <div class="banner-accent"></div>
+    <div>
+      <div class="banner-brand">NORTHERN MILE MEDIA</div>
+      <div class="banner-sub">For the people who keep Canada moving</div>
+    </div>
   </div>
 </div>
 
