@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-274772",
+      "id": "ON-274774",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at RENFORTH, Toronto. 1 right lane and right shoulder closed.",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 404 Northbound  at HWY 7, Markham-Richmondhill . 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.66709941,
-      "lng": -79.59592849,
-      "start": 1784003220,
+      "lat": 43.84721432,
+      "lng": -79.37067046,
+      "start": 1784004180,
       "end": null,
-      "updated": 1784003220
+      "updated": 1784004180
+    },
+    {
+      "id": "ON-274773",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at THIRD LINE, Oakville. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.42398426,
+      "lng": -79.72517004,
+      "start": 1784004000,
+      "end": null,
+      "updated": 1784004000
     },
     {
       "id": "ON-274771",
@@ -788,26 +804,10 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783955640
-    },
-    {
-      "id": "ON-274571",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Westbound  between ERIN MILLS PKWY, Mississauga and QEW, Oakville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.55404,
-      "lng": -79.696594,
-      "start": 1784512800,
-      "end": 1784970000,
-      "updated": 1783955400
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T04:31:19.644660+00:00",
+  "updated": "2026-07-14T05:01:27.859302+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
