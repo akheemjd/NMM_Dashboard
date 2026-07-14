@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-274770",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.75346694,
+      "lng": -79.40817931,
+      "start": 1784002380,
+      "end": null,
+      "updated": 1784002380
+    },
+    {
+      "id": "ON-274768",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at RENFORTH DR, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.66867834,
+      "lng": -79.59141288,
+      "start": 1784002320,
+      "end": null,
+      "updated": 1784002320
+    },
+    {
       "id": "ON-274767",
       "province": "ON",
       "highway": "QEW",
@@ -772,42 +804,10 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783955400
-    },
-    {
-      "id": "ON-274570",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound  between QEW, Oakville and ERIN MILLS PKWY, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.490074,
-      "lng": -79.6733,
-      "start": 1784512800,
-      "end": 1784970000,
-      "updated": 1783955340
-    },
-    {
-      "id": "ON-274569",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Engineering Investigation on QEW Fort Erie Bound  between DIEPPE ROAD/NORTH SERVICE ROAD and DIEPPE ROAD/NORTH SERVICE ROAD, St. Catharines. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.16737,
-      "lng": -79.20509,
-      "start": 1784167200,
-      "end": 1784282400,
-      "updated": 1783954320
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T04:01:09.801260+00:00",
+  "updated": "2026-07-14T04:23:23.729279+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
