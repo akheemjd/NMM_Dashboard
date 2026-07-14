@@ -251,7 +251,7 @@ HTML = """<!DOCTYPE html>
     <img src="logo.jpg" alt="Northern Mile Media" style="height:28px;width:auto;filter:brightness(0.9);">
     <div>
       <div style="font-size:12px;font-weight:700;color:#c9d1d9;letter-spacing:.02em;">NORTHERN MILE MEDIA</div>
-      <div style="font-size:9px;color:#484f58;">&copy; 2026 Northern Mile Media</div>
+      <div style="font-size:9px;color:#484f58;">&copy; 2026 Northern Mile Media &middot; Informational use only. Data from public sources. Verify independently.</div>
     </div>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;font-size:10px;">
