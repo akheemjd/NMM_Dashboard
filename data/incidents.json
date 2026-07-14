@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-274767",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Highway Maintenance on QEW Toronto bound RAMP at MISSISSAUGA ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.5506203,
+      "lng": -79.61589058,
+      "start": 1784001420,
+      "end": null,
+      "updated": 1784001420
+    },
+    {
+      "id": "ON-274764",
+      "province": "ON",
+      "highway": "HWY 7290 (Lake Joseph Rd.)",
+      "direction": "Both Directions",
+      "description": "Building Fire on HWY 7290 (Lake Joseph Rd.) Both Directions  at Beacon LN / Lake Joseph Rd-N Section, Parrysound, Parry Sound. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.271366517,
+      "lng": -79.83087861,
+      "start": 1784000040,
+      "end": null,
+      "updated": 1784000040
+    },
+    {
       "id": "ON-274754",
       "province": "ON",
       "highway": "QEW",
@@ -772,42 +804,10 @@
       "start": 1784167200,
       "end": 1784282400,
       "updated": 1783954320
-    },
-    {
-      "id": "ON-274482",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 400 Southbound  between QUARRY RD/SIMCOE 59 and QUARRY RD/SIMCOE 59, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.767105,
-      "lng": -79.69368,
-      "start": 1784545200,
-      "end": 1784847600,
-      "updated": 1783953360
-    },
-    {
-      "id": "ON-274471",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and RIDEAU RIVER RD (IC 40), Kemptville. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.19425,
-      "lng": -75.72434,
-      "start": 1784109600,
-      "end": 1784498400,
-      "updated": 1783953240
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T03:31:01.663765+00:00",
+  "updated": "2026-07-14T04:01:09.801260+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
