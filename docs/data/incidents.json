@@ -1,36 +1,40 @@
 {
   "incidents": [
     {
-      "id": "ON-274779",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/DBC-93571",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 8",
+        "from": "at Junction Highway 5",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Highway 8, in both directions. Construction work at Junction Highway 5 (Merritt). Until Thu Jul 16. From 7:00 AM to 5:00 PM PDT on Tuesday, Wednesday and Thursday. Single lane alternating traffic. Watch for traffic control. Construction work taking place around Exit 286 interchange. Last updated Mon Jul 13 at 11:59 AM PDT. (DBC-93571)",
+      "event_type": "construction",
+      "severity": "MINOR",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.77496258,
-      "lng": -79.28476557,
-      "start": 1784008860,
-      "end": null,
-      "updated": 1784008860
+      "lanes": "",
+      "lat": 50.089853,
+      "lng": -120.748988,
+      "start": "2026-07-13T11:57:56-07:00",
+      "end": "",
+      "updated": "2026-07-14T00:00:00-07:00"
     },
     {
-      "id": "ON-274778",
+      "id": "ON-274780",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Etobicoke Creek Express to Collector, Mississauga. Left shoulder and left lane closed.",
+      "highway": "HWY 527",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.66153611,
-      "lng": -79.61094444,
-      "start": 1784008440,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.786243282,
+      "lng": -89.144978175,
+      "start": 1784010780,
       "end": null,
-      "updated": 1784008440
+      "updated": 1784010780
     },
     {
       "id": "ON-274777",
@@ -47,22 +51,6 @@
       "start": 1784007240,
       "end": null,
       "updated": 1784007240
-    },
-    {
-      "id": "ON-274767",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Highway Maintenance on QEW Toronto bound RAMP at MISSISSAUGA ROAD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.5506203,
-      "lng": -79.61589058,
-      "start": 1784001420,
-      "end": null,
-      "updated": 1784001420
     },
     {
       "id": "ON-274764",
@@ -804,10 +792,26 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783955400
+    },
+    {
+      "id": "ON-274570",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound  between QEW, Oakville and ERIN MILLS PKWY, Mississauga. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.490074,
+      "lng": -79.6733,
+      "start": 1784512800,
+      "end": 1784970000,
+      "updated": 1783955340
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T06:31:55.738865+00:00",
+  "updated": "2026-07-14T07:02:05.662574+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
