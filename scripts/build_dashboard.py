@@ -38,8 +38,10 @@ body{
 
 .card{background:var(--card);border:1px solid var(--light);border-radius:var(--radius);padding:18px}
 .card.full{grid-column:1/-1}
-.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--light)}
-.card-header h2{font-size:16px;font-weight:600;text-transform:none;letter-spacing:-.01em;color:var(--text)}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--light);gap:10px}
+.card-header h2{font-size:16px;font-weight:600;text-transform:none;letter-spacing:-.01em;color:var(--text);white-space:nowrap}
+.card-header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.header-update{font-size:9px;color:var(--muted);white-space:nowrap}
 .card-body{min-height:30px}
 .loading{color:var(--muted);font-style:italic;padding:10px 0}.error{color:var(--red);padding:10px 0}
 #news-card .card-body{max-height:320px;overflow-y:auto}
@@ -241,8 +243,7 @@ function renderMarket(d){
     if(i.detail)h+='<div class="ind-detail">'+i.detail+'</div>';
     h+='<div class="ind-meaning">'+(i.what_it_means||'')+'<br><span style="color:var(--blue)">'+(i.source||'')+'</span></div></div>';
   });
-  return h+'</div>'
-    +(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Daily</span></div>':'');
+  return h+'</div>';
 }
 
 // ── Exchange SVG ──
@@ -287,8 +288,7 @@ function renderExchange(d){
     +'<div style="font-size:30px;font-weight:700;color:var(--blue);">'+d.current.toFixed(4)+' CAD</div>'
     +'<div style="font-size:12px;font-weight:600;color:'+(ch>=0?'var(--green)':'var(--red)')+';margin-bottom:2px;">'+dirLabel+' &middot; '+dir+' '+chStr+' today</div>'
     +'<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%;margin-top:4px">'+svg+'</svg>'
-    +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>'
-    +(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+' &middot; Bank of Canada</span><span>Every 30 min</span></div>':'');
+    +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>';
 }
 
 // ── Fuel SVG ──
@@ -318,8 +318,7 @@ function renderFuelSVG(d,type){
   svg+='<line x1="'+pad.left+'" y1="'+ay+'" x2="'+(W-pad.right)+'" y2="'+ay+'" stroke="'+RED+'" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>';
   svg+='<rect x="'+(pad.left+44)+'" y="'+pad.top+'" width="100" height="26" rx="4" fill="var(--card)" stroke="'+LIGHT+'" stroke-width="0.5"/>';
   svg+='<text x="'+(pad.left+94)+'" y="'+(pad.top+18)+'" fill="'+RED+'" font-size="11" font-weight="600" text-anchor="middle">'+label+' avg '+avg.toFixed(1)+'&cent;</text>';
-  return '<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%">'+svg+'</svg>'
-    +(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>':'');
+  return '<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%">'+svg+'</svg>';
 }
 
 // ── Border ──
@@ -347,7 +346,7 @@ function renderBorder(d){
     });
     h+='</div>';
   }
-  if(d.updated)h+='<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>';
+  if(d.updated)h+='<div class="card-footer">Updated '+ft(d.updated)+'</div>';
   return h;
 }
 
@@ -365,13 +364,13 @@ function renderNews(d){
     if(ds)h+='<span style="font-size:8px;color:var(--muted);margin-left:auto">'+ds+'</span>';
     h+='</div><a class="ntitle" href="'+n.link+'" target="_blank">'+n.title+'</a></div>';
   });
-  if(d.updated)h+='<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>';
+  if(d.updated)h+='<div class="card-footer">Updated '+ft(d.updated)+'</div>';
   return h;
 }
 
 // ── Incidents Map ──
 let incMap=null,incData=null;
-function renderIncidents(d){incData=d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>'+(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>':'');}
+function renderIncidents(d){incData=d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>';}
 function initIncMap(){
   const d=incData;if(!d)return;
   const incs=d.incidents||[],md=document.getElementById('inc-map'),ld=document.getElementById('inc-list');
@@ -405,7 +404,7 @@ function initIncMap(){
 
 // ── Theft Map ──
 let thMap=null,thData=null;
-function renderTheft(d){thData=d;return'<div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"></div></div>'+(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Daily</span></div>':'');}
+function renderTheft(d){thData=d;return'<div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"></div></div>';}
 function initThMap(){
   const d=thData;if(!d)return;
   const hs=d.hotspots||[],tg=d.top_targets||[],tp=d.prevention||[],inc=d.incidents||[];
@@ -492,6 +491,24 @@ async function loadAll(){
       el.classList.add('active');
     });
   }).catch(()=>{});
+  // Add update timestamps to headers
+  const updateFreq={market:'Daily',theft:'Daily',incidents:'Every 30 min',border:'Every 30 min',exchange:'Every 30 min',fuel:'Every 30 min',news:'Every 30 min'};
+  const dataMap={market,fuel,exchange:exchange,border,news,incidents,theft};
+  Object.keys(updateFreq).forEach(k=>{
+    const d=dataMap[k];if(!d||!d.updated)return;
+    const card=document.getElementById(k+'-card');if(!card)return;
+    const header=card.querySelector('.card-header');if(!header)return;
+    let right=header.querySelector('.card-header-right');
+    if(!right){right=document.createElement('div');right.className='card-header-right';
+      // Move existing pill into right div
+      const pill=header.querySelector('.pill');if(pill)right.appendChild(pill);
+      header.appendChild(right);}
+    if(!right.querySelector('.header-update')){
+      const el=document.createElement('span');el.className='header-update';
+      el.textContent='Updated '+ft(d.updated);
+      right.appendChild(el);
+    }
+  });
   panels.forEach(p=>{
     const b=cardBody(p.id);if(!b)return;
     b.innerHTML=p.data?p.render(p.data):'<div class="error">Failed to load</div>';
