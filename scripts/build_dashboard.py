@@ -136,7 +136,26 @@ HTML = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northern Mile — Live Dashboard</title>
+<title>Northern Mile — Live Canadian Trucking Dashboard | Fuel Prices, Border Delays, Road Incidents</title>
+<meta name="description" content="Free live dashboard for Canadian trucking. Real-time fuel prices by province, USD/CAD exchange rate, border crossing status, road incidents map, and cargo theft watch. Built for fleet operators and dispatchers.">
+<meta name="keywords" content="Canadian trucking, diesel prices Canada, fuel prices by province, border crossing delays, road incidents Canada, cargo theft, trucking dashboard, fleet management, freight rates">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/">
+
+<meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard">
+<meta property="og:description" content="Free live dashboard for Canadian trucking. Fuel prices, exchange rates, border delays, road incidents. No signup. No ads.">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Northern Mile Media">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Northern Mile — Live Canadian Trucking Dashboard">
+<meta name="twitter:description" content="Free live dashboard for Canadian trucking. Fuel prices, exchange rates, border delays, road incidents, cargo theft data. Updated every 30 minutes.">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Northern Mile Live Dashboard","url":"https://dashboard.northernmilemedia.com/","description":"Free live dashboard for Canadian trucking industry. Real-time fuel prices by province, USD/CAD exchange rate, border crossing status, road incidents map, cargo theft watch, and fuel cost calculator.","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
+</script>
+
 <link rel="stylesheet" href="leaflet.css">
 <script src="leaflet.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
