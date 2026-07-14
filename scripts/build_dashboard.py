@@ -139,7 +139,7 @@ HTML = """<!DOCTYPE html>
 
 <div class="banner">
   <div class="banner-left">
-    <img src="logo.jpg" alt="Northern Mile Media" style="height:36px;width:auto;flex-shrink:0;margin-right:10px;">
+    <img src="logo.jpg" alt="Northern Mile Media" style="height:48px;width:auto;flex-shrink:0;margin-right:12px;">
     <div>
       <div class="banner-brand">NORTHERN MILE MEDIA</div>
       <div class="banner-sub">For the people who keep Canada moving</div>
