@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-274751",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at Homer Watson Blvd / Fountain St / Waterloo Rd 28 (275KM), Kitchener. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.384872222,
+      "lng": -80.405219444,
+      "start": 1783994100,
+      "end": null,
+      "updated": 1783994100
+    },
+    {
       "id": "ON-274742",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +47,6 @@
       "start": 1783990140,
       "end": null,
       "updated": 1783990140
-    },
-    {
-      "id": "ON-274732",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  at ROCKERIES RD- BOAT LAUNCH (S) (7125) - BOYS TWP, Kenora. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.71440276,
-      "lng": -94.808598729,
-      "start": 1783988640,
-      "end": null,
-      "updated": 1783988640
     },
     {
       "id": "ON-274709",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T01:47:34.191344+00:00",
+  "updated": "2026-07-14T02:00:13.563627+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
