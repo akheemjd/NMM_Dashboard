@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-274754",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at DIXIE ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.60096601,
+      "lng": -79.56442607,
+      "start": 1783995300,
+      "end": null,
+      "updated": 1783995300
+    },
+    {
+      "id": "ON-274752",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at HWY 400, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.716474962,
+      "lng": -79.518004954,
+      "start": 1783995060,
+      "end": null,
+      "updated": 1783995060
+    },
+    {
+      "id": "ON-274677",
+      "province": "ON",
+      "highway": "HWY 35",
+      "direction": "Southbound",
+      "description": "Emergency Roadwork on HWY 35 Southbound  at N JCT CTY RD 121, Minden. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 44.939460086,
+      "lng": -78.711941299,
+      "start": 1783975980,
+      "end": null,
+      "updated": 1783994520
+    },
+    {
       "id": "ON-274751",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +63,6 @@
       "start": 1783994100,
       "end": null,
       "updated": 1783994100
-    },
-    {
-      "id": "ON-274742",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at JAMES SNOW PKWY, Milton. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.5429755,
-      "lng": -79.8613966,
-      "start": 1783992120,
-      "end": null,
-      "updated": 1783992120
     },
     {
       "id": "ON-274739",
@@ -111,22 +143,6 @@
       "start": 1784077200,
       "end": 1784282400,
       "updated": 1783977540
-    },
-    {
-      "id": "ON-274677",
-      "province": "ON",
-      "highway": "HWY 35",
-      "direction": "Southbound",
-      "description": "Emergency Roadwork on HWY 35 Southbound  at N JCT CTY RD 121, Minden. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 44.939460086,
-      "lng": -78.711941299,
-      "start": 1783975980,
-      "end": null,
-      "updated": 1783975980
     },
     {
       "id": "ON-274660",
@@ -788,26 +804,10 @@
       "start": 1784167200,
       "end": 1784282400,
       "updated": 1783954320
-    },
-    {
-      "id": "ON-274482",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 400 Southbound  between QUARRY RD/SIMCOE 59 and QUARRY RD/SIMCOE 59, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.767105,
-      "lng": -79.69368,
-      "start": 1784545200,
-      "end": 1784847600,
-      "updated": 1783953360
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T02:00:13.563627+00:00",
+  "updated": "2026-07-14T02:30:41.750235+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
