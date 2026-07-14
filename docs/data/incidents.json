@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-274873",
+      "id": "ON-274886",
       "province": "ON",
-      "highway": "HWY 124",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 124 Both Directions  at BUCK HAVEN RD(E), Sundridge. All lanes closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 401 Westbound  between Northumberland CR 30 (IC 509) and LAKE RD, Brighton. 1 Left Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.760396265,
-      "lng": -79.407219192,
-      "start": 1784039040,
-      "end": null,
-      "updated": 1784039040
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.07478,
+      "lng": -77.76885,
+      "start": 1784070000,
+      "end": 1784109600,
+      "updated": 1784040600
     },
     {
       "id": "ON-274870",
@@ -49,36 +49,20 @@
       "updated": 1784038620
     },
     {
-      "id": "ON-274869",
+      "id": "ON-274881",
       "province": "ON",
-      "highway": "HWY 407",
-      "direction": "Westbound",
-      "description": "Debris on HWY 407 Westbound  at THICKSON RD, Whitby. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 35/115",
+      "direction": "Southbound",
+      "description": "Daily Maintenance on HWY 35/115 Southbound  between HWY 35 and HWY 401, Clarington. 1 Right Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.951527,
-      "lng": -78.940852,
-      "start": 1784038560,
-      "end": null,
-      "updated": 1784038560
-    },
-    {
-      "id": "ON-274862",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at KEELE ST, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.72238567,
-      "lng": -79.48107624,
-      "start": 1784037660,
-      "end": null,
-      "updated": 1784037660
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.060196,
+      "lng": -78.62273,
+      "start": 1784282400,
+      "end": 1785546000,
+      "updated": 1784038200
     },
     {
       "id": "drivebc.ca/DBC-93522",
@@ -308,22 +292,6 @@
       "start": 1784512800,
       "end": 1784973600,
       "updated": 1784032980
-    },
-    {
-      "id": "ON-274812",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at STEPHENSON RD 12, Huntsville, Huntsville. 1 lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane closed",
-      "lat": 45.27681046,
-      "lng": -79.279776499,
-      "start": 1784032680,
-      "end": null,
-      "updated": 1784032680
     },
     {
       "id": "ON-274810",
@@ -813,10 +781,42 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1783963620
+    },
+    {
+      "id": "ON-274587",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Maintenance on QEW Fort Erie Bound  between EAST MALL, Toronto and BRONTE ROAD, Oakville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.614532,
+      "lng": -79.545135,
+      "start": 1784512800,
+      "end": 1784970000,
+      "updated": 1783963560
+    },
+    {
+      "id": "ON-274588",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound Express between FINCH AVENUE and BROWNS LINE, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.733997,
+      "lng": -79.62741,
+      "start": 1784512800,
+      "end": 1784970000,
+      "updated": 1783963440
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T14:34:17.990251+00:00",
+  "updated": "2026-07-14T15:04:25.956237+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
