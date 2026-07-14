@@ -231,7 +231,8 @@ HTML = """<!DOCTYPE html>
     <div><span style="color:#3fb950;">●</span> System Online</div>
     <div>Refresh <span style="color:#58a6ff;">30m</span></div>
     <div>Modules <span style="color:#58a6ff;">8</span></div>
-    <div style="color:#484f58;">|</div>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;font-size:10px;">
     <a href="https://northernmilemedia.com" style="color:#58a6ff;text-decoration:none;">Blog</a>
     <a href="https://linkedin.com/company/northern-mile-media" target="_blank" style="color:#58a6ff;text-decoration:none;">LinkedIn</a>
     <a href="https://x.com/northernmile_" target="_blank" style="color:#58a6ff;text-decoration:none;">X</a>
