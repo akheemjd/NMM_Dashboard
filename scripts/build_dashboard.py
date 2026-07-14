@@ -288,9 +288,9 @@ function renderExchange(d){
   const vals=hist.map(h=>h.rate).reverse();
   const dates=hist.map(h=>new Date(h.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})).reverse();
   const minV=Math.min(...vals),maxV=Math.max(...vals),range=maxV-minV||0.001;
-  const W=340,H=180,pad={top:14,right:14,bottom:28,left:36};
+  const W=340,H=170,pad={top:10,right:10,bottom:26,left:36};
   const pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
-  const Y=v=>pad.top+ph-(v-minV)/range*ph*0.75;
+  const Y=v=>pad.top+ph-(v-minV)/range*ph*0.80;
   const X=i=>pad.left+(i/(vals.length-1))*pw;
   let svg='';
   for(let g=0;g<=3;g++){const gv=minV+range*g/3,gy=Y(gv);
@@ -312,10 +312,21 @@ function renderExchange(d){
   const lxi=X(vals.length-1);
   if(lxi-lastX>=36)svg+='<text x="'+lxi+'" y="'+(H-pad.bottom+14)+'" fill="'+MUTED+'" font-size="8" text-anchor="middle">'+dates[vals.length-1]+'</text>';
 
-  return '<div style="font-size:12px;color:var(--muted);margin-bottom:2px;">1 US Dollar equals</div>'
-    +'<div style="font-size:30px;font-weight:700;color:var(--blue);">'+d.current.toFixed(4)+' CAD</div>'
-    +'<div style="font-size:12px;font-weight:600;color:'+(ch>=0?'var(--green)':'var(--red)')+';margin-bottom:2px;">'+dirLabel+' &middot; '+dir+' '+chStr+' today</div>'
-    +'<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%;margin-top:4px">'+svg+'</svg>'
+  // 7-day high/low
+  const recent=vals.slice(-7);const wkHigh=Math.max(...recent),wkLow=Math.min(...recent);
+
+  return '<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">'
+    +'<div>'
+    +'<div style="font-size:10px;color:var(--muted);margin-bottom:0;">1 US Dollar equals</div>'
+    +'<div style="font-size:28px;font-weight:800;color:var(--blue);line-height:1.1;">'+d.current.toFixed(4)+' CAD</div>'
+    +'<div style="font-size:11px;font-weight:600;color:'+(ch>=0?'var(--green)':'var(--red)')+';">'+dirLabel+' &middot; '+dir+' '+chStr+' today</div>'
+    +'</div>'
+    +'<div style="text-align:right;font-size:10px;color:var(--muted);padding-top:18px;">'
+    +'<div>7-day high <span style="color:var(--red);font-weight:600;">'+wkHigh.toFixed(4)+'</span></div>'
+    +'<div>7-day low <span style="color:var(--green);font-weight:600;">'+wkLow.toFixed(4)+'</span></div>'
+    +'</div>'
+    +'</div>'
+    +'<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%;margin-top:6px">'+svg+'</svg>'
     +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>';
 }
 
