@@ -139,6 +139,8 @@ HTML = """<!DOCTYPE html>
 <title>Northern Mile — Live Dashboard</title>
 <link rel="stylesheet" href="leaflet.css">
 <script src="leaflet.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
 <style>$$CSS$$</style>
 </head>
 <body>
