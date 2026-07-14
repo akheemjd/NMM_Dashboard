@@ -121,6 +121,8 @@ body{
   .ntitle{font-size:13px;line-height:1.4}
   .mitem{font-size:12px;padding:9px 10px}
   .mdesc{font-size:11px}
+  footer{text-align:center!important}
+  footer>div{flex-direction:column!important;align-items:center!important;text-align:center!important;gap:18px!important}
 }
 """
 
