@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-274780",
+      "province": "ON",
+      "highway": "HWY 527",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.786243282,
+      "lng": -89.144978175,
+      "start": 1784010780,
+      "end": null,
+      "updated": 1784072100
+    },
+    {
+      "id": "ON-275139",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 417 Eastbound  at MAITLAND AVE (IC 126), Ottawa. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 45.37022,
+      "lng": -75.75477,
+      "start": 1784072040,
+      "end": null,
+      "updated": 1784072040
+    },
+    {
+      "id": "ON-275130",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at WESTON ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.713270344,
+      "lng": -79.537625313,
+      "start": 1784070720,
+      "end": null,
+      "updated": 1784070720
+    },
+    {
       "id": "drivebc.ca/DBC-93615",
       "province": "BC",
       "highway": {
@@ -84,22 +132,6 @@
       "start": 1784066820,
       "end": null,
       "updated": 1784066820
-    },
-    {
-      "id": "ON-275089",
-      "province": "ON",
-      "highway": "HWY 671",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 671 Both Directions  at SILVER LAKE BOAT LAUNCH SITE (W), Kenora. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.874706173,
-      "lng": -94.126640767,
-      "start": 1784064240,
-      "end": null,
-      "updated": 1784064960
     },
     {
       "id": "ON-275066",
@@ -436,22 +468,6 @@
       "start": 1784026800,
       "end": 1784242800,
       "updated": 1784049960
-    },
-    {
-      "id": "ON-274780",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.786243282,
-      "lng": -89.144978175,
-      "start": 1784010780,
-      "end": null,
-      "updated": 1784048700
     },
     {
       "id": "ON-274739",
@@ -793,26 +809,10 @@
       "start": 1784512800,
       "end": 1784973600,
       "updated": 1784034060
-    },
-    {
-      "id": "ON-274827",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 400 Southbound  between MAJOR MACKENZIE DRIVE and BASS PRO MILLS DRIVE, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.846935,
-      "lng": -79.54861,
-      "start": 1784509200,
-      "end": 1784970000,
-      "updated": 1784034060
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T23:07:58.957049+00:00",
+  "updated": "2026-07-14T23:39:02.181624+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
