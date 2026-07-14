@@ -217,10 +217,28 @@ HTML = """<!DOCTYPE html>
 
 </div>
 
-<footer style="border-top:1px solid var(--light);padding:20px 24px;margin-top:20px;text-align:center;font-size:10px;color:var(--muted);line-height:1.6">
-  <div style="font-weight:600;color:var(--blue);font-size:13px;margin-bottom:4px;">NORTHERN MILE MEDIA</div>
-  <div>For the people who keep Canada moving</div>
-  <div style="margin-top:8px;font-size:9px;">Data updates every 30 minutes &middot; Powered by public data sources &middot; No ads, no paywalls</div>
+<footer style="border-top:2px solid var(--light);padding:32px 24px 24px;margin-top:20px;font-size:12px;color:var(--muted);line-height:1.7">
+  <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;margin-bottom:20px;">
+    <div style="max-width:280px;">
+      <div style="font-weight:800;color:var(--blue);font-size:15px;margin-bottom:4px;">NORTHERN MILE MEDIA</div>
+      <div style="font-size:11px;">For the people who keep Canada moving. Independent trucking industry news, live data, and analysis. No paywalls. No BS.</div>
+    </div>
+    <div>
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;">Explore</div>
+      <a href="https://northernmilemedia.com" style="display:block;color:var(--muted);text-decoration:none;font-size:11px;">Blog</a>
+      <a href="#" style="display:block;color:var(--muted);text-decoration:none;font-size:11px;">Newsletter</a>
+      <a href="#" style="display:block;color:var(--muted);text-decoration:none;font-size:11px;">Advertise</a>
+    </div>
+    <div>
+      <div style="font-weight:600;color:var(--text);margin-bottom:6px;font-size:11px;text-transform:uppercase;letter-spacing:.04em;">Connect</div>
+      <a href="https://linkedin.com/company/northern-mile-media" target="_blank" style="display:block;color:var(--muted);text-decoration:none;font-size:11px;">LinkedIn</a>
+      <a href="https://facebook.com/northernmilemedia" target="_blank" style="display:block;color:var(--muted);text-decoration:none;font-size:11px;">Facebook</a>
+      <a href="https://x.com/northernmile_" target="_blank" style="display:block;color:var(--muted);text-decoration:none;font-size:11px;">X (Twitter)</a>
+    </div>
+  </div>
+  <div style="text-align:center;font-size:9px;color:var(--muted);border-top:1px solid var(--light);padding-top:12px;">
+    &copy; 2026 Northern Mile Media &middot; Dashboard updates every 30 minutes &middot; Powered by public data
+  </div>
 </footer>
 
 $$SCRIPTS$$
