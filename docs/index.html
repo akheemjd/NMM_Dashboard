@@ -40,7 +40,8 @@ body{
 .card-body{min-height:30px}
 .loading{color:var(--muted);font-style:italic;padding:10px 0}.error{color:var(--red);padding:10px 0}
 #news-card .card-body{max-height:320px;overflow-y:auto}
-.card-footer{font-size:9px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--light)}
+.card-footer{font-size:9px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--light);display:flex;justify-content:space-between;align-items:center}
+.card-footer span{font-weight:500}
 
 .sponsor-line{display:none;font-size:9px;color:var(--muted);margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid var(--light)}
 .sponsor-line.active{display:block}
@@ -219,7 +220,8 @@ function renderMarket(d){
     if(i.detail)h+='<div class="ind-detail">'+i.detail+'</div>';
     h+='<div class="ind-meaning">'+(i.what_it_means||'')+'<br><span style="color:var(--blue)">'+(i.source||'')+'</span></div></div>';
   });
-  return h+'</div>';
+  return h+'</div>'
+    +(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Daily</span></div>':'');
 }
 
 // ── Exchange SVG ──
@@ -265,7 +267,7 @@ function renderExchange(d){
     +'<div style="font-size:12px;font-weight:600;color:'+(ch>=0?'var(--green)':'var(--red)')+';margin-bottom:2px;">'+dirLabel+' &middot; '+dir+' '+chStr+' today</div>'
     +'<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%;margin-top:4px">'+svg+'</svg>'
     +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>'
-    +(d.updated?'<div class="card-footer">Updated '+ft(d.updated)+' &middot; Bank of Canada</div>':'');
+    +(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+' &middot; Bank of Canada</span><span>Every 30 min</span></div>':'');
 }
 
 // ── Fuel SVG ──
@@ -296,7 +298,7 @@ function renderFuelSVG(d,type){
   svg+='<rect x="'+(pad.left+44)+'" y="'+pad.top+'" width="100" height="26" rx="4" fill="var(--card)" stroke="'+LIGHT+'" stroke-width="0.5"/>';
   svg+='<text x="'+(pad.left+94)+'" y="'+(pad.top+18)+'" fill="'+RED+'" font-size="11" font-weight="600" text-anchor="middle">'+label+' avg '+avg.toFixed(1)+'&cent;</text>';
   return '<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%">'+svg+'</svg>'
-    +(d.updated?'<div class="card-footer">Updated '+ft(d.updated)+'</div>':'');
+    +(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>':'');
 }
 
 // ── Border ──
@@ -320,9 +322,11 @@ function renderBorder(d){
   h+='</div>';
   if(bl.length){h+='<div style="margin-top:10px;padding:8px 12px;background:#fef3c7;border-radius:6px;font-size:11px">';
     bl.forEach(b=>{const days=Math.ceil((new Date(b.date)-Date.now())/86400000);
-      h+='<span style="color:var(--amber);font-weight:600">'+new Date(b.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})+'</span> &middot; '+b.name+' ('+days+'d)</div>';});
+      h+='<span style="color:var(--amber);font-weight:600">'+new Date(b.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})+'</span> &middot; '+b.name+' ('+days+'d) ';
+    });
     h+='</div>';
   }
+  if(d.updated)h+='<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>';
   return h;
 }
 
@@ -340,13 +344,13 @@ function renderNews(d){
     if(ds)h+='<span style="font-size:8px;color:var(--muted);margin-left:auto">'+ds+'</span>';
     h+='</div><a class="ntitle" href="'+n.link+'" target="_blank">'+n.title+'</a></div>';
   });
-  if(d.updated)h+='<div class="card-footer">Updated '+ft(d.updated)+'</div>';
+  if(d.updated)h+='<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>';
   return h;
 }
 
 // ── Incidents Map ──
 let incMap=null,incData=null;
-function renderIncidents(d){incData=d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>';}
+function renderIncidents(d){incData=d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>'+(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Every 30 min</span></div>':'');}
 function initIncMap(){
   const d=incData;if(!d)return;
   const incs=d.incidents||[],md=document.getElementById('inc-map'),ld=document.getElementById('inc-list');
@@ -380,7 +384,7 @@ function initIncMap(){
 
 // ── Theft Map ──
 let thMap=null,thData=null;
-function renderTheft(d){thData=d;return'<div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"></div></div>';}
+function renderTheft(d){thData=d;return'<div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"></div></div>'+(d.updated?'<div class="card-footer"><span>Updated '+ft(d.updated)+'</span><span>Daily</span></div>':'');}
 function initThMap(){
   const d=thData;if(!d)return;
   const hs=d.hotspots||[],tg=d.top_targets||[],tp=d.prevention||[],inc=d.incidents||[];
