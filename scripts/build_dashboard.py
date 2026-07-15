@@ -36,7 +36,7 @@ body{
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:14px}
 .grid-2{grid-template-columns:repeat(2,1fr)}
 
-.card{background:var(--card);border:1px solid var(--light);border-radius:var(--radius);padding:18px}
+.card{background:var(--card);border:1px solid var(--light);border-radius:var(--radius);padding:18px;scroll-margin-top:70px}
 .card.full{grid-column:1/-1}
 .card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--light);gap:10px}
 .card-header h2{font-size:16px;font-weight:600;text-transform:none;letter-spacing:-.01em;color:var(--text);white-space:nowrap}
@@ -146,14 +146,21 @@ HTML = """<!DOCTYPE html>
 <meta property="og:description" content="Free live dashboard for Canadian trucking. Fuel prices, exchange rates, border delays, road incidents. No signup. Free forever.">
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://dashboard.northernmilemedia.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Northern Mile Media">
 
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dashboard.northernmilemedia.com/og-image.png">
 <meta name="twitter:title" content="Northern Mile — Live Canadian Trucking Dashboard">
 <meta name="twitter:description" content="Free live dashboard for Canadian trucking. Fuel prices, exchange rates, border delays, road incidents, cargo theft data. Updated every 30 minutes.">
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Northern Mile Live Dashboard","url":"https://dashboard.northernmilemedia.com/","description":"Free live dashboard for Canadian trucking industry. Real-time fuel prices by province, USD/CAD exchange rate, border crossing status, road incidents map, cargo theft watch, and fuel cost calculator.","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What data does this dashboard track?","acceptedAnswer":{"@type":"Answer","text":"Live fuel prices by Canadian province, USD/CAD exchange rates with 30-day trends, border crossing status for 9 major crossings, road incidents and closures from Ontario 511 and BC DriveBC, cargo theft incidents and hotspots, and industry headlines from Canadian trucking sources."}},{"@type":"Question","name":"How often is the dashboard updated?","acceptedAnswer":{"@type":"Answer","text":"Every 30 minutes. Fuel prices, exchange rates, road incidents, and border crossing status refresh automatically throughout the day."}},{"@type":"Question","name":"Is the dashboard free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Completely free. No signup required. No paywalls. Supported by sponsorships."}}]}
 </script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -170,7 +177,7 @@ HTML = """<!DOCTYPE html>
   <div class="banner-left">
     <img src="logo.jpg" alt="Northern Mile Media" style="height:48px;width:auto;flex-shrink:0;margin-right:12px;">
     <div>
-      <div class="banner-brand">NORTHERN MILE MEDIA</div>
+      <h1 class="banner-brand" style="font-size:inherit;font-weight:inherit;margin:0;padding:0;display:inline;">NORTHERN MILE MEDIA</h1>
       <div class="banner-sub">For the people who keep Canada moving</div>
     </div>
   </div>
@@ -202,7 +209,7 @@ HTML = """<!DOCTYPE html>
   </div>
 
   <div class="card full" id="market-card">
-    <div class="card-header"><h2>Market Pulse</h2><span class="pill daily">Daily</span></div>
+    <div class="card-header" id="market-pulse"><h2>Market Pulse</h2><span class="pill daily">Daily</span></div>
     <div class="sponsor-line" id="sponsor-market"></div>
     <div class="card-body"><div class="loading">Loading market data...</div></div>
   </div>
@@ -611,7 +618,7 @@ async function loadAll(){
       const tagline=typeof v==='string'?'':v.tagline||'';
       const logo=typeof v==='string'?'':v.logo||'';
       el.innerHTML=''
-        +(logo?'<img src="'+logo+'" alt="'+name+'">':'')
+        +(logo?'<img src="'+logo+'" alt="'+name+' logo">':'')
         +'<div class="sponsor-info">'
         +'<div class="sponsor-label">Presented by</div>'
         +'<div class="sponsor-name">'+name+'</div>'
