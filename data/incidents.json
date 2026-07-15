@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275205",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Highway Maintenance on QEW Toronto bound RAMP at WINSTON CHURCHILL BLVD, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.50712565,
+      "lng": -79.66614852,
+      "start": 1784094300,
+      "end": null,
+      "updated": 1784094300
+    },
+    {
       "id": "ON-275204",
       "province": "ON",
       "highway": "HWY 400",
@@ -17,22 +33,6 @@
       "updated": 1784091540
     },
     {
-      "id": "ON-275202",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound ON-RAMP at WARDEN AVE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.770613,
-      "lng": -79.306342,
-      "start": 1784090280,
-      "end": null,
-      "updated": 1784090280
-    },
-    {
       "id": "ON-275203",
       "province": "ON",
       "highway": "HWY 28",
@@ -47,22 +47,6 @@
       "start": 1784118600,
       "end": 1784235600,
       "updated": 1784090160
-    },
-    {
-      "id": "ON-275199",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 400, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.71594429,
-      "lng": -79.52294482,
-      "start": 1784089800,
-      "end": null,
-      "updated": 1784089800
     },
     {
       "id": "ON-275191",
@@ -809,10 +793,26 @@
       "start": 1784509200,
       "end": 1784970000,
       "updated": 1784034120
+    },
+    {
+      "id": "ON-274829",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between BASS PRO MILLS DRIVE and MAJOR MACKENZIE DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.82064,
+      "lng": -79.5456,
+      "start": 1784512800,
+      "end": 1784977200,
+      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T05:41:51.027826+00:00",
+  "updated": "2026-07-15T06:12:00.235665+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
