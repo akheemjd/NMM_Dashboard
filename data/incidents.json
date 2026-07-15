@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-275217",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS HOV at MISSISSAUGA RD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.6053506,
-      "lng": -79.746443,
-      "start": 1784110020,
-      "end": null,
-      "updated": 1784110020
-    },
-    {
       "id": "ON-275209",
       "province": "ON",
       "highway": "HWY 401",
@@ -809,10 +793,26 @@
       "start": 1784512800,
       "end": 1784977200,
       "updated": 1784034120
+    },
+    {
+      "id": "ON-274830",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1784512800,
+      "end": 1784977200,
+      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T10:13:12.391782+00:00",
+  "updated": "2026-07-15T10:43:20.606147+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
