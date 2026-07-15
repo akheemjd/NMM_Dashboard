@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275199",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 400, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.71594429,
+      "lng": -79.52294482,
+      "start": 1784089800,
+      "end": null,
+      "updated": 1784089800
+    },
+    {
       "id": "ON-275195",
       "province": "ON",
       "highway": "QEW",
@@ -12,22 +28,6 @@
       "lanes": "right lane and right shoulder closed",
       "lat": 43.5522819,
       "lng": -79.61387748,
-      "start": 1784088180,
-      "end": null,
-      "updated": 1784088180
-    },
-    {
-      "id": "ON-275196",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound  at BOVAIRD DRIVE/N JCT HWY 7, Brampton. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.72597149,
-      "lng": -79.765350223,
       "start": 1784088180,
       "end": null,
       "updated": 1784088180
@@ -812,7 +812,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T04:11:24.765308+00:00",
+  "updated": "2026-07-15T04:41:32.748817+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
