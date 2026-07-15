@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-275484",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound ON-RAMP at WESTNEY ROAD, Ajax. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.849101,
-      "lng": -79.040455,
-      "start": 1784145300,
-      "end": null,
-      "updated": 1784145300
-    },
-    {
       "id": "ON-275481",
       "province": "ON",
       "highway": "HWY 407",
@@ -31,22 +15,6 @@
       "start": 1784144940,
       "end": null,
       "updated": 1784144940
-    },
-    {
-      "id": "ON-275364",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 6 Northbound  at WILLISVILLE RD(E) MONGOWIN TWP, Willisville. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 46.128590681,
-      "lng": -81.739778478,
-      "start": 1784117340,
-      "end": null,
-      "updated": 1784144880
     },
     {
       "id": "ON-275475",
@@ -223,6 +191,22 @@
       "start": 1784421000,
       "end": 1784430000,
       "updated": 1784140260
+    },
+    {
+      "id": "ON-275490",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Collector between LESLIE STREET and HWY 404, Toronto. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.766285,
+      "lng": -79.36286,
+      "start": 1784253600,
+      "end": 1784282400,
+      "updated": 1784139780
     },
     {
       "id": "ON-275438",
@@ -577,22 +561,6 @@
       "updated": 1784130060
     },
     {
-      "id": "ON-275354",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS HOV at MISSISSAUGA RD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.6053506,
-      "lng": -79.746443,
-      "start": 1784129400,
-      "end": null,
-      "updated": 1784129400
-    },
-    {
       "id": "ON-275357",
       "province": "ON",
       "highway": "HWY 400",
@@ -705,22 +673,6 @@
       "updated": 1784125980
     },
     {
-      "id": "ON-275324",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at MISSISSAUGA RD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.6052902,
-      "lng": -79.7464042,
-      "start": 1784124300,
-      "end": null,
-      "updated": 1784124300
-    },
-    {
       "id": "ON-275318",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -799,10 +751,58 @@
       "start": 1784772000,
       "end": 1784797200,
       "updated": 1784121840
+    },
+    {
+      "id": "ON-275302",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 401 Westbound  between QUEBEC/ONTARIO BORDER, Qb Border and SD&G RD 31 (IC 750) - Morrisburg, Morrisburg. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.20854,
+      "lng": -74.34824,
+      "start": 1784199600,
+      "end": 1784242800,
+      "updated": 1784121540
+    },
+    {
+      "id": "ON-275288",
+      "province": "ON",
+      "highway": "HWY 93",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 93 Northbound  between HWY 400, Springwater and HWY 12/ANGELA SCHMIDT FOSTER ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.552452,
+      "lng": -79.74547,
+      "start": 1785848400,
+      "end": 1786132800,
+      "updated": 1784120460
+    },
+    {
+      "id": "ON-275297",
+      "province": "ON",
+      "highway": "HWY 93",
+      "direction": "Southbound",
+      "description": "Daily Maintenance on HWY 93 Southbound  between HWY 12/ANGELA SCHMIDT FOSTER ROAD, Tay and HWY 400, Springwater. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.718716,
+      "lng": -79.89774,
+      "start": 1785848400,
+      "end": 1786132800,
+      "updated": 1784120460
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T20:01:30.974019+00:00",
+  "updated": "2026-07-15T20:16:14.488280+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
