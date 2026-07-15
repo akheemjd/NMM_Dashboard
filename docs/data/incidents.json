@@ -1,6 +1,43 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/DBC-83616",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Channelridge DR in Salt Spring Island",
+        "to": "Vesuvius RD in Salt Spring Island",
+        "direction": "NONE"
+      },
+      "direction": "",
+      "description": "Broadwell Rd. Road cleared between Channelridge DR and Vesuvius RD in Salt Spring Island. Last updated Wed Jul 15 at 10:38 AM PDT. (DBC-83616)",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 48.88257,
+      "lng": -123.554194,
+      "start": "2025-11-18T11:14:29-08:00",
+      "end": "",
+      "updated": "2026-07-15T10:38:04-07:00"
+    },
+    {
+      "id": "ON-275405",
+      "province": "ON",
+      "highway": "HWY 21",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 21 Northbound  between Church Camp Road and Church Camp Road, Goderich. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.78064,
+      "lng": -81.6996,
+      "start": 1784635200,
+      "end": 1784844000,
+      "updated": 1784136000
+    },
+    {
       "id": "ON-275401",
       "province": "ON",
       "highway": "HWY 401",
@@ -767,42 +804,10 @@
       "start": 1785888000,
       "end": 1786186800,
       "updated": 1784119560
-    },
-    {
-      "id": "ON-275260",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 12 Southbound  between HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.612568,
-      "lng": -79.46308,
-      "start": 1785895200,
-      "end": 1786183200,
-      "updated": 1784119500
-    },
-    {
-      "id": "ON-275261",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 12 Northbound  between ATHERLEY RD, Orillia and HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.60623,
-      "lng": -79.38732,
-      "start": 1785895200,
-      "end": 1786183200,
-      "updated": 1784119500
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T17:15:18.799182+00:00",
+  "updated": "2026-07-15T17:45:27.500042+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
