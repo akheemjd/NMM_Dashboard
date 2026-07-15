@@ -1,20 +1,68 @@
 {
   "incidents": [
     {
-      "id": "ON-275334",
+      "id": "ON-275345",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at MISSISSAUGA RD, Mississauga. Left lane closed.",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 400, Toronto. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.6039972,
-      "lng": -79.7486801,
-      "start": 1784125980,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.7165622,
+      "lng": -79.518742561,
+      "start": 1784127780,
       "end": null,
-      "updated": 1784125980
+      "updated": 1784127780
+    },
+    {
+      "id": "ON-275344",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at HWY 427, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.6683374,
+      "lng": -79.58963249,
+      "start": 1784127720,
+      "end": null,
+      "updated": 1784127720
+    },
+    {
+      "id": "ON-275342",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at APPLEBY LINE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.38105308,
+      "lng": -79.7718237,
+      "start": 1784127120,
+      "end": null,
+      "updated": 1784127120
+    },
+    {
+      "id": "ON-275338",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at ERIN MILLS PKWY, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.54569517,
+      "lng": -79.6242423,
+      "start": 1784126520,
+      "end": null,
+      "updated": 1784126520
     },
     {
       "id": "ON-275335",
@@ -79,22 +127,6 @@
       "start": 1784123280,
       "end": null,
       "updated": 1784123280
-    },
-    {
-      "id": "ON-275317",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at WESTON ROAD, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.71307742,
-      "lng": -79.5358993,
-      "start": 1784123160,
-      "end": null,
-      "updated": 1784123160
     },
     {
       "id": "ON-275323",
@@ -223,22 +255,6 @@
       "start": 1784199600,
       "end": 1784242800,
       "updated": 1784121540
-    },
-    {
-      "id": "ON-275301",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at 400/BLACK CREEK, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.71544017,
-      "lng": -79.52310384,
-      "start": 1784121480,
-      "end": null,
-      "updated": 1784121480
     },
     {
       "id": "ON-275272",
@@ -783,26 +799,10 @@
       "start": 1785895200,
       "end": 1786186800,
       "updated": 1784118360
-    },
-    {
-      "id": "ON-275237",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 400 Southbound  between MAPLEVIEW DRIVE, Barrie and CANAL RD., Bradford. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.335453,
-      "lng": -79.68464,
-      "start": 1785888000,
-      "end": 1786179600,
-      "updated": 1784118360
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T14:44:34.682074+00:00",
+  "updated": "2026-07-15T15:14:43.361563+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
