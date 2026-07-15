@@ -20,9 +20,9 @@ body{
   font-size:14px;line-height:1.5;padding:0;max-width:100%
 }
 .banner{
-  background:#fff;border-bottom:1px solid var(--light);padding:20px 24px;
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
-  gap:8px;position:sticky;top:0;z-index:1000;min-height:88px
+  background:#fff;border-bottom:1px solid var(--light);padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:1000;height:100px
 }
 .banner-brand{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1.1;font-family:'Fira Mono',monospace}
 .banner-sub{font-size:11px;color:var(--muted);font-weight:400}
@@ -177,17 +177,19 @@ HTML = """<!DOCTYPE html>
 <body>
 
 <div class="banner">
-  <nav style="display:flex;align-items:center;gap:18px;font-size:24px;font-weight:500;font-family:'Fira Mono',monospace;padding-left:150px;">
+  <div class="banner-left">
+    <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
+      <img src="logo.jpg" alt="Northern Mile Media" style="height:40px;width:auto;flex-shrink:0;">
+      <div>
+        <h1 class="banner-brand" style="font-size:inherit;font-weight:inherit;margin:0;padding:0;display:inline;">NORTHERN MILE MEDIA</h1>
+        <div class="banner-sub">For the people who keep Canada moving</div>
+      </div>
+    </a>
+  </div>
+  <nav style="display:flex;align-items:center;gap:18px;font-size:15px;font-weight:500;font-family:'Fira Mono',monospace;">
     <a href="https://northernmilemedia.com" style="color:var(--text);text-decoration:none;">Home</a>
     <a href="https://northernmilemedia.com/about/" style="color:var(--text);text-decoration:none;">About</a>
   </nav>
-  <div class="banner-left" style="position:absolute;left:50%;transform:translateX(-50%);">
-    <a href="https://northernmilemedia.com" style="display:flex;align-items:center;text-decoration:none;color:inherit;">
-      <img src="logo.jpg" alt="Northern Mile Media" style="height:56px;width:auto;flex-shrink:0;">
-      <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;margin:-1px;padding:0;">NORTHERN MILE MEDIA — Live Canadian Trucking Dashboard</h1>
-    </a>
-  </div>
-  <div></div>
 </div>
 
 <div class="main">
