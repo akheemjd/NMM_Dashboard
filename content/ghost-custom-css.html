@@ -1,0 +1,47 @@
+/* Northern Mile Media — Custom Brand CSS */
+<style>
+:root{
+  --nm-blue:#1a3a5c;
+  --nm-red:#c41e3a;
+  --nm-muted:#6b7280;
+  --nm-light:#eaecf0;
+  --nm-bg:#f8f9fa;
+}
+
+/* Typography */
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;color:#1a1a1a}
+h1,h2,h3{color:var(--nm-blue);font-weight:800;letter-spacing:-.01em}
+h1{font-size:2rem;margin-bottom:0.3em}
+h2{font-size:1.35rem;margin-top:2em}
+h3{font-size:1.1rem;margin-top:1.5em}
+
+/* Post body */
+.gh-content{font-size:1.05rem;line-height:1.75;max-width:680px}
+.gh-content p{margin-bottom:1.4em}
+.gh-content a{color:var(--nm-red);text-decoration:underline;text-underline-offset:3px}
+
+/* Lead paragraph */
+.gh-content > p:first-of-type{font-size:1.2rem;color:var(--nm-muted);line-height:1.6;margin-bottom:2em}
+
+/* Pull quote */
+.gh-content blockquote{
+  background:var(--nm-bg);border-left:3px solid var(--nm-red);
+  padding:16px 20px;margin:2em 0;border-radius:0 8px 8px 0;
+  font-size:1.1rem;color:var(--nm-blue);font-weight:600
+}
+
+/* Images */
+.gh-content img{border-radius:8px;margin:2em 0}
+
+/* Tables */
+.gh-content table{width:100%;border-collapse:collapse;margin:1.5em 0;font-size:.95rem}
+.gh-content th{background:var(--nm-blue);color:#fff;padding:10px 14px;text-align:left;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em}
+.gh-content td{padding:10px 14px;border-bottom:1px solid var(--nm-light)}
+
+/* CTA at bottom */
+.gh-content .nm-cta{
+  display:block;text-align:center;background:var(--nm-blue);color:#fff;
+  padding:14px 24px;border-radius:8px;font-weight:700;text-decoration:none;
+  margin:2.5em 0 1em
+}
+</style>
