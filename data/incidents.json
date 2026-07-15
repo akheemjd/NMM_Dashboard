@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275207",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound TRANSFER at Etobicoke Creek Express to Collector, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.66153611,
+      "lng": -79.61094444,
+      "start": 1784098260,
+      "end": null,
+      "updated": 1784098560
+    },
+    {
       "id": "ON-275205",
       "province": "ON",
       "highway": "QEW",
@@ -793,26 +809,10 @@
       "start": 1784512800,
       "end": 1784977200,
       "updated": 1784034120
-    },
-    {
-      "id": "ON-274830",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.791344,
-      "lng": -79.53936,
-      "start": 1784512800,
-      "end": 1784977200,
-      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T06:42:08.673792+00:00",
+  "updated": "2026-07-15T07:12:16.651833+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
