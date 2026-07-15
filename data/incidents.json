@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-274640",
+      "province": "ON",
+      "highway": "HWY 599",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 599 Both Directions  between SEC HWY 516 (W) - MNR SILVICULTURAL CAMP (E), Savant Lake and THUNDER BAY - KENORA DIST BDY, Pickle Lake. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 50.309355,
+      "lng": -90.6994472,
+      "start": 1783971840,
+      "end": null,
+      "updated": 1784072220
+    },
+    {
       "id": "ON-274739",
       "province": "ON",
       "highway": "HWY 11",
@@ -49,22 +65,6 @@
       "updated": 1784072040
     },
     {
-      "id": "ON-275130",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at WESTON ROAD, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.713270344,
-      "lng": -79.537625313,
-      "start": 1784070720,
-      "end": null,
-      "updated": 1784070720
-    },
-    {
       "id": "drivebc.ca/DBC-93615",
       "province": "BC",
       "highway": {
@@ -100,54 +100,6 @@
       "start": 1784167200,
       "end": 1784282400,
       "updated": 1784068800
-    },
-    {
-      "id": "ON-275119",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at LESLIE STREET, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.76600201,
-      "lng": -79.3627448,
-      "start": 1784068740,
-      "end": null,
-      "updated": 1784068740
-    },
-    {
-      "id": "ON-275116",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KEELE ST, Toronto. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.72269454,
-      "lng": -79.4814239,
-      "start": 1784067960,
-      "end": null,
-      "updated": 1784067960
-    },
-    {
-      "id": "ON-275104",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 427 Southbound EXPRESS at BLOOR STREET, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.63593567,
-      "lng": -79.55969839,
-      "start": 1784066820,
-      "end": null,
-      "updated": 1784066820
     },
     {
       "id": "ON-275066",
@@ -809,10 +761,58 @@
       "start": 1784512800,
       "end": 1784973600,
       "updated": 1784034060
+    },
+    {
+      "id": "ON-274827",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 400 Southbound  between MAJOR MACKENZIE DRIVE and BASS PRO MILLS DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.846935,
+      "lng": -79.54861,
+      "start": 1784509200,
+      "end": 1784970000,
+      "updated": 1784034060
+    },
+    {
+      "id": "ON-274837",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 410 Southbound  between MAYFIELD ROAD and BOVAIRD DRIVE/N JCT HWY 7, Brampton. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.75677,
+      "lng": -79.79935,
+      "start": 1784509200,
+      "end": 1784970000,
+      "updated": 1784033640
+    },
+    {
+      "id": "ON-274836",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 410 Northbound  between BOVAIRD DRIVE/N JCT HWY 7 and MAYFIELD ROAD, Brampton. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.725464,
+      "lng": -79.76526,
+      "start": 1784512800,
+      "end": 1784973600,
+      "updated": 1784032980
     }
   ],
   "total": 50,
-  "updated": "2026-07-14T23:39:05.513272+00:00",
+  "updated": "2026-07-15T00:09:11.588518+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
