@@ -33,22 +33,6 @@
       "updated": 1784104740
     },
     {
-      "id": "ON-275211",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Highway Maintenance on QEW Toronto bound RAMP at TRAFALGAR ROAD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.4593596,
-      "lng": -79.68543944,
-      "start": 1784101860,
-      "end": null,
-      "updated": 1784101860
-    },
-    {
       "id": "ON-275209",
       "province": "ON",
       "highway": "HWY 401",
@@ -809,10 +793,26 @@
       "start": 1784512800,
       "end": 1784977200,
       "updated": 1784034120
+    },
+    {
+      "id": "ON-274830",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1784512800,
+      "end": 1784977200,
+      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T08:42:44.705263+00:00",
+  "updated": "2026-07-15T09:12:54.465035+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
