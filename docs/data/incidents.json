@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-275204",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound RAMP at HWY 88, Bradford. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.10085406,
+      "lng": -79.63170548,
+      "start": 1784091540,
+      "end": null,
+      "updated": 1784091540
+    },
+    {
+      "id": "ON-275202",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound ON-RAMP at WARDEN AVE, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.770613,
+      "lng": -79.306342,
+      "start": 1784090280,
+      "end": null,
+      "updated": 1784090280
+    },
+    {
+      "id": "ON-275203",
+      "province": "ON",
+      "highway": "HWY 28",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 28 Northbound  between LAKEVIEW RD, Bancroft and HWY 41, Denbigh. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.06553,
+      "lng": -77.82236,
+      "start": 1784118600,
+      "end": 1784235600,
+      "updated": 1784090160
+    },
+    {
       "id": "ON-275199",
       "province": "ON",
       "highway": "HWY 401",
@@ -79,22 +127,6 @@
       "start": 1784113200,
       "end": 1786143600,
       "updated": 1784084520
-    },
-    {
-      "id": "ON-275177",
-      "province": "ON",
-      "highway": "GARDINER EXPWY",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on GARDINER EXPWY Westbound RAMP at SHERWAY GARDENS AND BROWN'S LINE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.614846,
-      "lng": -79.544974,
-      "start": 1784081340,
-      "end": null,
-      "updated": 1784081340
     },
     {
       "id": "ON-275168",
@@ -777,42 +809,10 @@
       "start": 1784552400,
       "end": 1784919600,
       "updated": 1784037300
-    },
-    {
-      "id": "ON-274857",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Construction on QEW Toronto bound  between NORTHSHORE BLVD and FAIRVIEW STREET/PLAINS ROAD, Burlington. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.315086,
-      "lng": -79.80735,
-      "start": 1784253600,
-      "end": 1785402000,
-      "updated": 1784036820
-    },
-    {
-      "id": "ON-274847",
-      "province": "ON",
-      "highway": "HWY 529",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 529 Southbound  between SEC HWY 645, Britt and S JCT HWY 69, . 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.757305,
-      "lng": -80.513596,
-      "start": 1785065400,
-      "end": 1787785200,
-      "updated": 1784036280
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T04:41:32.748817+00:00",
+  "updated": "2026-07-15T05:11:42.547249+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
