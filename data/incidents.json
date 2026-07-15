@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275189",
+      "province": "ON",
+      "highway": "HWY 8",
+      "direction": "Eastbound",
+      "description": "Daily Maintenance on HWY 8 Eastbound  between Highway 23 and Highway 8 Intersection, Mitchell and O'Loane Ave (Stratford West Limits), Sebringville. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.468075,
+      "lng": -81.19794,
+      "start": 1784113200,
+      "end": 1786143600,
+      "updated": 1784084520
+    },
+    {
+      "id": "ON-275188",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.6659913,
+      "lng": -79.5996896,
+      "start": 1784084280,
+      "end": null,
+      "updated": 1784084280
+    },
+    {
       "id": "ON-275163",
       "province": "ON",
       "highway": "HWY 401",
@@ -777,42 +809,10 @@
       "start": 1784512800,
       "end": 1784977200,
       "updated": 1784034120
-    },
-    {
-      "id": "ON-274830",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.791344,
-      "lng": -79.53936,
-      "start": 1784512800,
-      "end": 1784977200,
-      "updated": 1784034120
-    },
-    {
-      "id": "ON-274831",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Express between LANGSTAFF ROAD and BASS PRO MILLS DRIVE, Vaughan. 4 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "4 Alternating Lane(s)",
-      "lat": 43.809307,
-      "lng": -79.54362,
-      "start": 1784509200,
-      "end": 1784977200,
-      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T02:39:57.361588+00:00",
+  "updated": "2026-07-15T03:10:06.878619+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
