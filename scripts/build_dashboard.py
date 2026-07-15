@@ -177,7 +177,7 @@ HTML = """<!DOCTYPE html>
 <body>
 
 <div class="banner">
-  <nav style="padding-left:200px;font-size:15px;font-weight:700;font-family:'Fira Mono',monospace;">
+  <nav style="padding-left:250px;font-size:15px;font-weight:700;font-family:'Fira Mono',monospace;">
     <a href="https://northernmilemedia.com" style="color:var(--text);text-decoration:none;margin-right:18px;">Home</a>
     <a href="https://northernmilemedia.com/about/" style="color:var(--text);text-decoration:none;">About</a>
   </nav>
