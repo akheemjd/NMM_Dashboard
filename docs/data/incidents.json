@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275491",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound  at STEELES AVE, Brampton. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.68597151,
+      "lng": -79.71159813,
+      "start": 1784146380,
+      "end": null,
+      "updated": 1784146380
+    },
+    {
       "id": "ON-275481",
       "province": "ON",
       "highway": "HWY 407",
@@ -15,38 +31,6 @@
       "start": 1784144940,
       "end": null,
       "updated": 1784144940
-    },
-    {
-      "id": "ON-275475",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.77486841,
-      "lng": -79.28440092,
-      "start": 1784144160,
-      "end": null,
-      "updated": 1784144160
-    },
-    {
-      "id": "ON-275471",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.69200023,
-      "lng": -79.56896285,
-      "start": 1784143680,
-      "end": null,
-      "updated": 1784143680
     },
     {
       "id": "ON-275464",
@@ -161,22 +145,6 @@
       "updated": 1784140620
     },
     {
-      "id": "ON-275450",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 11 Northbound  at CARIBUS RD(S), Atikokan. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 48.728531163,
-      "lng": -91.662258069,
-      "start": 1784140560,
-      "end": null,
-      "updated": 1784140560
-    },
-    {
       "id": "ON-275448",
       "province": "ON",
       "highway": "HWY 400",
@@ -191,6 +159,22 @@
       "start": 1784421000,
       "end": 1784430000,
       "updated": 1784140260
+    },
+    {
+      "id": "ON-275492",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Collector between YONGE ST and DON MILLS ROAD, Toronto. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.753506,
+      "lng": -79.408325,
+      "start": 1784512800,
+      "end": 1784970000,
+      "updated": 1784139960
     },
     {
       "id": "ON-275490",
@@ -799,10 +783,26 @@
       "start": 1785848400,
       "end": 1786132800,
       "updated": 1784120460
+    },
+    {
+      "id": "ON-275287",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Westbound",
+      "description": "Daily Maintenance on HWY 89 Westbound  between HWY 400 and MONO-ADJALA TOWNLINE ROAD, Essa. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.19973,
+      "lng": -79.65732,
+      "start": 1785848400,
+      "end": 1786042800,
+      "updated": 1784120400
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T20:16:14.488280+00:00",
+  "updated": "2026-07-15T20:32:25.332106+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
