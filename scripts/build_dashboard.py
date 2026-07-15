@@ -202,7 +202,7 @@ HTML = """<!DOCTYPE html>
       <img src="logo.jpg" alt="Northern Mile Media" style="height:40px;width:auto;flex-shrink:0;">
       <div>
         <h1 class="banner-brand" style="font-size:inherit;font-weight:inherit;margin:0;padding:0;display:inline;">NORTHERN MILE MEDIA</h1>
-        <div class="banner-sub">For the people who keep Canada moving</div>
+        <div class="banner-sub">Live data and industry insight for Canadian trucking. Built for the people who keep Canada moving.</div>
       </div>
     </a>
   </div>
