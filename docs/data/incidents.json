@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275445",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 17 Eastbound  at PRAIRIE RIVER BR - E ABUTMENT, Terrace Bay. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.803492051,
+      "lng": -86.776613331,
+      "start": 1784139960,
+      "end": null,
+      "updated": 1784155980
+    },
+    {
+      "id": "ON-275459",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 17 Eastbound  between TERRACE BAY E LTS SIGN, Terrace Bay and PENINSULA RD (FORMER HWY 626 TO MARATHON) (S), Marathon. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.795366241,
+      "lng": -87.087299323,
+      "start": 1784141700,
+      "end": null,
+      "updated": 1784155980
+    },
+    {
       "id": "ON-274640",
       "province": "ON",
       "highway": "HWY 599",
@@ -31,22 +63,6 @@
       "start": 1784010780,
       "end": null,
       "updated": 1784153460
-    },
-    {
-      "id": "ON-275523",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound  at HWY 409, Toronto. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.6970756,
-      "lng": -79.606942,
-      "start": 1784152440,
-      "end": null,
-      "updated": 1784152440
     },
     {
       "id": "ON-275495",
@@ -97,22 +113,6 @@
       "updated": 1784141880
     },
     {
-      "id": "ON-275459",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  between TERRACE BAY E LTS SIGN, Terrace Bay and PENINSULA RD (FORMER HWY 626 TO MARATHON) (S), Marathon. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 48.795366241,
-      "lng": -87.087299323,
-      "start": 1784141700,
-      "end": null,
-      "updated": 1784141700
-    },
-    {
       "id": "ON-275457",
       "province": "ON",
       "highway": "HWY 403 HAMILTON",
@@ -159,22 +159,6 @@
       "start": 1784430000,
       "end": 1784433540,
       "updated": 1784140800
-    },
-    {
-      "id": "ON-275445",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  at PRAIRIE RIVER BR - E ABUTMENT, Terrace Bay. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 48.803492051,
-      "lng": -86.776613331,
-      "start": 1784139960,
-      "end": null,
-      "updated": 1784140620
     },
     {
       "id": "ON-275448",
@@ -799,10 +783,26 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120220
+    },
+    {
+      "id": "ON-275289",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 12 Northbound  between HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte and HWY 93/SIMCOE ROAD 93, Midland. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.612568,
+      "lng": -79.46308,
+      "start": 1785848400,
+      "end": 1786129200,
+      "updated": 1784120160
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T22:47:04.398220+00:00",
+  "updated": "2026-07-15T23:17:18.070887+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
