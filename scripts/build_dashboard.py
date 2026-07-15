@@ -125,10 +125,10 @@ body{
   .ntitle{font-size:13px;line-height:1.4}
   .mitem{font-size:12px;padding:9px 10px}
   .mdesc{font-size:11px}
-  .banner{flex-direction:column!important;height:auto!important;padding:12px 16px!important;gap:6px!important;justify-content:center!important}
-  .banner nav{padding-left:0!important;justify-content:center!important;order:2!important}
-  .banner>div{position:static!important;transform:none!important;order:1!important}
-  .banner img{height:32px!important}
+  .banner{flex-direction:row!important;height:auto!important;padding:10px 14px!important;gap:0!important;justify-content:space-between!important}
+  .banner nav{padding-left:0!important;justify-content:flex-end!important;order:0!important;font-size:12px!important}
+  .banner>div{position:static!important;transform:none!important;order:0!important}
+  .banner img{height:28px!important}
   .banner-brand{font-size:14px!important}
   .banner-sub{font-size:9px!important}
   footer{flex-direction:column!important;gap:10px!important;align-items:flex-start!important;padding:14px 16px!important}
