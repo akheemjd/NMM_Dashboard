@@ -177,18 +177,21 @@ HTML = """<!DOCTYPE html>
 <body>
 
 <div class="banner">
-  <div class="banner-left">
-    <img src="logo.jpg" alt="Northern Mile Media" style="height:48px;width:auto;flex-shrink:0;margin-right:12px;">
-    <div>
-      <h1 class="banner-brand" style="font-size:inherit;font-weight:inherit;margin:0;padding:0;display:inline;">NORTHERN MILE MEDIA</h1>
-      <div class="banner-sub">For the people who keep Canada moving</div>
-    </div>
-  </div>
   <nav style="display:flex;align-items:center;gap:18px;font-size:12px;font-weight:500;font-family:'Fira Mono',monospace;">
     <a href="https://northernmilemedia.com" style="color:var(--text);text-decoration:none;">Home</a>
     <a href="https://northernmilemedia.com/about/" style="color:var(--text);text-decoration:none;">About</a>
     <a href="index.html" style="color:var(--text);text-decoration:none;">Dashboard</a>
   </nav>
+  <div class="banner-left" style="position:absolute;left:50%;transform:translateX(-50%);">
+    <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
+      <img src="logo.jpg" alt="Northern Mile Media" style="height:48px;width:auto;flex-shrink:0;">
+      <div>
+        <h1 class="banner-brand" style="font-size:inherit;font-weight:inherit;margin:0;padding:0;display:inline;">NORTHERN MILE MEDIA</h1>
+        <div class="banner-sub">For the people who keep Canada moving</div>
+      </div>
+    </a>
+  </div>
+  <div></div>
 </div>
 
 <div class="main">
