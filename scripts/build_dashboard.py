@@ -126,7 +126,10 @@ body{
   .mitem{font-size:12px;padding:9px 10px}
   .mdesc{font-size:11px}
   .banner{flex-direction:row!important;height:auto!important;padding:10px 14px!important;gap:0!important;justify-content:space-between!important}
-  .banner nav{padding-left:0!important;justify-content:flex-end!important;font-size:12px!important;order:1!important}
+  .banner nav{padding-left:0!important;justify-content:flex-end!important;font-size:12px!important;order:1!important;display:flex!important}
+  .banner nav a{display:none!important}
+  #menu-btn{display:block!important}
+  #menu-drop.open{display:block!important}
   .banner>div{position:static!important;transform:none!important;order:0!important}
   .banner img{height:28px!important}
   .banner-brand{font-size:14px!important}
@@ -184,8 +187,13 @@ HTML = """<!DOCTYPE html>
 
 <div class="banner">
   <nav style="padding-left:250px;font-size:15px;font-weight:700;font-family:'Fira Mono',monospace;">
-    <a href="https://northernmilemedia.com" style="color:var(--text);text-decoration:none;margin-right:18px;">Home</a>
-    <a href="https://northernmilemedia.com/about/" style="color:var(--text);text-decoration:none;">About</a>
+    <div style="position:relative;">
+      <button id="menu-btn" style="background:none;border:none;font-size:22px;cursor:pointer;font-family:'Fira Mono',monospace;color:var(--text);padding:4px 0;display:none;" onclick="document.getElementById('menu-drop').classList.toggle('open')">☰</button>
+      <div id="menu-drop" style="display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid var(--light);border-radius:0;padding:8px 16px;z-index:1000;min-width:120px;box-shadow:0 2px 8px rgba(0,0,0,.08);">
+        <a href="https://northernmilemedia.com" style="display:block;padding:6px 0;color:var(--text);text-decoration:none;font-size:13px;font-family:'Fira Mono',monospace;">Home</a>
+        <a href="https://northernmilemedia.com/about/" style="display:block;padding:6px 0;color:var(--text);text-decoration:none;font-size:13px;font-family:'Fira Mono',monospace;">About</a>
+      </div>
+    </div>
   </nav>
   <div style="position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;">
     <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
