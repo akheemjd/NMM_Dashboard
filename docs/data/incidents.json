@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-275214",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound HOV at KING ROAD, King. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.92064701,
+      "lng": -79.56601396,
+      "start": 1784107620,
+      "end": null,
+      "updated": 1784107620
+    },
+    {
+      "id": "ON-275215",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at KING ROAD, King. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.92064701,
+      "lng": -79.56601396,
+      "start": 1784107620,
+      "end": null,
+      "updated": 1784107620
+    },
+    {
+      "id": "ON-275209",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.6659913,
+      "lng": -79.5996896,
+      "start": 1784100000,
+      "end": null,
+      "updated": 1784106780
+    },
+    {
       "id": "ON-274780",
       "province": "ON",
       "highway": "HWY 527",
@@ -31,22 +79,6 @@
       "start": 1783971840,
       "end": null,
       "updated": 1784104740
-    },
-    {
-      "id": "ON-275209",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. 4 lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "4 lanes closed",
-      "lat": 43.6659913,
-      "lng": -79.5996896,
-      "start": 1784100000,
-      "end": null,
-      "updated": 1784100060
     },
     {
       "id": "ON-275207",
@@ -777,42 +809,10 @@
       "start": 1784509200,
       "end": 1784970000,
       "updated": 1784034120
-    },
-    {
-      "id": "ON-274829",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Express between BASS PRO MILLS DRIVE and MAJOR MACKENZIE DRIVE, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.82064,
-      "lng": -79.5456,
-      "start": 1784512800,
-      "end": 1784977200,
-      "updated": 1784034120
-    },
-    {
-      "id": "ON-274830",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.791344,
-      "lng": -79.53936,
-      "start": 1784512800,
-      "end": 1784977200,
-      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T09:12:54.465035+00:00",
+  "updated": "2026-07-15T09:43:02.586819+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
