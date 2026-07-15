@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-275529",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.74265249,
-      "lng": -79.4233205,
-      "start": 1784153520,
-      "end": null,
-      "updated": 1784153520
-    },
-    {
       "id": "ON-274640",
       "province": "ON",
       "highway": "HWY 599",
@@ -47,22 +31,6 @@
       "start": 1784010780,
       "end": null,
       "updated": 1784153460
-    },
-    {
-      "id": "ON-275497",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at HWY 12 N JCT, Tay. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.70653636,
-      "lng": -79.6613373,
-      "start": 1784148360,
-      "end": null,
-      "updated": 1784153100
     },
     {
       "id": "ON-275523",
@@ -799,10 +767,42 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120340
+    },
+    {
+      "id": "ON-275285",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Daily Maintenance on HWY 26 Westbound  between CARSON ROAD, Springwater and POPLAR SIDEROAD, Clearview. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.42869,
+      "lng": -79.7241,
+      "start": 1785848400,
+      "end": 1786042800,
+      "updated": 1784120280
+    },
+    {
+      "id": "ON-275284",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Eastbound",
+      "description": "Daily Maintenance on HWY 26 Eastbound  between POPLAR SIDEROAD, Clearview and CARSON ROAD, Springwater. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.488663,
+      "lng": -80.16752,
+      "start": 1785848400,
+      "end": 1786042800,
+      "updated": 1784120220
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T22:16:52.535156+00:00",
+  "updated": "2026-07-15T22:47:04.398220+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
