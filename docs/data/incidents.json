@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275217",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS HOV at MISSISSAUGA RD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.6053506,
+      "lng": -79.746443,
+      "start": 1784110020,
+      "end": null,
+      "updated": 1784110020
+    },
+    {
+      "id": "ON-275209",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.6659913,
+      "lng": -79.5996896,
+      "start": 1784100000,
+      "end": null,
+      "updated": 1784109840
+    },
+    {
       "id": "ON-275214",
       "province": "ON",
       "highway": "HWY 400",
@@ -33,22 +65,6 @@
       "updated": 1784107620
     },
     {
-      "id": "ON-275209",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.6659913,
-      "lng": -79.5996896,
-      "start": 1784100000,
-      "end": null,
-      "updated": 1784106780
-    },
-    {
       "id": "ON-274780",
       "province": "ON",
       "highway": "HWY 527",
@@ -79,22 +95,6 @@
       "start": 1783971840,
       "end": null,
       "updated": 1784104740
-    },
-    {
-      "id": "ON-275207",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound TRANSFER at Etobicoke Creek Express to Collector, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.66153611,
-      "lng": -79.61094444,
-      "start": 1784098260,
-      "end": null,
-      "updated": 1784098560
     },
     {
       "id": "ON-275203",
@@ -694,22 +694,6 @@
       "updated": 1784044080
     },
     {
-      "id": "ON-274886",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Maintenance on HWY 401 Westbound  between Northumberland CR 30 (IC 509) and LAKE RD, Brighton. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.07478,
-      "lng": -77.76885,
-      "start": 1784070000,
-      "end": 1784109600,
-      "updated": 1784040600
-    },
-    {
       "id": "ON-274881",
       "province": "ON",
       "highway": "HWY 35/115",
@@ -809,10 +793,26 @@
       "start": 1784509200,
       "end": 1784970000,
       "updated": 1784034120
+    },
+    {
+      "id": "ON-274829",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between BASS PRO MILLS DRIVE and MAJOR MACKENZIE DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.82064,
+      "lng": -79.5456,
+      "start": 1784512800,
+      "end": 1784977200,
+      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T09:43:02.586819+00:00",
+  "updated": "2026-07-15T10:13:12.391782+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
