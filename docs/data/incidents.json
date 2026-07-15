@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275475",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.77486841,
+      "lng": -79.28440092,
+      "start": 1784144160,
+      "end": null,
+      "updated": 1784144160
+    },
+    {
+      "id": "ON-275471",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.69200023,
+      "lng": -79.56896285,
+      "start": 1784143680,
+      "end": null,
+      "updated": 1784143680
+    },
+    {
       "id": "ON-275464",
       "province": "ON",
       "highway": "HWY 125",
@@ -273,22 +305,6 @@
       "updated": 1784138340
     },
     {
-      "id": "ON-275420",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound COLLECTOR at BLOOR STREET, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.63637428,
-      "lng": -79.55920057,
-      "start": 1784138220,
-      "end": null,
-      "updated": 1784138220
-    },
-    {
       "id": "ON-275424",
       "province": "ON",
       "highway": "HWY 15",
@@ -479,38 +495,6 @@
       "start": 1784419200,
       "end": 1784469600,
       "updated": 1784130660
-    },
-    {
-      "id": "ON-275365",
-      "province": "ON",
-      "highway": "HWY 118",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 118 Westbound  at THOMPSON RD(S), Lakewood. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 45.00822581,
-      "lng": -79.013112434,
-      "start": 1784129340,
-      "end": null,
-      "updated": 1784130360
-    },
-    {
-      "id": "ON-275366",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at SB exit 169 ramp to Bethune Dr North, South ent, Gravenhurst. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.90724221,
-      "lng": -79.362595078,
-      "start": 1784122500,
-      "end": null,
-      "updated": 1784130360
     },
     {
       "id": "ON-275364",
@@ -799,10 +783,26 @@
       "start": 1784199600,
       "end": 1784242800,
       "updated": 1784121540
+    },
+    {
+      "id": "ON-275288",
+      "province": "ON",
+      "highway": "HWY 93",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 93 Northbound  between HWY 400, Springwater and HWY 12/ANGELA SCHMIDT FOSTER ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.552452,
+      "lng": -79.74547,
+      "start": 1785848400,
+      "end": 1786132800,
+      "updated": 1784120460
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T19:15:55.933644+00:00",
+  "updated": "2026-07-15T19:46:05.754425+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
