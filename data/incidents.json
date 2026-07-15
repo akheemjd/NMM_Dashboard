@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275191",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at WINSTON CHURCHILL BLVD, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.51161726,
+      "lng": -79.66262451,
+      "start": 1784085840,
+      "end": null,
+      "updated": 1784085840
+    },
+    {
       "id": "ON-275189",
       "province": "ON",
       "highway": "HWY 8",
@@ -15,38 +31,6 @@
       "start": 1784113200,
       "end": 1786143600,
       "updated": 1784084520
-    },
-    {
-      "id": "ON-275188",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.6659913,
-      "lng": -79.5996896,
-      "start": 1784084280,
-      "end": null,
-      "updated": 1784084280
-    },
-    {
-      "id": "ON-275163",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Vehicle Fire on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.76327209,
-      "lng": -79.38728169,
-      "start": 1784077200,
-      "end": null,
-      "updated": 1784081400
     },
     {
       "id": "ON-275177",
@@ -809,10 +793,26 @@
       "start": 1784512800,
       "end": 1784977200,
       "updated": 1784034120
+    },
+    {
+      "id": "ON-274830",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1784512800,
+      "end": 1784977200,
+      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T03:10:06.878619+00:00",
+  "updated": "2026-07-15T03:40:17.221760+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
