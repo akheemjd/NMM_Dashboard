@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275157",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 7 Eastbound  between Krug Street and Shirley Drive, Kitchener. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 43.454113,
+      "lng": -80.46817,
+      "start": 1784422800,
+      "end": 1784883600,
+      "updated": 1784075880
+    },
+    {
       "id": "ON-275148",
       "province": "ON",
       "highway": "HWY 400",
@@ -793,26 +809,10 @@
       "start": 1784509200,
       "end": 1784970000,
       "updated": 1784033640
-    },
-    {
-      "id": "ON-274836",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 410 Northbound  between BOVAIRD DRIVE/N JCT HWY 7 and MAYFIELD ROAD, Brampton. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.725464,
-      "lng": -79.76526,
-      "start": 1784512800,
-      "end": 1784973600,
-      "updated": 1784032980
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T00:39:19.971918+00:00",
+  "updated": "2026-07-15T00:43:27.430985+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
