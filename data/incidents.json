@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275230",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound  between STEWART BLVD (IC 696)/Leeds & Grenville CR 29 (Brockville) and North AUGUSTA RD (IC 698), Brockville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.59945,
+      "lng": -75.70122,
+      "start": 1784502000,
+      "end": 1784973600,
+      "updated": 1784115660
+    },
+    {
       "id": "ON-275227",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -31,38 +47,6 @@
       "start": 1784100000,
       "end": null,
       "updated": 1784109840
-    },
-    {
-      "id": "ON-275214",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound HOV at KING ROAD, King. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.92064701,
-      "lng": -79.56601396,
-      "start": 1784107620,
-      "end": null,
-      "updated": 1784107620
-    },
-    {
-      "id": "ON-275215",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at KING ROAD, King. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.92064701,
-      "lng": -79.56601396,
-      "start": 1784107620,
-      "end": null,
-      "updated": 1784107620
     },
     {
       "id": "ON-274780",
@@ -809,10 +793,26 @@
       "start": 1784512800,
       "end": 1784977200,
       "updated": 1784034120
+    },
+    {
+      "id": "ON-274830",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1784512800,
+      "end": 1784977200,
+      "updated": 1784034120
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T11:43:40.767291+00:00",
+  "updated": "2026-07-15T12:13:49.070460+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
