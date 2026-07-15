@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northern Mile — Trucking Job Board</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1a3a5c;--red:#c41e3a;--muted:#6b7280;--light:#eaecf0;--bg:#f8f9fa;
+  --card:#fff;--text:#1a3a5c;--green:#16a34a;--amber:#d97706;--radius:10px
+}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  font-size:14px;line-height:1.5
+}
+.banner{
+  background:var(--card);border-bottom:1px solid var(--light);padding:14px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100
+}
+.banner-brand{font-size:17px;font-weight:800;color:var(--blue);letter-spacing:-.02em}
+.banner-sub{font-size:11px;color:var(--muted)}
+.banner-back{font-size:12px;color:var(--blue);text-decoration:none;font-weight:600}
+.banner-back:hover{color:var(--red)}
+.main{max-width:900px;margin:0 auto;padding:24px 18px 40px}
+.hero{text-align:center;margin-bottom:24px}
+.hero h1{font-size:22px;font-weight:800;color:var(--blue);margin-bottom:4px}
+.hero p{font-size:13px;color:var(--muted);margin-bottom:16px}
+.cta{display:inline-block;padding:10px 24px;background:var(--blue);color:#fff;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none}
+.cta:hover{opacity:.9}
+
+.job-list{display:flex;flex-direction:column;gap:10px}
+.job-card{background:var(--card);border:1px solid var(--light);border-radius:var(--radius);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.job-card.featured{border-left:3px solid var(--red)}
+.job-info{min-width:0}
+.job-company{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+.job-title{font-size:15px;font-weight:700;color:var(--text);margin:2px 0}
+.job-meta{font-size:12px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap}
+.job-pay{font-size:15px;font-weight:700;color:var(--blue);white-space:nowrap}
+.job-apply{display:inline-block;padding:7px 16px;background:var(--blue);color:#fff;border-radius:4px;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap}
+.job-apply:hover{opacity:.9}
+.featured-badge{font-size:9px;background:#fee2e2;color:var(--red);padding:2px 6px;border-radius:3px;font-weight:600;text-transform:uppercase}
+.empty{text-align:center;color:var(--muted);padding:40px 0}
+.footer{padding:20px;text-align:center;font-size:10px;color:var(--muted);border-top:1px solid var(--light);margin-top:32px}
+
+@media(max-width:600px){
+  .main{padding:16px 12px}.job-card{padding:12px 14px}
+  .job-title{font-size:13px}.job-pay{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div>
+    <div class="banner-brand">NORTHERN MILE MEDIA</div>
+    <div class="banner-sub">Trucking Job Board</div>
+  </div>
+  <a href="index.html" class="banner-back">← Dashboard</a>
+</div>
+
+<div class="main">
+  <div class="hero">
+    <h1>Canadian Trucking Jobs</h1>
+    <p>Driver, dispatcher, and fleet positions across Canada. Post a job for $249/month.</p>
+    <a href="mailto:jobs@northernmilemedia.com" class="cta">Post a Job</a>
+  </div>
+
+  <div class="job-list" id="job-list">
+    <div class="empty">Loading listings...</div>
+  </div>
+
+  <div class="footer">
+    <div>&copy; 2026 Northern Mile Media &middot; Job listings are paid placements. Verify independently.</div>
+  </div>
+</div>
+
+<script>
+async function loadJobs(){
+  const container=document.getElementById('job-list');
+  try{
+    const r=await fetch('jobs.json');if(!r.ok)throw new Error('Failed');
+    const jobs=await r.json();
+    if(!jobs.length){container.innerHTML='<div class="empty">No listings yet. <a href="mailto:jobs@northernmilemedia.com">Post the first one.</a></div>';return;}
+    let h='';
+    jobs.forEach(j=>{
+      h+=`<div class="job-card${j.featured?' featured':''}">
+        <div class="job-info">
+          <div class="job-company">${j.company}${j.featured?' <span class="featured-badge">Featured</span>':''} &middot; ${j.type}</div>
+          <div class="job-title">${j.position}</div>
+          <div class="job-meta"><span>${j.location}</span><span>${j.pay}</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+          <div class="job-pay">${j.pay}</div>
+          <a href="${j.link}" class="job-apply" target="_blank">Apply</a>
+        </div>
+      </div>`;
+    });
+    container.innerHTML=h;
+  }catch(e){
+    container.innerHTML='<div class="empty">Could not load listings. Try again.</div>';
+  }
+}
+loadJobs();
+</script>
+</body>
+</html>
