@@ -11,26 +11,25 @@ OUT = os.path.expanduser('~/northern-mile-dashboard/docs/index.html')
 CSS = """
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#1a3a5c;--red:#c41e3a;--muted:#6b7280;--light:#eaecf0;--bg:#f8f9fa;
-  --card:#fff;--text:#1a3a5c;--green:#16a34a;--amber:#d97706;--radius:10px
+  --text:#15171a;--muted:#6b7280;--light:#eaecf0;--bg:#f8f9fa;
+  --card:#fff;--green:#16a34a;--amber:#d97706;--red:#dc2626;--radius:0
 }
 body{
-  background:var(--bg);color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  background:#fff;color:var(--text);
+  font-family:'Fira Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size:14px;line-height:1.5;padding:0;max-width:100%
 }
 .banner{
-  background:var(--card);border-bottom:1px solid var(--light);padding:14px 24px;
+  background:#fff;border-bottom:1px solid var(--light);padding:16px 24px;
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
   gap:8px;position:sticky;top:0;z-index:1000
 }
-.banner-brand{font-size:17px;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1.1}
-.banner-sub{font-size:11px;color:var(--muted);font-weight:400;letter-spacing:.02em}
-.banner-accent{width:3px;height:28px;background:var(--red);border-radius:2px;margin-right:10px;flex-shrink:0}
-.banner-left{display:flex;align-items:center;gap:0}
+.banner-brand{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1.1;font-family:'Fira Mono',monospace}
+.banner-sub{font-size:11px;color:var(--muted);font-weight:400}
+.banner-left{display:flex;align-items:center;gap:12px}
 .pill{font-size:9px;padding:3px 8px;border-radius:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .pill.live{background:#dcfce7;color:var(--green);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}.pill.daily{background:#dbeafe;color:var(--blue)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}.pill.daily{background:#f1f5f9;color:var(--text)}
 
 .main{padding:14px 18px 40px;max-width:1440px;margin:0 auto}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:14px}
@@ -39,7 +38,7 @@ body{
 .card{background:var(--card);border:1px solid var(--light);border-radius:var(--radius);padding:18px;scroll-margin-top:70px}
 .card.full{grid-column:1/-1}
 .card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--light);gap:10px}
-.card-header h2{font-size:16px;font-weight:600;text-transform:none;letter-spacing:-.01em;color:var(--text);white-space:nowrap}
+.card-header h2{font-size:15px;font-weight:700;text-transform:none;letter-spacing:-.01em;color:var(--text);white-space:nowrap;font-family:'Fira Mono',monospace}
 .card-header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .header-update{font-size:9px;color:var(--muted);white-space:nowrap}
 .card-body{min-height:30px}
@@ -59,7 +58,7 @@ body{
 .inds{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
 .ind{background:var(--bg);border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:5px}
 .ind-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
-.ind-value{font-size:26px;font-weight:800;color:var(--blue);line-height:1.1}
+.ind-value{font-size:26px;font-weight:800;color:var(--text);line-height:1.1}
 .ind-detail{font-size:13px;color:var(--text);font-weight:500}
 .ind-meaning{font-size:11px;color:var(--muted);line-height:1.4;margin-top:5px;padding-top:6px;border-top:1px solid var(--light)}
 
@@ -71,19 +70,19 @@ body{
 .sbar{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:2px}
 .sdot{width:10px;height:10px;border-radius:50%}.sdot.green{background:var(--green)}.sdot.amber{background:var(--amber)}.sdot.red{background:var(--red)}
 .slabel{font-weight:600;color:var(--text)}.sdelay{color:var(--muted);font-size:10px}
-.tag{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;text-transform:uppercase}.tag.fast{background:#dbeafe;color:var(--blue)}.tag.nexus{background:#dcfce7;color:var(--green)}
+.tag{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;text-transform:uppercase}.tag.fast{background:#f1f5f9;color:var(--text)}.tag.nexus{background:#dcfce7;color:var(--green)}
 
 .nitem{padding:8px 0;border-bottom:1px solid var(--light)}
 .nsrc{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .ncat{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;text-transform:capitalize}
-.ntitle{color:var(--blue);text-decoration:none;font-size:12px;line-height:1.3;font-weight:500}
-.ntitle:hover{color:var(--red)}
+.ntitle{color:var(--text);text-decoration:none;font-size:12px;line-height:1.3;font-weight:500}
+.ntitle:hover{text-decoration:underline}
 
 .mwrap{display:flex;gap:0;height:380px;overflow:hidden;border-radius:var(--radius)}
 .mmap{flex:1;height:380px;background:#f0f0f0}.mlist{width:300px;height:380px;overflow-y:auto;flex-shrink:0}
 .mitem{padding:7px 10px;border-bottom:1px solid var(--light);font-size:11px;cursor:pointer}
 .mitem:hover{background:var(--bg)}
-.mprov{font-size:9px;color:var(--blue);text-transform:uppercase;font-weight:600}
+.mprov{font-size:9px;color:var(--text);text-transform:uppercase;font-weight:600}
 .mhwy{font-weight:600;color:var(--text)}.mdesc{color:var(--muted);font-size:10px;margin-top:1px}
 .mclosed{font-size:8px;background:#fee2e2;color:var(--red);padding:1px 4px;border-radius:3px}
 
@@ -91,12 +90,12 @@ body{
 .cfield{flex:1;min-width:100px}
 .cfield label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:3px}
 .cfield select,.cfield input{width:100%;background:var(--bg);border:1px solid var(--light);color:var(--text);padding:9px 10px;border-radius:6px;font-size:13px;font-family:inherit}
-.cfield select:focus,.cfield input:focus{outline:none;border-color:var(--blue)}
+.cfield select:focus,.cfield input:focus{outline:none;border-color:var(--text)}
 .ftoggle{display:flex;background:var(--bg);border:1px solid var(--light);border-radius:6px;overflow:hidden}
 .ftoggle button{flex:1;background:none;border:none;color:var(--muted);padding:9px 12px;font-size:12px;font-family:inherit;cursor:pointer;font-weight:600}
-.ftoggle button.active{background:var(--blue);color:#fff}
+.ftoggle button.active{background:var(--text);color:#fff}
 .cresult{margin-top:12px;padding:12px;background:var(--bg);border-radius:6px;display:none}
-.cresult.v{display:block}.ccost{font-size:28px;font-weight:700;color:var(--blue)}
+.cresult.v{display:block}.ccost{font-size:28px;font-weight:700;color:var(--text)}
 .cbreak{margin-top:6px;font-size:12px;color:var(--muted);line-height:1.7}
 .cbreak strong{color:var(--text)}
 
@@ -278,15 +277,15 @@ HTML = """<!DOCTYPE html>
 </div>
 
 <div style="text-align:center;padding:28px 18px 20px;margin-top:20px;">
-  <div style="font-size:15px;font-weight:700;color:var(--blue);margin-bottom:4px;">Get the Northern Mile Brief</div>
+  <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px;">Get the Northern Mile Brief</div>
   <div style="font-size:12px;color:var(--muted);margin-bottom:14px;">Fuel prices, market shifts, and what it means. Every Wednesday. No spam.</div>
   <form id="newsletter-form-bottom" style="display:flex;gap:6px;justify-content:center;flex-wrap:wrap;max-width:400px;margin:0 auto" onsubmit="subscribeNewsletterBottom(event)">
-    <input type="email" id="nl-email-bottom" placeholder="Your email address" required style="flex:1;min-width:180px;padding:10px 14px;border:1px solid var(--light);border-radius:6px;font-size:13px;font-family:inherit;background:var(--card);color:var(--text)">
-    <button type="submit" style="padding:10px 20px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Subscribe</button>
+    <input type="email" id="nl-email-bottom" placeholder="Your email address" required style="flex:1;min-width:180px;padding:10px 14px;border:1px solid var(--light);border-radius:0;font-size:13px;font-family:inherit;background:var(--card);color:var(--text)">
+    <button type="submit" style="padding:10px 20px;background:var(--text);color:#fff;border:none;border-radius:0;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">Subscribe</button>
   </form>
   <div id="nl-msg-bottom" style="font-size:10px;color:var(--green);margin-top:8px;display:none;"></div>
   <div style="margin-top:16px;font-size:11px;color:var(--muted);">
-    Interested in sponsoring a module? <a href="https://northernmilemedia.com" style="color:var(--blue);font-weight:600;">Advertise with us →</a>
+    Interested in sponsoring a module? <a href="https://northernmilemedia.com" style="color:var(--text);font-weight:600;text-decoration:underline;">Advertise with us →</a>
   </div>
 </div>
 
@@ -336,7 +335,7 @@ function renderMarket(d){
     h+='<div class="ind"><div style="display:flex;justify-content:space-between"><span class="ind-label">'+i.label+'</span><span style="color:'+ic+';font-weight:800;font-size:18px;">'+icon+'</span></div>';
     h+='<div class="ind-value">'+i.value+'</div>';
     if(i.detail)h+='<div class="ind-detail">'+i.detail+'</div>';
-    h+='<div class="ind-meaning">'+(i.what_it_means||'')+'<br><span style="color:var(--blue)">'+(i.source||'')+'</span></div></div>';
+    h+='<div class="ind-meaning">'+(i.what_it_means||'')+'<br><span style="color:var(--muted)">'+(i.source||'')+'</span></div></div>';
   });
   return h+'</div>';
 }
@@ -350,7 +349,7 @@ function renderExchange(d){
   const chStr=(ch>=0?'+':'')+ch.toFixed(4)+' ('+(ch>=0?'+':'')+chPct+'%)';
   const impact=ch>=0?'Canadian dollar stronger. Cheaper US fuel and equipment. Cross-border US loads pay less in CAD.':'Canadian dollar weaker. US loads pay more in CAD. US fuel and equipment cost more.';
 
-  if(hist.length<2)return'<div style="font-size:34px;font-weight:700;color:var(--blue)">1 USD = '+d.current.toFixed(4)+' CAD</div>';
+  if(hist.length<2)return'<div style="font-size:34px;font-weight:700;color:var(--text)">1 USD = '+d.current.toFixed(4)+' CAD</div>';
 
   const vals=hist.map(h=>h.rate).reverse();
   const dates=hist.map(h=>new Date(h.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})).reverse();
@@ -385,7 +384,7 @@ function renderExchange(d){
   return '<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">'
     +'<div>'
     +'<div style="font-size:10px;color:var(--muted);margin-bottom:0;">1 US Dollar equals</div>'
-    +'<div style="font-size:28px;font-weight:800;color:var(--blue);line-height:1.1;">'+d.current.toFixed(4)+' CAD</div>'
+    +'<div style="font-size:28px;font-weight:800;color:var(--text);line-height:1.1;">'+d.current.toFixed(4)+' CAD</div>'
     +'<div style="font-size:11px;font-weight:600;color:'+(ch>=0?'var(--green)':'var(--red)')+';">'+dirLabel+' &middot; '+dir+' '+chStr+' today</div>'
     +'</div>'
     +'<div style="text-align:right;font-size:10px;color:var(--muted);padding-top:18px;">'
