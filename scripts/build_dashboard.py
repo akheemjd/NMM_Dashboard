@@ -177,7 +177,11 @@ HTML = """<!DOCTYPE html>
 <body>
 
 <div class="banner">
-  <div class="banner-left">
+  <nav style="padding-left:150px;font-size:15px;font-weight:500;font-family:'Fira Mono',monospace;">
+    <a href="https://northernmilemedia.com" style="color:var(--text);text-decoration:none;margin-right:18px;">Home</a>
+    <a href="https://northernmilemedia.com/about/" style="color:var(--text);text-decoration:none;">About</a>
+  </nav>
+  <div style="position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;">
     <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
       <img src="logo.jpg" alt="Northern Mile Media" style="height:40px;width:auto;flex-shrink:0;">
       <div>
@@ -186,10 +190,7 @@ HTML = """<!DOCTYPE html>
       </div>
     </a>
   </div>
-  <nav style="display:flex;align-items:center;gap:18px;font-size:15px;font-weight:500;font-family:'Fira Mono',monospace;">
-    <a href="https://northernmilemedia.com" style="color:var(--text);text-decoration:none;">Home</a>
-    <a href="https://northernmilemedia.com/about/" style="color:var(--text);text-decoration:none;">About</a>
-  </nav>
+  <div></div>
 </div>
 
 <div class="main">
