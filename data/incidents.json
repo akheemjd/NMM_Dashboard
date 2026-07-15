@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275496",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at BRANT STREET, Burlington. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.34178984,
+      "lng": -79.82255958,
+      "start": 1784147940,
+      "end": null,
+      "updated": 1784147940
+    },
+    {
+      "id": "ON-275495",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Maintenance on QEW Fort Erie Bound Off-ramp at BRANT STREET, Burlington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.341724,
+      "lng": -79.82237,
+      "start": 1784170800,
+      "end": 1784192400,
+      "updated": 1784147220
+    },
+    {
       "id": "ON-275491",
       "province": "ON",
       "highway": "HWY 410",
@@ -641,22 +673,6 @@
       "updated": 1784127900
     },
     {
-      "id": "ON-275335",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at CREDITVIEW RD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.6140244,
-      "lng": -79.724089,
-      "start": 1784125980,
-      "end": null,
-      "updated": 1784125980
-    },
-    {
       "id": "ON-275318",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -783,26 +799,10 @@
       "start": 1785848400,
       "end": 1786132800,
       "updated": 1784120460
-    },
-    {
-      "id": "ON-275287",
-      "province": "ON",
-      "highway": "HWY 89",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 89 Westbound  between HWY 400 and MONO-ADJALA TOWNLINE ROAD, Essa. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.19973,
-      "lng": -79.65732,
-      "start": 1785848400,
-      "end": 1786042800,
-      "updated": 1784120400
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T20:32:25.332106+00:00",
+  "updated": "2026-07-15T20:46:23.234162+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
