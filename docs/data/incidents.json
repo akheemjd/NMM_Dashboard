@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275168",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 7 Eastbound  between Krug Street and Shirley Drive, Kitchener. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 43.454113,
+      "lng": -80.46817,
+      "start": 1784509200,
+      "end": 1784883600,
+      "updated": 1784079180
+    },
+    {
+      "id": "ON-275166",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Daily Construction on HWY 401 Eastbound  between French Line Road / St Joachim Rd and Mill Street, Windsor. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.233246,
+      "lng": -82.63713,
+      "start": 1784721600,
+      "end": 1784926800,
+      "updated": 1784078100
+    },
+    {
       "id": "ON-275164",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +63,6 @@
       "start": 1784077200,
       "end": null,
       "updated": 1784077200
-    },
-    {
-      "id": "ON-275162",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound RAMP at MAVIS ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.58785416,
-      "lng": -79.65943538,
-      "start": 1784077080,
-      "end": null,
-      "updated": 1784077140
     },
     {
       "id": "ON-275157",
@@ -793,26 +809,10 @@
       "start": 1784512800,
       "end": 1784973600,
       "updated": 1784034120
-    },
-    {
-      "id": "ON-274826",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 400 Southbound Collector between BASS PRO MILLS DRIVE and HIGHWAY 7, Vaughan. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.82064,
-      "lng": -79.5456,
-      "start": 1784512800,
-      "end": 1784973600,
-      "updated": 1784034060
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T01:15:36.693151+00:00",
+  "updated": "2026-07-15T01:39:40.586294+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
