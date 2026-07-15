@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275380",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound HOV at APPLEBY LINE, Burlington. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.380820767,
+      "lng": -79.772345424,
+      "start": 1784132820,
+      "end": null,
+      "updated": 1784132820
+    },
+    {
+      "id": "ON-275381",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at APPLEBY LINE, Burlington. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.38102569,
+      "lng": -79.77215975,
+      "start": 1784132760,
+      "end": null,
+      "updated": 1784132760
+    },
+    {
       "id": "ON-275374",
       "province": "ON",
       "highway": "HWY 401",
@@ -65,19 +97,19 @@
       "updated": 1784130300
     },
     {
-      "id": "ON-275361",
+      "id": "ON-275379",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound  between Highbury Ave and Highbury Ave, London. ALL LANES CLOSED.",
+      "description": "Nightly Construction on HWY 401 Westbound  between Highbury Ave and Highbury Ave, London. 2 Alternating Lane(s).",
       "event_type": "roadwork",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
       "lat": 42.93649,
       "lng": -81.1793,
       "start": 1784163600,
-      "end": 1784458800,
+      "end": 1784455200,
       "updated": 1784130120
     },
     {
@@ -767,42 +799,10 @@
       "start": 1784119440,
       "end": null,
       "updated": 1784119440
-    },
-    {
-      "id": "ON-275267",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 12 Southbound  between ATHERLEY RD, Orillia and TALBOT RIVER BR, Ramara. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.60623,
-      "lng": -79.38732,
-      "start": 1785888000,
-      "end": 1786186800,
-      "updated": 1784119440
-    },
-    {
-      "id": "ON-275266",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 12 Northbound  between TALBOT RIVER BR, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.485943,
-      "lng": -79.150085,
-      "start": 1785888000,
-      "end": 1786186800,
-      "updated": 1784119380
     }
   ],
   "total": 50,
-  "updated": "2026-07-15T16:15:00.393215+00:00",
+  "updated": "2026-07-15T16:45:08.988685+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
