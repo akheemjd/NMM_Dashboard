@@ -348,10 +348,10 @@ function renderExchange(d){
   // 7-day high/low reference
   const recent=vals.slice(-7);const wkHigh=Math.max(...recent),wkLow=Math.min(...recent);
   const yHi=Y(wkHigh),yLo=Y(wkLow);
-  svg+='<line x1="'+pad.left+'" y1="'+yHi+'" x2="'+(W-pad.right)+'" y2="'+yHi+'" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>';
-  svg+='<line x1="'+pad.left+'" y1="'+yLo+'" x2="'+(W-pad.right)+'" y2="'+yLo+'" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>';
-  svg+='<text x="'+(W-pad.right)+'" y="'+(yHi-3)+'" text-anchor="end" font-size="7" fill="#dc2626" font-weight="600">7d high '+wkHigh.toFixed(4)+'</text>';
-  svg+='<text x="'+(W-pad.right)+'" y="'+(yLo+10)+'" text-anchor="end" font-size="7" fill="#16a34a" font-weight="600">7d low '+wkLow.toFixed(4)+'</text>';
+  svg+='<line x1="'+pad.left+'" y1="'+yHi+'" x2="'+(W-pad.right)+'" y2="'+yHi+'" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.6"/>';
+  svg+='<line x1="'+pad.left+'" y1="'+yLo+'" x2="'+(W-pad.right)+'" y2="'+yLo+'" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.6"/>';
+  svg+='<text x="'+(pad.left+4)+'" y="'+(yHi-4)+'" text-anchor="start" font-size="7" fill="#dc2626" font-weight="600">7d high '+wkHigh.toFixed(4)+'</text>';
+  svg+='<text x="'+(pad.left+4)+'" y="'+(yLo-4)+'" text-anchor="start" font-size="7" fill="#16a34a" font-weight="600">7d low '+wkLow.toFixed(4)+'</text>';
 
   // Bar chart — daily bars with hover tooltips
   const barW=Math.max(3, (pw/vals.length)*0.7);
