@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-275568",
+      "id": "ON-275571",
       "province": "ON",
       "highway": "QEW",
       "direction": "Fort Erie Bound",
-      "description": "Highway Maintenance on QEW Fort Erie bound ON-RAMP at THIRD LINE, Oakville. All lanes closed.",
+      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at BRONTE ROAD, Oakville. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 43.424364,
-      "lng": -79.725205,
-      "start": 1784171460,
+      "lat": 43.41325013,
+      "lng": -79.73744222,
+      "start": 1784172300,
       "end": null,
-      "updated": 1784171460
+      "updated": 1784172300
+    },
+    {
+      "id": "ON-275570",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Rougemount Collector to Express, Pickering. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.80849409,
+      "lng": -79.12790736,
+      "start": 1784172180,
+      "end": null,
+      "updated": 1784172180
+    },
+    {
+      "id": "ON-275569",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.7811849,
+      "lng": -79.25514924,
+      "start": 1784172000,
+      "end": null,
+      "updated": 1784172000
     },
     {
       "id": "ON-275562",
@@ -63,22 +95,6 @@
       "start": 1784010780,
       "end": null,
       "updated": 1784169240
-    },
-    {
-      "id": "ON-275558",
-      "province": "ON",
-      "highway": "HWY 407",
-      "direction": "Westbound",
-      "description": "Vehicle Fire on HWY 407 Westbound  at DARLINGTON CLARKE TOWNLINE, Clarington. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.0009,
-      "lng": -78.66693,
-      "start": 1784167740,
-      "end": null,
-      "updated": 1784167740
     },
     {
       "id": "ON-275495",
@@ -783,26 +799,10 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120280
-    },
-    {
-      "id": "ON-275284",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Eastbound",
-      "description": "Daily Maintenance on HWY 26 Eastbound  between POPLAR SIDEROAD, Clearview and CARSON ROAD, Springwater. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.488663,
-      "lng": -80.16752,
-      "start": 1785848400,
-      "end": 1786042800,
-      "updated": 1784120220
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T03:18:32.565535+00:00",
+  "updated": "2026-07-16T03:48:42.574841+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
