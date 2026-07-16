@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-100589",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 7",
+        "from": "Lougheed Highway",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident. Lane blocked. Emergency vehicles on scene. Expect delays. Westbound Lougheed Highway through lanes blocked. Right lane onto Kanaka Way and left turn onto Haney Bypass still open.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.20330281,
+      "lng": -122.57985194,
+      "start": "2026-07-15T21:51:20-07:00",
+      "end": "",
+      "updated": "2026-07-15T22:41:44-07:00"
+    },
+    {
       "id": "ON-275577",
       "province": "ON",
       "highway": "QEW",
@@ -783,26 +804,10 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120220
-    },
-    {
-      "id": "ON-275289",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 12 Northbound  between HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte and HWY 93/SIMCOE ROAD 93, Midland. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.612568,
-      "lng": -79.46308,
-      "start": 1785848400,
-      "end": 1786129200,
-      "updated": 1784120160
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T05:19:08.591014+00:00",
+  "updated": "2026-07-16T05:49:16.596029+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
