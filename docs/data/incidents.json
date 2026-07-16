@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-275586",
+      "id": "ON-275588",
       "province": "ON",
       "highway": "QEW",
       "direction": "Toronto Bound",
-      "description": "Highway Maintenance on QEW Toronto bound RAMP at DORVAL DRIVE, Oakville. All lanes closed.",
+      "description": "Highway Maintenance on QEW Toronto bound RAMP at HWY 403/FORD DRIVE, Oakville. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.44497685,
-      "lng": -79.70096075,
-      "start": 1784186700,
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.484368,
+      "lng": -79.672423,
+      "start": 1784189700,
       "end": null,
-      "updated": 1784186700
+      "updated": 1784189700
+    },
+    {
+      "id": "ON-275587",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at LYONS CREEK ROAD, Niagara Falls. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.0324766,
+      "lng": -79.1127626,
+      "start": 1784188980,
+      "end": null,
+      "updated": 1784188980
     },
     {
       "id": "ON-275583",
@@ -783,26 +799,10 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120340
-    },
-    {
-      "id": "ON-275285",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 26 Westbound  between CARSON ROAD, Springwater and POPLAR SIDEROAD, Clearview. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.42869,
-      "lng": -79.7241,
-      "start": 1785848400,
-      "end": 1786042800,
-      "updated": 1784120280
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T07:50:05.218184+00:00",
+  "updated": "2026-07-16T08:21:00.788266+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
