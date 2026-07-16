@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275580",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Highway Maintenance on QEW Toronto bound ON-RAMP at BRONTE ROAD, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.411203,
+      "lng": -79.738007,
+      "start": 1784181780,
+      "end": null,
+      "updated": 1784181780
+    },
+    {
+      "id": "ON-275579",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at FORD DRIVE, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.49940302,
+      "lng": -79.6746515,
+      "start": 1784181660,
+      "end": null,
+      "updated": 1784181660
+    },
+    {
       "id": "drivebc.ca/RIDE-100589",
       "province": "BC",
       "highway": {
@@ -36,22 +68,6 @@
       "start": 1784178780,
       "end": null,
       "updated": 1784178780
-    },
-    {
-      "id": "ON-275562",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Highway Maintenance on QEW Toronto bound RAMP at FORD DRIVE, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.49210007,
-      "lng": -79.67252069,
-      "start": 1784169360,
-      "end": null,
-      "updated": 1784169360
     },
     {
       "id": "ON-274640",
@@ -788,26 +804,10 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120280
-    },
-    {
-      "id": "ON-275284",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Eastbound",
-      "description": "Daily Maintenance on HWY 26 Eastbound  between POPLAR SIDEROAD, Clearview and CARSON ROAD, Springwater. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.488663,
-      "lng": -80.16752,
-      "start": 1785848400,
-      "end": 1786042800,
-      "updated": 1784120220
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T05:49:16.596029+00:00",
+  "updated": "2026-07-16T06:19:26.565210+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
