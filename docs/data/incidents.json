@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275742",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound RAMP at EGLINTON AVE, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.67036422,
+      "lng": -79.58558831,
+      "start": 1784212260,
+      "end": null,
+      "updated": 1784212260
+    },
+    {
       "id": "ON-275735",
       "province": "ON",
       "highway": "HWY 17",
@@ -31,22 +47,6 @@
       "start": 1784211060,
       "end": null,
       "updated": 1784211060
-    },
-    {
-      "id": "ON-275730",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound RAMP at HWY 404, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.7713535,
-      "lng": -79.33826644,
-      "start": 1784210820,
-      "end": null,
-      "updated": 1784210820
     },
     {
       "id": "ON-275726",
@@ -243,22 +243,6 @@
       "start": 1784205540,
       "end": null,
       "updated": 1784205540
-    },
-    {
-      "id": "ON-275664",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 6 Northbound  at Paisley Road, Guelph. 1 lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane closed",
-      "lat": 43.532902674,
-      "lng": -80.274478596,
-      "start": 1784204040,
-      "end": null,
-      "updated": 1784204040
     },
     {
       "id": "ON-275643",
@@ -803,10 +787,26 @@
       "start": 1784602800,
       "end": 1784883600,
       "updated": 1784133720
+    },
+    {
+      "id": "ON-275439",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 401 Westbound On-ramp at MAVIS ROAD, Mississauga. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.6206,
+      "lng": -79.70789,
+      "start": 1784602800,
+      "end": 1784883600,
+      "updated": 1784133720
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T14:22:48.671596+00:00",
+  "updated": "2026-07-16T14:52:58.671851+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
