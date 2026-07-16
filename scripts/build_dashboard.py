@@ -398,7 +398,7 @@ function initThMap(){
   if(!md||!ld)return;
   if(thMap){thMap.remove();thMap=null;}
   thMap=L.map(md,{attributionControl:false,zoomControl:true}).setView([52,-90],4);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:''}).addTo(thMap);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:''}).addTo(thMap);
   var markers=[];
   // Hotspots
   hs.forEach(function(h){
@@ -477,7 +477,7 @@ function initThMap(){
     if(!incData||incData.length===0)return;
     var mc=document.getElementById('inc-map');if(!mc)return;
     incMap=L.map('inc-map').setView([50,-85],4);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; <a href="https://carto.com/">CARTO</a>'}).addTo(incMap);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'}).addTo(incMap);
     L.Icon.Default.prototype.options.imagePath='https://unpkg.com/leaflet@1.9.4/dist/images/';
     var markers=[],list=document.getElementById('inc-list'),lh='';
     incData.forEach(function(inc,i){

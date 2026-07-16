@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-274780",
+      "province": "ON",
+      "highway": "HWY 527",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.786243282,
+      "lng": -89.144978175,
+      "start": 1784010780,
+      "end": null,
+      "updated": 1784244600
+    },
+    {
+      "id": "ON-274640",
+      "province": "ON",
+      "highway": "HWY 599",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 599 Both Directions  between SEC HWY 516 (W) - MNR SILVICULTURAL CAMP (E), Savant Lake and THUNDER BAY - KENORA DIST BDY, Pickle Lake. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 50.309355,
+      "lng": -90.6994472,
+      "start": 1783971840,
+      "end": null,
+      "updated": 1784244540
+    },
+    {
+      "id": "ON-275968",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at KING ROAD, King. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.92064701,
+      "lng": -79.56601396,
+      "start": 1784244360,
+      "end": null,
+      "updated": 1784244360
+    },
+    {
       "id": "ON-275967",
       "province": "ON",
       "highway": "HWY 400",
@@ -449,38 +497,6 @@
       "updated": 1784211360
     },
     {
-      "id": "ON-274780",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.786243282,
-      "lng": -89.144978175,
-      "start": 1784010780,
-      "end": null,
-      "updated": 1784208720
-    },
-    {
-      "id": "ON-274640",
-      "province": "ON",
-      "highway": "HWY 599",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 599 Both Directions  between SEC HWY 516 (W) - MNR SILVICULTURAL CAMP (E), Savant Lake and THUNDER BAY - KENORA DIST BDY, Pickle Lake. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 50.309355,
-      "lng": -90.6994472,
-      "start": 1783971840,
-      "end": null,
-      "updated": 1784208660
-    },
-    {
       "id": "ON-275718",
       "province": "ON",
       "highway": "HWY 12",
@@ -543,22 +559,6 @@
       "start": 1784519940,
       "end": 1784797200,
       "updated": 1784205300
-    },
-    {
-      "id": "ON-275643",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at CAMP RIVER RD(S), Atikokan. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 48.735102859,
-      "lng": -92.278020593,
-      "start": 1784202180,
-      "end": null,
-      "updated": 1784202180
     },
     {
       "id": "ON-275724",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T23:26:33.422675+00:00",
+  "updated": "2026-07-16T23:38:43.071807+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
