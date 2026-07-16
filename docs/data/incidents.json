@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-275540",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at THIRD LINE, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.42590342,
-      "lng": -79.72407969,
-      "start": 1784160180,
-      "end": null,
-      "updated": 1784160180
-    },
-    {
       "id": "ON-275445",
       "province": "ON",
       "highway": "HWY 17",
@@ -799,10 +783,26 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120220
+    },
+    {
+      "id": "ON-275289",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 12 Northbound  between HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte and HWY 93/SIMCOE ROAD 93, Midland. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.612568,
+      "lng": -79.46308,
+      "start": 1785848400,
+      "end": 1786129200,
+      "updated": 1784120160
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T00:17:38.428560+00:00",
+  "updated": "2026-07-16T00:47:46.439118+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
