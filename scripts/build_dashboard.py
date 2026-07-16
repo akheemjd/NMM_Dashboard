@@ -366,13 +366,29 @@ function renderExchange(d){
     svg+='<line x1="'+pad.left+'" y1="'+gy+'" x2="'+(W-pad.right)+'" y2="'+gy+'" stroke="'+LIGHT+'" stroke-width="0.5"/>';
     svg+='<text x="'+(pad.left-4)+'" y="'+(gy+3)+'" fill="'+MUTED+'" font-size="8" text-anchor="end">'+gv.toFixed(4)+'</text>';
   }
-  // Bar chart — one bar per day
+  // 7-day high/low reference
+  const recent=vals.slice(-7);const wkHigh=Math.max(...recent),wkLow=Math.min(...recent);
+  const yHi=Y(wkHigh),yLo=Y(wkLow);
+  svg+='<line x1="'+pad.left+'" y1="'+yHi+'" x2="'+(W-pad.right)+'" y2="'+yHi+'" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>';
+  svg+='<line x1="'+pad.left+'" y1="'+yLo+'" x2="'+(W-pad.right)+'" y2="'+yLo+'" stroke="#16a34a" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>';
+  svg+='<text x="'+(W-pad.right)+'" y="'+(yHi-3)+'" text-anchor="end" font-size="7" fill="#dc2626" font-weight="600">7d high '+wkHigh.toFixed(4)+'</text>';
+  svg+='<text x="'+(W-pad.right)+'" y="'+(yLo+10)+'" text-anchor="end" font-size="7" fill="#16a34a" font-weight="600">7d low '+wkLow.toFixed(4)+'</text>';
+
+  // Bar chart — one bar per day, colored by trend
   const barW=Math.max(2, (pw/vals.length)*0.7);
   vals.forEach((v,i)=>{
     const barH=H-pad.bottom-Y(v);
     const bx=X(i)-barW/2;
+    const by=Y(v);
     const isLast7=i>=vals.length-7;
-    svg+='<rect x="'+bx.toFixed(1)+'" y="'+Y(v).toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+barH.toFixed(1)+'" fill="'+BLUE+'" opacity="'+(isLast7?'0.7':'0.3')+'"/>';
+    // Color: blue if rate went UP from previous day (CAD strengthened), grey if down
+    const prev=i>0?vals[i-1]:v;
+    const up=v>=prev;
+    const clr=up?BLUE:'#94a3b8';
+    const op=isLast7?'0.75':'0.35';
+    svg+='<rect x="'+bx.toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+barH.toFixed(1)+'" fill="'+clr+'" opacity="'+op+'" rx="1"/>';
+    // Value label on top of bar
+    svg+='<text x="'+X(i).toFixed(1)+'" y="'+(by-3)+'" text-anchor="middle" font-size="6" fill="'+clr+'" opacity="'+op+'" font-weight="600">'+v.toFixed(4)+'</text>';
   });
   let lastX=-50;
   const step=Math.max(1,Math.floor((vals.length-1)/10));
@@ -384,8 +400,6 @@ function renderExchange(d){
   if(lxi-lastX>=20)svg+='<text x="'+lxi+'" y="'+(H-pad.bottom+14)+'" fill="'+MUTED+'" font-size="8" text-anchor="middle">'+dates[vals.length-1]+'</text>';
 
   // 7-day high/low
-  const recent=vals.slice(-7);const wkHigh=Math.max(...recent),wkLow=Math.min(...recent);
-
   return '<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">'
     +'<div>'
     +'<div style="font-size:10px;color:var(--muted);margin-bottom:0;">1 US Dollar equals</div>'
