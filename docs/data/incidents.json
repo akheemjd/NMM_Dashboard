@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-275574",
+      "id": "ON-275576",
       "province": "ON",
-      "highway": "HWY 5",
+      "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 5 Westbound  at OFIELD ROAD / W FLAMBORO TWP RD 13/14, Hamilton. Right lane closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at TRAFALGAR ROAD, Halton-Milton. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.296134,
-      "lng": -79.979128,
-      "start": 1784174700,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.5739553,
+      "lng": -79.8270218,
+      "start": 1784176860,
       "end": null,
-      "updated": 1784174700
-    },
-    {
-      "id": "ON-275571",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at BRONTE ROAD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.41325013,
-      "lng": -79.73744222,
-      "start": 1784172300,
-      "end": null,
-      "updated": 1784172300
+      "updated": 1784176860
     },
     {
       "id": "ON-275562",
@@ -799,10 +783,26 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120220
+    },
+    {
+      "id": "ON-275289",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 12 Northbound  between HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte and HWY 93/SIMCOE ROAD 93, Midland. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.612568,
+      "lng": -79.46308,
+      "start": 1785848400,
+      "end": 1786129200,
+      "updated": 1784120160
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T04:18:50.604810+00:00",
+  "updated": "2026-07-16T04:48:58.718569+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
