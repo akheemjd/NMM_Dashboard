@@ -211,7 +211,7 @@ HTML = """<!DOCTYPE html>
 
 <div class="main">
 
-  <div style="min-height:360px;margin-bottom:14px;">
+  <div style="min-height:200px;margin-bottom:14px;">
     <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#ffffff" data-text-color="#15171a" data-button-color="#15171a" data-button-text-color="#ffffff" data-title="Northern Mile Media" data-description="For the people who keep Canada moving" data-site="https://www.northernmilemedia.com/" data-locale="en" async></script>
   </div>
 
@@ -287,7 +287,7 @@ HTML = """<!DOCTYPE html>
 
 </div>
 
-<div style="text-align:center;min-height:360px;margin-top:20px;">
+<div style="text-align:center;min-height:220px;margin-top:20px;">
   <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#f8f9fa" data-text-color="#15171a" data-button-color="#15171a" data-button-text-color="#ffffff" data-title="Get the Northern Mile Brief" data-description="Fuel prices, market shifts, and what it means. Every Wednesday." data-site="https://www.northernmilemedia.com/" data-locale="en" async></script>
   <div style="margin-top:16px;font-size:11px;color:var(--muted);">
     Interested in sponsoring a module? <a href="https://northernmilemedia.com" style="color:var(--text);font-weight:600;text-decoration:underline;">Advertise with us →</a>
