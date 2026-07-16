@@ -368,13 +368,13 @@ function renderNews(d){
 
 // ── Incidents Map ──
 var incMap=null,incData=null;
-function renderIncidents(d){incData=d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>';}
+function renderIncidents(d){incData=(d&&d.incidents)?d.incidents:d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>';}
 
 // ── Theft ──
 function renderTheft(d){
   var incs=d.incidents||[];if(!incs.length)return'<div style="color:var(--gravel);font-size:0.75rem;">No recent theft data</div>';
   var h='';incs.forEach(function(t){
-    h+='<div class="theft-item"><div class="theft-method">'+t.method+'</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">'+t.description+'</div><div class="theft-prevention">Prevention: '+t.prevention+'</div></div>';
+    h+='<div class="theft-item"><div class="theft-method">'+t.method+'</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">'+t.title+' &middot; '+t.value+'</div><div style="font-size:0.625rem;color:var(--gravel);">'+t.location+'</div><div class="theft-prevention" style="margin-top:4px;">Prevention: '+t.prevention+'</div></div>';
   });
   return h;
 }
@@ -420,10 +420,16 @@ function renderTheft(d){
     L.Icon.Default.prototype.options.imagePath='https://unpkg.com/leaflet@1.9.4/dist/images/';
     var markers=[],list=document.getElementById('inc-list'),lh='';
     incData.forEach(function(inc,i){
-      if(inc.lat&&inc.lon){
-        var m=L.marker([inc.lat,inc.lon]).addTo(incMap).bindPopup('<strong>'+inc.highway+'</strong><br>'+inc.state+'<br>'+inc.type+' &middot; '+inc.severity+'<br>'+inc.delay+'<br>'+inc.detour);
+      var lat=inc.lat||inc.latitude||null;
+      var lon=inc.lon||inc.longitude||inc.lng||null;
+      var hwy=inc.highway||inc.road||'';
+      var prov=inc.province||inc.state||'';
+      var desc=inc.description||inc.desc||'';
+      var type=inc.type||(inc.closure?'Closure':'Incident');
+      if(lat&&lon){
+        var m=L.marker([lat,lon]).addTo(incMap).bindPopup('<strong>'+hwy+'</strong><br>'+prov+'<br>'+desc);
         markers.push(m);
-        lh+='<div class="mitem" onclick="incMap.setView(['+inc.lat+','+inc.lon+'],10);" style="cursor:pointer"><div class="mhwy">'+inc.highway+' &middot; '+inc.state+'</div><div class="mdesc">'+inc.type+' &middot; '+inc.severity+' &middot; '+inc.delay+'</div></div>';
+        lh+='<div class="mitem" onclick="incMap.setView(['+lat+','+lon+'],12);" style="cursor:pointer"><div class="mhwy">'+hwy+' &middot; '+prov+'</div><div class="mdesc">'+desc.substring(0,80)+'</div></div>';
       }
     });
     if(!lh)lh='<div style="padding:10px;color:var(--gravel);font-size:0.75rem;">No active incidents.</div>';
