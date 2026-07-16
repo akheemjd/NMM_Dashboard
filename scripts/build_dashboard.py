@@ -374,21 +374,27 @@ function renderExchange(d){
   svg+='<text x="'+(W-pad.right)+'" y="'+(yHi-3)+'" text-anchor="end" font-size="7" fill="#dc2626" font-weight="600">7d high '+wkHigh.toFixed(4)+'</text>';
   svg+='<text x="'+(W-pad.right)+'" y="'+(yLo+10)+'" text-anchor="end" font-size="7" fill="#16a34a" font-weight="600">7d low '+wkLow.toFixed(4)+'</text>';
 
-  // Bar chart — one bar per day, colored by trend
-  const barW=Math.max(2, (pw/vals.length)*0.7);
+  // Bar chart — daily bars with hover tooltips
+  const barW=Math.max(3, (pw/vals.length)*0.7);
   vals.forEach((v,i)=>{
     const barH=H-pad.bottom-Y(v);
     const bx=X(i)-barW/2;
     const by=Y(v);
     const isLast7=i>=vals.length-7;
-    // Color: blue if rate went UP from previous day (CAD strengthened), grey if down
     const prev=i>0?vals[i-1]:v;
     const up=v>=prev;
+    const diff=v-prev;
     const clr=up?BLUE:'#94a3b8';
     const op=isLast7?'0.75':'0.35';
-    svg+='<rect x="'+bx.toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+barH.toFixed(1)+'" fill="'+clr+'" opacity="'+op+'" rx="1"/>';
-    // Value label on top of bar
-    svg+='<text x="'+X(i).toFixed(1)+'" y="'+(by-3)+'" text-anchor="middle" font-size="6" fill="'+clr+'" opacity="'+op+'" font-weight="600">'+v.toFixed(4)+'</text>';
+    const sign=diff>=0?'+':'';
+    svg+='<g>';
+    svg+='<title>'+dates[i]+' | 1 USD = '+v.toFixed(4)+' CAD | '+(i>0?'vs prev: '+sign+diff.toFixed(4):'')+'</title>';
+    svg+='<rect x="'+bx.toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+barH.toFixed(1)+'" fill="'+clr+'" opacity="'+op+'" rx="1" style="cursor:pointer"/>';
+    // Only label today's bar
+    if(i===vals.length-1){
+      svg+='<text x="'+X(i).toFixed(1)+'" y="'+(by-6)+'" text-anchor="middle" font-size="8" fill="'+BLUE+'" font-weight="700">'+v.toFixed(4)+'</text>';
+    }
+    svg+='</g>';
   });
   let lastX=-50;
   const step=Math.max(1,Math.floor((vals.length-1)/10));
