@@ -373,13 +373,13 @@ function renderExchange(d){
   svg+='<polygon points="'+apts+'" fill="'+BLUE+'" fill-opacity="0.05"/>';
   svg+='<polyline points="'+pts+'" fill="none" stroke="'+BLUE+'" stroke-width="1.8" stroke-linecap="round"/>';
   let lastX=-50;
-  const step=Math.max(1,Math.floor((vals.length-1)/4));
+  const step=Math.max(1,Math.floor((vals.length-1)/10));
   for(let i=0;i<vals.length;i+=step){
-    const xi=X(i);if(xi-lastX<36)continue;lastX=xi;
+    const xi=X(i);if(xi-lastX<24)continue;lastX=xi;
     svg+='<text x="'+xi+'" y="'+(H-pad.bottom+14)+'" fill="'+MUTED+'" font-size="8" text-anchor="middle">'+dates[i]+'</text>';
   }
   const lxi=X(vals.length-1);
-  if(lxi-lastX>=36)svg+='<text x="'+lxi+'" y="'+(H-pad.bottom+14)+'" fill="'+MUTED+'" font-size="8" text-anchor="middle">'+dates[vals.length-1]+'</text>';
+  if(lxi-lastX>=20)svg+='<text x="'+lxi+'" y="'+(H-pad.bottom+14)+'" fill="'+MUTED+'" font-size="8" text-anchor="middle">'+dates[vals.length-1]+'</text>';
 
   // 7-day high/low
   const recent=vals.slice(-7);const wkHigh=Math.max(...recent),wkLow=Math.min(...recent);
