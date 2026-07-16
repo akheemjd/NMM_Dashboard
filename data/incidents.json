@@ -1,6 +1,70 @@
 {
   "incidents": [
     {
+      "id": "ON-275944",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 427 Southbound  at HWY 401, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.66989793,
+      "lng": -79.57557592,
+      "start": 1784238600,
+      "end": null,
+      "updated": 1784238600
+    },
+    {
+      "id": "ON-275942",
+      "province": "ON",
+      "highway": "HWY 40",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 40 Southbound  between Confederation Line and Confederation Line, Sarnia. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 42.95994,
+      "lng": -82.3454,
+      "start": 1784545200,
+      "end": 1784926800,
+      "updated": 1784238300
+    },
+    {
+      "id": "ON-275938",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Collision on HWY 417 Westbound  at CARLING AVE / KIRKWOOD AVE (IC 124), Ottawa. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 45.38393,
+      "lng": -75.73985,
+      "start": 1784237700,
+      "end": null,
+      "updated": 1784237700
+    },
+    {
+      "id": "ON-275921",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.7535367,
+      "lng": -79.40848595,
+      "start": 1784234880,
+      "end": null,
+      "updated": 1784237280
+    },
+    {
       "id": "ON-275932",
       "province": "ON",
       "highway": "QEW",
@@ -33,38 +97,6 @@
       "updated": 1784236500
     },
     {
-      "id": "ON-275928",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound HOV at MISSISSAUGA ROAD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.5608452,
-      "lng": -79.68574338,
-      "start": 1784235900,
-      "end": null,
-      "updated": 1784235900
-    },
-    {
-      "id": "ON-275921",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 2 centre lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 centre lanes closed",
-      "lat": 43.7535367,
-      "lng": -79.40848595,
-      "start": 1784234880,
-      "end": null,
-      "updated": 1784234880
-    },
-    {
       "id": "ON-275919",
       "province": "ON",
       "highway": "HWY 520",
@@ -79,22 +111,6 @@
       "start": 1784548800,
       "end": 1784930400,
       "updated": 1784234460
-    },
-    {
-      "id": "ON-275914",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at ERIN MILLS PKWY, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.5541298,
-      "lng": -79.69624357,
-      "start": 1784234160,
-      "end": null,
-      "updated": 1784234160
     },
     {
       "id": "ON-275916",
@@ -159,22 +175,6 @@
       "start": 1784602800,
       "end": 1784970000,
       "updated": 1784231580
-    },
-    {
-      "id": "ON-275888",
-      "province": "ON",
-      "highway": "HWY 402",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 402 Westbound  at Front Street, Sarnia. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 42.988152778,
-      "lng": -82.403744444,
-      "start": 1784231400,
-      "end": null,
-      "updated": 1784231400
     },
     {
       "id": "ON-275897",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T21:25:55.987661+00:00",
+  "updated": "2026-07-16T21:56:04.134715+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
