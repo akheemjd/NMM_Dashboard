@@ -1,36 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-275807",
+      "id": "ON-275824",
       "province": "ON",
       "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. Right lane and right shoulder closed.",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at FORD DRIVE, Oakville. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.55233005,
-      "lng": -79.61354776,
-      "start": 1784222400,
+      "lanes": "left lane closed",
+      "lat": 43.4945712,
+      "lng": -79.6738943,
+      "start": 1784223960,
       "end": null,
-      "updated": 1784222400
+      "updated": 1784223960
     },
     {
-      "id": "ON-275804",
+      "id": "ON-275822",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 416",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 416 Northbound  between BANKFIELD RD / BROPHY DR (IC 57) (CR 8), Manotick and FALLOWFIELD RD (IC 66), Ottawa. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.2097,
+      "lng": -75.73695,
+      "start": 1784545200,
+      "end": 1784671200,
+      "updated": 1784223660
+    },
+    {
+      "id": "ON-275814",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at FINCH AVENUE, Toronto. 2 centre lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.78085209,
-      "lng": -79.25477778,
-      "start": 1784221980,
+      "lanes": "2 centre lanes closed",
+      "lat": 43.75425671,
+      "lng": -79.53072531,
+      "start": 1784223180,
       "end": null,
-      "updated": 1784221980
+      "updated": 1784223180
     },
     {
       "id": "ON-275805",
@@ -159,22 +175,6 @@
       "start": 1781491500,
       "end": null,
       "updated": 1784218860
-    },
-    {
-      "id": "ON-275780",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Other on HWY 401 Westbound COLLECTOR RAMP at HWY 410, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.64251944,
-      "lng": -79.65556472,
-      "start": 1784217540,
-      "end": null,
-      "updated": 1784217540
     },
     {
       "id": "ON-275762",
@@ -609,6 +609,22 @@
       "updated": 1784148660
     },
     {
+      "id": "ON-275821",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Express between SECOND LINE ROAD and HWY 403, Mississauga. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.617725,
+      "lng": -79.71519,
+      "start": 1784678400,
+      "end": 1785488400,
+      "updated": 1784148060
+    },
+    {
       "id": "ON-275781",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1784512800,
       "end": 1784970000,
       "updated": 1784139960
-    },
-    {
-      "id": "ON-275490",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 401 Eastbound Collector between LESLIE STREET and HWY 404, Toronto. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.766285,
-      "lng": -79.36286,
-      "start": 1784253600,
-      "end": 1784282400,
-      "updated": 1784139780
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T17:24:43.705368+00:00",
+  "updated": "2026-07-16T17:54:53.277593+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
