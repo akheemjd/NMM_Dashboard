@@ -362,16 +362,18 @@ function renderExchange(d){
   const Y=v=>pad.top+ph-(v-minV)/range*ph*0.80;
   const X=i=>pad.left+(i/(vals.length-1))*pw;
   let svg='';
-  for(let g=0;g<=3;g++){const gv=minV+range*g/3,gy=Y(gv);
+  for(let g=0;g<=4;g++){const gv=minV+range*g/4,gy=Y(gv);
     svg+='<line x1="'+pad.left+'" y1="'+gy+'" x2="'+(W-pad.right)+'" y2="'+gy+'" stroke="'+LIGHT+'" stroke-width="0.5"/>';
     svg+='<text x="'+(pad.left-4)+'" y="'+(gy+3)+'" fill="'+MUTED+'" font-size="8" text-anchor="end">'+gv.toFixed(4)+'</text>';
   }
-  let apts='',pts='';
-  vals.forEach((v,i)=>{pts+=X(i).toFixed(1)+','+Y(v).toFixed(1)+' ';});
-  vals.forEach((v,i)=>{apts+=X(i).toFixed(1)+','+Y(v).toFixed(1)+' ';});
-  apts+=X(vals.length-1).toFixed(1)+','+(H-pad.bottom)+' '+X(0).toFixed(1)+','+(H-pad.bottom);
-  svg+='<polygon points="'+apts+'" fill="'+BLUE+'" fill-opacity="0.05"/>';
-  svg+='<polyline points="'+pts+'" fill="none" stroke="'+BLUE+'" stroke-width="1.8" stroke-linecap="round"/>';
+  // Bar chart — one bar per day
+  const barW=Math.max(2, (pw/vals.length)*0.7);
+  vals.forEach((v,i)=>{
+    const barH=H-pad.bottom-Y(v);
+    const bx=X(i)-barW/2;
+    const isLast7=i>=vals.length-7;
+    svg+='<rect x="'+bx.toFixed(1)+'" y="'+Y(v).toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+barH.toFixed(1)+'" fill="'+BLUE+'" opacity="'+(isLast7?'0.7':'0.3')+'"/>';
+  });
   let lastX=-50;
   const step=Math.max(1,Math.floor((vals.length-1)/10));
   for(let i=0;i<vals.length;i+=step){
