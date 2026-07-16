@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275958",
+      "province": "ON",
+      "highway": "HWY 631",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 631 Northbound  at PICNIC  LAKE BEACH RD (N), White River. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 48.601714202,
+      "lng": -85.263089601,
+      "start": 1784241180,
+      "end": null,
+      "updated": 1784241180
+    },
+    {
       "id": "ON-275950",
       "province": "ON",
       "highway": "HWY 404",
@@ -31,22 +47,6 @@
       "start": 1784545200,
       "end": 1784926800,
       "updated": 1784238300
-    },
-    {
-      "id": "ON-275921",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.7535367,
-      "lng": -79.40848595,
-      "start": 1784234880,
-      "end": null,
-      "updated": 1784237280
     },
     {
       "id": "ON-275932",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T22:26:14.022926+00:00",
+  "updated": "2026-07-16T22:36:21.488329+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
