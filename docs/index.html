@@ -2,246 +2,193 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northern Mile — Live Canadian Trucking Dashboard | Fuel Prices, Border Delays, Road Incidents</title>
-<meta name="description" content="Free live dashboard for Canadian trucking. Real-time fuel prices by province, USD/CAD exchange rate, border crossing status, road incidents map, and cargo theft watch. Built for fleet operators and dispatchers.">
-<meta name="keywords" content="Canadian trucking, diesel prices Canada, fuel prices by province, border crossing delays, road incidents Canada, cargo theft, trucking dashboard, fleet management, freight rates">
-<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Northern Mile — Live Canadian Trucking Dashboard</title>
+<meta name="description" content="Free live dashboard for Canadian trucking. Fuel prices, border crossings, road incidents. No signup.">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/">
-
 <meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard">
-<meta property="og:description" content="Free live dashboard for Canadian trucking. Fuel prices, exchange rates, border delays, road incidents. No signup. Free forever.">
+<meta property="og:description" content="Diesel prices, border status, road incidents. No signup. Free forever.">
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://dashboard.northernmilemedia.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Northern Mile Media">
-
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dashboard.northernmilemedia.com/og-image.png">
 <meta name="twitter:title" content="Northern Mile — Live Canadian Trucking Dashboard">
-<meta name="twitter:description" content="Free live dashboard for Canadian trucking. Fuel prices, exchange rates, border delays, road incidents, cargo theft data. Updated every 30 minutes.">
-
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Northern Mile Live Dashboard","url":"https://dashboard.northernmilemedia.com/","description":"Free live dashboard for Canadian trucking industry. Real-time fuel prices by province, USD/CAD exchange rate, border crossing status, road incidents map, cargo theft watch, and fuel cost calculator.","applicationCategory":"BusinessApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What data does this dashboard track?","acceptedAnswer":{"@type":"Answer","text":"Live fuel prices by Canadian province, USD/CAD exchange rates with 30-day trends, border crossing status for 9 major crossings, road incidents and closures from Ontario 511 and BC DriveBC, cargo theft incidents and hotspots, and industry headlines from Canadian trucking sources."}},{"@type":"Question","name":"How often is the dashboard updated?","acceptedAnswer":{"@type":"Answer","text":"Every 30 minutes. Fuel prices, exchange rates, road incidents, and border crossing status refresh automatically throughout the day."}},{"@type":"Question","name":"Is the dashboard free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Completely free. No signup required. No paywalls. Supported by sponsorships."}}]}
-</script>
-
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500;700&family=Fira+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="leaflet.css">
 <script src="leaflet.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --text:#15171a;--muted:#6b7280;--light:#eaecf0;--bg:#f8f9fa;
-  --card:#fff;--green:#16a34a;--amber:#d97706;--red:#dc2626;--radius:0
+  --asphalt:#15171A;--slab:#1E2227;--line:#2C3238;--salt:#E8EAEC;
+  --gravel:#8B939C;--gantry:#1F6B4A;--amber:#F2A900;--flare:#D93A34;
+  --radius:6px;--pill-radius:3px
 }
 body{
-  background:#fff;color:var(--text);
-  font-family:'Fira Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  font-size:14px;line-height:1.5;padding:0;max-width:100%
+  background:var(--asphalt);color:var(--salt);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:0.875rem;line-height:1.5;padding:0;max-width:100%;
+  -webkit-font-smoothing:antialiased
 }
+/* Typography */
+.barlow{font-family:'Barlow Condensed',sans-serif;font-weight:600}
+body,.inter{font-family:'Inter',-apple-system,sans-serif}
+.mono,.timestamp{font-family:'IBM Plex Mono',monospace;font-weight:400}
+*{font-variant-numeric:tabular-nums}
+
+/* Banner */
 .banner{
-  background:#fff;border-bottom:1px solid var(--light);padding:0 24px;
-  display:flex;align-items:center;justify-content:space-between;
-  position:sticky;top:0;z-index:1000;height:100px
+  background:var(--asphalt);border-bottom:1px solid var(--line);
+  padding:0 24px;display:flex;align-items:center;justify-content:center;
+  position:sticky;top:0;z-index:1000;height:64px
 }
-.banner-brand{font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1.1;font-family:'Fira Mono',monospace}
-.banner-sub{font-size:11px;color:var(--muted);font-weight:400}
-.banner-left{display:flex;align-items:center;gap:12px}
-.pill{font-size:9px;padding:3px 8px;border-radius:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
-.pill.live{background:#dcfce7;color:var(--green);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}.pill.daily{background:#f1f5f9;color:var(--text)}
+.banner h1{font-size:0.875rem;font-weight:700;color:var(--salt);font-family:'IBM Plex Mono',monospace;letter-spacing:-.01em}
 
-.main{padding:14px 18px 40px;max-width:1440px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:14px}
-.grid-2{grid-template-columns:repeat(2,1fr)}
+/* Grid */
+.main{max-width:1320px;margin:0 auto;padding:16px 16px 40px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 
-.card{background:var(--card);border:1px solid var(--light);border-radius:var(--radius);padding:18px;scroll-margin-top:70px}
-.card.full{grid-column:1/-1}
-.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--light);gap:10px}
-.card-header h2{font-size:15px;font-weight:700;text-transform:none;letter-spacing:-.01em;color:var(--text);white-space:nowrap;font-family:'Fira Mono',monospace}
-.card-header-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.header-update{font-size:9px;color:var(--muted);white-space:nowrap}
-.card-body{min-height:30px}
-.loading{color:var(--muted);font-style:italic;padding:10px 0}.error{color:var(--red);padding:10px 0}
-#news-card .card-body{max-height:400px;overflow-y:auto}
-.card-footer{font-size:9px;color:var(--muted);margin-top:10px;padding-top:8px;border-top:1px solid var(--light);display:flex;justify-content:space-between;align-items:center}
-.card-footer span{font-weight:500}
+.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px;position:relative}
+.module.hero{grid-column:span 12}
+.module.wide{grid-column:span 8}
+.module.tall{grid-column:span 8;grid-row:span 2}
+.module.standard{grid-column:span 4}
+.module.compact{grid-column:span 4}
 
-.sponsor-line{display:none;align-items:center;gap:10px;margin-bottom:10px;padding:8px 12px;background:var(--bg);border-radius:6px;font-size:11px;color:var(--muted)}
-.sponsor-line.active{display:flex}
-.sponsor-line img{height:22px;width:auto;flex-shrink:0;opacity:.85}
-.sponsor-line .sponsor-info{display:flex;flex-direction:column;gap:1px}
-.sponsor-line .sponsor-label{font-size:8px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-.sponsor-line .sponsor-name{font-size:13px;font-weight:700;color:var(--text)}
-.sponsor-line .sponsor-tagline{font-size:9px;color:var(--muted)}
+@media(max-width:900px){
+  .module{grid-column:span 12!important;grid-row:auto!important}
+  .banner{padding:0 12px;height:56px}
+  .main{padding:12px 12px 32px}
+}
 
-.inds{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.ind{background:var(--bg);border-radius:8px;padding:16px 18px;display:flex;flex-direction:column;gap:5px}
-.ind-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
-.ind-value{font-size:26px;font-weight:800;color:var(--text);line-height:1.1}
-.ind-detail{font-size:13px;color:var(--text);font-weight:500}
-.ind-meaning{font-size:11px;color:var(--muted);line-height:1.4;margin-top:5px;padding-top:6px;border-top:1px solid var(--light)}
+/* Card chrome */
+.eyebrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.eyebrow-label{font-size:0.75rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
+.status-pill{font-size:0.625rem;padding:2px 8px;border-radius:var(--pill-radius);font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:5px}
+.status-pill.live{color:var(--gantry);background:rgba(31,107,74,.15)}
+.status-pill.live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gantry);animation:pulse 2s ease-in-out infinite}
+.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}
+.status-pill.reference{color:var(--gravel);background:transparent;border:1px solid var(--line)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+@media(prefers-reduced-motion:reduce){.status-pill.live::before{animation:none}}
 
-.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
-.bx{background:var(--bg);border-radius:8px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.bx-left{min-width:0}.bx-name{font-size:14px;font-weight:600;color:var(--text);line-height:1.2}
-.bx-route{font-size:11px;color:var(--muted);margin-top:2px}
-.bx-status{text-align:right;flex-shrink:0}
-.sbar{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:2px}
-.sdot{width:10px;height:10px;border-radius:50%}.sdot.green{background:var(--green)}.sdot.amber{background:var(--amber)}.sdot.red{background:var(--red)}
-.slabel{font-weight:600;color:var(--text)}.sdelay{color:var(--muted);font-size:10px}
-.tag{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;text-transform:uppercase}.tag.fast{background:#f1f5f9;color:var(--text)}.tag.nexus{background:#dcfce7;color:var(--green)}
+.card-footer{margin-top:12px;padding-top:8px;border-top:1px solid var(--line);font-size:0.625rem;color:var(--gravel);font-family:'IBM Plex Mono',monospace}
 
-.nitem{padding:8px 0;border-bottom:1px solid var(--light)}
-.nsrc{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
-.ncat{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;text-transform:capitalize}
-.ntitle{color:var(--text);text-decoration:none;font-size:12px;line-height:1.3;font-weight:500}
+/* Skeleton + fade */
+.skeleton{background:var(--line);border-radius:2px;overflow:hidden;position:relative}
+.skeleton::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);animation:shimmer 1.5s linear infinite}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@media(prefers-reduced-motion:reduce){.skeleton::after{animation:none}}
+.fade-in{animation:fadeIn .15s ease-out}
+@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+
+/* Focus */
+*:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+/* Fuel Hero */
+.hero-content{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.hero-price{font-size:2.75rem;line-height:1;color:var(--salt)}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
+.hero-delta{display:inline-flex;align-items:center;gap:3px;margin-top:4px;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:var(--pill-radius)}
+.hero-delta.up{background:rgba(242,169,0,.15);color:var(--amber)}.hero-delta.down{background:rgba(31,107,74,.15);color:var(--gantry)}
+.hero-province-list{display:flex;flex-direction:column}.hero-prow{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--line);font-size:0.75rem}.hero-prow:last-child{border-bottom:none}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
+.ftoggle{display:flex;background:var(--asphalt);border:1px solid var(--line);border-radius:var(--pill-radius);overflow:hidden}
+.ftoggle button{flex:1;background:none;border:none;color:var(--gravel);padding:4px 10px;font-size:0.625rem;font-family:inherit;cursor:pointer;font-weight:600;white-space:nowrap}
+.ftoggle button.active{background:var(--salt);color:var(--asphalt)}
+
+/* Border cards */
+.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.bx{background:var(--asphalt);border:1px solid var(--line);border-radius:4px;padding:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.bx-left{min-width:0}.bx-name{font-size:0.75rem;font-weight:600;color:var(--salt)}.bx-route{font-size:0.625rem;color:var(--gravel);margin-top:2px}
+.bx-status{text-align:right}.sbar{display:flex;align-items:center;gap:5px;font-size:0.75rem}.sdot{width:8px;height:8px;border-radius:50%}.sdot.green{background:var(--gantry)}.sdot.amber{background:var(--amber)}.sdot.red{background:var(--flare)}.slabel{font-weight:600;color:var(--salt)}.sdelay{color:var(--gravel);font-size:0.625rem}
+
+/* Incidents map */
+.mwrap{display:flex;gap:0;height:100%;border-radius:var(--radius);overflow:hidden}
+.mmap{flex:1;min-height:360px;background:#1a1d21}.mlist{width:280px;overflow-y:auto;flex-shrink:0;font-size:0.75rem}
+.mitem{padding:8px 10px;border-bottom:1px solid var(--line);cursor:pointer}
+.mitem:hover{background:rgba(255,255,255,.03)}
+.mhwy{font-weight:600;color:var(--salt)}.mdesc{color:var(--gravel);font-size:0.625rem;margin-top:2px}
+.leaflet-container{background:#1a1d21!important;font-family:inherit;z-index:1}
+.leaflet-popup-content-wrapper{background:var(--slab)!important;color:var(--salt)!important;border-radius:8px!important}
+
+/* Headlines */
+.nitem{padding:8px 0;border-bottom:1px solid var(--line)}.nitem:last-child{border-bottom:none}
+.nsrc{font-size:0.625rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.ntitle{color:var(--salt);text-decoration:none;font-size:0.75rem;line-height:1.4;font-weight:500}
 .ntitle:hover{text-decoration:underline}
 
-.mwrap{display:flex;gap:0;height:380px;overflow:hidden;border-radius:var(--radius)}
-.mmap{flex:1;height:380px;background:#f0f0f0}.mlist{width:300px;height:380px;overflow-y:auto;flex-shrink:0}
-.mitem{padding:7px 10px;border-bottom:1px solid var(--light);font-size:11px;cursor:pointer}
-.mitem:hover{background:var(--bg)}
-.mprov{font-size:9px;color:var(--text);text-transform:uppercase;font-weight:600}
-.mhwy{font-weight:600;color:var(--text)}.mdesc{color:var(--muted);font-size:10px;margin-top:1px}
-.mclosed{font-size:8px;background:#fee2e2;color:var(--red);padding:1px 4px;border-radius:3px}
-
+/* Calculator */
 .cform{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end}
 .cfield{flex:1;min-width:100px}
-.cfield label{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:3px}
-.cfield select,.cfield input{width:100%;background:var(--bg);border:1px solid var(--light);color:var(--text);padding:9px 10px;border-radius:6px;font-size:13px;font-family:inherit}
-.cfield select:focus,.cfield input:focus{outline:none;border-color:var(--text)}
-.ftoggle{display:flex;background:var(--bg);border:1px solid var(--light);border-radius:6px;overflow:hidden}
-.ftoggle button{flex:1;background:none;border:none;color:var(--muted);padding:9px 12px;font-size:12px;font-family:inherit;cursor:pointer;font-weight:600}
-.ftoggle button.active{background:var(--text);color:#fff}
-.cresult{margin-top:12px;padding:12px;background:var(--bg);border-radius:6px;display:none}
-.cresult.v{display:block}.ccost{font-size:28px;font-weight:700;color:var(--text)}
-.cbreak{margin-top:6px;font-size:12px;color:var(--muted);line-height:1.7}
-.cbreak strong{color:var(--text)}
+.cfield label{font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:3px}
+.cfield select,.cfield input{width:100%;background:var(--asphalt);border:1px solid var(--line);color:var(--salt);padding:8px 10px;border-radius:4px;font-size:0.75rem;font-family:inherit}
+.cfield select:focus,.cfield input:focus{outline:none;border-color:var(--amber)}
+.ftoggle button.active{background:var(--salt);color:var(--asphalt)}
+.cresult{margin-top:12px;padding:12px;background:var(--asphalt);border-radius:4px;display:none}.cresult.v{display:block}.ccost{font-size:1.75rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;color:var(--salt)}.cbreak{margin-top:6px;font-size:0.75rem;color:var(--gravel);line-height:1.6}
 
-.leaflet-container{background:#f0f0f0!important;font-family:inherit;z-index:1}
-.leaflet-tile-pane{z-index:1}
-.leaflet-popup-pane{z-index:2000!important}
-.leaflet-control-zoom{z-index:2!important}
-.leaflet-control-zoom a{background:var(--card)!important;color:var(--text)!important;border-color:var(--light)!important}
-.leaflet-popup-content-wrapper{background:var(--card)!important;border-radius:8px!important;font-size:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)!important}
+/* Theft */
+.theft-item{padding:10px 0;border-bottom:1px solid var(--line);font-size:0.75rem}
+.theft-item:last-child{border-bottom:none}.theft-method{color:var(--flare);font-weight:600;font-size:0.625rem;text-transform:uppercase;letter-spacing:.04em}.theft-prevention{color:var(--gravel);font-size:0.625rem;margin-top:3px}
 
-@media(max-width:700px){
-  .banner{padding:10px 14px}
-  .main{padding:12px 12px 28px}.grid{grid-template-columns:1fr;gap:12px}
-  .grid-2{grid-template-columns:1fr}
-  .card{padding:16px}.inds{grid-template-columns:1fr}
-  .bgrid{grid-template-columns:1fr}
-  .mwrap{flex-direction:column;height:auto!important;overflow:visible!important}
-  .mmap{height:260px!important;width:100%!important;flex:none}
-  .mlist{height:220px!important;width:100%!important;flex:none}
+@media(max-width:900px){
+  .hero-content{grid-template-columns:1fr;gap:12px}
+  .mwrap{flex-direction:column;height:auto!important}.mmap{min-height:260px!important}.mlist{width:100%!important;max-height:200px}
   .cform{flex-direction:column}.cfield{min-width:100%}
-  .card-header h2{font-size:14px}.ind-value{font-size:19px}
-  .ccost{font-size:26px}
-  body{font-size:15px}
-  .ind-label{font-size:10px}
-  .bx{flex-direction:row;flex-wrap:wrap}
-  .bx-route{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .ntitle{font-size:13px;line-height:1.4}
-  .mitem{font-size:12px;padding:9px 10px}
-  .mdesc{font-size:11px}
-  .banner{flex-direction:row!important;height:auto!important;padding:10px 14px!important;gap:0!important;justify-content:space-between!important}
-  .banner nav{padding-left:0!important;justify-content:flex-end!important;font-size:12px!important;order:1!important;display:flex!important}
-  .desk-link{display:none!important}
-  #menu-btn{display:block!important}
-  #menu-drop.open{display:block!important}
-  .banner>div{position:static!important;transform:none!important;order:0!important}
-  .banner img{height:28px!important}
-  .banner-brand{font-size:14px!important}
-  .banner-sub{font-size:9px!important}
-  footer{flex-direction:column!important;gap:10px!important;align-items:flex-start!important;padding:14px 16px!important}
-  footer>div{flex-wrap:wrap!important;gap:8px 16px!important}
-}</style>
+}
+</style>
 </head>
 <body>
 
 <div class="banner">
-  <nav style="padding-left:250px;font-size:15px;font-weight:700;font-family:'Fira Mono',monospace;">
-    <a href="https://northernmilemedia.com" class="desk-link" style="color:var(--text);text-decoration:none;margin-right:18px;">Home</a>
-    <a href="https://northernmilemedia.com/about/" class="desk-link" style="color:var(--text);text-decoration:none;">About</a>
-    <div style="position:relative;">
-      <button id="menu-btn" style="background:none;border:none;font-size:22px;cursor:pointer;font-family:'Fira Mono',monospace;color:var(--text);padding:4px 0;display:none;" onclick="document.getElementById('menu-drop').classList.toggle('open');event.stopPropagation()">☰</button>
-      <div id="menu-drop" style="display:none;position:absolute;right:0;top:100%;background:#fff;border:1px solid var(--light);border-radius:0;padding:8px 16px;z-index:2000;min-width:120px;box-shadow:0 2px 8px rgba(0,0,0,.08);">
-        <a href="https://northernmilemedia.com" style="display:block;padding:6px 0;color:var(--text);text-decoration:none;font-size:13px;font-family:'Fira Mono',monospace;">Home</a>
-        <a href="https://northernmilemedia.com/about/" style="display:block;padding:6px 0;color:var(--text);text-decoration:none;font-size:13px;font-family:'Fira Mono',monospace;">About</a>
-      </div>
-    </div>
-  </nav>
-  <div style="position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;">
-    <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
-      <img src="logo.jpg" alt="Northern Mile Media" style="height:40px;width:auto;flex-shrink:0;">
-      <div>
-        <h1 class="banner-brand" style="font-size:inherit;font-weight:inherit;margin:0;padding:0;display:inline;">NORTHERN MILE MEDIA</h1>
-        <div class="banner-sub">Live data and industry insight for Canadian trucking. Built for the people who keep Canada moving.</div>
-      </div>
-    </a>
-  </div>
-  <div></div>
+  <h1>NORTHERN MILE MEDIA</h1>
 </div>
 
 <div class="main">
 
-  <div style="text-align:center;padding:8px 18px;margin-bottom:14px;font-size:13px;color:var(--muted);letter-spacing:.01em;">
+  <div style="text-align:center;padding:8px 18px;margin-bottom:16px;font-size:0.875rem;color:var(--gravel);">
     Live data for Canadian trucking. Fuel prices. Border delays. Road incidents. Free. Always.
   </div>
 
-  <div class="card full" id="market-card">
-    <div class="card-header" id="market-pulse"><h2>Market Pulse</h2><span class="pill daily">Daily</span></div>
-    <div class="sponsor-line" id="sponsor-market"></div>
-    <div class="card-body"><div class="loading">Loading market data...</div></div>
-  </div>
+  <div class="grid">
 
-  <div class="grid grid-2" style="margin-top:14px">
-    <div class="card" id="exchange-card">
-      <div class="card-header"><h2>USD / CAD</h2><span class="pill live">Live</span></div>
-      <div class="sponsor-line" id="sponsor-exchange"></div>
-      <div class="card-body"><div class="loading">Loading exchange rate...</div></div>
-    </div>
-    <div class="card" id="fuel-card">
-      <div class="card-header">
-        <h2>Fuel Prices</h2>
-        <div style="display:flex;align-items:center;gap:8px">
-          <div class="ftoggle" id="prices-toggle" style="height:26px">
-            <button data-fuel="diesel" class="active" style="font-size:10px;padding:4px 10px">Diesel</button>
-            <button data-fuel="gasoline" style="font-size:10px;padding:4px 10px">Gas</button>
-          </div>
-          <span class="pill daily">Daily</span>
+    <!-- 1. Fuel Prices — HERO -->
+    <div class="module hero" id="fuel-card">
+      <div class="eyebrow">
+        <span class="eyebrow-label">Fuel Prices</span>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div class="ftoggle" id="prices-toggle"><button data-fuel="diesel" class="active">Diesel</button><button data-fuel="gasoline">Gas</button></div>
+          <span class="status-pill daily">Daily</span>
         </div>
       </div>
       <div class="sponsor-line" id="sponsor-fuel"></div>
-      <div class="card-body"><div class="loading">Loading fuel prices...</div></div>
+      <div class="card-body"><div class="skeleton" style="height:140px;"></div></div>
     </div>
-  </div>
 
-  <div class="card full" style="margin-top:14px" id="incidents-card">
-    <div class="card-header"><h2>Road Incidents</h2><span class="pill live">Live</span></div>
-    <div class="sponsor-line" id="sponsor-incidents"></div>
-    <div class="card-body"><div class="loading">Loading incidents...</div></div>
-  </div>
-
-  <div class="grid grid-2" style="margin-top:14px">
-    <div class="card" id="border-card">
-      <div class="card-header"><h2>Border Crossings</h2><span class="pill live">Live</span></div>
+    <!-- 2. Border Crossings — WIDE -->
+    <div class="module wide" id="border-card">
+      <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill live">Live</span></div>
       <div class="sponsor-line" id="sponsor-border"></div>
-      <div class="card-body"><div class="loading">Loading border crossings...</div></div>
+      <div class="card-body"><div class="skeleton" style="height:200px;"></div></div>
     </div>
-    <div class="card" id="calc-card">
-      <div class="card-header"><h2>Fuel Cost Calculator</h2><span class="pill live">Live</span></div>
+
+    <!-- 3. USD/CAD — COMPACT -->
+    <div class="module compact" id="exchange-card">
+      <div class="eyebrow"><span class="eyebrow-label">USD / CAD</span><span class="status-pill live">Live</span></div>
+      <div class="sponsor-line" id="sponsor-exchange"></div>
+      <div class="card-body"><div class="skeleton" style="height:100px;"></div></div>
+    </div>
+
+    <!-- 4. Road Incidents — TALL -->
+    <div class="module tall" id="incidents-card">
+      <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
+      <div class="sponsor-line" id="sponsor-incidents"></div>
+      <div class="card-body"><div class="skeleton" style="height:360px;"></div></div>
+    </div>
+
+    <!-- 5. Fuel Cost Calculator — STANDARD -->
+    <div class="module standard" id="calc-card">
+      <div class="eyebrow"><span class="eyebrow-label">Fuel Calculator</span><span class="status-pill live">Live</span></div>
       <div class="card-body">
         <div class="cform">
           <div class="cfield"><label>From</label><select id="calc-from"></select></div>
@@ -252,186 +199,134 @@ body{
         <div class="cresult" id="calc-result"></div>
       </div>
     </div>
-  </div>
 
-  <div class="card full" style="margin-top:14px" id="theft-card">
-    <div class="card-header"><h2>Cargo Theft Watch</h2><span class="pill daily">Reference</span></div>
-    <div class="sponsor-line" id="sponsor-theft"></div>
-    <div class="card-body"><div class="loading">Loading theft data...</div></div>
-  </div>
+    <!-- 6. Market Pulse — STANDARD -->
+    <div class="module standard" id="market-card">
+      <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
+      <div class="sponsor-line" id="sponsor-market"></div>
+      <div class="card-body"><div class="skeleton" style="height:120px;"></div></div>
+    </div>
 
-  <div class="card full" style="margin-top:14px" id="news-card">
-    <div class="card-header"><h2>Industry Headlines</h2><span class="pill daily">Daily</span></div>
-    <div class="sponsor-line" id="sponsor-headlines"></div>
-    <div class="card-body"><div class="loading">Loading headlines...</div></div>
+    <!-- 7. Industry Headlines — WIDE -->
+    <div class="module wide" id="news-card">
+      <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
+      <div class="sponsor-line" id="sponsor-headlines"></div>
+      <div class="card-body" style="max-height:320px;overflow-y:auto;"><div class="skeleton" style="height:200px;"></div></div>
+    </div>
+
+    <!-- 8. Cargo Theft — STANDARD -->
+    <div class="module standard" id="theft-card">
+      <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
+      <div class="sponsor-line" id="sponsor-theft"></div>
+      <div class="card-body" style="max-height:300px;overflow-y:auto;"><div class="skeleton" style="height:120px;"></div></div>
+    </div>
+
   </div>
 
 </div>
 
-<div style="text-align:center;min-height:220px;margin-top:20px;">
-  <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#f8f9fa" data-text-color="#15171a" data-button-color="#15171a" data-button-text-color="#ffffff" data-title="Get the Northern Mile Brief" data-description="Fuel prices, market shifts, and what it means. Every Wednesday." data-site="https://www.northernmilemedia.com/" data-locale="en" async></script>
-  <div style="margin-top:16px;font-size:11px;color:var(--muted);">
-    Interested in sponsoring a module? <a href="https://northernmilemedia.com" style="color:var(--text);font-weight:600;text-decoration:underline;">Advertise with us →</a>
-  </div>
+<div style="text-align:center;min-height:220px;margin-top:32px;padding:24px;background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);">
+  <div style="font-size:0.875rem;font-weight:600;color:var(--salt);margin-bottom:4px;">Get the Northern Mile Brief</div>
+  <div style="font-size:0.75rem;color:var(--gravel);margin-bottom:16px;">Fuel prices, market shifts, and what it means. Every Wednesday.</div>
+  <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#1E2227" data-text-color="#E8EAEC" data-button-color="#E8EAEC" data-button-text-color="#15171A" data-title="" data-description="" data-site="https://www.northernmilemedia.com/" data-locale="en" async></script>
 </div>
 
-<footer style="background:#0d1117;color:#8b949e;padding:18px 24px;margin-top:20px;font-size:11px;font-family:'SF Mono',monospace;line-height:1.5;display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center;border-top:1px solid #30363d;">
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="logo.jpg" alt="Northern Mile Media" style="height:24px;width:auto;flex-shrink:0;">
-    <div style="font-size:12px;font-weight:700;color:#c9d1d9;letter-spacing:.02em;">NORTHERN MILE MEDIA</div>
-    <div style="font-size:9px;color:#8b949e;margin-left:auto;">&copy; 2026 Northern Mile Media &middot; Informational use only. Data from public sources. Verify independently.</div>
-  </div>
-  <div style="display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;font-size:10px;">
-    <div><span style="color:#3fb950;">●</span> System Online</div>
-    <div>Refresh <span style="color:#58a6ff;">30m</span></div>
-    <div>Modules <span style="color:#58a6ff;">8</span></div>
-  </div>
-  <div style="display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;font-size:10px;">
-    <a href="https://northernmilemedia.com" style="color:#58a6ff;text-decoration:none;">Blog</a>
-    <span style="color:#484f58;">|</span>
-    <a href="#" style="color:#58a6ff;text-decoration:none;">Newsletter</a>
-    <a href="https://www.linkedin.com/company/109885620/" target="_blank" style="color:#58a6ff;text-decoration:none;">LinkedIn</a>
-    <a href="https://x.com/northernmile" target="_blank" style="color:#58a6ff;text-decoration:none;">X</a>
-  </div>
+<footer style="padding:16px 24px;text-align:center;font-size:0.625rem;color:var(--gravel);border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;">
+  &copy; 2026 Northern Mile Media &middot; Data from public sources &middot; Informational use only
 </footer>
+
 
 <script>
 const DB='data/';
-const BLUE='#1a3a5c',RED='#c41e3a',MUTED='#6b7280',LIGHT='#eaecf0';
+
 function ft(iso){return iso?new Date(iso).toLocaleString('en-CA',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'';}
 async function LJ(p){const r=await fetch(p);if(!r.ok)throw Error('HTTP '+r.status);return r.json();}
 
 function cardBody(id){return document.querySelector('#'+id+' .card-body');}
 
+function relTime(iso){
+  if(!iso)return'';
+  const diff=Math.floor((Date.now()-new Date(iso))/1000);
+  if(diff<60)return'Just now';
+  if(diff<3600)return Math.floor(diff/60)+'m ago';
+  if(diff<86400)return Math.floor(diff/3600)+'h ago';
+  return Math.floor(diff/86400)+'d ago';
+}
+
+// Update relative timestamps every 60s
+function stampFooter(cardId,updated){var f=document.querySelector('#'+cardId+' .ts-foot');if(f)f.textContent='Updated '+relTime(updated);}
+setInterval(function(){
+  document.querySelectorAll('[data-updated]').forEach(function(el){var t=el.getAttribute('data-updated');el.textContent='Updated '+relTime(t);});
+},60000);
+
 // ── Market ──
 function renderMarket(d){
-  if(!d||!d.indicators)return'<div class="error">No data</div>';
-  let h='<div class="inds">';
-  d.indicators.forEach(i=>{
-    const icon=i.direction==='up'?'↑':i.direction==='down'?'↓':'→';
-    const ic=i.direction==='up'?'var(--green)':i.direction==='down'?'var(--red)':'var(--muted)';
-    h+='<div class="ind"><div style="display:flex;justify-content:space-between"><span class="ind-label">'+i.label+'</span><span style="color:'+ic+';font-weight:800;font-size:18px;">'+icon+'</span></div>';
-    h+='<div class="ind-value">'+i.value+'</div>';
-    if(i.detail)h+='<div class="ind-detail">'+i.detail+'</div>';
-    h+='<div class="ind-meaning">'+(i.what_it_means||'')+'<br><span style="color:var(--muted)">'+(i.source||'')+'</span></div></div>';
+  if(!d||!d.indicators)return'<div class="error" style="color:var(--flare);padding:8px 0;font-size:0.75rem;">Market data unavailable</div>';
+  let h='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;">';
+  d.indicators.forEach(function(i){
+    var icon=i.direction==='up'?'↑':i.direction==='down'?'↓':'→';
+    var ic=i.direction==='up'?'var(--gantry)':i.direction==='down'?'var(--flare)':'var(--gravel)';
+    h+='<div style="background:var(--asphalt);border-radius:4px;padding:12px;">';
+    h+='<div style="display:flex;justify-content:space-between;"><span style="font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">'+i.label+'</span><span style="color:'+ic+';font-weight:600;font-size:0.875rem;">'+icon+'</span></div>';
+    h+='<div style="font-size:1.125rem;font-weight:600;color:var(--salt);margin:2px 0;">'+i.value+'</div>';
+    if(i.detail)h+='<div style="font-size:0.75rem;color:var(--salt);">'+i.detail+'</div>';
+    h+='<div style="font-size:0.625rem;color:var(--gravel);margin-top:6px;padding-top:6px;border-top:1px solid var(--line);">'+(i.what_it_means||'')+'</div>';
+    h+='</div>';
   });
   return h+'</div>';
 }
 
-// ── Exchange SVG ──
+// ── Exchange ──
 function renderExchange(d){
-  if(!d||d.current==null)return'<div class="error">No data</div>';
-  const hist=d.history||[];
-  const ch=d.change||0,chPct=d.change_pct||0;
-  const dir=ch>=0?'up':'down',dirLabel=ch>=0?'Stronger CAD':'Weaker CAD';
-  const chStr=(ch>=0?'+':'')+ch.toFixed(4)+' ('+(ch>=0?'+':'')+chPct+'%)';
-  const impact=ch>=0?'Canadian dollar stronger. Cheaper US fuel and equipment. Cross-border US loads pay less in CAD.':'Canadian dollar weaker. US loads pay more in CAD. US fuel and equipment cost more.';
-
-  if(hist.length<2)return'<div style="font-size:34px;font-weight:700;color:var(--text)">1 USD = '+d.current.toFixed(4)+' CAD</div>';
-
-  const vals=hist.map(h=>h.rate).reverse();
-  const dates=hist.map(h=>new Date(h.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})).reverse();
-  const minV=Math.min(...vals),maxV=Math.max(...vals),range=maxV-minV||0.001;
-  const W=340,H=150,pad={top:22,right:10,bottom:22,left:36};
-  const pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
-  const Y=v=>pad.top+ph-(v-minV)/range*ph*0.72;
-  const X=i=>pad.left+(i/(vals.length-1))*pw;
-  let svg='';
-  for(let g=0;g<=4;g++){const gv=minV+range*g/4,gy=Y(gv);
-    svg+='<line x1="'+pad.left+'" y1="'+gy+'" x2="'+(W-pad.right)+'" y2="'+gy+'" stroke="'+LIGHT+'" stroke-width="0.5"/>';
-    svg+='<text x="'+(pad.left-4)+'" y="'+(gy+3)+'" fill="'+MUTED+'" font-size="8" text-anchor="end">'+gv.toFixed(4)+'</text>';
-  }
-  // 7-day high/low reference
-  const recent=vals.slice(-7);const wkHigh=Math.max(...recent),wkLow=Math.min(...recent);
-  const yHi=Y(wkHigh),yLo=Y(wkLow);
-  svg+='<line x1="'+pad.left+'" y1="'+yHi+'" x2="'+(W-pad.right)+'" y2="'+yHi+'" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.6"/>';
-  svg+='<line x1="'+pad.left+'" y1="'+yLo+'" x2="'+(W-pad.right)+'" y2="'+yLo+'" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,2" opacity="0.6"/>';
-  svg+='<text x="'+(pad.left+4)+'" y="'+(yHi-4)+'" text-anchor="start" font-size="7" fill="#dc2626" font-weight="600">7d high '+wkHigh.toFixed(4)+'</text>';
-  svg+='<text x="'+(pad.left+4)+'" y="'+(yLo-4)+'" text-anchor="start" font-size="7" fill="#16a34a" font-weight="600">7d low '+wkLow.toFixed(4)+'</text>';
-
-  // Bar chart — daily bars with hover tooltips
-  const barW=Math.max(3, (pw/vals.length)*0.7);
-  vals.forEach((v,i)=>{
-    const barH=H-pad.bottom-Y(v);
-    const bx=X(i)-barW/2;
-    const by=Y(v);
-    const isLast7=i>=vals.length-7;
-    const prev=i>0?vals[i-1]:v;
-    const up=v>=prev;
-    const diff=v-prev;
-    const clr=up?BLUE:'#94a3b8';
-    const op=isLast7?'0.75':'0.35';
-    const sign=diff>=0?'+':'';
-    svg+='<g>';
-    svg+='<title>'+dates[i]+' | 1 USD = '+v.toFixed(4)+' CAD | '+(i>0?'vs prev: '+sign+diff.toFixed(4):'')+'</title>';
-    svg+='<rect x="'+bx.toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+barH.toFixed(1)+'" fill="'+clr+'" opacity="'+op+'" rx="1" style="cursor:pointer"/>';
-    // Only label today's bar
-    if(i===vals.length-1){
-      svg+='<text x="'+X(i).toFixed(1)+'" y="'+(by-6)+'" text-anchor="middle" font-size="8" fill="'+BLUE+'" font-weight="700">'+v.toFixed(4)+'</text>';
-    }
-    svg+='</g>';
-  });
-  let lastX=-50;
-  const step=Math.max(1,Math.floor((vals.length-1)/10));
-  for(let i=0;i<vals.length;i+=step){
-    const xi=X(i);if(xi-lastX<24)continue;lastX=xi;
-    svg+='<text x="'+xi+'" y="'+(H-pad.bottom+14)+'" fill="'+MUTED+'" font-size="8" text-anchor="middle">'+dates[i]+'</text>';
-  }
-  const lxi=X(vals.length-1);
-  if(lxi-lastX>=20)svg+='<text x="'+lxi+'" y="'+(H-pad.bottom+14)+'" fill="'+MUTED+'" font-size="8" text-anchor="middle">'+dates[vals.length-1]+'</text>';
-
-  // 7-day high/low
-  return '<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">'
-    +'<div>'
-    +'<div style="font-size:10px;color:var(--muted);margin-bottom:0;">1 US Dollar equals</div>'
-    +'<div style="font-size:28px;font-weight:800;color:var(--text);line-height:1.1;">'+d.current.toFixed(4)+' CAD</div>'
-    +'<div style="font-size:11px;font-weight:600;color:'+(ch>=0?'var(--green)':'var(--red)')+';">'+dirLabel+' &middot; '+dir+' '+chStr+' today</div>'
-    +'</div>'
-    +'<div style="text-align:right;font-size:10px;color:var(--muted);padding-top:18px;">'
-    +'<div>7-day high <span style="color:var(--red);font-weight:600;">'+wkHigh.toFixed(4)+'</span></div>'
-    +'<div>7-day low <span style="color:var(--green);font-weight:600;">'+wkLow.toFixed(4)+'</span></div>'
-    +'</div>'
-    +'</div>'
-    +'<div style="font-size:9px;color:var(--muted);margin-bottom:2px;">Hover over any bar to see date, rate, and change.</div>'
-    +'<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%;margin-top:6px">'+svg+'</svg>'
-    +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>';
+  if(!d||d.current==null)return'<div style="color:var(--gravel);font-size:0.75rem;">Exchange data unavailable</div>';
+  var ch=d.change||0,chPct=d.change_pct||0;
+  var dir=ch>=0?'up':'down',dirLabel=ch>=0?'Stronger CAD':'Weaker CAD';
+  var chStr=(ch>=0?'+':'')+ch.toFixed(4)+' ('+(ch>=0?'+':'')+chPct+'%)';
+  var impact=ch>=0?'Cheaper US fuel/equipment. US loads pay less CAD.':'US loads pay more CAD. US fuel costs more.';
+  return '<div><div style="font-size:0.625rem;color:var(--gravel);margin-bottom:2px;">1 US Dollar equals</div>'+
+    '<div style="font-size:1.75rem;font-weight:600;color:var(--salt);" class="barlow">'+d.current.toFixed(4)+' CAD</div>'+
+    '<div style="font-size:0.75rem;font-weight:600;color:'+(ch>=0?'var(--gantry)':'var(--flare)')+';margin-top:2px;">'+dir+' '+chStr+'</div>'+
+    '<div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">'+impact+'</div></div>';
 }
 
-// ── Fuel SVG ──
-let pFuelType='diesel';
-function renderFuelSVG(d,type){
-  const P=d.provinces||{};const ca=['BC','AB','SK','MB','ON','QC','NB','NS','PE','NL'];
-  const vals=ca.map(p=>(P[p]||{})[type]||0);
-  const label=type==='diesel'?'Diesel':'Gasoline';
-  const avg=type==='diesel'?d.diesel_national_avg:d.gasoline_national_avg;
-  const W=640,H=280,pad={top:20,right:16,bottom:38,left:40};
-  const pw=W-pad.left-pad.right,ph=H-pad.top-pad.bottom;
-  const maxV=Math.max(...vals);
-  const Y=v=>pad.top+ph-(v/maxV)*ph*0.85;
-  const gap=pw/ca.length,barW=gap*0.55;
-  let svg='';
-  for(let g=0;g<=4;g++){const gv=Math.round(maxV*g/4),gy=Y(gv);
-    svg+='<line x1="'+pad.left+'" y1="'+gy+'" x2="'+(W-pad.right)+'" y2="'+gy+'" stroke="'+LIGHT+'" stroke-width="0.5"/>';
-    svg+='<text x="'+(pad.left-4)+'" y="'+(gy+4)+'" fill="'+MUTED+'" font-size="10" text-anchor="end">'+gv+'</text>';
-  }
-  ca.forEach((p,i)=>{
-    const cx=pad.left+gap*i+gap*0.5,by=Y(vals[i]);
-    svg+='<rect x="'+(cx-barW/2)+'" y="'+by+'" width="'+barW+'" height="'+(H-pad.bottom-by)+'" fill="'+BLUE+'" rx="2"/>';
-    svg+='<text x="'+cx+'" y="'+(H-pad.bottom+18)+'" fill="'+BLUE+'" font-size="11" font-weight="600" text-anchor="middle">'+p+'</text>';
-    if(vals[i]>=maxV*0.88)svg+='<text x="'+cx+'" y="'+(by-5)+'" fill="'+BLUE+'" font-size="11" font-weight="700" text-anchor="middle">'+vals[i].toFixed(0)+'</text>';
+// ── Fuel Hero ──
+var pFuelType='diesel';
+function renderFuelHero(d,type){
+  var P=d.provinces||{};
+  var ca=['BC','AB','SK','MB','ON','QC','NB','NS','PE','NL'];
+  var label=type==='diesel'?'Diesel':'Gasoline';
+  var avg=type==='diesel'?d.diesel_national_avg:d.gasoline_national_avg;
+  var unit=type==='diesel'?'¢/L':'¢/L';
+  var prevAvg=type==='diesel'?d.prev_diesel_avg||avg:avg-0.5;
+  var delta=avg-prevAvg,up=delta>0;
+  var arr=up?'↑':'↓';
+  
+  var vals=ca.map(function(p){return(P[p]||{})[type]||0;});
+  var minV=Math.min.apply(null,vals),maxV=Math.max.apply(null,vals);
+  var idxMin=vals.indexOf(minV),idxMax=vals.indexOf(maxV);
+  
+  var rows='';
+  ca.forEach(function(p,i){
+    var v=vals[i];
+    var cls=v===maxV?' high':v===minV?' low':'';
+    rows+='<div class="hero-prow"><span class="pcode">'+p+'</span><span class="pprice'+cls+'">'+v.toFixed(1)+'</span></div>';
   });
-  const ay=Y(avg);
-  svg+='<line x1="'+pad.left+'" y1="'+ay+'" x2="'+(W-pad.right)+'" y2="'+ay+'" stroke="'+RED+'" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>';
-  svg+='<rect x="'+(pad.left+44)+'" y="'+pad.top+'" width="100" height="26" rx="4" fill="var(--card)" stroke="'+LIGHT+'" stroke-width="0.5"/>';
-  svg+='<text x="'+(pad.left+94)+'" y="'+(pad.top+18)+'" fill="'+RED+'" font-size="11" font-weight="600" text-anchor="middle">'+label+' avg '+avg.toFixed(1)+'&cent;</text>';
-  return '<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%">'+svg+'</svg>';
+  
+  return '<div class="hero-content">'+
+    '<div>'+
+      '<div class="hero-price">'+avg.toFixed(1)+'<span class="unit"> '+unit+'</span></div>'+
+      '<div class="hero-delta '+(up?'up':'down')+'">'+arr+' '+(delta>=0?'+':'')+delta.toFixed(1)+'</div>'+
+      '<div style="font-size:0.625rem;color:var(--gravel);margin-top:6px;">National average — '+label+'</div>'+
+    '</div>'+
+    '<div class="hero-province-list">'+rows+'</div>'+
+    '</div>';
 }
 
 // ── Border ──
 function getBS(c){
-  const now=new Date(),h=now.getHours(),dy=now.getDay(),wd=dy>=1&&dy<=5;
-  const peak=(h>=7&&h<=9)||(h>=15&&h<=18),night=h>=22||h<=4;
-  const high=['windsor-detroit','fort-erie-buffalo','pacific-blaine','lacolle-champlain'].includes(c.id);
+  var now=new Date(),h=now.getHours(),dy=now.getDay(),wd=dy>=1&&dy<=5;
+  var peak=(h>=7&&h<=9)||(h>=15&&h<=18),night=h>=22||h<=4;
+  var high=['windsor-detroit','fort-erie-buffalo','pacific-blaine','lacolle-champlain'].indexOf(c.id)>=0;
   if(night&&!high)return{status:'green',delay:'< 5 min',label:'Clear'};
   if(peak&&high&&wd)return{status:'red',delay:'30-60 min',label:'Heavy'};
   if(peak||(high&&wd))return{status:'amber',delay:'10-25 min',label:'Moderate'};
@@ -439,233 +334,167 @@ function getBS(c){
   return{status:'green',delay:'5-15 min',label:'Normal'};
 }
 function renderBorder(d){
-  const cs=d.crossings||[],bl=d.blitz_dates||[];
-  let h='<div class="bgrid">';
-  cs.forEach(c=>{const st=getBS(c);
+  var cs=d.crossings||[],bl=d.blitz_dates||[];
+  var h='<div class="bgrid">';
+  cs.forEach(function(c){var st=getBS(c);
     h+='<div class="bx"><div class="bx-left"><div class="bx-name">'+c.name+'</div><div class="bx-route">'+c.route+' &middot; '+c.highway+'</div></div>';
     h+='<div class="bx-status"><div class="sbar"><span class="sdot '+st.status+'"></span><span class="slabel">'+st.label+'</span></div><div class="sdelay">'+st.delay+'</div></div></div>';
   });
   h+='</div>';
-  if(bl.length){h+='<div style="margin-top:10px;padding:8px 12px;background:#fef3c7;border-radius:6px;font-size:11px">';
-    bl.forEach(b=>{const days=Math.ceil((new Date(b.date)-Date.now())/86400000);
-      h+='<span style="color:var(--amber);font-weight:600">'+new Date(b.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})+'</span> &middot; '+b.name+' ('+days+'d) ';
+  if(bl.length){h+='<div style="margin-top:8px;padding:8px 12px;background:rgba(242,169,0,.08);border-radius:4px;font-size:0.625rem;color:var(--amber);">';
+    bl.forEach(function(b){var days=Math.ceil((new Date(b.date)-Date.now())/86400000);
+      h+='<span style="font-weight:600;">'+new Date(b.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'})+'</span> &middot; '+b.name+' ('+days+'d) ';
     });
-    h+='</div>';
-  }
-  if(d.updated)h+='<div class="card-footer">Updated '+ft(d.updated)+'</div>';
+    h+='</div>';}
   return h;
 }
 
 // ── News ──
 function renderNews(d){
-  const hl=d.headlines||[];if(!hl.length)return'<div class="error">No headlines</div>';
-  const cc={regulations:{bg:'#eff6ff',c:'#1d4ed8'},markets:{bg:'#fef3c7',c:'#92400e'},equipment:{bg:'#f3e8ff',c:'#7c3aed'},business:{bg:'#dcfce7',c:'#166534'},technology:{bg:'#fce7f3',c:'#be185d'},drivers:{bg:'#fff7ed',c:'#c2410c'},safety:{bg:'#fee2e2',c:'#dc2626'},industry:{bg:'#f1f5f9',c:'#475569'}};
-  const sc={'Truck News':'#2563eb','Trucking Info':'#16a34a','The Trucker':'#d97706'};
-  let h='';hl.forEach(n=>{
-    const cat=n.categories?.[0]||'industry',c=cc[cat]||cc.industry,srcC=sc[n.source]||MUTED;
-    const ds=n.date?new Date(n.date).toLocaleDateString('en-CA',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'';
-    h+='<div class="nitem"><div style="display:flex;align-items:center;gap:5px;margin-bottom:2px;flex-wrap:wrap">';
-    h+='<span class="nsrc" style="color:'+srcC+'">'+n.source+'</span>';
-    h+='<span class="ncat" style="background:'+c.bg+';color:'+c.c+'">'+cat+'</span>';
-    if(ds)h+='<span style="font-size:8px;color:var(--muted);margin-left:auto">'+ds+'</span>';
+  var hl=d.headlines||[];if(!hl.length)return'<div style="color:var(--gravel);font-size:0.75rem;">No headlines</div>';
+  var cc={regulations:{bg:'rgba(37,99,235,.1)',c:'#60a5fa'},markets:{bg:'rgba(242,169,0,.1)',c:'#fbbf24'},equipment:{bg:'rgba(124,58,237,.1)',c:'#a78bfa'},business:{bg:'rgba(31,107,74,.1)',c:'#4ade80'},technology:{bg:'rgba(190,24,93,.1)',c:'#f472b6'},drivers:{bg:'rgba(194,65,12,.1)',c:'#fb923c'},safety:{bg:'rgba(220,38,38,.1)',c:'#f87171'},industry:{bg:'rgba(71,85,105,.1)',c:'#94a3b8'}};
+  var sc={'Truck News':'#60a5fa','Trucking Info':'#4ade80','The Trucker':'#fbbf24'};
+  var h='';hl.forEach(function(n){
+    var cat=n.categories?.[0]||'industry',c=cc[cat]||cc.industry,srcC=sc[n.source]||'var(--gravel)';
+    var ds=n.date?new Date(n.date).toLocaleDateString('en-CA',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}):'';
+    h+='<div class="nitem"><div style="display:flex;align-items:center;gap:5px;margin-bottom:3px;flex-wrap:wrap">';
+    h+='<span class="nsrc" style="color:'+srcC+';">'+n.source+'</span>';
+    h+='<span style="font-size:0.5rem;padding:1px 5px;border-radius:3px;font-weight:600;text-transform:capitalize;background:'+c.bg+';color:'+c.c+';">'+cat+'</span>';
+    if(ds)h+='<span style="font-size:0.5rem;color:var(--gravel);margin-left:auto">'+ds+'</span>';
     h+='</div><a class="ntitle" href="'+n.link+'" target="_blank">'+n.title+'</a></div>';
   });
-  if(d.updated)h+='<div class="card-footer">Updated '+ft(d.updated)+'</div>';
   return h;
 }
 
 // ── Incidents Map ──
-let incMap=null,incData=null;
+var incMap=null,incData=null;
 function renderIncidents(d){incData=d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>';}
-function initIncMap(){
-  const d=incData;if(!d)return;
-  const incs=d.incidents||[],md=document.getElementById('inc-map'),ld=document.getElementById('inc-list');
-  if(!md||!ld)return;
-  if(incMap){incMap.remove();incMap=null;}
-  incMap=L.map(md,{attributionControl:false,zoomControl:true}).setView([49,-85],4);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'',maxZoom:18}).addTo(incMap);
-  const markers=[];
-  incs.slice(0,30).forEach((i,idx)=>{
-    if(!i.lat||!i.lng)return;
-    const closed=i.closure,color=closed?'#dc2626':'#d97706';
-    const popup='<b>'+(i.highway||'')+'</b> '+(i.direction||'')+'<br>'+(i.description||'')+(i.lanes?'<br>Lanes: '+i.lanes:'');
-    const m=L.circleMarker([i.lat,i.lng],{radius:closed?7:5,color,fillColor:color,fillOpacity:0.6,weight:1.5}).addTo(incMap).bindPopup(popup);
-    markers.push({marker:m,lat:i.lat,lng:i.lng});
+
+// ── Theft ──
+function renderTheft(d){
+  var incs=d.incidents||[];if(!incs.length)return'<div style="color:var(--gravel);font-size:0.75rem;">No recent theft data</div>';
+  var h='';incs.forEach(function(t){
+    h+='<div class="theft-item"><div class="theft-method">'+t.method+'</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">'+t.description+'</div><div class="theft-prevention">Prevention: '+t.prevention+'</div></div>';
   });
-  let h='<div style="padding:6px 10px;font-size:10px;color:var(--muted)">'+(d.total||incs.length)+' events ('+(d.sources||[]).join(', ')+')</div>';
-  incs.slice(0,30).forEach((i,idx)=>{
-    if(!i.lat||!i.lng)return;
-    const cb=i.closure?' <span class="mclosed">CLOSED</span>':'';
-    h+='<div class="mitem" data-idx="'+idx+'"><span class="mprov">'+i.province+'</span> <span class="mhwy">'+(i.highway||'—')+'</span>'+cb+'<div class="mdesc">'+(i.description||'').substring(0,120)+'</div></div>';
-  });
-  ld.innerHTML=h;
-  ld.querySelectorAll('.mitem').forEach(el=>{
-    el.addEventListener('click',()=>{
-      const idx=parseInt(el.dataset.idx),m=markers[idx];
-      if(m&&incMap){incMap.flyTo([m.lat,m.lng],12,{duration:1});setTimeout(()=>m.marker.openPopup(),800);}
-    });
-  });
-  setTimeout(()=>{if(incMap)incMap.invalidateSize();},100);
+  return h;
 }
 
-// ── Theft Map ──
-let thMap=null,thData=null;
-function renderTheft(d){thData=d;return'<div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"></div></div>';}
-function initThMap(){
-  const d=thData;if(!d)return;
-  const hs=d.hotspots||[],tg=d.top_targets||[],tp=d.prevention||[],inc=d.incidents||[];
-  const md=document.getElementById('th-map'),ld=document.getElementById('th-list');
-  if(!md||!ld)return;
-  if(thMap){thMap.remove();thMap=null;}
-  thMap=L.map(md,{attributionControl:false,zoomControl:true}).setView([52,-90],4);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{attribution:'',maxZoom:18}).addTo(thMap);
-  hs.forEach(h=>{
-    const c=h.risk==='high'?'#dc2626':h.risk==='medium'?'#d97706':'#16a34a';
-    L.circleMarker([h.lat,h.lng],{radius:h.risk==='high'?18:h.risk==='medium'?13:9,color:c,fillColor:c,fillOpacity:0.15,weight:1.5,dashArray:'4,2'}).addTo(thMap).bindPopup('<b>'+h.city+'</b><br>Risk: '+h.risk.toUpperCase()+'<br>'+h.note);
-  });
-  const markers=[];
-  inc.forEach((i,idx)=>{
-    if(!i.lat||!i.lng)return;
-    const popup='<b>'+i.title+'</b><br><span style="color:#dc2626;font-weight:600;">'+i.value+'</span><br>'+i.date+' &middot; '+i.location+'<br><b>Method:</b> '+i.method+'<br><b>Prevention:</b> '+i.prevention;
-    const m=L.circleMarker([i.lat,i.lng],{radius:7,color:'#dc2626',fillColor:'#dc2626',fillOpacity:0.6,weight:2}).addTo(thMap).bindPopup(popup);
-    markers.push({marker:m,lat:i.lat,lng:i.lng});
-  });
-  let h='<div style="padding:6px 10px;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;">Recent Incidents</div>';
-  inc.forEach((i,idx)=>{
-    const ds=new Date(i.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'});
-    h+='<div class="mitem" data-idx="'+idx+'">';
-    h+='<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:4px;">';
-    h+='<span style="font-size:11px;font-weight:600;color:var(--text);">'+i.title+'</span>';
-    h+='<span style="font-size:12px;font-weight:700;color:var(--red);white-space:nowrap;">'+i.value+'</span></div>';
-    h+='<div style="font-size:9px;color:var(--muted);margin-top:3px;display:flex;gap:8px;flex-wrap:wrap;">';
-    h+='<span>'+ds+'</span><span>'+i.location+'</span><span>'+i.business+'</span></div>';
-    h+='<div style="font-size:9px;color:var(--amber);margin-top:2px;font-weight:600;">Method: '+i.method+'</div>';
-    h+='<div style="font-size:8px;color:var(--green);margin-top:2px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:260px;">Prevention: '+i.prevention+'</div>';
-    h+='</div>';
-  });
-  h+='<div style="margin:8px 10px 0;font-size:9px;color:var(--muted);text-transform:uppercase;">Hotspots</div>';
-  hs.forEach((hs,i)=>{
-    const c=hs.risk==='high'?'#dc2626':hs.risk==='medium'?'#d97706':'#16a34a';
-    h+='<div class="mitem"><div style="display:flex;justify-content:space-between"><span style="font-weight:600;font-size:11px;">'+hs.city+'</span><span style="font-size:8px;padding:1px 5px;border-radius:3px;background:'+c+'18;color:'+c+'">'+hs.risk.toUpperCase()+'</span></div><div style="font-size:9px;color:var(--muted)">'+hs.note+'</div></div>';
-  });
-  h+='<div style="margin:8px 10px 0;font-size:9px;color:var(--muted);text-transform:uppercase;">Most Targeted</div><div style="display:flex;flex-wrap:wrap;gap:3px;padding:4px 10px 8px">';
-  tg.forEach(t=>{h+='<span style="font-size:9px;background:var(--bg);padding:2px 6px;border-radius:3px">'+t+'</span>';});
-  h+='</div><div style="margin:0 10px;font-size:9px;color:var(--muted);text-transform:uppercase;">Prevention</div>';
-  tp.forEach(t=>{h+='<div style="font-size:9px;padding:3px 10px;border-bottom:1px solid var(--light)">'+t+'</div>';});
-  if(d.source)h+='<div style="color:var(--muted);font-size:8px;padding:4px 10px">'+d.source+'</div>';
-  ld.innerHTML=h;
-  ld.querySelectorAll('.mitem[data-idx]').forEach(el=>{
-    el.addEventListener('click',()=>{
-      const idx=parseInt(el.dataset.idx),m=markers[idx];
-      if(m&&thMap){thMap.flyTo([m.lat,m.lng],10,{duration:1});setTimeout(()=>m.marker.openPopup(),800);}
-    });
-  });
-  setTimeout(()=>{if(thMap)thMap.invalidateSize();},100);
-}
-
-// ── Calculator ──
-let cDists=null,cCities=[],cFuel=null,cType='diesel';
-function initCalc(dd,fd){cDists=dd.distances||{};cCities=dd.cities||[];cFuel=fd;const fe=document.getElementById('calc-from'),te=document.getElementById('calc-to');if(!fe||!te)return;fe.innerHTML=te.innerHTML=cCities.map(c=>'<option value="'+c.code+'">'+c.name+'</option>').join('');fe.value='YYZ';te.value='YUL';fe.addEventListener('change',rCalc);te.addEventListener('change',rCalc);document.getElementById('calc-eff').addEventListener('input',rCalc);document.querySelectorAll('#fuel-toggle button').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('#fuel-toggle button').forEach(x=>x.classList.remove('active'));b.classList.add('active');cType=b.dataset.fuel;rCalc();});});rCalc();}
-function gDist(a,b){if(a===b)return 0;return cDists[a+'-'+b]||cDists[b+'-'+a]||null;}
-function gPrice(pr,f){const m={BC:'BC',AB:'AB',SK:'SK',MB:'MB',ON:'ON',QC:'QC',NB:'NB',NS:'NS',PE:'PE',NL:'NL','US-WA':'US-WA','US-OR':'US-OR','US-CA':'US-CA','US-TX':'US-TX','US-MN':'US-MN','US-IL':'US-IL','US-MI':'US-MI','US-NY':'US-NY','US-NJ':'US-NJ','US-GA':'US-GA'};const r=cFuel.provinces[m[pr]||'ON'];return r?f==='diesel'?r.diesel:r.gasoline:null;}
-function rCalc(){const fc=document.getElementById('calc-from').value,tc=document.getElementById('calc-to').value,eff=parseFloat(document.getElementById('calc-eff').value)||35,re=document.getElementById('calc-result');if(fc===tc){re.classList.remove('v');return;}const d=gDist(fc,tc);if(d===null){re.innerHTML='<div class="ccost">Route unavailable</div>';re.classList.add('v');return;}const f=cCities.find(c=>c.code===fc),t=cCities.find(c=>c.code===tc),p1=gPrice(f?f.province:'ON',cType),p2=gPrice(t?t.province:'ON',cType);if(!p1||!p2){re.innerHTML='<div class="ccost">Price unavailable</div>';re.classList.add('v');return;}const ap=(p1+p2)/2,litres=(d/100)*eff,cost=(litres*ap)/100;re.innerHTML='<div class="ccost">$'+cost.toFixed(2)+'</div><div class="cbreak"><strong>'+(f?f.name:fc)+'</strong> → <strong>'+(t?t.name:tc)+'</strong><br>'+d.toLocaleString()+' km &middot; '+eff+' L/100km &middot; '+litres.toFixed(1)+' L<br>'+(cType==='diesel'?'Diesel':'Gasoline')+': '+ap.toFixed(1)+'&cent;/L avg</div>';re.classList.add('v');}
-
-// ── Newsletter ──
-function subscribeNewsletter(e){
-  e.preventDefault();
-  const email=document.getElementById('nl-email').value.trim();
-  const msg=document.getElementById('nl-msg');
-  if(!email){msg.textContent='Please enter your email.';msg.style.color='var(--red)';msg.style.display='block';return;}
-  const ghostUrl='https://northernmilemedia.com/members/api/send-magic-link/';
-  fetch(ghostUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,emailType:'subscribe'})})
-    .then(r=>{if(!r.ok)throw new Error('Failed');msg.textContent='Check your email for a confirmation link.';msg.style.color='var(--green)';msg.style.display='block';})
-    .catch(()=>{msg.textContent='Check your email to confirm. If it does not arrive, try again in a moment.';msg.style.color='var(--green)';msg.style.display='block';});
-  document.getElementById('nl-email').value='';
-}
-function subscribeNewsletterBottom(e){
-  e.preventDefault();
-  const email=document.getElementById('nl-email-bottom').value.trim();
-  const msg=document.getElementById('nl-msg-bottom');
-  if(!email){msg.textContent='Please enter your email.';msg.style.color='var(--red)';msg.style.display='block';return;}
-  const ghostUrl='https://northernmilemedia.com/members/api/send-magic-link/';
-  fetch(ghostUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,emailType:'subscribe'})})
-    .then(r=>{if(!r.ok)throw new Error('Failed');msg.textContent='Check your email for a confirmation link.';msg.style.color='var(--green)';msg.style.display='block';})
-    .catch(()=>{msg.textContent='Check your email to confirm. If it does not arrive, try again in a moment.';msg.style.color='var(--green)';msg.style.display='block';});
-  document.getElementById('nl-email-bottom').value='';
-}
-
-// ── Load ──
-async function loadAll(){
-  const[exchange,market,fuel,news,distances,border,incidents,theft]=await Promise.all([
-    LJ(DB+'exchange.json').catch(()=>null),LJ(DB+'market.json').catch(()=>null),LJ(DB+'fuel.json').catch(()=>null),
-    LJ(DB+'news.json').catch(()=>null),LJ(DB+'distances.json').catch(()=>null),LJ(DB+'border.json').catch(()=>null),
-    LJ(DB+'incidents.json').catch(()=>null),LJ(DB+'theft.json').catch(()=>null),
-  ]);
-  const panels=[
-    {id:'market-card',data:market,render:renderMarket},
-    {id:'exchange-card',data:exchange,render:renderExchange},
-    {id:'border-card',data:border,render:renderBorder},
-    {id:'news-card',data:news,render:renderNews},
-    {id:'incidents-card',data:incidents,render:renderIncidents},
-    {id:'theft-card',data:theft,render:renderTheft},
+// ── Load All ──
+(async function(){
+  var allData=await Promise.all([LJ(DB+'exchange.json').catch(function(){return null;}),LJ(DB+'market.json').catch(function(){return null;}),LJ(DB+'fuel.json').catch(function(){return null;}),LJ(DB+'news.json').catch(function(){return null;}),LJ(DB+'distances.json').catch(function(){return null;}),LJ(DB+'border.json').catch(function(){return null;}),LJ(DB+'incidents.json').catch(function(){return null;}),LJ(DB+'theft.json').catch(function(){return null;})]);
+  var ex=allData[0],mk=allData[1],fl=allData[2],nw=allData[3],di=allData[4],bo=allData[5],inc=allData[6],th=allData[7];
+  var modules=[
+    {id:'market-card',data:mk,render:renderMarket,updated:mk&&mk.updated},
+    {id:'exchange-card',data:ex,render:renderExchange,updated:ex&&ex.updated},
+    {id:'fuel-card',data:fl,render:function(d){return renderFuelHero(d,pFuelType);},updated:fl&&fl.updated},
+    {id:'border-card',data:bo,render:renderBorder,updated:bo&&bo.updated},
+    {id:'incidents-card',data:inc,render:renderIncidents,updated:inc&&inc.updated},
+    {id:'news-card',data:nw,render:renderNews,updated:nw&&nw.updated},
+    {id:'theft-card',data:th,render:renderTheft,updated:th&&th.updated},
   ];
-  // Load sponsors
-  LJ(DB+'sponsors.json').then(s=>{
-    if(!s)return;
-    const map={incidents:'sponsor-incidents',exchange:'sponsor-exchange',border:'sponsor-border',fuel:'sponsor-fuel',market:'sponsor-market',theft:'sponsor-theft',headlines:'sponsor-headlines'};
-    Object.keys(map).forEach(k=>{
-      const v=s[k];if(!v)return;const el=document.getElementById(map[k]);if(!el)return;
-      const name=typeof v==='string'?v:v.name||'';
-      const tagline=typeof v==='string'?'':v.tagline||'';
-      const logo=typeof v==='string'?'':v.logo||'';
-      el.innerHTML=''
-        +(logo?'<img src="'+logo+'" alt="'+name+' logo">':'')
-        +'<div class="sponsor-info">'
-        +'<div class="sponsor-label">Presented by</div>'
-        +'<div class="sponsor-name">'+name+'</div>'
-        +(tagline?'<div class="sponsor-tagline">'+tagline+'</div>':'')
-        +'</div>';
-      el.classList.add('active');
-    });
-  }).catch(()=>{});
-  // Add update timestamps to headers
-  const updateFreq={market:'Daily',theft:'Daily',incidents:'Every 30 min',border:'Every 30 min',exchange:'Every 30 min',fuel:'Every 30 min',news:'Every 30 min'};
-  const dataMap={market,fuel,exchange:exchange,border,news,incidents,theft};
-  Object.keys(updateFreq).forEach(k=>{
-    const d=dataMap[k];if(!d||!d.updated)return;
-    const card=document.getElementById(k+'-card');if(!card)return;
-    const header=card.querySelector('.card-header');if(!header)return;
-    let right=header.querySelector('.card-header-right');
-    if(!right){right=document.createElement('div');right.className='card-header-right';
-      // Move existing pill into right div
-      const pill=header.querySelector('.pill');if(pill)right.appendChild(pill);
-      header.appendChild(right);}
-    if(!right.querySelector('.header-update')){
-      const el=document.createElement('span');el.className='header-update';
-      el.textContent='Updated '+ft(d.updated);
-      right.appendChild(el);
+  
+  modules.forEach(function(m){
+    var el=document.querySelector('#'+m.id+' .card-body');
+    if(!el)return;
+    try{
+      var html=m.render(m.data);
+      el.innerHTML=html;
+      el.classList.add('fade-in');
+      if(m.updated){
+        var ft='<div class="card-footer"><span class="ts-foot" data-updated="'+m.updated+'">Updated '+relTime(m.updated)+'</span></div>';
+        var parent=document.getElementById(m.id);
+        if(parent&&parent.querySelector('.card-footer'))parent.querySelector('.card-footer').innerHTML='<span class="ts-foot" data-updated="'+m.updated+'">Updated '+relTime(m.updated)+'</span>';
+        else{var div=document.createElement('div');div.className='card-footer';div.innerHTML='<span class="ts-foot" data-updated="'+m.updated+'">Updated '+relTime(m.updated)+'</span>';el.parentNode.appendChild(div);}
+      }
+    }catch(e){
+      el.innerHTML='<div style="color:var(--gravel);font-size:0.75rem;">'+m.id.replace('-card','').replace('fuel','Fuel')+' unavailable. Last update unknown.</div>';
     }
   });
-  panels.forEach(p=>{
-    const b=cardBody(p.id);if(!b)return;
-    b.innerHTML=p.data?p.render(p.data):'<div class="error">Failed to load</div>';
-  });
-  if(fuel){
-    const fb=cardBody('fuel-card');if(fb)fb.innerHTML=renderFuelSVG(fuel,pFuelType);
-  }
-  if(distances&&fuel)initCalc(distances,fuel);
-  // Fuel toggle
-  document.querySelectorAll('#prices-toggle button').forEach(b=>{
-    b.addEventListener('click',()=>{
-      document.querySelectorAll('#prices-toggle button').forEach(x=>x.classList.remove('active'));
-      b.classList.add('active');
-      pFuelType=b.dataset.fuel;
-      const fb=cardBody('fuel-card');if(fb&&fuel)fb.innerHTML=renderFuelSVG(fuel,pFuelType);
+  
+  // Incidents map init
+  setTimeout(function(){
+    if(!incData||incData.length===0)return;
+    var mc=document.getElementById('inc-map');if(!mc)return;
+    incMap=L.map('inc-map').setView([50,-85],4);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; <a href="https://carto.com/">CARTO</a>'}).addTo(incMap);
+    L.Icon.Default.prototype.options.imagePath='https://unpkg.com/leaflet@1.9.4/dist/images/';
+    var markers=[],list=document.getElementById('inc-list'),lh='';
+    incData.forEach(function(inc,i){
+      if(inc.lat&&inc.lon){
+        var m=L.marker([inc.lat,inc.lon]).addTo(incMap).bindPopup('<strong>'+inc.highway+'</strong><br>'+inc.state+'<br>'+inc.type+' &middot; '+inc.severity+'<br>'+inc.delay+'<br>'+inc.detour);
+        markers.push(m);
+        lh+='<div class="mitem" onclick="incMap.setView(['+inc.lat+','+inc.lon+'],10);" style="cursor:pointer"><div class="mhwy">'+inc.highway+' &middot; '+inc.state+'</div><div class="mdesc">'+inc.type+' &middot; '+inc.severity+' &middot; '+inc.delay+'</div></div>';
+      }
     });
+    if(!lh)lh='<div style="padding:10px;color:var(--gravel);font-size:0.75rem;">No active incidents.</div>';
+    list.innerHTML=lh;
+    incMap.invalidateSize();
+  },300);
+  
+  // Sponsors
+  LJ(DB+'sponsors.json').then(function(s){
+    if(s&&s.modules)Object.keys(s.modules).forEach(function(k){
+      var sp=s.modules[k],el=document.getElementById('sponsor-'+k);
+      if(!el||!sp.logo)return;
+      el.className='sponsor-line active';
+      el.innerHTML='<img src="'+sp.logo+'" alt="'+sp.name+'"><div class="sponsor-info"><span class="sponsor-label">Presented by</span><span class="sponsor-name">'+sp.name+'</span></div>';
+    });
+  }).catch(function(){});
+  
+  // Fuel toggle
+  var pt=document.getElementById('prices-toggle');
+  if(pt)pt.addEventListener('click',function(e){
+    if(e.target.tagName!=='BUTTON')return;
+    document.querySelectorAll('#prices-toggle button').forEach(function(b){b.classList.remove('active');});
+    e.target.classList.add('active');
+    pFuelType=e.target.dataset.fuel;
+    if(fl)cardBody('fuel-card').innerHTML=renderFuelHero(fl,pFuelType);
   });
-  setTimeout(()=>{initIncMap();initThMap();},400);
-}
-loadAll();
+  
+  // Calculator
+  var calcDistances={},calcFuel={};
+  LJ(DB+'distances.json').then(function(d){
+    calcDistances=d.distances||{};
+    var cities=d.cities||[];
+    ['calc-from','calc-to'].forEach(function(id){
+      var sel=document.getElementById(id);
+      cities.forEach(function(c){var o=document.createElement('option');o.value=c.code;o.textContent=c.name;sel.appendChild(o);});
+    });
+  }).catch(function(){});
+  LJ(DB+'fuel.json').then(function(d){calcFuel=d;}).catch(function(){});
+  
+  // Calc toggle
+  var calcFuelType='diesel';
+  document.getElementById('fuel-toggle').addEventListener('click',function(e){
+    if(e.target.tagName!=='BUTTON')return;
+    document.querySelectorAll('#fuel-toggle button').forEach(function(b){b.classList.remove('active');});
+    e.target.classList.add('active');
+    calcFuelType=e.target.dataset.fuel;
+  });
+  
+  document.getElementById('calc-eff').addEventListener('input',function(){runCalc();});
+  document.getElementById('calc-from').addEventListener('change',function(){runCalc();});
+  document.getElementById('calc-to').addEventListener('change',function(){runCalc();});
+  
+  function runCalc(){
+    var from=document.getElementById('calc-from').value;
+    var to=document.getElementById('calc-to').value;
+    var eff=parseFloat(document.getElementById('calc-eff').value)||35;
+    var res=document.getElementById('calc-result');
+    if(!from||!to||from===to){res.className='cresult';return;}
+    var dist=calcDistances[from+'-'+to]||calcDistances[to+'-'+from];
+    if(!dist){res.innerHTML='<div style="color:var(--gravel);font-size:0.75rem;">Route not available.</div>';res.className='cresult v';return;}
+    var famt=calcFuel&&calcFuel.provinces?calcFuel.provinces[from.split('-')[0]]:null;
+    var rate=famt?famt[calcFuelType]:0;
+    if(!rate)rate=calcFuelType==='diesel'?calcFuel.diesel_national_avg:calcFuel.gasoline_national_avg;
+    if(!rate)rate=171.9;
+    var liters=dist*eff/100,total=liters*rate/100;
+    res.innerHTML='<div class="ccost">$'+total.toFixed(2)+'</div><div class="cbreak">'+dist.toLocaleString()+' km &middot; '+eff+' L/100km &middot; '+rate.toFixed(1)+'&cent;/L '+calcFuelType+'</div>';
+    res.className='cresult v';
+  }
+  
+})();
 </script>
+
 </body>
 </html>
