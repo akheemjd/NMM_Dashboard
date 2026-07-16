@@ -398,7 +398,20 @@ function renderExchange(d){
     +'</div>'
     +'<div style="font-size:9px;color:var(--muted);margin-bottom:2px;">Hover over any bar to see date, rate, and change.</div>'
     +'<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%;margin-top:6px">'+svg+'</svg>'
-    +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>';
+    +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>''
+    // Daily rate list — last 14 days
+    +'<div style="margin-top:10px;padding-top:8px;border-top:1px solid '+LIGHT+';">'
+    +'<div style="font-size:9px;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em;">Daily Rates</div>'
+    +'<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px 12px;font-size:11px;">'
+    +vals.slice(0,14).reverse().map((v,i)=>{
+      const idx=vals.length-1-i;
+      const prev=idx>0?vals[idx-1]:v;
+      const up=v>=prev;
+      const sign=up?'+':'';
+      const diff=v-prev;
+      return '<div style="display:flex;justify-content:space-between;padding:1px 0;"><span style="color:var(--muted);">'+dates[idx]+'</span><span style="font-weight:600;color:'+(up?BLUE:'#94a3b8')+';">'+v.toFixed(4)+' <span style="font-size:8px;">'+(idx>0?sign+diff.toFixed(4):'')+'</span></span></div>';
+    }).join('')
+    +'</div></div>' 
 }
 
 // ── Fuel SVG ──
