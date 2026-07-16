@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-275967",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound  at ESSA RD / SIMCOE RD 27, Barrie. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.36195866,
+      "lng": -79.69728585,
+      "start": 1784243940,
+      "end": null,
+      "updated": 1784243940
+    },
+    {
+      "id": "ON-275963",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at HWY 400, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.716279162,
+      "lng": -79.517892301,
+      "start": 1784243100,
+      "end": null,
+      "updated": 1784243100
+    },
+    {
       "id": "ON-275962",
       "province": "ON",
       "highway": "HWY 7",
@@ -31,22 +63,6 @@
       "start": 1784241180,
       "end": null,
       "updated": 1784241180
-    },
-    {
-      "id": "ON-275950",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound  at STEELES AVE, Toronto-Markham. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.8129235,
-      "lng": -79.352163,
-      "start": 1784239200,
-      "end": null,
-      "updated": 1784239200
     },
     {
       "id": "ON-275942",
@@ -783,26 +799,10 @@
       "start": 1784595600,
       "end": 1784970000,
       "updated": 1784144700
-    },
-    {
-      "id": "ON-275464",
-      "province": "ON",
-      "highway": "HWY 125",
-      "direction": "Northbound",
-      "description": "Daily Engineering Investigation on HWY 125 Northbound  between HWY 105 and HWY 105, Red Lake. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 51.004524,
-      "lng": -93.79912,
-      "start": 1784545200,
-      "end": 1786143600,
-      "updated": 1784142060
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T23:07:31.536340+00:00",
+  "updated": "2026-07-16T23:26:33.422675+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
