@@ -211,16 +211,8 @@ HTML = """<!DOCTYPE html>
 
 <div class="main">
 
-  <div style="text-align:center;padding:10px 18px;margin-bottom:16px;">
-    <span style="font-size:12px;font-weight:600;color:var(--text);letter-spacing:-.01em;">Live data for Canadian trucking</span>
-    <span style="color:var(--light);margin:0 8px;">·</span>
-    <span style="font-size:11px;color:var(--muted);">Fuel prices</span>
-    <span style="color:var(--light);margin:0 6px;">·</span>
-    <span style="font-size:11px;color:var(--muted);">Border delays</span>
-    <span style="color:var(--light);margin:0 6px;">·</span>
-    <span style="font-size:11px;color:var(--muted);">Road incidents</span>
-    <span style="color:var(--light);margin:0 8px;">·</span>
-    <span style="font-size:11px;font-weight:700;color:var(--text);">Free. Always.</span>
+  <div style="text-align:center;padding:8px 18px;margin-bottom:14px;font-size:13px;color:var(--muted);letter-spacing:.01em;">
+    Live data for Canadian trucking. Fuel prices. Border delays. Road incidents. Free. Always.
   </div>
 
   <div class="card full" id="market-card">
