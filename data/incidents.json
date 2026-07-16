@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275589",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.7535367,
+      "lng": -79.40848595,
+      "start": 1784190660,
+      "end": null,
+      "updated": 1784190660
+    },
+    {
       "id": "ON-275588",
       "province": "ON",
       "highway": "QEW",
@@ -63,22 +79,6 @@
       "start": 1784181660,
       "end": null,
       "updated": 1784181660
-    },
-    {
-      "id": "ON-275577",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at TRAFALGAR ROAD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.463495,
-      "lng": -79.6822014,
-      "start": 1784178780,
-      "end": null,
-      "updated": 1784178780
     },
     {
       "id": "ON-274640",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T08:21:00.788266+00:00",
+  "updated": "2026-07-16T08:51:10.627860+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
