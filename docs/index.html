@@ -370,13 +370,55 @@ function renderNews(d){
 var incMap=null,incData=null;
 function renderIncidents(d){incData=(d&&d.incidents)?d.incidents:d;return'<div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>';}
 
-// ── Theft ──
-function renderTheft(d){
-  var incs=d.incidents||[];if(!incs.length)return'<div style="color:var(--gravel);font-size:0.75rem;">No recent theft data</div>';
-  var h='';incs.forEach(function(t){
-    h+='<div class="theft-item"><div class="theft-method">'+t.method+'</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">'+t.title+' &middot; '+t.value+'</div><div style="font-size:0.625rem;color:var(--gravel);">'+t.location+'</div><div class="theft-prevention" style="margin-top:4px;">Prevention: '+t.prevention+'</div></div>';
+// ── Theft Map ──
+var thData=null,thMap=null;
+function renderTheft(d){thData=d;return'<div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"></div></div>';}
+function initThMap(){
+  var d=thData;if(!d)return;
+  var hs=d.hotspots||[],tg=d.top_targets||[],tp=d.prevention||[],inc=d.incidents||[];
+  var md=document.getElementById('th-map'),ld=document.getElementById('th-list');
+  if(!md||!ld)return;
+  if(thMap){thMap.remove();thMap=null;}
+  thMap=L.map(md,{attributionControl:false,zoomControl:true}).setView([52,-90],4);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{attribution:''}).addTo(thMap);
+  var markers=[];
+  // Hotspots
+  hs.forEach(function(h){
+    var c=h.risk==='high'?'#D93A34':h.risk==='medium'?'#F2A900':'#1F6B4A';
+    L.circleMarker([h.lat,h.lng],{radius:h.risk==='high'?18:h.risk==='medium'?13:9,color:c,fillColor:c,fillOpacity:.12,weight:1.5,dashArray:'4,2'}).addTo(thMap).bindPopup('<b>'+h.city+'</b><br>Risk: '+h.risk.toUpperCase()+'<br>'+h.note);
   });
-  return h;
+  // Incidents
+  inc.forEach(function(i,idx){
+    if(!i.lat||!i.lng)return;
+    var popup='<b>'+i.title+'</b><br><span style="color:#D93A34;font-weight:600;">'+i.value+'</span><br>'+i.date+' &middot; '+i.location+'<br><b>Method:</b> '+i.method+'<br><b>Prevention:</b> '+i.prevention;
+    var m=L.circleMarker([i.lat,i.lng],{radius:7,color:'#D93A34',fillColor:'#D93A34',fillOpacity:.5,weight:2}).addTo(thMap).bindPopup(popup);
+    markers.push({marker:m,lat:i.lat,lng:i.lng});
+  });
+  // List
+  var h='<div style="padding:6px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>';
+  inc.forEach(function(i,idx){
+    var ds=new Date(i.date).toLocaleDateString('en-CA',{month:'short',day:'numeric'});
+    h+='<div class="mitem" data-idx="'+idx+'">';
+    h+='<div style="display:flex;justify-content:space-between;"><span style="font-weight:600;font-size:0.75rem;color:var(--salt);">'+i.title+'</span><span style="font-weight:700;color:var(--flare);white-space:nowrap;font-size:0.75rem;">'+i.value+'</span></div>';
+    h+='<div style="font-size:0.625rem;color:var(--gravel);margin:2px 0;">'+ds+' &middot; '+i.location+'</div>';
+    h+='<div style="font-size:0.625rem;color:var(--amber);font-weight:600;">'+i.method+'</div>';
+    h+='<div style="font-size:0.625rem;color:var(--gantry);line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:240px;">'+i.prevention+'</div>';
+    h+='</div>';
+  });
+  h+='<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div>';
+  hs.forEach(function(hs){
+    var c=hs.risk==='high'?'#D93A34':hs.risk==='medium'?'#F2A900':'#1F6B4A';
+    h+='<div class="mitem"><div style="display:flex;justify-content:space-between;"><span style="font-weight:600;font-size:0.75rem;color:var(--salt);">'+hs.city+'</span><span style="font-size:0.5rem;padding:1px 5px;border-radius:3px;background:'+c+'18;color:'+c+';">'+hs.risk.toUpperCase()+'</span></div><div style="font-size:0.625rem;color:var(--gravel);">'+hs.note+'</div></div>';
+  });
+  if(tg.length){h+='<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Top Targets</div>';h+='<div style="display:flex;flex-wrap:wrap;gap:3px;padding:4px 10px 6px;">';tg.forEach(function(t){h+='<span style="font-size:0.625rem;background:var(--asphalt);padding:2px 6px;border-radius:3px;color:var(--salt);">'+t+'</span>';});h+='</div>';}
+  ld.innerHTML=h;
+  ld.querySelectorAll('.mitem[data-idx]').forEach(function(el){
+    el.addEventListener('click',function(){
+      var idx=parseInt(el.dataset.idx),m=markers[idx];
+      if(m&&thMap){thMap.flyTo([m.lat,m.lng],10,{duration:1});setTimeout(function(){m.marker.openPopup();},800);}
+    });
+  });
+  setTimeout(function(){if(thMap)thMap.invalidateSize();},100);
 }
 
 // ── Load All ──
@@ -390,7 +432,7 @@ function renderTheft(d){
     {id:'border-card',data:bo,render:renderBorder,updated:bo&&bo.updated},
     {id:'incidents-card',data:inc,render:renderIncidents,updated:inc&&inc.updated},
     {id:'news-card',data:nw,render:renderNews,updated:nw&&nw.updated},
-    {id:'theft-card',data:th,render:renderTheft,updated:th&&th.updated},
+    {id:'theft-card',data:th,render:renderTheft,updated:th&&th.updated,afterRender:initThMap},
   ];
   
   modules.forEach(function(m){
@@ -406,6 +448,7 @@ function renderTheft(d){
         if(parent&&parent.querySelector('.card-footer'))parent.querySelector('.card-footer').innerHTML='<span class="ts-foot" data-updated="'+m.updated+'">Updated '+relTime(m.updated)+'</span>';
         else{var div=document.createElement('div');div.className='card-footer';div.innerHTML='<span class="ts-foot" data-updated="'+m.updated+'">Updated '+relTime(m.updated)+'</span>';el.parentNode.appendChild(div);}
       }
+      if(m.afterRender)setTimeout(function(){m.afterRender();},400);
     }catch(e){
       el.innerHTML='<div style="color:var(--gravel);font-size:0.75rem;">'+m.id.replace('-card','').replace('fuel','Fuel')+' unavailable. Last update unknown.</div>';
     }
