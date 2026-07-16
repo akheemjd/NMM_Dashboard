@@ -411,6 +411,7 @@ function renderExchange(d){
     +'<div>7-day low <span style="color:var(--green);font-weight:600;">'+wkLow.toFixed(4)+'</span></div>'
     +'</div>'
     +'</div>'
+    +'<div style="font-size:9px;color:var(--muted);margin-bottom:2px;">Hover over any bar to see date, rate, and change.</div>'
     +'<svg viewBox="0 0 '+W+' '+H+'" style="display:block;width:100%;margin-top:6px">'+svg+'</svg>'
     +'<div style="font-size:10px;color:var(--muted);margin-top:4px;line-height:1.4;">'+impact+'</div>';
 }
