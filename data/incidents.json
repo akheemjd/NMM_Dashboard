@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-275592",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.76633361,
+      "lng": -79.36293439,
+      "start": 1784194800,
+      "end": null,
+      "updated": 1784194800
+    },
+    {
       "id": "ON-274640",
       "province": "ON",
       "highway": "HWY 599",
@@ -783,26 +799,10 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120100
-    },
-    {
-      "id": "ON-275276",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 12 Northbound  between DURHAM RD 50, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.496002,
-      "lng": -79.156,
-      "start": 1785848400,
-      "end": 1786042800,
-      "updated": 1784120040
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T09:21:18.750259+00:00",
+  "updated": "2026-07-16T09:51:26.828022+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
