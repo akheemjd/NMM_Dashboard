@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-275580",
+      "id": "ON-275585",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at JAMES SNOW PKWY, Milton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.543570508,
+      "lng": -79.859932822,
+      "start": 1784186220,
+      "end": null,
+      "updated": 1784186220
+    },
+    {
+      "id": "ON-275584",
       "province": "ON",
       "highway": "QEW",
       "direction": "Toronto Bound",
-      "description": "Highway Maintenance on QEW Toronto bound ON-RAMP at BRONTE ROAD, Oakville. All lanes closed.",
+      "description": "Highway Maintenance on QEW Toronto bound RAMP at THIRD LINE, Oakville. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 43.411203,
-      "lng": -79.738007,
-      "start": 1784181780,
+      "lat": 43.42195481,
+      "lng": -79.72653239,
+      "start": 1784186040,
       "end": null,
-      "updated": 1784181780
+      "updated": 1784186040
+    },
+    {
+      "id": "ON-275583",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at GANANOQUE TIS E/B, Gananoque. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 44.36067,
+      "lng": -76.08102,
+      "start": 1784184540,
+      "end": null,
+      "updated": 1784184540
     },
     {
       "id": "ON-275579",
@@ -31,27 +63,6 @@
       "start": 1784181660,
       "end": null,
       "updated": 1784181660
-    },
-    {
-      "id": "drivebc.ca/RIDE-100589",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 7",
-        "from": "Lougheed Highway",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident. Lane blocked. Emergency vehicles on scene. Expect delays. Westbound Lougheed Highway through lanes blocked. Right lane onto Kanaka Way and left turn onto Haney Bypass still open.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.20330281,
-      "lng": -122.57985194,
-      "start": "2026-07-15T21:51:20-07:00",
-      "end": "",
-      "updated": "2026-07-15T22:41:44-07:00"
     },
     {
       "id": "ON-275577",
@@ -788,26 +799,10 @@
       "start": 1785848400,
       "end": 1786042800,
       "updated": 1784120340
-    },
-    {
-      "id": "ON-275285",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 26 Westbound  between CARSON ROAD, Springwater and POPLAR SIDEROAD, Clearview. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.42869,
-      "lng": -79.7241,
-      "start": 1785848400,
-      "end": 1786042800,
-      "updated": 1784120280
     }
   ],
   "total": 50,
-  "updated": "2026-07-16T06:49:34.733484+00:00",
+  "updated": "2026-07-16T07:19:42.606805+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
