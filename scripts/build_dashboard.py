@@ -154,7 +154,10 @@ HTML = """<!DOCTYPE html>
 <body>
 
 <div class="banner">
-  <h1>NORTHERN MILE MEDIA</h1>
+  <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+    <img src="logo.jpg" alt="Northern Mile Media" style="height:32px;width:auto;">
+    <h1>NORTHERN MILE MEDIA</h1>
+  </a>
 </div>
 
 <div class="main">
