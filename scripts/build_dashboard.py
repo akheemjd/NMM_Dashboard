@@ -447,9 +447,8 @@ html = f"""<!DOCTYPE html>
 
     <!-- 3. Border Crossings — WIDE (server-rendered) -->
     <div class="module wide" id="border-card">
-      <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical" title="Estimated from historical traffic patterns. Real-time CBSA data coming soon.">Typical</span></div>
+      <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical">Typical</span></div>
       <div class="bgrid">{border_crossings_html}</div>
-      <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;">Estimated from historical patterns. Real-time data coming.</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{border_data.get('updated','')}">Updated {border_data.get('updated','')[:16] if border_data.get('updated') else '—'}</span></div>
     </div>
 
