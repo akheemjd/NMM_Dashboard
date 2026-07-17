@@ -627,7 +627,7 @@ setTimeout(function(){{
   }}
 }},400);
 
-{json.dumps({'stale_modules': stale_modules})}
+
 </script>""" + """
 <script>
 function shareModule(id){
