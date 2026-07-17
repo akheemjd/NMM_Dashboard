@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-276000",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Neilson Collector to Express, Toronto. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.79357889,
+      "lng": -79.21668608,
+      "start": 1784253120,
+      "end": null,
+      "updated": 1784253120
+    },
+    {
+      "id": "ON-275998",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at FIFTY ROAD, Hamilton. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.21717319,
+      "lng": -79.63699722,
+      "start": 1784252580,
+      "end": null,
+      "updated": 1784252580
+    },
+    {
       "id": "ON-275991",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +47,6 @@
       "start": 1784516400,
       "end": 1784534400,
       "updated": 1784248560
-    },
-    {
-      "id": "ON-275989",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at Highway 6 South / Brock Road / Wellington Rd 46 (299KM), Morriston. 2 centre lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 centre lanes closed",
-      "lat": 43.453158333,
-      "lng": -80.124711111,
-      "start": 1784248500,
-      "end": null,
-      "updated": 1784248500
     },
     {
       "id": "ON-274780",
@@ -783,26 +799,10 @@
       "start": 1784595600,
       "end": 1784970000,
       "updated": 1784144700
-    },
-    {
-      "id": "ON-275464",
-      "province": "ON",
-      "highway": "HWY 125",
-      "direction": "Northbound",
-      "description": "Daily Engineering Investigation on HWY 125 Northbound  between HWY 105 and HWY 105, Red Lake. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 51.004524,
-      "lng": -93.79912,
-      "start": 1784545200,
-      "end": 1786143600,
-      "updated": 1784142060
     }
   ],
   "total": 50,
-  "updated": "2026-07-17T01:27:09.167610+00:00",
+  "updated": "2026-07-17T01:57:17.832999+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
