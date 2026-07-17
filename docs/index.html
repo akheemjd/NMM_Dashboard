@@ -61,7 +61,7 @@ body{
 .status-pill{font-size:0.625rem;padding:2px 8px;border-radius:var(--pill-radius);font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .status-pill.live{color:var(--gantry);background:rgba(31,107,74,.15)}
 .status-pill.live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gantry);animation:pulse 2s ease-in-out infinite}
-.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}
+.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}#trend-toggle.active{background:var(--salt);color:var(--asphalt)}
 .status-pill.reference{color:var(--gravel);background:transparent;border:1px solid var(--line)}
 .status-pill.typical{color:var(--amber);background:rgba(242,169,0,.12)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
@@ -157,6 +157,7 @@ body{
         <span class="eyebrow-label">Fuel Prices</span>
         <div style="display:flex;align-items:center;gap:8px;">
           <div class="ftoggle" id="prices-toggle"><button data-fuel="diesel" class="active">Diesel</button><button data-fuel="gasoline">Gas</button></div>
+          <button class="status-pill daily" id="trend-toggle" style="cursor:pointer;border:none;font-family:inherit;" onclick="var c=document.getElementById('fuel-chart-wrap');c.style.display=c.style.display==='none'?'block':'none';this.classList.toggle('active');">14d</button>
           <span class="status-pill daily">Daily</span>
         </div>
       </div>

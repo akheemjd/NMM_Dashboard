@@ -289,7 +289,7 @@ body{
 .status-pill{font-size:0.625rem;padding:2px 8px;border-radius:var(--pill-radius);font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .status-pill.live{color:var(--gantry);background:rgba(31,107,74,.15)}
 .status-pill.live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gantry);animation:pulse 2s ease-in-out infinite}
-.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}
+.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}#trend-toggle.active{background:var(--salt);color:var(--asphalt)}
 .status-pill.reference{color:var(--gravel);background:transparent;border:1px solid var(--line)}
 .status-pill.typical{color:var(--amber);background:rgba(242,169,0,.12)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
@@ -413,6 +413,7 @@ html = f"""<!DOCTYPE html>
         <span class="eyebrow-label">Fuel Prices</span>
         <div style="display:flex;align-items:center;gap:8px;">
           <div class="ftoggle" id="prices-toggle"><button data-fuel="diesel" class="active">Diesel</button><button data-fuel="gasoline">Gas</button></div>
+          <button class="status-pill daily" id="trend-toggle" style="cursor:pointer;border:none;font-family:inherit;" onclick="var c=document.getElementById('fuel-chart-wrap');c.style.display=c.style.display==='none'?'block':'none';this.classList.toggle('active');">14d</button>
           <span class="status-pill daily">Daily</span>
         </div>
       </div>
@@ -424,7 +425,7 @@ html = f"""<!DOCTYPE html>
         <div style="display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;margin-bottom:8px;">
           {fuel_province_rows}
         </div>
-        __FUEL_CHART__
+        <div id="fuel-chart-wrap">__FUEL_CHART__</div>
       </div>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
@@ -710,7 +711,7 @@ if os.path.exists(_path):
     _s += "</svg>"
     _fuel_chart_svg = _s
 
-html = html.replace('__FUEL_CHART__', _fuel_chart_svg)
+html = html.replace('<div id="fuel-chart-wrap">__FUEL_CHART__</div>', _fuel_chart_svg)
 with open(OUT, 'w') as f:
     f.write(html)
 
