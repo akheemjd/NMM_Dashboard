@@ -553,6 +553,7 @@ document.getElementById('prices-toggle').addEventListener('click',function(e){{
 
 // === Calculator ===
 var calcDistances={json.dumps(distances.get('distances',{}))};
+var calcCitiesData={json.dumps(distances.get('cities',[]))};
 var calcFuel={json.dumps(fuel)};
 var calcFuelType='diesel';
 document.getElementById('fuel-toggle').addEventListener('click',function(e){{
@@ -561,6 +562,17 @@ document.getElementById('fuel-toggle').addEventListener('click',function(e){{
   e.target.classList.add('active');
   calcFuelType=e.target.dataset.fuel;
 }});
+// Populate dropdowns
+calcCitiesData.forEach(function(c){
+  var o1=document.createElement('option');o1.value=c.code;o1.textContent=c.name;
+  var o2=document.createElement('option');o2.value=c.code;o2.textContent=c.name;
+  document.getElementById('calc-from').appendChild(o1);
+  document.getElementById('calc-to').appendChild(o2);
+});
+document.getElementById('calc-from').value='YVR';
+document.getElementById('calc-to').value='YYZ';
+setTimeout(runCalc,200);
+
 document.getElementById('calc-eff').addEventListener('input',runCalc);
 document.getElementById('calc-from').addEventListener('change',runCalc);
 document.getElementById('calc-to').addEventListener('change',runCalc);
