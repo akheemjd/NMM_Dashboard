@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-276382",
+      "id": "ON-276413",
       "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound EXPRESS at BURNHAMTHORPE ROAD, Toronto. 2 left lanes closed.",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at HWY 403/407, Burlington. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.6455796,
-      "lng": -79.56314768,
-      "start": 1784323740,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.338928393,
+      "lng": -79.829084873,
+      "start": 1784329140,
       "end": null,
-      "updated": 1784326980
-    },
-    {
-      "id": "ON-276405",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound COLLECTOR at DUNDAS STREET, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.62824632,
-      "lng": -79.55718616,
-      "start": 1784326620,
-      "end": null,
-      "updated": 1784326620
+      "updated": 1784329140
     },
     {
       "id": "ON-276404",
@@ -47,22 +31,6 @@
       "start": 1784326440,
       "end": null,
       "updated": 1784326440
-    },
-    {
-      "id": "ON-276397",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at KENNEDY RD -SCARBOROUGH, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.77511978,
-      "lng": -79.28482205,
-      "start": 1784325300,
-      "end": null,
-      "updated": 1784325300
     },
     {
       "id": "ON-276395",
@@ -111,46 +79,6 @@
       "start": 1784324640,
       "end": null,
       "updated": 1784324640
-    },
-    {
-      "id": "drivebc.ca/DBC-93669",
-      "province": "BC",
-      "highway": {
-        "name": "Kootenay Lake Ferry",
-        "from": "at Balfour Terminal",
-        "direction": "NONE"
-      },
-      "direction": "",
-      "description": "Kootenay Lake Ferry. 1 sailing wait at Balfour Terminal. Next update time Fri Jul 17 at 4:00 PM PDT. Last updated Fri Jul 17 at 1:49 PM PDT. (DBC-93669)",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.632274,
-      "lng": -116.935819,
-      "start": "2026-07-17T11:58:28-07:00",
-      "end": "",
-      "updated": "2026-07-17T13:49:07-07:00"
-    },
-    {
-      "id": "drivebc.ca/DBC-93671",
-      "province": "BC",
-      "highway": {
-        "name": "Kootenay Lake Ferry",
-        "from": "at Kootenay Bay Terminal",
-        "direction": "NONE"
-      },
-      "direction": "",
-      "description": "Kootenay Lake Ferry. 1 sailing wait at Kootenay Bay Terminal. Next update time Fri Jul 17 at 4:00 PM PDT. Last updated Fri Jul 17 at 1:48 PM PDT. (DBC-93671)",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.665167,
-      "lng": -116.891105,
-      "start": "2026-07-17T13:48:16-07:00",
-      "end": "",
-      "updated": "2026-07-17T13:48:16-07:00"
     },
     {
       "id": "ON-276354",
@@ -807,10 +735,74 @@
       "start": 1785117600,
       "end": 1785488400,
       "updated": 1784297940
+    },
+    {
+      "id": "ON-276151",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 416 Southbound ON-RAMP at BASELINE RD/CR 16, Ottawa. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.33539,
+      "lng": -75.8124791,
+      "start": 1784293980,
+      "end": null,
+      "updated": 1784293980
+    },
+    {
+      "id": "ON-276118",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound  between Cousineau Tunnel and North Talbot Rd , Windsor. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 42.242035,
+      "lng": -83.01423,
+      "start": 1784512800,
+      "end": 1784628000,
+      "updated": 1784290140
+    },
+    {
+      "id": "ON-276130",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 404 Southbound Off-ramp at STOUFFVILLE ROAD, Stouffville-Richmondhill. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.940132,
+      "lng": -79.389725,
+      "start": 1784606340,
+      "end": 1784883600,
+      "updated": 1784289540
+    },
+    {
+      "id": "ON-276095",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between Todd Ln and Todd Ln, Windsor. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 42.25387,
+      "lng": -83.037895,
+      "start": 1784512800,
+      "end": 1784541600,
+      "updated": 1784288400
     }
   ],
   "total": 50,
-  "updated": "2026-07-17T22:34:30.800599+00:00",
+  "updated": "2026-07-17T23:04:39.368432+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
