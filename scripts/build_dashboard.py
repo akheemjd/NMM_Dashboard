@@ -672,7 +672,6 @@ html = html.split("{json.dumps({'stale_modules':")[0] + '\n</body>\n</html>'
 
 
 
-html = html.replace('', _fuel_chart_svg)
 with open(OUT, 'w') as f:
     f.write(html)
 
