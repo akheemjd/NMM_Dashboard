@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(__file__))
 from market_pulse import collect_market_pulse
 from incidents import collect_incidents
+from health_tracker import record_success, record_failure
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
