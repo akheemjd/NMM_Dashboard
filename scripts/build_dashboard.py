@@ -423,7 +423,7 @@ html = f"""<!DOCTYPE html>
       <div style="display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;margin-top:8px;padding-top:6px;border-top:1px solid var(--line);">
         {fuel_province_rows}
       </div>
-      <div id="fuel-chart-wrap" style="margin-top:10px;">__FUEL_CHART__</div>
+      
       
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
@@ -670,47 +670,9 @@ if not STAGING and ('noindex' in html.split('<meta name="robots"')[1][:30] if 'n
 html = html.split("{json.dumps({'stale_modules':")[0] + '\n</body>\n</html>'
 
 
-# Build fuel chart SVG
-import csv as _csv
-from collections import OrderedDict as _OD
-_fuel_chart_svg = ""
-_path = os.path.join(DATA_DIR, "history", "fuel_diesel.csv")
-if os.path.exists(_path):
-    _days = _OD()
-    with open(_path) as _fh:
-        for _row in _csv.DictReader(_fh):
-            _date = _row["timestamp"][:10]
-            if _date not in _days:
-                _days[_date] = float(_row["national_avg"])
-    _vals = list(_days.values())[-14:]
-    _dates = list(_days.keys())[-14:]
-    while len(_vals) < 14:
-        _vals.insert(0, _vals[0] if _vals else 171.9)
-        _dates.insert(0, "-")
-    _minv, _maxv = min(_vals), max(_vals)
-    _rangev = _maxv - _minv or 5
-    _W, _H = 420, 100
-    _pL, _pR, _pT, _pB = 30, 8, 18, 20
-    _pw, _ph = _W - _pL - _pR, _H - _pT - _pB
-    _bw = max(4, (_pw / 14) * 0.6)
-    _gap = _pw / 14
-    _s = "<svg viewBox=\"0 0 %s %s\" style=\"width:100%%;height:auto;max-height:110px;\">" % (_W, _H)
-    _s += "<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" stroke=\"var(--line)\" stroke-width=\"1\"/>" % (_pL, _H-_pB, _W-_pR, _H-_pB)
-    for _i, (_v, _d) in enumerate(zip(_vals, _dates)):
-        _x = _pL + _gap * _i + _gap * 0.5 - _bw / 2
-        _bh = max(4, ((_v - _minv) / _rangev) * _ph * 0.75 + 4)
-        _y = _H - _pB - _bh
-        _last = _i == len(_vals) - 1
-        _c, _op = ("var(--salt)", "0.9") if _last else ("var(--gravel)", "0.3")
-        _s += "<rect x=\"%.1f\" y=\"%.1f\" width=\"%.1f\" height=\"%.1f\" fill=\"%s\" opacity=\"%s\" rx=\"2\"/>" % (_x, _y, _bw, _bh, _c, _op)
-        _dl = _d[-5:] if _d != "-" else "-"
-        _s += "<text x=\"%.1f\" y=\"%s\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--gravel)\">%s</text>" % (_x + _bw/2, _H - 4, _dl)
-        if _last:
-            _s += "<text x=\"%.1f\" y=\"%.1f\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--salt)\" font-weight=\"600\">%s</text>" % (_x + _bw/2, _y - 4, _v)
-    _s += "</svg>"
-    _fuel_chart_svg = _s
 
-html = html.replace('__FUEL_CHART__', _fuel_chart_svg)
+
+html = html.replace('', _fuel_chart_svg)
 with open(OUT, 'w') as f:
     f.write(html)
 
