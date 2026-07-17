@@ -60,7 +60,7 @@ body{
 .status-pill{font-size:0.625rem;padding:2px 8px;border-radius:var(--pill-radius);font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .status-pill.live{color:var(--gantry);background:rgba(31,107,74,.15)}
 .status-pill.live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gantry);animation:pulse 2s ease-in-out infinite}
-.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}#trend-toggle.active{background:var(--salt);color:var(--asphalt)}
+.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}
 .status-pill.reference{color:var(--gravel);background:transparent;border:1px solid var(--line)}
 .status-pill.typical{color:var(--amber);background:rgba(242,169,0,.12)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
@@ -156,7 +156,6 @@ body{
         <span class="eyebrow-label">Fuel Prices</span>
         <div style="display:flex;align-items:center;gap:8px;">
           <div class="ftoggle" id="prices-toggle"><button data-fuel="diesel" class="active">Diesel</button><button data-fuel="gasoline">Gas</button></div>
-          <button class="status-pill daily" id="trend-toggle" style="cursor:pointer;border:none;font-family:inherit;" onclick="var c=document.getElementById('fuel-chart-wrap');c.style.display=c.style.display==='none'?'block':'none';this.classList.toggle('active');">14d</button>
           <span class="status-pill daily">Daily</span>
         </div>
       </div>
@@ -177,7 +176,7 @@ body{
 <div class="hero-prow"><span class="pcode">NL</span><span class="pprice high">182.5</span></div>
 
       </div>
-      <div id="fuel-chart-wrap" style="margin-top:10px;">__FUEL_CHART__</div>
+      <div id="fuel-chart-wrap" style="margin-top:10px;"><svg viewBox="0 0 420 100" style="width:100%;height:auto;max-height:110px;"><line x1="30" y1="80" x2="412" y2="80" stroke="var(--line)" stroke-width="1"/><rect x="35.5" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="43.6" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="62.7" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="70.9" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="90.0" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="98.2" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="117.3" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="125.5" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="144.6" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="152.8" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="171.9" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="180.1" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="199.2" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="207.4" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="226.5" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="234.6" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="253.7" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="261.9" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="281.0" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="289.2" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="308.3" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="316.5" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="335.6" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="343.8" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="362.9" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="371.1" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="390.2" y="76.0" width="16.4" height="4.0" fill="var(--salt)" opacity="0.9" rx="2"/><text x="398.4" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">07-17</text><text x="398.4" y="72.0" text-anchor="middle" font-size="8" fill="var(--salt)" font-weight="600">171.9</text></svg></div>
       
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T15:32:21.953260+00:00">Updated 2026-07-17T15:32</span></div>
     </div>
