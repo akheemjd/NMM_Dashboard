@@ -43,12 +43,18 @@ body{
 .main{max-width:1320px;margin:0 auto;padding:16px 16px 40px}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 
-.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px;position:relative}
+.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px;position:relative;display:flex;flex-direction:column}
 .module.hero{grid-column:span 12}
 .module.wide{grid-column:span 8}
 .module.tall{grid-column:span 8;grid-row:span 2}
 .module.standard{grid-column:span 4}
-.module.compact{grid-column:span 4}
+.module.compact{grid-column:span 4;display:flex;flex-direction:column}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--asphalt)}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
+*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
 
 @media(max-width:900px){
   .module{grid-column:span 12!important;grid-row:auto!important}
@@ -77,7 +83,7 @@ body{
 *:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
 /* Fuel Hero */
-.hero-content{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.hero-content{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start;min-height:120px}
 .hero-price{font-size:2.75rem;line-height:1;color:var(--salt)}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
 .hero-delta{display:inline-flex;align-items:center;gap:3px;margin-top:4px;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:var(--pill-radius)}
 .hero-delta.up{background:rgba(242,169,0,.15);color:var(--amber)}.hero-delta.down{background:rgba(31,107,74,.15);color:var(--gantry)}
@@ -124,6 +130,12 @@ body{
 @keyframes toastIn{0%{opacity:0;transform:translateX(-50%) translateY(12px)}100%{opacity:1;transform:translateX(-50%) translateY(0)}}
 @keyframes toastOut{0%{opacity:1}100%{opacity:0}}
 .sponsor-disclosure{font-size:0.5rem;color:var(--gravel);margin-top:8px;text-align:center}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--asphalt)}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
+*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
 
 @media(max-width:900px){
   .hero-content{grid-template-columns:1fr;gap:12px}
