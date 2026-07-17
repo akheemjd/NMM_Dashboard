@@ -466,7 +466,7 @@ setTimeout(function(){
       var m=L.marker([lat,lon]).addTo(incMap).bindPopup('<strong>'+hwy+'</strong><br>'+prov+'<br>'+desc);
       markers.push(m);
       bounds.push([lat,lon]);
-      h+='<div class="mitem" onclick="map.setView(['+lat+','+lon+'],12);" style="cursor:pointer"><div class="mhwy">'+hwy+' &middot; '+prov+'</div><div class="mdesc">'+desc.substring(0,80)+'</div></div>';
+      h+='<div class="mitem" data-idx="\+i+\" style="cursor:pointer" onclick="void(0)" data-lat="\+lat+\" data-lon="\+lon+\"(['+lat+','+lon+'],12);" style="cursor:pointer"><div class="mhwy">'+hwy+' &middot; '+prov+'</div><div class="mdesc">'+desc.substring(0,80)+'</div></div>';
     });
     list.innerHTML=h||'<div style="padding:10px;color:var(--gravel);font-size:0.75rem;">No active incidents.</div>';
     if(bounds.length)incMap.fitBounds(bounds,{padding:[30,30]});else incMap.setView([50,-85],4);
