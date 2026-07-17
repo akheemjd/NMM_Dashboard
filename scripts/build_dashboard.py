@@ -310,12 +310,14 @@ body{
 
 *:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
-/* Fuel Hero */
-.hero-content{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start;min-height:120px}
-.hero-price{font-size:2.75rem;line-height:1;color:var(--salt)}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
-.hero-delta{display:inline-flex;align-items:center;gap:3px;margin-top:4px;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:var(--pill-radius)}
+/* Fuel Hero — compact, no wasted space */
+.hero-content{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.hero-price{font-size:2.75rem;line-height:1;color:var(--salt);white-space:nowrap}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
+.hero-delta{display:inline-flex;align-items:center;gap:3px;font-size:0.75rem;font-weight:600;padding:1px 8px;border-radius:var(--pill-radius);margin-left:4px}
 .hero-delta.up{background:rgba(242,169,0,.15);color:var(--amber)}.hero-delta.down{background:rgba(31,107,74,.15);color:var(--gantry)}
-.hero-province-list{display:flex;flex-direction:column}.hero-prow{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--line);font-size:0.75rem}.hero-prow:last-child{border-bottom:none}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
+.hero-province-list{display:flex;flex-wrap:wrap;gap:2px 12px;align-items:center}
+.hero-prow{display:inline-flex;gap:3px;font-size:0.75rem}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
+.hero-prow::after{content:'·';color:var(--line);margin-left:6px}.hero-prow:last-child::after{content:''}
 .ftoggle{display:flex;background:var(--asphalt);border:1px solid var(--line);border-radius:var(--pill-radius);overflow:hidden}
 .ftoggle button{flex:1;background:none;border:none;color:var(--gravel);padding:4px 10px;font-size:0.625rem;font-family:inherit;cursor:pointer;font-weight:600;white-space:nowrap}
 .ftoggle button.active{background:var(--salt);color:var(--asphalt)}
@@ -429,12 +431,8 @@ html = f"""<!DOCTYPE html>
         </div>
       </div>
       <div class="hero-content">
-        <div>
-          <div class="hero-price">{fuel_diesel_avg}<span class="unit"> ¢/L</span></div>
-          <div class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</div>
-          <div style="font-size:0.625rem;color:var(--gravel);margin-top:6px;">National average — Diesel</div>
-        </div>
-        <div class="hero-province-list">{fuel_province_rows}</div>
+        <span class="hero-price">{fuel_diesel_avg}<span class="unit"> ¢/L</span><span class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</span></span>
+        <span class="hero-province-list">{fuel_province_rows}</span>
       </div>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
