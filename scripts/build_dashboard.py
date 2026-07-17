@@ -268,8 +268,8 @@ body{
 }
 .banner h1{font-size:0.875rem;font-weight:700;color:var(--salt);font-family:'IBM Plex Mono',monospace;letter-spacing:-.01em}
 
-.main{max-width:1320px;margin:0 auto;padding:16px 16px 40px}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.main{max-width:1320px;margin:0 auto;padding:12px 16px 32px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
 
 .module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px;position:relative}
 .module.hero{grid-column:span 12}
@@ -284,7 +284,7 @@ body{
   .main{padding:12px 12px 32px}
 }
 
-.eyebrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.eyebrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .eyebrow-label{font-size:0.75rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
 .status-pill{font-size:0.625rem;padding:2px 8px;border-radius:var(--pill-radius);font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .status-pill.live{color:var(--gantry);background:rgba(31,107,74,.15)}
@@ -295,7 +295,7 @@ body{
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
 @media(prefers-reduced-motion:reduce){.status-pill.live::before{animation:none}}
 
-.card-footer{margin-top:12px;padding-top:8px;border-top:1px solid var(--line);font-size:0.625rem;color:var(--gravel);font-family:'IBM Plex Mono',monospace}
+.card-footer{margin-top:8px;padding-top:6px;border-top:1px solid var(--line);font-size:0.625rem;color:var(--gravel);font-family:'IBM Plex Mono',monospace}
 
 .skeleton{background:var(--line);border-radius:2px;overflow:hidden;position:relative}
 .skeleton::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);animation:shimmer 1.5s linear infinite}
