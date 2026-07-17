@@ -5,6 +5,7 @@ Usage: python3 build_dashboard.py [staging|production]
   production → docs/, normal meta, GA, sponsor chrome. Fails if noindex present.
 """
 import json, os, sys, csv
+from collections import OrderedDict
 from datetime import datetime
 
 MODE = sys.argv[1] if len(sys.argv) > 1 else 'production'
@@ -172,6 +173,53 @@ else:
     ex_dir_text = 'Stronger CAD' if ex_up else 'Weaker CAD'
 
 # Market indicators
+
+# === 7-day fuel trend chart ===
+def fuel_trend_chart():
+    path = os.path.join(DATA_DIR, 'history', 'fuel_diesel.csv')
+    if not os.path.exists(path):
+        return ''
+    days = OrderedDict()
+    import csv
+    with open(path) as f:
+        for row in csv.DictReader(f):
+            date = row['timestamp'][:10]
+            if date not in days:
+                days[date] = float(row['national_avg'])
+    vals = list(days.values())[-7:]
+    dates = list(days.keys())[-7:]
+    while len(vals) < 7:
+        vals.insert(0, vals[0] if vals else 171.9)
+        dates.insert(0, chr(8212))
+    if not vals:
+        return ''
+    min_v, max_v = min(vals), max(vals)
+    range_v = max_v - min_v or 5
+    W, H = 320, 100
+    pad_l, pad_r, pad_t, pad_b = 30, 8, 18, 20
+    pw = W - pad_l - pad_r
+    ph = H - pad_t - pad_b
+    bar_w = max(8, (pw / 7) * 0.6)
+    gap = pw / 7
+    svg = f'<svg viewBox="0 0 {W} {H}" style="width:100%;height:auto;max-height:120px;">'
+    svg += f'<line x1="{pad_l}" y1="{H-pad_b}" x2="{W-pad_r}" y2="{H-pad_b}" stroke="var(--line)" stroke-width="1"/>'
+    for i, (v, d) in enumerate(zip(vals, dates)):
+        x = pad_l + gap * i + gap * 0.5 - bar_w / 2
+        bar_h = ((v - min_v) / range_v) * ph * 0.75 + 2
+        y = H - pad_b - bar_h
+        is_last = i == len(vals) - 1
+        color = 'var(--salt)' if is_last else 'var(--gravel)'
+        opacity = '0.9' if is_last else '0.3'
+        svg += f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="{bar_h:.1f}" fill="{color}" opacity="{opacity}" rx="2"/>'
+        date_label = d[-5:] if d != chr(8212) else chr(8212)
+        svg += f'<text x="{x + bar_w/2:.1f}" y="{H - 4}" text-anchor="middle" font-size="7" fill="var(--gravel)">{date_label}</text>'
+        if is_last:
+            svg += f'<text x="{x + bar_w/2:.1f}" y="{y - 4}" text-anchor="middle" font-size="8" fill="var(--salt)" font-weight="600">{v}</text>'
+    svg += '</svg>'
+    return svg
+
+fuel_chart = fuel_trend_chart()
+
 market_cards = ''
 if market.get('indicators'):
     for i in market.get('indicators', []):
@@ -434,6 +482,7 @@ html = f"""<!DOCTYPE html>
         <span class="hero-price">{fuel_diesel_avg}<span class="unit"> ¢/L</span><span class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</span></span>
         <span class="hero-province-list">{fuel_province_rows}</span>
       </div>
+      <div style="margin-top:8px;">{fuel_chart}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
 
@@ -442,6 +491,7 @@ html = f"""<!DOCTYPE html>
       <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical" title="Estimated from historical traffic patterns. Real-time CBSA data coming soon.">Typical</span></div>
       <div class="bgrid">{border_crossings_html}</div>
       <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;">Estimated from historical patterns. Real-time data coming.</div>
+      <div style="margin-top:8px;">{fuel_chart}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{border_data.get('updated','')}">Updated {border_data.get('updated','')[:16] if border_data.get('updated') else '—'}</span></div>
     </div>
 
@@ -454,6 +504,7 @@ html = f"""<!DOCTYPE html>
         <div style="font-size:0.75rem;font-weight:600;margin-top:2px;color:var(--{'gantry' if ex_up else 'flare' if not ex_is_zero else 'gravel'});">{ex_arrow_html} {ex_dir_text}{'' if ex_is_zero else ' · ' + ('+' if ex_up else '') + f'{ex_change:.4f}'}</div>
         <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">Bank of Canada closing rate</div>
       </div>
+      <div style="margin-top:8px;">{fuel_chart}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{exchange.get('updated','')}">Updated {exchange.get('updated','')[:16] if exchange.get('updated') else '—'}</span></div>
     </div>
 
@@ -461,6 +512,7 @@ html = f"""<!DOCTYPE html>
     <div class="module tall" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
       <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
+      <div style="margin-top:8px;">{fuel_chart}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{incidents_data.get('updated','')}">Updated {incidents_data.get('updated','')[:16] if incidents_data.get('updated') else '—'}</span></div>
     </div>
 
@@ -480,6 +532,7 @@ html = f"""<!DOCTYPE html>
     <div class="module standard" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;">{market_cards}</div>
+      <div style="margin-top:8px;">{fuel_chart}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{market.get('updated','')}">Updated {market.get('updated','')[:16] if market.get('updated') else '—'}</span></div>
     </div>
 
@@ -487,6 +540,7 @@ html = f"""<!DOCTYPE html>
     <div class="module standard" id="news-card"><button class="share-btn" onclick="shareModule(&quot;news-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
       <div style="max-height:320px;overflow-y:auto;">{headlines_html}</div>
+      <div style="margin-top:8px;">{fuel_chart}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{news_data.get('updated','')}">Updated {news_data.get('updated','')[:16] if news_data.get('updated') else '—'}</span></div>
     </div>
 
@@ -494,6 +548,7 @@ html = f"""<!DOCTYPE html>
     <div class="module wide" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
       <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>{theft_html.replace('class="theft-item"','class="mitem"')}<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
+      <div style="margin-top:8px;">{fuel_chart}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16] if theft_data.get('updated') else '—'}</span></div>
     </div>
 
