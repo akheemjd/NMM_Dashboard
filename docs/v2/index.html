@@ -487,12 +487,21 @@ setTimeout(function(){
       L.circleMarker([h.lat,h.lng],{radius:h.risk==='high'?16:h.risk==='medium'?12:8,color:c,fillColor:c,fillOpacity:.12,weight:1.5,dashArray:'4,2'}).addTo(thMap).bindPopup('<b>'+h.city+'</b><br>Risk: '+h.risk.toUpperCase()+'<br>'+h.note);
       bounds2.push([h.lat,h.lng]);
     });
+    var thMarkers=[];
     thInc.forEach(function(i){
       if(!i.lat||!i.lng)return;
-      L.circleMarker([i.lat,i.lng],{radius:7,color:'#D93A34',fillColor:'#D93A34',fillOpacity:.5,weight:2}).addTo(thMap).bindPopup('<b>'+i.title+'</b><br><span style="color:#D93A34;font-weight:600;">'+i.value+'</span><br>'+i.date+' &middot; '+i.location+'<br><b>Method:</b> '+i.method+'<br><b>Prevention:</b> '+i.prevention);
+      var m=L.circleMarker([i.lat,i.lng],{radius:7,color:'#D93A34',fillColor:'#D93A34',fillOpacity:.5,weight:2}).addTo(thMap).bindPopup('<b>'+i.title+'</b><br><span style="color:#D93A34;font-weight:600;">'+i.value+'</span><br>'+i.date+' &middot; '+i.location+'<br><b>Method:</b> '+i.method+'<br><b>Prevention:</b> '+i.prevention);
+      thMarkers.push(m);
       bounds2.push([i.lat,i.lng]);
     });
     if(bounds2.length)thMap.fitBounds(bounds2,{padding:[20,20]});
+    // Click handlers: only incident items (exclude header rows)
+    document.querySelectorAll('#th-list .mitem').forEach(function(el,i){
+      el.addEventListener('click',function(){
+        var m=thMarkers[i];
+        if(m){thMap.setView(m.getLatLng(),12);m.openPopup();}
+      });
+    });
     setTimeout(function(){thMap.invalidateSize();},200);
   }
 },400);
