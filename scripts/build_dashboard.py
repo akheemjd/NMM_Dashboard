@@ -426,7 +426,7 @@ html = f"""<!DOCTYPE html>
         <span class="hero-delta {'up' if fuel_delta_up else 'down'}" style="font-size:1rem;padding:3px 10px;">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</span>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;margin-top:8px;padding-top:6px;border-top:1px solid var(--line);">
-        {fuel_province_rows}
+        <div class="hero-province-list">{fuel_province_rows}</div>
       </div>
       
       
