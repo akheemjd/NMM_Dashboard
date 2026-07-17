@@ -5,7 +5,6 @@ Usage: python3 build_dashboard.py [staging|production]
   production → docs/, normal meta, GA, sponsor chrome. Fails if noindex present.
 """
 import json, os, sys, csv
-from collections import OrderedDict
 from datetime import datetime
 
 MODE = sys.argv[1] if len(sys.argv) > 1 else 'production'
@@ -105,8 +104,7 @@ if killswitch.get('publish') == False:
     <body style="background:{'#1E2227' if STAGING else '#15171A'};color:#E8EAEC;display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;">
     <div style="text-align:center"><h1 style="font-size:1.5rem;margin-bottom:8px;">Dashboard Paused</h1>
     <p style="color:#8B939C;">Scheduled maintenance. Back shortly.</p></div></body></html>"""
-    html = html.replace('__FUEL_CHART__', _fuel_chart_svg)
-with open(OUT, 'w') as f:
+    with open(OUT, 'w') as f:
         f.write(html)
     print(f"Kill switch active. Paused page built: {OUT}")
     sys.exit(0)
@@ -174,96 +172,6 @@ else:
     ex_dir_text = 'Stronger CAD' if ex_up else 'Weaker CAD'
 
 # Market indicators
-
-# === 7-day fuel trend chart ===
-def fuel_trend_chart():
-    path = os.path.join(DATA_DIR, 'history', 'fuel_diesel.csv')
-    if not os.path.exists(path):
-        return ''
-    days = OrderedDict()
-    import csv
-    with open(path) as f:
-        for row in csv.DictReader(f):
-            date = row['timestamp'][:10]
-            if date not in days:
-                days[date] = float(row['national_avg'])
-    vals = list(days.values())[-14:]
-    dates = list(days.keys())[-14:]
-    while len(vals) < 14:
-        vals.insert(0, vals[0] if vals else 171.9)
-        dates.insert(0, chr(8212))
-    if not vals:
-        return ''
-    min_v, max_v = min(vals), max(vals)
-    range_v = max_v - min_v or 5
-    W, H = 400, 100
-    pad_l, pad_r, pad_t, pad_b = 30, 8, 18, 20
-    pw = W - pad_l - pad_r
-    ph = H - pad_t - pad_b
-    bar_w = max(4, (pw / 14) * 0.6)
-    gap = pw / 14
-    svg = f'<svg viewBox="0 0 {W} {H}" style="width:100%;height:auto;max-height:120px;">'
-    svg += f'<line x1="{pad_l}" y1="{H-pad_b}" x2="{W-pad_r}" y2="{H-pad_b}" stroke="var(--line)" stroke-width="1"/>'
-    for i, (v, d) in enumerate(zip(vals, dates)):
-        x = pad_l + gap * i + gap * 0.5 - bar_w / 2
-        bar_h = max(4, ((v - min_v) / range_v) * ph * 0.75 + 4)
-        y = H - pad_b - bar_h
-        is_last = i == len(vals) - 1
-        color = 'var(--salt)' if is_last else 'var(--gravel)'
-        opacity = '0.9' if is_last else '0.3'
-        svg += f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w:.1f}" height="{bar_h:.1f}" fill="{color}" opacity="{opacity}" rx="2"/>'
-        date_label = d[-5:] if d != chr(8212) else chr(8212)
-        svg += f'<text x="{x + bar_w/2:.1f}" y="{H - 4}" text-anchor="middle" font-size="7" fill="var(--gravel)">{date_label}</text>'
-        if is_last:
-            svg += f'<text x="{x + bar_w/2:.1f}" y="{y - 4}" text-anchor="middle" font-size="8" fill="var(--salt)" font-weight="600">{v}</text>'
-    svg += '</svg>'
-    return svg
-
-fuel_chart = fuel_trend_chart()
-
-
-# === 14-day fuel trend chart ===
-import csv as _csv
-from collections import OrderedDict
-def _fuel_trend_chart():
-    path = os.path.join(DATA_DIR, "history", "fuel_diesel.csv")
-    if not os.path.exists(path):
-        return ""
-    days = OrderedDict()
-    with open(path) as fh:
-        for row in _csv.DictReader(fh):
-            date = row["timestamp"][:10]
-            if date not in days:
-                days[date] = float(row["national_avg"])
-    vals = list(days.values())[-14:]
-    dates = list(days.keys())[-14:]
-    while len(vals) < 14:
-        vals.insert(0, vals[0] if vals else 171.9)
-        dates.insert(0, "—")
-    min_v, max_v = min(vals), max(vals)
-    range_v = max_v - min_v or 5
-    W, H = 420, 100
-    pL, pR, pT, pB = 30, 8, 18, 20
-    pw, ph = W - pL - pR, H - pT - pB
-    bw = max(4, (pw / 14) * 0.6)
-    gap = pw / 14
-    s = f'<svg viewBox="0 0 {W} {H}" style="width:100%;height:auto;max-height:110px;">'
-    s += f'<line x1="{pL}" y1="{H-pB}" x2="{W-pR}" y2="{H-pB}" stroke="var(--line)" stroke-width="1"/>'
-    for i, (v, d) in enumerate(zip(vals, dates)):
-        x = pL + gap * i + gap * 0.5 - bw / 2
-        bh = max(4, ((v - min_v) / range_v) * ph * 0.75 + 4)
-        y = H - pB - bh
-        last = i == len(vals) - 1
-        c, op = ("var(--salt)", "0.9") if last else ("var(--gravel)", "0.3")
-        s += f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{bh:.1f}" fill="{c}" opacity="{op}" rx="2"/>'
-        dl = d[-5:] if d != "—" else "—"
-        s += f'<text x="{x + bw/2:.1f}" y="{H - 4}" text-anchor="middle" font-size="7" fill="var(--gravel)">{dl}</text>'
-        if last:
-            s += f'<text x="{x + bw/2:.1f}" y="{y - 4}" text-anchor="middle" font-size="8" fill="var(--salt)" font-weight="600">{v}</text>'
-    s += "</svg>"
-    return s
-_fuel_chart_svg = _fuel_trend_chart()
-
 market_cards = ''
 if market.get('indicators'):
     for i in market.get('indicators', []):
@@ -363,18 +271,12 @@ body{
 .main{max-width:1320px;margin:0 auto;padding:16px 16px 40px}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 
-.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px;position:relative;display:flex;flex-direction:column}
+.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px;position:relative}
 .module.hero{grid-column:span 12}
 .module.wide{grid-column:span 8}
 .module.tall{grid-column:span 8;grid-row:span 2}
 .module.standard{grid-column:span 4}
-.module.compact{grid-column:span 4;display:flex;flex-direction:column}
-
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--asphalt)}
-::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
-*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
+.module.compact{grid-column:span 4}
 
 @media(max-width:900px){
   .module{grid-column:span 12!important;grid-row:auto!important}
@@ -402,14 +304,12 @@ body{
 
 *:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
-/* Fuel Hero — compact, no wasted space */
-.hero-content{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
-.hero-price{font-size:2.75rem;line-height:1;color:var(--salt);white-space:nowrap}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
-.hero-delta{display:inline-flex;align-items:center;gap:3px;font-size:0.75rem;font-weight:600;padding:1px 8px;border-radius:var(--pill-radius);margin-left:4px}
+/* Fuel Hero */
+.hero-content{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.hero-price{font-size:2.75rem;line-height:1;color:var(--salt)}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
+.hero-delta{display:inline-flex;align-items:center;gap:3px;margin-top:4px;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:var(--pill-radius)}
 .hero-delta.up{background:rgba(242,169,0,.15);color:var(--amber)}.hero-delta.down{background:rgba(31,107,74,.15);color:var(--gantry)}
-.hero-province-list{display:flex;flex-wrap:wrap;gap:2px 12px;align-items:center}
-.hero-prow{display:inline-flex;gap:3px;font-size:0.75rem}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
-.hero-prow::after{content:'·';color:var(--line);margin-left:6px}.hero-prow:last-child::after{content:''}
+.hero-province-list{display:flex;flex-direction:column}.hero-prow{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--line);font-size:0.75rem}.hero-prow:last-child{border-bottom:none}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
 .ftoggle{display:flex;background:var(--asphalt);border:1px solid var(--line);border-radius:var(--pill-radius);overflow:hidden}
 .ftoggle button{flex:1;background:none;border:none;color:var(--gravel);padding:4px 10px;font-size:0.625rem;font-family:inherit;cursor:pointer;font-weight:600;white-space:nowrap}
 .ftoggle button.active{background:var(--salt);color:var(--asphalt)}
@@ -452,12 +352,6 @@ body{
 @keyframes toastIn{0%{opacity:0;transform:translateX(-50%) translateY(12px)}100%{opacity:1;transform:translateX(-50%) translateY(0)}}
 @keyframes toastOut{0%{opacity:1}100%{opacity:0}}
 .sponsor-disclosure{font-size:0.5rem;color:var(--gravel);margin-top:8px;text-align:center}
-
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--asphalt)}
-::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
-*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
 
 @media(max-width:900px){
   .hero-content{grid-template-columns:1fr;gap:12px}
@@ -523,10 +417,13 @@ html = f"""<!DOCTYPE html>
         </div>
       </div>
       <div class="hero-content">
-        <span class="hero-price">{fuel_diesel_avg}<span class="unit"> ¢/L</span><span class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</span></span>
-        <span class="hero-province-list">{fuel_province_rows}</span>
+        <div>
+          <div class="hero-price">{fuel_diesel_avg}<span class="unit"> ¢/L</span></div>
+          <div class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</div>
+          <div style="font-size:0.625rem;color:var(--gravel);margin-top:6px;">National average — Diesel</div>
+        </div>
+        <div class="hero-province-list">{fuel_province_rows}</div>
       </div>
-      <div style="margin-top:4px;">{fuel_chart}</div>
       <div style="margin-top:4px;">__FUEL_CHART__</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
@@ -536,7 +433,6 @@ html = f"""<!DOCTYPE html>
       <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical" title="Estimated from historical traffic patterns. Real-time CBSA data coming soon.">Typical</span></div>
       <div class="bgrid">{border_crossings_html}</div>
       <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;">Estimated from historical patterns. Real-time data coming.</div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="{border_data.get('updated','')}">Updated {border_data.get('updated','')[:16] if border_data.get('updated') else '—'}</span></div>
     </div>
 
@@ -549,7 +445,6 @@ html = f"""<!DOCTYPE html>
         <div style="font-size:0.75rem;font-weight:600;margin-top:2px;color:var(--{'gantry' if ex_up else 'flare' if not ex_is_zero else 'gravel'});">{ex_arrow_html} {ex_dir_text}{'' if ex_is_zero else ' · ' + ('+' if ex_up else '') + f'{ex_change:.4f}'}</div>
         <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">Bank of Canada closing rate</div>
       </div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="{exchange.get('updated','')}">Updated {exchange.get('updated','')[:16] if exchange.get('updated') else '—'}</span></div>
     </div>
 
@@ -557,7 +452,6 @@ html = f"""<!DOCTYPE html>
     <div class="module tall" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
       <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="{incidents_data.get('updated','')}">Updated {incidents_data.get('updated','')[:16] if incidents_data.get('updated') else '—'}</span></div>
     </div>
 
@@ -577,7 +471,6 @@ html = f"""<!DOCTYPE html>
     <div class="module standard" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;">{market_cards}</div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="{market.get('updated','')}">Updated {market.get('updated','')[:16] if market.get('updated') else '—'}</span></div>
     </div>
 
@@ -585,7 +478,6 @@ html = f"""<!DOCTYPE html>
     <div class="module standard" id="news-card"><button class="share-btn" onclick="shareModule(&quot;news-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
       <div style="max-height:320px;overflow-y:auto;">{headlines_html}</div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="{news_data.get('updated','')}">Updated {news_data.get('updated','')[:16] if news_data.get('updated') else '—'}</span></div>
     </div>
 
@@ -593,7 +485,6 @@ html = f"""<!DOCTYPE html>
     <div class="module wide" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
       <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>{theft_html.replace('class="theft-item"','class="mitem"')}<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16] if theft_data.get('updated') else '—'}</span></div>
     </div>
 
@@ -776,6 +667,47 @@ if not STAGING and ('noindex' in html.split('<meta name="robots"')[1][:30] if 'n
 
 # Remove stale debug JSON print
 html = html.split("{json.dumps({'stale_modules':")[0] + '\n</body>\n</html>'
+
+
+# Build fuel chart SVG
+import csv as _csv
+from collections import OrderedDict as _OD
+_fuel_chart_svg = ""
+_path = os.path.join(DATA_DIR, "history", "fuel_diesel.csv")
+if os.path.exists(_path):
+    _days = _OD()
+    with open(_path) as _fh:
+        for _row in _csv.DictReader(_fh):
+            _date = _row["timestamp"][:10]
+            if _date not in _days:
+                _days[_date] = float(_row["national_avg"])
+    _vals = list(_days.values())[-14:]
+    _dates = list(_days.keys())[-14:]
+    while len(_vals) < 14:
+        _vals.insert(0, _vals[0] if _vals else 171.9)
+        _dates.insert(0, "-")
+    _minv, _maxv = min(_vals), max(_vals)
+    _rangev = _maxv - _minv or 5
+    _W, _H = 420, 100
+    _pL, _pR, _pT, _pB = 30, 8, 18, 20
+    _pw, _ph = _W - _pL - _pR, _H - _pT - _pB
+    _bw = max(4, (_pw / 14) * 0.6)
+    _gap = _pw / 14
+    _s = "<svg viewBox=\"0 0 %s %s\" style=\"width:100%%;height:auto;max-height:110px;\">" % (_W, _H)
+    _s += "<line x1=\"%s\" y1=\"%s\" x2=\"%s\" y2=\"%s\" stroke=\"var(--line)\" stroke-width=\"1\"/>" % (_pL, _H-_pB, _W-_pR, _H-_pB)
+    for _i, (_v, _d) in enumerate(zip(_vals, _dates)):
+        _x = _pL + _gap * _i + _gap * 0.5 - _bw / 2
+        _bh = max(4, ((_v - _minv) / _rangev) * _ph * 0.75 + 4)
+        _y = _H - _pB - _bh
+        _last = _i == len(_vals) - 1
+        _c, _op = ("var(--salt)", "0.9") if _last else ("var(--gravel)", "0.3")
+        _s += "<rect x=\"%.1f\" y=\"%.1f\" width=\"%.1f\" height=\"%.1f\" fill=\"%s\" opacity=\"%s\" rx=\"2\"/>" % (_x, _y, _bw, _bh, _c, _op)
+        _dl = _d[-5:] if _d != "-" else "-"
+        _s += "<text x=\"%.1f\" y=\"%s\" text-anchor=\"middle\" font-size=\"7\" fill=\"var(--gravel)\">%s</text>" % (_x + _bw/2, _H - 4, _dl)
+        if _last:
+            _s += "<text x=\"%.1f\" y=\"%.1f\" text-anchor=\"middle\" font-size=\"8\" fill=\"var(--salt)\" font-weight=\"600\">%s</text>" % (_x + _bw/2, _y - 4, _v)
+    _s += "</svg>"
+    _fuel_chart_svg = _s
 
 html = html.replace('__FUEL_CHART__', _fuel_chart_svg)
 with open(OUT, 'w') as f:

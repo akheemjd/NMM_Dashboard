@@ -43,18 +43,12 @@ body{
 .main{max-width:1320px;margin:0 auto;padding:16px 16px 40px}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 
-.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px;position:relative;display:flex;flex-direction:column}
+.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px;position:relative}
 .module.hero{grid-column:span 12}
 .module.wide{grid-column:span 8}
 .module.tall{grid-column:span 8;grid-row:span 2}
 .module.standard{grid-column:span 4}
-.module.compact{grid-column:span 4;display:flex;flex-direction:column}
-
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--asphalt)}
-::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
-*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
+.module.compact{grid-column:span 4}
 
 @media(max-width:900px){
   .module{grid-column:span 12!important;grid-row:auto!important}
@@ -82,14 +76,12 @@ body{
 
 *:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
 
-/* Fuel Hero — compact, no wasted space */
-.hero-content{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
-.hero-price{font-size:2.75rem;line-height:1;color:var(--salt);white-space:nowrap}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
-.hero-delta{display:inline-flex;align-items:center;gap:3px;font-size:0.75rem;font-weight:600;padding:1px 8px;border-radius:var(--pill-radius);margin-left:4px}
+/* Fuel Hero */
+.hero-content{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
+.hero-price{font-size:2.75rem;line-height:1;color:var(--salt)}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
+.hero-delta{display:inline-flex;align-items:center;gap:3px;margin-top:4px;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:var(--pill-radius)}
 .hero-delta.up{background:rgba(242,169,0,.15);color:var(--amber)}.hero-delta.down{background:rgba(31,107,74,.15);color:var(--gantry)}
-.hero-province-list{display:flex;flex-wrap:wrap;gap:2px 12px;align-items:center}
-.hero-prow{display:inline-flex;gap:3px;font-size:0.75rem}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
-.hero-prow::after{content:'·';color:var(--line);margin-left:6px}.hero-prow:last-child::after{content:''}
+.hero-province-list{display:flex;flex-direction:column}.hero-prow{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--line);font-size:0.75rem}.hero-prow:last-child{border-bottom:none}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
 .ftoggle{display:flex;background:var(--asphalt);border:1px solid var(--line);border-radius:var(--pill-radius);overflow:hidden}
 .ftoggle button{flex:1;background:none;border:none;color:var(--gravel);padding:4px 10px;font-size:0.625rem;font-family:inherit;cursor:pointer;font-weight:600;white-space:nowrap}
 .ftoggle button.active{background:var(--salt);color:var(--asphalt)}
@@ -133,12 +125,6 @@ body{
 @keyframes toastOut{0%{opacity:1}100%{opacity:0}}
 .sponsor-disclosure{font-size:0.5rem;color:var(--gravel);margin-top:8px;text-align:center}
 
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--asphalt)}
-::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
-*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
-
 @media(max-width:900px){
   .hero-content{grid-template-columns:1fr;gap:12px}
   .mwrap{flex-direction:column;height:auto!important}.mmap{min-height:260px!important}.mlist{width:100%!important;max-height:200px}
@@ -175,8 +161,12 @@ body{
         </div>
       </div>
       <div class="hero-content">
-        <span class="hero-price">171.9<span class="unit"> ¢/L</span><span class="hero-delta down">↓ +0.0</span></span>
-        <span class="hero-province-list"><div class="hero-prow"><span class="pcode">BC</span><span class="pprice">178.5</span></div>
+        <div>
+          <div class="hero-price">171.9<span class="unit"> ¢/L</span></div>
+          <div class="hero-delta down">↓ +0.0</div>
+          <div style="font-size:0.625rem;color:var(--gravel);margin-top:6px;">National average — Diesel</div>
+        </div>
+        <div class="hero-province-list"><div class="hero-prow"><span class="pcode">BC</span><span class="pprice">178.5</span></div>
 <div class="hero-prow"><span class="pcode">AB</span><span class="pprice low">158.9</span></div>
 <div class="hero-prow"><span class="pcode">SK</span><span class="pprice">162.3</span></div>
 <div class="hero-prow"><span class="pcode">MB</span><span class="pprice">165.7</span></div>
@@ -186,9 +176,9 @@ body{
 <div class="hero-prow"><span class="pcode">NS</span><span class="pprice">174.9</span></div>
 <div class="hero-prow"><span class="pcode">PE</span><span class="pprice">176.1</span></div>
 <div class="hero-prow"><span class="pcode">NL</span><span class="pprice high">182.5</span></div>
-</span>
+</div>
       </div>
-      <div style="margin-top:4px;"><svg viewBox="0 0 400 100" style="width:100%;height:auto;max-height:120px;"><line x1="30" y1="80" x2="392" y2="80" stroke="var(--line)" stroke-width="1"/><rect x="35.2" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="42.9" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="61.0" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="68.8" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="86.9" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="94.6" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="112.7" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="120.5" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="138.6" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="146.4" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="164.5" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="172.2" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="190.3" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="198.1" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="216.2" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="223.9" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="242.0" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="249.8" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="267.9" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="275.6" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="293.7" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="301.5" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="319.6" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="327.4" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="345.5" y="76.0" width="15.5" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="353.2" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">—</text><rect x="371.3" y="76.0" width="15.5" height="4.0" fill="var(--salt)" opacity="0.9" rx="2"/><text x="379.1" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">07-17</text><text x="379.1" y="72" text-anchor="middle" font-size="8" fill="var(--salt)" font-weight="600">171.9</text></svg></div>
+      <div style="margin-top:4px;"><svg viewBox="0 0 420 100" style="width:100%;height:auto;max-height:110px;"><line x1="30" y1="80" x2="412" y2="80" stroke="var(--line)" stroke-width="1"/><rect x="35.5" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="43.6" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="62.7" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="70.9" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="90.0" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="98.2" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="117.3" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="125.5" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="144.6" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="152.8" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="171.9" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="180.1" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="199.2" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="207.4" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="226.5" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="234.6" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="253.7" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="261.9" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="281.0" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="289.2" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="308.3" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="316.5" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="335.6" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="343.8" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="362.9" y="76.0" width="16.4" height="4.0" fill="var(--gravel)" opacity="0.3" rx="2"/><text x="371.1" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">-</text><rect x="390.2" y="76.0" width="16.4" height="4.0" fill="var(--salt)" opacity="0.9" rx="2"/><text x="398.4" y="96" text-anchor="middle" font-size="7" fill="var(--gravel)">07-17</text><text x="398.4" y="72.0" text-anchor="middle" font-size="8" fill="var(--salt)" font-weight="600">171.9</text></svg></div>
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T14:01:55.125295+00:00">Updated 2026-07-17T14:01</span></div>
     </div>
 
@@ -206,7 +196,6 @@ body{
 <div class="bx"><div class="bx-left"><div class="bx-name">Thousand Islands Bridge</div><div class="bx-route">Lansdowne, ON — Alexandria Bay, NY &middot; ON-137 / I-81</div></div><div class="bx-status"><div class="sbar"><span class="sdot green"></span><span class="slabel">Normal</span></div><div class="sdelay">5-15 min</div></div></div>
 </div>
       <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;">Estimated from historical patterns. Real-time data coming.</div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T14:01:56.124042+00:00">Updated 2026-07-17T14:01</span></div>
     </div>
 
@@ -219,7 +208,6 @@ body{
         <div style="font-size:0.75rem;font-weight:600;margin-top:2px;color:var(--flare);"><span style="color:var(--flare);">↓</span> Weaker CAD · -0.0142</div>
         <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">Bank of Canada closing rate</div>
       </div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T14:01:51.862164+00:00">Updated 2026-07-17T14:01</span></div>
     </div>
 
@@ -227,7 +215,6 @@ body{
     <div class="module tall" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
       <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T14:01:55.121053+00:00">Updated 2026-07-17T14:01</span></div>
     </div>
 
@@ -272,7 +259,6 @@ body{
 <div style="font-size:0.75rem;color:var(--salt);">+2.9% — weaker CAD</div>
 <div style="font-size:0.625rem;color:var(--gravel);margin-top:6px;padding-top:6px;border-top:1px solid var(--line);">Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts.</div>
 </div></div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T14:01:51.863847+00:00">Updated 2026-07-17T14:01</span></div>
     </div>
 
@@ -355,7 +341,6 @@ body{
 
 </div><a class="ntitle" href="https://www.trucknews.com/transportation/ata-women-trucking-leaders-press-congress-on-industry-priorities/1003218556/" target="_blank">ATA women trucking leaders press Congress on industry priorities</a></div>
 </div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T14:01:56.121603+00:00">Updated 2026-07-17T14:01</span></div>
     </div>
 
@@ -371,7 +356,6 @@ body{
 <div class="mitem"><div class="theft-method">Weekend break-in — fence cut, trucks driven out</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Three reefers — food products &middot; <span style="color:var(--flare);font-weight:600;">$300,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Apr 22 &middot; Nisku, AB</div><div class="theft-prevention">Prevention: Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.</div></div>
 <div class="mitem"><div class="theft-method">Serial thefts — unlocked trailers</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Five trailers — mixed freight &middot; <span style="color:var(--flare);font-weight:600;">$210,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Apr 08 &middot; Winnipeg, MB</div><div class="theft-prevention">Prevention: Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.</div></div>
 <div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
-      <div style="margin-top:8px;">
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-13T18:00:00+00:00">Updated 2026-07-13T18:00</span></div>
     </div>
 
