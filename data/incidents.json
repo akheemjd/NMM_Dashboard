@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-276027",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at KEELE ST, Toronto. Left shoulder and 2 centre lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 centre lanes closed",
+      "lat": 43.72060424,
+      "lng": -79.48913432,
+      "start": 1784280420,
+      "end": null,
+      "updated": 1784280420
+    },
+    {
       "id": "ON-275991",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1784599200,
       "end": 1785492000,
       "updated": 1784141880
-    },
-    {
-      "id": "ON-275457",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Continuous Engineering Investigation on HWY 403 HAMILTON Eastbound  between LINCOLN M. ALEXANDER PARKWAY and ABERDEEN AVE, Hamilton. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.232258,
-      "lng": -79.950745,
-      "start": 1784433600,
-      "end": 1784469600,
-      "updated": 1784141220
     }
   ],
   "total": 50,
-  "updated": "2026-07-17T09:00:25.237431+00:00",
+  "updated": "2026-07-17T09:30:34.199859+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
