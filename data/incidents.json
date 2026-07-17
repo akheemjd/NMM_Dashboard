@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-276095",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between Todd Ln and Todd Ln, Windsor. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 42.25387,
+      "lng": -83.037895,
+      "start": 1784512800,
+      "end": 1784541600,
+      "updated": 1784288400
+    },
+    {
       "id": "ON-276083",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,38 +31,6 @@
       "start": 1784287200,
       "end": null,
       "updated": 1784287200
-    },
-    {
-      "id": "ON-276079",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DUFFERIN STREET, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.72824868,
-      "lng": -79.45802779,
-      "start": 1784286960,
-      "end": null,
-      "updated": 1784286960
-    },
-    {
-      "id": "ON-276072",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at ISLINGTON AVE, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.70916343,
-      "lng": -79.55209794,
-      "start": 1784286420,
-      "end": null,
-      "updated": 1784286420
     },
     {
       "id": "ON-276050",
@@ -799,10 +783,26 @@
       "start": 1784595600,
       "end": 1784970000,
       "updated": 1784144700
+    },
+    {
+      "id": "ON-275464",
+      "province": "ON",
+      "highway": "HWY 125",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 125 Northbound  between HWY 105 and HWY 105, Red Lake. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 51.004524,
+      "lng": -93.79912,
+      "start": 1784545200,
+      "end": 1786143600,
+      "updated": 1784142060
     }
   ],
   "total": 50,
-  "updated": "2026-07-17T11:31:10.050608+00:00",
+  "updated": "2026-07-17T12:01:19.541266+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
