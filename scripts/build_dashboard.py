@@ -105,7 +105,8 @@ if killswitch.get('publish') == False:
     <body style="background:{'#1E2227' if STAGING else '#15171A'};color:#E8EAEC;display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;">
     <div style="text-align:center"><h1 style="font-size:1.5rem;margin-bottom:8px;">Dashboard Paused</h1>
     <p style="color:#8B939C;">Scheduled maintenance. Back shortly.</p></div></body></html>"""
-    with open(OUT, 'w') as f:
+    html = html.replace('__FUEL_CHART__', _fuel_chart_svg)
+with open(OUT, 'w') as f:
         f.write(html)
     print(f"Kill switch active. Paused page built: {OUT}")
     sys.exit(0)
@@ -219,6 +220,49 @@ def fuel_trend_chart():
     return svg
 
 fuel_chart = fuel_trend_chart()
+
+
+# === 14-day fuel trend chart ===
+import csv as _csv
+from collections import OrderedDict
+def _fuel_trend_chart():
+    path = os.path.join(DATA_DIR, "history", "fuel_diesel.csv")
+    if not os.path.exists(path):
+        return ""
+    days = OrderedDict()
+    with open(path) as fh:
+        for row in _csv.DictReader(fh):
+            date = row["timestamp"][:10]
+            if date not in days:
+                days[date] = float(row["national_avg"])
+    vals = list(days.values())[-14:]
+    dates = list(days.keys())[-14:]
+    while len(vals) < 14:
+        vals.insert(0, vals[0] if vals else 171.9)
+        dates.insert(0, "—")
+    min_v, max_v = min(vals), max(vals)
+    range_v = max_v - min_v or 5
+    W, H = 420, 100
+    pL, pR, pT, pB = 30, 8, 18, 20
+    pw, ph = W - pL - pR, H - pT - pB
+    bw = max(4, (pw / 14) * 0.6)
+    gap = pw / 14
+    s = f'<svg viewBox="0 0 {W} {H}" style="width:100%;height:auto;max-height:110px;">'
+    s += f'<line x1="{pL}" y1="{H-pB}" x2="{W-pR}" y2="{H-pB}" stroke="var(--line)" stroke-width="1"/>'
+    for i, (v, d) in enumerate(zip(vals, dates)):
+        x = pL + gap * i + gap * 0.5 - bw / 2
+        bh = max(4, ((v - min_v) / range_v) * ph * 0.75 + 4)
+        y = H - pB - bh
+        last = i == len(vals) - 1
+        c, op = ("var(--salt)", "0.9") if last else ("var(--gravel)", "0.3")
+        s += f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{bh:.1f}" fill="{c}" opacity="{op}" rx="2"/>'
+        dl = d[-5:] if d != "—" else "—"
+        s += f'<text x="{x + bw/2:.1f}" y="{H - 4}" text-anchor="middle" font-size="7" fill="var(--gravel)">{dl}</text>'
+        if last:
+            s += f'<text x="{x + bw/2:.1f}" y="{y - 4}" text-anchor="middle" font-size="8" fill="var(--salt)" font-weight="600">{v}</text>'
+    s += "</svg>"
+    return s
+_fuel_chart_svg = _fuel_trend_chart()
 
 market_cards = ''
 if market.get('indicators'):
@@ -483,6 +527,7 @@ html = f"""<!DOCTYPE html>
         <span class="hero-province-list">{fuel_province_rows}</span>
       </div>
       <div style="margin-top:4px;">{fuel_chart}</div>
+      <div style="margin-top:4px;">__FUEL_CHART__</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
 
@@ -732,6 +777,7 @@ if not STAGING and ('noindex' in html.split('<meta name="robots"')[1][:30] if 'n
 # Remove stale debug JSON print
 html = html.split("{json.dumps({'stale_modules':")[0] + '\n</body>\n</html>'
 
+html = html.replace('__FUEL_CHART__', _fuel_chart_svg)
 with open(OUT, 'w') as f:
     f.write(html)
 
