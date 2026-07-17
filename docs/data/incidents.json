@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-276083",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17 Both Directions  between STORYLAND RD (CR 4)/PINNACLE RD and BRUCE ST/CR 20, Renfrew. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.53149,
+      "lng": -76.69848,
+      "start": 1784287200,
+      "end": null,
+      "updated": 1784317440
+    },
+    {
       "id": "ON-276286",
       "province": "ON",
       "highway": "HWY 401",
@@ -65,19 +81,35 @@
       "updated": 1784315820
     },
     {
-      "id": "ON-276304",
+      "id": "ON-276327",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound Collector between DUNDAS STREET and EVANS AVE, Toronto. 2 Left Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.76855405,
-      "lng": -79.31985853,
-      "start": 1784315460,
-      "end": null,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.628445,
+      "lng": -79.5568,
+      "start": 1784685600,
+      "end": 1784970000,
+      "updated": 1784315520
+    },
+    {
+      "id": "ON-276326",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Maintenance on QEW Fort Erie Bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.583523,
+      "lng": -79.58313,
+      "start": 1784685600,
+      "end": 1784970000,
       "updated": 1784315460
     },
     {
@@ -97,20 +129,20 @@
       "updated": 1784315340
     },
     {
-      "id": "ON-276297",
+      "id": "ON-276331",
       "province": "ON",
       "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at WALKERS LINE, Burlington. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
+      "direction": "Toronto Bound",
+      "description": "Nightly Maintenance on QEW Toronto bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.36871748,
-      "lng": -79.78592949,
-      "start": 1784315220,
-      "end": null,
-      "updated": 1784315220
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.583523,
+      "lng": -79.58313,
+      "start": 1784685600,
+      "end": 1784970000,
+      "updated": 1784315340
     },
     {
       "id": "ON-276296",
@@ -609,22 +641,6 @@
       "updated": 1784301600
     },
     {
-      "id": "ON-276083",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  between STORYLAND RD (CR 4)/PINNACLE RD and BRUCE ST/CR 20, Renfrew. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.53149,
-      "lng": -76.69848,
-      "start": 1784287200,
-      "end": null,
-      "updated": 1784300820
-    },
-    {
       "id": "ON-276184",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1784689200,
       "end": 1784970000,
       "updated": 1784250600
-    },
-    {
-      "id": "ON-275991",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between Highway 6 South / Brock Road / Wellington Rd 46 (299KM) and Highway 6 South / Brock Road / Wellington Rd 46 (299KM), Morriston. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.45316,
-      "lng": -80.12471,
-      "start": 1784516400,
-      "end": 1784534400,
-      "updated": 1784248560
     }
   ],
   "total": 50,
-  "updated": "2026-07-17T19:33:35.125424+00:00",
+  "updated": "2026-07-17T20:03:45.188748+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
