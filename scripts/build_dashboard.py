@@ -260,6 +260,11 @@ body{
 .barlow{font-family:'Barlow Condensed',sans-serif;font-weight:600}
 .mono,.timestamp{font-family:'IBM Plex Mono',monospace;font-weight:400}
 *{font-variant-numeric:tabular-nums}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--asphalt)}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
+*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
 
 .banner{
   background:var(--asphalt);border-bottom:1px solid var(--line);
