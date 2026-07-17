@@ -554,6 +554,7 @@ document.getElementById('prices-toggle').addEventListener('click',function(e){{
 // === Calculator ===
 var calcDistances={json.dumps(distances.get('distances',{}))};
 var calcCitiesData={json.dumps(distances.get('cities',[]))};
+var calcCitiesData={json.dumps(distances.get('cities',[]))};
 var calcFuel={json.dumps(fuel)};
 var calcFuelType='diesel';
 document.getElementById('fuel-toggle').addEventListener('click',function(e){{
@@ -569,6 +570,17 @@ calcCitiesData.forEach(function(c){
   document.getElementById('calc-from').appendChild(o1);
   document.getElementById('calc-to').appendChild(o2);
 });
+document.getElementById('calc-from').value='YVR';
+document.getElementById('calc-to').value='YYZ';
+setTimeout(runCalc,200);
+
+// Populate dropdowns
+calcCitiesData.forEach(function(c){{
+  var o1=document.createElement('option');o1.value=c.code;o1.textContent=c.name;
+  var o2=document.createElement('option');o2.value=c.code;o2.textContent=c.name;
+  document.getElementById('calc-from').appendChild(o1);
+  document.getElementById('calc-to').appendChild(o2);
+}});
 document.getElementById('calc-from').value='YVR';
 document.getElementById('calc-to').value='YYZ';
 setTimeout(runCalc,200);
