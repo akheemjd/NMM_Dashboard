@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-275981",
+      "id": "ON-275991",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between Highway 6 South / Brock Road / Wellington Rd 46 (299KM) and Highway 6 South / Brock Road / Wellington Rd 46 (299KM), Morriston. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.45316,
+      "lng": -80.12471,
+      "start": 1784516400,
+      "end": 1784534400,
+      "updated": 1784248560
+    },
+    {
+      "id": "ON-275989",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at Port Union Rd./Sheppard Ave., Toronto. Left shoulder and left lane closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at Highway 6 South / Brock Road / Wellington Rd 46 (299KM), Morriston. 2 centre lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.799777,
-      "lng": -79.142855,
-      "start": 1784246760,
+      "lanes": "2 centre lanes closed",
+      "lat": 43.453158333,
+      "lng": -80.124711111,
+      "start": 1784248500,
       "end": null,
-      "updated": 1784246760
+      "updated": 1784248500
     },
     {
       "id": "ON-274780",
@@ -783,26 +799,10 @@
       "start": 1784545200,
       "end": 1786143600,
       "updated": 1784142060
-    },
-    {
-      "id": "ON-275463",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Construction on QEW Toronto bound  between CAWTHRA ROAD and WEST MALL, Mississauga. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.583523,
-      "lng": -79.58313,
-      "start": 1784599200,
-      "end": 1785492000,
-      "updated": 1784141880
     }
   ],
   "total": 50,
-  "updated": "2026-07-17T00:26:51.336985+00:00",
+  "updated": "2026-07-17T00:56:59.640705+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
