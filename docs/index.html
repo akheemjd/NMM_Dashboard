@@ -81,7 +81,7 @@ body{
 .hero-price{font-size:2.75rem;line-height:1;color:var(--salt)}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
 .hero-delta{display:inline-flex;align-items:center;gap:3px;margin-top:4px;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:var(--pill-radius)}
 .hero-delta.up{background:rgba(242,169,0,.15);color:var(--amber)}.hero-delta.down{background:rgba(31,107,74,.15);color:var(--gantry)}
-.hero-province-list{display:flex;flex-direction:column}.hero-prow{display:flex;justify-content:space-between;padding:3px 0;border-bottom:1px solid var(--line);font-size:0.75rem}.hero-prow:last-child{border-bottom:none}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel)}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
+.hero-province-list{display:grid;grid-template-columns:repeat(5,1fr);gap:1px 12px}.hero-prow{display:flex;justify-content:space-between;align-items:baseline;padding:3px 0;font-size:0.875rem}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel);font-weight:500}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace;font-weight:600}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
 .ftoggle{display:flex;background:var(--asphalt);border:1px solid var(--line);border-radius:var(--pill-radius);overflow:hidden}
 .ftoggle button{flex:1;background:none;border:none;color:var(--gravel);padding:4px 10px;font-size:0.625rem;font-family:inherit;cursor:pointer;font-weight:600;white-space:nowrap}
 .ftoggle button.active{background:var(--salt);color:var(--asphalt)}
