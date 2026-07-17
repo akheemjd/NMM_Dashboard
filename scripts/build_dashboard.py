@@ -562,6 +562,7 @@ document.getElementById('fuel-toggle').addEventListener('click',function(e){{
   document.querySelectorAll('#fuel-toggle button').forEach(function(b){{b.classList.remove('active');}});
   e.target.classList.add('active');
   calcFuelType=e.target.dataset.fuel;
+  runCalc();
 }});
 // Populate dropdowns
 calcCitiesData.forEach(function(c){{
@@ -597,10 +598,8 @@ function runCalc(){{
   if(!from||!to||from===to){{res.className='cresult';return;}}
   var dist=calcDistances[from+'-'+to]||calcDistances[to+'-'+from];
   if(!dist){{res.innerHTML='<div style=\"color:var(--gravel);font-size:0.75rem;\">Route not available.</div>';res.className='cresult v';return;}}
-  var famt=calcFuel&&calcFuel.provinces?calcFuel.provinces[from.split('-')[0]]:null;
-  var rate=famt?famt[calcFuelType]:0;
-  if(!rate)rate=calcFuelType==='diesel'?calcFuel.diesel_national_avg:calcFuel.gasoline_national_avg;
-  if(!rate)rate=171.9;
+  var rate=calcFuelType==='diesel'?calcFuel.diesel_national_avg:calcFuel.gasoline_national_avg;
+  if(!rate)rate=calcFuelType==='diesel'?171.9:168.7;
   var liters=dist*eff/100,total=liters*rate/100;
   res.innerHTML='<div class=\"ccost\">$'+total.toFixed(2)+'</div><div class=\"cbreak\">'+dist.toLocaleString()+' km &middot; '+eff+' L/100km &middot; '+rate.toFixed(1)+'&cent;/L '+calcFuelType+'</div>';
   res.className='cresult v';
