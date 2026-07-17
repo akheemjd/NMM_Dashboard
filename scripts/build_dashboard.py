@@ -396,14 +396,17 @@ html = f"""<!DOCTYPE html>
 <body>
 {staging_badge}
 
-<div class="banner" style="justify-content:space-between;">
-  <a href="https://northernmilemedia.com" style="color:var(--gravel);text-decoration:none;font-size:0.75rem;font-weight:500;">Home</a>
+<div class="banner">
   <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
     <img src="{BASE_PATH}logo.jpg" alt="Northern Mile Media" style="height:32px;width:auto;">
     <h1>NORTHERN MILE MEDIA</h1>
   </a>
-  <a href="https://northernmilemedia.com/about/" style="color:var(--gravel);text-decoration:none;font-size:0.75rem;font-weight:500;">About</a>
 </div>
+<nav style="background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:32px;">
+  <a href="https://northernmilemedia.com" style="color:var(--gravel);text-decoration:none;font-size:0.75rem;font-weight:500;padding:8px 0;border-bottom:2px solid transparent;transition:all .15s;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Home</a>
+  <a href="https://northernmilemedia.com/about/" style="color:var(--gravel);text-decoration:none;font-size:0.75rem;font-weight:500;padding:8px 0;border-bottom:2px solid transparent;transition:all .15s;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">About</a>
+  <a href="https://northernmilemedia.com" style="color:var(--gravel);text-decoration:none;font-size:0.75rem;font-weight:500;padding:8px 0;border-bottom:2px solid transparent;transition:all .15s;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Blog</a>
+</nav>
 
 <div class="main">
   {staleness_warning}
