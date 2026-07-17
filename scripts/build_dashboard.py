@@ -186,21 +186,21 @@ def fuel_trend_chart():
             date = row['timestamp'][:10]
             if date not in days:
                 days[date] = float(row['national_avg'])
-    vals = list(days.values())[-7:]
-    dates = list(days.keys())[-7:]
-    while len(vals) < 7:
+    vals = list(days.values())[-14:]
+    dates = list(days.keys())[-14:]
+    while len(vals) < 14:
         vals.insert(0, vals[0] if vals else 171.9)
         dates.insert(0, chr(8212))
     if not vals:
         return ''
     min_v, max_v = min(vals), max(vals)
     range_v = max_v - min_v or 5
-    W, H = 320, 100
+    W, H = 400, 100
     pad_l, pad_r, pad_t, pad_b = 30, 8, 18, 20
     pw = W - pad_l - pad_r
     ph = H - pad_t - pad_b
-    bar_w = max(8, (pw / 7) * 0.6)
-    gap = pw / 7
+    bar_w = max(4, (pw / 14) * 0.6)
+    gap = pw / 14
     svg = f'<svg viewBox="0 0 {W} {H}" style="width:100%;height:auto;max-height:120px;">'
     svg += f'<line x1="{pad_l}" y1="{H-pad_b}" x2="{W-pad_r}" y2="{H-pad_b}" stroke="var(--line)" stroke-width="1"/>'
     for i, (v, d) in enumerate(zip(vals, dates)):
