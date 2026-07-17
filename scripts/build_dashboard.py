@@ -614,7 +614,7 @@ setTimeout(function(){{
   var incList=incData.incidents||(Array.isArray(incData)?incData:[]);
   var mc=document.getElementById('inc-map');
   if(mc&&incList.length){{
-    var incMap=L.map('inc-map');
+    var incMap=L.map('inc-map',{zoomControl:false,attributionControl:false});
     L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png',{{attribution:'&copy; OSM'}}).addTo(incMap);
     L.Icon.Default.prototype.options.imagePath='https://unpkg.com/leaflet@1.9.4/dist/images/';
     var bounds=[],list=document.getElementById('inc-list'),h='',markers=[];
@@ -639,7 +639,7 @@ setTimeout(function(){{
   var thHs=thData.hotspots||[];
   var md2=document.getElementById('th-map');
   if(md2&&(thInc.length||thHs.length)){{
-    var thMap=L.map('th-map').setView([52,-90],4);
+    var thMap=L.map('th-map',{zoomControl:false,attributionControl:false}).setView([52,-90],4);
     L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png',{{attribution:''}}).addTo(thMap);
     var bounds2=[];
     thHs.forEach(function(h){{
