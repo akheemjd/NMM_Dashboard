@@ -417,16 +417,15 @@ html = f"""<!DOCTYPE html>
           <span class="status-pill daily">Daily</span>
         </div>
       </div>
-      <div>
-        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:2px;">
-          <span class="hero-price" style="margin:0;">{fuel_diesel_avg}<span class="unit"> ¢/L</span></span>
-          <span class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</span>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;margin-bottom:8px;">
-          {fuel_province_rows}
-        </div>
-        <div id="fuel-chart-wrap">__FUEL_CHART__</div>
+      <div style="display:flex;align-items:baseline;gap:12px;">
+        <span class="hero-price" style="margin:0;font-size:3.5rem;">{fuel_diesel_avg}<span class="unit" style="font-size:1.25rem;"> ¢/L</span></span>
+        <span class="hero-delta {'up' if fuel_delta_up else 'down'}" style="font-size:1rem;padding:3px 10px;">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</span>
       </div>
+      <div style="display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;margin-top:8px;padding-top:6px;border-top:1px solid var(--line);">
+        {fuel_province_rows}
+      </div>
+      <div id="fuel-chart-wrap" style="margin-top:10px;">__FUEL_CHART__</div>
+      
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
 
@@ -473,6 +472,7 @@ html = f"""<!DOCTYPE html>
     <div class="module standard" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;">{market_cards}</div>
+      
       <div class="card-footer"><span class="ts-foot" data-updated="{market.get('updated','')}">Updated {market.get('updated','')[:16] if market.get('updated') else '—'}</span></div>
     </div>
 
@@ -711,7 +711,7 @@ if os.path.exists(_path):
     _s += "</svg>"
     _fuel_chart_svg = _s
 
-html = html.replace('<div id="fuel-chart-wrap">__FUEL_CHART__</div>', _fuel_chart_svg)
+html = html.replace('<div id="fuel-chart-wrap"></div>', _fuel_chart_svg)
 with open(OUT, 'w') as f:
     f.write(html)
 
