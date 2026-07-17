@@ -474,14 +474,14 @@ html = f"""<!DOCTYPE html>
     </div>
 
     <!-- 7. Industry Headlines — WIDE (server-rendered) -->
-    <div class="module wide" id="news-card"><button class="share-btn" onclick="shareModule(&quot;news-card&quot;)" title="Copy">&#9998;</button>
+    <div class="module standard" id="news-card"><button class="share-btn" onclick="shareModule(&quot;news-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
       <div style="max-height:320px;overflow-y:auto;">{headlines_html}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{news_data.get('updated','')}">Updated {news_data.get('updated','')[:16] if news_data.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 8. Cargo Theft — STANDARD (server-rendered + JS map) -->
-    <div class="module standard" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
+    <div class="module wide" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
       <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>{theft_html.replace('class="theft-item"','class="mitem"')}<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
       <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16] if theft_data.get('updated') else '—'}</span></div>
