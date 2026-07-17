@@ -420,11 +420,10 @@ html = f"""<!DOCTYPE html>
         <div>
           <div class="hero-price">{fuel_diesel_avg}<span class="unit"> ¢/L</span></div>
           <div class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</div>
-          <div style="font-size:0.625rem;color:var(--gravel);margin-top:6px;">National average — Diesel</div>
+          <div style="margin-top:6px;">__FUEL_CHART__</div>
         </div>
         <div class="hero-province-list">{fuel_province_rows}</div>
       </div>
-      <div style="margin-top:4px;">__FUEL_CHART__</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
 
