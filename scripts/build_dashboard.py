@@ -416,13 +416,15 @@ html = f"""<!DOCTYPE html>
           <span class="status-pill daily">Daily</span>
         </div>
       </div>
-      <div class="hero-content">
-        <div>
-          <div class="hero-price">{fuel_diesel_avg}<span class="unit"> ¢/L</span></div>
-          <div class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</div>
-          <div style="margin-top:6px;">__FUEL_CHART__</div>
+      <div>
+        <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:2px;">
+          <span class="hero-price" style="margin:0;">{fuel_diesel_avg}<span class="unit"> ¢/L</span></span>
+          <span class="hero-delta {'up' if fuel_delta_up else 'down'}">{'↑' if fuel_delta_up else '↓'} {fuel_delta_str}</span>
         </div>
-        <div class="hero-province-list">{fuel_province_rows}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;margin-bottom:8px;">
+          {fuel_province_rows}
+        </div>
+        __FUEL_CHART__
       </div>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
