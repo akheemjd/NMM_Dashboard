@@ -345,6 +345,13 @@ body{
 .sponsor-line{display:none;align-items:center;gap:8px;margin-bottom:10px;padding:6px 10px;background:rgba(31,107,74,.08);border-radius:4px;font-size:0.625rem;color:var(--gantry)}
 .sponsor-line.active{display:flex}
 .sponsor-line img{height:20px;width:auto}
+.share-btn{position:absolute;top:8px;right:8px;background:none;border:1px solid var(--line);color:var(--gravel);width:24px;height:24px;border-radius:4px;cursor:pointer;font-size:0.625rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s;z-index:2}
+.module:hover .share-btn,.module:focus-within .share-btn{opacity:1}
+.share-btn:hover{background:var(--asphalt);color:var(--salt);border-color:var(--gravel)}
+.share-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--gantry);color:var(--salt);padding:8px 16px;border-radius:6px;font-size:0.75rem;font-weight:600;z-index:9999;animation:toastIn .3s ease-out,toastOut .3s 1.7s ease-in forwards}
+@keyframes toastIn{0%{opacity:0;transform:translateX(-50%) translateY(12px)}100%{opacity:1;transform:translateX(-50%) translateY(0)}}
+@keyframes toastOut{0%{opacity:1}100%{opacity:0}}
+.sponsor-disclosure{font-size:0.5rem;color:var(--gravel);margin-top:8px;text-align:center}
 
 @media(max-width:900px){
   .hero-content{grid-template-columns:1fr;gap:12px}
@@ -401,7 +408,7 @@ html = f"""<!DOCTYPE html>
   <div class="grid">
 
     <!-- 1. Fuel Prices — HERO (server-rendered) -->
-    <div class="module hero" id="fuel-card">
+    <div class="module hero" id="fuel-card"><button class="share-btn" onclick="shareModule(&quot;fuel-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow">
         <span class="eyebrow-label">Fuel Prices</span>
         <div style="display:flex;align-items:center;gap:8px;">
@@ -421,7 +428,7 @@ html = f"""<!DOCTYPE html>
     </div>
 
     <!-- 2. Border Crossings — WIDE (server-rendered) -->
-    <div class="module wide" id="border-card">
+    <div class="module wide" id="border-card"><button class="share-btn" onclick="shareModule(&quot;border-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical" title="Estimated from historical traffic patterns. Real-time CBSA data coming soon.">Typical</span></div>
       <div class="bgrid">{border_crossings_html}</div>
       <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;">Estimated from historical patterns. Real-time data coming.</div>
@@ -429,7 +436,7 @@ html = f"""<!DOCTYPE html>
     </div>
 
     <!-- 3. USD / CAD — COMPACT (server-rendered) -->
-    <div class="module compact" id="exchange-card">
+    <div class="module compact" id="exchange-card"><button class="share-btn" onclick="shareModule(&quot;exchange-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">USD / CAD</span><span class="status-pill live">Live</span></div>
       <div>
         <div style="font-size:0.625rem;color:var(--gravel);margin-bottom:2px;">1 US Dollar equals</div>
@@ -441,14 +448,14 @@ html = f"""<!DOCTYPE html>
     </div>
 
     <!-- 4. Road Incidents — TALL (JS map only) -->
-    <div class="module tall" id="incidents-card">
+    <div class="module tall" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
       <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
       <div class="card-footer"><span class="ts-foot" data-updated="{incidents_data.get('updated','')}">Updated {incidents_data.get('updated','')[:16] if incidents_data.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 5. Fuel Cost Calculator — STANDARD (JS) -->
-    <div class="module standard" id="calc-card">
+    <div class="module standard" id="calc-card"><button class="share-btn" onclick="shareModule(&quot;calc-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Fuel Calculator</span><span class="status-pill live">Live</span></div>
       <div class="cform">
         <div class="cfield"><label>From</label><select id="calc-from"><option value="VAN">Vancouver, BC</option><option value="YYZ">Toronto, ON</option></select></div>
@@ -460,21 +467,21 @@ html = f"""<!DOCTYPE html>
     </div>
 
     <!-- 6. Market Pulse — STANDARD (server-rendered) -->
-    <div class="module standard" id="market-card">
+    <div class="module standard" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;">{market_cards}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{market.get('updated','')}">Updated {market.get('updated','')[:16] if market.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 7. Industry Headlines — WIDE (server-rendered) -->
-    <div class="module wide" id="news-card">
+    <div class="module wide" id="news-card"><button class="share-btn" onclick="shareModule(&quot;news-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
       <div style="max-height:320px;overflow-y:auto;">{headlines_html}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{news_data.get('updated','')}">Updated {news_data.get('updated','')[:16] if news_data.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 8. Cargo Theft — STANDARD (server-rendered + JS map) -->
-    <div class="module standard" id="theft-card">
+    <div class="module standard" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
       <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>{theft_html.replace('class="theft-item"','class="mitem"')}<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
       <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16] if theft_data.get('updated') else '—'}</span></div>
@@ -491,6 +498,7 @@ html = f"""<!DOCTYPE html>
 </div>
 
 <footer style="padding:16px 24px;text-align:center;font-size:0.625rem;color:var(--gravel);border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;">
+  <div class="sponsor-disclosure">Sponsors never influence the data.</div>
   &copy; 2026 Northern Mile Media &middot; Data from public sources &middot; Informational use only
 </footer>
 
@@ -620,7 +628,25 @@ setTimeout(function(){{
 }},400);
 
 {json.dumps({'stale_modules': stale_modules})}
-</script>
+</script>""" + """
+<script>
+function shareModule(id){
+  var el=document.getElementById(id);
+  if(!el)return;
+  var eyebrow=el.querySelector(".eyebrow-label");
+  var name=eyebrow?eyebrow.textContent:"Northern Mile";
+  var data=el.querySelector(".hero-price,.barlow");
+  var value=data?data.textContent.trim():"";
+  var text=name+": "+value+" — dashboard.northernmilemedia.com";
+  navigator.clipboard.writeText(text).then(function(){
+    var toast=document.createElement("div");
+    toast.className="share-toast";
+    toast.textContent="Copied: "+name;
+    document.body.appendChild(toast);
+    setTimeout(function(){toast.remove();},2000);
+  }).catch(function(){});
+}
+</script>""" + """
 </body>
 </html>"""
 
