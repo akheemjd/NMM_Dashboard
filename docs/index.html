@@ -151,8 +151,8 @@ body{
 
   <div class="grid">
 
-    <!-- 1. Fuel Prices — HERO (server-rendered) -->
-    <div class="module hero" id="fuel-card"><button class="share-btn" onclick="shareModule(&quot;fuel-card&quot;)" title="Copy">&#9998;</button>
+<!-- 1. Fuel Prices — HERO (server-rendered) -->
+    <div class="module wide" id="fuel-card"><button class="share-btn" onclick="shareModule(&quot;fuel-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow">
         <span class="eyebrow-label">Fuel Prices</span>
         <div style="display:flex;align-items:center;gap:8px;">
@@ -182,7 +182,19 @@ body{
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:40.024971+00:00">Updated 2026-07-17T16:32</span></div>
     </div>
 
-    <!-- 2. Border Crossings — WIDE (server-rendered) -->
+    <!-- 2. USD / CAD — COMPACT (server-rendered) -->
+    <div class="module compact" id="exchange-card"><button class="share-btn" onclick="shareModule(&quot;exchange-card&quot;)" title="Copy">&#9998;</button>
+      <div class="eyebrow"><span class="eyebrow-label">USD / CAD</span><span class="status-pill live">Live</span></div>
+      <div>
+        <div style="font-size:0.625rem;color:var(--gravel);margin-bottom:2px;">1 US Dollar equals</div>
+        <div style="font-size:1.75rem;font-weight:600;color:var(--salt);" class="barlow">1.3896 CAD</div>
+        <div style="font-size:0.75rem;font-weight:600;margin-top:2px;color:var(--flare);"><span style="color:var(--flare);">↓</span> Weaker CAD · -0.0142</div>
+        <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">Bank of Canada closing rate</div>
+      </div>
+      <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:37.486707+00:00">Updated 2026-07-17T16:32</span></div>
+    </div>
+
+    <!-- 3. Border Crossings — WIDE (server-rendered) -->
     <div class="module wide" id="border-card"><button class="share-btn" onclick="shareModule(&quot;border-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical" title="Estimated from historical traffic patterns. Real-time CBSA data coming soon.">Typical</span></div>
       <div class="bgrid"><div class="bx"><div class="bx-left"><div class="bx-name">Ambassador Bridge</div><div class="bx-route">Windsor, ON — Detroit, MI &middot; ON-3 / I-75</div></div><div class="bx-status"><div class="sbar"><span class="sdot amber"></span><span class="slabel">Moderate</span></div><div class="sdelay">10-25 min</div></div></div>
@@ -199,26 +211,7 @@ body{
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:41.813128+00:00">Updated 2026-07-17T16:32</span></div>
     </div>
 
-    <!-- 3. USD / CAD — COMPACT (server-rendered) -->
-    <div class="module compact" id="exchange-card"><button class="share-btn" onclick="shareModule(&quot;exchange-card&quot;)" title="Copy">&#9998;</button>
-      <div class="eyebrow"><span class="eyebrow-label">USD / CAD</span><span class="status-pill live">Live</span></div>
-      <div>
-        <div style="font-size:0.625rem;color:var(--gravel);margin-bottom:2px;">1 US Dollar equals</div>
-        <div style="font-size:1.75rem;font-weight:600;color:var(--salt);" class="barlow">1.3896 CAD</div>
-        <div style="font-size:0.75rem;font-weight:600;margin-top:2px;color:var(--flare);"><span style="color:var(--flare);">↓</span> Weaker CAD · -0.0142</div>
-        <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">Bank of Canada closing rate</div>
-      </div>
-      <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:37.486707+00:00">Updated 2026-07-17T16:32</span></div>
-    </div>
-
-    <!-- 4. Road Incidents — TALL (JS map only) -->
-    <div class="module tall" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
-      <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
-      <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:40.019668+00:00">Updated 2026-07-17T16:32</span></div>
-    </div>
-
-    <!-- 5. Fuel Cost Calculator — STANDARD (JS) -->
+    <!-- 4. Fuel Cost Calculator — STANDARD (JS) -->
     <div class="module standard" id="calc-card"><button class="share-btn" onclick="shareModule(&quot;calc-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Fuel Calculator</span><span class="status-pill live">Live</span></div>
       <div class="cform">
@@ -230,8 +223,30 @@ body{
       <div class="cresult" id="calc-result"></div>
     </div>
 
-    <!-- 6. Market Pulse — STANDARD (server-rendered) -->
-    <div class="module standard" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
+    <!-- 5. Road Incidents — TALL (JS map only) -->
+    <div class="module hero" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
+      <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
+      <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:40.019668+00:00">Updated 2026-07-17T16:32</span></div>
+    </div>
+
+    <!-- 6. Cargo Theft — STANDARD (server-rendered + JS map) -->
+    <div class="module hero" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
+      <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
+      <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div><div class="mitem"><div class="theft-method">Yard break-in overnight</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Electronics load &middot; <span style="color:var(--flare);font-weight:600;">$250,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jul 08 &middot; Brampton, ON</div><div class="theft-prevention">Prevention: High-security padlocks on all parked trailers. Motion-activated lighting. CCTV with remote monitoring.</div></div>
+<div class="mitem"><div class="theft-method">Organized theft ring — coordinated yard hits</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">47 trailers recovered in theft ring bust &middot; <span style="color:var(--flare);font-weight:600;">$4,000,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jun 28 &middot; Greater Montreal, QC</div><div class="theft-prevention">Prevention: GPS tracking on all trailers. Geofence alerts when equipment leaves yard after hours.</div></div>
+<div class="mitem"><div class="theft-method">Stolen while driver inside truck stop</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Reefer load — meat products &middot; <span style="color:var(--flare);font-weight:600;">$85,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jun 15 &middot; Mississauga, ON</div><div class="theft-prevention">Prevention: Never leave loaded reefer unattended at unsecured stops. Use attended parking or secured yards only.</div></div>
+<div class="mitem"><div class="theft-method">Trailer stolen from yard with fictitious paperwork</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Consumer electronics — US-bound &middot; <span style="color:var(--flare);font-weight:600;">$180,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jun 02 &middot; Delta, BC</div><div class="theft-prevention">Prevention: Verify carrier credentials before releasing loads. Call references. Check insurance and authorities.</div></div>
+<div class="mitem"><div class="theft-method">Fictitious pickup — stolen carrier credentials</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Identity theft pickup &middot; <span style="color:var(--flare);font-weight:600;">$90,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">May 18 &middot; Calgary, AB</div><div class="theft-prevention">Prevention: Always verify MC number and insurance. Call the carrier directly using publicly listed number, not the one provided.</div></div>
+<div class="mitem"><div class="theft-method">Coordinated yard hit — fencing cut</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Building materials — two trailers &middot; <span style="color:var(--flare);font-weight:600;">$120,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">May 05 &middot; Laval, QC</div><div class="theft-prevention">Prevention: King pin locks on all trailers. Perimeter fencing inspections. Overnight security patrols.</div></div>
+<div class="mitem"><div class="theft-method">Weekend break-in — fence cut, trucks driven out</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Three reefers — food products &middot; <span style="color:var(--flare);font-weight:600;">$300,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Apr 22 &middot; Nisku, AB</div><div class="theft-prevention">Prevention: Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.</div></div>
+<div class="mitem"><div class="theft-method">Serial thefts — unlocked trailers</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Five trailers — mixed freight &middot; <span style="color:var(--flare);font-weight:600;">$210,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Apr 08 &middot; Winnipeg, MB</div><div class="theft-prevention">Prevention: Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.</div></div>
+<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="2026-07-13T18:00:00+00:00">Updated 2026-07-13T18:00</span></div>
+    </div>
+
+    <!-- 7. Market Pulse — STANDARD (server-rendered) -->
+    <div class="module wide" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;"><div style="background:var(--asphalt);border-radius:4px;padding:12px;">
 <div style="display:flex;justify-content:space-between;"><span style="font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Monthly GDP</span><span style="color:var(--gantry);font-weight:600;font-size:0.875rem;">↑</span></div>
@@ -263,7 +278,7 @@ body{
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:37.488761+00:00">Updated 2026-07-17T16:32</span></div>
     </div>
 
-    <!-- 7. Industry Headlines — WIDE (server-rendered) -->
+    <!-- 8. Industry Headlines — WIDE (server-rendered) -->
     <div class="module standard" id="news-card"><button class="share-btn" onclick="shareModule(&quot;news-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
       <div style="max-height:320px;overflow-y:auto;"><div class="nitem"><div style="display:flex;align-items:center;gap:5px;margin-bottom:3px;flex-wrap:wrap">
@@ -345,22 +360,7 @@ body{
       <div class="card-footer"><span class="ts-foot" data-updated="2026-07-17T16:32:41.810307+00:00">Updated 2026-07-17T16:32</span></div>
     </div>
 
-    <!-- 8. Cargo Theft — STANDARD (server-rendered + JS map) -->
-    <div class="module wide" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
-      <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
-      <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div><div class="mitem"><div class="theft-method">Yard break-in overnight</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Electronics load &middot; <span style="color:var(--flare);font-weight:600;">$250,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jul 08 &middot; Brampton, ON</div><div class="theft-prevention">Prevention: High-security padlocks on all parked trailers. Motion-activated lighting. CCTV with remote monitoring.</div></div>
-<div class="mitem"><div class="theft-method">Organized theft ring — coordinated yard hits</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">47 trailers recovered in theft ring bust &middot; <span style="color:var(--flare);font-weight:600;">$4,000,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jun 28 &middot; Greater Montreal, QC</div><div class="theft-prevention">Prevention: GPS tracking on all trailers. Geofence alerts when equipment leaves yard after hours.</div></div>
-<div class="mitem"><div class="theft-method">Stolen while driver inside truck stop</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Reefer load — meat products &middot; <span style="color:var(--flare);font-weight:600;">$85,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jun 15 &middot; Mississauga, ON</div><div class="theft-prevention">Prevention: Never leave loaded reefer unattended at unsecured stops. Use attended parking or secured yards only.</div></div>
-<div class="mitem"><div class="theft-method">Trailer stolen from yard with fictitious paperwork</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Consumer electronics — US-bound &middot; <span style="color:var(--flare);font-weight:600;">$180,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Jun 02 &middot; Delta, BC</div><div class="theft-prevention">Prevention: Verify carrier credentials before releasing loads. Call references. Check insurance and authorities.</div></div>
-<div class="mitem"><div class="theft-method">Fictitious pickup — stolen carrier credentials</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Identity theft pickup &middot; <span style="color:var(--flare);font-weight:600;">$90,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">May 18 &middot; Calgary, AB</div><div class="theft-prevention">Prevention: Always verify MC number and insurance. Call the carrier directly using publicly listed number, not the one provided.</div></div>
-<div class="mitem"><div class="theft-method">Coordinated yard hit — fencing cut</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Building materials — two trailers &middot; <span style="color:var(--flare);font-weight:600;">$120,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">May 05 &middot; Laval, QC</div><div class="theft-prevention">Prevention: King pin locks on all trailers. Perimeter fencing inspections. Overnight security patrols.</div></div>
-<div class="mitem"><div class="theft-method">Weekend break-in — fence cut, trucks driven out</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Three reefers — food products &middot; <span style="color:var(--flare);font-weight:600;">$300,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Apr 22 &middot; Nisku, AB</div><div class="theft-prevention">Prevention: Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.</div></div>
-<div class="mitem"><div class="theft-method">Serial thefts — unlocked trailers</div><div style="color:var(--salt);font-size:0.75rem;margin:2px 0;">Five trailers — mixed freight &middot; <span style="color:var(--flare);font-weight:600;">$210,000</span></div><div style="font-size:0.625rem;color:var(--gravel);">Apr 08 &middot; Winnipeg, MB</div><div class="theft-prevention">Prevention: Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.</div></div>
-<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="2026-07-13T18:00:00+00:00">Updated 2026-07-13T18:00</span></div>
-    </div>
-
-  </div>
+</div>
 
 </div>
 

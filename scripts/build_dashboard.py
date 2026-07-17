@@ -407,8 +407,8 @@ html = f"""<!DOCTYPE html>
 
   <div class="grid">
 
-    <!-- 1. Fuel Prices — HERO (server-rendered) -->
-    <div class="module hero" id="fuel-card"><button class="share-btn" onclick="shareModule(&quot;fuel-card&quot;)" title="Copy">&#9998;</button>
+<!-- 1. Fuel Prices — HERO (server-rendered) -->
+    <div class="module wide" id="fuel-card"><button class="share-btn" onclick="shareModule(&quot;fuel-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow">
         <span class="eyebrow-label">Fuel Prices</span>
         <div style="display:flex;align-items:center;gap:8px;">
@@ -428,15 +428,7 @@ html = f"""<!DOCTYPE html>
       <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
     </div>
 
-    <!-- 2. Border Crossings — WIDE (server-rendered) -->
-    <div class="module wide" id="border-card"><button class="share-btn" onclick="shareModule(&quot;border-card&quot;)" title="Copy">&#9998;</button>
-      <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical" title="Estimated from historical traffic patterns. Real-time CBSA data coming soon.">Typical</span></div>
-      <div class="bgrid">{border_crossings_html}</div>
-      <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;">Estimated from historical patterns. Real-time data coming.</div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{border_data.get('updated','')}">Updated {border_data.get('updated','')[:16] if border_data.get('updated') else '—'}</span></div>
-    </div>
-
-    <!-- 3. USD / CAD — COMPACT (server-rendered) -->
+    <!-- 2. USD / CAD — COMPACT (server-rendered) -->
     <div class="module compact" id="exchange-card"><button class="share-btn" onclick="shareModule(&quot;exchange-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">USD / CAD</span><span class="status-pill live">Live</span></div>
       <div>
@@ -448,14 +440,15 @@ html = f"""<!DOCTYPE html>
       <div class="card-footer"><span class="ts-foot" data-updated="{exchange.get('updated','')}">Updated {exchange.get('updated','')[:16] if exchange.get('updated') else '—'}</span></div>
     </div>
 
-    <!-- 4. Road Incidents — TALL (JS map only) -->
-    <div class="module tall" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
-      <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
-      <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{incidents_data.get('updated','')}">Updated {incidents_data.get('updated','')[:16] if incidents_data.get('updated') else '—'}</span></div>
+    <!-- 3. Border Crossings — WIDE (server-rendered) -->
+    <div class="module wide" id="border-card"><button class="share-btn" onclick="shareModule(&quot;border-card&quot;)" title="Copy">&#9998;</button>
+      <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical" title="Estimated from historical traffic patterns. Real-time CBSA data coming soon.">Typical</span></div>
+      <div class="bgrid">{border_crossings_html}</div>
+      <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;">Estimated from historical patterns. Real-time data coming.</div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{border_data.get('updated','')}">Updated {border_data.get('updated','')[:16] if border_data.get('updated') else '—'}</span></div>
     </div>
 
-    <!-- 5. Fuel Cost Calculator — STANDARD (JS) -->
+    <!-- 4. Fuel Cost Calculator — STANDARD (JS) -->
     <div class="module standard" id="calc-card"><button class="share-btn" onclick="shareModule(&quot;calc-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Fuel Calculator</span><span class="status-pill live">Live</span></div>
       <div class="cform">
@@ -467,29 +460,36 @@ html = f"""<!DOCTYPE html>
       <div class="cresult" id="calc-result"></div>
     </div>
 
-    <!-- 6. Market Pulse — STANDARD (server-rendered) -->
-    <div class="module standard" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
+    <!-- 5. Road Incidents — TALL (JS map only) -->
+    <div class="module hero" id="incidents-card"><button class="share-btn" onclick="shareModule(&quot;incidents-card&quot;)" title="Copy">&#9998;</button>
+      <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
+      <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{incidents_data.get('updated','')}">Updated {incidents_data.get('updated','')[:16] if incidents_data.get('updated') else '—'}</span></div>
+    </div>
+
+    <!-- 6. Cargo Theft — STANDARD (server-rendered + JS map) -->
+    <div class="module hero" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
+      <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
+      <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>{theft_html.replace('class="theft-item"','class="mitem"')}<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16] if theft_data.get('updated') else '—'}</span></div>
+    </div>
+
+    <!-- 7. Market Pulse — STANDARD (server-rendered) -->
+    <div class="module wide" id="market-card"><button class="share-btn" onclick="shareModule(&quot;market-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;">{market_cards}</div>
       
       <div class="card-footer"><span class="ts-foot" data-updated="{market.get('updated','')}">Updated {market.get('updated','')[:16] if market.get('updated') else '—'}</span></div>
     </div>
 
-    <!-- 7. Industry Headlines — WIDE (server-rendered) -->
+    <!-- 8. Industry Headlines — WIDE (server-rendered) -->
     <div class="module standard" id="news-card"><button class="share-btn" onclick="shareModule(&quot;news-card&quot;)" title="Copy">&#9998;</button>
       <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
       <div style="max-height:320px;overflow-y:auto;">{headlines_html}</div>
       <div class="card-footer"><span class="ts-foot" data-updated="{news_data.get('updated','')}">Updated {news_data.get('updated','')[:16] if news_data.get('updated') else '—'}</span></div>
     </div>
 
-    <!-- 8. Cargo Theft — STANDARD (server-rendered + JS map) -->
-    <div class="module wide" id="theft-card"><button class="share-btn" onclick="shareModule(&quot;theft-card&quot;)" title="Copy">&#9998;</button>
-      <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
-      <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>{theft_html.replace('class="theft-item"','class="mitem"')}<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16] if theft_data.get('updated') else '—'}</span></div>
-    </div>
-
-  </div>
+</div>
 
 </div>
 
