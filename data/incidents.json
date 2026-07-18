@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-276462",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Collision on HWY 404 Southbound  at YORK MILLS ROAD, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.75815553,
+      "lng": -79.33584648,
+      "start": 1784341620,
+      "end": null,
+      "updated": 1784341620
+    },
+    {
       "id": "ON-276404",
       "province": "ON",
       "highway": "HWY 11",
@@ -52,22 +68,6 @@
       "start": "2026-07-17T18:12:12-07:00",
       "end": "",
       "updated": "2026-07-17T18:12:12-07:00"
-    },
-    {
-      "id": "ON-276443",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound COLLECTOR RAMP at 401 EAST COLL, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.64071642,
-      "lng": -79.65202712,
-      "start": 1784333340,
-      "end": null,
-      "updated": 1784333340
     },
     {
       "id": "ON-276426",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T02:05:33.778284+00:00",
+  "updated": "2026-07-18T02:35:42.680730+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
