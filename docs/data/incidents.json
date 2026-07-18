@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-276491",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound RAMP at HWY 9, Kettleby. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.0274905,
+      "lng": -79.5929896,
+      "start": 1784359140,
+      "end": null,
+      "updated": 1784359140
+    },
+    {
+      "id": "ON-276490",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Vehicle Fire on HWY 401 Eastbound  at Culloden Rd / Oxford Rd 10, Ingersoll. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.012072222,
+      "lng": -80.877836111,
+      "start": 1784358840,
+      "end": null,
+      "updated": 1784358840
+    },
+    {
       "id": "ON-276083",
       "province": "ON",
       "highway": "HWY 17",
@@ -772,42 +804,10 @@
       "start": 1784512800,
       "end": 1784541600,
       "updated": 1784288400
-    },
-    {
-      "id": "ON-276169",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 401 Westbound Collector between HWY 2/ KINGSTON RD and MEADOWVALE ROAD, Toronto. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.795807,
-      "lng": -79.14937,
-      "start": 1784692800,
-      "end": 1784712600,
-      "updated": 1784251500
-    },
-    {
-      "id": "ON-276240",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 427 Southbound On-ramp at FINCH AVENUE, Toronto. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.733997,
-      "lng": -79.62741,
-      "start": 1784689200,
-      "end": 1784970000,
-      "updated": 1784250600
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T07:07:01.849985+00:00",
+  "updated": "2026-07-18T07:37:11.697695+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
