@@ -435,7 +435,7 @@ html = f"""<!DOCTYPE html>
       </div>
       
       
-      <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16] if fuel.get('updated') else '—'}</span></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{fuel.get('updated','')}">Updated {fuel.get('updated','')[:16].replace('T',' ') if fuel.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 2. USD / CAD — COMPACT (server-rendered) -->
@@ -447,14 +447,14 @@ html = f"""<!DOCTYPE html>
         <div style="font-size:0.75rem;font-weight:600;margin-top:2px;color:var(--{'gantry' if ex_up else 'flare' if not ex_is_zero else 'gravel'});">{ex_arrow_html} {ex_dir_text}{'' if ex_is_zero else ' · ' + ('+' if ex_up else '') + f'{ex_change:.4f}'}</div>
         <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">Bank of Canada closing rate</div>
       </div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{exchange.get('updated','')}">Updated {exchange.get('updated','')[:16] if exchange.get('updated') else '—'}</span></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{exchange.get('updated','')}">Updated {exchange.get('updated','')[:16].replace('T',' ') if exchange.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 3. Border Crossings — WIDE (server-rendered) -->
     <div class="module wide" id="border-card">
       <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical">Typical</span></div>
       <div class="bgrid">{border_crossings_html}</div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{border_data.get('updated','')}">Updated {border_data.get('updated','')[:16] if border_data.get('updated') else '—'}</span></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{border_data.get('updated','')}">Updated {border_data.get('updated','')[:16].replace('T',' ') if border_data.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 4. Fuel Cost Calculator — STANDARD (JS) -->
@@ -473,14 +473,14 @@ html = f"""<!DOCTYPE html>
     <div class="module hero" id="incidents-card">
       <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
       <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{incidents_data.get('updated','')}">Updated {incidents_data.get('updated','')[:16] if incidents_data.get('updated') else '—'}</span></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{incidents_data.get('updated','')}">Updated {incidents_data.get('updated','')[:16].replace('T',' ') if incidents_data.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 6. Cargo Theft — STANDARD (server-rendered + JS map) -->
     <div class="module hero" id="theft-card">
       <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
       <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div>{theft_html.replace('class="theft-item"','class="mitem"')}<div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16] if theft_data.get('updated') else '—'}</span></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{theft_data.get('updated','')}">Updated {theft_data.get('updated','')[:16].replace('T',' ') if theft_data.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 7. Market Pulse — STANDARD (server-rendered) -->
@@ -495,7 +495,7 @@ html = f"""<!DOCTYPE html>
     <div class="module standard" id="news-card">
       <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
       <div style="max-height:320px;overflow-y:auto;">{headlines_html}</div>
-      <div class="card-footer"><span class="ts-foot" data-updated="{news_data.get('updated','')}">Updated {news_data.get('updated','')[:16] if news_data.get('updated') else '—'}</span></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{news_data.get('updated','')}">Updated {news_data.get('updated','')[:16].replace('T',' ') if news_data.get('updated') else '—'}</span></div>
     </div>
 
 </div>
