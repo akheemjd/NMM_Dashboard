@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-276491",
+      "id": "ON-276493",
       "province": "ON",
       "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound RAMP at HWY 9, Kettleby. Right lane and right shoulder closed.",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at FINCH AVENUE, Toronto. 3 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.0274905,
-      "lng": -79.5929896,
-      "start": 1784359140,
+      "lanes": "3 right lanes closed",
+      "lat": 43.75425671,
+      "lng": -79.53072531,
+      "start": 1784361240,
       "end": null,
-      "updated": 1784359140
+      "updated": 1784361240
     },
     {
       "id": "ON-276490",
@@ -47,22 +47,6 @@
       "start": 1784287200,
       "end": null,
       "updated": 1784358180
-    },
-    {
-      "id": "ON-276485",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.730642632,
-      "lng": -79.445995688,
-      "start": 1784353860,
-      "end": null,
-      "updated": 1784353860
     },
     {
       "id": "ON-276483",
@@ -804,10 +788,26 @@
       "start": 1784512800,
       "end": 1784541600,
       "updated": 1784288400
+    },
+    {
+      "id": "ON-276169",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 401 Westbound Collector between HWY 2/ KINGSTON RD and MEADOWVALE ROAD, Toronto. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.795807,
+      "lng": -79.14937,
+      "start": 1784692800,
+      "end": 1784712600,
+      "updated": 1784251500
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T07:37:11.697695+00:00",
+  "updated": "2026-07-18T08:07:19.702575+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
