@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-276570",
+      "id": "ON-276563",
       "province": "ON",
-      "highway": "HWY 427",
+      "highway": "HWY 400",
       "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound  at DIXON ROAD/AIRPORT ROAD, Toronto. Left shoulder and 2 left lanes closed.",
+      "description": "Collision on HWY 400 Southbound EXPRESS at LANGSTAFF ROAD, Vaughan. Left shoulder and 2 left lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.686292806,
-      "lng": -79.6011132,
-      "start": 1784390100,
+      "lat": 43.8094035,
+      "lng": -79.5438128,
+      "start": 1784389200,
       "end": null,
-      "updated": 1784394120
+      "updated": 1784395980
     },
     {
       "id": "ON-276605",
@@ -31,38 +31,6 @@
       "start": 1784393700,
       "end": null,
       "updated": 1784393700
-    },
-    {
-      "id": "ON-276599",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at WINSTON CHURCHILL BLVD, Oakville. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.50973936,
-      "lng": -79.66403068,
-      "start": 1784393100,
-      "end": null,
-      "updated": 1784393460
-    },
-    {
-      "id": "ON-276563",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound EXPRESS at LANGSTAFF ROAD, Vaughan. Left shoulder and 5 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 5 left lanes closed",
-      "lat": 43.8094035,
-      "lng": -79.5438128,
-      "start": 1784389200,
-      "end": null,
-      "updated": 1784392740
     },
     {
       "id": "ON-274640",
@@ -804,10 +772,42 @@
       "start": 1784293980,
       "end": null,
       "updated": 1784293980
+    },
+    {
+      "id": "ON-276118",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound  between Cousineau Tunnel and North Talbot Rd , Windsor. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 42.242035,
+      "lng": -83.01423,
+      "start": 1784512800,
+      "end": 1784628000,
+      "updated": 1784290140
+    },
+    {
+      "id": "ON-276130",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 404 Southbound Off-ramp at STOUFFVILLE ROAD, Stouffville-Richmondhill. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.940132,
+      "lng": -79.389725,
+      "start": 1784606340,
+      "end": 1784883600,
+      "updated": 1784289540
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T17:11:02.085664+00:00",
+  "updated": "2026-07-18T17:42:09.353054+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
