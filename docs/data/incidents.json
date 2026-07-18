@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-276489",
+      "id": "ON-276083",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at PORT UNION ROAD, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 17",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17 Both Directions  between STORYLAND RD (CR 4)/PINNACLE RD and BRUCE ST/CR 20, Renfrew. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.79767107,
-      "lng": -79.14440224,
-      "start": 1784356380,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.53149,
+      "lng": -76.69848,
+      "start": 1784287200,
       "end": null,
-      "updated": 1784356380
+      "updated": 1784358180
     },
     {
       "id": "ON-276485",
@@ -63,22 +63,6 @@
       "start": 1784010780,
       "end": null,
       "updated": 1784346900
-    },
-    {
-      "id": "ON-276083",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  between STORYLAND RD (CR 4)/PINNACLE RD and BRUCE ST/CR 20, Renfrew. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.53149,
-      "lng": -76.69848,
-      "start": 1784287200,
-      "end": null,
-      "updated": 1784343600
     },
     {
       "id": "ON-276465",
@@ -804,10 +788,26 @@
       "start": 1784692800,
       "end": 1784712600,
       "updated": 1784251500
+    },
+    {
+      "id": "ON-276240",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound On-ramp at FINCH AVENUE, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.733997,
+      "lng": -79.62741,
+      "start": 1784689200,
+      "end": 1784970000,
+      "updated": 1784250600
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T06:36:52.874879+00:00",
+  "updated": "2026-07-18T07:07:01.849985+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
