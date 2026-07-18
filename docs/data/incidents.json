@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-276661",
+      "id": "ON-276697",
       "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound RAMP at HWY 407, Burlington. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.34127522,
-      "lng": -79.8309261,
-      "start": 1784399700,
-      "end": null,
-      "updated": 1784399700
-    },
-    {
-      "id": "ON-276657",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound RAMP at QEW/FAIRVIEW STREET, Burlington. 2 right lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at LAKE RIDGE ROAD, Whitby. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.33283833,
-      "lng": -79.83764033,
-      "start": 1784399460,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.8625201,
+      "lng": -78.9833114,
+      "start": 1784405280,
       "end": null,
-      "updated": 1784399460
+      "updated": 1784405280
     },
     {
       "id": "ON-274640",
@@ -804,10 +788,26 @@
       "start": 1784606340,
       "end": 1784883600,
       "updated": 1784289540
+    },
+    {
+      "id": "ON-276095",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between Todd Ln and Todd Ln, Windsor. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 42.25387,
+      "lng": -83.037895,
+      "start": 1784512800,
+      "end": 1784541600,
+      "updated": 1784288400
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T19:43:44.764128+00:00",
+  "updated": "2026-07-18T20:13:52.963103+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
