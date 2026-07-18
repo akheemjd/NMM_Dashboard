@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-274780",
+      "province": "ON",
+      "highway": "HWY 527",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.786243282,
+      "lng": -89.144978175,
+      "start": 1784010780,
+      "end": null,
+      "updated": 1784346900
+    },
+    {
       "id": "ON-276083",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,22 +31,6 @@
       "start": 1784287200,
       "end": null,
       "updated": 1784343600
-    },
-    {
-      "id": "ON-276469",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound  at HWY 5 / DUNDAS STREET, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.51225661,
-      "lng": -79.69322025,
-      "start": 1784343480,
-      "end": null,
-      "updated": 1784343480
     },
     {
       "id": "ON-276465",
@@ -68,22 +68,6 @@
       "start": "2026-07-17T18:12:12-07:00",
       "end": "",
       "updated": "2026-07-17T18:12:12-07:00"
-    },
-    {
-      "id": "ON-276426",
-      "province": "ON",
-      "highway": "HWY 144",
-      "direction": "Northbound",
-      "description": "Collision on HWY 144 Northbound  at SEC HWY 661-GOGAMA RD, Gogama. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 47.701472,
-      "lng": -81.7326821,
-      "start": 1784330460,
-      "end": null,
-      "updated": 1784330520
     },
     {
       "id": "ON-276354",
@@ -758,22 +742,6 @@
       "updated": 1784288400
     },
     {
-      "id": "ON-274780",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.786243282,
-      "lng": -89.144978175,
-      "start": 1784010780,
-      "end": null,
-      "updated": 1784282100
-    },
-    {
       "id": "ON-276169",
       "province": "ON",
       "highway": "HWY 401",
@@ -804,10 +772,42 @@
       "start": 1784689200,
       "end": 1784970000,
       "updated": 1784250600
+    },
+    {
+      "id": "ON-275991",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between Highway 6 South / Brock Road / Wellington Rd 46 (299KM) and Highway 6 South / Brock Road / Wellington Rd 46 (299KM), Morriston. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.45316,
+      "lng": -80.12471,
+      "start": 1784516400,
+      "end": 1784534400,
+      "updated": 1784248560
+    },
+    {
+      "id": "ON-274640",
+      "province": "ON",
+      "highway": "HWY 599",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 599 Both Directions  between SEC HWY 516 (W) - MNR SILVICULTURAL CAMP (E), Savant Lake and THUNDER BAY - KENORA DIST BDY, Pickle Lake. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 50.309355,
+      "lng": -90.6994472,
+      "start": 1783971840,
+      "end": null,
+      "updated": 1784244540
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T03:35:59.507866+00:00",
+  "updated": "2026-07-18T04:06:08.660690+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
