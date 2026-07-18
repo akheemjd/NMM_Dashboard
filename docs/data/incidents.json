@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
+      "id": "ON-276083",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 17 Eastbound  between STORYLAND RD (CR 4)/PINNACLE RD and BRUCE ST/CR 20, Renfrew. 2 lanes and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 lanes and EAST shoulder closed",
+      "lat": 45.53149,
+      "lng": -76.69848,
+      "start": 1784287200,
+      "end": null,
+      "updated": 1784365200
+    },
+    {
       "id": "ON-276493",
       "province": "ON",
       "highway": "HWY 400",
       "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at FINCH AVENUE, Toronto. 3 right lanes closed.",
+      "description": "Collision on HWY 400 Southbound  at FINCH AVENUE, Toronto. 4 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "3 right lanes closed",
+      "lanes": "4 right lanes closed",
       "lat": 43.75425671,
       "lng": -79.53072531,
       "start": 1784361240,
       "end": null,
-      "updated": 1784361240
+      "updated": 1784364060
     },
     {
       "id": "ON-276490",
@@ -31,38 +47,6 @@
       "start": 1784358840,
       "end": null,
       "updated": 1784358840
-    },
-    {
-      "id": "ON-276083",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  between STORYLAND RD (CR 4)/PINNACLE RD and BRUCE ST/CR 20, Renfrew. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.53149,
-      "lng": -76.69848,
-      "start": 1784287200,
-      "end": null,
-      "updated": 1784358180
-    },
-    {
-      "id": "ON-276483",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Collision on HWY 11 Northbound  at LINE 7/SIMCOE ROAD 27, Oro Medonte. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.478217,
-      "lng": -79.5339,
-      "start": 1784352300,
-      "end": null,
-      "updated": 1784352300
     },
     {
       "id": "ON-274780",
@@ -804,10 +788,26 @@
       "start": 1784692800,
       "end": 1784712600,
       "updated": 1784251500
+    },
+    {
+      "id": "ON-276240",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound On-ramp at FINCH AVENUE, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.733997,
+      "lng": -79.62741,
+      "start": 1784689200,
+      "end": 1784970000,
+      "updated": 1784250600
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T08:37:27.814444+00:00",
+  "updated": "2026-07-18T09:07:37.555325+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
