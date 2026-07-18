@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-276517",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 410, Mississauga. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.6390887,
+      "lng": -79.6611437,
+      "start": 1784381580,
+      "end": null,
+      "updated": 1784381580
+    },
+    {
       "id": "ON-274780",
       "province": "ON",
       "highway": "HWY 527",
@@ -788,26 +804,10 @@
       "start": 1783971840,
       "end": null,
       "updated": 1784244540
-    },
-    {
-      "id": "ON-275962",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Eastbound",
-      "description": "Daily Maintenance on HWY 7 Eastbound  between Kawartha CR 6/Eldon Rd (Oakwood), Oakwood and Kawartha CR 15 / Lindsay St S, Lindsay. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.333,
-      "lng": -78.87993,
-      "start": 1784547000,
-      "end": 1784926800,
-      "updated": 1784242980
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T13:09:51.391565+00:00",
+  "updated": "2026-07-18T13:40:00.239973+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
