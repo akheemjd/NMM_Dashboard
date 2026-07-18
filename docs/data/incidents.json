@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-276732",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound ON-RAMP at GUELPH LINE, Milton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.491009,
+      "lng": -79.98709,
+      "start": 1784414040,
+      "end": null,
+      "updated": 1784414040
+    },
+    {
+      "id": "ON-276731",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at GUELPH LINE, Milton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.49118566,
+      "lng": -79.98777262,
+      "start": 1784413920,
+      "end": null,
+      "updated": 1784413920
+    },
+    {
       "id": "ON-276718",
       "province": "ON",
       "highway": "HWY 427",
@@ -15,22 +47,6 @@
       "start": 1784412000,
       "end": null,
       "updated": 1784412000
-    },
-    {
-      "id": "ON-276716",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound RAMP at BRONTE ROAD, Oakville. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.41068223,
-      "lng": -79.73905943,
-      "start": 1784411520,
-      "end": null,
-      "updated": 1784411520
     },
     {
       "id": "ON-276714",
@@ -788,26 +804,10 @@
       "start": 1785117600,
       "end": 1785488400,
       "updated": 1784297940
-    },
-    {
-      "id": "ON-276151",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 416 Southbound ON-RAMP at BASELINE RD/CR 16, Ottawa. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.33539,
-      "lng": -75.8124791,
-      "start": 1784293980,
-      "end": null,
-      "updated": 1784293980
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T22:15:31.952549+00:00",
+  "updated": "2026-07-18T22:45:39.274544+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
