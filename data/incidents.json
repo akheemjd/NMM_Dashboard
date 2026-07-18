@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-276404",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Collision on HWY 11 Northbound  at NB exit 223 Ramp to Hwy 60, Huntsville, Huntsville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.343709767,
+      "lng": -79.232074939,
+      "start": 1784326440,
+      "end": null,
+      "updated": 1784339760
+    },
+    {
+      "id": "ON-276458",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.77496258,
+      "lng": -79.28476557,
+      "start": 1784338920,
+      "end": null,
+      "updated": 1784338920
+    },
+    {
       "id": "drivebc.ca/RIDE-100655",
       "province": "BC",
       "highway": {
@@ -68,22 +100,6 @@
       "start": 1784287200,
       "end": null,
       "updated": 1784330100
-    },
-    {
-      "id": "ON-276404",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Collision on HWY 11 Northbound  at NB exit 223 Ramp to Hwy 60, Huntsville, Huntsville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.343709767,
-      "lng": -79.232074939,
-      "start": 1784326440,
-      "end": null,
-      "updated": 1784326440
     },
     {
       "id": "ON-276354",
@@ -788,26 +804,10 @@
       "start": 1784692800,
       "end": 1784712600,
       "updated": 1784251500
-    },
-    {
-      "id": "ON-276240",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 427 Southbound On-ramp at FINCH AVENUE, Toronto. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.733997,
-      "lng": -79.62741,
-      "start": 1784689200,
-      "end": 1784970000,
-      "updated": 1784250600
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T01:35:24.315758+00:00",
+  "updated": "2026-07-18T02:05:33.778284+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
