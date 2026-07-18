@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-276517",
+      "id": "ON-276522",
+      "province": "ON",
+      "highway": "HWY 35",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 35 Both Directions  at BOBCAGEN RD/RENASSANCE RD, Minden. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.920048885,
+      "lng": -78.719141132,
+      "start": 1784382540,
+      "end": null,
+      "updated": 1784382540
+    },
+    {
+      "id": "ON-276518",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 410, Mississauga. Left shoulder and left lane closed.",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound TRANSFER at Port Union Collector to Express, Toronto. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "left shoulder and left lane closed",
-      "lat": 43.6390887,
-      "lng": -79.6611437,
-      "start": 1784381580,
+      "lat": 43.8012933,
+      "lng": -79.13879827,
+      "start": 1784381880,
       "end": null,
-      "updated": 1784381580
+      "updated": 1784381880
     },
     {
       "id": "ON-274780",
@@ -788,26 +804,10 @@
       "start": 1784516400,
       "end": 1784534400,
       "updated": 1784248560
-    },
-    {
-      "id": "ON-274640",
-      "province": "ON",
-      "highway": "HWY 599",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 599 Both Directions  between SEC HWY 516 (W) - MNR SILVICULTURAL CAMP (E), Savant Lake and THUNDER BAY - KENORA DIST BDY, Pickle Lake. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 50.309355,
-      "lng": -90.6994472,
-      "start": 1783971840,
-      "end": null,
-      "updated": 1784244540
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T13:40:00.239973+00:00",
+  "updated": "2026-07-18T14:10:09.725713+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
