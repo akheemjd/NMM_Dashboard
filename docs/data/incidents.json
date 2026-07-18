@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-276652",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at LESLIE STREET, Toronto. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.76651955,
+      "lng": -79.36299883,
+      "start": 1784398140,
+      "end": null,
+      "updated": 1784398140
+    },
+    {
       "id": "ON-276563",
       "province": "ON",
       "highway": "HWY 400",
@@ -15,22 +31,6 @@
       "start": 1784389200,
       "end": null,
       "updated": 1784395980
-    },
-    {
-      "id": "ON-276605",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at YONGE ST, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.75370752,
-      "lng": -79.40858161,
-      "start": 1784393700,
-      "end": null,
-      "updated": 1784393700
     },
     {
       "id": "ON-274640",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T17:42:09.353054+00:00",
+  "updated": "2026-07-18T18:12:17.207424+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
