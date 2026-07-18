@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-276751",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at BURLINGTON SKYWAY, Burlington. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.29814811,
+      "lng": -79.7971592,
+      "start": 1784417940,
+      "end": null,
+      "updated": 1784417940
+    },
+    {
+      "id": "ON-276750",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at YONGE ST, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.75330605,
+      "lng": -79.40807605,
+      "start": 1784417820,
+      "end": null,
+      "updated": 1784417820
+    },
+    {
       "id": "ON-276743",
       "province": "ON",
       "highway": "HWY 401",
@@ -47,22 +79,6 @@
       "start": 1784414640,
       "end": null,
       "updated": 1784414640
-    },
-    {
-      "id": "ON-276713",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.75346694,
-      "lng": -79.40817931,
-      "start": 1784411040,
-      "end": null,
-      "updated": 1784411040
     },
     {
       "id": "ON-276083",
@@ -788,26 +804,10 @@
       "start": 1785117600,
       "end": 1785488400,
       "updated": 1784297940
-    },
-    {
-      "id": "ON-276151",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 416 Southbound ON-RAMP at BASELINE RD/CR 16, Ottawa. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.33539,
-      "lng": -75.8124791,
-      "start": 1784293980,
-      "end": null,
-      "updated": 1784293980
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T23:15:48.723083+00:00",
+  "updated": "2026-07-18T23:45:56.795296+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
