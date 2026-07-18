@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-276440",
+      "id": "ON-276446",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering. Right lane and right shoulder closed.",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.83731548,
-      "lng": -79.07273129,
-      "start": 1784332800,
+      "lat": 43.76633361,
+      "lng": -79.36293439,
+      "start": 1784334060,
       "end": null,
-      "updated": 1784332800
+      "updated": 1784334060
+    },
+    {
+      "id": "ON-276443",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound COLLECTOR RAMP at 401 EAST COLL, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.64071642,
+      "lng": -79.65202712,
+      "start": 1784333340,
+      "end": null,
+      "updated": 1784333340
     },
     {
       "id": "ON-276424",
@@ -31,42 +47,6 @@
       "start": 1784330280,
       "end": null,
       "updated": 1784332680
-    },
-    {
-      "id": "drivebc.ca/DBC-93672",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 97",
-        "from": "Powder King Rd",
-        "direction": "NONE"
-      },
-      "direction": "",
-      "description": "Highway 97. Road cleared between Powder King Rd and Old Hasler Rd (19 km north of Pine Pass Summit). Last updated Fri Jul 17 at 4:55 PM MST. (DBC-93672)",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 55.512141,
-      "lng": -122.766119,
-      "start": "2026-07-17T14:33:29-07:00",
-      "end": "",
-      "updated": "2026-07-17T16:55:10-07:00"
-    },
-    {
-      "id": "ON-276431",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at HWY 9, Kettleby. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 44.0296729,
-      "lng": -79.5941556,
-      "start": 1784331540,
-      "end": null,
-      "updated": 1784332320
     },
     {
       "id": "ON-276426",
@@ -115,22 +95,6 @@
       "start": 1784287200,
       "end": null,
       "updated": 1784330100
-    },
-    {
-      "id": "ON-276417",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.7811849,
-      "lng": -79.25514924,
-      "start": 1784329560,
-      "end": null,
-      "updated": 1784329560
     },
     {
       "id": "ON-276404",
@@ -803,10 +767,42 @@
       "start": 1784606340,
       "end": 1784883600,
       "updated": 1784289540
+    },
+    {
+      "id": "ON-276095",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between Todd Ln and Todd Ln, Windsor. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 42.25387,
+      "lng": -83.037895,
+      "start": 1784512800,
+      "end": 1784541600,
+      "updated": 1784288400
+    },
+    {
+      "id": "ON-274780",
+      "province": "ON",
+      "highway": "HWY 527",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.786243282,
+      "lng": -89.144978175,
+      "start": 1784010780,
+      "end": null,
+      "updated": 1784282100
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T00:04:56.271012+00:00",
+  "updated": "2026-07-18T00:35:05.342629+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
