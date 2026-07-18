@@ -488,7 +488,7 @@ html = f"""<!DOCTYPE html>
       <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;">{market_cards}</div>
       
-      <div class="card-footer"><span class="ts-foot" data-updated="{market.get('updated','')}">Updated {market.get('updated','')[:16] if market.get('updated') else '—'}</span></div>
+      <div class="card-footer"><span class="ts-foot" data-updated="{market.get('updated','')}">Updated {market.get('updated','')[:16].replace('T',' ') if market.get('updated') else '—'}</span></div>
     </div>
 
     <!-- 8. Industry Headlines — WIDE (server-rendered) -->
