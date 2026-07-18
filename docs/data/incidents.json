@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-100655",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Golden Ears Conn",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Paving operations. Starting Tue Jul 21 until Wed Jul 22. From 10:00 PM to 4:00 AM PST on Tuesday and Wednesday. Lane closures in both directions. Watch for traffic control. Work will be happening at this intersection in the westbound, northbound, and southbound direction.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.17969783,
+      "lng": -122.71382895,
+      "start": "2026-07-17T18:12:12-07:00",
+      "end": "",
+      "updated": "2026-07-17T18:12:12-07:00"
+    },
+    {
       "id": "ON-276443",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -783,26 +804,10 @@
       "start": 1784689200,
       "end": 1784970000,
       "updated": 1784250600
-    },
-    {
-      "id": "ON-275991",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between Highway 6 South / Brock Road / Wellington Rd 46 (299KM) and Highway 6 South / Brock Road / Wellington Rd 46 (299KM), Morriston. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.45316,
-      "lng": -80.12471,
-      "start": 1784516400,
-      "end": 1784534400,
-      "updated": 1784248560
     }
   ],
   "total": 50,
-  "updated": "2026-07-18T01:05:15.781630+00:00",
+  "updated": "2026-07-18T01:35:24.315758+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
