@@ -36,7 +36,7 @@ def page_html(path, title, desc, schema_json, content_html, faq_html=""):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>{title}</title>
+<title>Northern Mile — Live Canadian Trucking Dashboard</title>
 <meta name="description" content="{desc}">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="{url}">
