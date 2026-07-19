@@ -40,7 +40,7 @@
       "name": "Canadian Cargo Theft Reports \u2014 Incidents & Hotspots | Northern Mile",
       "description": "Cargo theft tracking for Canadian trucking. Recent incidents, hotspots in Toronto, Montreal, Calgary. Free for fleet operators and dispatchers.",
       "url": "https://dashboard.northernmilemedia.com/cargo-theft/",
-      "dateModified": "2026-07-19 13:03",
+      "dateModified": "2026-07-19 15:09",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Northern Mile Media",
@@ -57,13 +57,14 @@
   :root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--red:#D93A34;--line:#2C3238;--rad:8px}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;line-height:1.6;font-size:0.9375rem}
-  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-  .banner .logo{font-family:'IBM Plex Mono',monospace;font-size:0.8125rem;font-weight:700}
-  .banner nav{display:flex;gap:16px;flex-wrap:wrap}
-  .banner nav a{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;white-space:nowrap}
-  .banner nav a:hover{color:var(--text)}
-  .banner nav a.active{color:var(--amber)}
-  .breadcrumbs{padding:8px 24px;font-size:0.6875rem;color:var(--muted)}
+  .banner{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:60px;position:sticky;top:0;z-index:1000}
+  .banner a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+  
+  nav.seo-nav{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap}
+nav.seo-nav a{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap}
+nav.seo-nav a:hover{color:var(--text);border-color:var(--text)}
+nav.seo-nav a.active{color:var(--amber);border-color:var(--amber)}
+.breadcrumbs{padding:8px 24px;font-size:0.6875rem;color:var(--muted)}
   .breadcrumbs a{color:var(--muted);text-decoration:none}
   main{max-width:960px;margin:0 auto;padding:16px 20px 40px}
   h1{font-size:1.5rem;margin-bottom:4px}
@@ -97,8 +98,11 @@
 </head>
 <body>
 <div class="banner">
-  <a href="/" class="logo">NORTHERN MILE</a>
-  <nav>
+  <a href="/">
+    <h1>NORTHERN MILE</h1>
+  </a>
+</div>
+<nav class="seo-nav">
     <a href="/fuel-prices/">Fuel</a>
     <a href="/exchange-rate/">FX</a>
     <a href="/border-wait-times/">Border</a>
@@ -106,8 +110,7 @@
     <a href="/cargo-theft/">Theft</a>
     <a href="/market-pulse/">Market</a>
     <a href="/industry-news/">News</a>
-  </nav>
-</div>
+</nav>
 <div class="breadcrumbs">
   <a href="/">Dashboard</a> › Canadian Cargo Theft Reports — Incidents & Hotspots
 </div>
@@ -127,7 +130,7 @@
     <dt>How can carriers protect their loads?</dt><dd>Park in secure, well-lit lots. Use GPS tracking. Avoid leaving loaded trailers unattended overnight in high-risk zones.</dd>
   </dl>
 </div>
-    <div class="updated">Last updated: 2026-07-19 13:03 &middot; Data refreshes every 30 minutes</div>
+    <div class="updated">Last updated: 2026-07-19 15:09 &middot; Data refreshes every 30 minutes</div>
   </article>
 
   <div class="cta">
