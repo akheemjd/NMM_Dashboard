@@ -99,6 +99,7 @@ nav.seo-nav a.active{{color:var(--amber);border-color:var(--amber)}}
   </a>
 </div>
 <nav class="seo-nav">
+    <a href="/">Home</a>
     <a href="/fuel-prices/">Fuel</a>
     <a href="/exchange-rate/">FX</a>
     <a href="/border-wait-times/">Border</a>
