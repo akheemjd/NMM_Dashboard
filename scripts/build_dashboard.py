@@ -502,11 +502,12 @@ html = f"""<!DOCTYPE html>
 
 </div>
 
-<div style="text-align:center;max-width:480px;margin:32px auto 0;padding:24px;background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);">
-  <div style="font-size:0.625rem;color:var(--gravel);margin-bottom:12px;">Know someone who would use this? Forward them the link.</div>
-  <div style="font-size:0.875rem;font-weight:600;color:var(--salt);margin-bottom:4px;">Get the Northern Mile Brief</div>
-  <div style="font-size:0.75rem;color:var(--gravel);margin-bottom:16px;">Fuel prices, market shifts, and what it means. Every Wednesday.</div>
-  <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#1E2227" data-text-color="#E8EAEC" data-button-color="#E8EAEC" data-button-text-color="#15171A" data-title="" data-description="" data-site="https://www.northernmilemedia.com/" data-locale="en" async></script>
+<div id="signup-section" style="text-align:center;max-width:600px;margin:40px auto 0;padding:32px 24px;background:var(--slab);border:2px solid var(--amber);border-radius:var(--radius);">
+  <div style="font-size:0.6875rem;color:var(--amber);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:8px;">Never miss a market move</div>
+  <div style="font-size:1.125rem;font-weight:600;color:var(--salt);margin-bottom:6px;">The Northern Mile Brief</div>
+  <div style="font-size:0.8125rem;color:var(--gravel);margin-bottom:20px;">Fuel prices, border status, and market shifts. Every Wednesday at 6am. No spam, just what you need.</div>
+  <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#1E2227" data-text-color="#E8EAEC" data-button-color="#F2A900" data-button-text-color="#15171A" data-title="" data-description="" data-site="https://www.northernmilemedia.com/" data-locale="en" async></script>
+  <div style="font-size:0.625rem;color:var(--gravel);margin-top:16px;">Know someone who would use this? Forward them the link.</div>
 </div>
 
 <footer style="padding:16px 24px;text-align:center;font-size:0.625rem;color:var(--gravel);border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;">
