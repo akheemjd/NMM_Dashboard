@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-276819",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Debris on HWY 400 Northbound RAMP at KING ROAD, King. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.91842297,
+      "lng": -79.56481204,
+      "start": 1784465400,
+      "end": null,
+      "updated": 1784465400
+    },
+    {
+      "id": "ON-276818",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at MCLEOD ROAD, Niagara Falls. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.07022037,
+      "lng": -79.12108719,
+      "start": 1784464800,
+      "end": null,
+      "updated": 1784464800
+    },
+    {
       "id": "ON-274780",
       "province": "ON",
       "highway": "HWY 527",
@@ -776,42 +808,10 @@
       "start": 1784692740,
       "end": 1784970000,
       "updated": 1784303460
-    },
-    {
-      "id": "ON-276189",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Maintenance on HWY 401 Westbound  between 5TH LINE RD , Curry Hill and MALLORYTOWN RD (IC 675)/Leeds & Grenville CR 5, Mallorytown. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.20698,
-      "lng": -74.35126,
-      "start": 1784545200,
-      "end": 1784588400,
-      "updated": 1784301600
-    },
-    {
-      "id": "ON-276184",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between SUMMERSTOWN RD (IC 804)/SD&G CR 27, Summerstown and 5TH LINE RD , Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.09066,
-      "lng": -74.5921,
-      "start": 1784545200,
-      "end": 1784588400,
-      "updated": 1784300460
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T12:23:34.791424+00:00",
+  "updated": "2026-07-19T12:53:44.880689+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
