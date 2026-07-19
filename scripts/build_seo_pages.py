@@ -95,7 +95,7 @@ nav.seo-nav a.active{{color:var(--amber);border-color:var(--amber)}}
 <body>
 <div class="banner">
   <a href="/">
-    <h1>NORTHERN MILE</h1>
+    <h1>NORTHERN MILE MEDIA</h1>
   </a>
 </div>
 <nav class="seo-nav">
