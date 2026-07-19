@@ -1,38 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-276765",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at MEADOWVALE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.79910762,
-      "lng": -79.16862776,
-      "start": 1784423580,
-      "end": null,
-      "updated": 1784423580
-    },
-    {
-      "id": "ON-276763",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at BRONTE ROAD, Oakville. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.40941762,
-      "lng": -79.74117822,
-      "start": 1784423160,
-      "end": null,
-      "updated": 1784423160
-    },
-    {
       "id": "ON-276762",
       "province": "ON",
       "highway": "QEW",
@@ -808,10 +776,42 @@
       "start": 1784545200,
       "end": 1784588400,
       "updated": 1784301600
+    },
+    {
+      "id": "ON-276184",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between SUMMERSTOWN RD (IC 804)/SD&G CR 27, Summerstown and 5TH LINE RD , Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.09066,
+      "lng": -74.5921,
+      "start": 1784545200,
+      "end": 1784588400,
+      "updated": 1784300460
+    },
+    {
+      "id": "ON-276268",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound Collector between DUNDAS STREET and EVANS AVE, Toronto. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.628445,
+      "lng": -79.5568,
+      "start": 1785117600,
+      "end": 1785488400,
+      "updated": 1784298060
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T01:16:23.590615+00:00",
+  "updated": "2026-07-19T01:46:33.165680+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
