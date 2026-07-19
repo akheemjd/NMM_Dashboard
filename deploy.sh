@@ -6,12 +6,14 @@ cd /home/hermes/northern-mile-dashboard
 echo "=== Deploy $(date) ==="
 
 # 1. Collect fresh data
-echo "[1/4] Collecting data..."
+echo "[1/5] Collecting border data from CBSA..."
+python3 scripts/collect_border.py
+echo "[2/5] Collecting other data..."
 python3 scripts/collector.py 2>&1
 COLLECT_EXIT=$?
 
 # 2. Health check — record status for each source
-echo "[2/4] Health check..."
+echo "[3/5] Health check..."
 python3 -c "
 import json, os, sys
 sys.path.insert(0, 'scripts')
@@ -48,12 +50,12 @@ print('Health recorded.')
 " 2>&1
 
 # 3. Copy data to docs and v2
-echo "[3/4] Copying data..."
+echo "[4/5] Copying data..."
 cp data/*.json docs/data/
 mkdir -p docs/v2/data && cp data/*.json docs/v2/data/
 
 # 4. Rebuild both
-echo "[4/4] Building..."
+echo "[5/5] Building..."
 python3 scripts/build_dashboard.py production
 python3 scripts/build_dashboard.py staging
 

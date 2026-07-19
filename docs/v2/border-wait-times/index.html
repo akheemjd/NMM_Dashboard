@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Canada-US Border Wait Times — Live Commercial & Truck Delays | Northern Mile</title>
+<meta name="description" content="Live Canada-US border wait times for commercial trucks. Ambassador Bridge, Blue Water Bridge, Peace Bridge, Lacolle, Coutts. CBSA data. Free.">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/border-wait-times/">
+<meta property="og:title" content="Canada-US Border Wait Times — Live Commercial Delays">
+<meta property="og:description" content="Real-time CBSA border wait times for truckers. Every major crossing. Free.">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--line:#2C3238;--rad:8px}
+  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;padding:0;line-height:1.5}
+  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:16px 24px;text-align:center}
+  .banner h1{font-size:1.25rem;margin:0;color:var(--text)}
+  .banner p{font-size:0.75rem;color:var(--muted);margin:4px 0 0}
+  main{max-width:900px;margin:0 auto;padding:24px 20px}
+  h2{font-size:1rem;margin:24px 0 12px;color:var(--text)}
+  .crossing{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  .crossing-name{font-weight:600;font-size:0.9375rem}
+  .crossing-route{font-size:0.75rem;color:var(--muted)}
+  .crossing-delay{text-align:right}
+  .delay-time{font-size:1.25rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
+  .delay-live{color:var(--green)}.delay-wait{color:var(--amber)}
+  .delay-label{font-size:0.625rem;color:var(--muted);text-transform:uppercase}
+  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px}
+  .cta{text-align:center;margin:32px 0;padding:24px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
+  .cta h3{color:var(--amber);font-size:0.8125rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em}
+  .cta p{color:var(--text);font-size:0.9375rem;margin:0 0 4px}
+  .cta a{color:var(--amber)}
+  footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--muted);border-top:1px solid var(--line)}
+  a{color:var(--amber);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="banner">
+  <h1>Canada-US Border Wait Times</h1>
+  <p>Live commercial truck delays at every major crossing. CBSA data.</p>
+</div>
+<main>
+  <p style="color:var(--muted);font-size:0.875rem;">Commercial truck wait times updated directly from CBSA. Check before you route. <a href="/">← Back to dashboard</a></p>
+
+  <div id="crossings">Loading...</div>
+
+  <div class="updated" id="updated"></div>
+
+  <div class="cta">
+    <h3>Never miss a market move</h3>
+    <p>Get fuel prices, border updates, and market shifts in your inbox every Wednesday.</p>
+    <p style="font-size:0.75rem;color:var(--muted);margin-top:8px;"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+  </div>
+</main>
+
+<footer>&copy; 2026 Northern Mile Media &middot; CBSA border wait times &middot; Informational use only</footer>
+
+<script>
+fetch('/data/border.json').then(r=>r.json()).then(d=>{
+  var h='';
+  d.crossings.forEach(function(c){
+    var delay=c.delay_minutes||0;
+    var cls=delay>0?'delay-wait':'delay-live';
+    var delayTxt=delay>0?delay+' min':'No delay';
+    var src=c.source==='cbsa'?'Live':'Estimate';
+    h+='<div class="crossing">';
+    h+='<div><div class="crossing-name">'+c.name+'</div><div class="crossing-route">'+c.route+' &middot; '+c.highway+' &middot; '+src+'</div></div>';
+    h+='<div class="crossing-delay"><div class="delay-time '+cls+'">'+delayTxt+'</div><div class="delay-label">'+c.delay+'</div></div>';
+    h+='</div>';
+  });
+  document.getElementById('crossings').innerHTML=h;
+  document.getElementById('updated').textContent='Updated '+d.updated.substring(0,16).replace('T',' ');
+});
+</script>
+</body>
+</html>
