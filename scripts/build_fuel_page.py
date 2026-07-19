@@ -193,7 +193,7 @@ td{{padding:9px 12px;border-bottom:1px solid var(--border)}}td.val{{text-align:r
   </div>
 
   <h2>30-day price trend</h2>
-  <div class="cht"><div class="cht-l">National average diesel</div>{chart_svg}</div>
+  <div class="cht"><div class="cht-l">National average diesel</div><div style="color:var(--text-muted);font-size:0.8125rem;padding:32px 0;text-align:center;">Coming soon {chart_svg}mdash; chart will appear as data accumulates.</div></div>
 
   <h2>Diesel by province</h2>
   <div class="metric-grid">{cards}</div>
