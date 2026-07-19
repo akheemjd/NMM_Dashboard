@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-276809",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.77015354,
+      "lng": -79.30383775,
+      "start": 1784453760,
+      "end": null,
+      "updated": 1784454300
+    },
+    {
       "id": "ON-276808",
       "province": "ON",
       "highway": "HWY 400",
@@ -792,26 +808,10 @@
       "start": 1784545200,
       "end": 1784588400,
       "updated": 1784301600
-    },
-    {
-      "id": "ON-276184",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between SUMMERSTOWN RD (IC 804)/SD&G CR 27, Summerstown and 5TH LINE RD , Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.09066,
-      "lng": -74.5921,
-      "start": 1784545200,
-      "end": 1784588400,
-      "updated": 1784300460
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T09:22:42.577861+00:00",
+  "updated": "2026-07-19T09:52:50.761569+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
