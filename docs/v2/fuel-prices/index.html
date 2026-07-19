@@ -1,195 +1,100 @@
-<!DOCTYPE html>
-<html lang="en-CA">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Canadian Diesel Prices by Province — Live Updates | Northern Mile</title>
-<meta name="description" content="Live diesel prices for every Canadian province. Historical trends, cost calculator, and fuel routing savings. Updated every 30 minutes.">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-prices/">
+<meta name="description" content="Live diesel prices for every Canadian province. National average, historical trends, cost calculator. Updated every 30 minutes.">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-prices/">
 <meta property="og:title" content="Canadian Diesel Prices — Live | Northern Mile">
-<meta property="og:description" content="Diesel across all 10 provinces. National average 171.9¢/L. Historical trends. Free.">
+<meta property="og:description" content="Diesel across all 10 provinces. National average 171.9c/L. Free.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--asphalt:#15171A;--slab:#1E2227;--line:#2C3238;--salt:#E8EAEC;--gravel:#8B939C;--gantry:#1F6B4A;--amber:#F2A900;--flare:#D93A34;--radius:8px}
-*{box-sizing:border-box;margin:0;padding:0;font-variant-numeric:tabular-nums}
-body{background:var(--asphalt);color:var(--salt);font-family:'Inter',-apple-system,sans-serif;font-size:0.875rem;line-height:1.5;-webkit-font-smoothing:antialiased}
+<style>:root{--asphalt:#15171A;--slab:#1E2227;--line:#2C3238;--salt:#E8EAEC;--gravel:#8B939C;--gantry:#1F6B4A;--amber:#F2A900;--flare:#D93A34;--radius:8px}
+*{box-sizing:border-box;margin:0;padding:0}*{font-variant-numeric:tabular-nums}
+body{background:var(--asphalt);color:var(--salt);font-family:'Inter',-apple-system,sans-serif;font-size:.875rem;line-height:1.5;-webkit-font-smoothing:antialiased}
 ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--asphalt)}::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
-a{color:var(--amber);text-decoration:none}
+*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}a{color:var(--amber);text-decoration:none}
 .banner{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:60px;position:sticky;top:0;z-index:1000}
-.banner h1{font-size:0.875rem;font-weight:700;color:var(--salt);font-family:'IBM Plex Mono',monospace}
-nav.seo-nav{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap}
-nav.seo-nav a{color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap}
-nav.seo-nav a:hover{color:var(--salt);border-color:var(--salt)}
-nav.seo-nav a.active{color:var(--amber);border-color:var(--amber)}
-.breadcrumbs{max-width:1200px;margin:0 auto;padding:8px 20px;font-size:0.625rem;color:var(--gravel)}.breadcrumbs a{color:var(--gravel)}
+.banner h1{font-size:.875rem;font-weight:700;color:var(--salt);font-family:'IBM Plex Mono',monospace}
+nav.n{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap}
+nav.n a{color:var(--gravel);text-decoration:none;font-size:.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap}
+nav.n a:hover{color:var(--salt);border-color:var(--salt)}nav.n a.ac{color:var(--amber);border-color:var(--amber)}
+.bc{max-width:1200px;margin:0 auto;padding:8px 20px;font-size:.625rem;color:var(--gravel)}.bc a{color:var(--gravel)}
 main{max-width:1200px;margin:0 auto;padding:20px 20px 48px}
-
 .hero{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
-.hero-price{font-size:3.25rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;line-height:1}
-.hero-price span{font-size:1rem;color:var(--gravel);font-weight:400}
-.hero-meta{flex:1;min-width:200px}
-.hero-label{font-size:0.625rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gravel);margin-bottom:4px;font-weight:600}
-.hero-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-.hero-stat{background:var(--asphalt);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;min-width:90px}
-.hero-stat-val{font-size:1.125rem;font-weight:600;font-family:'Barlow Condensed',sans-serif}
-.hero-stat-label{font-size:0.5625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.05em}
-
-h2{font-size:1rem;margin:28px 0 12px;font-weight:600}
-p.intro{color:var(--gravel);font-size:0.8125rem;margin-bottom:12px}
-
-.prov-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:24px}
-.prov-card{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
-.prov-code{font-size:0.75rem;font-weight:600;font-family:'IBM Plex Mono',monospace;color:var(--gravel)}
-.prov-name{font-size:0.6875rem;color:var(--gravel);margin:1px 0 6px}
-.prov-price{font-size:1.75rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;line-height:1.1}
-.prov-price span{font-size:0.6875rem;color:var(--gravel);font-weight:400}
-.prov-diff{font-size:0.625rem;margin-top:4px;color:var(--amber)}.prov-diff.neg{color:var(--gantry)}
-
-.chart-container{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px}
-.chart-label{font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gravel);margin-bottom:8px;font-weight:600}
-
-table{width:100%;border-collapse:collapse;font-size:0.8125rem}
-th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);font-size:0.625rem;text-transform:uppercase;letter-spacing:.05em;color:var(--gravel);font-weight:600}
+.hp{font-size:3.25rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;line-height:1}.hp span{font-size:1rem;color:var(--gravel);font-weight:400}
+.hm{flex:1;min-width:200px}.hl{font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:var(--gravel);margin-bottom:4px;font-weight:600}
+.hs{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.hst{background:var(--asphalt);border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;min-width:90px}
+.hsv{font-size:1.125rem;font-weight:600;font-family:'Barlow Condensed',sans-serif}
+.hsl{font-size:.5625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.05em}
+h2{font-size:1rem;margin:28px 0 12px;font-weight:600}p.in{color:var(--gravel);font-size:.8125rem;margin-bottom:12px}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:24px}
+.pc{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.pc-code{font-size:.75rem;font-weight:600;font-family:'IBM Plex Mono',monospace;color:var(--gravel)}
+.pc-name{font-size:.6875rem;color:var(--gravel);margin:1px 0 6px}
+.pc-price{font-size:1.75rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+.pc-price span{font-size:.6875rem;color:var(--gravel);font-weight:400}
+.pc-diff{font-size:.625rem;margin-top:4px;color:var(--amber)}.pc-diff.neg{color:var(--gantry)}
+.cht{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px}
+.cht-l{font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gravel);margin-bottom:8px;font-weight:600}
+table{width:100%;border-collapse:collapse;font-size:.8125rem}
+th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);font-size:.625rem;text-transform:uppercase;letter-spacing:.05em;color:var(--gravel);font-weight:600}
 td{padding:8px 10px;border-bottom:1px solid var(--line)}.val{text-align:right;font-family:'IBM Plex Mono',monospace}
-
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
-@media(max-width:700px){.grid2{grid-template-columns:1fr}}
-
-.card-panel{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
-
-.savings{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:24px}
-.save-card{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
-.save-route{font-size:0.8125rem;font-weight:500}
-.save-amount{font-size:1.5rem;font-weight:600;color:var(--gantry);font-family:'Barlow Condensed',sans-serif;margin-top:8px}
-
-.faq{margin:32px 0}
-.faq dt{font-weight:500;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--amber);font-size:0.9375rem}
-.faq dd{margin:6px 0 0;color:var(--gravel);font-size:0.875rem;line-height:1.6}
-
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.cp{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:0}
+.sc{background:var(--asphalt);border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.sc-r{font-size:.8125rem;font-weight:500}.sc-d{font-size:.6875rem;color:var(--gravel);margin-top:2px}
+.sc-a{font-size:1.5rem;font-weight:600;color:var(--gantry);font-family:'Barlow Condensed',sans-serif;margin-top:8px}
+.faq{margin:32px 0}.faq dt{font-weight:500;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--amber);font-size:.9375rem}
+.faq dd{margin:6px 0 0;color:var(--gravel);font-size:.875rem;line-height:1.6}
 .cta{text-align:center;margin:36px auto 20px;padding:24px;background:var(--slab);border:1px solid var(--amber);border-radius:var(--radius);max-width:480px}
-.cta h2{color:var(--amber);font-size:0.75rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-.cta p{font-size:0.875rem;margin:0 0 4px}.cta .sub{font-size:0.75rem;color:var(--gravel);margin-top:8px}
-
-.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:24px 0}
-.related a{display:block;background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;text-decoration:none;color:var(--salt);font-weight:500;font-size:0.8125rem}
-.related a:hover{border-color:var(--amber)}
-.updated{text-align:center;font-size:0.75rem;color:var(--gravel);padding:16px 0;font-family:'IBM Plex Mono',monospace}
-footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--gravel);border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace}footer a{color:var(--gravel)}
-@media(max-width:700px){.hero{flex-direction:column;padding:18px}.hero-price{font-size:2.5rem}.prov-grid{grid-template-columns:repeat(2,1fr)}}
-</style>
-</head>
-<body>
+.cta h2{color:var(--amber);font-size:.75rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.cta p{font-size:.875rem;margin:0 0 4px}.cta .sub{font-size:.75rem;color:var(--gravel);margin-top:8px}
+.rl{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:24px 0}
+.rl a{display:block;background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;text-decoration:none;color:var(--salt);font-weight:500;font-size:.8125rem}
+.rl a:hover{border-color:var(--amber)}
+.up{text-align:center;font-size:.75rem;color:var(--gravel);padding:16px 0;font-family:'IBM Plex Mono',monospace}
+footer{text-align:center;padding:24px;font-size:.625rem;color:var(--gravel);border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace}footer a{color:var(--gravel)}
+@media(max-width:700px){.hero{flex-direction:column;padding:18px}.hp{font-size:2.5rem}.pg{grid-template-columns:repeat(2,1fr)}.g2{grid-template-columns:1fr}}</style></head><body>
 <div class="banner"><a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><h1>NORTHERN MILE MEDIA</h1></a></div>
-<nav class="seo-nav">
-  <a href="/">Home</a><a href="/fuel-prices/" class="active">Fuel</a><a href="/exchange-rate/">FX</a>
-  <a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a>
-  <a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a>
-</nav>
-<div class="breadcrumbs"><a href="/">Dashboard</a> › Fuel Prices</div>
-<main>
-  <div class="hero">
-    <div>
-      <div class="hero-label">National average — Diesel</div>
-      <div class="hero-price">171.9<span>¢/L</span></div>
-    </div>
-    <div class="hero-meta">
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="hero-stat-val" style="color:var(--gantry);">158.9¢</div><div class="hero-stat-label">Cheapest — AB</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" style="color:var(--amber);">182.5¢</div><div class="hero-stat-label">Highest — NL</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" style="color:var(--amber);">23.6¢</div><div class="hero-stat-label">Spread</div></div>
-      </div>
-    </div>
-  </div>
+<nav class="n"><a href="/">Home</a><a href="/fuel-prices/" class="ac">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a></nav>
+<div class="bc"><a href="/">Dashboard</a> › Fuel Prices</div><main>
+<div class="hero"><div><div class="hl">National average — Diesel</div><div class="hp">171.9<span>c/L</span></div></div>
+<div class="hm"><div class="hs">
+<div class="hst"><div class="hsv" style="color:var(--gantry)">158.9c</div><div class="hsl">Cheapest — AB</div></div>
+<div class="hst"><div class="hsv" style="color:var(--amber)">182.5c</div><div class="hsl">Highest — NL</div></div>
+<div class="hst"><div class="hsv" style="color:var(--amber)">23.6c</div><div class="hsl">Spread</div></div>
+</div></div></div>
 
-  <h2>30-day price trend</h2>
-  <div class="chart-container">
-    <div class="chart-label">National average diesel — 2026-07-19</div>
-    <svg viewBox="0 0 560 120" style="width:100%;height:auto;max-height:140px;"><line x1="40" y1="8" x2="548" y2="8" stroke="var(--line)" stroke-width="0.5"/><line x1="40" y1="55" x2="548" y2="55" stroke="var(--line)" stroke-width="0.5"/><line x1="40" y1="102" x2="548" y2="102" stroke="var(--line)" stroke-width="0.5"/><line x1="40" y1="102" x2="548" y2="102" stroke="var(--line)" stroke-width="1"/><polyline points="40,102 294,102 548,102" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="40" cy="102" r="3" fill="var(--amber)"/><circle cx="548" cy="102" r="3" fill="var(--amber)"/><text x="550" y="102" font-size="11" font-weight="600" fill="var(--amber)">$171.90</text><text x="40" y="116" text-anchor="middle" font-size="7" fill="var(--gravel)">07-17</text><text x="548" y="116" text-anchor="middle" font-size="7" fill="var(--gravel)">07-19</text></svg>
-  </div>
+<h2>30-day price trend</h2>
+<div class="cht"><div class="cht-l">National average diesel</div>
+<svg viewBox="0 0 560 120" style="width:100%;height:auto;max-height:140px;"><line x1="38" y1="8" x2="548" y2="8" stroke="var(--line)" stroke-width="0.5"/><line x1="38" y1="55" x2="548" y2="55" stroke="var(--line)" stroke-width="0.5"/><line x1="38" y1="102" x2="548" y2="102" stroke="var(--line)" stroke-width="0.5"/><line x1="38" y1="102" x2="548" y2="102" stroke="var(--line)" stroke-width="1"/><polyline points="38,102 293,102 548,102" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linejoin="round"/><circle cx="38" cy="102" r="3" fill="var(--amber)"/><circle cx="548" cy="102" r="3" fill="var(--amber)"/><text x="551" y="106" font-size="10" font-weight="600" fill="var(--amber)">$171.90</text><text x="38" y="116" text-anchor="middle" font-size="7" fill="var(--gravel)">07-17</text><text x="548" y="116" text-anchor="middle" font-size="7" fill="var(--gravel)">07-19</text></svg></div>
 
-  <h2>Diesel by province</h2>
-  <div class="prov-grid"><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">BC</div><div class="prov-name">British Columbia</div>
-  <div class="prov-price">178.5<span>¢/L</span></div>
-  <div class="prov-diff ">+6.6¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--gantry);">
-  <div class="prov-code">AB</div><div class="prov-name">Alberta</div>
-  <div class="prov-price">158.9<span>¢/L</span></div>
-  <div class="prov-diff neg">-13.0¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">SK</div><div class="prov-name">Saskatchewan</div>
-  <div class="prov-price">162.3<span>¢/L</span></div>
-  <div class="prov-diff neg">-9.6¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">MB</div><div class="prov-name">Manitoba</div>
-  <div class="prov-price">165.7<span>¢/L</span></div>
-  <div class="prov-diff neg">-6.2¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">ON</div><div class="prov-name">Ontario</div>
-  <div class="prov-price">171.2<span>¢/L</span></div>
-  <div class="prov-diff neg">-0.7¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">QC</div><div class="prov-name">Quebec</div>
-  <div class="prov-price">175.8<span>¢/L</span></div>
-  <div class="prov-diff ">+3.9¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">NB</div><div class="prov-name">New Brunswick</div>
-  <div class="prov-price">173.4<span>¢/L</span></div>
-  <div class="prov-diff ">+1.5¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">NS</div><div class="prov-name">Nova Scotia</div>
-  <div class="prov-price">174.9<span>¢/L</span></div>
-  <div class="prov-diff ">+3.0¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--salt);">
-  <div class="prov-code">PE</div><div class="prov-name">PEI</div>
-  <div class="prov-price">176.1<span>¢/L</span></div>
-  <div class="prov-diff ">+4.2¢ vs national</div></div><div class="prov-card" style="border-left:3px solid var(--amber);">
-  <div class="prov-code">NL</div><div class="prov-name">Newfoundland</div>
-  <div class="prov-price">182.5<span>¢/L</span></div>
-  <div class="prov-diff ">+10.6¢ vs national</div></div></div>
+<h2>Diesel by province</h2>
+<div class="pg"><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">BC</div><div class="pc-name">British Columbia</div><div class="pc-price">178.5<span>c/L</span></div><div class="pc-diff ">+6.6c vs nat</div></div><div class="pc" style="border-left:3px solid var(--gantry);"><div class="pc-code">AB</div><div class="pc-name">Alberta</div><div class="pc-price">158.9<span>c/L</span></div><div class="pc-diff neg">-13.0c vs nat</div></div><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">SK</div><div class="pc-name">Saskatchewan</div><div class="pc-price">162.3<span>c/L</span></div><div class="pc-diff neg">-9.6c vs nat</div></div><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">MB</div><div class="pc-name">Manitoba</div><div class="pc-price">165.7<span>c/L</span></div><div class="pc-diff neg">-6.2c vs nat</div></div><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">ON</div><div class="pc-name">Ontario</div><div class="pc-price">171.2<span>c/L</span></div><div class="pc-diff neg">-0.7c vs nat</div></div><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">QC</div><div class="pc-name">Quebec</div><div class="pc-price">175.8<span>c/L</span></div><div class="pc-diff ">+3.9c vs nat</div></div><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">NB</div><div class="pc-name">New Brunswick</div><div class="pc-price">173.4<span>c/L</span></div><div class="pc-diff ">+1.5c vs nat</div></div><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">NS</div><div class="pc-name">Nova Scotia</div><div class="pc-price">174.9<span>c/L</span></div><div class="pc-diff ">+3.0c vs nat</div></div><div class="pc" style="border-left:3px solid var(--salt);"><div class="pc-code">PE</div><div class="pc-name">PEI</div><div class="pc-price">176.1<span>c/L</span></div><div class="pc-diff ">+4.2c vs nat</div></div><div class="pc" style="border-left:3px solid var(--amber);"><div class="pc-code">NL</div><div class="pc-name">Newfoundland</div><div class="pc-price">182.5<span>c/L</span></div><div class="pc-diff ">+10.6c vs nat</div></div></div>
 
-  <div class="grid2">
-    <div class="card-panel">
-      <h2 style="margin-top:0;">What diesel costs you</h2>
-      <p class="intro">Per 100km at 171.9¢/L national average:</p>
-      <table><tr><th>Your truck</th><th class="val">Cost/100km</th><th class="val">Formula</th></tr><tr><td>55 L/100km</td><td class="val">$94.55</td><td class="val">171.9¢ × 55L</td></tr><tr><td>45 L/100km</td><td class="val">$77.36</td><td class="val">171.9¢ × 45L</td></tr><tr><td>38 L/100km</td><td class="val">$65.32</td><td class="val">171.9¢ × 38L</td></tr><tr><td>35 L/100km</td><td class="val">$60.16</td><td class="val">171.9¢ × 35L</td></tr><tr><td>30 L/100km</td><td class="val">$51.57</td><td class="val">171.9¢ × 30L</td></tr><tr><td>25 L/100km</td><td class="val">$42.98</td><td class="val">171.9¢ × 25L</td></tr></table>
-    </div>
-    <div class="card-panel">
-      <h2 style="margin-top:0;">Route savings</h2>
-      <p class="intro">Fill up in cheaper provinces before crossing into expensive ones:</p>
-      <div class="savings" style="grid-template-columns:1fr 1fr;margin-bottom:0;">
-        <div class="save-card"><div class="save-route">Vancouver → Edmonton (1,160 km)</div><div class="save-amount">Save $91</div></div><div class="save-card"><div class="save-route">Toronto → Montreal (540 km)</div><div class="save-amount">Save $4</div></div><div class="save-card"><div class="save-route">Regina → Winnipeg (570 km)</div><div class="save-amount">Save $3</div></div><div class="save-card"><div class="save-route">Halifax → Moncton (260 km)</div><div class="save-amount">Save $2</div></div>
-      </div>
-    </div>
-  </div>
+<div class="g2">
+<div class="cp"><h2 style="margin-top:0;">Cost per 100km</h2><p class="in">At 171.9c/L national average:</p>
+<table><tr><th>Burn rate</th><th class="val">Cost</th><th class="val">Formula</th></tr><tr><td>55 L/100km</td><td class="val">$94.55</td><td class="val">171.9c x 55L</td></tr><tr><td>45 L/100km</td><td class="val">$77.36</td><td class="val">171.9c x 45L</td></tr><tr><td>38 L/100km</td><td class="val">$65.32</td><td class="val">171.9c x 38L</td></tr><tr><td>35 L/100km</td><td class="val">$60.16</td><td class="val">171.9c x 35L</td></tr><tr><td>30 L/100km</td><td class="val">$51.57</td><td class="val">171.9c x 30L</td></tr><tr><td>25 L/100km</td><td class="val">$42.98</td><td class="val">171.9c x 25L</td></tr></table></div>
+<div class="cp"><h2 style="margin-top:0;">Fill-up savings</h2><p class="in">Fuel in the cheaper province before crossing into the expensive one:</p>
+<div class="sg"><div class="sc"><div class="sc-r">Calgary to Vancouver (970 km)</div><div class="sc-d">+19.6c/L at destination · 340L burn</div><div class="sc-a">Save $67</div></div>\n<div class="sc"><div class="sc-r">Regina to Winnipeg (570 km)</div><div class="sc-d">+3.4c/L at destination · 200L burn</div><div class="sc-a">Save $7</div></div>\n<div class="sc"><div class="sc-r">Calgary to Saskatoon (620 km)</div><div class="sc-d">+3.4c/L at destination · 217L burn</div><div class="sc-a">Save $7</div></div>\n<div class="sc"><div class="sc-r">Halifax to Moncton (260 km)</div><div class="sc-d">+-1.5c/L at destination · 91L burn</div><div class="sc-a">Save $-1</div></div></div></div></div>
 
-  <h2>FAQ</h2>
-  <div class="faq">
-    <dl>
-      <dt>Why is diesel different across provinces?</dt>
-      <dd>Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies. Alberta has lower fuel levies and no provincial sales tax. Transportation to remote areas also pushes prices higher. The AB-NL spread is 23.6¢/L — $94 on a 400-litre fill.</dd>
-      <dt>Where should I fuel up?</dt>
-      <dd>Alberta has the lowest prices. Saskatchewan and Manitoba are next. Fill up before leaving Alberta or Saskatchewan if heading east or west — prices jump at the provincial borders.</dd>
-      <dt>How often do prices update?</dt>
-      <dd>Every 30 minutes from public fuel surveys across all ten provinces.</dd>
-      <dt>Do these include carbon tax?</dt>
-      <dd>Yes. All federal and provincial taxes are included.</dd>
-    </dl>
-  </div>
+<h2>FAQ</h2><div class="faq"><dl>
+<dt>Why is diesel different across provinces?</dt>
+<dd>Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies. Alberta has lower fuel levies and no provincial sales tax. The AB-NL spread is 23.6c/L — $94 on a 400-litre fill.</dd>
+<dt>Where should I fuel up?</dt>
+<dd>Alberta has the lowest prices. Saskatchewan and Manitoba are next. Fill up before leaving Alberta or Saskatchewan if heading east or west. Prices jump at provincial borders.</dd>
+<dt>How often do prices update?</dt>
+<dd>Every 30 minutes from public fuel surveys across all ten provinces.</dd>
+<dt>Do these prices include carbon tax?</dt>
+<dd>Yes. All federal and provincial taxes are included.</dd>
+</dl></div>
 
-  <div class="updated">Last updated: 2026-07-19 19:28 · Data refreshes every 30 minutes</div>
-
-  <div class="cta">
-    <h2>Get fuel prices in your inbox</h2>
-    <p>Fuel, border updates, and market shifts every Wednesday at 6am.</p>
-    <div class="sub"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></div>
-  </div>
-
-  <h2 style="text-align:center;">More data</h2>
-  <div class="related">
-    <a href="/exchange-rate/">CAD to USD →</a>
-    <a href="/border-wait-times/">Border wait times →</a>
-    <a href="/road-incidents/">Road incidents →</a>
-    <a href="/cargo-theft/">Cargo theft →</a>
-    <a href="/market-pulse/">Market indicators →</a>
-  </div>
+<div class="up">Last updated: 2026-07-19 22:04 · Refreshes every 30 minutes</div>
+<div class="cta"><h2>Get fuel prices in your inbox</h2><p>Fuel, border updates, and market shifts every Wednesday at 6am.</p>
+<div class="sub"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></div></div>
+<h2 style="text-align:center;">More data</h2>
+<div class="rl"><a href="/exchange-rate/">CAD to USD →</a><a href="/border-wait-times/">Border wait times →</a><a href="/road-incidents/">Road incidents →</a><a href="/cargo-theft/">Cargo theft →</a><a href="/market-pulse/">Market indicators →</a></div>
 </main>
 <footer><p>Northern Mile Media · For the people who keep Canada moving</p><p style="margin-top:6px;">Data from public sources. Informational use only.</p></footer>
-</body>
-</html>
+</body></html>
