@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Build canonical fuel-prices page from live data. Single source of truth template."""
-import json, os, csv
-from collections import OrderedDict
+import json, os
 from datetime import datetime
 
 DATA = os.path.expanduser("~/northern-mile-dashboard/data")
@@ -18,38 +17,6 @@ min_p, max_p = min(p[2] for p in provinces), max(p[2] for p in provinces)
 spread = max_p - min_p
 cheap_c = next(p[0] for p in provinces if p[2]==min_p)
 prcy_c = next(p[0] for p in provinces if p[2]==max_p)
-
-# ===== CHART =====
-chart_svg = '<div style="color:var(--text-muted);font-size:0.8125rem;padding:32px 0;text-align:center;">Chart building &mdash; data accumulating. Check back as history grows.</div>'
-hpath = f"{DATA}/history/fuel_diesel.csv"
-if os.path.exists(hpath):
-    days = OrderedDict()
-    with open(hpath) as fh:
-        for row in csv.DictReader(fh):
-            d = row['timestamp'][:10]
-            if d not in days: days[d] = float(row['national_avg'])
-    vals, dates = list(days.values())[-30:], list(days.keys())[-30:]
-    if len(vals) >= 7:
-        mi, mx = min(vals), max(vals); rng = max(mx-mi, 3)
-        W,H, L,R,T,B = 600,140, 48,32,12,24; pw,ph = W-L-R, H-T-B
-        s = f'<svg viewBox="0 0 {W} {H}" style="width:100%;height:auto;">'
-        for i in range(4):
-            y = int(T+ph*i/3)
-            s += f'<line x1="{L}" y1="{y}" x2="{W-R}" y2="{y}" stroke="var(--border)" stroke-width="0.5"/>'
-        s += f'<line x1="{L}" y1="{H-B}" x2="{W-R}" y2="{H-B}" stroke="var(--border)" stroke-width="1"/>'
-        pts = [f'{int(L+pw*i/max(1,len(vals)-1))},{int(T+ph-((v-mi)/rng*ph))}' for i,v in enumerate(vals)]
-        s += f'<polyline points="{" ".join(pts)}" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'
-        for i,v in enumerate(vals):
-            if i%5==0 or i==len(vals)-1:
-                x=int(L+pw*i/max(1,len(vals)-1)); y=int(T+ph-((v-mi)/rng*ph))
-                s += f'<circle cx="{x}" cy="{y}" r="3" fill="var(--amber)"/>'
-        lx=int(W-R-2); ly=int(T+ph-((vals[-1]-mi)/rng*ph))
-        s += f'<text x="{lx}" y="{ly-5}" text-anchor="end" font-size="11" font-weight="600" fill="var(--amber)">${vals[-1]:.2f}</text>'
-        for i in [0, len(vals)-1]:
-            x=int(L+pw*i/max(1,len(vals)-1))
-            s += f'<text x="{x}" y="{H-5}" text-anchor="middle" font-size="7" fill="var(--text-muted)">{dates[i][5:]}</text>'
-        s += '</svg>'
-        chart_svg = s
 
 # ===== PROVINCE CARDS =====
 cards = ''
@@ -193,7 +160,7 @@ td{{padding:9px 12px;border-bottom:1px solid var(--border)}}td.val{{text-align:r
   </div>
 
   <h2>30-day price trend</h2>
-  <div class="cht"><div class="cht-l">National average diesel</div><div style="color:var(--text-muted);font-size:0.8125rem;padding:32px 0;text-align:center;">Coming soon {chart_svg}mdash; chart will appear as data accumulates.</div></div>
+  <div class="cht"><div class="cht-l">National average diesel</div><div style="color:var(--text-muted);font-size:0.8125rem;padding:32px 0;text-align:center;">Coming soon mdash; chart will appear as data accumulates.</div></div>
 
   <h2>Diesel by province</h2>
   <div class="metric-grid">{cards}</div>
