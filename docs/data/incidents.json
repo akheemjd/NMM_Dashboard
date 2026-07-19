@@ -5,16 +5,16 @@
       "province": "ON",
       "highway": "HWY 410",
       "direction": "Southbound",
-      "description": "Collision on HWY 410 Southbound  at STEELES AVE, Brampton. Right lane closed.",
+      "description": "Collision on HWY 410 Southbound  at STEELES AVE, Brampton. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
+      "lanes": "2 right lanes and right shoulder closed",
       "lat": 43.68551913,
       "lng": -79.71164879,
       "start": 1784474400,
       "end": null,
-      "updated": 1784474400
+      "updated": 1784475660
     },
     {
       "id": "ON-276840",
@@ -63,22 +63,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1784470359
-    },
-    {
-      "id": "ON-276806",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  between BOUNDARY RD (IC 796), Cornwall and SUMMERSTOWN RD (IC 804)/SD&G CR 27, Summerstown. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.06337,
-      "lng": -74.69123,
-      "start": 1784447460,
-      "end": null,
-      "updated": 1784466240
     },
     {
       "id": "ON-274780",
@@ -808,10 +792,26 @@
       "start": 1784545200,
       "end": 1784671200,
       "updated": 1784303580
+    },
+    {
+      "id": "ON-276256",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 401 Westbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.629856,
+      "lng": -79.6843,
+      "start": 1784692740,
+      "end": 1784970000,
+      "updated": 1784303460
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T15:24:28.002430+00:00",
+  "updated": "2026-07-19T15:54:37.504510+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
