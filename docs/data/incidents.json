@@ -1,6 +1,74 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/DBC-86190",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Nicomen River Rd",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Highway 1 (TransCanada Highway), in both directions. Construction work between Nicomen River Rd and Junction Hwy 8 (13 km west of Spences Bridge). Until Wed Jun 30, 2027. Single lane alternating traffic in effect at Sackum Overhead 24/7 until Dec 2026. Speed reduced to 50km/h. Watch for signage and personnel. Expect minor delays. Please obey signage and signals. Next update time Mon Aug 31 at 10:00 AM PDT. Last updated Sun Jul 19 at 9:16 AM PDT. (DBC-86190)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.311004,
+      "lng": -121.395688,
+      "start": "2026-01-16T15:53:08-08:00",
+      "end": "",
+      "updated": "2026-07-19T09:16:52-07:00"
+    },
+    {
+      "id": "ON-276854",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at ETOBICOKE CREEK, Mississauga. Left shoulder and 4 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 4 left lanes closed",
+      "lat": 43.6546898,
+      "lng": -79.6237106,
+      "start": 1784476620,
+      "end": null,
+      "updated": 1784477580
+    },
+    {
+      "id": "ON-276855",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  between SUMMERSTOWN RD (IC 804)/SD&G CR 27, Summerstown and BOUNDARY RD (IC 796), Cornwall. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.09066,
+      "lng": -74.5921,
+      "start": 1784476860,
+      "end": null,
+      "updated": 1784476860
+    },
+    {
+      "id": "ON-276852",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at WINSTON CHURCHILL BLVD, Mississauga. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.6009697,
+      "lng": -79.7845368,
+      "start": 1784476500,
+      "end": null,
+      "updated": 1784476500
+    },
+    {
       "id": "ON-276843",
       "province": "ON",
       "highway": "HWY 410",
@@ -31,22 +99,6 @@
       "start": 1784473500,
       "end": null,
       "updated": 1784473500
-    },
-    {
-      "id": "ON-276837",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.31208216,
-      "lng": -79.85974017,
-      "start": 1784473020,
-      "end": null,
-      "updated": 1784473020
     },
     {
       "id": "ON-276829",
@@ -143,26 +195,6 @@
       "start": 1784595600,
       "end": 1784800800,
       "updated": 1784429460
-    },
-    {
-      "id": "drivebc.ca/DBC-86190",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Nicomen River Rd",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Highway 1 (TransCanada Highway), in both directions. Construction work between Nicomen River Rd and Junction Hwy 8 (13 km west of Spences Bridge). Until Wed Jun 30, 2027. Single lane alternating traffic in effect at Sackum Overhead 24/7 until Dec 2026. Speed reduced to 50km/h. Watch for signage and personnel. Expect minor delays 7am-5pm June 8-25. Please obey signage and signals. Next update time Fri Jul 24 at 5:00 PM PDT. Last updated Sat Jul 18 at 5:04 PM PDT. (DBC-86190)",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.311004,
-      "lng": -121.395688,
-      "start": "2026-01-16T15:53:08-08:00",
-      "end": "",
-      "updated": "2026-07-18T17:04:34-07:00"
     },
     {
       "id": "ON-276083",
@@ -776,42 +808,10 @@
       "start": 1784545200,
       "end": 1784671200,
       "updated": 1784303700
-    },
-    {
-      "id": "ON-276200",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 401 Westbound  between EDWARD ST (IC 716)/Leeds & Grenville CR 18, Prescott and NAPANEE SERVICE CENTER E5 W/B , Odessa. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.72298,
-      "lng": -75.52493,
-      "start": 1784545200,
-      "end": 1784671200,
-      "updated": 1784303580
-    },
-    {
-      "id": "ON-276256",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Engineering Investigation on HWY 401 Westbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.629856,
-      "lng": -79.6843,
-      "start": 1784692740,
-      "end": 1784970000,
-      "updated": 1784303460
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T15:54:37.504510+00:00",
+  "updated": "2026-07-19T16:24:47.021244+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
