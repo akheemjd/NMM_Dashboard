@@ -1,75 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canada-US Border Wait Times — Live Commercial & Truck Delays | Northern Mile</title>
-<meta name="description" content="Live Canada-US border wait times for commercial trucks. Ambassador Bridge, Blue Water Bridge, Peace Bridge, Lacolle, Coutts. CBSA data. Free.">
+<title>Canada-US Border Wait Times — Live Commercial Delays | Northern Mile</title>
+<meta name="description" content="Live Canada-US border wait times for commercial trucks. CBSA data at Ambassador Bridge, Blue Water, Peace Bridge, Lacolle, Coutts. Updated every 30 minutes.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/border-wait-times/">
-<meta property="og:title" content="Canada-US Border Wait Times — Live Commercial Delays">
-<meta property="og:description" content="Real-time CBSA border wait times for truckers. Every major crossing. Free.">
+<meta property="og:title" content="Canada-US Border Wait Times — Live Commercial Delays | Northern Mile">
+<meta property="og:description" content="Live Canada-US border wait times for commercial trucks. CBSA data at Ambassador Bridge, Blue Water, Peace Bridge, Lacolle, Coutts. Updated every 30 minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/border-wait-times/">
+<meta property="og:site_name" content="Northern Mile Media">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Canada-US Border Wait Times — Live Commercial Delays | Northern Mile">
+<meta name="twitter:description" content="Live Canada-US border wait times for commercial trucks. CBSA data at Ambassador Bridge, Blue Water, Peace Bridge, Lacolle, Coutts. Updated every 30 minutes.">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Dashboard",
+          "item": "https://dashboard.northernmilemedia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Canada-US Border Wait Times \u2014 Live Commercial Delays",
+          "item": "https://dashboard.northernmilemedia.com/border-wait-times/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Canada-US Border Wait Times \u2014 Live Commercial Delays | Northern Mile",
+      "description": "Live Canada-US border wait times for commercial trucks. CBSA data at Ambassador Bridge, Blue Water, Peace Bridge, Lacolle, Coutts. Updated every 30 minutes.",
+      "url": "https://dashboard.northernmilemedia.com/border-wait-times/",
+      "dateModified": "2026-07-19 13:03",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Northern Mile Media",
+        "url": "https://northernmilemedia.com"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Canada-US Border Wait Times"
+    }
+  ]
+}</script>
 <style>
-  :root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--line:#2C3238;--rad:8px}
-  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;padding:0;line-height:1.5}
-  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:16px 24px;text-align:center}
-  .banner h1{font-size:1.25rem;margin:0;color:var(--text)}
-  .banner p{font-size:0.75rem;color:var(--muted);margin:4px 0 0}
-  main{max-width:900px;margin:0 auto;padding:24px 20px}
-  h2{font-size:1rem;margin:24px 0 12px;color:var(--text)}
-  .crossing{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-  .crossing-name{font-weight:600;font-size:0.9375rem}
-  .crossing-route{font-size:0.75rem;color:var(--muted)}
-  .crossing-delay{text-align:right}
-  .delay-time{font-size:1.25rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
-  .delay-live{color:var(--green)}.delay-wait{color:var(--amber)}
-  .delay-label{font-size:0.625rem;color:var(--muted);text-transform:uppercase}
-  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px}
-  .cta{text-align:center;margin:32px 0;padding:24px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
-  .cta h3{color:var(--amber);font-size:0.8125rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em}
-  .cta p{color:var(--text);font-size:0.9375rem;margin:0 0 4px}
-  .cta a{color:var(--amber)}
+  :root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--red:#D93A34;--line:#2C3238;--rad:8px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;line-height:1.6;font-size:0.9375rem}
+  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .banner .logo{font-family:'IBM Plex Mono',monospace;font-size:0.8125rem;font-weight:700}
+  .banner nav{display:flex;gap:16px;flex-wrap:wrap}
+  .banner nav a{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;white-space:nowrap}
+  .banner nav a:hover{color:var(--text)}
+  .banner nav a.active{color:var(--amber)}
+  .breadcrumbs{padding:8px 24px;font-size:0.6875rem;color:var(--muted)}
+  .breadcrumbs a{color:var(--muted);text-decoration:none}
+  main{max-width:960px;margin:0 auto;padding:16px 20px 40px}
+  h1{font-size:1.5rem;margin-bottom:4px}
+  h2{font-size:1.125rem;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  h3{font-size:0.9375rem;margin:20px 0 8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:18px;margin-bottom:12px}
+  .price{font-size:2.25rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+  .green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}.muted{color:var(--muted);font-size:0.8125rem}
+  table{width:100%;border-collapse:collapse;font-size:0.875rem}
+  th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  td{padding:9px 10px;border-bottom:1px solid var(--line)}.val{text-align:right;font-family:'IBM Plex Mono',monospace}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px}
+  .metric-label{font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .metric-value{font-size:1.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
+  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px 0}
+  .cta{text-align:center;margin:36px 0 20px;padding:28px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
+  .cta h2{color:var(--amber);font-size:0.875rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;border:none;padding:0}
+  .cta p{margin:0 0 6px}
+  .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:24px 0}
+  .related a{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px;text-decoration:none;color:var(--text);font-weight:500;font-size:0.875rem}
+  .related a:hover{border-color:var(--amber)}
+  .faq{margin:24px 0}
+  .faq dt{font-weight:600;margin-top:16px;color:var(--amber)}
+  .faq dd{margin:4px 0 0;color:var(--muted);font-size:0.875rem}
   footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--muted);border-top:1px solid var(--line)}
+  footer a{color:var(--muted)}
   a{color:var(--amber);text-decoration:none}
+  @media(max-width:700px){.banner nav{gap:10px}h1{font-size:1.25rem}}
 </style>
 </head>
 <body>
 <div class="banner">
-  <h1>Canada-US Border Wait Times</h1>
-  <p>Live commercial truck delays at every major crossing. CBSA data.</p>
+  <a href="/" class="logo">NORTHERN MILE</a>
+  <nav>
+    <a href="/fuel-prices/">Fuel</a>
+    <a href="/exchange-rate/">FX</a>
+    <a href="/border-wait-times/">Border</a>
+    <a href="/road-incidents/">Incidents</a>
+    <a href="/cargo-theft/">Theft</a>
+    <a href="/market-pulse/">Market</a>
+    <a href="/industry-news/">News</a>
+  </nav>
+</div>
+<div class="breadcrumbs">
+  <a href="/">Dashboard</a> › Canada-US Border Wait Times — Live Commercial Delays
 </div>
 <main>
-  <p style="color:var(--muted);font-size:0.875rem;">Commercial truck wait times updated directly from CBSA. Check before you route. <a href="/">← Back to dashboard</a></p>
-
-  <div id="crossings">Loading...</div>
-
-  <div class="updated" id="updated"></div>
+  <article>
+    <h1>Canada-US Border Wait Times — Live Commercial Delays</h1>
+    <p class="muted">Live Canada-US border wait times for commercial trucks. CBSA data at Ambassador Bridge, Blue Water, Peace Bridge, Lacolle, Coutts. Updated every 30 minutes.</p>
+    <p class="muted">Commercial truck wait times at Canada-US land border crossings. Data from CBSA, updated every 30 minutes.</p>
+  <table><tr><th>Crossing</th><th class="val">Commercial delay</th><th>Last reported</th></tr><tr><td><strong>Ambassador Bridge</strong><br><span class="muted">Windsor, ON — Detroit, MI &middot; ON-3 / I-75</span></td><td class="val green">No delay</td><td class="muted">07:15 EDT</td></tr><tr><td><strong>Blue Water Bridge</strong><br><span class="muted">Sarnia, ON — Port Huron, MI &middot; ON-402 / I-69</span></td><td class="val green">No delay</td><td class="muted">07:15 EDT</td></tr><tr><td><strong>Peace Bridge</strong><br><span class="muted">Fort Erie, ON — Buffalo, NY &middot; QEW / I-190</span></td><td class="val amber">3 min</td><td class="muted">07:20 EDT</td></tr><tr><td><strong>Queenston-Lewiston Bridge</strong><br><span class="muted">Queenston, ON — Lewiston, NY &middot; ON-405 / I-190</span></td><td class="val green">No delay</td><td class="muted">07:20 EDT</td></tr><tr><td><strong>Lacolle Border Crossing</strong><br><span class="muted">Lacolle, QC — Champlain, NY &middot; A-15 / I-87</span></td><td class="val green">No delay</td><td class="muted">06:15 EDT</td></tr><tr><td><strong>Coutts-Sweetgrass</strong><br><span class="muted">Coutts, AB — Sweetgrass, MT &middot; AB-4 / I-15</span></td><td class="val green">No delay</td><td class="muted">05:15 MDT</td></tr><tr><td><strong>Pacific Highway Crossing</strong><br><span class="muted">Surrey, BC — Blaine, WA &middot; BC-15 / WA-543</span></td><td class="val amber">5 min</td><td class="muted">04:20 PDT</td></tr><tr><td><strong>Emerson-Pembina</strong><br><span class="muted">Emerson, MB — Pembina, ND &middot; MB-75 / I-29</span></td><td class="val green">No delay</td><td class="muted">05:15 CDT</td></tr><tr><td><strong>Thousand Islands Bridge</strong><br><span class="muted">Lansdowne, ON — Alexandria Bay, NY &middot; ON-137 / I-81</span></td><td class="val green">No delay</td><td class="muted">06:15 EDT</td></tr></table>
+  <p class="muted" style="margin-top:8px;">Crossings with FAST lanes: most ports. Queenston-Lewiston and Thousand Islands do not have FAST — commercial shares the traveller lane.</p>
+    <div class="faq">
+  <h2>Border crossing FAQ for truckers</h2>
+  <dl>
+    <dt>Which border crossings have FAST lanes for commercial trucks?</dt><dd>Ambassador Bridge, Blue Water Bridge, Peace Bridge, Lacolle, Coutts, Pacific Highway, and Emerson all have FAST dedicated lanes. Queenston-Lewiston and Thousand Islands do not.</dd>
+    <dt>How are wait times measured?</dt><dd>CBSA reports actual delays in minutes at each crossing. Delays are for commercial traffic where available; otherwise traveller delays are shown.</dd>
+    <dt>When are crossings busiest?</dt><dd>Monday mornings and Thursday/Friday afternoons typically see the highest commercial volumes. Holiday weekends increase delays at all crossings.</dd>
+    <dt>How often do border wait times update?</dt><dd>We check CBSA every 30 minutes. Last reported times are shown alongside each crossing.</dd>
+  </dl>
+</div>
+    <div class="updated">Last updated: 2026-07-19 13:03 &middot; Data refreshes every 30 minutes</div>
+  </article>
 
   <div class="cta">
-    <h3>Never miss a market move</h3>
-    <p>Get fuel prices, border updates, and market shifts in your inbox every Wednesday.</p>
-    <p style="font-size:0.75rem;color:var(--muted);margin-top:8px;"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+    <h2>Never miss a market move</h2>
+    <p>Get fuel prices, border updates, and market shifts in your inbox every Wednesday at 6am.</p>
+    <p class="muted"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+  </div>
+
+  <h2>More Canadian trucking data</h2>
+  <div class="related">
+    <a href="/fuel-prices/">Fuel prices by province →</a>
+    <a href="/exchange-rate/">CAD to USD exchange rate →</a>
+    <a href="/border-wait-times/">Live border wait times →</a>
+    <a href="/road-incidents/">Highway incidents →</a>
+    <a href="/cargo-theft/">Cargo theft reports →</a>
+    <a href="/market-pulse/">Market indicators →</a>
+    <a href="/industry-news/">Industry headlines →</a>
   </div>
 </main>
-
-<footer>&copy; 2026 Northern Mile Media &middot; CBSA border wait times &middot; Informational use only</footer>
-
-<script>
-fetch('/data/border.json').then(r=>r.json()).then(d=>{
-  var h='';
-  d.crossings.forEach(function(c){
-    var delay=c.delay_minutes||0;
-    var cls=delay>0?'delay-wait':'delay-live';
-    var delayTxt=delay>0?delay+' min':'No delay';
-    var src=c.source==='cbsa'?'Live':'Estimate';
-    h+='<div class="crossing">';
-    h+='<div><div class="crossing-name">'+c.name+'</div><div class="crossing-route">'+c.route+' &middot; '+c.highway+' &middot; '+src+'</div></div>';
-    h+='<div class="crossing-delay"><div class="delay-time '+cls+'">'+delayTxt+'</div><div class="delay-label">'+c.delay+'</div></div>';
-    h+='</div>';
-  });
-  document.getElementById('crossings').innerHTML=h;
-  document.getElementById('updated').textContent='Updated '+d.updated.substring(0,16).replace('T',' ');
-});
-</script>
+<footer>
+  <p>Northern Mile Media &middot; For the people who keep Canada moving &middot; <a href="/">Dashboard</a> &middot; <a href="https://northernmilemedia.com">Blog</a></p>
+  <p style="margin-top:6px;">Data from public and government sources. Informational use only. Not financial or dispatch advice.</p>
+</footer>
 </body>
 </html>

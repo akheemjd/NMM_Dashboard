@@ -1,66 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canadian Cargo Theft Reports — Live Incidents & Hotspots | Northern Mile</title>
-<meta name="description" content="Cargo theft incidents and hotspots across Canada. Toronto, Montreal, Calgary, Vancouver. Free tracking for truckers and fleet operators.">
+<title>Canadian Cargo Theft Reports — Incidents & Hotspots | Northern Mile</title>
+<meta name="description" content="Cargo theft tracking for Canadian trucking. Recent incidents, hotspots in Toronto, Montreal, Calgary. Free for fleet operators and dispatchers.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/cargo-theft/">
-<meta property="og:title" content="Canadian Cargo Theft Reports — Live Incidents & Hotspots">
-<meta property="og:description" content="Cargo theft incidents and hotspots across Canada. Toronto, Montreal, Calgary, Vancouver. Free tracking for truckers and fleet operators.">
+<meta property="og:title" content="Canadian Cargo Theft Reports — Incidents & Hotspots | Northern Mile">
+<meta property="og:description" content="Cargo theft tracking for Canadian trucking. Recent incidents, hotspots in Toronto, Montreal, Calgary. Free for fleet operators and dispatchers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/cargo-theft/">
+<meta property="og:site_name" content="Northern Mile Media">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Canadian Cargo Theft Reports — Incidents & Hotspots | Northern Mile">
+<meta name="twitter:description" content="Cargo theft tracking for Canadian trucking. Recent incidents, hotspots in Toronto, Montreal, Calgary. Free for fleet operators and dispatchers.">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Dashboard",
+          "item": "https://dashboard.northernmilemedia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Canadian Cargo Theft Reports \u2014 Incidents & Hotspots",
+          "item": "https://dashboard.northernmilemedia.com/cargo-theft/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "Canadian Cargo Theft Reports \u2014 Incidents & Hotspots | Northern Mile",
+      "description": "Cargo theft tracking for Canadian trucking. Recent incidents, hotspots in Toronto, Montreal, Calgary. Free for fleet operators and dispatchers.",
+      "url": "https://dashboard.northernmilemedia.com/cargo-theft/",
+      "dateModified": "2026-07-19 13:03",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Northern Mile Media",
+        "url": "https://northernmilemedia.com"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "Canadian Cargo Theft Incidents"
+    }
+  ]
+}</script>
 <style>
   :root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--red:#D93A34;--line:#2C3238;--rad:8px}
-  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;line-height:1.5}
-  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-  .banner h1{font-size:1rem;margin:0} .banner a{color:var(--muted);font-size:0.75rem;text-decoration:none}
-  main{max-width:900px;margin:0 auto;padding:24px 20px}
-  h2{font-size:1rem;margin:24px 0 12px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin-bottom:10px}
-  .price{font-size:2rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
-  .green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}
-  .muted{color:var(--muted);font-size:0.75rem}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;line-height:1.6;font-size:0.9375rem}
+  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .banner .logo{font-family:'IBM Plex Mono',monospace;font-size:0.8125rem;font-weight:700}
+  .banner nav{display:flex;gap:16px;flex-wrap:wrap}
+  .banner nav a{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;white-space:nowrap}
+  .banner nav a:hover{color:var(--text)}
+  .banner nav a.active{color:var(--amber)}
+  .breadcrumbs{padding:8px 24px;font-size:0.6875rem;color:var(--muted)}
+  .breadcrumbs a{color:var(--muted);text-decoration:none}
+  main{max-width:960px;margin:0 auto;padding:16px 20px 40px}
+  h1{font-size:1.5rem;margin-bottom:4px}
+  h2{font-size:1.125rem;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  h3{font-size:0.9375rem;margin:20px 0 8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:18px;margin-bottom:12px}
+  .price{font-size:2.25rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+  .green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}.muted{color:var(--muted);font-size:0.8125rem}
   table{width:100%;border-collapse:collapse;font-size:0.875rem}
-  th{text-align:left;padding:8px;border-bottom:2px solid var(--line);font-size:0.625rem;text-transform:uppercase;color:var(--muted)}
-  td{padding:8px;border-bottom:1px solid var(--line)}.val{text-align:right;font-family:'IBM Plex Mono',monospace}
-  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px}
-  .cta{text-align:center;margin:32px 0;padding:24px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
-  .cta h3{color:var(--amber);font-size:0.8125rem;margin:0 0 8px;text-transform:uppercase}
+  th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  td{padding:9px 10px;border-bottom:1px solid var(--line)}.val{text-align:right;font-family:'IBM Plex Mono',monospace}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px}
+  .metric-label{font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .metric-value{font-size:1.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
+  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px 0}
+  .cta{text-align:center;margin:36px 0 20px;padding:28px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
+  .cta h2{color:var(--amber);font-size:0.875rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;border:none;padding:0}
+  .cta p{margin:0 0 6px}
+  .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:24px 0}
+  .related a{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px;text-decoration:none;color:var(--text);font-weight:500;font-size:0.875rem}
+  .related a:hover{border-color:var(--amber)}
+  .faq{margin:24px 0}
+  .faq dt{font-weight:600;margin-top:16px;color:var(--amber)}
+  .faq dd{margin:4px 0 0;color:var(--muted);font-size:0.875rem}
   footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--muted);border-top:1px solid var(--line)}
+  footer a{color:var(--muted)}
   a{color:var(--amber);text-decoration:none}
+  @media(max-width:700px){.banner nav{gap:10px}h1{font-size:1.25rem}}
 </style>
 </head>
 <body>
 <div class="banner">
-  <h1>Canadian Cargo Theft Reports — Live Incidents & Hotspots</h1>
-  <a href="/">← Dashboard</a>
+  <a href="/" class="logo">NORTHERN MILE</a>
+  <nav>
+    <a href="/fuel-prices/">Fuel</a>
+    <a href="/exchange-rate/">FX</a>
+    <a href="/border-wait-times/">Border</a>
+    <a href="/road-incidents/">Incidents</a>
+    <a href="/cargo-theft/">Theft</a>
+    <a href="/market-pulse/">Market</a>
+    <a href="/industry-news/">News</a>
+  </nav>
+</div>
+<div class="breadcrumbs">
+  <a href="/">Dashboard</a> › Canadian Cargo Theft Reports — Incidents & Hotspots
 </div>
 <main>
-<h2>Recent Incidents</h2>
-    <table><tr><th>Incident</th><th>Location</th><th class="val">Value</th></tr><tr><td>Electronics load</td><td>Brampton, ON</td><td class="val red">$$250,000</td></tr>
-<tr><td>47 trailers recovered in theft ring bust</td><td>Greater Montreal, QC</td><td class="val red">$$4,000,000</td></tr>
-<tr><td>Reefer load — meat products</td><td>Mississauga, ON</td><td class="val red">$$85,000</td></tr>
-<tr><td>Consumer electronics — US-bound</td><td>Delta, BC</td><td class="val red">$$180,000</td></tr>
-<tr><td>Identity theft pickup</td><td>Calgary, AB</td><td class="val red">$$90,000</td></tr>
-<tr><td>Building materials — two trailers</td><td>Laval, QC</td><td class="val red">$$120,000</td></tr>
-<tr><td>Three reefers — food products</td><td>Nisku, AB</td><td class="val red">$$300,000</td></tr>
-<tr><td>Five trailers — mixed freight</td><td>Winnipeg, MB</td><td class="val red">$$210,000</td></tr>
-</table>
-    <h2>Hotspots</h2>
-    <table><tr><th>City</th><th>Risk</th></tr><tr><td>Toronto / GTA</td><td>Highest cargo theft volume in Canada.</td></tr>
-<tr><td>Montreal</td><td>Second highest. Port and Saint-Laurent zones.</td></tr>
-<tr><td>Calgary</td><td>Increasing. Balzac and Foothills.</td></tr>
-<tr><td>Edmonton</td><td>Nisku and Acheson parks.</td></tr>
-<tr><td>Vancouver</td><td>Port area. Delta and Surrey.</td></tr>
-<tr><td>Winnipeg</td><td>Emerging. CentrePort area.</td></tr>
-</table>
-  <div class="updated">Updated 2026-07-19 12:22</div>
+  <article>
+    <h1>Canadian Cargo Theft Reports — Incidents & Hotspots</h1>
+    <p class="muted">Cargo theft tracking for Canadian trucking. Recent incidents, hotspots in Toronto, Montreal, Calgary. Free for fleet operators and dispatchers.</p>
+    <h2>Recent cargo theft incidents</h2>
+  <table><tr><th>Incident</th><th>Location</th><th class="val">Value</th></tr><tr><td>Electronics load</td><td>Brampton, ON</td><td class="val red">$$250,000</td></tr><tr><td>47 trailers recovered in theft ring bust</td><td>Greater Montreal, QC</td><td class="val red">$$4,000,000</td></tr><tr><td>Reefer load — meat products</td><td>Mississauga, ON</td><td class="val red">$$85,000</td></tr><tr><td>Consumer electronics — US-bound</td><td>Delta, BC</td><td class="val red">$$180,000</td></tr><tr><td>Identity theft pickup</td><td>Calgary, AB</td><td class="val red">$$90,000</td></tr><tr><td>Building materials — two trailers</td><td>Laval, QC</td><td class="val red">$$120,000</td></tr><tr><td>Three reefers — food products</td><td>Nisku, AB</td><td class="val red">$$300,000</td></tr><tr><td>Five trailers — mixed freight</td><td>Winnipeg, MB</td><td class="val red">$$210,000</td></tr></table>
+  <h2>High-risk areas</h2>
+  <div class="grid"><div class="metric"><div class="metric-label">Toronto / GTA</div><div class="metric-value" style="font-size:0.9375rem;">Highest cargo theft volume in Canada.</div></div><div class="metric"><div class="metric-label">Montreal</div><div class="metric-value" style="font-size:0.9375rem;">Second highest. Port and Saint-Laurent zones.</div></div><div class="metric"><div class="metric-label">Calgary</div><div class="metric-value" style="font-size:0.9375rem;">Increasing. Balzac and Foothills.</div></div><div class="metric"><div class="metric-label">Edmonton</div><div class="metric-value" style="font-size:0.9375rem;">Nisku and Acheson parks.</div></div><div class="metric"><div class="metric-label">Vancouver</div><div class="metric-value" style="font-size:0.9375rem;">Port area. Delta and Surrey.</div></div><div class="metric"><div class="metric-label">Winnipeg</div><div class="metric-value" style="font-size:0.9375rem;">Emerging. CentrePort area.</div></div></div>
+    <div class="faq">
+  <h2>Cargo theft FAQ</h2>
+  <dl>
+    <dt>Where is cargo theft most common in Canada?</dt><dd>The Greater Toronto Area accounts for the highest volume. Montreal is second. Calgary, Edmonton, and Vancouver also see regular incidents.</dd>
+    <dt>What types of loads are targeted most?</dt><dd>Electronics, meat and food products, building materials, and consumer goods are the most commonly stolen.</dd>
+    <dt>How can carriers protect their loads?</dt><dd>Park in secure, well-lit lots. Use GPS tracking. Avoid leaving loaded trailers unattended overnight in high-risk zones.</dd>
+  </dl>
+</div>
+    <div class="updated">Last updated: 2026-07-19 13:03 &middot; Data refreshes every 30 minutes</div>
+  </article>
+
   <div class="cta">
-    <h3>Never miss a market move</h3>
-    <p style="margin:0 0 4px;">Get fuel prices, border updates, and market shifts in your inbox every Wednesday.</p>
-    <p class="muted" style="margin-top:8px;"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+    <h2>Never miss a market move</h2>
+    <p>Get fuel prices, border updates, and market shifts in your inbox every Wednesday at 6am.</p>
+    <p class="muted"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+  </div>
+
+  <h2>More Canadian trucking data</h2>
+  <div class="related">
+    <a href="/fuel-prices/">Fuel prices by province →</a>
+    <a href="/exchange-rate/">CAD to USD exchange rate →</a>
+    <a href="/border-wait-times/">Live border wait times →</a>
+    <a href="/road-incidents/">Highway incidents →</a>
+    <a href="/cargo-theft/">Cargo theft reports →</a>
+    <a href="/market-pulse/">Market indicators →</a>
+    <a href="/industry-news/">Industry headlines →</a>
   </div>
 </main>
-<footer>&copy; 2026 Northern Mile Media &middot; Data from public sources &middot; Informational use only</footer>
+<footer>
+  <p>Northern Mile Media &middot; For the people who keep Canada moving &middot; <a href="/">Dashboard</a> &middot; <a href="https://northernmilemedia.com">Blog</a></p>
+  <p style="margin-top:6px;">Data from public and government sources. Informational use only. Not financial or dispatch advice.</p>
+</footer>
 </body>
 </html>

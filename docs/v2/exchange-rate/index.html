@@ -1,50 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>CAD to USD Exchange Rate — Live Canadian Dollar | Northern Mile</title>
-<meta name="description" content="Live CAD/USD exchange rate. Canadian dollar to US dollar. Updated from Bank of Canada. Free.">
+<meta name="description" content="Live CAD/USD exchange rate for Canadian trucking and cross-border freight. Bank of Canada data, updated every 30 minutes.">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/exchange-rate/">
-<meta property="og:title" content="CAD to USD Exchange Rate — Live Canadian Dollar">
-<meta property="og:description" content="Live CAD/USD exchange rate. Canadian dollar to US dollar. Updated from Bank of Canada. Free.">
+<meta property="og:title" content="CAD to USD Exchange Rate — Live Canadian Dollar | Northern Mile">
+<meta property="og:description" content="Live CAD/USD exchange rate for Canadian trucking and cross-border freight. Bank of Canada data, updated every 30 minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/exchange-rate/">
+<meta property="og:site_name" content="Northern Mile Media">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CAD to USD Exchange Rate — Live Canadian Dollar | Northern Mile">
+<meta name="twitter:description" content="Live CAD/USD exchange rate for Canadian trucking and cross-border freight. Bank of Canada data, updated every 30 minutes.">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Dashboard",
+          "item": "https://dashboard.northernmilemedia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CAD to USD Exchange Rate \u2014 Live Canadian Dollar",
+          "item": "https://dashboard.northernmilemedia.com/exchange-rate/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "CAD to USD Exchange Rate \u2014 Live Canadian Dollar | Northern Mile",
+      "description": "Live CAD/USD exchange rate for Canadian trucking and cross-border freight. Bank of Canada data, updated every 30 minutes.",
+      "url": "https://dashboard.northernmilemedia.com/exchange-rate/",
+      "dateModified": "2026-07-19 13:03",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Northern Mile Media",
+        "url": "https://northernmilemedia.com"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "CAD/USD Exchange Rate"
+    }
+  ]
+}</script>
 <style>
   :root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--red:#D93A34;--line:#2C3238;--rad:8px}
-  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;line-height:1.5}
-  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
-  .banner h1{font-size:1rem;margin:0} .banner a{color:var(--muted);font-size:0.75rem;text-decoration:none}
-  main{max-width:900px;margin:0 auto;padding:24px 20px}
-  h2{font-size:1rem;margin:24px 0 12px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;margin-bottom:10px}
-  .price{font-size:2rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
-  .green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}
-  .muted{color:var(--muted);font-size:0.75rem}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;line-height:1.6;font-size:0.9375rem}
+  .banner{background:var(--card);border-bottom:1px solid var(--line);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .banner .logo{font-family:'IBM Plex Mono',monospace;font-size:0.8125rem;font-weight:700}
+  .banner nav{display:flex;gap:16px;flex-wrap:wrap}
+  .banner nav a{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;white-space:nowrap}
+  .banner nav a:hover{color:var(--text)}
+  .banner nav a.active{color:var(--amber)}
+  .breadcrumbs{padding:8px 24px;font-size:0.6875rem;color:var(--muted)}
+  .breadcrumbs a{color:var(--muted);text-decoration:none}
+  main{max-width:960px;margin:0 auto;padding:16px 20px 40px}
+  h1{font-size:1.5rem;margin-bottom:4px}
+  h2{font-size:1.125rem;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  h3{font-size:0.9375rem;margin:20px 0 8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:18px;margin-bottom:12px}
+  .price{font-size:2.25rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+  .green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}.muted{color:var(--muted);font-size:0.8125rem}
   table{width:100%;border-collapse:collapse;font-size:0.875rem}
-  th{text-align:left;padding:8px;border-bottom:2px solid var(--line);font-size:0.625rem;text-transform:uppercase;color:var(--muted)}
-  td{padding:8px;border-bottom:1px solid var(--line)}.val{text-align:right;font-family:'IBM Plex Mono',monospace}
-  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px}
-  .cta{text-align:center;margin:32px 0;padding:24px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
-  .cta h3{color:var(--amber);font-size:0.8125rem;margin:0 0 8px;text-transform:uppercase}
+  th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  td{padding:9px 10px;border-bottom:1px solid var(--line)}.val{text-align:right;font-family:'IBM Plex Mono',monospace}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .metric{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px}
+  .metric-label{font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .metric-value{font-size:1.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
+  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px 0}
+  .cta{text-align:center;margin:36px 0 20px;padding:28px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
+  .cta h2{color:var(--amber);font-size:0.875rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;border:none;padding:0}
+  .cta p{margin:0 0 6px}
+  .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:24px 0}
+  .related a{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px;text-decoration:none;color:var(--text);font-weight:500;font-size:0.875rem}
+  .related a:hover{border-color:var(--amber)}
+  .faq{margin:24px 0}
+  .faq dt{font-weight:600;margin-top:16px;color:var(--amber)}
+  .faq dd{margin:4px 0 0;color:var(--muted);font-size:0.875rem}
   footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--muted);border-top:1px solid var(--line)}
+  footer a{color:var(--muted)}
   a{color:var(--amber);text-decoration:none}
+  @media(max-width:700px){.banner nav{gap:10px}h1{font-size:1.25rem}}
 </style>
 </head>
 <body>
 <div class="banner">
-  <h1>CAD to USD Exchange Rate — Live Canadian Dollar</h1>
-  <a href="/">← Dashboard</a>
+  <a href="/" class="logo">NORTHERN MILE</a>
+  <nav>
+    <a href="/fuel-prices/">Fuel</a>
+    <a href="/exchange-rate/">FX</a>
+    <a href="/border-wait-times/">Border</a>
+    <a href="/road-incidents/">Incidents</a>
+    <a href="/cargo-theft/">Theft</a>
+    <a href="/market-pulse/">Market</a>
+    <a href="/industry-news/">News</a>
+  </nav>
+</div>
+<div class="breadcrumbs">
+  <a href="/">Dashboard</a> › CAD to USD Exchange Rate — Live Canadian Dollar
 </div>
 <main>
-<div class="card"><div class="price">1.3924</div><p class="muted">Canadian Dollar to US Dollar</p><p class="red">-0.009</p></div>
-    <p class="muted">Impacts cross-border freight rates, fuel costs, and equipment imports. A weaker loonie means Canadian exports are more competitive.</p>
-  <div class="updated">Updated 2026-07-19 12:22</div>
+  <article>
+    <h1>CAD to USD Exchange Rate — Live Canadian Dollar</h1>
+    <p class="muted">Live CAD/USD exchange rate for Canadian trucking and cross-border freight. Bank of Canada data, updated every 30 minutes.</p>
+    <div class="card">
+    <div class="price">1.3924</div>
+    <p class="muted">Canadian Dollar to US Dollar</p>
+    <p class="red" style="font-size:0.9375rem;font-weight:600;">-0.009 ↓</p>
+  </div>
+  <p class="muted">CAD/USD exchange rate from Bank of Canada. Impacts cross-border freight rates, fuel imports, equipment purchases, and US lane profitability.</p>
+  <div class="grid">
+    <div class="metric"><div class="metric-label">Day high</div><div class="metric-value">—</div></div>
+    <div class="metric"><div class="metric-label">Day low</div><div class="metric-value">—</div></div>
+  </div>
+    <div class="faq">
+  <h2>How the exchange rate affects Canadian trucking</h2>
+  <dl>
+    <dt>How does a weak Canadian dollar affect cross-border loads?</dt><dd>When CAD drops against USD, Canadian exports become cheaper for US buyers. Cross-border freight demand increases. Canadian carriers running US lanes get paid in USD, which converts to more CAD.</dd>
+    <dt>How does the exchange rate affect diesel costs?</dt><dd>Oil is priced in USD. A weaker loonie means Canadian carriers pay more in CAD for the same barrel of oil, which pushes diesel prices higher.</dd>
+    <dt>How often does this rate update?</dt><dd>Every 30 minutes from Bank of Canada close data.</dd>
+  </dl>
+</div>
+    <div class="updated">Last updated: 2026-07-19 13:03 &middot; Data refreshes every 30 minutes</div>
+  </article>
+
   <div class="cta">
-    <h3>Never miss a market move</h3>
-    <p style="margin:0 0 4px;">Get fuel prices, border updates, and market shifts in your inbox every Wednesday.</p>
-    <p class="muted" style="margin-top:8px;"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+    <h2>Never miss a market move</h2>
+    <p>Get fuel prices, border updates, and market shifts in your inbox every Wednesday at 6am.</p>
+    <p class="muted"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+  </div>
+
+  <h2>More Canadian trucking data</h2>
+  <div class="related">
+    <a href="/fuel-prices/">Fuel prices by province →</a>
+    <a href="/exchange-rate/">CAD to USD exchange rate →</a>
+    <a href="/border-wait-times/">Live border wait times →</a>
+    <a href="/road-incidents/">Highway incidents →</a>
+    <a href="/cargo-theft/">Cargo theft reports →</a>
+    <a href="/market-pulse/">Market indicators →</a>
+    <a href="/industry-news/">Industry headlines →</a>
   </div>
 </main>
-<footer>&copy; 2026 Northern Mile Media &middot; Data from public sources &middot; Informational use only</footer>
+<footer>
+  <p>Northern Mile Media &middot; For the people who keep Canada moving &middot; <a href="/">Dashboard</a> &middot; <a href="https://northernmilemedia.com">Blog</a></p>
+  <p style="margin-top:6px;">Data from public and government sources. Informational use only. Not financial or dispatch advice.</p>
+</footer>
 </body>
 </html>
