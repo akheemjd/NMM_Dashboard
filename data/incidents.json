@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-274780",
+      "province": "ON",
+      "highway": "HWY 527",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.786243282,
+      "lng": -89.144978175,
+      "start": 1784010780,
+      "end": null,
+      "updated": 1784461980
+    },
+    {
       "id": "ON-276813",
       "province": "ON",
       "highway": "QEW",
@@ -31,22 +47,6 @@
       "start": 1784447460,
       "end": null,
       "updated": 1784449440
-    },
-    {
-      "id": "ON-274780",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.786243282,
-      "lng": -89.144978175,
-      "start": 1784010780,
-      "end": null,
-      "updated": 1784433120
     },
     {
       "id": "ON-276786",
@@ -811,7 +811,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T11:53:26.430577+00:00",
+  "updated": "2026-07-19T12:23:34.791424+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
