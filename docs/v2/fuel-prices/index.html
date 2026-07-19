@@ -4,163 +4,199 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Canadian Diesel Prices by Province — Live Updates | Northern Mile</title>
-<meta name="description" content="Live diesel prices for every Canadian province. National average, BC, Alberta, Ontario diesel costs. Updated every 30 minutes from public fuel surveys.">
-<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="description" content="Live diesel prices for every Canadian province. National average, BC, Alberta, Ontario fuel costs. Updated every 30 minutes from public surveys.">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-prices/">
-<meta property="og:title" content="Canadian Diesel Prices by Province — Live Updates | Northern Mile">
-<meta property="og:description" content="Live diesel prices for every Canadian province. National average, BC, Alberta, Ontario diesel costs. Updated every 30 minutes from public fuel surveys.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://dashboard.northernmilemedia.com/fuel-prices/">
-<meta property="og:site_name" content="Northern Mile Media">
+<meta property="og:title" content="Canadian Diesel Prices by Province — Live | Northern Mile">
+<meta property="og:description" content="Diesel prices across all 10 provinces. National average 171.9¢/L. Free.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Canadian Diesel Prices by Province — Live Updates | Northern Mile">
-<meta name="twitter:description" content="Live diesel prices for every Canadian province. National average, BC, Alberta, Ontario diesel costs. Updated every 30 minutes from public fuel surveys.">
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Dashboard",
-          "item": "https://dashboard.northernmilemedia.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Canadian Diesel Prices by Province \u2014 Live Updates",
-          "item": "https://dashboard.northernmilemedia.com/fuel-prices/"
-        }
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "name": "Canadian Diesel Prices by Province \u2014 Live Updates | Northern Mile",
-      "description": "Live diesel prices for every Canadian province. National average, BC, Alberta, Ontario diesel costs. Updated every 30 minutes from public fuel surveys.",
-      "url": "https://dashboard.northernmilemedia.com/fuel-prices/",
-      "dateModified": "2026-07-19 15:20",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Northern Mile Media",
-        "url": "https://northernmilemedia.com"
-      }
-    },
-    {
-      "@type": "Dataset",
-      "name": "Canadian Diesel Prices",
-      "description": "Live diesel prices for all 10 Canadian provinces",
-      "temporalCoverage": "2026-07-19",
-      "spatialCoverage": {
-        "@type": "Country",
-        "name": "Canada"
-      }
-    }
-  ]
-}</script>
 <style>
-  :root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--red:#D93A34;--line:#2C3238;--rad:8px}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;margin:0;line-height:1.6;font-size:0.9375rem}
-  .banner{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:60px;position:sticky;top:0;z-index:1000}
-  .banner a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
-  
-  nav.seo-nav{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap}
+:root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--red:#D93A34;--line:#2C3238;--rad:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;font-size:0.9375rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+.banner{background:var(--asphalt,var(--bg));border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:60px;position:sticky;top:0;z-index:1000}
+.banner h1{font-size:0.875rem;font-weight:700;color:var(--text);font-family:'IBM Plex Mono',monospace}
+nav.seo-nav{background:var(--bg);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap}
 nav.seo-nav a{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap}
 nav.seo-nav a:hover{color:var(--text);border-color:var(--text)}
 nav.seo-nav a.active{color:var(--amber);border-color:var(--amber)}
-.breadcrumbs{padding:8px 24px;font-size:0.6875rem;color:var(--muted)}
-  .breadcrumbs a{color:var(--muted);text-decoration:none}
-  main{max-width:960px;margin:0 auto;padding:16px 20px 40px}
-  h1{font-size:1.5rem;margin-bottom:4px}
-  h2{font-size:1.125rem;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
-  h3{font-size:0.9375rem;margin:20px 0 8px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:18px;margin-bottom:12px}
-  .price{font-size:2.25rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;line-height:1.1}
-  .green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}.muted{color:var(--muted);font-size:0.8125rem}
-  table{width:100%;border-collapse:collapse;font-size:0.875rem}
-  th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
-  td{padding:9px 10px;border-bottom:1px solid var(--line)}.val{text-align:right;font-family:'IBM Plex Mono',monospace}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-  .metric{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px}
-  .metric-label{font-size:0.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
-  .metric-value{font-size:1.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
-  .updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px 0}
-  .cta{text-align:center;margin:36px 0 20px;padding:28px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
-  .cta h2{color:var(--amber);font-size:0.875rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;border:none;padding:0}
-  .cta p{margin:0 0 6px}
-  .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:24px 0}
-  .related a{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:14px;text-decoration:none;color:var(--text);font-weight:500;font-size:0.875rem}
-  .related a:hover{border-color:var(--amber)}
-  .faq{margin:24px 0}
-  .faq dt{font-weight:600;margin-top:16px;color:var(--amber)}
-  .faq dd{margin:4px 0 0;color:var(--muted);font-size:0.875rem}
-  footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--muted);border-top:1px solid var(--line)}
-  footer a{color:var(--muted)}
-  a{color:var(--amber);text-decoration:none}
-  @media(max-width:700px){.banner nav{gap:10px}h1{font-size:1.25rem}}
+.breadcrumbs{max-width:960px;margin:0 auto;padding:8px 20px;font-size:0.6875rem;color:var(--muted)}
+.breadcrumbs a{color:var(--muted);text-decoration:none}
+main{max-width:960px;margin:0 auto;padding:20px 20px 48px}
+
+.hero{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:28px 32px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.hero-price{font-size:3.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;line-height:1;color:var(--text)}
+.hero-price span{font-size:1.25rem;color:var(--muted);font-weight:400}
+.hero-meta{flex:1;min-width:200px}
+.hero-label{font-size:0.6875rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+.hero-stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px}
+.hero-stat{background:var(--bg);border-radius:6px;padding:10px 14px;min-width:100px}
+.hero-stat-val{font-size:1.25rem;font-weight:600;font-family:'Barlow Condensed',sans-serif}
+.hero-stat-label{font-size:0.625rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}
+
+.prov-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px}
+.prov-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;transition:border-color .15s}
+.prov-card:hover{border-color:var(--muted)}
+.prov-card.hi{border-left:3px solid var(--amber)}
+.prov-card.lo{border-left:3px solid var(--green)}
+.prov-code{font-size:1.5rem;font-weight:700;font-family:'IBM Plex Mono',monospace}
+.prov-name{font-size:0.6875rem;color:var(--muted);margin:2px 0 8px}
+.prov-price{font-size:1.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
+.prov-diff{font-size:0.6875rem;margin-top:4px}.prov-diff.neg{color:var(--green)}.prov-diff.pos{color:var(--amber)}
+
+h2{font-size:1.125rem;margin:28px 0 12px;font-weight:600}
+.savings{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:24px}
+.save-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px}
+.save-route{font-size:0.8125rem;font-weight:600;margin-bottom:4px}
+.save-detail{font-size:0.75rem;color:var(--muted)}
+.save-amount{font-size:1.25rem;font-weight:700;color:var(--green);font-family:'Barlow Condensed',sans-serif;margin-top:6px}
+
+.faq{margin:32px 0}
+.faq dt{font-weight:600;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--amber);font-size:0.9375rem}
+.faq dd{margin:6px 0 0;color:var(--muted);font-size:0.875rem;line-height:1.6}
+
+.cta{text-align:center;margin:36px 0 20px;padding:28px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
+.cta h2{color:var(--amber);font-size:0.875rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;border:none;padding:0}
+.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:24px 0}
+.related a{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px;text-decoration:none;color:var(--text);font-weight:500;font-size:0.8125rem;text-align:center}
+.related a:hover{border-color:var(--amber)}
+.updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px 0}
+footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--muted);border-top:1px solid var(--line)}
+footer a{color:var(--muted)}
+a{color:var(--amber);text-decoration:none}
+@media(max-width:700px){.hero{flex-direction:column;padding:20px}.hero-price{font-size:2.5rem}.prov-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-<div class="banner">
-  <a href="/">
-    <h1>NORTHERN MILE MEDIA</h1>
-  </a>
-</div>
+<div class="banner"><a href="/"><h1>NORTHERN MILE MEDIA</h1></a></div>
 <nav class="seo-nav">
-    <a href="/">Home</a>
-    <a href="/fuel-prices/">Fuel</a>
-    <a href="/exchange-rate/">FX</a>
-    <a href="/border-wait-times/">Border</a>
-    <a href="/road-incidents/">Incidents</a>
-    <a href="/cargo-theft/">Theft</a>
-    <a href="/market-pulse/">Market</a>
-    <a href="/industry-news/">News</a>
+  <a href="/">Home</a>
+  <a href="/fuel-prices/" class="active">Fuel</a>
+  <a href="/exchange-rate/">FX</a>
+  <a href="/border-wait-times/">Border</a>
+  <a href="/road-incidents/">Incidents</a>
+  <a href="/cargo-theft/">Theft</a>
+  <a href="/market-pulse/">Market</a>
+  <a href="/industry-news/">News</a>
 </nav>
-<div class="breadcrumbs">
-  <a href="/">Dashboard</a> › Canadian Diesel Prices by Province — Live Updates
-</div>
+<div class="breadcrumbs"><a href="/">Dashboard</a> › Fuel Prices</div>
 <main>
-  <article>
-    <h1>Canadian Diesel Prices by Province — Live Updates</h1>
-    <p class="muted">Live diesel prices for every Canadian province. National average, BC, Alberta, Ontario diesel costs. Updated every 30 minutes from public fuel surveys.</p>
-    <div class="card"><div class="price">171.9¢/L</div><p class="muted">Canadian national average diesel price</p></div>
-  <h2>Diesel prices by province</h2>
-  <table><tr><th>Province</th><th class="val">Diesel (¢/L)</th><th class="val">Unit</th></tr><tr><td>BC</td><td class="val">178.5</td><td class="val">¢/L</td></tr><tr><td>AB</td><td class="val">158.9</td><td class="val">¢/L</td></tr><tr><td>SK</td><td class="val">162.3</td><td class="val">¢/L</td></tr><tr><td>MB</td><td class="val">165.7</td><td class="val">¢/L</td></tr><tr><td>ON</td><td class="val">171.2</td><td class="val">¢/L</td></tr><tr><td>QC</td><td class="val">175.8</td><td class="val">¢/L</td></tr><tr><td>NB</td><td class="val">173.4</td><td class="val">¢/L</td></tr><tr><td>NS</td><td class="val">174.9</td><td class="val">¢/L</td></tr><tr><td>PE</td><td class="val">176.1</td><td class="val">¢/L</td></tr><tr><td>NL</td><td class="val">182.5</td><td class="val">¢/L</td></tr></table>
-  <p class="muted" style="margin-top:8px;">Prices collected from public fuel surveys. Gasoline prices also available on the <a href="/">main dashboard</a>.</p>
-    <div class="faq">
-  <h2>Frequently asked questions about Canadian diesel prices</h2>
-  <dl>
-    <dt>Why are diesel prices different in every province?</dt><dd>Provincial fuel taxes vary significantly. BC has carbon taxes and transit levies. Alberta has the lowest taxes in Canada. Transportation costs to remote areas also affect prices.</dd>
-    <dt>How often do these diesel prices update?</dt><dd>Prices refresh every 30 minutes from public fuel surveys across all ten provinces.</dd>
-    <dt>Where is diesel cheapest in Canada?</dt><dd>Alberta typically has the lowest diesel prices due to lower provincial fuel taxes and proximity to refineries.</dd>
-    <dt>Do these prices include federal carbon tax?</dt><dd>Yes. Prices shown are the pump/rack price including all applicable federal and provincial taxes.</dd>
-  </dl>
-</div>
-    <div class="updated">Last updated: 2026-07-19 15:20 &middot; Data refreshes every 30 minutes</div>
-  </article>
-
-  <div class="cta">
-    <h2>Never miss a market move</h2>
-    <p>Get fuel prices, border updates, and market shifts in your inbox every Wednesday at 6am.</p>
-    <p class="muted"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+  <div class="hero">
+    <div>
+      <div class="hero-label">National average — Diesel</div>
+      <div class="hero-price">171.9<span>¢/L</span></div>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-val green">158.9¢</div>
+          <div class="hero-stat-label">Cheapest — AB</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val amber">182.5¢</div>
+          <div class="hero-stat-label">Most expensive — NL</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val amber">23.6¢</div>
+          <div class="hero-stat-label">Price spread</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <h2>More Canadian trucking data</h2>
+  <h2>Diesel by province</h2>
+  <div class="prov-grid"><div class="prov-card hi">
+  <div class="prov-code">BC</div>
+  <div class="prov-name">British Columbia</div>
+  <div class="prov-price">178.5<span>¢/L</span></div>
+  <div class="prov-diff pos">+6.6¢ vs national</div>
+</div><div class="prov-card lo">
+  <div class="prov-code">AB</div>
+  <div class="prov-name">Alberta</div>
+  <div class="prov-price">158.9<span>¢/L</span></div>
+  <div class="prov-diff neg">-13.0¢ vs national</div>
+</div><div class="prov-card lo">
+  <div class="prov-code">SK</div>
+  <div class="prov-name">Saskatchewan</div>
+  <div class="prov-price">162.3<span>¢/L</span></div>
+  <div class="prov-diff neg">-9.6¢ vs national</div>
+</div><div class="prov-card lo">
+  <div class="prov-code">MB</div>
+  <div class="prov-name">Manitoba</div>
+  <div class="prov-price">165.7<span>¢/L</span></div>
+  <div class="prov-diff neg">-6.2¢ vs national</div>
+</div><div class="prov-card ">
+  <div class="prov-code">ON</div>
+  <div class="prov-name">Ontario</div>
+  <div class="prov-price">171.2<span>¢/L</span></div>
+  <div class="prov-diff neg">-0.7¢ vs national</div>
+</div><div class="prov-card ">
+  <div class="prov-code">QC</div>
+  <div class="prov-name">Quebec</div>
+  <div class="prov-price">175.8<span>¢/L</span></div>
+  <div class="prov-diff pos">+3.9¢ vs national</div>
+</div><div class="prov-card ">
+  <div class="prov-code">NB</div>
+  <div class="prov-name">New Brunswick</div>
+  <div class="prov-price">173.4<span>¢/L</span></div>
+  <div class="prov-diff pos">+1.5¢ vs national</div>
+</div><div class="prov-card ">
+  <div class="prov-code">NS</div>
+  <div class="prov-name">Nova Scotia</div>
+  <div class="prov-price">174.9<span>¢/L</span></div>
+  <div class="prov-diff pos">+3.0¢ vs national</div>
+</div><div class="prov-card ">
+  <div class="prov-code">PE</div>
+  <div class="prov-name">PEI</div>
+  <div class="prov-price">176.1<span>¢/L</span></div>
+  <div class="prov-diff pos">+4.2¢ vs national</div>
+</div><div class="prov-card hi">
+  <div class="prov-code">NL</div>
+  <div class="prov-name">Newfoundland</div>
+  <div class="prov-price">182.5<span>¢/L</span></div>
+  <div class="prov-diff pos">+10.6¢ vs national</div>
+</div></div>
+
+  <h2>What you save routing through cheaper provinces</h2>
+  <div class="savings">
+    <div class="save-card"><div class="save-route">Vancouver → Edmonton</div><div class="save-detail">1,160 km</div><div class="save-amount">Save $91</div></div><div class="save-card"><div class="save-route">Toronto → Montreal</div><div class="save-detail">540 km</div><div class="save-amount">Save $4</div></div><div class="save-card"><div class="save-route">Regina → Winnipeg</div><div class="save-detail">570 km</div><div class="save-amount">Save $3</div></div><div class="save-card"><div class="save-route">Halifax → Moncton</div><div class="save-detail">260 km</div><div class="save-amount">Save $2</div></div>
+  </div>
+
+  <h2>FAQ</h2>
+  <div class="faq">
+    <dl>
+      <dt>Why is diesel so different across provinces?</dt>
+      <dd>Provincial fuel taxes are the main driver. BC adds carbon tax, transit levies, and a dedicated fuel tax. Alberta has no provincial sales tax and lower fuel levies. Transportation costs to remote areas (like Newfoundland) also push prices higher. The gap between BC and Alberta alone is 23.6¢/L right now — that's $94 on a 400-litre fill.</dd>
+      <dt>Where should I fuel up to save money?</dt>
+      <dd>Alberta consistently has the lowest diesel prices in Canada. Saskatchewan and Manitoba are the next cheapest. If you're running cross-country, fill up before leaving Alberta or Saskatchewan — prices jump significantly east of Manitoba and west of the Rockies.</dd>
+      <dt>How often do prices update?</dt>
+      <dd>Every 30 minutes from public fuel surveys across all ten provinces. Prices shown are the most recent available rack and pump prices.</dd>
+      <dt>Do these include carbon tax?</dt>
+      <dd>Yes. All federal and provincial taxes are included in the prices shown.</dd>
+    </dl>
+  </div>
+
+  <div class="updated">Last updated: 2026-07-19 17:04 &middot; Refreshes every 30 minutes</div>
+
+  <div class="cta">
+    <h2>Get fuel prices in your inbox</h2>
+    <p style="margin:0 0 4px;">Fuel, border updates, and market shifts every Wednesday at 6am.</p>
+    <p style="font-size:0.75rem;color:var(--muted);margin-top:8px;"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+  </div>
+
+  <h2 style="text-align:center;">More data</h2>
   <div class="related">
-    <a href="/fuel-prices/">Fuel prices by province →</a>
-    <a href="/exchange-rate/">CAD to USD exchange rate →</a>
-    <a href="/border-wait-times/">Live border wait times →</a>
-    <a href="/road-incidents/">Highway incidents →</a>
-    <a href="/cargo-theft/">Cargo theft reports →</a>
+    <a href="/exchange-rate/">CAD to USD →</a>
+    <a href="/border-wait-times/">Border wait times →</a>
+    <a href="/road-incidents/">Road incidents →</a>
+    <a href="/cargo-theft/">Cargo theft →</a>
     <a href="/market-pulse/">Market indicators →</a>
-    <a href="/industry-news/">Industry headlines →</a>
   </div>
 </main>
 <footer>
-  <p>Northern Mile Media &middot; For the people who keep Canada moving &middot; <a href="/">Dashboard</a> &middot; <a href="https://northernmilemedia.com">Blog</a></p>
-  <p style="margin-top:6px;">Data from public and government sources. Informational use only. Not financial or dispatch advice.</p>
+  <p>Northern Mile Media &middot; For the people who keep Canada moving</p>
+  <p style="margin-top:6px;">Data from public sources. Informational use only.</p>
 </footer>
 </body>
 </html>
