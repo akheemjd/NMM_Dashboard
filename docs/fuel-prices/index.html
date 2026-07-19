@@ -11,65 +11,71 @@
 <meta property="og:description" content="Diesel prices across all 10 provinces. National average 171.9¢/L. Free.">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-:root{--bg:#15171A;--card:#1E2227;--text:#E8EAEC;--muted:#8B939C;--green:#1F6B4A;--amber:#F2A900;--red:#D93A34;--line:#2C3238;--rad:10px}
+:root{--asphalt:#15171A;--slab:#1E2227;--line:#2C3238;--salt:#E8EAEC;--gravel:#8B939C;--gantry:#1F6B4A;--amber:#F2A900;--flare:#D93A34;--radius:8px;--pill-radius:12px}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;font-size:0.9375rem;line-height:1.55;-webkit-font-smoothing:antialiased}
-.banner{background:var(--asphalt,var(--bg));border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:60px;position:sticky;top:0;z-index:1000}
-.banner h1{font-size:0.875rem;font-weight:700;color:var(--text);font-family:'IBM Plex Mono',monospace}
-nav.seo-nav{background:var(--bg);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap}
-nav.seo-nav a{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap}
-nav.seo-nav a:hover{color:var(--text);border-color:var(--text)}
+body{background:var(--asphalt);color:var(--salt);font-family:Inter,-apple-system,sans-serif;font-size:0.9375rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+.banner{background:var(--asphalt,var(--asphalt));border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:60px;position:sticky;top:0;z-index:1000}
+.banner h1{font-size:0.875rem;font-weight:700;color:var(--salt);font-family:'IBM Plex Mono',monospace}
+nav.seo-nav{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap}
+nav.seo-nav a{color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap}
+nav.seo-nav a:hover{color:var(--salt);border-color:var(--salt)}
 nav.seo-nav a.active{color:var(--amber);border-color:var(--amber)}
-.breadcrumbs{max-width:960px;margin:0 auto;padding:8px 20px;font-size:0.6875rem;color:var(--muted)}
-.breadcrumbs a{color:var(--muted);text-decoration:none}
+.breadcrumbs{max-width:960px;margin:0 auto;padding:8px 20px;font-size:0.6875rem;color:var(--gravel)}
+.breadcrumbs a{color:var(--gravel);text-decoration:none}
 main{max-width:960px;margin:0 auto;padding:20px 20px 48px}
 
-.hero{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:28px 32px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
-.hero-price{font-size:3.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;line-height:1;color:var(--text)}
-.hero-price span{font-size:1.25rem;color:var(--muted);font-weight:400}
+.hero{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.hero-price{font-size:3.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;line-height:1;color:var(--salt)}
+.hero-price span{font-size:1.25rem;color:var(--gravel);font-weight:400}
 .hero-meta{flex:1;min-width:200px}
-.hero-label{font-size:0.6875rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px}
+.hero-label{font-size:0.6875rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gravel);margin-bottom:4px}
 .hero-stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px}
-.hero-stat{background:var(--bg);border-radius:6px;padding:10px 14px;min-width:100px}
+.hero-stat{background:var(--asphalt);border-radius:var(--radius);padding:10px 14px;min-width:100px}
 .hero-stat-val{font-size:1.25rem;font-weight:600;font-family:'Barlow Condensed',sans-serif}
-.hero-stat-label{font-size:0.625rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
-.green{color:var(--green)}.amber{color:var(--amber)}.red{color:var(--red)}
+.hero-stat-label{font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em}
+.green{color:var(--gantry)}.amber{color:var(--amber)}.red{color:var(--flare)}
 
 .prov-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px}
-.prov-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px;transition:border-color .15s}
-.prov-card:hover{border-color:var(--muted)}
+.prov-card{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px;transition:border-color .15s}
+.prov-card:hover{border-color:var(--gravel)}
 .prov-card.hi{border-left:3px solid var(--amber)}
-.prov-card.lo{border-left:3px solid var(--green)}
+.prov-card.lo{border-left:3px solid var(--gantry)}
 .prov-code{font-size:1.5rem;font-weight:700;font-family:'IBM Plex Mono',monospace}
-.prov-name{font-size:0.6875rem;color:var(--muted);margin:2px 0 8px}
+.prov-name{font-size:0.6875rem;color:var(--gravel);margin:2px 0 8px}
 .prov-price{font-size:1.5rem;font-weight:700;font-family:'Barlow Condensed',sans-serif}
-.prov-diff{font-size:0.6875rem;margin-top:4px}.prov-diff.neg{color:var(--green)}.prov-diff.pos{color:var(--amber)}
+.prov-diff{font-size:0.6875rem;margin-top:4px}.prov-diff.neg{color:var(--gantry)}.prov-diff.pos{color:var(--amber)}
 
 h2{font-size:1.125rem;margin:28px 0 12px;font-weight:600}
 .savings{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:24px}
-.save-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:16px}
+.save-card{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
 .save-route{font-size:0.8125rem;font-weight:600;margin-bottom:4px}
-.save-detail{font-size:0.75rem;color:var(--muted)}
-.save-amount{font-size:1.25rem;font-weight:700;color:var(--green);font-family:'Barlow Condensed',sans-serif;margin-top:6px}
+.save-detail{font-size:0.75rem;color:var(--gravel)}
+.save-amount{font-size:1.25rem;font-weight:700;color:var(--gantry);font-family:'Barlow Condensed',sans-serif;margin-top:6px}
 
 .faq{margin:32px 0}
 .faq dt{font-weight:600;margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--amber);font-size:0.9375rem}
-.faq dd{margin:6px 0 0;color:var(--muted);font-size:0.875rem;line-height:1.6}
+.faq dd{margin:6px 0 0;color:var(--gravel);font-size:0.875rem;line-height:1.6}
 
-.cta{text-align:center;margin:36px 0 20px;padding:28px;background:var(--card);border:2px solid var(--amber);border-radius:var(--rad)}
+.cta{text-align:center;margin:36px 0 20px;padding:28px;background:var(--slab);border:2px solid var(--amber);border-radius:var(--radius)}
 .cta h2{color:var(--amber);font-size:0.875rem;margin:0 0 8px;text-transform:uppercase;letter-spacing:.08em;border:none;padding:0}
 .related{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin:24px 0}
-.related a{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px;text-decoration:none;color:var(--text);font-weight:500;font-size:0.8125rem;text-align:center}
+.related a{display:block;background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-decoration:none;color:var(--salt);font-weight:500;font-size:0.8125rem;text-align:center}
 .related a:hover{border-color:var(--amber)}
-.updated{text-align:center;font-size:0.75rem;color:var(--muted);padding:16px 0}
-footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--muted);border-top:1px solid var(--line)}
-footer a{color:var(--muted)}
+.updated{text-align:center;font-size:0.75rem;color:var(--gravel);padding:16px 0}
+footer{text-align:center;padding:24px;font-size:0.625rem;color:var(--gravel);border-top:1px solid var(--line)}
+footer a{color:var(--gravel)}
 a{color:var(--amber);text-decoration:none}
 @media(max-width:700px){.hero{flex-direction:column;padding:20px}.hero-price{font-size:2.5rem}.prov-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="banner"><a href="/"><h1>NORTHERN MILE MEDIA</h1></a></div>
+<div class="banner">
+  <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+    <h1>NORTHERN MILE MEDIA</h1>
+  </a>
+</div>
 <nav class="seo-nav">
   <a href="/">Home</a>
   <a href="/fuel-prices/" class="active">Fuel</a>
@@ -182,7 +188,7 @@ a{color:var(--amber);text-decoration:none}
   <div class="cta">
     <h2>Get fuel prices in your inbox</h2>
     <p style="margin:0 0 4px;">Fuel, border updates, and market shifts every Wednesday at 6am.</p>
-    <p style="font-size:0.75rem;color:var(--muted);margin-top:8px;"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
+    <p style="font-size:0.75rem;color:var(--gravel);margin-top:8px;"><a href="https://northernmilemedia.com">Sign up for the Northern Mile Brief →</a></p>
   </div>
 
   <h2 style="text-align:center;">More data</h2>
