@@ -1,25 +1,36 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/DBC-93681",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 97",
-        "from": "Meadow Lake road near Clinton",
-        "to": "Upper Dog Creek Road near Clinton",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Highway 97, in both directions. Road cleared between Meadow Lake road and Upper Dog Creek Road near Clinton. Last updated Sat Jul 18 at 5:07 PM PDT. (DBC-93681)",
-      "event_type": "incident",
-      "severity": "MAJOR",
+      "id": "ON-276759",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at THIRD LINE, Oakville. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
       "closure": false,
-      "lanes": "",
-      "lat": 51.205823,
-      "lng": -121.536859,
-      "start": "2026-07-18T12:22:18-07:00",
-      "end": "",
-      "updated": "2026-07-18T17:07:42-07:00"
+      "lanes": "left lane closed",
+      "lat": 43.42398426,
+      "lng": -79.72517004,
+      "start": 1784421240,
+      "end": null,
+      "updated": 1784421240
+    },
+    {
+      "id": "ON-276755",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound ON-RAMP at MORNINGSIDE AVE, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.797057,
+      "lng": -79.196496,
+      "start": 1784420460,
+      "end": null,
+      "updated": 1784420460
     },
     {
       "id": "drivebc.ca/DBC-86190",
@@ -72,22 +83,6 @@
       "start": 1784416260,
       "end": null,
       "updated": 1784416260
-    },
-    {
-      "id": "ON-276735",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 17 Eastbound  at NEYS PROV PARK ENT (S) - COLDWELL TWP, Marathon. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 48.780196765,
-      "lng": -86.587096904,
-      "start": 1784414640,
-      "end": null,
-      "updated": 1784414640
     },
     {
       "id": "ON-276083",
@@ -816,7 +811,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T00:16:05.229308+00:00",
+  "updated": "2026-07-19T00:46:14.819229+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
