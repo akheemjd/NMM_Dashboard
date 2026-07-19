@@ -97,22 +97,6 @@
       "updated": 1784429460
     },
     {
-      "id": "ON-276760",
-      "province": "ON",
-      "highway": "HWY 7A",
-      "direction": "Westbound",
-      "description": "Road Conditions on HWY 7A Westbound  at QUEEN STREET, Port Perry. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.097086,
-      "lng": -78.959271,
-      "start": 1784421960,
-      "end": null,
-      "updated": 1784421960
-    },
-    {
       "id": "drivebc.ca/DBC-86190",
       "province": "BC",
       "highway": {
@@ -808,10 +792,26 @@
       "start": 1784545200,
       "end": 1784588400,
       "updated": 1784300460
+    },
+    {
+      "id": "ON-276268",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound Collector between DUNDAS STREET and EVANS AVE, Toronto. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.628445,
+      "lng": -79.5568,
+      "start": 1785117600,
+      "end": 1785488400,
+      "updated": 1784298060
     }
   ],
   "total": 50,
-  "updated": "2026-07-19T05:21:30.961709+00:00",
+  "updated": "2026-07-19T05:51:42.777238+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
