@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-277302",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound HOV at APPLEBY LINE, Burlington. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.381331519,
+      "lng": -79.771535397,
+      "start": 1784577720,
+      "end": null,
+      "updated": 1784577720
+    },
+    {
+      "id": "ON-277294",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at NEWTONVILLE ROAD, Newtonville. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.9311645,
+      "lng": -78.48899812,
+      "start": 1784576040,
+      "end": null,
+      "updated": 1784576040
+    },
+    {
       "id": "ON-277293",
       "province": "ON",
       "highway": "QEW",
@@ -79,27 +111,6 @@
       "start": 1784718000,
       "end": 1785535200,
       "updated": 1784574180
-    },
-    {
-      "id": "drivebc.ca/RIDE-100681",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Trans-Canada Highway",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident. Right lane blocked. Expect delays. Surrey exit lanes, left lane blocked.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.20177449,
-      "lng": -122.79849116,
-      "start": "2026-07-20T11:33:28-07:00",
-      "end": "",
-      "updated": "2026-07-20T12:00:09-07:00"
     },
     {
       "id": "ON-277264",
@@ -788,26 +799,10 @@
       "start": 1781491500,
       "end": null,
       "updated": 1784549400
-    },
-    {
-      "id": "ON-274780",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.786243282,
-      "lng": -89.144978175,
-      "start": 1784010780,
-      "end": null,
-      "updated": 1784549400
     }
   ],
   "total": 50,
-  "updated": "2026-07-20T19:37:41.927571+00:00",
+  "updated": "2026-07-20T20:07:49.798758+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
