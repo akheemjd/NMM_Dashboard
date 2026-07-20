@@ -115,7 +115,7 @@ def write_page(path, title, desc, breadcrumb, hero_html, body_html, faq_html):
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body>
 
-<div class="header"><a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><h1>NORTHERN MILE MEDIA</h1></a></div>
+<div class="header"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><img src="/logo.jpg" alt="Northern Mile Media" style="height:32px;width:auto;"><h1>NORTHERN MILE MEDIA</h1></a></div>
 <nav class="nav">{nav}</nav>
 <div class="breadcrumb"><a href="/">Dashboard</a> &rsaquo; {breadcrumb}</div>
 
