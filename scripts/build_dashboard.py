@@ -272,6 +272,10 @@ body{
   position:sticky;top:0;z-index:1000;height:64px
 }
 .banner h1{font-size:0.875rem;font-weight:700;color:var(--salt);font-family:'IBM Plex Mono',monospace;letter-spacing:-.01em}
+.nav{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;-webkit-overflow-scrolling:touch}
+.nav a{color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:600;padding:8px 0;border-bottom:2px solid transparent;flex-shrink:0}
+.nav a:hover,.nav a:focus-visible{color:var(--salt);border-color:var(--salt)}
+.nav a.active{color:var(--amber);border-color:var(--amber)}
 
 .main{max-width:1320px;margin:0 auto;padding:12px 16px 32px}
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
@@ -402,16 +406,16 @@ html = f"""<!DOCTYPE html>
     <h1>NORTHERN MILE MEDIA</h1>
   </a>
 </div>
-<nav style="background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:20px;overflow-x:auto;flex-wrap:wrap;">
-  <a href="{BASE_PATH}" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Home</a>
-  <a href="{BASE_PATH}fuel-prices/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Fuel</a>
-  <a href="{BASE_PATH}exchange-rate/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">FX</a>
-  <a href="{BASE_PATH}border-wait-times/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Border</a>
-  <a href="{BASE_PATH}road-incidents/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Incidents</a>
-  <a href="{BASE_PATH}cargo-theft/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Theft</a>
-  <a href="{BASE_PATH}market-pulse/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Market</a>
-  <a href="{BASE_PATH}industry-news/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">News</a>
-  <a href="{BASE_PATH}fuel-cost-calculator/" style="color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap;" onmouseover="this.style.borderColor='var(--salt)';this.style.color='var(--salt)'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--gravel)'">Calc</a>
+<nav class="nav">
+  <a href="{BASE_PATH}" class="active">Home</a>
+  <a href="{BASE_PATH}fuel-prices/">Fuel</a>
+  <a href="{BASE_PATH}exchange-rate/">FX</a>
+  <a href="{BASE_PATH}border-wait-times/">Border</a>
+  <a href="{BASE_PATH}road-incidents/">Incidents</a>
+  <a href="{BASE_PATH}cargo-theft/">Theft</a>
+  <a href="{BASE_PATH}market-pulse/">Market</a>
+  <a href="{BASE_PATH}industry-news/">News</a>
+  <a href="{BASE_PATH}fuel-cost-calculator/">Calc</a>
 </nav>
 <div class="main">
   {staleness_warning}
