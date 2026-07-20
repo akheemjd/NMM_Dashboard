@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
+      "id": "ON-277213",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WESTON ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.71325981,
+      "lng": -79.53596808,
+      "start": 1784568720,
+      "end": null,
+      "updated": 1784568720
+    },
+    {
       "id": "ON-277199",
       "province": "ON",
       "highway": "HWY 3",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 3 Both Directions  at Manning Road / County Road 19, Maidstone. All lanes closed.",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 3 Eastbound  at Manning Road / County Road 19, Maidstone. WEST shoulder and lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
+      "closure": false,
+      "lanes": "WEST shoulder and lane closed",
       "lat": 42.196630516,
       "lng": -82.876233281,
       "start": 1784565780,
       "end": null,
-      "updated": 1784565780
+      "updated": 1784568300
+    },
+    {
+      "id": "ON-277209",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 11 Southbound  at Frederick House River, Cochrane  , Cochrane. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 49.058528,
+      "lng": -81.13865,
+      "start": 1784567760,
+      "end": null,
+      "updated": 1784567760
     },
     {
       "id": "ON-277198",
@@ -31,22 +63,6 @@
       "start": 1784565720,
       "end": null,
       "updated": 1784565720
-    },
-    {
-      "id": "ON-277195",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 HAMILTON Eastbound  at YORK BLVD, Hamilton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.28418803,
-      "lng": -79.89488482,
-      "start": 1784565540,
-      "end": null,
-      "updated": 1784565540
     },
     {
       "id": "ON-277180",
@@ -95,22 +111,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1784560820
-    },
-    {
-      "id": "ON-277058",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at FAUQUIER/STRICKLAND TREMBLAY AV, Fauquier. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 49.311594348,
-      "lng": -82.033761428,
-      "start": 1784546160,
-      "end": null,
-      "updated": 1784560200
     },
     {
       "id": "ON-277157",
@@ -629,6 +629,27 @@
       "updated": 1784338020
     },
     {
+      "id": "drivebc.ca/RIDE-100640",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 3",
+        "from": "Highway 3",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road construction. Starting Tue Jul 21 until Wed Jul 22. From 6:00 AM to 3:00 PM PST on Tuesday and Wednesday. Single lane alternating traffic. Watch for traffic control. Culvert replacement.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.09976849,
+      "lng": -120.66913145,
+      "start": "2026-07-17T15:00:58-07:00",
+      "end": "",
+      "updated": "2026-07-17T15:00:58-07:00"
+    },
+    {
       "id": "ON-277086",
       "province": "ON",
       "highway": "HWY 89",
@@ -787,26 +808,10 @@
       "start": 1784512800,
       "end": 1784883600,
       "updated": 1784314320
-    },
-    {
-      "id": "ON-276272",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Maintenance on HWY 417 Westbound On-ramp at PINECREST AVE / GREENBANK RD (IC 129), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.34951,
-      "lng": -75.78987,
-      "start": 1784689200,
-      "end": 1784710800,
-      "updated": 1784311740
     }
   ],
   "total": 50,
-  "updated": "2026-07-20T17:06:57.218984+00:00",
+  "updated": "2026-07-20T17:37:06.085119+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
