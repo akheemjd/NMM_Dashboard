@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-277180",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 416 Southbound  between FALLOWFIELD RD (IC 66), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.27087,
+      "lng": -75.79581,
+      "start": 1784541600,
+      "end": 1785103200,
+      "updated": 1784562840
+    },
+    {
+      "id": "ON-277158",
+      "province": "ON",
+      "highway": "HWY 5",
+      "direction": "Westbound",
+      "description": "Collision on HWY 5 Westbound  at BROCK ROAD / HAM/WENT ROAD 504, Hamilton. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.29267,
+      "lng": -79.999407,
+      "start": 1784559840,
+      "end": null,
+      "updated": 1784562660
+    },
+    {
+      "id": "ON-277179",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Collision on HWY 410 Northbound COLLECTOR at COURTNEY PARK DRIVE, Mississauga. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.6521625,
+      "lng": -79.6775215,
+      "start": 1784562180,
+      "end": null,
+      "updated": 1784562180
+    },
+    {
       "id": "ON-277166",
       "province": "ON",
       "highway": "HWY 401",
@@ -12,22 +60,6 @@
       "lanes": "left shoulder and left lane closed",
       "lat": 43.629715398,
       "lng": -79.683977365,
-      "start": 1784560920,
-      "end": null,
-      "updated": 1784560920
-    },
-    {
-      "id": "ON-277167",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at ALLEN ROAD, Toronto. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.73016868,
-      "lng": -79.44904569,
       "start": 1784560920,
       "end": null,
       "updated": 1784560920
@@ -95,22 +127,6 @@
       "start": 1784560080,
       "end": null,
       "updated": 1784560080
-    },
-    {
-      "id": "ON-277158",
-      "province": "ON",
-      "highway": "HWY 5",
-      "direction": "Westbound",
-      "description": "Collision on HWY 5 Westbound  at BROCK ROAD / HAM/WENT ROAD 504, Hamilton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.29267,
-      "lng": -79.999407,
-      "start": 1784559840,
-      "end": null,
-      "updated": 1784559840
     },
     {
       "id": "ON-277157",
@@ -661,27 +677,6 @@
       "updated": 1784338020
     },
     {
-      "id": "drivebc.ca/RIDE-100655",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Golden Ears Conn",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Paving operations. Starting Tue Jul 21 until Wed Jul 22. From 10:00 PM to 4:00 AM PST on Tuesday and Wednesday. Lane closures in both directions. Watch for traffic control. Work will be happening at this intersection in the westbound, northbound, and southbound direction.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.17969783,
-      "lng": -122.71382895,
-      "start": "2026-07-17T18:12:12-07:00",
-      "end": "",
-      "updated": "2026-07-17T18:12:12-07:00"
-    },
-    {
       "id": "ON-277086",
       "province": "ON",
       "highway": "HWY 89",
@@ -811,7 +806,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-20T15:35:32.037276+00:00",
+  "updated": "2026-07-20T16:06:39.790154+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
