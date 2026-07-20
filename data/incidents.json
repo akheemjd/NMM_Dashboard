@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-277148",
+      "id": "ON-277157",
       "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Debris on HWY 403 MISSISSAUGA Westbound RAMP at QEW, Oakville. Left shoulder and left lane closed.",
+      "highway": "HWY 6",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 6 Northbound  at Willisville Hill, Espanola, Willisville. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 46.12654343,
+      "lng": -81.733645088,
+      "start": 1784559600,
+      "end": null,
+      "updated": 1784559600
+    },
+    {
+      "id": "ON-277152",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound RAMP at WESTNEY ROAD, Ajax. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "left shoulder and left lane closed",
-      "lat": 43.488929,
-      "lng": -79.673501,
-      "start": 1784557920,
+      "lat": 43.84819685,
+      "lng": -79.04333274,
+      "start": 1784558820,
       "end": null,
-      "updated": 1784557920
+      "updated": 1784558820
+    },
+    {
+      "id": "ON-277153",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound  between HARMONY ROAD, Oshawa and COURTICE ROAD, Courtice. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.8871,
+      "lng": -78.82658,
+      "start": 1785891600,
+      "end": 1786010400,
+      "updated": 1784558220
     },
     {
       "id": "ON-277145",
@@ -127,22 +159,6 @@
       "start": 1784556300,
       "end": null,
       "updated": 1784556300
-    },
-    {
-      "id": "ON-277136",
-      "province": "ON",
-      "highway": "HWY 64",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 64 Southbound  at TEMAGAMI RIVER RD-THISTLE TWP, Marten River. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 46.649072806,
-      "lng": -79.96113499,
-      "start": 1784556000,
-      "end": null,
-      "updated": 1784556000
     },
     {
       "id": "ON-277127",
@@ -792,26 +808,10 @@
       "start": 1784545200,
       "end": 1787961600,
       "updated": 1784315340
-    },
-    {
-      "id": "ON-276331",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Maintenance on QEW Toronto bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.583523,
-      "lng": -79.58313,
-      "start": 1784685600,
-      "end": 1784970000,
-      "updated": 1784315340
     }
   ],
   "total": 50,
-  "updated": "2026-07-20T14:35:13.458061+00:00",
+  "updated": "2026-07-20T15:05:21.786683+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
