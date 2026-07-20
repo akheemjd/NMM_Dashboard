@@ -145,7 +145,7 @@ td{{padding:9px 12px;border-bottom:1px solid var(--border)}}td.val{{text-align:r
 @media(max-width:700px){{.hero{{flex-direction:column;padding:20px}}.hp{{font-size:2.5rem}}.metric-grid{{grid-template-columns:repeat(2,1fr)}}.callout-grid{{grid-template-columns:1fr}}.g2{{grid-template-columns:1fr}}.nav{{gap:16px}}}}
 </style></head><body>
 
-<div class="header"><a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><h1>NORTHERN MILE MEDIA</h1></a></div>
+<div class="header"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><img src="/logo.jpg" alt="Northern Mile Media" style="height:32px;width:auto;"><h1>NORTHERN MILE MEDIA</h1></a></div>
 <nav class="nav">{nav_html}</nav>
 <div class="breadcrumb"><a href="/">Dashboard</a> &rsaquo; Fuel Prices</div>
 
