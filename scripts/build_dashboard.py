@@ -289,7 +289,7 @@ body{
 
 @media(max-width:900px){
   .module{grid-column:span 12!important;grid-row:auto!important}
-  .banner{padding:0 12px;height:56px}
+  .banner{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:56px}
   .main{padding:12px 12px 32px}
 }
 
