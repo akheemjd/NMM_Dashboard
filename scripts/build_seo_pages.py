@@ -60,6 +60,7 @@ def page_html(path, title, desc, schema_json, content_html, faq_html=""):
 nav.seo-nav a{{color:var(--muted);text-decoration:none;font-size:0.6875rem;font-weight:500;padding:7px 0;border-bottom:2px solid transparent;white-space:nowrap}}
 nav.seo-nav a:hover{{color:var(--text);border-color:var(--text)}}
 nav.seo-nav a.active{{color:var(--amber);border-color:var(--amber)}}
+nav.seo-nav a.active{{color:var(--amber);border-color:var(--amber)}}
 .breadcrumbs{{padding:8px 24px;font-size:0.6875rem;color:var(--muted)}}
   .breadcrumbs a{{color:var(--muted);text-decoration:none}}
   main{{max-width:960px;margin:0 auto;padding:16px 20px 40px}}
@@ -98,16 +99,7 @@ nav.seo-nav a.active{{color:var(--amber);border-color:var(--amber)}}
     <h1>NORTHERN MILE MEDIA</h1>
   </a>
 </div>
-<nav class="seo-nav">
-    <a href="/">Home</a>
-    <a href="/fuel-prices/">Fuel</a>
-    <a href="/exchange-rate/">FX</a>
-    <a href="/border-wait-times/">Border</a>
-    <a href="/road-incidents/">Incidents</a>
-    <a href="/cargo-theft/">Theft</a>
-    <a href="/market-pulse/">Market</a>
-    <a href="/industry-news/">News</a>
-</nav>
+{nav_html}
 <div class="breadcrumbs">
   <a href="/">Dashboard</a> › {title.split("|")[0].strip()}
 </div>
@@ -149,6 +141,24 @@ def write_page(DOCS, path, title, desc, schema, content, faq=''):
     os.makedirs(os.path.dirname(os.path.join(DOCS, path.lstrip('/'))), exist_ok=True)
     with open(os.path.join(DOCS, path.lstrip('/') + 'index.html'), 'w') as f:
         f.write(html)
+
+
+def build_nav(active_page):
+    links = [
+        ("Home", "/"),
+        ("Fuel", "/fuel-prices/"),
+        ("FX", "/exchange-rate/"),
+        ("Border", "/border-wait-times/"),
+        ("Incidents", "/road-incidents/"),
+        ("Theft", "/cargo-theft/"),
+        ("Market", "/market-pulse/"),
+        ("News", "/industry-news/"),
+    ]
+    items = []
+    for name, path in links:
+        cls = ' class="active"' if path == active_page else ''
+        items.append(f'<a href="{path}"{cls}>{name}</a>')
+    return '\n    '.join(items)
 
 # ============================================
 # 1. FUEL PRICES
