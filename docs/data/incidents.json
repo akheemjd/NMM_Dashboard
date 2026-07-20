@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-277349",
+      "id": "ON-277361",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at WALKERS LINE, Burlington. 2 right lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at AVENUE ROAD, Toronto. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.36644963,
-      "lng": -79.78811842,
-      "start": 1784583840,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.74251055,
+      "lng": -79.42317394,
+      "start": 1784586720,
       "end": null,
-      "updated": 1784583840
+      "updated": 1784586720
+    },
+    {
+      "id": "ON-277359",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound RAMP at NIKOLA TESLA, Hamilton. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.2585035,
+      "lng": -79.7657876,
+      "start": 1784586300,
+      "end": null,
+      "updated": 1784586300
     },
     {
       "id": "ON-276829",
@@ -31,22 +47,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1784578834
-    },
-    {
-      "id": "ON-277339",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 417 Eastbound On-ramp at WOODROFFE AVE (IC 127), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.36114,
-      "lng": -75.76829,
-      "start": 1784577600,
-      "end": 1784592000,
-      "updated": 1784578080
     },
     {
       "id": "ON-277293",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-20T22:08:25.876016+00:00",
+  "updated": "2026-07-20T22:38:33.988610+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
