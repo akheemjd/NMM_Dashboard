@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-277010",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 400, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.7165622,
+      "lng": -79.518742561,
+      "start": 1784516100,
+      "end": null,
+      "updated": 1784516100
+    },
+    {
+      "id": "ON-277008",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.29851876,
+      "lng": -79.79709653,
+      "start": 1784515320,
+      "end": null,
+      "updated": 1784515320
+    },
+    {
       "id": "ON-277002",
       "province": "ON",
       "highway": "HWY 401",
@@ -782,42 +814,10 @@
       "start": 1784718000,
       "end": 1784844000,
       "updated": 1784303880
-    },
-    {
-      "id": "ON-276203",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 401 Westbound  between EDWARD ST (IC 716)/Leeds & Grenville CR 18, Prescott and NAPANEE SERVICE CENTER E5 W/B , Odessa. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.72298,
-      "lng": -75.52493,
-      "start": 1784718000,
-      "end": 1784844000,
-      "updated": 1784303760
-    },
-    {
-      "id": "ON-276204",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Daily Maintenance on HWY 401 Eastbound  between NAPANEE SERVICE CENTER E5 W/B , Odessa and EDWARD ST (IC 716)/Leeds & Grenville CR 18, Prescott. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.27908,
-      "lng": -76.8037,
-      "start": 1784545200,
-      "end": 1784671200,
-      "updated": 1784303700
     }
   ],
   "total": 50,
-  "updated": "2026-07-20T02:30:44.588200+00:00",
+  "updated": "2026-07-20T03:00:53.879435+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
