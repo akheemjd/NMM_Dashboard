@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-277191",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Collision on HWY 410 Northbound COLLECTOR at COURTNEY PARK DRIVE, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.6521625,
+      "lng": -79.6775215,
+      "start": 1784564940,
+      "end": null,
+      "updated": 1784564940
+    },
+    {
       "id": "ON-277180",
       "province": "ON",
       "highway": "HWY 416",
@@ -31,22 +47,6 @@
       "start": 1784559840,
       "end": null,
       "updated": 1784562660
-    },
-    {
-      "id": "ON-277179",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Collision on HWY 410 Northbound COLLECTOR at COURTNEY PARK DRIVE, Mississauga. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.6521625,
-      "lng": -79.6775215,
-      "start": 1784562180,
-      "end": null,
-      "updated": 1784562180
     },
     {
       "id": "ON-277166",
@@ -481,22 +481,6 @@
       "updated": 1784549400
     },
     {
-      "id": "ON-274640",
-      "province": "ON",
-      "highway": "HWY 599",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 599 Both Directions  between SEC HWY 516 (W) - MNR SILVICULTURAL CAMP (E), Savant Lake and THUNDER BAY - KENORA DIST BDY, Pickle Lake. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 50.309355,
-      "lng": -90.6994472,
-      "start": 1783971840,
-      "end": null,
-      "updated": 1784549340
-    },
-    {
       "id": "ON-277059",
       "province": "ON",
       "highway": "HWY 11",
@@ -803,10 +787,26 @@
       "start": 1784545200,
       "end": 1787961600,
       "updated": 1784315340
+    },
+    {
+      "id": "ON-276331",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Nightly Maintenance on QEW Toronto bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.583523,
+      "lng": -79.58313,
+      "start": 1784685600,
+      "end": 1784970000,
+      "updated": 1784315340
     }
   ],
   "total": 50,
-  "updated": "2026-07-20T16:06:39.790154+00:00",
+  "updated": "2026-07-20T16:36:49.794159+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
