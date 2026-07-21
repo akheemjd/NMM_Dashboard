@@ -49,10 +49,8 @@ for src, filename in sources.items():
 print('Health recorded.')
 " 2>&1
 
-# 3. Copy data to docs and v2
-echo "[4/5] Copying data..."
-cp data/*.json docs/data/
-mkdir -p docs/v2/data && cp data/*.json docs/v2/data/
+# 3. Copy data skipped — template engine handles everything
+echo "[4/5] Skipped (templates handle data)"
 
 # 4. Rebuild both
 echo "[5/5] Building..."
