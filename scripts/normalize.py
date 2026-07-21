@@ -118,7 +118,7 @@ fx = {
 # ===== INCIDENTS =====
 incidents_raw = raw_inc.get("incidents", [])
 incidents_list = []
-for i in incidents_raw[:20]:
+for i in incidents_raw[:2]:
     sev = i.get("severity","")
     cls = "heavy" if sev == "closed" else "mod" if sev == "heavy" else "ok"
     incidents_list.append({
