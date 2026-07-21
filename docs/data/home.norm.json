@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21 03:39",
+  "updated_at": "2026-07-21 04:10",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -75,6 +75,13 @@
     "status_line": "20 active",
     "incidents": [
       {
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toront",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
         "road": "Lac des Mille Lacs Road",
         "what": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 1",
         "severity_label": "Unknown",
@@ -122,17 +129,6 @@
       },
       {
         "road": {
-          "name": "Upper Arrow Lake Ferry",
-          "from": "at Upper Arrow Lake Ferry",
-          "direction": "BOTH"
-        },
-        "what": "Upper Arrow Lake Ferry, in both directions. Currently operating 30 minutes behin",
-        "severity_label": "MINOR",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": {
           "name": "Other Roads",
           "from": "Hooke Rd",
           "to": "Little Big Bar Road",
@@ -140,13 +136,6 @@
         },
         "what": "Big Bar Rd, in both directions. There is a wildfire between Hooke Rd and Little ",
         "severity_label": "MAJOR",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 540",
-        "what": "Collision on HWY 540 Both Directions  at SHESHEGWANING RD-ROBINSON TWP, Sheshegw",
-        "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
@@ -223,6 +212,13 @@
       {
         "road": "HWY 409",
         "what": "Nightly Maintenance on HWY 409 Westbound  between 401 and HWY 427, Toronto. 1 Al",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 409",
+        "what": "Nightly Maintenance on HWY 409 Eastbound  between HWY 427 and 401, Toronto. 1 Al",
         "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -331,49 +327,73 @@
     {
       "title": "Electronics load",
       "value": "$250,000",
-      "meta": "2026-07-08 \u00b7 Brampton, ON",
+      "date": "2026-07-08",
+      "location": "Brampton, ON",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     },
     {
       "title": "47 trailers recovered in theft ring bust",
       "value": "$4,000,000",
-      "meta": "2026-06-28 \u00b7 Greater Montreal, QC",
+      "date": "2026-06-28",
+      "location": "Greater Montreal, QC",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     },
     {
       "title": "Reefer load \u2014 meat products",
       "value": "$85,000",
-      "meta": "2026-06-15 \u00b7 Mississauga, ON",
+      "date": "2026-06-15",
+      "location": "Mississauga, ON",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     },
     {
       "title": "Consumer electronics \u2014 US-bound",
       "value": "$180,000",
-      "meta": "2026-06-02 \u00b7 Delta, BC",
+      "date": "2026-06-02",
+      "location": "Delta, BC",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     },
     {
       "title": "Identity theft pickup",
       "value": "$90,000",
-      "meta": "2026-05-18 \u00b7 Calgary, AB",
+      "date": "2026-05-18",
+      "location": "Calgary, AB",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     },
     {
       "title": "Building materials \u2014 two trailers",
       "value": "$120,000",
-      "meta": "2026-05-05 \u00b7 Laval, QC",
+      "date": "2026-05-05",
+      "location": "Laval, QC",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     },
     {
       "title": "Three reefers \u2014 food products",
       "value": "$300,000",
-      "meta": "2026-04-22 \u00b7 Nisku, AB",
+      "date": "2026-04-22",
+      "location": "Nisku, AB",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     },
     {
       "title": "Five trailers \u2014 mixed freight",
       "value": "$210,000",
-      "meta": "2026-04-08 \u00b7 Winnipeg, MB",
+      "date": "2026-04-08",
+      "location": "Winnipeg, MB",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
       "url": "/cargo-theft/"
     }
   ],
@@ -429,6 +449,7 @@
       "url": "#"
     }
   ],
+  "theft_home_json": "[{\"title\": \"Electronics load\", \"location\": \"Brampton, ON\", \"value\": \"$250,000\", \"lat\": 43.69, \"lng\": -79.76, \"source_url\": \"\"}, {\"title\": \"47 trailers recovered in theft ring bust\", \"location\": \"Greater Montreal, QC\", \"value\": \"$4,000,000\", \"lat\": 45.51, \"lng\": -73.56, \"source_url\": \"\"}, {\"title\": \"Reefer load \\u2014 meat products\", \"location\": \"Mississauga, ON\", \"value\": \"$85,000\", \"lat\": 43.59, \"lng\": -79.64, \"source_url\": \"\"}, {\"title\": \"Consumer electronics \\u2014 US-bound\", \"location\": \"Delta, BC\", \"value\": \"$180,000\", \"lat\": 49.09, \"lng\": -123.06, \"source_url\": \"\"}, {\"title\": \"Identity theft pickup\", \"location\": \"Calgary, AB\", \"value\": \"$90,000\", \"lat\": 51.04, \"lng\": -114.07, \"source_url\": \"\"}, {\"title\": \"Building materials \\u2014 two trailers\", \"location\": \"Laval, QC\", \"value\": \"$120,000\", \"lat\": 45.58, \"lng\": -73.75, \"source_url\": \"\"}, {\"title\": \"Three reefers \\u2014 food products\", \"location\": \"Nisku, AB\", \"value\": \"$300,000\", \"lat\": 53.55, \"lng\": -113.49, \"source_url\": \"\"}, {\"title\": \"Five trailers \\u2014 mixed freight\", \"location\": \"Winnipeg, MB\", \"value\": \"$210,000\", \"lat\": 49.9, \"lng\": -97.14, \"source_url\": \"\"}]",
   "sponsor_page": {
     "name": "Your brand here",
     "line": "Reach 500+ Canadian fleet operators every week",

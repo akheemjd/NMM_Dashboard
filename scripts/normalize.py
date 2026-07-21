@@ -211,6 +211,7 @@ for t in raw_theft.get("incidents", [])[:30]:
         "value": "${:,}".format(val) if isinstance(val, (int,float)) else str(val),
         "lat": t.get("lat", 0),
         "lng": t.get("lng", 0),
+        "source_url": t.get("source_url", ""),
     })
 
 # ===== ASSEMBLE HOME =====

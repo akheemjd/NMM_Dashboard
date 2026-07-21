@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-277433",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.77486841,
+      "lng": -79.28440092,
+      "start": 1784606040,
+      "end": null,
+      "updated": 1784606040
+    },
+    {
       "id": "ON-276829",
       "province": "ON",
       "highway": "Lac des Mille Lacs Road",
@@ -101,26 +117,6 @@
       "updated": 1784598060
     },
     {
-      "id": "drivebc.ca/DBC-93705",
-      "province": "BC",
-      "highway": {
-        "name": "Upper Arrow Lake Ferry",
-        "from": "at Upper Arrow Lake Ferry",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Upper Arrow Lake Ferry, in both directions. Currently operating 30 minutes behind schedule at Upper Arrow Lake Ferry (Upper Arrow Lake). Next update time Mon Jul 20 at 7:00 PM PDT. Last updated Mon Jul 20 at 6:37 PM PDT. (DBC-93705)",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.629029,
-      "lng": -117.898614,
-      "start": "2026-07-20T13:54:00-07:00",
-      "end": "",
-      "updated": "2026-07-20T18:37:12-07:00"
-    },
-    {
       "id": "drivebc.ca/DBC-93680",
       "province": "BC",
       "highway": {
@@ -140,22 +136,6 @@
       "start": "2026-07-18T12:10:09-07:00",
       "end": "",
       "updated": "2026-07-20T18:36:47-07:00"
-    },
-    {
-      "id": "ON-277385",
-      "province": "ON",
-      "highway": "HWY 540",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 540 Both Directions  at SHESHEGWANING RD-ROBINSON TWP, Sheshegwaning. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.893475134,
-      "lng": -82.860741359,
-      "start": 1784590260,
-      "end": null,
-      "updated": 1784590260
     },
     {
       "id": "ON-277373",
@@ -812,10 +792,26 @@
       "start": 1784588400,
       "end": 1784628000,
       "updated": 1784551320
+    },
+    {
+      "id": "ON-277092",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 401 Westbound  between LAKE RD and LAKE RD, Brighton. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.04696,
+      "lng": -77.83172,
+      "start": 1784588400,
+      "end": 1784628000,
+      "updated": 1784551320
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T03:40:03.057208+00:00",
+  "updated": "2026-07-21T04:10:12.405809+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
