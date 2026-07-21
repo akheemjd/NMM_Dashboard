@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21 03:27",
+  "updated_at": "2026-07-21 03:39",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -298,14 +298,32 @@
   "market": [
     {
       "name": "Monthly GDP",
-      "note": "More output = more freight",
-      "value": "\u2014",
-      "value_class": "down"
+      "note": "$2353B (chained 2017)",
+      "value": "+0.5%",
+      "value_class": "up"
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.1%",
+      "value_class": "up"
     },
     {
       "name": "Diesel vs baseline",
-      "note": "Fuel is 25-35% of operating cost",
-      "value": "\u2014",
+      "note": "+4.2% vs 165\u00a2 baseline",
+      "value": "171.9\u00a2/L",
+      "value_class": "up"
+    },
+    {
+      "name": "BC vs AB diesel spread",
+      "note": "Wide gaps create arbitrage on cross-province lanes. BC diese",
+      "value": "19.6\u00a2/L",
+      "value_class": "down"
+    },
+    {
+      "name": "USD/CAD vs 1.35 baseline",
+      "note": "+3.3% \u2014 weaker CAD",
+      "value": "1.3947",
       "value_class": "up"
     }
   ],

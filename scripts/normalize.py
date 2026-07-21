@@ -128,13 +128,20 @@ incidents = {
 
 # ===== MARKET =====
 market = []
-mk = raw_market
-for name, note, cls in [
-    ("Monthly GDP", "More output = more freight", "down"),
-    ("Diesel vs baseline", "Fuel is 25-35% of operating cost", "up"),
-]:
-    val = mk.get("gdp","—") if "GDP" in name else mk.get("diesel_vs_baseline","—")
-    market.append({"name": name, "note": note, "value": str(val), "value_class": cls})
+mk_indicators = raw_market.get("indicators", [])
+dir_summary = raw_market.get("direction_summary", "")
+for ind in mk_indicators[:6]:
+    direction = ind.get("direction", "flat")
+    cls = "up" if direction == "up" else "down" if direction == "down" else "flat"
+    # Build a useful one-line note
+    detail = ind.get("detail", "")
+    note = detail if detail else ind.get("what_it_means", "")[:60]
+    market.append({
+        "name": ind.get("label", ind.get("name", "")),
+        "note": note,
+        "value": str(ind.get("value", "—")),
+        "value_class": cls,
+    })
 
 # ===== THEFT =====
 theft = []
