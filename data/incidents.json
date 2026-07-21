@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-277441",
+      "id": "ON-277443",
       "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 403 MISSISSAUGA Westbound RAMP at UPPER MIDDLE ROAD, Oakville. All lanes closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at BURLINGTON SKYWAY, Burlington. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.50064742,
-      "lng": -79.67658992,
-      "start": 1784613660,
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.29814811,
+      "lng": -79.7971592,
+      "start": 1784622600,
       "end": null,
-      "updated": 1784613660
+      "updated": 1784622600
     },
     {
       "id": "ON-276829",
@@ -47,22 +47,6 @@
       "start": 1784685600,
       "end": 1784887200,
       "updated": 1784601420
-    },
-    {
-      "id": "ON-277423",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 403 MISSISSAUGA Westbound  at HWY 407, Mississauga. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.52783663,
-      "lng": -79.72424269,
-      "start": 1784601180,
-      "end": null,
-      "updated": 1784601180
     },
     {
       "id": "ON-277422",
@@ -808,10 +792,26 @@
       "start": 1785204000,
       "end": 1785490200,
       "updated": 1784550840
+    },
+    {
+      "id": "ON-261152",
+      "province": "ON",
+      "highway": "HWY 61",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1781491500,
+      "end": null,
+      "updated": 1784549400
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T08:11:21.961503+00:00",
+  "updated": "2026-07-21T08:41:30.810007+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
