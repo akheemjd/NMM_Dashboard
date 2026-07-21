@@ -67,11 +67,8 @@
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Cargo theft</h2><span class="k">reference · last 90 days</span><span class="rule"></span><a class="full" href="/cargo-theft/">All incidents →</a></div>
-  <div class="panel" style="display:flex;gap:0;border-radius:6px;overflow:hidden;">
-    <div style="flex:1;min-width:0;max-height:360px;overflow-y:auto;">
+  <div class="panel">
   <!--LOOP:theft--><div class="tft" data-href="{{url}}" role="link" tabindex="0"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{meta}}</div></div><!--/LOOP:theft-->
-    </div>
-    <div id="home-theft-map" style="flex:1;min-width:0;height:360px;"></div>
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Industry news</h2><span class="k">curated headlines</span><span class="rule"></span><a class="full" href="/industry-news/">All headlines →</a></div>
@@ -89,24 +86,6 @@
 </main>
 
 <footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026</div></div></footer>
-<script>window.THEFT_HOME = {{theft_home_json}};</script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="/assets/app.js"></script>
-
-<script>
-(function(){
-  var htMap = document.getElementById("home-theft-map");
-  var htData = window.THEFT_HOME;
-  if (!htMap || !htData || !htData.length || typeof L === "undefined") return;
-  var m = L.map("home-theft-map", {zoomControl:false, attributionControl:false}).setView([52,-90],4);
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {attribution:""}).addTo(m);
-  htData.forEach(function(t){
-    if (t.lat && t.lng) {
-      L.circleMarker([t.lat, t.lng], {radius:8, fillColor:"#E5484D", color:"#0B0D11", weight:2, fillOpacity:0.85}).addTo(m)
-       .bindPopup("<b>"+t.title+"</b><br>"+t.location+"<br><span style=color:#E5484D>"+t.value+"</span>");
-    }
-  });
-  setTimeout(function(){ m.invalidateSize(); }, 500);
-})();
-</script>
 </body></html>
