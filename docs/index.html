@@ -1,445 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Northern Mile — Live Canadian Trucking Dashboard</title>
-<meta name="description" content="Free live dashboard for Canadian trucking. Fuel prices, border crossings, road incidents. No signup.">
-<link rel="canonical" href="https://dashboard.northernmilemedia.com">
-<meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard">
-<meta property="og:description" content="Diesel prices, border status, road incidents. No signup. Free forever.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/leaflet.css">
-<script src="/leaflet.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
-<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --asphalt:#15171A;--slab:#1E2227;--line:#2C3238;--salt:#E8EAEC;
-  --gravel:#8B939C;--gantry:#1F6B4A;--amber:#F2A900;--flare:#D93A34;
-  --radius:6px;--pill-radius:3px
-}
-body{
-  background:var(--asphalt);color:var(--salt);
-  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-  font-size:0.875rem;line-height:1.5;padding:0;max-width:100%;
-  -webkit-font-smoothing:antialiased
-}
-.barlow{font-family:'Barlow Condensed',sans-serif;font-weight:600}
-.mono,.timestamp{font-family:'IBM Plex Mono',monospace;font-weight:400}
-*{font-variant-numeric:tabular-nums}
-::-webkit-scrollbar{width:6px;height:6px}
-::-webkit-scrollbar-track{background:var(--asphalt)}
-::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
-::-webkit-scrollbar-thumb:hover{background:var(--gravel)}
-*{scrollbar-width:thin;scrollbar-color:var(--line) var(--asphalt)}
+<meta name="description" content="One tab for Canadian trucking: live diesel prices, border wait times, road incidents, cargo theft, FX and market data. Updated every 30 minutes. Free, no signup.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/">
+<meta property="og:type" content="website"><meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard"><meta property="og:description" content="Diesel, border waits, road incidents, FX and market data. One tab. Updated every 30 min. Free."><meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="build" content="2026-07-21 02:31">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","name":"Northern Mile Dashboard","url":"https://dashboard.northernmilemedia.com/","publisher":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com"}},
+{"@type":"Dataset","name":"Canadian Trucking Live Data","description":"Live diesel prices, border wait times, road incidents, FX and market indicators, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"2026-07-21 02:31"}
+]}
+</script>
+</head><body>
 
-.banner{
-  background:var(--asphalt);border-bottom:1px solid var(--line);
-  padding:0 24px;display:flex;align-items:center;justify-content:center;
-  position:sticky;top:0;z-index:1000;height:64px
-}
-.banner h1{font-size:0.875rem;font-weight:700;color:var(--salt);font-family:'IBM Plex Mono',monospace;letter-spacing:-.01em}
-.nav{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;justify-content:center;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;-webkit-overflow-scrolling:touch}
-.nav a{color:var(--gravel);text-decoration:none;font-size:0.6875rem;font-weight:600;padding:8px 0;border-bottom:2px solid transparent;flex-shrink:0}
-.nav a:hover,.nav a:focus-visible{color:var(--salt);border-color:var(--salt)}
-.nav a.active{color:var(--amber);border-color:var(--amber)}
+<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
+<nav class="nav"><div class="wrap"><a href="/" class="on">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
 
-.main{max-width:1320px;margin:0 auto;padding:12px 16px 32px}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+<main class="wrap">
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Canadian trucking · one tab</span><span>Updated 2026-07-21 02:31 · refresh 30 min</span></div>
 
-.module{background:var(--slab);border:1px solid var(--line);border-radius:var(--radius);padding:16px;position:relative}
-.module.hero{grid-column:span 12}
-.module.wide{grid-column:span 8}
-.module.tall{grid-column:span 8;grid-row:span 2}
-.module.standard{grid-column:span 4}
-.module.compact{grid-column:span 4}
+  <section class="cockpit"><div class="gauges">
+    <div class="gauge ok" data-href="/border-wait-times/" role="link" tabindex="0" aria-label="Border crossings"><div class="gl">Border · busiest</div><div class="gv">0 <small>Heavy</small></div><div class="gs">0 moderate · 0 closed</div></div>
+    <div class="gauge" data-href="/fuel-prices/" role="link" tabindex="0" aria-label="Fuel prices"><div class="gl">Diesel · national</div><div class="odo" data-value="171.9" data-unit="c/L"></div><div class="gs">— / 7d</div></div>
+    <div class="gauge" data-href="/exchange-rate/" role="link" tabindex="0" aria-label="Exchange rate"><div class="gl">USD / CAD</div><div class="gv">1.3947</div><div class="gs">stronger CAD · -0.0107</div></div>
+    <div class="gauge good" data-href="/road-incidents/" role="link" tabindex="0" aria-label="Road incidents"><div class="gl">Road incidents</div><div class="gv">0 <small>active</small></div><div class="gs">monitored corridors clear</div></div>
+  </div></section>
 
-@media(max-width:900px){
-  .module{grid-column:span 12!important;grid-row:auto!important}
-  .banner{background:var(--asphalt);border-bottom:1px solid var(--line);padding:0 24px;display:flex;align-items:center;justify-content:center;height:56px}
-  .main{padding:12px 12px 32px}
-}
-
-.eyebrow{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.eyebrow-label{font-size:0.75rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.08em;font-weight:500}
-.status-pill{font-size:0.625rem;padding:2px 8px;border-radius:var(--pill-radius);font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:5px}
-.status-pill.live{color:var(--gantry);background:rgba(31,107,74,.15)}
-.status-pill.live::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gantry);animation:pulse 2s ease-in-out infinite}
-.status-pill.daily{color:var(--gravel);background:rgba(139,147,156,.12)}
-.status-pill.reference{color:var(--gravel);background:transparent;border:1px solid var(--line)}
-.status-pill.typical{color:var(--amber);background:rgba(242,169,0,.12)}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
-@media(prefers-reduced-motion:reduce){.status-pill.live::before{animation:none}}
-
-.card-footer{margin-top:8px;padding-top:6px;border-top:1px solid var(--line);font-size:0.625rem;color:var(--gravel);font-family:'IBM Plex Mono',monospace}
-
-.skeleton{background:var(--line);border-radius:2px;overflow:hidden;position:relative}
-.skeleton::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);animation:shimmer 1.5s linear infinite}
-@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
-@media(prefers-reduced-motion:reduce){.skeleton::after{animation:none}}
-
-*:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
-
-/* Fuel Hero */
-.hero-content{display:grid;grid-template-columns:2fr 1fr;gap:24px;align-items:start}
-.hero-price{font-size:2.75rem;line-height:1;color:var(--salt)}.hero-price .unit{font-size:1.125rem;color:var(--gravel)}
-.hero-delta{display:inline-flex;align-items:center;gap:3px;margin-top:4px;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:var(--pill-radius)}
-.hero-delta.up{background:rgba(242,169,0,.15);color:var(--amber)}.hero-delta.down{background:rgba(31,107,74,.15);color:var(--gantry)}
-.hero-province-list{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:4px;overflow:hidden}.hero-prow{display:flex;justify-content:space-between;gap:8px;padding:6px 10px;font-size:0.875rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--asphalt)}.hero-prow:nth-child(5n){border-right:none}.hero-prow:nth-child(n+6){border-bottom:none}.hero-prow .pcode{font-family:'IBM Plex Mono',monospace;color:var(--gravel);font-weight:500}.hero-prow .pprice{font-family:'IBM Plex Mono',monospace;font-weight:600;text-align:right}.pprice.high{color:var(--amber)}.pprice.low{color:var(--gantry)}
-.ftoggle{display:flex;background:var(--asphalt);border:1px solid var(--line);border-radius:var(--pill-radius);overflow:hidden}
-.ftoggle button{flex:1;background:none;border:none;color:var(--gravel);padding:4px 10px;font-size:0.625rem;font-family:inherit;cursor:pointer;font-weight:600;white-space:nowrap}
-.ftoggle button.active{background:var(--salt);color:var(--asphalt)}
-
-.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
-.bx{background:var(--asphalt);border:1px solid var(--line);border-radius:4px;padding:12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
-.bx-left{min-width:0}.bx-name{font-size:0.75rem;font-weight:600;color:var(--salt)}.bx-route{font-size:0.625rem;color:var(--gravel);margin-top:2px}
-.bx-status{text-align:right}.sbar{display:flex;align-items:center;gap:5px;font-size:0.75rem}.sdot{width:8px;height:8px;border-radius:50%}.sdot.green{background:var(--gantry)}.sdot.amber{background:var(--amber)}.sdot.red{background:var(--flare)}.slabel{font-weight:600;color:var(--salt)}.sdelay{color:var(--gravel);font-size:0.625rem}
-
-.mwrap{display:flex;gap:0;height:420px;border-radius:var(--radius);overflow:hidden}
-.mmap{flex:1;min-width:0;height:420px;background:#1a1d21}.mlist{width:280px;max-width:45%;overflow-y:auto;flex-shrink:0;font-size:0.75rem}
-.mitem{padding:8px 10px;border-bottom:1px solid var(--line);cursor:pointer}
-.mitem:hover{background:rgba(255,255,255,.03)}
-.mhwy{font-weight:600;color:var(--salt)}.mdesc{color:var(--gravel);font-size:0.625rem;margin-top:2px}
-.leaflet-container{background:#1a1d21!important;font-family:inherit;z-index:1}
-.leaflet-popup-content-wrapper{background:var(--slab)!important;color:var(--salt)!important;border-radius:8px!important}
-
-.nitem{padding:8px 0;border-bottom:1px solid var(--line)}.nitem:last-child{border-bottom:none}
-.nsrc{font-size:0.625rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
-.ntitle{color:var(--salt);text-decoration:none;font-size:0.75rem;line-height:1.4;font-weight:500}
-.ntitle:hover{text-decoration:underline}
-
-.cform{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end}
-.cfield{flex:1;min-width:100px}
-.cfield label{font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:3px}
-.cfield select,.cfield input{width:100%;background:var(--asphalt);border:1px solid var(--line);color:var(--salt);padding:8px 10px;border-radius:4px;font-size:0.75rem;font-family:inherit}
-.cfield select:focus,.cfield input:focus{outline:none;border-color:var(--amber)}
-.cresult{margin-top:12px;padding:12px;background:var(--asphalt);border-radius:4px;display:none}.cresult.v{display:block}.ccost{font-size:1.75rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;color:var(--salt)}.cbreak{margin-top:6px;font-size:0.75rem;color:var(--gravel);line-height:1.6}
-
-.theft-item{padding:10px 0;border-bottom:1px solid var(--line);font-size:0.75rem}
-.theft-item:last-child{border-bottom:none}.theft-method{color:var(--flare);font-weight:600;font-size:0.625rem;text-transform:uppercase;letter-spacing:.04em}.theft-prevention{color:var(--gravel);font-size:0.625rem;margin-top:3px}
-
-.sponsor-line{display:none;align-items:center;gap:8px;margin-bottom:10px;padding:6px 10px;background:rgba(31,107,74,.08);border-radius:4px;font-size:0.625rem;color:var(--gantry)}
-.sponsor-line.active{display:flex}
-.sponsor-line img{height:20px;width:auto}
-
-.module:hover .share-btn,.module:focus-within 
-.share-btn:hover{background:var(--asphalt);color:var(--salt);border-color:var(--gravel)}
-
-100%{opacity:1;transform:translateX(-50%) translateY(0)}}
-100%{opacity:0}}
-.sponsor-disclosure{font-size:0.5rem;color:var(--gravel);margin-top:8px;text-align:center}
-
-@media(max-width:900px){
-  .hero-content{grid-template-columns:1fr;gap:12px}
-  .mwrap{flex-direction:column;height:auto!important}.mmap{width:100%!important;min-height:260px!important}.mlist{width:100%!important;max-width:100%!important;max-height:200px}
-  .cform{flex-direction:column}.cfield{min-width:100%}
-}
-</style>
-</head>
-<body>
-
-
-<div class="banner">
-  <a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
-    <img src="/logo.jpg" alt="Northern Mile Media" style="height:32px;width:auto;">
-    <h1>NORTHERN MILE MEDIA</h1>
-  </a>
-</div>
-<nav class="nav">
-  <a href="/" class="active">Home</a>
-  <a href="/fuel-prices/">Fuel</a>
-  <a href="/exchange-rate/">FX</a>
-  <a href="/border-wait-times/">Border</a>
-  <a href="/road-incidents/">Incidents</a>
-  <a href="/cargo-theft/">Theft</a>
-  <a href="/market-pulse/">Market</a>
-  <a href="/industry-news/">News</a>
-  <a href="/fuel-cost-calculator/">Calc</a>
-</nav>
-<div class="main">
   
 
-  <div style="text-align:center;padding:8px 18px;margin-bottom:16px;font-size:0.875rem;color:var(--gravel);">
-    Live data for Canadian trucking. Fuel prices. Border delays. Road incidents. Free. Always.
+  <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">closures + collisions</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
+  <div class="panel">
+    <div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked 2026-07-21 02:31</div>
+    <table class="tbl bx">
+    
+    </table>
   </div>
 
-  <div class="grid">
+  <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">commercial wait</span><span class="rule"></span><a class="full" href="/border-wait-times/">All crossings →</a></div>
+  <div class="panel"><table class="tbl bx">
+  
+  </table></div>
+  
 
-<!-- 1. Fuel Prices — HERO (server-rendered) -->
-    <div class="module wide" id="fuel-card">
-      <div class="eyebrow">
-        <span class="eyebrow-label">Fuel Prices</span>
-        <div style="display:flex;align-items:center;gap:8px;">
-          <div class="ftoggle" id="prices-toggle"><button data-fuel="diesel" class="active">Diesel</button><button data-fuel="gasoline">Gas</button></div>
-          <span class="status-pill daily">Daily</span>
-        </div>
-      </div>
-      <div style="display:flex;align-items:baseline;gap:12px;">
-        <span class="hero-price" style="margin:0;font-size:3.5rem;">—<span class="unit" style="font-size:1.25rem;"> ¢/L</span></span>
-        <span class="hero-delta down" style="font-size:1rem;padding:3px 10px;">↓ +0.0</span>
-      </div>
-      <div style="margin-top:8px;padding-top:6px;border-top:1px solid var(--line);">
-        <div class="hero-province-list"><div class="hero-prow"><span class="pcode">BC</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">AB</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">SK</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">MB</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">ON</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">QC</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">NB</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">NS</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">PE</span><span class="pprice high">0.0</span></div>
-<div class="hero-prow"><span class="pcode">NL</span><span class="pprice high">0.0</span></div>
-</div>
-      </div>
+  <div class="mod"><span class="tab"></span><h2>Fuel &amp; exchange</h2><span class="k">diesel · USD/CAD</span><span class="rule"></span><a class="full" href="/fuel-prices/">Full fuel →</a></div>
+  <div class="row">
+    <div class="panel"><div class="readout"><div class="rl">Diesel · national average</div><div class="big">171.9<small> c/L</small></div><div class="meta">BC 0.0 low · NL 0.0 high · spread 0.0c</div></div>
+      <table class="tbl">
       
-      
-      <div class="card-footer"><span class="ts-foot" data-updated="">Updated —</span></div>
-    </div>
+      </table></div>
+    <div class="panel"><div class="readout"><div class="rl">USD / CAD</div><div class="big">1.3947</div><div class="meta">stronger CAD · -0.0107 · Bank of Canada</div></div>
+      <div class="ind" data-href="/fuel-prices/" role="link" tabindex="0"><div class="nm">Fill before you cross<span>US border states run cheaper in CAD/L</span></div><div class="vv" style="font-size:.75rem;font-family:'IBM Plex Mono',monospace;color:var(--green)">See →</div></div>
+      <div class="ind" data-href="/fuel-prices/" role="link" tabindex="0"><div class="nm">IFTA reference<span>Per-jurisdiction tax portion</span></div><div class="vv" style="font-size:.75rem;font-family:'IBM Plex Mono',monospace;color:var(--green)">See →</div></div></div>
+  </div>
 
-    <!-- 2. USD / CAD — COMPACT (server-rendered) -->
-    <div class="module compact" id="exchange-card">
-      <div class="eyebrow"><span class="eyebrow-label">USD / CAD</span><span class="status-pill live">Live</span></div>
-      <div>
-        <div style="font-size:0.625rem;color:var(--gravel);margin-bottom:2px;">1 US Dollar equals</div>
-        <div style="font-size:1.75rem;font-weight:600;color:var(--salt);" class="barlow">1.3947 CAD</div>
-        <div style="font-size:0.75rem;font-weight:600;margin-top:2px;color:var(--flare);"><span style="color:var(--flare);">↓</span> Weaker CAD · -0.0107</div>
-        <div style="font-size:0.625rem;color:var(--gravel);margin-top:8px;line-height:1.4;">Bank of Canada closing rate</div>
-      </div>
-      <div class="card-footer"><span class="ts-foot" data-updated="2026-07-21T02:09:32.398685+00:00">Updated 2026-07-21 02:09</span></div>
-    </div>
+  <div class="km"><span class="post">KM 172</span><span class="rule"></span></div>
 
-    <!-- 3. Border Crossings — WIDE (server-rendered) -->
-    <div class="module wide" id="border-card">
-      <div class="eyebrow"><span class="eyebrow-label">Border Crossings</span><span class="status-pill typical">Typical</span></div>
-      <div class="bgrid"></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="">Updated —</span></div>
-    </div>
+  <div class="mod"><span class="tab"></span><h2>Market pulse</h2><span class="k">freight demand signals</span><span class="rule"></span><a class="full" href="/market-pulse/">Full market →</a></div>
+  <div class="panel">
+  <div class="ind" data-href="/market-pulse/" role="link" tabindex="0"><div class="nm"><span></span></div><div class="vv "></div></div><div class="ind" data-href="/market-pulse/" role="link" tabindex="0"><div class="nm"><span></span></div><div class="vv "></div></div>
+  </div>
 
-    <!-- 4. Fuel Cost Calculator — STANDARD (JS) -->
-    <div class="module standard" id="calc-card">
-      <div class="eyebrow"><span class="eyebrow-label">Fuel Calculator</span><span class="status-pill live">Live</span></div>
-      <div class="cform">
-        <div class="cfield"><label>From</label><select id="calc-from"></select></div>
-        <div class="cfield"><label>To</label><select id="calc-to"></select></div>
-        <div class="cfield"><label>Fuel</label><div class="ftoggle" id="fuel-toggle"><button data-fuel="diesel" class="active">Diesel</button><button data-fuel="gasoline">Gas</button></div></div>
-        <div class="cfield" style="flex:.5"><label>L/100km</label><input type="number" id="calc-eff" value="35" min="10" max="80"></div>
-      </div>
-      <div class="cresult" id="calc-result"></div>
-    </div>
+  <div class="mod"><span class="tab"></span><h2>Cargo theft</h2><span class="k">reference · last 90 days</span><span class="rule"></span><a class="full" href="/cargo-theft/">All incidents →</a></div>
+  <div class="panel">
+  
+  </div>
 
-    <!-- 5. Road Incidents — TALL (JS map only) -->
-    <div class="module hero" id="incidents-card">
-      <div class="eyebrow"><span class="eyebrow-label">Road Incidents</span><span class="status-pill live">Live</span></div>
-      <div class="mwrap"><div class="mmap" id="inc-map"></div><div class="mlist" id="inc-list"></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="">Updated —</span></div>
-    </div>
+  <div class="mod"><span class="tab"></span><h2>Industry news</h2><span class="k">curated headlines</span><span class="rule"></span><a class="full" href="/industry-news/">All headlines →</a></div>
+  <div class="panel"><div class="news">
+  
+    <a href="/industry-news/"><span class="src">More</span>All industry headlines →</a>
+  </div></div>
 
-    <!-- 6. Cargo Theft — STANDARD (server-rendered + JS map) -->
-    <div class="module hero" id="theft-card">
-      <div class="eyebrow"><span class="eyebrow-label">Cargo Theft</span><span class="status-pill reference">Reference</span></div>
-      <div class="mwrap"><div class="mmap" id="th-map"></div><div class="mlist" id="th-list"><div style="padding:8px 10px;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;letter-spacing:.04em;">Recent</div><div style="margin:6px 10px 0;font-size:0.625rem;color:var(--gravel);text-transform:uppercase;">Hotspots</div></div></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="">Updated —</span></div>
-    </div>
+  <div class="mod"><span class="tab"></span><h2>Fuel cost calculator</h2><span class="rule"></span></div>
+  <div class="panel"><div class="calc"><div class="txt">Estimate trip fuel cost by distance, burn rate and current diesel — pre-loaded with today's national average.</div><a href="/fuel-cost-calculator/">Open calculator →</a></div></div>
 
-    <!-- 7. Market Pulse — STANDARD (server-rendered) -->
-    <div class="module wide" id="market-card">
-      <div class="eyebrow"><span class="eyebrow-label">Market Pulse</span><span class="status-pill daily">Daily</span></div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px;"></div>
-      
-      <div class="card-footer"><span class="ts-foot" data-updated="">Updated —</span></div>
-    </div>
+  <div class="cta"><div class="e">The Northern Mile Brief</div><div class="b">Fuel, border and market shifts — every Wednesday, 6am. No spam.</div><div class="s"><a href="https://northernmilemedia.com">Get it in your inbox →</a></div></div>
 
-    <!-- 8. Industry Headlines — WIDE (server-rendered) -->
-    <div class="module standard" id="news-card">
-      <div class="eyebrow"><span class="eyebrow-label">Industry Headlines</span><span class="status-pill daily">Daily</span></div>
-      <div style="max-height:320px;overflow-y:auto;"></div>
-      <div class="card-footer"><span class="ts-foot" data-updated="">Updated —</span></div>
-    </div>
+  <div class="share"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=One%20tab%20for%20Canadian%20trucking&url=https://dashboard.northernmilemedia.com/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/')">Copy link</button></div>
+</main>
 
-</div>
-
-</div>
-
-<div id="signup-section" style="text-align:center;max-width:600px;margin:40px auto 0;padding:32px 24px;background:var(--slab);border:2px solid var(--amber);border-radius:var(--radius);">
-  <div style="font-size:0.6875rem;color:var(--amber);text-transform:uppercase;letter-spacing:.08em;font-weight:600;margin-bottom:8px;">Never miss a market move</div>
-  <div style="font-size:1.125rem;font-weight:600;color:var(--salt);margin-bottom:6px;">The Northern Mile Brief</div>
-  <div style="font-size:0.8125rem;color:var(--gravel);margin-bottom:20px;">Fuel prices, border status, and market shifts. Every Wednesday at 6am. No spam, just what you need.</div>
-  <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.3/umd/signup-form.min.js" data-background-color="#1E2227" data-text-color="#E8EAEC" data-button-color="#F2A900" data-button-text-color="#15171A" data-title="" data-description="" data-site="https://www.northernmilemedia.com/" data-locale="en" async></script>
-  <div style="font-size:0.625rem;color:var(--gravel);margin-top:16px;">Know someone who would use this? Forward them the link.</div>
-</div>
-
-<footer style="padding:16px 24px;text-align:center;font-size:0.625rem;color:var(--gravel);border-top:1px solid var(--line);font-family:'IBM Plex Mono',monospace;">
-  <div class="sponsor-disclosure">Sponsors never influence the data.</div>
-  &copy; 2026 Northern Mile Media &middot; Data from public sources &middot; Informational use only
-</footer>
-
-<script>
-// === Relative time ticker ===
-function relTime(iso){
-  if(!iso)return'';
-  var diff=Math.floor((Date.now()-new Date(iso))/1000);
-  if(diff<60)return'Just now';
-  if(diff<3600)return Math.floor(diff/60)+'m ago';
-  if(diff<86400)return Math.floor(diff/3600)+'h ago';
-  return Math.floor(diff/86400)+'d ago';
-}
-setInterval(function(){
-  document.querySelectorAll('.ts-foot').forEach(function(el){
-    var t=el.getAttribute('data-updated');
-    if(t)el.textContent='Updated '+relTime(t);
-  });
-},60000);
-
-// === Fuel toggle (client-side re-render) ===
-var fuelData={"fuel": {"national_diesel": "171.9", "change_7d": "\u2014", "low_code": "BC", "low": "0.0", "high_code": "NL", "high": "0.0", "spread": "0.0", "fuel_top": [{"code": "BC", "name": "British Columbia", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "AB", "name": "Alberta", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "SK", "name": "Saskatchewan", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "MB", "name": "Manitoba", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "ON", "name": "Ontario", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "QC", "name": "Quebec", "price": "0.0", "change": "\u2014", "change_class": "flat"}]}, "updated_at": "2026-07-21 02:31"};
-document.getElementById('prices-toggle').addEventListener('click',function(e){
-  if(e.target.tagName!=='BUTTON')return;
-  document.querySelectorAll('#prices-toggle button').forEach(function(b){b.classList.remove('active');});
-  e.target.classList.add('active');
-  var type=e.target.dataset.fuel;
-  var avg=type==='diesel'?fuelData.diesel_national_avg:fuelData.gasoline_national_avg;
-  var prev=type==='diesel'?(fuelData.prev_diesel_avg||avg):avg-1;
-  var delta=avg-prev,up=delta>0;
-  var ca=['BC','AB','SK','MB','ON','QC','NB','NS','PE','NL'];
-  var P=fuelData.provinces||{};
-  var vals=ca.map(function(p){return(P[p]||{})[type]||0;});
-  var maxV=Math.max.apply(null,vals),minV=Math.min.apply(null,vals);
-  var rows='';
-  ca.forEach(function(p,i){
-    var v=vals[i],cls=v===maxV?' high':v===minV?' low':'';
-    rows+='<div class="hero-prow"><span class="pcode">'+p+'</span><span class="pprice'+cls+'">'+v.toFixed(1)+'</span></div>';
-  });
-  document.querySelector('#fuel-card .hero-price').innerHTML=avg+'<span class="unit"> &cent;/L</span>';
-  document.querySelector('#fuel-card .hero-delta').className='hero-delta '+(up?'up':'down');
-  document.querySelector('#fuel-card .hero-delta').textContent=(up?'↑ ':'↓ ')+(delta>=0?'+':'')+delta.toFixed(1);
-  document.querySelector('#fuel-card .hero-province-list').innerHTML=rows;
-});
-
-// === Calculator ===
-var calcDistances={"YVR-SEA": 230, "YVR-PDX": 510, "YVR-LAX": 2050, "YVR-DFW": 3570, "YVR-MSP": 2800, "YVR-ORD": 3500, "YVR-DTW": 3930, "YVR-BUF": 4300, "YVR-EWR": 4740, "YVR-ATL": 4520, "YVR-YYC": 970, "YVR-YEG": 1160, "YVR-YXE": 1610, "YVR-YQR": 1780, "YVR-YWG": 2290, "YVR-YYZ": 4390, "YVR-YOW": 4420, "YVR-YUL": 4560, "YVR-YQB": 4790, "YVR-YQM": 5820, "YVR-YHZ": 6130, "YVR-YYT": 7390, "YYC-SEA": 1100, "YYC-PDX": 1240, "YYC-LAX": 2490, "YYC-DFW": 2880, "YYC-MSP": 1940, "YYC-ORD": 2650, "YYC-DTW": 3070, "YYC-BUF": 3400, "YYC-EWR": 3840, "YYC-ATL": 3610, "YYC-YEG": 300, "YYC-YXE": 620, "YYC-YQR": 760, "YYC-YWG": 1330, "YYC-YYZ": 3410, "YYC-YOW": 3540, "YYC-YUL": 3740, "YYC-YQB": 4160, "YYC-YQM": 4860, "YYC-YHZ": 5340, "YYC-YYT": 6870, "YEG-SEA": 1270, "YEG-MSP": 1990, "YEG-ORD": 2770, "YEG-DTW": 3180, "YEG-LAX": 3000, "YEG-DFW": 3310, "YEG-BUF": 3510, "YEG-YXE": 525, "YEG-YQR": 790, "YEG-YWG": 1350, "YEG-YYZ": 3520, "YEG-YOW": 3610, "YEG-YUL": 3820, "YEG-YQB": 4240, "YXE-MSP": 1490, "YXE-ORD": 2220, "YXE-DTW": 2630, "YXE-YQR": 260, "YXE-YWG": 780, "YXE-YYZ": 2890, "YXE-YOW": 3080, "YXE-YUL": 3360, "YQR-MSP": 1260, "YQR-ORD": 1960, "YQR-DTW": 2400, "YQR-YWG": 570, "YQR-YYZ": 2680, "YQR-YOW": 2870, "YQR-YUL": 3150, "YWG-MSP": 740, "YWG-ORD": 1390, "YWG-DTW": 1720, "YWG-BUF": 1980, "YWG-DFW": 2000, "YWG-ATL": 2270, "YWG-EWR": 2380, "YWG-YYZ": 2110, "YWG-YOW": 2320, "YWG-YUL": 2620, "YWG-YQB": 2960, "YYZ-DTW": 370, "YYZ-BUF": 160, "YYZ-ORD": 830, "YYZ-MSP": 1510, "YYZ-EWR": 750, "YYZ-ATL": 1480, "YYZ-DFW": 2330, "YYZ-LAX": 4030, "YYZ-SEA": 4070, "YYZ-PDX": 4170, "YYZ-YOW": 450, "YYZ-YUL": 540, "YYZ-YQB": 800, "YYZ-YQM": 1480, "YYZ-YHZ": 1790, "YYZ-YYT": 3110, "YOW-DTW": 800, "YOW-BUF": 520, "YOW-EWR": 630, "YOW-ORD": 1220, "YOW-YUL": 200, "YOW-YQB": 450, "YOW-YQM": 1220, "YOW-YHZ": 1450, "YUL-DTW": 930, "YUL-BUF": 610, "YUL-EWR": 600, "YUL-ORD": 1360, "YUL-ATL": 1950, "YUL-BOS": 500, "YUL-YQB": 250, "YUL-YQM": 980, "YUL-YHZ": 1240, "YUL-YYT": 2520, "YQB-DTW": 1170, "YQB-BUF": 850, "YQB-EWR": 830, "YQB-YQM": 720, "YQB-YHZ": 1020, "YQB-YYT": 2300, "YQM-EWR": 1190, "YQM-BOS": 680, "YQM-YHZ": 260, "YQM-YYT": 1550, "YHZ-EWR": 1090, "YHZ-BOS": 670, "YHZ-YYT": 1480, "SEA-PDX": 280, "SEA-LAX": 1820, "SEA-DFW": 3480, "SEA-MSP": 2660, "SEA-ORD": 3320, "SEA-DTW": 3770, "SEA-BUF": 4180, "SEA-EWR": 4510, "SEA-ATL": 4290, "PDX-LAX": 1550, "PDX-DFW": 3230, "PDX-MSP": 2770, "PDX-ORD": 3450, "LAX-DFW": 2310, "LAX-MSP": 3080, "LAX-ORD": 3240, "LAX-DTW": 3660, "LAX-ATL": 3500, "LAX-EWR": 4490, "DFW-MSP": 1510, "DFW-ORD": 1490, "DFW-DTW": 1900, "DFW-ATL": 1260, "DFW-EWR": 2480, "DFW-BUF": 2250, "MSP-ORD": 660, "MSP-DTW": 990, "MSP-BUF": 1390, "MSP-EWR": 1900, "MSP-ATL": 1720, "ORD-DTW": 450, "ORD-BUF": 830, "ORD-EWR": 1260, "ORD-ATL": 1140, "ORD-DFW": 1490, "DTW-BUF": 420, "DTW-EWR": 830, "DTW-ATL": 1110, "BUF-EWR": 580, "BUF-ATL": 1380, "EWR-ATL": 1390, "EWR-DFW": 2480, "ATL-DFW": 1260, "YYT-PDX": 7300, "YYT-SEA": 7250, "YYT-LAX": 8100, "YYT-DFW": 6500, "YYT-ATL": 5300, "YQM-PDX": 6500, "YQM-SEA": 6450, "YHZ-PDX": 6400, "YHZ-SEA": 6350, "YYT-MSP": 4600, "YYT-ORD": 4000, "YYT-DTW": 3800, "YYT-BUF": 3500, "YYT-EWR": 3200, "YEG-YQM": 3523, "YQM-YEG": 3523, "YEG-YHZ": 3674, "YHZ-YEG": 3674, "YEG-YYT": 4206, "YYT-YEG": 4206, "YXE-YYT": 3807, "YYT-YXE": 3807, "YQR-YYT": 3718, "YYT-YQR": 3718, "YWG-YYT": 3216, "YYT-YWG": 3216, "YOW-YYT": 1767, "YYT-YOW": 1767, "YQB-YXE": 2591, "YXE-YQB": 2591, "YQB-YQR": 2455, "YQR-YQB": 2455, "YQM-YXE": 3082, "YXE-YQM": 3082, "YQM-YQR": 2958, "YQR-YQM": 2958, "YQM-YWG": 2432, "YWG-YQM": 2432, "YHZ-YXE": 3229, "YXE-YHZ": 3229, "YHZ-YQR": 3099, "YQR-YHZ": 3099, "YHZ-YWG": 2569, "YWG-YHZ": 2569, "SEA-YXE": 1226, "YXE-SEA": 1226, "SEA-YQR": 1325, "YQR-SEA": 1325, "SEA-YWG": 1855, "YWG-SEA": 1855, "SEA-YOW": 3522, "YOW-SEA": 3522, "SEA-YUL": 3674, "YUL-SEA": 3674, "SEA-YQB": 3779, "YQB-SEA": 3779, "PDX-YEG": 1100, "YEG-PDX": 1100, "PDX-YXE": 1369, "YXE-PDX": 1369, "PDX-YQR": 1437, "YQR-PDX": 1437, "PDX-YWG": 1953, "YWG-PDX": 1953, "PDX-YOW": 3602, "YOW-PDX": 3602, "PDX-YUL": 3757, "YUL-PDX": 3757, "PDX-YQB": 3873, "YQB-PDX": 3873, "LAX-YXE": 2230, "YXE-LAX": 2230, "LAX-YQR": 2149, "YQR-LAX": 2149, "LAX-YWG": 2482, "YWG-LAX": 2482, "LAX-YOW": 3820, "YOW-LAX": 3820, "LAX-YUL": 3987, "YUL-LAX": 3987, "LAX-YQB": 4161, "YQB-LAX": 4161, "LAX-YQM": 4675, "YQM-LAX": 4675, "LAX-YHZ": 4775, "YHZ-LAX": 4775, "DFW-YXE": 2275, "YXE-DFW": 2275, "DFW-YQR": 2046, "YQR-DFW": 2046, "DFW-YOW": 2295, "YOW-DFW": 2295, "DFW-YUL": 2447, "YUL-DFW": 2447, "DFW-YQB": 2660, "YQB-DFW": 2660, "DFW-YQM": 3111, "YQM-DFW": 3111, "DFW-YHZ": 3164, "YHZ-DFW": 3164, "MSP-YOW": 1373, "YOW-MSP": 1373, "MSP-YUL": 1538, "YUL-MSP": 1538, "MSP-YQB": 1699, "YQB-MSP": 1699, "MSP-YQM": 2217, "YQM-MSP": 2217, "MSP-YHZ": 2328, "YHZ-MSP": 2328, "ORD-YQB": 1413, "YQB-ORD": 1413, "ORD-YQM": 1904, "YQM-ORD": 1904, "ORD-YHZ": 1988, "YHZ-ORD": 1988, "DTW-YQM": 1547, "YQM-DTW": 1547, "DTW-YHZ": 1622, "YHZ-DTW": 1622, "DTW-PDX": 3135, "PDX-DTW": 3135, "BUF-YXE": 2314, "YXE-BUF": 2314, "BUF-YQR": 2129, "YQR-BUF": 2129, "BUF-YQM": 1166, "YQM-BUF": 1166, "BUF-YHZ": 1236, "YHZ-BUF": 1236, "BUF-PDX": 3462, "PDX-BUF": 3462, "BUF-LAX": 3562, "LAX-BUF": 3562, "EWR-YEG": 3247, "YEG-EWR": 3247, "EWR-YXE": 2766, "YXE-EWR": 2766, "EWR-YQR": 2582, "YQR-EWR": 2582, "EWR-PDX": 3907, "PDX-EWR": 3907, "ATL-YEG": 3180, "YEG-ATL": 3180, "ATL-YXE": 2718, "YXE-ATL": 2718, "ATL-YQR": 2487, "YQR-ATL": 2487, "ATL-YOW": 1507, "YOW-ATL": 1507, "ATL-YQB": 1829, "YQB-ATL": 1829, "ATL-YQM": 2172, "YQM-ATL": 2172, "ATL-YHZ": 2182, "YHZ-ATL": 2182, "ATL-PDX": 3489, "PDX-ATL": 3489};
-var calcCitiesData=[{"code": "YVR", "name": "Vancouver, BC", "province": "BC"}, {"code": "YYC", "name": "Calgary, AB", "province": "AB"}, {"code": "YEG", "name": "Edmonton, AB", "province": "AB"}, {"code": "YXE", "name": "Saskatoon, SK", "province": "SK"}, {"code": "YQR", "name": "Regina, SK", "province": "SK"}, {"code": "YWG", "name": "Winnipeg, MB", "province": "MB"}, {"code": "YYZ", "name": "Toronto, ON", "province": "ON"}, {"code": "YOW", "name": "Ottawa, ON", "province": "ON"}, {"code": "YUL", "name": "Montreal, QC", "province": "QC"}, {"code": "YQB", "name": "Quebec City, QC", "province": "QC"}, {"code": "YQM", "name": "Moncton, NB", "province": "NB"}, {"code": "YHZ", "name": "Halifax, NS", "province": "NS"}, {"code": "YYT", "name": "St. John's, NL", "province": "NL"}, {"code": "SEA", "name": "Seattle, WA", "province": "US-WA"}, {"code": "PDX", "name": "Portland, OR", "province": "US-OR"}, {"code": "LAX", "name": "Los Angeles, CA", "province": "US-CA"}, {"code": "DFW", "name": "Dallas, TX", "province": "US-TX"}, {"code": "MSP", "name": "Minneapolis, MN", "province": "US-MN"}, {"code": "ORD", "name": "Chicago, IL", "province": "US-IL"}, {"code": "DTW", "name": "Detroit, MI", "province": "US-MI"}, {"code": "BUF", "name": "Buffalo, NY", "province": "US-NY"}, {"code": "EWR", "name": "Newark, NJ", "province": "US-NJ"}, {"code": "ATL", "name": "Atlanta, GA", "province": "US-GA"}];
-var calcCitiesData=[{"code": "YVR", "name": "Vancouver, BC", "province": "BC"}, {"code": "YYC", "name": "Calgary, AB", "province": "AB"}, {"code": "YEG", "name": "Edmonton, AB", "province": "AB"}, {"code": "YXE", "name": "Saskatoon, SK", "province": "SK"}, {"code": "YQR", "name": "Regina, SK", "province": "SK"}, {"code": "YWG", "name": "Winnipeg, MB", "province": "MB"}, {"code": "YYZ", "name": "Toronto, ON", "province": "ON"}, {"code": "YOW", "name": "Ottawa, ON", "province": "ON"}, {"code": "YUL", "name": "Montreal, QC", "province": "QC"}, {"code": "YQB", "name": "Quebec City, QC", "province": "QC"}, {"code": "YQM", "name": "Moncton, NB", "province": "NB"}, {"code": "YHZ", "name": "Halifax, NS", "province": "NS"}, {"code": "YYT", "name": "St. John's, NL", "province": "NL"}, {"code": "SEA", "name": "Seattle, WA", "province": "US-WA"}, {"code": "PDX", "name": "Portland, OR", "province": "US-OR"}, {"code": "LAX", "name": "Los Angeles, CA", "province": "US-CA"}, {"code": "DFW", "name": "Dallas, TX", "province": "US-TX"}, {"code": "MSP", "name": "Minneapolis, MN", "province": "US-MN"}, {"code": "ORD", "name": "Chicago, IL", "province": "US-IL"}, {"code": "DTW", "name": "Detroit, MI", "province": "US-MI"}, {"code": "BUF", "name": "Buffalo, NY", "province": "US-NY"}, {"code": "EWR", "name": "Newark, NJ", "province": "US-NJ"}, {"code": "ATL", "name": "Atlanta, GA", "province": "US-GA"}];
-var calcFuel={"fuel": {"national_diesel": "171.9", "change_7d": "\u2014", "low_code": "BC", "low": "0.0", "high_code": "NL", "high": "0.0", "spread": "0.0", "fuel_top": [{"code": "BC", "name": "British Columbia", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "AB", "name": "Alberta", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "SK", "name": "Saskatchewan", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "MB", "name": "Manitoba", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "ON", "name": "Ontario", "price": "0.0", "change": "\u2014", "change_class": "flat"}, {"code": "QC", "name": "Quebec", "price": "0.0", "change": "\u2014", "change_class": "flat"}]}, "updated_at": "2026-07-21 02:31"};
-var calcFuelType='diesel';
-document.getElementById('fuel-toggle').addEventListener('click',function(e){
-  if(e.target.tagName!=='BUTTON')return;
-  document.querySelectorAll('#fuel-toggle button').forEach(function(b){b.classList.remove('active');});
-  e.target.classList.add('active');
-  calcFuelType=e.target.dataset.fuel;
-  runCalc();
-});
-// Populate dropdowns
-calcCitiesData.forEach(function(c){
-  var o1=document.createElement('option');o1.value=c.code;o1.textContent=c.name;
-  var o2=document.createElement('option');o2.value=c.code;o2.textContent=c.name;
-  document.getElementById('calc-from').appendChild(o1);
-  document.getElementById('calc-to').appendChild(o2);
-});
-document.getElementById('calc-from').value='YVR';
-document.getElementById('calc-to').value='YYZ';
-setTimeout(runCalc,200);
-
-// Populate dropdowns
-calcCitiesData.forEach(function(c){
-  var o1=document.createElement('option');o1.value=c.code;o1.textContent=c.name;
-  var o2=document.createElement('option');o2.value=c.code;o2.textContent=c.name;
-  document.getElementById('calc-from').appendChild(o1);
-  document.getElementById('calc-to').appendChild(o2);
-});
-document.getElementById('calc-from').value='YVR';
-document.getElementById('calc-to').value='YYZ';
-setTimeout(runCalc,200);
-
-document.getElementById('calc-eff').addEventListener('input',runCalc);
-document.getElementById('calc-from').addEventListener('change',runCalc);
-document.getElementById('calc-to').addEventListener('change',runCalc);
-
-function runCalc(){
-  var from=document.getElementById('calc-from').value;
-  var to=document.getElementById('calc-to').value;
-  var eff=parseFloat(document.getElementById('calc-eff').value)||35;
-  var res=document.getElementById('calc-result');
-  if(!from||!to||from===to){res.className='cresult';return;}
-  var dist=calcDistances[from+'-'+to]||calcDistances[to+'-'+from];
-  if(!dist){res.innerHTML='<div style="color:var(--gravel);font-size:0.75rem;">Route not available.</div>';res.className='cresult v';return;}
-  var rate=calcFuelType==='diesel'?calcFuel.diesel_national_avg:calcFuel.gasoline_national_avg;
-  if(!rate)rate=calcFuelType==='diesel'?171.9:168.7;
-  var liters=dist*eff/100,total=liters*rate/100;
-  res.innerHTML='<div class="ccost">$'+total.toFixed(2)+'</div><div class="cbreak">'+dist.toLocaleString()+' km &middot; '+eff+' L/100km &middot; '+rate.toFixed(1)+'&cent;/L '+calcFuelType+'</div>';
-  res.className='cresult v';
-}
-
-// === Maps (Leaflet) ===
-var incData={"incidents": {"none": true, "active_count": 0, "gauge_class": "good", "status_line": "monitored corridors clear", "incidents": []}, "updated_at": "2026-07-21 02:31"};
-var thData={"theft": [], "updated_at": "2026-07-21 02:31"};
-
-setTimeout(function(){
-  // Road Incidents Map
-  var incList=incData.incidents||(Array.isArray(incData)?incData:[]);
-  var mc=document.getElementById('inc-map');
-  if(mc&&incList.length){
-    var incMap=L.map('inc-map',{zoomControl:false,attributionControl:false});
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OSM'}).addTo(incMap);
-    L.Icon.Default.prototype.options.imagePath='https://unpkg.com/leaflet@1.9.4/dist/images/';
-    var bounds=[],list=document.getElementById('inc-list'),h='',markers=[];
-    incList.forEach(function(inc,i){
-      var lat=inc.lat||inc.latitude,lon=inc.lon||inc.longitude||inc.lng;
-      if(!lat||!lon)return;
-      var hwy=inc.highway||inc.road||'',prov=inc.province||inc.state||'';
-      var desc=inc.description||inc.desc||'';
-      var m=L.marker([lat,lon]).addTo(incMap).bindPopup('<strong>'+hwy+'</strong><br>'+prov+'<br>'+desc);
-      markers.push(m);
-      bounds.push([lat,lon]);
-      h+='<div class="mitem" data-idx="\+i+\" style="cursor:pointer" onclick="void(0)" data-lat="\+lat+\" data-lon="\+lon+\"(['+lat+','+lon+'],12);" style="cursor:pointer"><div class="mhwy">'+hwy+' &middot; '+prov+'</div><div class="mdesc">'+desc.substring(0,80)+'</div></div>';
-    });
-    list.innerHTML=h||'<div style="padding:10px;color:var(--gravel);font-size:0.75rem;">No active incidents.</div>';
-    if(bounds.length)incMap.fitBounds(bounds,{padding:[30,30]});else incMap.setView([50,-85],4);
-    // Click handlers (need map in scope)
-    document.querySelectorAll('#inc-list .mitem').forEach(function(el,i){el.onclick=function(){incMap.setView(bounds[i],12);markers[i].openPopup();};});
-  }
-
-  // Cargo Theft Map
-  var thInc=thData.incidents||[];
-  var thHs=thData.hotspots||[];
-  var md2=document.getElementById('th-map');
-  if(md2&&(thInc.length||thHs.length)){
-    var thMap=L.map('th-map',{zoomControl:false,attributionControl:false}).setView([52,-90],4);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:''}).addTo(thMap);
-    var bounds2=[];
-    thHs.forEach(function(h){
-      var c=h.risk==='high'?'#D93A34':h.risk==='medium'?'#F2A900':'#1F6B4A';
-      L.circleMarker([h.lat,h.lng],{radius:h.risk==='high'?16:h.risk==='medium'?12:8,color:c,fillColor:c,fillOpacity:.12,weight:1.5,dashArray:'4,2'}).addTo(thMap).bindPopup('<b>'+h.city+'</b><br>Risk: '+h.risk.toUpperCase()+'<br>'+h.note);
-      bounds2.push([h.lat,h.lng]);
-    });
-    var thMarkers=[];
-    thInc.forEach(function(i){
-      if(!i.lat||!i.lng)return;
-      var m=L.circleMarker([i.lat,i.lng],{radius:7,color:'#D93A34',fillColor:'#D93A34',fillOpacity:.5,weight:2}).addTo(thMap).bindPopup('<b>'+i.title+'</b><br><span style="color:#D93A34;font-weight:600;">'+i.value+'</span><br>'+i.date+' &middot; '+i.location+'<br><b>Method:</b> '+i.method+'<br><b>Prevention:</b> '+i.prevention);
-      thMarkers.push(m);
-      bounds2.push([i.lat,i.lng]);
-    });
-    if(bounds2.length)thMap.fitBounds(bounds2,{padding:[20,20]});
-    // Click handlers: only incident items (exclude header rows)
-    document.querySelectorAll('#th-list .mitem').forEach(function(el,i){
-      el.addEventListener('click',function(){
-        var m=thMarkers[i];
-        if(m){thMap.setView(m.getLatLng(),12);m.openPopup();}
-      });
-    });
-    setTimeout(function(){thMap.invalidateSize();},200);
-  }
-},400);
-
-
-</script>
-<script>
-</script>
-</body>
-</html>
-</body>
-</html>
+<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026</div></div></footer>
+<script src="/assets/app.js"></script>
+</body></html>
