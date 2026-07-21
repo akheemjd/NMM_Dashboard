@@ -56,8 +56,8 @@ mkdir -p docs/v2/data && cp data/*.json docs/v2/data/
 
 # 4. Rebuild both
 echo "[5/5] Building..."
-python3 scripts/build_dashboard.py production
-python3 scripts/build_dashboard.py staging
+# DISABLED: python3 scripts/build_dashboard.py production
+# DISABLED: python3 scripts/build_dashboard.py staging
 
 # 5. Commit and push
 echo "=== Git push ==="

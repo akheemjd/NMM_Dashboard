@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-07-21 02:52",
+  "updated_at": "21:15 EDT",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
-    "min_name": "\u2014",
+    "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "\u2014",
-    "max_wait": "No delay"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "171.9",
@@ -75,8 +75,36 @@
     "status_line": "20 active",
     "incidents": [
       {
+        "road": "Lac des Mille Lacs Road",
+        "what": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 1",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound HOV at JAMES SNOW PKWY, Milton. All lanes closed.",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Right lane and ",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
         "road": "HWY 403 MISSISSAUGA",
-        "what": "Highway Maintenance on HWY 403 MISSISSAUGA Westbound  at HWY 407, Mississauga. 2",
+        "what": "Collision on HWY 403 MISSISSAUGA Westbound  at BURNHAMTHORPE ROAD, Mississauga. ",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 3",
+        "what": "Nightly Maintenance on HWY 3 Eastbound  between Outer Drive and Outer Drive, Win",
         "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -100,24 +128,6 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 144",
-        "what": "Collision on HWY 144 Northbound  at SEC HWY 661-GOGAMA RD, Gogama. Lane and NORT",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": {
-          "name": "Upper Arrow Lake Ferry",
-          "from": "at Upper Arrow Lake Ferry",
-          "direction": "BOTH"
-        },
-        "what": "Upper Arrow Lake Ferry, in both directions. Currently operating 30 minutes behin",
-        "severity_label": "MINOR",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
         "road": {
           "name": "Other Roads",
           "from": "Hooke Rd",
@@ -126,20 +136,6 @@
         },
         "what": "Big Bar Rd, in both directions. There is a wildfire between Hooke Rd and Little ",
         "severity_label": "MAJOR",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "Lac des Mille Lacs Road",
-        "what": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 1",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 540",
-        "what": "Collision on HWY 540 Both Directions  at SHESHEGWANING RD-ROBINSON TWP, Sheshegw",
-        "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
@@ -229,22 +225,195 @@
       }
     ]
   },
-  "border_rows": [],
+  "border_rows": [
+    {
+      "name": "Ambassador Bridge",
+      "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "18:43 EDT"
+    },
+    {
+      "name": "Blue Water Bridge",
+      "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
+      "url": "/border-wait-times/",
+      "captured_at": "21:49 EDT"
+    },
+    {
+      "name": "Peace Bridge",
+      "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "22:40 EDT"
+    },
+    {
+      "name": "Queenston-Lewiston Bridge",
+      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "22:40 EDT"
+    },
+    {
+      "name": "Lacolle Border Crossing",
+      "sub": "Lacolle, QC \u2014 Champlain, NY \u00b7 A-15 / I-87 \u00b7 FAST",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
+      "url": "/border-wait-times/",
+      "captured_at": "22:34 EDT"
+    },
+    {
+      "name": "Coutts-Sweetgrass",
+      "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
+      "url": "/border-wait-times/",
+      "captured_at": "20:41 MDT"
+    },
+    {
+      "name": "Pacific Highway Crossing",
+      "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "19:40 PDT"
+    },
+    {
+      "name": "Emerson-Pembina",
+      "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
+      "url": "/border-wait-times/",
+      "captured_at": "21:15 CDT"
+    },
+    {
+      "name": "Thousand Islands Bridge",
+      "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
+      "url": "/border-wait-times/",
+      "captured_at": "21:15 EDT"
+    }
+  ],
   "market": [
     {
       "name": "Monthly GDP",
-      "note": "More output = more freight",
-      "value": "\u2014",
-      "value_class": "down"
+      "note": "$2353B (chained 2017)",
+      "value": "+0.5%",
+      "value_class": "up"
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.1%",
+      "value_class": "up"
     },
     {
       "name": "Diesel vs baseline",
-      "note": "Fuel is 25-35% of operating cost",
-      "value": "\u2014",
+      "note": "+4.2% vs 165\u00a2 baseline",
+      "value": "171.9\u00a2/L",
+      "value_class": "up"
+    },
+    {
+      "name": "BC vs AB diesel spread",
+      "note": "Wide gaps create arbitrage on cross-province lanes. BC diese",
+      "value": "19.6\u00a2/L",
+      "value_class": "down"
+    },
+    {
+      "name": "USD/CAD vs 1.35 baseline",
+      "note": "+3.3% \u2014 weaker CAD",
+      "value": "1.3947",
       "value_class": "up"
     }
   ],
-  "theft": [],
+  "theft": [
+    {
+      "title": "Electronics load",
+      "value": "$250,000",
+      "date": "2026-07-08",
+      "location": "Brampton, ON",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    },
+    {
+      "title": "47 trailers recovered in theft ring bust",
+      "value": "$4,000,000",
+      "date": "2026-06-28",
+      "location": "Greater Montreal, QC",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    },
+    {
+      "title": "Reefer load \u2014 meat products",
+      "value": "$85,000",
+      "date": "2026-06-15",
+      "location": "Mississauga, ON",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    },
+    {
+      "title": "Consumer electronics \u2014 US-bound",
+      "value": "$180,000",
+      "date": "2026-06-02",
+      "location": "Delta, BC",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    },
+    {
+      "title": "Identity theft pickup",
+      "value": "$90,000",
+      "date": "2026-05-18",
+      "location": "Calgary, AB",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    },
+    {
+      "title": "Building materials \u2014 two trailers",
+      "value": "$120,000",
+      "date": "2026-05-05",
+      "location": "Laval, QC",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    },
+    {
+      "title": "Three reefers \u2014 food products",
+      "value": "$300,000",
+      "date": "2026-04-22",
+      "location": "Nisku, AB",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    },
+    {
+      "title": "Five trailers \u2014 mixed freight",
+      "value": "$210,000",
+      "date": "2026-04-08",
+      "location": "Winnipeg, MB",
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking",
+      "url": "/cargo-theft/"
+    }
+  ],
   "news": [
     {
       "category": "Trucking Info",
@@ -296,5 +465,16 @@
       "headline": "3 common claims mistakes costing fleets at renewal \u2014 and how to avoid them",
       "url": "#"
     }
-  ]
+  ],
+  "theft_home_json": "[{\"title\": \"Electronics load\", \"location\": \"Brampton, ON\", \"value\": \"$250,000\", \"lat\": 43.69, \"lng\": -79.76, \"source_url\": \"\"}, {\"title\": \"47 trailers recovered in theft ring bust\", \"location\": \"Greater Montreal, QC\", \"value\": \"$4,000,000\", \"lat\": 45.51, \"lng\": -73.56, \"source_url\": \"\"}, {\"title\": \"Reefer load \\u2014 meat products\", \"location\": \"Mississauga, ON\", \"value\": \"$85,000\", \"lat\": 43.59, \"lng\": -79.64, \"source_url\": \"\"}, {\"title\": \"Consumer electronics \\u2014 US-bound\", \"location\": \"Delta, BC\", \"value\": \"$180,000\", \"lat\": 49.09, \"lng\": -123.06, \"source_url\": \"\"}, {\"title\": \"Identity theft pickup\", \"location\": \"Calgary, AB\", \"value\": \"$90,000\", \"lat\": 51.04, \"lng\": -114.07, \"source_url\": \"\"}, {\"title\": \"Building materials \\u2014 two trailers\", \"location\": \"Laval, QC\", \"value\": \"$120,000\", \"lat\": 45.58, \"lng\": -73.75, \"source_url\": \"\"}, {\"title\": \"Three reefers \\u2014 food products\", \"location\": \"Nisku, AB\", \"value\": \"$300,000\", \"lat\": 53.55, \"lng\": -113.49, \"source_url\": \"\"}, {\"title\": \"Five trailers \\u2014 mixed freight\", \"location\": \"Winnipeg, MB\", \"value\": \"$210,000\", \"lat\": 49.9, \"lng\": -97.14, \"source_url\": \"\"}]",
+  "sponsor_page": {
+    "name": "Your brand here",
+    "line": "Reach 500+ Canadian fleet operators every week",
+    "url": "https://northernmilemedia.com"
+  },
+  "sponsor_border": {
+    "name": "Your brand here",
+    "line": "Sponsor the border crossings module",
+    "url": "https://northernmilemedia.com"
+  }
 }
