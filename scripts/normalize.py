@@ -167,6 +167,7 @@ for t in raw_theft.get("incidents", [])[:8]:
         "location": location,
         "commodity": commodity,
         "prevention": prevention,
+        "url": "/cargo-theft/",
     })
 
 # Hotspots from theft data
