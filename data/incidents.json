@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-277417",
-      "province": "ON",
-      "highway": "HWY 144",
-      "direction": "Northbound",
-      "description": "Collision on HWY 144 Northbound  at SEC HWY 661-GOGAMA RD, Gogama. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 47.701472,
-      "lng": -81.7326821,
-      "start": 1784598060,
-      "end": null,
-      "updated": 1784613660
-    },
-    {
       "id": "ON-277441",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -808,10 +792,26 @@
       "start": 1784862000,
       "end": 1784883600,
       "updated": 1784551080
+    },
+    {
+      "id": "ON-277124",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Engineering Investigation on HWY 401 Eastbound Collector between KIPLING AVE and JANE ST, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.70076,
+      "lng": -79.56149,
+      "start": 1785204000,
+      "end": 1785490200,
+      "updated": 1784550840
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T07:41:13.889779+00:00",
+  "updated": "2026-07-21T08:11:21.961503+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
