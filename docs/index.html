@@ -4,23 +4,24 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/">
 <meta property="og:type" content="website"><meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard"><meta property="og:description" content="Diesel, border waits, road incidents, FX and market data. One tab. Updated every 30 min. Free."><meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg"><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-07-21 03:51">
+<meta name="build" content="2026-07-21 03:53">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","name":"Northern Mile Dashboard","url":"https://dashboard.northernmilemedia.com/","publisher":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com"}},
-{"@type":"Dataset","name":"Canadian Trucking Live Data","description":"Live diesel prices, border wait times, road incidents, FX and market indicators, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"2026-07-21 03:51"}
+{"@type":"Dataset","name":"Canadian Trucking Live Data","description":"Live diesel prices, border wait times, road incidents, FX and market indicators, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"2026-07-21 03:53"}
 ]}
 </script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head><body>
 
 <header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
 <nav class="nav"><div class="wrap"><a href="/" class="on">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
 
 <main class="wrap">
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Canadian trucking · one tab</span><span>Updated 2026-07-21 03:51 · refresh 30 min</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Canadian trucking · one tab</span><span>Updated 2026-07-21 03:53 · refresh 30 min</span></div>
 
   <section class="cockpit"><div class="gauges">
     <div class="gauge ok" data-href="/border-wait-times/" role="link" tabindex="0" aria-label="Border crossings"><div class="gl">Border · busiest</div><div class="gv">0 <small>Heavy</small></div><div class="gs">4 moderate · 0 closed</div></div>
@@ -66,8 +67,11 @@
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Cargo theft</h2><span class="k">reference · last 90 days</span><span class="rule"></span><a class="full" href="/cargo-theft/">All incidents →</a></div>
-  <div class="panel">
+  <div class="panel" style="display:flex;gap:0;border-radius:6px;overflow:hidden;">
+    <div style="flex:1;min-width:0;max-height:360px;overflow-y:auto;">
   <div class="tft" data-href="" role="link" tabindex="0"><div class="h">Electronics load <span class="val">$250,000</span></div><div class="m"></div></div><div class="tft" data-href="" role="link" tabindex="0"><div class="h">47 trailers recovered in theft ring bust <span class="val">$4,000,000</span></div><div class="m"></div></div><div class="tft" data-href="" role="link" tabindex="0"><div class="h">Reefer load — meat products <span class="val">$85,000</span></div><div class="m"></div></div><div class="tft" data-href="" role="link" tabindex="0"><div class="h">Consumer electronics — US-bound <span class="val">$180,000</span></div><div class="m"></div></div><div class="tft" data-href="" role="link" tabindex="0"><div class="h">Identity theft pickup <span class="val">$90,000</span></div><div class="m"></div></div><div class="tft" data-href="" role="link" tabindex="0"><div class="h">Building materials — two trailers <span class="val">$120,000</span></div><div class="m"></div></div><div class="tft" data-href="" role="link" tabindex="0"><div class="h">Three reefers — food products <span class="val">$300,000</span></div><div class="m"></div></div><div class="tft" data-href="" role="link" tabindex="0"><div class="h">Five trailers — mixed freight <span class="val">$210,000</span></div><div class="m"></div></div>
+    </div>
+    <div id="home-theft-map" style="flex:1;min-width:0;min-height:360px;"></div>
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Industry news</h2><span class="k">curated headlines</span><span class="rule"></span><a class="full" href="/industry-news/">All headlines →</a></div>
@@ -85,5 +89,7 @@
 </main>
 
 <footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026</div></div></footer>
+<script>window.THEFT_HOME = [{"title": "Electronics load", "location": "Brampton, ON", "value": "$250,000", "lat": 43.69, "lng": -79.76}, {"title": "47 trailers recovered in theft ring bust", "location": "Greater Montreal, QC", "value": "$4,000,000", "lat": 45.51, "lng": -73.56}, {"title": "Reefer load \u2014 meat products", "location": "Mississauga, ON", "value": "$85,000", "lat": 43.59, "lng": -79.64}, {"title": "Consumer electronics \u2014 US-bound", "location": "Delta, BC", "value": "$180,000", "lat": 49.09, "lng": -123.06}, {"title": "Identity theft pickup", "location": "Calgary, AB", "value": "$90,000", "lat": 51.04, "lng": -114.07}, {"title": "Building materials \u2014 two trailers", "location": "Laval, QC", "value": "$120,000", "lat": 45.58, "lng": -73.75}, {"title": "Three reefers \u2014 food products", "location": "Nisku, AB", "value": "$300,000", "lat": 53.55, "lng": -113.49}, {"title": "Five trailers \u2014 mixed freight", "location": "Winnipeg, MB", "value": "$210,000", "lat": 49.9, "lng": -97.14}];</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="/assets/app.js"></script>
 </body></html>

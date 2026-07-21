@@ -14,6 +14,7 @@
 {"@type":"Dataset","name":"Canadian Trucking Live Data","description":"Live diesel prices, border wait times, road incidents, FX and market indicators, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"{{updated_at}}"}
 ]}
 </script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head><body>
 
 <header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
@@ -66,8 +67,11 @@
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Cargo theft</h2><span class="k">reference · last 90 days</span><span class="rule"></span><a class="full" href="/cargo-theft/">All incidents →</a></div>
-  <div class="panel">
+  <div class="panel" style="display:flex;gap:0;border-radius:6px;overflow:hidden;">
+    <div style="flex:1;min-width:0;max-height:360px;overflow-y:auto;">
   <!--LOOP:theft--><div class="tft" data-href="{{url}}" role="link" tabindex="0"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{meta}}</div></div><!--/LOOP:theft-->
+    </div>
+    <div id="home-theft-map" style="flex:1;min-width:0;min-height:360px;"></div>
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Industry news</h2><span class="k">curated headlines</span><span class="rule"></span><a class="full" href="/industry-news/">All headlines →</a></div>
@@ -85,5 +89,7 @@
 </main>
 
 <footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026</div></div></footer>
+<script>window.THEFT_HOME = {{theft_home_json}};</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="/assets/app.js"></script>
 </body></html>

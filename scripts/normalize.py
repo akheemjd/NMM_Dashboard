@@ -200,6 +200,18 @@ for n in raw_news.get("headlines", [])[:10]:
 sponsor_page = {"name": "Your brand here", "line": "Reach 500+ Canadian fleet operators every week", "url": "https://northernmilemedia.com"}
 sponsor_border = {"name": "Your brand here", "line": "Sponsor the border crossings module", "url": "https://northernmilemedia.com"}
 
+# Build theft JSON early (needed by home page too)
+theft_json = []
+for t in raw_theft.get("incidents", [])[:30]:
+    val = t.get("value",0)
+    theft_json.append({
+        "title": t.get("title", t.get("description",""))[:60],
+        "location": str(t.get("location","")),
+        "value": "${:,}".format(val) if isinstance(val, (int,float)) else str(val),
+        "lat": t.get("lat", 0),
+        "lng": t.get("lng", 0),
+    })
+
 # ===== ASSEMBLE HOME =====
 home = {
     "updated_at": ts,
@@ -211,6 +223,7 @@ home = {
     "market": market,
     "theft": theft,
     "news": news,
+    "theft_home_json": json.dumps(theft_json),
     "sponsor_page": sponsor_page,
     "sponsor_border": sponsor_border,
 }
@@ -244,17 +257,6 @@ write("incidents.norm", {
     "incidents_json": json.dumps(inc_json),
     "updated_at": ts,
 })
-# Theft map JSON
-theft_json = []
-for t in raw_theft.get("incidents", [])[:30]:
-    theft_json.append({
-        "title": t.get("title", t.get("description",""))[:60],
-        "location": str(t.get("location","")), 
-        "value": "${:,}".format(t.get("value",0)) if isinstance(t.get("value"), (int,float)) else str(t.get("value","—")),
-        "lat": t.get("lat", 0),
-        "lng": t.get("lng", 0),
-    })
-
 write("theft.norm", {"theft": theft, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
