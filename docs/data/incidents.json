@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-277433",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.77486841,
-      "lng": -79.28440092,
-      "start": 1784606040,
-      "end": null,
-      "updated": 1784606040
-    },
-    {
       "id": "ON-276829",
       "province": "ON",
       "highway": "Lac des Mille Lacs Road",
@@ -808,10 +792,26 @@
       "start": 1784588400,
       "end": 1784628000,
       "updated": 1784551320
+    },
+    {
+      "id": "ON-277098",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 401 Westbound Express between YONGE ST and AVENUE ROAD, Toronto. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.753506,
+      "lng": -79.408325,
+      "start": 1784862000,
+      "end": 1784883600,
+      "updated": 1784551080
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T04:10:12.405809+00:00",
+  "updated": "2026-07-21T04:40:22.156083+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
