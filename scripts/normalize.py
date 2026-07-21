@@ -155,6 +155,11 @@ for n in raw_news.get("headlines", [])[:10]:
         "url": n.get("url","#"),
     })
 
+
+# ===== SPONSOR PLACEHOLDERS =====
+sponsor_page = {"name": "Your brand here", "line": "Reach 500+ Canadian fleet operators every week", "url": "https://northernmilemedia.com"}
+sponsor_border = {"name": "Your brand here", "line": "Sponsor the border crossings module", "url": "https://northernmilemedia.com"}
+
 # ===== ASSEMBLE HOME =====
 home = {
     "updated_at": ts,
@@ -166,6 +171,8 @@ home = {
     "market": market,
     "theft": theft,
     "news": news,
+    "sponsor_page": sponsor_page,
+    "sponsor_border": sponsor_border,
 }
 
 write("home.norm", home)
