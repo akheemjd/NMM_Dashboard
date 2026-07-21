@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-277928",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Eastbound HOV at ERIN MILLS PKWY, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.554098,
+      "lng": -79.69628871,
+      "start": 1784675700,
+      "end": null,
+      "updated": 1784675700
+    },
+    {
       "id": "ON-277903",
       "province": "ON",
       "highway": "HWY 400",
@@ -17,38 +33,6 @@
       "updated": 1784672040
     },
     {
-      "id": "ON-277905",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at MT. ST. LOUIS RD, Oro Medonte. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.62503811,
-      "lng": -79.66004139,
-      "start": 1784672040,
-      "end": null,
-      "updated": 1784672040
-    },
-    {
-      "id": "ON-277878",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound RAMP at EASTGATE/CAWTHRA, Mississauga. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.62064566,
-      "lng": -79.63623733,
-      "start": 1784669940,
-      "end": null,
-      "updated": 1784669940
-    },
-    {
       "id": "ON-277823",
       "province": "ON",
       "highway": "HWY 11",
@@ -63,22 +47,6 @@
       "start": 1784667600,
       "end": null,
       "updated": 1784667600
-    },
-    {
-      "id": "ON-277783",
-      "province": "ON",
-      "highway": "HWY 402",
-      "direction": "Westbound",
-      "description": "Collision on HWY 402 Westbound RAMP at Highway 40 / Modeland Road, Sarnia. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 42.991245,
-      "lng": -82.345589,
-      "start": 1784666640,
-      "end": null,
-      "updated": 1784666640
     },
     {
       "id": "ON-277746",
@@ -271,22 +239,6 @@
       "start": 1784944800,
       "end": 1785063600,
       "updated": 1784647620
-    },
-    {
-      "id": "ON-277577",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Emergency Roadwork on HWY 401 Westbound ON-RAMP at AVENUE ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.7425,
-      "lng": -79.423041,
-      "start": 1784647500,
-      "end": null,
-      "updated": 1784647500
     },
     {
       "id": "ON-277596",
@@ -799,10 +751,58 @@
       "start": 1785114000,
       "end": 1785582000,
       "updated": 1784636580
+    },
+    {
+      "id": "ON-277492",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Collector between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1785117600,
+      "end": 1785578400,
+      "updated": 1784636580
+    },
+    {
+      "id": "ON-277493",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between BASS PRO MILLS DRIVE and MAJOR MACKENZIE DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.82064,
+      "lng": -79.5456,
+      "start": 1785117600,
+      "end": 1785582000,
+      "updated": 1784636580
+    },
+    {
+      "id": "ON-277487",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 400 Southbound  between MAJOR MACKENZIE DRIVE and BASS PRO MILLS DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.846935,
+      "lng": -79.54861,
+      "start": 1785114000,
+      "end": 1785574800,
+      "updated": 1784636520
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T22:48:19.791982+00:00",
+  "updated": "2026-07-21T23:19:33.828596+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

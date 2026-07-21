@@ -35,12 +35,12 @@
   <div class="sp"><span class="t">Dashboard presented by</span><div><div class="n">{{sponsor_page.name}}</div><div class="l">{{sponsor_page.line}}</div></div><a class="c" href="{{sponsor_page.url}}">Learn more →</a></div>
   <!--/OPTIONAL:sponsor_page-->
 
-  <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">closures + collisions</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
+  <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">{{incidents.active_count}} active on monitored corridors</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
   <div class="panel">
-    <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked {{updated_at}}</div><!--/IF:incidents.none-->
-    <table class="tbl bx">
-    <!--LOOP:incidents--><tr data-href="{{url}}" role="link" tabindex="0"><td class="code">▸</td><td>{{road}} · {{direction}}<div class="sub">{{what}}</div></td><td class="r"><span class="pill {{severity_class}}">{{severity_label}}</span></td><td class="r mono">{{clearance}}</td></tr><!--/LOOP:incidents-->
-    </table>
+    <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors</div><!--/IF:incidents.none-->
+    <div class="news">
+    <!--LOOP:incidents--><a href="{{url}}"><span class="src">{{road}}</span>{{what}}</a><!--/LOOP:incidents-->
+    </div>
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">commercial wait</span><span class="rule"></span><a class="full" href="/border-wait-times/">All crossings →</a></div>
