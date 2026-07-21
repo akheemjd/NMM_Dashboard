@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21 04:10",
+  "updated_at": "21:15 EDT",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -75,13 +75,6 @@
     "status_line": "20 active",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toront",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
         "road": "Lac des Mille Lacs Road",
         "what": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 1",
         "severity_label": "Unknown",
@@ -89,15 +82,29 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 3",
-        "what": "Nightly Maintenance on HWY 3 Eastbound  between Outer Drive and Outer Drive, Win",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound HOV at JAMES SNOW PKWY, Milton. All lanes closed.",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Right lane and ",
         "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 403 MISSISSAUGA",
-        "what": "Highway Maintenance on HWY 403 MISSISSAUGA Westbound  at HWY 407, Mississauga. 2",
+        "what": "Collision on HWY 403 MISSISSAUGA Westbound  at BURNHAMTHORPE ROAD, Mississauga. ",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 3",
+        "what": "Nightly Maintenance on HWY 3 Eastbound  between Outer Drive and Outer Drive, Win",
         "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -117,13 +124,6 @@
         },
         "what": "Highway 97 (Alaska Highway), in both directions. Road sweeping at 100 Ave (Fort ",
         "severity_label": "MINOR",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 144",
-        "what": "Collision on HWY 144 Northbound  at SEC HWY 661-GOGAMA RD, Gogama. Lane and NORT",
-        "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
@@ -232,7 +232,8 @@
       "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "18:43 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -240,7 +241,8 @@
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "21:49 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -248,7 +250,8 @@
       "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -256,7 +259,8 @@
       "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -264,7 +268,8 @@
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "22:34 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -272,7 +277,8 @@
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "20:41 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -280,7 +286,8 @@
       "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -288,7 +295,17 @@
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
-      "url": "/border-wait-times/"
+      "url": "/border-wait-times/",
+      "captured_at": "21:15 CDT"
+    },
+    {
+      "name": "Thousand Islands Bridge",
+      "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
+      "url": "/border-wait-times/",
+      "captured_at": "21:15 EDT"
     }
   ],
   "market": [

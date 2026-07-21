@@ -74,22 +74,33 @@ border = {
     "max_wait": f"{max_d} min" if max_d > 0 else "No delay",
 }
 
-# Top-level border_rows for home template
+# Crossing rows for border page (crossings loop) + home page
 border_rows = []
-for c in crossings[:8]:
+crossings_for_page = []
+for c in crossings[:12]:
     d = c.get("delay_minutes", 0)
     if d > 15: cls = "heavy"
     elif d > 0: cls = "mod"
     else: cls = "ok"
     wait = f"{d} min" if d > 0 else "No delay"
-    border_rows.append({
+    wait_num = str(d) if d > 0 else "0"
+    ts = c.get("live_updated", "") or c.get("updated", "")
+    if ts and len(ts) >= 16:
+        ts = ts[:16].replace("T"," ")
+    elif not ts:
+        ts = "recent"
+    
+    item = {
         "name": c.get("name",""),
         "sub": f"{c.get('route','')} · {c.get('highway','')}" + (" · FAST" if c.get("fast_lanes") else ""),
         "wait": wait,
         "status_label": "Heavy" if d>15 else "Moderate" if d>0 else "Flowing",
         "status_class": cls,
         "url": "/border-wait-times/",
-    })
+        "captured_at": ts,
+    }
+    border_rows.append(item)
+    crossings_for_page.append(item)
 
 # ===== FX =====
 fx_rate = raw_ex.get("current") or raw_ex.get("close", 1.32)
@@ -232,7 +243,7 @@ home = {
 
 write("home.norm", home)
 write("fuel.norm", {"fuel": fuel, "updated_at": ts})
-write("border.norm", {"border": border, "border_rows": border_rows, "updated_at": ts, "captured_at": ts})
+write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts, "captured_at": ts})
 write("fx.norm", {"fx": fx, "updated_at": ts})
 # Build raw incidents JSON array for the map
 inc_json = []
