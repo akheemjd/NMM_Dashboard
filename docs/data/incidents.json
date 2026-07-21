@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-276829",
+      "province": "ON",
+      "highway": "Lac des Mille Lacs Road",
+      "direction": "Southbound",
+      "description": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 17, Upsala. All lanes closed.",
+      "event_type": "closures",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "No Data",
+      "lat": 48.950786,
+      "lng": -90.486138,
+      "start": 1784469600,
+      "end": null,
+      "updated": 1784632280
+    },
+    {
+      "id": "ON-277462",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound HOV at JAMES SNOW PKWY, Milton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.5390056,
+      "lng": -79.8718981,
+      "start": 1784631840,
+      "end": null,
+      "updated": 1784631840
+    },
+    {
       "id": "ON-277448",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +63,6 @@
       "start": 1784628960,
       "end": null,
       "updated": 1784628960
-    },
-    {
-      "id": "ON-276829",
-      "province": "ON",
-      "highway": "Lac des Mille Lacs Road",
-      "direction": "Southbound",
-      "description": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 17, Upsala. All lanes closed.",
-      "event_type": "closures",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "No Data",
-      "lat": 48.950786,
-      "lng": -90.486138,
-      "start": 1784469600,
-      "end": null,
-      "updated": 1784601906
     },
     {
       "id": "ON-277424",
@@ -792,26 +808,10 @@
       "start": 1784010780,
       "end": null,
       "updated": 1784549400
-    },
-    {
-      "id": "ON-277059",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 11 Northbound  between MABELLA RD (S) - BLACKWELL TWP and TWP RD(TO RAILWAY SIDING), Shabaqua. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 48.61437,
-      "lng": -89.97205,
-      "start": 1784631600,
-      "end": 1784768400,
-      "updated": 1784546280
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T10:42:06.328797+00:00",
+  "updated": "2026-07-21T11:12:14.892317+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
