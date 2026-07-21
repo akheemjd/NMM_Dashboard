@@ -146,12 +146,45 @@ for ind in mk_indicators[:6]:
 # ===== THEFT =====
 theft = []
 for t in raw_theft.get("incidents", [])[:8]:
+    val = t.get("value","0")
+    if isinstance(val, (int,float)) and val >= 1000:
+        val_str = f"${val/1000:,.0f}K"
+    elif isinstance(val, (int,float)):
+        val_str = f"${val:,}"
+    else:
+        val_str = f"${val}" if not str(val).startswith("$") else str(val)
+    
+    # Try to split title into commodity context
+    title = t.get("title", t.get("description",""))[:60]
+    location = t.get("location","")
+    prevention = "Secure overnight parking · GPS tracking"  # default
+    commodity = t.get("commodity", t.get("type", "Mixed freight"))
+    
     theft.append({
-        "title": t.get("title", t.get("description",""))[:60],
-        "value": f"${t.get('value','0')}" if not str(t.get('value','')).startswith('$') else str(t.get('value','0')),
-        "meta": f"{t.get('date','')} · {t.get('location','')}" if t.get('date') else str(t.get('location','')),
-        "url": "/cargo-theft/",
+        "title": title,
+        "value": val_str,
+        "date": t.get("date", "Recent"),
+        "location": location,
+        "commodity": commodity,
+        "prevention": prevention,
     })
+
+# Hotspots from theft data
+hotspots = []
+for h in raw_theft.get("hotspots", []):
+    hotspots.append({
+        "area": h.get("city", "GTA"),
+        "count": h.get("count", h.get("incidents", 0)),
+        "value": str(h.get("value", h.get("loss", "—"))),
+    })
+# Fallback if no hotspots
+if not hotspots:
+    hotspots = [
+        {"area": "Greater Toronto Area", "count": "most active", "value": "Highest"},
+        {"area": "Montreal", "count": "active", "value": "2nd highest"},
+        {"area": "Calgary/Edmonton", "count": "recurring", "value": "Western hub"},
+        {"area": "Vancouver", "count": "periodic", "value": "Port zone"},
+    ]
 
 # ===== NEWS =====
 news = []
@@ -211,7 +244,7 @@ write("incidents.norm", {
     "incidents_json": json.dumps(inc_json),
     "updated_at": ts,
 })
-write("theft.norm", {"theft": theft, "updated_at": ts})
+write("theft.norm", {"theft": theft, "hotspots": hotspots, "updated_at": ts})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
