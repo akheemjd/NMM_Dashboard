@@ -29,7 +29,7 @@
   
 
   <div class="mod"><span class="tab"></span><h2>Active incidents</h2><span class="rule"></span></div>
-  <div class="panel" id="incList"></div>
+  <div class="panel" id="incList" style="max-height:500px;overflow-y:auto;"></div>
 
   <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canadian%20road%20closures%20for%20trucks&url=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/road-incidents/')">Copy link</button></div>
 
@@ -48,7 +48,7 @@
 <script>
 (function(){
   var data = window.INCIDENTS || [];
-  var map = L.map('map',{scrollWheelZoom:false}).setView([56.13,-106.35],4);
+  var map = L.map('map',{scrollWheelZoom:true}).setView([56.13,-106.35],4);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
     attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:19
   }).addTo(map);
