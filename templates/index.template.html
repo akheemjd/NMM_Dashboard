@@ -4,14 +4,14 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/">
 <meta property="og:type" content="website"><meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard"><meta property="og:description" content="Diesel, border waits, road incidents, FX and market data. One tab. Updated every 30 min. Free."><meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg"><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-07-21 02:23">
+<meta name="build" content="{{updated_at}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","name":"Northern Mile Dashboard","url":"https://dashboard.northernmilemedia.com/","publisher":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com"}},
-{"@type":"Dataset","name":"Canadian Trucking Live Data","description":"Live diesel prices, border wait times, road incidents, FX and market indicators, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"2026-07-21 02:23"}
+{"@type":"Dataset","name":"Canadian Trucking Live Data","description":"Live diesel prices, border wait times, road incidents, FX and market indicators, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"{{updated_at}}"}
 ]}
 </script>
 </head><body>
@@ -20,38 +20,40 @@
 <nav class="nav"><div class="wrap"><a href="/" class="on">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
 
 <main class="wrap">
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Canadian trucking · one tab</span><span>Updated 2026-07-21 02:23 · refresh 30 min</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Canadian trucking · one tab</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
 
   <section class="cockpit"><div class="gauges">
-    <div class="gauge ok" data-href="/border-wait-times/" role="link" tabindex="0" aria-label="Border crossings"><div class="gl">Border · busiest</div><div class="gv">0 <small>Heavy</small></div><div class="gs">0 moderate · 0 closed</div></div>
-    <div class="gauge" data-href="/fuel-prices/" role="link" tabindex="0" aria-label="Fuel prices"><div class="gl">Diesel · national</div><div class="odo" data-value="171.9" data-unit="c/L"></div><div class="gs">— / 7d</div></div>
-    <div class="gauge" data-href="/exchange-rate/" role="link" tabindex="0" aria-label="Exchange rate"><div class="gl">USD / CAD</div><div class="gv"></div><div class="gs"> · </div></div>
-    <div class="gauge " data-href="/road-incidents/" role="link" tabindex="0" aria-label="Road incidents"><div class="gl">Road incidents</div><div class="gv"> <small>active</small></div><div class="gs"></div></div>
+    <div class="gauge {{border.gauge_class}}" data-href="/border-wait-times/" role="link" tabindex="0" aria-label="Border crossings"><div class="gl">Border · busiest</div><div class="gv">{{border.heavy_count}} <small>Heavy</small></div><div class="gs">{{border.moderate_count}} moderate · {{border.closed_count}} closed</div></div>
+    <div class="gauge" data-href="/fuel-prices/" role="link" tabindex="0" aria-label="Fuel prices"><div class="gl">Diesel · national</div><div class="odo" data-value="{{fuel.national_diesel}}" data-unit="c/L"></div><div class="gs">{{fuel.change_7d}} / 7d</div></div>
+    <div class="gauge" data-href="/exchange-rate/" role="link" tabindex="0" aria-label="Exchange rate"><div class="gl">USD / CAD</div><div class="gv">{{fx.usd_cad}}</div><div class="gs">{{fx.direction}} · {{fx.change}}</div></div>
+    <div class="gauge {{incidents.gauge_class}}" data-href="/road-incidents/" role="link" tabindex="0" aria-label="Road incidents"><div class="gl">Road incidents</div><div class="gv">{{incidents.active_count}} <small>active</small></div><div class="gs">{{incidents.status_line}}</div></div>
   </div></section>
 
-  
+  <!--OPTIONAL:sponsor_page-->
+  <div class="sp"><span class="t">Dashboard presented by</span><div><div class="n">{{sponsor_page.name}}</div><div class="l">{{sponsor_page.line}}</div></div><a class="c" href="{{sponsor_page.url}}">Learn more →</a></div>
+  <!--/OPTIONAL:sponsor_page-->
 
   <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">closures + collisions</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
   <div class="panel">
-    
+    <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked {{updated_at}}</div><!--/IF:incidents.none-->
     <table class="tbl bx">
-    
+    <!--LOOP:incidents--><tr data-href="{{url}}" role="link" tabindex="0"><td class="code">▸</td><td>{{road}} · {{direction}}<div class="sub">{{what}}</div></td><td class="r"><span class="pill {{severity_class}}">{{severity_label}}</span></td><td class="r mono">{{clearance}}</td></tr><!--/LOOP:incidents-->
     </table>
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">commercial wait</span><span class="rule"></span><a class="full" href="/border-wait-times/">All crossings →</a></div>
   <div class="panel"><table class="tbl bx">
-  
+  <!--LOOP:border--><tr data-href="{{url}}" role="link" tabindex="0"><td class="code">▸</td><td>{{name}}<div class="sub">{{sub}}</div></td><td class="r"><span class="px">{{wait}}</span> <span class="mono">min</span></td><td class="r"><span class="pill {{status_class}}">{{status_label}}</span></td></tr><!--/LOOP:border-->
   </table></div>
-  
+  <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Border module by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
 
   <div class="mod"><span class="tab"></span><h2>Fuel &amp; exchange</h2><span class="k">diesel · USD/CAD</span><span class="rule"></span><a class="full" href="/fuel-prices/">Full fuel →</a></div>
   <div class="row">
-    <div class="panel"><div class="readout"><div class="rl">Diesel · national average</div><div class="big">171.9<small> c/L</small></div><div class="meta">AB 0.0 low · NL 0.0 high · spread 0.0c</div></div>
+    <div class="panel"><div class="readout"><div class="rl">Diesel · national average</div><div class="big">{{fuel.national_diesel}}<small> c/L</small></div><div class="meta">{{fuel.low_code}} {{fuel.low}} low · {{fuel.high_code}} {{fuel.high}} high · spread {{fuel.spread}}c</div></div>
       <table class="tbl">
-      
+      <!--LOOP:fuel_top--><tr data-href="/fuel-prices/" role="link" tabindex="0"><td class="code">{{code}}</td><td>{{name}}</td><td class="r"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}">{{change}}</td></tr><!--/LOOP:fuel_top-->
       </table></div>
-    <div class="panel"><div class="readout"><div class="rl">USD / CAD</div><div class="big"></div><div class="meta"> ·  · Bank of Canada</div></div>
+    <div class="panel"><div class="readout"><div class="rl">USD / CAD</div><div class="big">{{fx.usd_cad}}</div><div class="meta">{{fx.direction}} · {{fx.change}} · Bank of Canada</div></div>
       <div class="ind" data-href="/fuel-prices/" role="link" tabindex="0"><div class="nm">Fill before you cross<span>US border states run cheaper in CAD/L</span></div><div class="vv" style="font-size:.75rem;font-family:'IBM Plex Mono',monospace;color:var(--green)">See →</div></div>
       <div class="ind" data-href="/fuel-prices/" role="link" tabindex="0"><div class="nm">IFTA reference<span>Per-jurisdiction tax portion</span></div><div class="vv" style="font-size:.75rem;font-family:'IBM Plex Mono',monospace;color:var(--green)">See →</div></div></div>
   </div>
@@ -60,17 +62,17 @@
 
   <div class="mod"><span class="tab"></span><h2>Market pulse</h2><span class="k">freight demand signals</span><span class="rule"></span><a class="full" href="/market-pulse/">Full market →</a></div>
   <div class="panel">
-  
+  <!--LOOP:market--><div class="ind" data-href="/market-pulse/" role="link" tabindex="0"><div class="nm">{{name}}<span>{{note}}</span></div><div class="vv {{value_class}}">{{value}}</div></div><!--/LOOP:market-->
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Cargo theft</h2><span class="k">reference · last 90 days</span><span class="rule"></span><a class="full" href="/cargo-theft/">All incidents →</a></div>
   <div class="panel">
-  
+  <!--LOOP:theft--><div class="tft" data-href="{{url}}" role="link" tabindex="0"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{meta}}</div></div><!--/LOOP:theft-->
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Industry news</h2><span class="k">curated headlines</span><span class="rule"></span><a class="full" href="/industry-news/">All headlines →</a></div>
   <div class="panel"><div class="news">
-  
+  <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
     <a href="/industry-news/"><span class="src">More</span>All industry headlines →</a>
   </div></div>
 

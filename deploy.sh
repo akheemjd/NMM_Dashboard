@@ -9,7 +9,7 @@ echo "=== Deploy $(date) ==="
 echo "[1/5] Collecting border data from CBSA..."
 python3 scripts/collect_border.py
 echo "[2/5] Collecting other data..."
-python3 scripts/collector.py 2>&1
+python3 scripts/collector.py && python3 scripts/collect_border.py && python3 scripts/normalize.py && python3 scripts/build_templates.py 2>&1
 COLLECT_EXIT=$?
 
 # 2. Health check — record status for each source

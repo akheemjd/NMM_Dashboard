@@ -3,7 +3,7 @@
 <meta name="description" content="Recent cargo and trailer theft incidents across Canada, with prevention notes. Reference data from public bulletins, refreshed regularly.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/cargo-theft/">
 <meta property="og:type" content="website"><meta property="og:title" content="Canadian Cargo Theft Watch | Northern Mile"><meta property="og:description" content="Recent Canadian cargo theft incidents + prevention notes."><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-07-21 02:23">
+<meta name="build" content="{{updated_at}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
@@ -17,18 +17,18 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Cargo Theft</div>
-  <div class="strip"><span>Reference</span><span>Public bulletins · last 90 days</span><span>Updated 2026-07-21 02:23</span></div>
+  <div class="strip"><span>Reference</span><span>Public bulletins · last 90 days</span><span>Updated {{updated_at}}</span></div>
 
-  
+  <!--OPTIONAL:sponsor_theft--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_theft.name}}</div><div class="l">{{sponsor_theft.line}}</div></div><a class="c" href="{{sponsor_theft.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_theft-->
 
   <div class="mod"><span class="tab"></span><h2>Recent incidents</h2><span class="k">reference</span><span class="rule"></span></div>
   <div class="panel">
-  
+  <!--LOOP:theft--><div class="tft"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{date}} · {{location}} · {{commodity}}</div><div class="p">Prevention: {{prevention}}</div></div><!--/LOOP:theft-->
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Hotspots</h2><span class="rule"></span></div>
   <div class="panel"><table class="tbl">
-  
+  <!--LOOP:hotspots--><tr><td class="prov">{{area}}</td><td class="r mono">{{count}} incidents</td><td class="r mono">{{value}}</td></tr><!--/LOOP:hotspots-->
   </table></div>
 
   <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/cargo-theft/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Canadian%20cargo%20theft%20watch&url=https://dashboard.northernmilemedia.com/cargo-theft/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/cargo-theft/')">Copy link</button></div>

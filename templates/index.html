@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Northern Mile — Live Canadian Trucking Dashboard</title>
+<meta name="description" content="Free live dashboard for Canadian trucking. Fuel prices, border crossings, road incidents, cargo theft. No signup.">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/">
+<meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard">
+<meta property="og:description" content="Diesel prices, border status, road incidents. No signup. Free forever.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="build" content="{{updated_at}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head><body>
+
+<div class="header"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><img src="/logo.jpg" alt="Northern Mile Media" style="height:32px;width:auto;"><h1>NORTHERN MILE MEDIA</h1></a></div>
+<nav class="nav">
+  <a href="/" class="active">Home</a>
+  <a href="/fuel-prices/">Fuel</a>
+  <a href="/exchange-rate/">FX</a>
+  <a href="/border-wait-times/">Border</a>
+  <a href="/road-incidents/">Incidents</a>
+  <a href="/cargo-theft/">Theft</a>
+  <a href="/market-pulse/">Market</a>
+  <a href="/industry-news/">News</a>
+  <a href="/fuel-cost-calculator/">Calc</a>
+</nav>
+<div class="breadcrumb">Dashboard</div>
+
+<main>
+<div class="grd">
+
+  <!-- 1. Fuel Prices — HERO -->
+  <div class="mod hero" id="fuel-card">
+    <div class="mod-eyebrow"><span class="mod-label">FUEL PRICES</span>
+      <div class="ftoggle" id="prices-toggle"><button data-fuel="diesel" class="active">Diesel</button><button data-fuel="gasoline">Gas</button></div>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+      <div class="fuel-hero">{{fuel_national}}<span class="unit"> c/L</span></div>
+      <span style="font-size:0.875rem;font-weight:600;padding:3px 10px;border-radius:12px;background:rgba(242,169,0,.15);color:var(--amber);">{{fuel_delta}}</span>
+    </div>
+    <div style="margin-top:8px;padding-top:6px;border-top:1px solid var(--border);">
+      <div class="fuel-pg">
+<!--LOOP:fuel_provinces-->
+        <div class="fuel-prow"><span class="pcode">{{code}}</span><span class="pprice {{class}}">{{price}}</span></div>
+<!--/LOOP:fuel_provinces-->
+      </div>
+    </div>
+    <div class="mod-footer"><span data-updated="{{fuel_updated}}">Updated {{fuel_updated_display}}</span></div>
+  </div>
+
+  <!-- 2. USD/CAD — STANDARD -->
+  <div class="mod standard">
+    <div class="mod-eyebrow"><span class="mod-label">USD / CAD</span><span class="status-pill live">LIVE</span></div>
+    <div style="font-size:2rem;font-weight:600;font-family:'Barlow Condensed';">{{fx_rate}}</div>
+    <div style="font-size:0.875rem;font-weight:600;color:var(--{{fx_color}});">{{fx_change}}</div>
+    <div class="mod-footer"><span data-updated="{{fx_updated}}">Updated {{fx_updated_display}}</span></div>
+  </div>
+
+  <!-- 3. Border Crossings — WIDE -->
+  <div class="mod wide">
+    <div class="mod-eyebrow"><span class="mod-label">BORDER CROSSINGS</span><span class="status-pill {{border_pill}}">{{border_status}}</span></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;">
+<!--LOOP:border_crossings-->
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:10px 12px;">
+        <div style="font-size:0.75rem;font-weight:600;">{{name}}</div>
+        <div style="font-size:0.6875rem;color:var(--text-muted);">{{route}}</div>
+        <div style="font-size:0.875rem;font-weight:700;font-family:'Barlow Condensed';color:var(--{{delay_color}});">{{delay}}</div>
+      </div>
+<!--/LOOP:border_crossings-->
+    </div>
+    <div class="mod-footer"><span data-updated="{{border_updated}}">Updated {{border_updated_display}}</span> &middot; CBSA</div>
+  </div>
+
+  <!-- 4. Fuel Calculator — STANDARD -->
+  <div class="mod standard" id="calc-card">
+    <div class="mod-eyebrow"><span class="mod-label">FUEL COST CALCULATOR</span><span class="status-pill live">LIVE</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="display:flex;gap:8px;">
+        <select id="calc-from" style="flex:1;background:var(--bg);color:var(--text-primary);border:1px solid var(--border);border-radius:4px;padding:6px 8px;font-size:0.75rem;"></select>
+        <select id="calc-to" style="flex:1;background:var(--bg);color:var(--text-primary);border:1px solid var(--border);border-radius:4px;padding:6px 8px;font-size:0.75rem;"></select>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <div class="ftoggle" id="fuel-toggle" style="display:flex;background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;font-size:0.625rem;">
+          <button data-fuel="diesel" class="active" style="border:none;background:none;color:var(--text-muted);padding:4px 8px;cursor:pointer;font-weight:600;">Diesel</button>
+          <button data-fuel="gasoline" style="border:none;background:none;color:var(--text-muted);padding:4px 8px;cursor:pointer;font-weight:600;">Gas</button>
+        </div>
+        <input type="number" id="calc-eff" value="35" min="20" max="60" style="width:60px;background:var(--bg);color:var(--text-primary);border:1px solid var(--border);border-radius:4px;padding:4px 6px;font-size:0.75rem;text-align:center;">
+        <span style="font-size:0.625rem;color:var(--text-muted);">L/100km</span>
+      </div>
+      <div id="calc-result" style="padding:8px;"></div>
+    </div>
+  </div>
+
+  <!-- 5. Road Incidents — HERO -->
+  <div class="mod hero">
+    <div class="mod-eyebrow"><span class="mod-label">ROAD INCIDENTS</span><span class="status-pill live">LIVE</span></div>
+    <div style="display:flex;gap:0;border-radius:6px;overflow:hidden;">
+      <div id="inc-map" style="flex:1;min-height:360px;"></div>
+      <div id="inc-list" style="width:280px;max-height:360px;overflow-y:auto;font-size:0.75rem;background:var(--bg);">
+<!--IF:incidents_none-->
+        <div style="color:var(--green);font-size:0.875rem;padding:20px;text-align:center;">All corridors clear</div>
+<!--/IF:incidents_none-->
+      </div>
+    </div>
+    <div class="mod-footer"><span data-updated="{{incidents_updated}}">Updated {{incidents_updated_display}}</span></div>
+  </div>
+
+  <!-- 6. Market Pulse — STANDARD -->
+  <div class="mod standard">
+    <div class="mod-eyebrow"><span class="mod-label">MARKET PULSE</span><span class="status-pill reference">REFERENCE</span></div>
+<!--LOOP:market_indicators-->
+    <div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:0.75rem;">
+      <span style="color:var(--text-muted);">{{label}}</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--{{color}});">{{value}}</span>
+    </div>
+<!--/LOOP:market_indicators-->
+    <div class="mod-footer"><span data-updated="{{market_updated}}">Updated {{market_updated_display}}</span></div>
+  </div>
+
+  <!-- 7. Cargo Theft — HERO -->
+  <div class="mod hero">
+    <div class="mod-eyebrow"><span class="mod-label">CARGO THEFT WATCH</span><span class="status-pill live">LIVE</span></div>
+    <div style="display:flex;gap:0;border-radius:6px;overflow:hidden;">
+      <div id="th-map" style="flex:1;min-height:360px;"></div>
+      <div id="th-list" style="width:280px;max-height:360px;overflow-y:auto;font-size:0.75rem;background:var(--bg);padding:8px;">
+        <div style="font-size:0.625rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;padding:4px 8px;">Recent</div>
+<!--LOOP:theft_incidents-->
+        <div style="padding:8px 10px;border-bottom:1px solid var(--border);cursor:pointer;">
+          <div style="font-size:0.75rem;font-weight:600;">{{title}}</div>
+          <div style="font-size:0.6875rem;color:var(--text-muted);">{{location}}</div>
+          <div style="font-size:0.75rem;font-weight:700;color:var(--red);">${{value}}</div>
+        </div>
+<!--/LOOP:theft_incidents-->
+        <div style="margin-top:6px;font-size:0.625rem;color:var(--text-muted);text-transform:uppercase;">Hotspots</div>
+<!--LOOP:theft_hotspots-->
+        <div style="padding:6px 10px;font-size:0.6875rem;">{{city}} — {{note}}</div>
+<!--/LOOP:theft_hotspots-->
+      </div>
+    </div>
+    <div class="mod-footer"><span data-updated="{{theft_updated}}">Updated {{theft_updated_display}}</span></div>
+  </div>
+
+  <!-- 8. Industry Headlines — WIDE -->
+  <div class="mod wide">
+    <div class="mod-eyebrow"><span class="mod-label">INDUSTRY HEADLINES</span></div>
+<!--LOOP:news_headlines-->
+    <div style="padding:8px 0;border-bottom:1px solid var(--border);">
+      <a href="{{url}}" target="_blank" rel="noopener" style="font-size:0.8125rem;font-weight:500;">{{title}}</a>
+      <span style="font-size:0.625rem;color:var(--text-muted);display:block;">{{source}}</span>
+    </div>
+<!--/LOOP:news_headlines-->
+    <div class="mod-footer"><span data-updated="{{news_updated}}">Updated {{news_updated_display}}</span></div>
+  </div>
+
+</div>
+
+<div class="cta"><div class="cta-eyebrow">Get the Northern Mile Brief</div>
+<div class="cta-body">Fuel prices, border updates, and market shifts every Wednesday at 6am.</div>
+<div class="cta-sub"><a href="https://northernmilemedia.com">Sign up free &rarr;</a></div></div>
+
+</main>
+
+<div class="footer"><p>Northern Mile Media &middot; For the people who keep Canada moving</p><p style="margin-top:4px;">Data from public sources. Informational use only.</p></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>window.INCIDENTS = {{incidents_array}};</script>
+<script>window.THEFTS = {{theft_array}};</script>
+<script>window.FUEL_DIESEL = {{fuel_diesel_data}};</script>
+<script>window.FUEL_GAS = {{fuel_gas_data}};</script>
+<script>window.CALC_CITIES = {{calc_cities}};</script>
+<script>window.CALC_DISTANCES = {{calc_distances}};</script>
+</body></html>

@@ -1,143 +1,55 @@
 <!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Trucking Fuel Cost Calculator | Northern Mile</title>
-<meta name="description" content="Calculate fuel costs for any Canadian or US trucking lane. Live diesel prices, 23 cities, per-trip estimates.">
+<title>Truck Fuel Cost Calculator — Canada | Northern Mile</title>
+<meta name="description" content="Estimate trip fuel cost by distance, fuel burn and diesel price. Pre-loaded with today's Canadian national average, updated every 30 minutes.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
-<meta property="og:title" content="Trucking Fuel Cost Calculator | Northern Mile">
-<meta property="og:description" content="Calculate fuel costs for any Canadian or US trucking lane. Live diesel prices, 23 cities, per-trip estimates.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<style>/* DESIGN TOKENS */
-:root{--bg:#15171A;--surface-1:#1E2227;--surface-2:#25282E;--border:#2C3238;--radius-card:8px;--radius-chip:12px;
---text-primary:#E8EAEC;--text-body:#8B939C;--text-muted:#6B7279;
---amber:#F2A900;--green:#1F6B4A;--red:#D93A34}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-*{font-variant-numeric:tabular-nums}
-body{background:var(--bg);color:var(--text-body);font-family:'Inter',-apple-system,sans-serif;font-size:.875rem;line-height:1.55;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-*{scrollbar-width:thin;scrollbar-color:var(--border) var(--bg)}
-a{color:var(--amber);text-decoration:none}
+<meta property="og:type" content="website"><meta property="og:title" content="Truck Fuel Cost Calculator — Canada | Northern Mile"><meta property="og:description" content="Estimate trip fuel cost. Pre-loaded with today's diesel average."><meta name="twitter:card" content="summary_large_image">
+<meta name="build" content="2026-07-21 02:23">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel Cost Calculator","item":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/"}]}
+</script>
+</head><body>
 
-.header{background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:center;height:56px}
-.header h1{font-size:.8125rem;font-weight:700;color:var(--text-primary);font-family:'IBM Plex Mono',monospace;letter-spacing:.02em}
-.nav{background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;display:flex;justify-content:center;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;-webkit-overflow-scrolling:touch}
-.nav a{color:var(--text-muted);text-decoration:none;font-size:.6875rem;font-weight:600;padding:8px 0;border-bottom:2px solid transparent;flex-shrink:0}
-.nav a:hover,.nav a:focus-visible{color:var(--text-primary);border-color:var(--text-primary)}
-.nav a.active{color:var(--amber);border-color:var(--amber)}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:10px 20px 6px;font-size:.625rem;color:var(--text-muted)}
-.breadcrumb a{color:var(--text-muted)}
-.updated{text-align:center;font-size:.75rem;color:var(--text-muted);padding:24px 0 8px;font-family:'IBM Plex Mono',monospace}
-.cta{text-align:center;margin:32px auto;padding:28px 24px;background:var(--surface-1);border:1px solid var(--amber);border-radius:var(--radius-card);max-width:480px}
-.cta-eyebrow{color:var(--amber);font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px}
-.cta-body{color:var(--text-primary);font-size:.9375rem;margin:0 0 6px}
-.cta-sub{color:var(--text-muted);font-size:.75rem;margin-top:8px}
-.related{margin:32px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.related a{display:block;background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px;text-decoration:none;color:var(--text-primary);font-weight:500;font-size:.8125rem;text-align:center}
-.related a:hover{border-color:var(--amber)}
-.footer{text-align:center;padding:24px;font-size:.625rem;color:var(--text-muted);border-top:1px solid var(--border);font-family:'IBM Plex Mono',monospace}
-.footer a{color:var(--text-muted)}
+<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
+<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/" class="on">Calc</a></div></nav>
 
-main{max-width:1200px;margin:0 auto;padding:12px 20px 48px}
-h2{font-size:1rem;font-weight:600;color:var(--text-primary);margin:32px 0 12px}
-h2:first-of-type{margin-top:4px}
-p.intro{color:var(--text-muted);font-size:.8125rem;margin-bottom:16px}
+<main class="wrap">
+  <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Cost Calculator</div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with today's diesel</span><span>Updated 2026-07-21 02:23</span></div>
 
-.hero{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px 28px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
-.hp{font-size:3.5rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;line-height:1;color:var(--text-primary)}
-.hp span{font-size:1.125rem;color:var(--text-muted);font-weight:400}
-.hm{flex:1;min-width:200px}
-.hl{font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:4px;font-weight:600;font-family:'IBM Plex Mono',monospace}
-.hs{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-.hst{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-chip);padding:12px 16px;min-width:100px}
-.hsv{font-size:1.125rem;font-weight:600;font-family:'Barlow Condensed',sans-serif}
-.hsl{font-size:.5625rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-family:'IBM Plex Mono',monospace;margin-top:2px}
+  <div class="mod"><span class="tab"></span><h2>Trip fuel cost</h2><span class="rule"></span></div>
+  <div class="panel" style="padding:20px 22px">
+    <div class="field-row">
+      <div><label class="fl" for="dist">Distance (km)</label><input class="field" id="dist" type="number" value="1000" min="0" oninput="calc()"></div>
+      <div><label class="fl" for="burn">Burn (L/100km)</label><input class="field" id="burn" type="number" value="38" min="1" oninput="calc()"></div>
+    </div>
+    <div class="field-row">
+      <div><label class="fl" for="price">Diesel (c/L)</label><input class="field" id="price" type="number" value="" min="0" step="0.1" oninput="calc()"></div>
+      <div style="display:flex;align-items:flex-end"><button class="btn" style="width:100%" onclick="document.getElementById('price').value=;calc()">Reset to national avg</button></div>
+    </div>
+    <div class="readout" style="padding:16px 0 0"><div class="rl">Estimated fuel cost</div><div class="big" id="out">—</div><div class="meta" id="detail"></div></div>
+  </div>
 
-.metric-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:28px}
-.mc{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px}
-.mc-code{font-size:.75rem;font-weight:600;font-family:'IBM Plex Mono',monospace;color:var(--text-muted)}
-.mc-name{font-size:.6875rem;color:var(--text-muted);margin:2px 0 8px}
-.mc-val{font-size:1.75rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;color:var(--text-primary);line-height:1.1}
-.mc-val span{font-size:.6875rem;color:var(--text-muted);font-weight:400}
-.mc-delta{font-size:.625rem;margin-top:6px;color:var(--amber)}.mc-delta.neg{color:var(--green)}
+  <div class="mod"><span class="tab"></span><h2>Questions drivers ask</h2><span class="rule"></span></div>
+  <div class="faq"><dl>
+    <dt>What diesel price does this use?</dt><dd>It pre-loads today's Canadian national average (c/L), updated every 30 minutes. Change it to any pump price you like.</dd>
+    <dt>How is the cost worked out?</dt><dd>Litres burned = distance ÷ 100 × burn rate. Cost = litres × price per litre.</dd>
+  </dl></div>
 
-table{width:100%;border-collapse:collapse;font-size:.8125rem}
-th{text-align:left;padding:8px 12px;border-bottom:2px solid var(--border);font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);font-weight:600;font-family:'IBM Plex Mono',monospace}
-td{padding:9px 12px;border-bottom:1px solid var(--border)}td.val{text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--text-primary)}
-td a{color:var(--amber)}
-
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
-.cp{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px}.cp h2:first-child{margin-top:0}
-
-.callout-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.sc{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px;display:flex;flex-direction:column;justify-content:space-between}
-.sc-r{font-size:.8125rem;font-weight:500;color:var(--text-primary)}
-.sc-r span{display:block;font-size:.6875rem;color:var(--text-muted);font-weight:400;margin-top:2px}
-.sc-d{font-size:.6875rem;color:var(--text-muted);margin-top:4px}
-.sc-a{font-size:1.375rem;font-weight:600;color:var(--green);font-family:'Barlow Condensed',sans-serif;margin-top:10px}
-.sc-a.red{color:var(--red)}
-
-.cht{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px;margin-bottom:28px}
-.cht-l{font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:12px;font-weight:600;font-family:'IBM Plex Mono',monospace}
-
-.faq{margin:32px 0}.faq dt{font-weight:600;margin-top:24px;padding-top:16px;border-top:1px solid var(--border);color:var(--amber);font-size:.9375rem}
-.faq dd{margin:8px 0 0;color:var(--text-body);font-size:.875rem;line-height:1.6}
-
-@media(max-width:700px){.hero{flex-direction:column;padding:20px}.hp{font-size:2.5rem}.metric-grid{grid-template-columns:repeat(2,1fr)}.callout-grid{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.nav{gap:16px}}
-</style></head><body>
-
-<div class="header"><a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><h1>NORTHERN MILE MEDIA</h1></a></div>
-<nav class="nav"><a href="/" class="">Home</a>
-<a href="/fuel-prices/" class="">Fuel</a>
-<a href="/exchange-rate/" class="">FX</a>
-<a href="/border-wait-times/" class="">Border</a>
-<a href="/road-incidents/" class="">Incidents</a>
-<a href="/cargo-theft/" class="">Theft</a>
-<a href="/market-pulse/" class="">Market</a>
-<a href="/industry-news/" class="">News</a>
-<a href="/fuel-cost-calculator/" class="active">Calc</a></nav>
-<div class="breadcrumb"><a href="/">Dashboard</a> &rsaquo; Calculator</div>
-
-<main>
-  <div class="hero"><div><div class="hl">Lane fuel calculator</div><div class="hp">23<span> cities</span></div></div>
-<div class="hm"><div class="hs">
-<div class="hst"><div class="hsv">331</div><div class="hsl">Routes</div></div>
-<div class="hst"><div class="hsv" style="color:var(--amber);">171.9c/L</div><div class="hsl">Current diesel</div></div>
-</div></div></div>
-  <h2>Sample lane costs</h2>
-<p class="intro">Based on national average diesel at 171.9c/L. Use the <a href="/">main dashboard</a> to calculate any route with live prices.</p>
-<table><thead><tr><th>Route</th><th class="val">Distance</th><th class="val">Est. cost at 35L/100km</th></tr></thead>
-<tr><td>Vancouver &rarr; Toronto</td><td class="val">4,390 km</td><td class="val">$2,641</td></tr>
-<tr><td>Calgary &rarr; Winnipeg</td><td class="val">1,330 km</td><td class="val">$800</td></tr>
-<tr><td>Toronto &rarr; Montreal</td><td class="val">540 km</td><td class="val">$325</td></tr>
-<tr><td>Vancouver &rarr; Seattle</td><td class="val">230 km</td><td class="val">$138</td></tr>
-</table>
-
-<h2>Cost by burn rate</h2>
-<p class="intro">What different trucks cost per 100km at 171.9c/L.</p>
-<table><thead><tr><th>Burn rate</th><th class="val">Cost/100km</th></tr></thead><tr><td>55 L/100km</td><td class="val">$94.55</td></tr><tr><td>45 L/100km</td><td class="val">$77.36</td></tr><tr><td>35 L/100km</td><td class="val">$60.16</td></tr><tr><td>30 L/100km</td><td class="val">$51.57</td></tr><tr><td>25 L/100km</td><td class="val">$42.98</td></tr></table>
-
-<h2>FAQ</h2>
-<div class="faq"><dl>
-<dt>How accurate is the calculator?</dt><dd>It uses live diesel and gasoline prices with straight-line driving distances. Actual costs vary with terrain, weather, and traffic. Use it for planning and comparison, not exact fuel-card reconciliation.</dd>
-<dt>Can I calculate US lanes?</dt><dd>Yes. The calculator includes 23 cities across Canada and the US. Select any origin and destination for an instant estimate.</dd>
-</dl></div>
-  
-
-  <div class="updated">Last updated: 2026-07-20 00:32 &middot; Data refreshes every 30 minutes</div>
-
-  <div class="cta"><div class="cta-eyebrow">Get the Northern Mile Brief</div>
-  <div class="cta-body">Fuel prices, border updates, and market shifts every Wednesday at 6am.</div>
-  <div class="cta-sub"><a href="https://northernmilemedia.com">Sign up free &rarr;</a></div></div>
-
-  <h2 style="text-align:center;">More data</h2>
-  <div class="related"><a href="/exchange-rate/">CAD to USD &rarr;</a>
-<a href="/border-wait-times/">Border wait times &rarr;</a>
-<a href="/road-incidents/">Road incidents &rarr;</a>
-<a href="/cargo-theft/">Cargo theft &rarr;</a>
-<a href="/market-pulse/">Market indicators &rarr;</a>
-<a href="/industry-news/">Industry headlines &rarr;</a>
-<a href="/fuel-prices/">Diesel prices &rarr;</a></div>
+  <div class="related"><a href="/fuel-prices/">Fuel prices →</a><a href="/exchange-rate/">CAD/USD →</a><a href="/border-wait-times/">Border waits →</a></div>
 </main>
 
-<div class="footer"><p>Northern Mile Media &middot; For the people who keep Canada moving</p><p style="margin-top:4px;">Data from public sources. Informational use only.</p></div>
+<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Estimates only · Informational use · © 2026</div></div></footer>
+<script src="/assets/app.js"></script>
+<script>
+function calc(){
+  var d=+document.getElementById('dist').value||0, b=+document.getElementById('burn').value||0, p=+document.getElementById('price').value||0;
+  var litres=d/100*b, cost=litres*p/100;
+  document.getElementById('out').textContent='$'+cost.toFixed(2);
+  document.getElementById('detail').textContent=litres.toFixed(0)+' L × '+p.toFixed(1)+'c/L · '+d+' km at '+b+' L/100km';
+}
+calc();
+</script>
 </body></html>

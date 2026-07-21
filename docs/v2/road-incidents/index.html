@@ -1,134 +1,79 @@
 <!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canadian Highway Incidents | Northern Mile</title>
-<meta name="description" content="Live Canadian highway incidents for truckers. Road closures, accidents, construction delays. Free.">
+<title>Canadian Road Incidents &amp; Closures for Trucks — Live Map | Northern Mile</title>
+<meta name="description" content="Live map of major road closures and collisions on Canadian freight corridors, updated every 30 minutes. Click any incident for road, severity, clearance and detour.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/road-incidents/">
-<meta property="og:title" content="Canadian Highway Incidents | Northern Mile">
-<meta property="og:description" content="Live Canadian highway incidents for truckers. Road closures, accidents, construction delays. Free.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<style>/* DESIGN TOKENS */
-:root{--bg:#15171A;--surface-1:#1E2227;--surface-2:#25282E;--border:#2C3238;--radius-card:8px;--radius-chip:12px;
---text-primary:#E8EAEC;--text-body:#8B939C;--text-muted:#6B7279;
---amber:#F2A900;--green:#1F6B4A;--red:#D93A34}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-*{font-variant-numeric:tabular-nums}
-body{background:var(--bg);color:var(--text-body);font-family:'Inter',-apple-system,sans-serif;font-size:.875rem;line-height:1.55;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-*{scrollbar-width:thin;scrollbar-color:var(--border) var(--bg)}
-a{color:var(--amber);text-decoration:none}
+<meta property="og:type" content="website"><meta property="og:title" content="Canadian Road Incidents — Live Map | Northern Mile"><meta property="og:description" content="Live closures and collisions on Canadian freight corridors. Updated every 30 min."><meta name="twitter:card" content="summary_large_image">
+<meta name="build" content="2026-07-21 02:23">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Road Incidents","item":"https://dashboard.northernmilemedia.com/road-incidents/"}]}
+]}
+</script>
+</head><body>
 
-.header{background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:center;height:56px}
-.header h1{font-size:.8125rem;font-weight:700;color:var(--text-primary);font-family:'IBM Plex Mono',monospace;letter-spacing:.02em}
-.nav{background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;display:flex;justify-content:center;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;-webkit-overflow-scrolling:touch}
-.nav a{color:var(--text-muted);text-decoration:none;font-size:.6875rem;font-weight:600;padding:8px 0;border-bottom:2px solid transparent;flex-shrink:0}
-.nav a:hover,.nav a:focus-visible{color:var(--text-primary);border-color:var(--text-primary)}
-.nav a.active{color:var(--amber);border-color:var(--amber)}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:10px 20px 6px;font-size:.625rem;color:var(--text-muted)}
-.breadcrumb a{color:var(--text-muted)}
-.updated{text-align:center;font-size:.75rem;color:var(--text-muted);padding:24px 0 8px;font-family:'IBM Plex Mono',monospace}
-.cta{text-align:center;margin:32px auto;padding:28px 24px;background:var(--surface-1);border:1px solid var(--amber);border-radius:var(--radius-card);max-width:480px}
-.cta-eyebrow{color:var(--amber);font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px}
-.cta-body{color:var(--text-primary);font-size:.9375rem;margin:0 0 6px}
-.cta-sub{color:var(--text-muted);font-size:.75rem;margin-top:8px}
-.related{margin:32px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.related a{display:block;background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px;text-decoration:none;color:var(--text-primary);font-weight:500;font-size:.8125rem;text-align:center}
-.related a:hover{border-color:var(--amber)}
-.footer{text-align:center;padding:24px;font-size:.625rem;color:var(--text-muted);border-top:1px solid var(--border);font-family:'IBM Plex Mono',monospace}
-.footer a{color:var(--text-muted)}
+<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
+<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/" class="on">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
 
-main{max-width:1200px;margin:0 auto;padding:12px 20px 48px}
-h2{font-size:1rem;font-weight:600;color:var(--text-primary);margin:32px 0 12px}
-h2:first-of-type{margin-top:4px}
-p.intro{color:var(--text-muted);font-size:.8125rem;margin-bottom:16px}
+<main class="wrap">
+  <div class="breadcrumb"><a href="/">Dashboard</a> › Road Incidents</div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Closures + collisions · freight corridors</span><span>Updated 2026-07-21 02:23 · refresh 30 min</span></div>
 
-.hero{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px 28px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
-.hp{font-size:3.5rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;line-height:1;color:var(--text-primary)}
-.hp span{font-size:1.125rem;color:var(--text-muted);font-weight:400}
-.hm{flex:1;min-width:200px}
-.hl{font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:4px;font-weight:600;font-family:'IBM Plex Mono',monospace}
-.hs{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-.hst{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-chip);padding:12px 16px;min-width:100px}
-.hsv{font-size:1.125rem;font-weight:600;font-family:'Barlow Condensed',sans-serif}
-.hsl{font-size:.5625rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-family:'IBM Plex Mono',monospace;margin-top:2px}
+  <div class="mod"><span class="tab"></span><h2>Incident map</h2><span class="k">click a pin or row for detail</span><span class="rule"></span></div>
+  <div id="map"></div>
 
-.metric-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:28px}
-.mc{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px}
-.mc-code{font-size:.75rem;font-weight:600;font-family:'IBM Plex Mono',monospace;color:var(--text-muted)}
-.mc-name{font-size:.6875rem;color:var(--text-muted);margin:2px 0 8px}
-.mc-val{font-size:1.75rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;color:var(--text-primary);line-height:1.1}
-.mc-val span{font-size:.6875rem;color:var(--text-muted);font-weight:400}
-.mc-delta{font-size:.625rem;margin-top:6px;color:var(--amber)}.mc-delta.neg{color:var(--green)}
-
-table{width:100%;border-collapse:collapse;font-size:.8125rem}
-th{text-align:left;padding:8px 12px;border-bottom:2px solid var(--border);font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);font-weight:600;font-family:'IBM Plex Mono',monospace}
-td{padding:9px 12px;border-bottom:1px solid var(--border)}td.val{text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--text-primary)}
-td a{color:var(--amber)}
-
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
-.cp{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px}.cp h2:first-child{margin-top:0}
-
-.callout-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.sc{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px;display:flex;flex-direction:column;justify-content:space-between}
-.sc-r{font-size:.8125rem;font-weight:500;color:var(--text-primary)}
-.sc-r span{display:block;font-size:.6875rem;color:var(--text-muted);font-weight:400;margin-top:2px}
-.sc-d{font-size:.6875rem;color:var(--text-muted);margin-top:4px}
-.sc-a{font-size:1.375rem;font-weight:600;color:var(--green);font-family:'Barlow Condensed',sans-serif;margin-top:10px}
-.sc-a.red{color:var(--red)}
-
-.cht{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px;margin-bottom:28px}
-.cht-l{font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:12px;font-weight:600;font-family:'IBM Plex Mono',monospace}
-
-.faq{margin:32px 0}.faq dt{font-weight:600;margin-top:24px;padding-top:16px;border-top:1px solid var(--border);color:var(--amber);font-size:.9375rem}
-.faq dd{margin:8px 0 0;color:var(--text-body);font-size:.875rem;line-height:1.6}
-
-@media(max-width:700px){.hero{flex-direction:column;padding:20px}.hp{font-size:2.5rem}.metric-grid{grid-template-columns:repeat(2,1fr)}.callout-grid{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.nav{gap:16px}}
-</style></head><body>
-
-<div class="header"><a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><h1>NORTHERN MILE MEDIA</h1></a></div>
-<nav class="nav"><a href="/" class="">Home</a>
-<a href="/fuel-prices/" class="">Fuel</a>
-<a href="/exchange-rate/" class="">FX</a>
-<a href="/border-wait-times/" class="">Border</a>
-<a href="/road-incidents/" class="active">Incidents</a>
-<a href="/cargo-theft/" class="">Theft</a>
-<a href="/market-pulse/" class="">Market</a>
-<a href="/industry-news/" class="">News</a>
-<a href="/fuel-cost-calculator/" class="">Calc</a></nav>
-<div class="breadcrumb"><a href="/">Dashboard</a> &rsaquo; Incidents</div>
-
-<main>
-  <div class="hero"><div><div class="hl">Active highway incidents</div><div class="hp">50<span> reported</span></div></div>
-<div class="hm"><div class="hs">
-<div class="hst"><div class="hsv" style="color:var(--amber);">50</div><div class="hsl">Active</div></div>
-</div></div></div>
-  <h2>Highway incidents across Canada</h2>
-<p class="intro">Road closures, accidents, and construction affecting commercial truck routes. Data from Ontario 511, DriveBC, and provincial highway authorities.</p>
-<table><thead><tr><th>Incident</th><th>Highway</th><th class="val">Severity</th></tr></thead><tr><td>1 sailing wait. Expect 1 hours delay.</td><td>{'name': 'Highway 23', 'from': 'Upper Arrow Lake Ferry', 'direction': 'BOTH', 'state': 'ALL_LANES_OPEN', '+delay': '1 hours'}</td><td class="val">MINOR</td></tr><tr><td>Forest Fire on Lac des Mille Lacs Road, Both directions,  from Inwood Rd to Hwy </td><td>Lac des Mille Lacs Road</td><td class="val">Unknown</td></tr><tr><td>Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane </td><td>HWY 61</td><td class="val">Unknown</td></tr><tr><td>Forest Fire on HWY 599 Both Directions  between SEC HWY 516 (W) - MNR SILVICULTU</td><td>HWY 599</td><td class="val">Unknown</td></tr><tr><td>Forest Fire on HWY 527 Both Directions  between GULL R BR and 1ST AVE - ARMSTRON</td><td>HWY 527</td><td class="val">Unknown</td></tr><tr><td>Nightly Construction on HWY 403 HAMILTON Eastbound  between Garden Ave and Jerse</td><td>HWY 403 HAMILTON</td><td class="val">Unknown</td></tr><tr><td>Highway 1 (TransCanada Highway), in both directions. Construction work between N</td><td>{'name': 'Highway 1', 'from': 'Nicomen River Rd', 'direction': 'BOTH'}</td><td class="val">MINOR</td></tr><tr><td>Nightly Maintenance on HWY 417 Westbound  between WALKLEY RD (IC 110) and INNES </td><td>HWY 417</td><td class="val">Unknown</td></tr><tr><td>Nightly Moving Maintenance Closure on HWY 417 Eastbound  between HWY 7 (IC 145),</td><td>HWY 417</td><td class="val">Unknown</td></tr><tr><td>Continuous Maintenance on HWY 417 Westbound Off-ramp at TERRY FOX DR (IC 140), O</td><td>HWY 417</td><td class="val">Unknown</td></tr><tr><td>Nightly Maintenance on HWY 417 Eastbound  between HOLLY ACRES RD EXIT E/B (IC 13</td><td>HWY 417</td><td class="val">Unknown</td></tr><tr><td>Collision on HWY 17 Eastbound  between STORYLAND RD (CR 4)/PINNACLE RD and BRUCE</td><td>HWY 17</td><td class="val">Unknown</td></tr><tr><td>Daily Maintenance on HWY 417 Eastbound  between WALKLEY RD (IC 110), Ottawa and </td><td>HWY 417</td><td class="val">Unknown</td></tr><tr><td>Daily Maintenance on HWY 417 Eastbound  between GREENFIELD RD-CR 30 (DUNVEGAN)/C</td><td>HWY 417</td><td class="val">Unknown</td></tr><tr><td>Daily Construction on HWY 403 HAMILTON Westbound  between Highway 24 / Rest Acre</td><td>HWY 403 HAMILTON</td><td class="val">Unknown</td></tr><tr><td>Paving operations. Starting Tue Jul 21 until Wed Jul 22. From 10:00 PM to 4:00 A</td><td>{'name': 'Other Roads', 'from': 'Golden Ears Conn', 'direction': 'W', 'state': 'ALL_LANES_OPEN'}</td><td class="val">MINOR</td></tr><tr><td>Daily Construction on HWY 21 Northbound  between Concession 10, Kincardine and C</td><td>HWY 21</td><td class="val">Unknown</td></tr><tr><td>Daily Maintenance on HWY 6 Northbound  between Bruce Road 9, Wiarton and Lindsay</td><td>HWY 6</td><td class="val">Unknown</td></tr><tr><td>Daily Maintenance on HWY 416 Northbound Off-ramp at HWY 417, Ottawa. 2 Right Lan</td><td>HWY 416</td><td class="val">Unknown</td></tr><tr><td>Nightly Maintenance on HWY 427 Southbound Collector between DUNDAS STREET and EV</td><td>HWY 427</td><td class="val">Unknown</td></tr></table>
-<p class="intro" style="margin-top:12px;">Color-coded by severity. Full map with interactive markers on the <a href="/">main dashboard</a>.</p>
-
-<h2>FAQ</h2>
-<div class="faq"><dl>
-<dt>How current is this data?</dt><dd>Incidents are pulled from provincial highway condition feeds every 30 minutes.</dd>
-<dt>Which provinces are covered?</dt><dd>Ontario, British Columbia, Alberta, Quebec, and Manitoba highway data. Coverage expanding to all provinces.</dd>
-<dt>How do I check a specific highway?</dt><dd>Use the interactive map on the <a href="/">main dashboard</a> to zoom to any region.</dd>
-</dl></div>
   
 
-  <div class="updated">Last updated: 2026-07-20 00:32 &middot; Data refreshes every 30 minutes</div>
+  <div class="mod"><span class="tab"></span><h2>Active incidents</h2><span class="rule"></span></div>
+  <div class="panel" id="incList"></div>
 
-  <div class="cta"><div class="cta-eyebrow">Get the Northern Mile Brief</div>
-  <div class="cta-body">Fuel prices, border updates, and market shifts every Wednesday at 6am.</div>
-  <div class="cta-sub"><a href="https://northernmilemedia.com">Sign up free &rarr;</a></div></div>
+  <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canadian%20road%20closures%20for%20trucks&url=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/road-incidents/')">Copy link</button></div>
 
-  <h2 style="text-align:center;">More data</h2>
-  <div class="related"><a href="/exchange-rate/">CAD to USD &rarr;</a>
-<a href="/border-wait-times/">Border wait times &rarr;</a>
-<a href="/cargo-theft/">Cargo theft &rarr;</a>
-<a href="/market-pulse/">Market indicators &rarr;</a>
-<a href="/industry-news/">Industry headlines &rarr;</a>
-<a href="/fuel-prices/">Diesel prices &rarr;</a></div>
+  <div class="related"><a href="/border-wait-times/">Border waits →</a><a href="/fuel-prices/">Fuel prices →</a><a href="/cargo-theft/">Cargo theft →</a></div>
 </main>
 
-<div class="footer"><p>Northern Mile Media &middot; For the people who keep Canada moving</p><p style="margin-top:4px;">Data from public sources. Informational use only.</p></div>
+<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026</div></div></footer>
+
+<!-- HERMES: write the incident array below. Each item:
+     {road,direction,severity,severity_label,severity_class,what,clearance,detour,source_url,lat,lng}
+     Leave [] for no incidents; the map + list show a clean "corridors clear" state. -->
+<script>window.INCIDENTS = [  ];</script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/assets/app.js"></script>
+<script>
+(function(){
+  var data = window.INCIDENTS || [];
+  var map = L.map('map',{scrollWheelZoom:false}).setView([56.13,-106.35],4);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:19
+  }).addTo(map);
+  var list = document.getElementById('incList');
+  if(!data.length){
+    list.innerHTML = '<div class="empty"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked 2026-07-21 02:23</div>';
+    return;
+  }
+  var markers = [];
+  data.forEach(function(it, idx){
+    var color = it.severity_class === 'closed' ? '#E5484D' : '#F5C518';
+    var m = L.circleMarker([it.lat, it.lng], {radius:8,color:color,fillColor:color,fillOpacity:.85,weight:2}).addTo(map);
+    m.bindPopup('<b>'+it.road+' · '+it.direction+'</b><br>'+it.what+'<br><small>Clears: '+it.clearance+(it.detour?' · Detour: '+it.detour:'')+'</small>'+(it.source_url?'<br><a href="'+it.source_url+'" target="_blank" rel="noopener">Source →</a>':''));
+    markers.push(m);
+    var row = document.createElement('div');
+    row.className = 'inc';
+    row.setAttribute('tabindex','0');
+    row.setAttribute('role','button');
+    row.innerHTML = '<div class="h">'+it.road+' · '+it.direction+' <span class="pill '+it.severity_class+'" style="float:right">'+it.severity_label+'</span></div><div class="m">'+it.what+' · clears '+it.clearance+(it.detour?' · detour '+it.detour:'')+'</div>';
+    function focus(){ map.flyTo([it.lat, it.lng], 9, {duration:.6}); markers[idx].openPopup(); row.scrollIntoView({block:'nearest'}); }
+    row.addEventListener('click', focus);
+    row.addEventListener('keydown', function(e){ if(e.key==='Enter') focus(); });
+    list.appendChild(row);
+  });
+  var group = L.featureGroup(markers);
+  map.fitBounds(group.getBounds().pad(0.2));
+})();
+</script>
 </body></html>

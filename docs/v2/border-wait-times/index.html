@@ -1,134 +1,54 @@
 <!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canada-US Border Wait Times | Northern Mile</title>
-<meta name="description" content="Live Canada-US border wait times for commercial trucks. CBSA data at every major crossing. Free.">
-<meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/border-wait-times/">
-<meta property="og:title" content="Canada-US Border Wait Times | Northern Mile">
-<meta property="og:description" content="Live Canada-US border wait times for commercial trucks. CBSA data at every major crossing. Free.">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<style>/* DESIGN TOKENS */
-:root{--bg:#15171A;--surface-1:#1E2227;--surface-2:#25282E;--border:#2C3238;--radius-card:8px;--radius-chip:12px;
---text-primary:#E8EAEC;--text-body:#8B939C;--text-muted:#6B7279;
---amber:#F2A900;--green:#1F6B4A;--red:#D93A34}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-*{font-variant-numeric:tabular-nums}
-body{background:var(--bg);color:var(--text-body);font-family:'Inter',-apple-system,sans-serif;font-size:.875rem;line-height:1.55;-webkit-font-smoothing:antialiased}
-::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-*{scrollbar-width:thin;scrollbar-color:var(--border) var(--bg)}
-a{color:var(--amber);text-decoration:none}
+<title>Canada–US Border Wait Times for Trucks — Live | Northern Mile</title>
+<meta name="description" content="Live commercial border wait times at the major Canada–US crossings, updated every 30 minutes. Ambassador, Blue Water, Peace Bridge, Pacific Highway and more.">
+<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://dashboard.northernmilemedia.com/border-wait-times/">
+<meta property="og:type" content="website"><meta property="og:title" content="Canada–US Truck Border Wait Times — Live | Northern Mile"><meta property="og:description" content="Live commercial wait times at the major Canada–US crossings. Updated every 30 min."><meta name="twitter:card" content="summary_large_image">
+<meta name="build" content="2026-07-21 02:23">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Border Wait Times","item":"https://dashboard.northernmilemedia.com/border-wait-times/"}]},
+{"@type":"Dataset","name":"Canada-US Commercial Border Wait Times","description":"Live commercial vehicle wait times at major Canada-US border crossings, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"dateModified":"2026-07-21 02:23"}
+]}
+</script>
+</head><body>
 
-.header{background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;display:flex;align-items:center;justify-content:center;height:56px}
-.header h1{font-size:.8125rem;font-weight:700;color:var(--text-primary);font-family:'IBM Plex Mono',monospace;letter-spacing:.02em}
-.nav{background:var(--bg);border-bottom:1px solid var(--border);padding:0 24px;display:flex;justify-content:center;gap:24px;overflow-x:auto;overflow-y:hidden;white-space:nowrap;-webkit-overflow-scrolling:touch}
-.nav a{color:var(--text-muted);text-decoration:none;font-size:.6875rem;font-weight:600;padding:8px 0;border-bottom:2px solid transparent;flex-shrink:0}
-.nav a:hover,.nav a:focus-visible{color:var(--text-primary);border-color:var(--text-primary)}
-.nav a.active{color:var(--amber);border-color:var(--amber)}
-.breadcrumb{max-width:1200px;margin:0 auto;padding:10px 20px 6px;font-size:.625rem;color:var(--text-muted)}
-.breadcrumb a{color:var(--text-muted)}
-.updated{text-align:center;font-size:.75rem;color:var(--text-muted);padding:24px 0 8px;font-family:'IBM Plex Mono',monospace}
-.cta{text-align:center;margin:32px auto;padding:28px 24px;background:var(--surface-1);border:1px solid var(--amber);border-radius:var(--radius-card);max-width:480px}
-.cta-eyebrow{color:var(--amber);font-size:.6875rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px}
-.cta-body{color:var(--text-primary);font-size:.9375rem;margin:0 0 6px}
-.cta-sub{color:var(--text-muted);font-size:.75rem;margin-top:8px}
-.related{margin:32px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
-.related a{display:block;background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px;text-decoration:none;color:var(--text-primary);font-weight:500;font-size:.8125rem;text-align:center}
-.related a:hover{border-color:var(--amber)}
-.footer{text-align:center;padding:24px;font-size:.625rem;color:var(--text-muted);border-top:1px solid var(--border);font-family:'IBM Plex Mono',monospace}
-.footer a{color:var(--text-muted)}
+<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
+<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/" class="on">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
 
-main{max-width:1200px;margin:0 auto;padding:12px 20px 48px}
-h2{font-size:1rem;font-weight:600;color:var(--text-primary);margin:32px 0 12px}
-h2:first-of-type{margin-top:4px}
-p.intro{color:var(--text-muted);font-size:.8125rem;margin-bottom:16px}
+<main class="wrap">
+  <div class="breadcrumb"><a href="/">Dashboard</a> › Border Wait Times</div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Commercial lanes</span><span>Updated 2026-07-21 02:23 · refresh 30 min</span></div>
 
-.hero{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:24px 28px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
-.hp{font-size:3.5rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;line-height:1;color:var(--text-primary)}
-.hp span{font-size:1.125rem;color:var(--text-muted);font-weight:400}
-.hm{flex:1;min-width:200px}
-.hl{font-size:.625rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:4px;font-weight:600;font-family:'IBM Plex Mono',monospace}
-.hs{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-.hst{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-chip);padding:12px 16px;min-width:100px}
-.hsv{font-size:1.125rem;font-weight:600;font-family:'Barlow Condensed',sans-serif}
-.hsl{font-size:.5625rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;font-family:'IBM Plex Mono',monospace;margin-top:2px}
+  <section class="cockpit"><div class="gauges">
+    <div class="gauge ok"><div class="gl">Busiest now</div><div class="gv">0 <small>Heavy</small></div><div class="gs">0 moderate</div></div>
+    <div class="gauge"><div class="gl">Closed</div><div class="gv">0</div><div class="gs">crossings</div></div>
+    <div class="gauge"><div class="gl">Longest wait</div><div class="gv"><small> min</small></div><div class="gs"></div></div>
+    <div class="gauge good"><div class="gl">Fastest</div><div class="gv"><small> min</small></div><div class="gs"></div></div>
+  </div></section>
 
-.metric-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:28px}
-.mc{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px}
-.mc-code{font-size:.75rem;font-weight:600;font-family:'IBM Plex Mono',monospace;color:var(--text-muted)}
-.mc-name{font-size:.6875rem;color:var(--text-muted);margin:2px 0 8px}
-.mc-val{font-size:1.75rem;font-weight:600;font-family:'Barlow Condensed',sans-serif;color:var(--text-primary);line-height:1.1}
-.mc-val span{font-size:.6875rem;color:var(--text-muted);font-weight:400}
-.mc-delta{font-size:.625rem;margin-top:6px;color:var(--amber)}.mc-delta.neg{color:var(--green)}
-
-table{width:100%;border-collapse:collapse;font-size:.8125rem}
-th{text-align:left;padding:8px 12px;border-bottom:2px solid var(--border);font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);font-weight:600;font-family:'IBM Plex Mono',monospace}
-td{padding:9px 12px;border-bottom:1px solid var(--border)}td.val{text-align:right;font-family:'IBM Plex Mono',monospace;color:var(--text-primary)}
-td a{color:var(--amber)}
-
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
-.cp{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px}.cp h2:first-child{margin-top:0}
-
-.callout-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.sc{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-card);padding:16px;display:flex;flex-direction:column;justify-content:space-between}
-.sc-r{font-size:.8125rem;font-weight:500;color:var(--text-primary)}
-.sc-r span{display:block;font-size:.6875rem;color:var(--text-muted);font-weight:400;margin-top:2px}
-.sc-d{font-size:.6875rem;color:var(--text-muted);margin-top:4px}
-.sc-a{font-size:1.375rem;font-weight:600;color:var(--green);font-family:'Barlow Condensed',sans-serif;margin-top:10px}
-.sc-a.red{color:var(--red)}
-
-.cht{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px;margin-bottom:28px}
-.cht-l{font-size:.625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:12px;font-weight:600;font-family:'IBM Plex Mono',monospace}
-
-.faq{margin:32px 0}.faq dt{font-weight:600;margin-top:24px;padding-top:16px;border-top:1px solid var(--border);color:var(--amber);font-size:.9375rem}
-.faq dd{margin:8px 0 0;color:var(--text-body);font-size:.875rem;line-height:1.6}
-
-@media(max-width:700px){.hero{flex-direction:column;padding:20px}.hp{font-size:2.5rem}.metric-grid{grid-template-columns:repeat(2,1fr)}.callout-grid{grid-template-columns:1fr}.g2{grid-template-columns:1fr}.nav{gap:16px}}
-</style></head><body>
-
-<div class="header"><a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;"><h1>NORTHERN MILE MEDIA</h1></a></div>
-<nav class="nav"><a href="/" class="">Home</a>
-<a href="/fuel-prices/" class="">Fuel</a>
-<a href="/exchange-rate/" class="">FX</a>
-<a href="/border-wait-times/" class="active">Border</a>
-<a href="/road-incidents/" class="">Incidents</a>
-<a href="/cargo-theft/" class="">Theft</a>
-<a href="/market-pulse/" class="">Market</a>
-<a href="/industry-news/" class="">News</a>
-<a href="/fuel-cost-calculator/" class="">Calc</a></nav>
-<div class="breadcrumb"><a href="/">Dashboard</a> &rsaquo; Border</div>
-
-<main>
-  <div class="hero"><div><div class="hl">Commercial border delays</div><div class="hp">9/9<span> live</span></div></div>
-<div class="hm"><div class="hs">
-<div class="hst"><div class="hsv" style="color:var(--green);">9/9</div><div class="hsl">CBSA live</div></div>
-<div class="hst"><div class="hsv" style="color:var(--amber);">2</div><div class="hsl">No FAST lanes</div></div>
-</div></div></div>
-  <h2>Canada-US border crossings</h2>
-<p class="intro">Commercial truck wait times from CBSA. 9 of 9 crossings reporting live data. Refreshed every 30 minutes.</p>
-<table><thead><tr><th>Crossing</th><th class="val">Commercial delay</th><th>Last report</th></tr></thead><tr><td><strong>Ambassador Bridge</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Windsor, ON — Detroit, MI &middot; ON-3 / I-75 &middot; FAST</span></td><td class="val" style="color:var(--green);">No delay</td><td style="color:var(--text-muted);font-size:.6875rem;">07:15 EDT</td></tr><tr><td><strong>Blue Water Bridge</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Sarnia, ON — Port Huron, MI &middot; ON-402 / I-69 &middot; FAST</span></td><td class="val" style="color:var(--green);">No delay</td><td style="color:var(--text-muted);font-size:.6875rem;">07:15 EDT</td></tr><tr><td><strong>Peace Bridge</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Fort Erie, ON — Buffalo, NY &middot; QEW / I-190 &middot; FAST</span></td><td class="val" style="color:var(--amber);">3 min</td><td style="color:var(--text-muted);font-size:.6875rem;">07:20 EDT</td></tr><tr><td><strong>Queenston-Lewiston Bridge</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Queenston, ON — Lewiston, NY &middot; ON-405 / I-190 &middot; No FAST</span></td><td class="val" style="color:var(--green);">No delay</td><td style="color:var(--text-muted);font-size:.6875rem;">07:20 EDT</td></tr><tr><td><strong>Lacolle Border Crossing</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Lacolle, QC — Champlain, NY &middot; A-15 / I-87 &middot; FAST</span></td><td class="val" style="color:var(--green);">No delay</td><td style="color:var(--text-muted);font-size:.6875rem;">06:15 EDT</td></tr><tr><td><strong>Coutts-Sweetgrass</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Coutts, AB — Sweetgrass, MT &middot; AB-4 / I-15 &middot; FAST</span></td><td class="val" style="color:var(--green);">No delay</td><td style="color:var(--text-muted);font-size:.6875rem;">05:15 MDT</td></tr><tr><td><strong>Pacific Highway Crossing</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Surrey, BC — Blaine, WA &middot; BC-15 / WA-543 &middot; FAST</span></td><td class="val" style="color:var(--amber);">5 min</td><td style="color:var(--text-muted);font-size:.6875rem;">04:20 PDT</td></tr><tr><td><strong>Emerson-Pembina</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Emerson, MB — Pembina, ND &middot; MB-75 / I-29 &middot; FAST</span></td><td class="val" style="color:var(--green);">No delay</td><td style="color:var(--text-muted);font-size:.6875rem;">05:15 CDT</td></tr><tr><td><strong>Thousand Islands Bridge</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">Lansdowne, ON — Alexandria Bay, NY &middot; ON-137 / I-81 &middot; No FAST</span></td><td class="val" style="color:var(--green);">No delay</td><td style="color:var(--text-muted);font-size:.6875rem;">06:15 EDT</td></tr></table>
-
-<h2>FAQ</h2>
-<div class="faq"><dl>
-<dt>Which crossings have FAST lanes?</dt><dd>Ambassador Bridge, Blue Water Bridge, Peace Bridge, Lacolle, Coutts, Pacific Highway, and Emerson all have FAST dedicated commercial lanes. Queenston-Lewiston and Thousand Islands do not &mdash; commercial traffic shares the traveller lane.</dd>
-<dt>How are wait times measured?</dt><dd>CBSA reports actual delays in minutes. Commercial delays are shown where available. The pill shows &ldquo;Live&rdquo; for real-time data.</dd>
-<dt>When are crossings busiest?</dt><dd>Monday mornings and Thursday/Friday afternoons see the highest commercial volumes. Holiday weekends increase delays at all crossings.</dd>
-</dl></div>
   
 
-  <div class="updated">Last updated: 2026-07-20 00:32 &middot; Data refreshes every 30 minutes</div>
+  <div class="mod"><span class="tab"></span><h2>All commercial crossings</h2><span class="k">wait captured at update</span><span class="rule"></span></div>
+  <div class="panel"><table class="tbl bx">
+  
+  </table></div>
+  <p class="note">Wait shown is the commercial-lane time captured at each crossing's last update. Direction: into the US unless noted.</p>
 
-  <div class="cta"><div class="cta-eyebrow">Get the Northern Mile Brief</div>
-  <div class="cta-body">Fuel prices, border updates, and market shifts every Wednesday at 6am.</div>
-  <div class="cta-sub"><a href="https://northernmilemedia.com">Sign up free &rarr;</a></div></div>
+  <div class="mod"><span class="tab"></span><h2>Questions drivers ask</h2><span class="rule"></span></div>
+  <div class="faq"><dl>
+    <dt>Which crossing is fastest right now?</dt><dd> at  minutes. Times shift through the day — this page refreshes every 30 minutes.</dd>
+    <dt>Are these commercial or passenger waits?</dt><dd>Commercial-vehicle lanes. Passenger waits differ and aren't shown here.</dd>
+    <dt>How current is the number?</dt><dd>Each crossing carries its own capture time. The overall page updates every 30 minutes.</dd>
+  </dl></div>
 
-  <h2 style="text-align:center;">More data</h2>
-  <div class="related"><a href="/exchange-rate/">CAD to USD &rarr;</a>
-<a href="/road-incidents/">Road incidents &rarr;</a>
-<a href="/cargo-theft/">Cargo theft &rarr;</a>
-<a href="/market-pulse/">Market indicators &rarr;</a>
-<a href="/industry-news/">Industry headlines &rarr;</a>
-<a href="/fuel-prices/">Diesel prices &rarr;</a></div>
+  <div class="share"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/border-wait-times/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canada-US%20truck%20border%20wait%20times&url=https://dashboard.northernmilemedia.com/border-wait-times/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/border-wait-times/')">Copy link</button></div>
+
+  <div class="related"><a href="/fuel-prices/">Fuel prices →</a><a href="/road-incidents/">Road incidents →</a><a href="/exchange-rate/">CAD/USD →</a><a href="/cargo-theft/">Cargo theft →</a></div>
 </main>
 
-<div class="footer"><p>Northern Mile Media &middot; For the people who keep Canada moving</p><p style="margin-top:4px;">Data from public sources. Informational use only.</p></div>
+<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026</div></div></footer>
+<script src="/assets/app.js"></script>
 </body></html>

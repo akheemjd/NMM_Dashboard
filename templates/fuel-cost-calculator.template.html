@@ -3,7 +3,7 @@
 <meta name="description" content="Estimate trip fuel cost by distance, fuel burn and diesel price. Pre-loaded with today's Canadian national average, updated every 30 minutes.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
 <meta property="og:type" content="website"><meta property="og:title" content="Truck Fuel Cost Calculator — Canada | Northern Mile"><meta property="og:description" content="Estimate trip fuel cost. Pre-loaded with today's diesel average."><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-07-21 02:23">
+<meta name="build" content="{{updated_at}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
@@ -17,7 +17,7 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Cost Calculator</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with today's diesel</span><span>Updated 2026-07-21 02:23</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with today's diesel</span><span>Updated {{updated_at}}</span></div>
 
   <div class="mod"><span class="tab"></span><h2>Trip fuel cost</h2><span class="rule"></span></div>
   <div class="panel" style="padding:20px 22px">
@@ -26,15 +26,15 @@
       <div><label class="fl" for="burn">Burn (L/100km)</label><input class="field" id="burn" type="number" value="38" min="1" oninput="calc()"></div>
     </div>
     <div class="field-row">
-      <div><label class="fl" for="price">Diesel (c/L)</label><input class="field" id="price" type="number" value="" min="0" step="0.1" oninput="calc()"></div>
-      <div style="display:flex;align-items:flex-end"><button class="btn" style="width:100%" onclick="document.getElementById('price').value=;calc()">Reset to national avg</button></div>
+      <div><label class="fl" for="price">Diesel (c/L)</label><input class="field" id="price" type="number" value="{{fuel.national_diesel}}" min="0" step="0.1" oninput="calc()"></div>
+      <div style="display:flex;align-items:flex-end"><button class="btn" style="width:100%" onclick="document.getElementById('price').value={{fuel.national_diesel}};calc()">Reset to national avg</button></div>
     </div>
     <div class="readout" style="padding:16px 0 0"><div class="rl">Estimated fuel cost</div><div class="big" id="out">—</div><div class="meta" id="detail"></div></div>
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Questions drivers ask</h2><span class="rule"></span></div>
   <div class="faq"><dl>
-    <dt>What diesel price does this use?</dt><dd>It pre-loads today's Canadian national average (c/L), updated every 30 minutes. Change it to any pump price you like.</dd>
+    <dt>What diesel price does this use?</dt><dd>It pre-loads today's Canadian national average ({{fuel.national_diesel}}c/L), updated every 30 minutes. Change it to any pump price you like.</dd>
     <dt>How is the cost worked out?</dt><dd>Litres burned = distance ÷ 100 × burn rate. Cost = litres × price per litre.</dd>
   </dl></div>
 

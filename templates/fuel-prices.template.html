@@ -4,14 +4,14 @@
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-prices/">
 <meta property="og:type" content="website"><meta property="og:title" content="Canadian Diesel Prices — Live by Province | Northern Mile"><meta property="og:description" content="Diesel across 10 provinces + US border states. Tax breakdown, IFTA, routing savings."><meta property="og:image" content="https://dashboard.northernmilemedia.com/og-fuel.jpg"><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-07-21 02:23">
+<meta name="build" content="{{updated_at}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel Prices","item":"https://dashboard.northernmilemedia.com/fuel-prices/"}]},
-{"@type":"Dataset","name":"Canadian Diesel Prices by Province","description":"Live diesel prices for all ten Canadian provinces, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"2026-07-21 02:23"},
+{"@type":"Dataset","name":"Canadian Diesel Prices by Province","description":"Live diesel prices for all ten Canadian provinces, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"{{updated_at}}"},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Why is diesel different across provinces?","acceptedAnswer":{"@type":"Answer","text":"Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies; Alberta has lower levies and no provincial sales tax."}},
 {"@type":"Question","name":"Where should I fuel up to save money?","acceptedAnswer":{"@type":"Answer","text":"Alberta is cheapest, then Saskatchewan and Manitoba. Crossing into the US, diesel is usually cheaper once converted to Canadian cents per litre."}},
@@ -25,56 +25,56 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Prices</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Diesel · all ten provinces</span><span>Updated 2026-07-21 02:23 · refresh 30 min</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Diesel · all ten provinces</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
 
   <section class="cluster">
     <div>
       <div class="readlabel"><span class="tick">▸</span> National average · Diesel</div>
-      <div class="odo hero-odo" data-value="171.9" data-unit="c/L"></div>
-      <div class="trend"><span class="b">7-DAY</span> — &nbsp; <span class="b">30-DAY</span> </div>
+      <div class="odo hero-odo" data-value="{{fuel.national_diesel}}" data-unit="c/L"></div>
+      <div class="trend"><span class="b">7-DAY</span> {{fuel.change_7d}} &nbsp; <span class="b">30-DAY</span> {{fuel.change_30d}}</div>
     </div>
     <div class="clus-gauges">
-      <div class="g lo"><div class="gv">0.0</div><div class="gl">Cheapest · AB</div></div>
-      <div class="g hi"><div class="gv">0.0</div><div class="gl">Highest · NL</div></div>
-      <div class="g"><div class="gv">0.0</div><div class="gl">Spread c/L</div></div>
+      <div class="g lo"><div class="gv">{{fuel.low}}</div><div class="gl">Cheapest · {{fuel.low_code}}</div></div>
+      <div class="g hi"><div class="gv">{{fuel.high}}</div><div class="gl">Highest · {{fuel.high_code}}</div></div>
+      <div class="g"><div class="gv">{{fuel.spread}}</div><div class="gl">Spread c/L</div></div>
     </div>
   </section>
 
-  
+  <!--OPTIONAL:sponsor_fuel--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_fuel.name}}</div><div class="l">{{sponsor_fuel.line}}</div></div><a class="c" href="{{sponsor_fuel.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_fuel-->
 
   <div class="mod"><span class="tab"></span><h2>Diesel by province</h2><span class="k">c/L · Δ since last</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Prov</th><th>Region</th><th class="r">Price</th><th class="r">Change</th><th class="r">vs Nat</th></tr></thead>
-    
+    <!--LOOP:provinces--><tr class="{{rowclass}}"><td class="code">{{code}}</td><td>{{name}}</td><td class="r"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}">{{change}}</td><td class="r mono {{vs_class}}">{{vs_national}}</td></tr><!--/LOOP:provinces-->
   </table></div>
   <p class="note">Arrows show change vs. previous 30-min update. Public fuel surveys, all ten provinces.</p>
 
   <div class="mod"><span class="tab"></span><h2>Fill before you cross</h2><span class="k">US border states · CAD equiv</span><span class="rule"></span></div>
-  <p class="intro">US diesel priced per gallon in USD, converted to Canadian cents/litre at  so it lines up with the province next door.</p>
+  <p class="intro">US diesel priced per gallon in USD, converted to Canadian cents/litre at {{fx.usd_cad}} so it lines up with the province next door.</p>
   <div class="xb">
-  
+  <!--LOOP:border_fuel--><div class="xr"><div class="pair">{{prov_code}} → {{state_code}}</div><div class="cols"><div class="side"><div class="l">{{prov_name}}</div><div class="p">{{prov_price}}</div></div><div class="side"><div class="l">{{state_name}}</div><div class="p">{{state_cad}}</div><div class="g">{{state_usd}}/gal</div></div></div><div class="v">{{verdict}}</div></div><!--/LOOP:border_fuel-->
   </div>
-  <p class="note">USD/gal ×  FX ÷ 3.785 L. State prices refresh 30 min. FX: Bank of Canada.</p>
+  <p class="note">USD/gal × {{fx.usd_cad}} FX ÷ 3.785 L. State prices refresh 30 min. FX: Bank of Canada.</p>
 
   <div class="km"><span class="post">KM 172</span><span class="rule"></span></div>
 
   <div class="mod"><span class="tab"></span><h2>Diesel tax breakdown</h2><span class="k">estimated split · c/L</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Province</th><th class="r">Base</th><th class="r">Carbon</th><th class="r">Fuel tax</th><th class="r">Sales</th><th class="r">Pump</th></tr></thead>
-    
+    <!--LOOP:tax--><tr><td>{{name}}</td><td class="r mono">{{base}}</td><td class="r mono">{{carbon}}</td><td class="r mono">{{fuel_tax}}</td><td class="r mono">{{sales}}</td><td class="r"><span class="px">{{pump}}</span></td></tr><!--/LOOP:tax-->
   </table></div>
   <p class="note">Approximate — exact components wired from public rate tables. Base = wholesale + federal excise.</p>
 
   <div class="mod"><span class="tab"></span><h2>IFTA diesel reference</h2><span class="k">current quarter</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Jurisdiction</th><th class="r">Pump c/L</th><th class="r">Tax portion</th><th class="r">Per 100L</th></tr></thead>
-    
+    <!--LOOP:ifta--><tr><td>{{name}}</td><td class="r mono">{{pump}}</td><td class="r mono">{{tax_portion}}</td><td class="r mono">{{per_100l}}</td></tr><!--/LOOP:ifta-->
   </table></div>
   <p class="note"><a href="/fuel-cost-calculator/">Open the fuel cost calculator →</a> to estimate quarterly IFTA spend by route.</p>
 
   <div class="mod"><span class="tab"></span><h2>Questions drivers ask</h2><span class="rule"></span></div>
   <div class="faq"><dl>
-    <dt>Why is diesel different across provinces?</dt><dd>Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies; Alberta has lower levies and no provincial sales tax. The AB–NL spread is 0.0c/L.</dd>
+    <dt>Why is diesel different across provinces?</dt><dd>Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies; Alberta has lower levies and no provincial sales tax. The {{fuel.low_code}}–{{fuel.high_code}} spread is {{fuel.spread}}c/L.</dd>
     <dt>Where should I fuel up to save money?</dt><dd>Alberta is cheapest, then Saskatchewan and Manitoba — fill before leaving them. Crossing the border, US diesel is usually cheaper once converted to Canadian cents/litre. See the border comparison above.</dd>
     <dt>How often do prices update?</dt><dd>Every 30 minutes, from public fuel surveys across all ten provinces and the US border states.</dd>
     <dt>Do these prices include carbon tax?</dt><dd>Yes — all federal and provincial taxes are included in the pump price shown.</dd>
