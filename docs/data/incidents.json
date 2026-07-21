@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-277439",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at JANE ST, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.71829938,
+      "lng": -79.50498756,
+      "start": 1784609700,
+      "end": null,
+      "updated": 1784609700
+    },
+    {
       "id": "ON-276829",
       "province": "ON",
       "highway": "Lac des Mille Lacs Road",
@@ -730,22 +746,6 @@
       "updated": 1784551620
     },
     {
-      "id": "ON-277096",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound Off-ramp at Lyle St (IC 487)/CR 23, Grafton. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.00384,
-      "lng": -78.02657,
-      "start": 1784592000,
-      "end": 1784610000,
-      "updated": 1784551500
-    },
-    {
       "id": "ON-277110",
       "province": "ON",
       "highway": "HWY 410",
@@ -811,7 +811,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T04:40:22.156083+00:00",
+  "updated": "2026-07-21T05:10:30.490157+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
