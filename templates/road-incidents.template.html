@@ -61,7 +61,16 @@
   data.forEach(function(it, idx){
     var color = it.severity_class === 'closed' ? '#E5484D' : '#F5C518';
     var m = L.circleMarker([it.lat, it.lng], {radius:8,color:color,fillColor:color,fillOpacity:.85,weight:2}).addTo(map);
-    m.bindPopup('<b>'+it.road+' · '+it.direction+'</b><br>'+it.what+'<br><small>Clears: '+it.clearance+(it.detour?' · Detour: '+it.detour:'')+'</small>'+(it.source_url?'<br><a href="'+it.source_url+'" target="_blank" rel="noopener">Source →</a>':''));
+    m.bindPopup(
+      '<b>'+it.road+' '+it.direction+'</b>'+
+      '<br>'+it.what+
+      (it.event_type?'<br><small>'+it.event_type+'</small>':'')+
+      (it.lanes?'<br><small>Lanes: '+it.lanes+'</small>':'')+
+      (it.closed?'<br><span style="color:#E5484D;font-weight:600;">CLOSED</span>':'')+
+      (it.clearance?'<br><small>Started: '+it.clearance+'</small>':'')+
+      (it.end_time?'<br><small>Until: '+it.end_time+'</small>':'')+
+      (it.source_url?'<br><a href="'+it.source_url+'" target="_blank" rel="noopener">Source →</a>':'')
+    );
     markers.push(m);
     var row = document.createElement('div');
     row.className = 'inc';

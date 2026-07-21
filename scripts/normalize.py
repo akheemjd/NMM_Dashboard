@@ -252,6 +252,17 @@ for i in raw_inc.get("incidents", [])[:50]:
     if sev in ("closed", "closure"): sc = "closed"
     elif sev in ("heavy", "major", "high"): sc = "heavy"
     else: sc = "mod"
+    # Format timestamps
+    start_ts = i.get("start", 0)
+    end_ts = i.get("end", 0)
+    if start_ts and isinstance(start_ts, (int,float)) and start_ts > 1000000000:
+        from datetime import datetime
+        start_str = datetime.utcfromtimestamp(start_ts).strftime("%b %d %H:%M")
+        end_str = datetime.utcfromtimestamp(end_ts).strftime("%b %d %H:%M") if (end_ts and end_ts > 1000000000) else ""
+    else:
+        start_str = str(start_ts) if start_ts else ""
+        end_str = str(end_ts) if end_ts else ""
+    
     inc_json.append({
         "lat": i.get("lat", 0),
         "lng": i.get("lng", 0),
@@ -260,7 +271,12 @@ for i in raw_inc.get("incidents", [])[:50]:
         "severity_class": sc,
         "severity_label": i.get("severity", "Moderate").title(),
         "what": i.get("description", "")[:80],
-        "clearance": i.get("start", ""),
+        "event_type": i.get("event_type", "").replace("accidentsandincidents","Collision").replace("roadwork","Roadwork").title(),
+        "lanes": i.get("lanes", ""),
+        "closed": i.get("closure", False),
+        "province": i.get("province", ""),
+        "clearance": start_str,
+        "end_time": end_str,
         "detour": i.get("detour", ""),
         "source_url": "",
     })
