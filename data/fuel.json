@@ -1,56 +1,128 @@
 {
-  "fuel": {
-    "national_diesel": "171.9",
-    "change_7d": "\u2014",
-    "low_code": "AB",
-    "low": "158.9",
-    "high_code": "NL",
-    "high": "182.5",
-    "spread": "23.6",
-    "fuel_top": [
-      {
-        "code": "AB",
-        "name": "Alberta",
-        "price": "158.9",
-        "change": "\u2014",
-        "change_class": "flat"
-      },
-      {
-        "code": "SK",
-        "name": "Saskatchewan",
-        "price": "162.3",
-        "change": "\u2014",
-        "change_class": "flat"
-      },
-      {
-        "code": "MB",
-        "name": "Manitoba",
-        "price": "165.7",
-        "change": "\u2014",
-        "change_class": "flat"
-      },
-      {
-        "code": "ON",
-        "name": "Ontario",
-        "price": "171.2",
-        "change": "\u2014",
-        "change_class": "flat"
-      },
-      {
-        "code": "NB",
-        "name": "New Brunswick",
-        "price": "173.4",
-        "change": "\u2014",
-        "change_class": "flat"
-      },
-      {
-        "code": "NS",
-        "name": "Nova Scotia",
-        "price": "174.9",
-        "change": "\u2014",
-        "change_class": "flat"
-      }
-    ]
+  "provinces": {
+    "BC": {
+      "diesel": 178.5,
+      "gasoline": 185.9,
+      "trend": "down",
+      "note": "Lower Mainland average"
+    },
+    "AB": {
+      "diesel": 158.9,
+      "gasoline": 152.4,
+      "trend": "down",
+      "note": "Calgary/Edmonton average"
+    },
+    "SK": {
+      "diesel": 162.3,
+      "gasoline": 158.7,
+      "trend": "down",
+      "note": "Regina/Saskatoon average"
+    },
+    "MB": {
+      "diesel": 165.7,
+      "gasoline": 160.2,
+      "trend": "flat",
+      "note": "Winnipeg average"
+    },
+    "ON": {
+      "diesel": 171.2,
+      "gasoline": 167.8,
+      "trend": "down",
+      "note": "GTA average"
+    },
+    "QC": {
+      "diesel": 175.8,
+      "gasoline": 172.5,
+      "trend": "down",
+      "note": "Montreal average"
+    },
+    "NB": {
+      "diesel": 173.4,
+      "gasoline": 169.1,
+      "trend": "flat",
+      "note": "Moncton average"
+    },
+    "NS": {
+      "diesel": 174.9,
+      "gasoline": 170.3,
+      "trend": "flat",
+      "note": "Halifax average"
+    },
+    "PE": {
+      "diesel": 176.1,
+      "gasoline": 171.8,
+      "trend": "flat",
+      "note": "Charlottetown average"
+    },
+    "NL": {
+      "diesel": 182.5,
+      "gasoline": 178.0,
+      "trend": "flat",
+      "note": "St. John's average"
+    },
+    "US-WA": {
+      "diesel": 195.2,
+      "gasoline": 192.8,
+      "trend": "down",
+      "note": "Pacific Northwest (WA/OR)"
+    },
+    "US-CA": {
+      "diesel": 215.7,
+      "gasoline": 208.4,
+      "trend": "down",
+      "note": "California"
+    },
+    "US-TX": {
+      "diesel": 166.3,
+      "gasoline": 158.9,
+      "trend": "down",
+      "note": "Gulf Coast / Texas"
+    },
+    "US-MN": {
+      "diesel": 182.1,
+      "gasoline": 175.6,
+      "trend": "flat",
+      "note": "Midwest (MN/WI/IA)"
+    },
+    "US-IL": {
+      "diesel": 188.5,
+      "gasoline": 181.2,
+      "trend": "flat",
+      "note": "Midwest / Chicago"
+    },
+    "US-MI": {
+      "diesel": 185.8,
+      "gasoline": 178.9,
+      "trend": "flat",
+      "note": "Great Lakes (MI/OH)"
+    },
+    "US-NY": {
+      "diesel": 198.4,
+      "gasoline": 190.1,
+      "trend": "down",
+      "note": "Northeast (NY/NJ/PA)"
+    },
+    "US-NJ": {
+      "diesel": 196.7,
+      "gasoline": 188.5,
+      "trend": "down",
+      "note": "New Jersey metro"
+    },
+    "US-GA": {
+      "diesel": 179.3,
+      "gasoline": 172.4,
+      "trend": "down",
+      "note": "Southeast / Atlanta"
+    },
+    "US-OR": {
+      "diesel": 197.8,
+      "gasoline": 194.2,
+      "trend": "down",
+      "note": "Oregon"
+    }
   },
-  "updated_at": "2026-07-21 02:52"
+  "diesel_national_avg": 171.9,
+  "gasoline_national_avg": 168.7,
+  "updated": "2026-07-20T19:37:41.933077+00:00",
+  "source_note": "Estimates from weekly surveys. Real-time fuel API requires a paid data feed."
 }

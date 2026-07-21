@@ -168,13 +168,13 @@ home = {
     "news": news,
 }
 
-write("home", home)
-write("fuel", {"fuel": fuel, "updated_at": ts})
-write("border", {"border": border, "border_rows": border_rows, "updated_at": ts, "captured_at": ts})
-write("fx", {"fx": fx, "updated_at": ts})
-write("incidents", {"incidents": incidents, "updated_at": ts})
-write("theft", {"theft": theft, "updated_at": ts})
-write("market", {"market": market, "updated_at": ts})
-write("news", {"news": news, "updated_at": ts})
+write("home.norm", home)
+write("fuel.norm", {"fuel": fuel, "updated_at": ts})
+write("border.norm", {"border": border, "border_rows": border_rows, "updated_at": ts, "captured_at": ts})
+write("fx.norm", {"fx": fx, "updated_at": ts})
+write("incidents.norm", {"incidents": incidents, "updated_at": ts})
+write("theft.norm", {"theft": theft, "updated_at": ts})
+write("market.norm", {"market": market, "updated_at": ts})
+write("news.norm", {"news": news, "updated_at": ts})
 
 print(f"Normalized at {ts}: home ({len(home)} keys) + 7 pages")
