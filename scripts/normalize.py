@@ -186,7 +186,22 @@ write("home.norm", home)
 write("fuel.norm", {"fuel": fuel, "updated_at": ts})
 write("border.norm", {"border": border, "border_rows": border_rows, "updated_at": ts, "captured_at": ts})
 write("fx.norm", {"fx": fx, "updated_at": ts})
-write("incidents.norm", {"incidents": incidents, "updated_at": ts})
+# Build raw incidents JSON array for the map (with lat/lng)
+inc_json = []
+for i in raw_inc.get("incidents", [])[:50]:
+    inc_json.append({
+        "lat": i.get("lat", 0),
+        "lng": i.get("lng", 0),
+        "highway": i.get("highway", ""),
+        "description": i.get("description", "")[:80],
+        "severity": i.get("severity", "moderate"),
+    })
+
+write("incidents.norm", {
+    "incidents": incidents,
+    "incidents_json": json.dumps(inc_json),
+    "updated_at": ts,
+})
 write("theft.norm", {"theft": theft, "updated_at": ts})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")

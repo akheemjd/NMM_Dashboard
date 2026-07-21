@@ -40,7 +40,7 @@
 <!-- HERMES: write the incident array below. Each item:
      {road,direction,severity,severity_label,severity_class,what,clearance,detour,source_url,lat,lng}
      Leave [] for no incidents; the map + list show a clean "corridors clear" state. -->
-<script>window.INCIDENTS = [ {{incidents_json}} ];</script>
+<script>window.INCIDENTS = {{incidents_json}};</script>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="/assets/app.js"></script>
