@@ -186,15 +186,24 @@ write("home.norm", home)
 write("fuel.norm", {"fuel": fuel, "updated_at": ts})
 write("border.norm", {"border": border, "border_rows": border_rows, "updated_at": ts, "captured_at": ts})
 write("fx.norm", {"fx": fx, "updated_at": ts})
-# Build raw incidents JSON array for the map (with lat/lng)
+# Build raw incidents JSON array for the map
 inc_json = []
 for i in raw_inc.get("incidents", [])[:50]:
+    sev = i.get("severity", "").lower()
+    if sev in ("closed", "closure"): sc = "closed"
+    elif sev in ("heavy", "major", "high"): sc = "heavy"
+    else: sc = "mod"
     inc_json.append({
         "lat": i.get("lat", 0),
         "lng": i.get("lng", 0),
-        "highway": i.get("highway", ""),
-        "description": i.get("description", "")[:80],
-        "severity": i.get("severity", "moderate"),
+        "road": i.get("highway", ""),
+        "direction": i.get("direction", ""),
+        "severity_class": sc,
+        "severity_label": i.get("severity", "Moderate").title(),
+        "what": i.get("description", "")[:80],
+        "clearance": i.get("start", ""),
+        "detour": i.get("detour", ""),
+        "source_url": "",
     })
 
 write("incidents.norm", {
