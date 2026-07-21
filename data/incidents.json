@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-277471",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound  at MAPLEVIEW DRIVE, Barrie. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.33530847,
+      "lng": -79.68484275,
+      "start": 1784633760,
+      "end": null,
+      "updated": 1784633760
+    },
+    {
+      "id": "ON-277466",
+      "province": "ON",
+      "highway": "HWY 407",
+      "direction": "Westbound",
+      "description": "Collision on HWY 407 Westbound  at HWY 418, Clarington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.9702845,
+      "lng": -78.7716126,
+      "start": 1784632800,
+      "end": null,
+      "updated": 1784632800
+    },
+    {
       "id": "ON-276829",
       "province": "ON",
       "highway": "Lac des Mille Lacs Road",
@@ -17,22 +49,6 @@
       "updated": 1784632280
     },
     {
-      "id": "ON-277462",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound HOV at JAMES SNOW PKWY, Milton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.5390056,
-      "lng": -79.8718981,
-      "start": 1784631840,
-      "end": null,
-      "updated": 1784631840
-    },
-    {
       "id": "ON-277448",
       "province": "ON",
       "highway": "HWY 401",
@@ -47,22 +63,6 @@
       "start": 1784629260,
       "end": null,
       "updated": 1784630280
-    },
-    {
-      "id": "ON-277447",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at BURNHAMTHORPE ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.52265902,
-      "lng": -79.71498432,
-      "start": 1784628960,
-      "end": null,
-      "updated": 1784628960
     },
     {
       "id": "ON-277424",
@@ -811,7 +811,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T11:12:14.892317+00:00",
+  "updated": "2026-07-21T11:42:22.939136+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
