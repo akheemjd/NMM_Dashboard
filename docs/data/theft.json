@@ -1,109 +1,102 @@
 {
-  "hotspots": [
-    {"city": "Toronto / GTA", "province": "ON", "lat": 43.70, "lng": -79.42, "risk": "high", "note": "Highest cargo theft volume in Canada."},
-    {"city": "Montreal", "province": "QC", "lat": 45.51, "lng": -73.56, "risk": "high", "note": "Second highest. Port and Saint-Laurent zones."},
-    {"city": "Calgary", "province": "AB", "lat": 51.04, "lng": -114.07, "risk": "medium", "note": "Increasing. Balzac and Foothills."},
-    {"city": "Edmonton", "province": "AB", "lat": 53.55, "lng": -113.49, "risk": "medium", "note": "Nisku and Acheson parks."},
-    {"city": "Vancouver", "province": "BC", "lat": 49.28, "lng": -123.12, "risk": "medium", "note": "Port area. Delta and Surrey."},
-    {"city": "Winnipeg", "province": "MB", "lat": 49.90, "lng": -97.14, "risk": "low", "note": "Emerging. CentrePort area."}
-  ],
-  "incidents": [
+  "theft": [
     {
       "title": "Electronics load",
       "value": "$250,000",
       "date": "2026-07-08",
       "location": "Brampton, ON",
-      "business": "Secured carrier yard — Rutherford Rd & Steeles area",
-      "method": "Yard break-in overnight",
-      "prevention": "High-security padlocks on all parked trailers. Motion-activated lighting. CCTV with remote monitoring.",
-      "lat": 43.69,
-      "lng": -79.76
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     },
     {
       "title": "47 trailers recovered in theft ring bust",
       "value": "$4,000,000",
       "date": "2026-06-28",
       "location": "Greater Montreal, QC",
-      "business": "Multiple industrial yards — Saint-Laurent and Anjou",
-      "method": "Organized theft ring — coordinated yard hits",
-      "prevention": "GPS tracking on all trailers. Geofence alerts when equipment leaves yard after hours.",
-      "lat": 45.51,
-      "lng": -73.56
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     },
     {
-      "title": "Reefer load — meat products",
+      "title": "Reefer load \u2014 meat products",
       "value": "$85,000",
       "date": "2026-06-15",
       "location": "Mississauga, ON",
-      "business": "Truck stop — Dixie Rd & 401 corridor",
-      "method": "Stolen while driver inside truck stop",
-      "prevention": "Never leave loaded reefer unattended at unsecured stops. Use attended parking or secured yards only.",
-      "lat": 43.59,
-      "lng": -79.64
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     },
     {
-      "title": "Consumer electronics — US-bound",
+      "title": "Consumer electronics \u2014 US-bound",
       "value": "$180,000",
       "date": "2026-06-02",
       "location": "Delta, BC",
-      "business": "Industrial yard — Annacis Island",
-      "method": "Trailer stolen from yard with fictitious paperwork",
-      "prevention": "Verify carrier credentials before releasing loads. Call references. Check insurance and authorities.",
-      "lat": 49.09,
-      "lng": -123.06
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     },
     {
       "title": "Identity theft pickup",
       "value": "$90,000",
       "date": "2026-05-18",
       "location": "Calgary, AB",
-      "business": "Freight broker load — cross-dock facility",
-      "method": "Fictitious pickup — stolen carrier credentials",
-      "prevention": "Always verify MC number and insurance. Call the carrier directly using publicly listed number, not the one provided.",
-      "lat": 51.04,
-      "lng": -114.07
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     },
     {
-      "title": "Building materials — two trailers",
+      "title": "Building materials \u2014 two trailers",
       "value": "$120,000",
       "date": "2026-05-05",
       "location": "Laval, QC",
-      "business": "Industrial park — Autoroute 440 corridor",
-      "method": "Coordinated yard hit — fencing cut",
-      "prevention": "King pin locks on all trailers. Perimeter fencing inspections. Overnight security patrols.",
-      "lat": 45.58,
-      "lng": -73.75
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     },
     {
-      "title": "Three reefers — food products",
+      "title": "Three reefers \u2014 food products",
       "value": "$300,000",
       "date": "2026-04-22",
       "location": "Nisku, AB",
-      "business": "Nisku industrial yard — 41 Ave SW",
-      "method": "Weekend break-in — fence cut, trucks driven out",
-      "prevention": "Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.",
-      "lat": 53.55,
-      "lng": -113.49
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     },
     {
-      "title": "Five trailers — mixed freight",
+      "title": "Five trailers \u2014 mixed freight",
       "value": "$210,000",
       "date": "2026-04-08",
       "location": "Winnipeg, MB",
-      "business": "CentrePort industrial area",
-      "method": "Serial thefts — unlocked trailers",
-      "prevention": "Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.",
-      "lat": 49.90,
-      "lng": -97.14
+      "commodity": "Mixed freight",
+      "prevention": "Secure overnight parking \u00b7 GPS tracking"
     }
   ],
-  "top_targets": [
-    "Electronics and appliances",
-    "Food and beverages (reefer loads)",
-    "Building materials and metals",
-    "Clothing and footwear",
-    "Auto parts and tires"
+  "hotspots": [
+    {
+      "area": "Toronto / GTA",
+      "count": 0,
+      "value": "\u2014"
+    },
+    {
+      "area": "Montreal",
+      "count": 0,
+      "value": "\u2014"
+    },
+    {
+      "area": "Calgary",
+      "count": 0,
+      "value": "\u2014"
+    },
+    {
+      "area": "Edmonton",
+      "count": 0,
+      "value": "\u2014"
+    },
+    {
+      "area": "Vancouver",
+      "count": 0,
+      "value": "\u2014"
+    },
+    {
+      "area": "Winnipeg",
+      "count": 0,
+      "value": "\u2014"
+    }
   ],
-  "source": "Équité Association, Insurance Bureau of Canada, industry reports",
-  "updated": "2026-07-13T18:00:00+00:00"
+  "theft_json": "[{\"title\": \"Electronics load\", \"location\": \"Brampton, ON\", \"value\": \"$250,000\", \"lat\": 43.69, \"lng\": -79.76}, {\"title\": \"47 trailers recovered in theft ring bust\", \"location\": \"Greater Montreal, QC\", \"value\": \"$4,000,000\", \"lat\": 45.51, \"lng\": -73.56}, {\"title\": \"Reefer load \\u2014 meat products\", \"location\": \"Mississauga, ON\", \"value\": \"$85,000\", \"lat\": 43.59, \"lng\": -79.64}, {\"title\": \"Consumer electronics \\u2014 US-bound\", \"location\": \"Delta, BC\", \"value\": \"$180,000\", \"lat\": 49.09, \"lng\": -123.06}, {\"title\": \"Identity theft pickup\", \"location\": \"Calgary, AB\", \"value\": \"$90,000\", \"lat\": 51.04, \"lng\": -114.07}, {\"title\": \"Building materials \\u2014 two trailers\", \"location\": \"Laval, QC\", \"value\": \"$120,000\", \"lat\": 45.58, \"lng\": -73.75}, {\"title\": \"Three reefers \\u2014 food products\", \"location\": \"Nisku, AB\", \"value\": \"$300,000\", \"lat\": 53.55, \"lng\": -113.49}, {\"title\": \"Five trailers \\u2014 mixed freight\", \"location\": \"Winnipeg, MB\", \"value\": \"$210,000\", \"lat\": 49.9, \"lng\": -97.14}]",
+  "updated_at": "2026-07-21 03:51"
 }

@@ -244,7 +244,18 @@ write("incidents.norm", {
     "incidents_json": json.dumps(inc_json),
     "updated_at": ts,
 })
-write("theft.norm", {"theft": theft, "hotspots": hotspots, "updated_at": ts})
+# Theft map JSON
+theft_json = []
+for t in raw_theft.get("incidents", [])[:30]:
+    theft_json.append({
+        "title": t.get("title", t.get("description",""))[:60],
+        "location": str(t.get("location","")), 
+        "value": "${:,}".format(t.get("value",0)) if isinstance(t.get("value"), (int,float)) else str(t.get("value","—")),
+        "lat": t.get("lat", 0),
+        "lng": t.get("lng", 0),
+    })
+
+write("theft.norm", {"theft": theft, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
