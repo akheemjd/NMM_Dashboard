@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-07-21 02:55",
+  "updated_at": "2026-07-21 02:52",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 0,
     "closed_count": 0,
-    "min_name": "Thousand Islands Bridge",
+    "min_name": "\u2014",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_name": "\u2014",
+    "max_wait": "No delay"
   },
   "fuel": {
     "national_diesel": "171.9",
@@ -64,9 +64,9 @@
     ]
   },
   "fx": {
-    "usd_cad": "1.3924",
+    "usd_cad": "1.3947",
     "direction": "stronger CAD",
-    "change": "-0.0090"
+    "change": "-0.0107"
   },
   "incidents": {
     "none": false,
@@ -74,6 +74,89 @@
     "gauge_class": "warn",
     "status_line": "20 active",
     "incidents": [
+      {
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Highway Maintenance on HWY 403 MISSISSAUGA Westbound  at HWY 407, Mississauga. 2",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 401",
+        "what": "Nightly Maintenance on HWY 401 Eastbound  between North Talbot Rd  and North Tal",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": {
+          "name": "Highway 97",
+          "from": "at 100 Ave",
+          "direction": "BOTH"
+        },
+        "what": "Highway 97 (Alaska Highway), in both directions. Road sweeping at 100 Ave (Fort ",
+        "severity_label": "MINOR",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 144",
+        "what": "Collision on HWY 144 Northbound  at SEC HWY 661-GOGAMA RD, Gogama. Lane and NORT",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": {
+          "name": "Upper Arrow Lake Ferry",
+          "from": "at Upper Arrow Lake Ferry",
+          "direction": "BOTH"
+        },
+        "what": "Upper Arrow Lake Ferry, in both directions. Currently operating 30 minutes behin",
+        "severity_label": "MINOR",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": {
+          "name": "Other Roads",
+          "from": "Hooke Rd",
+          "to": "Little Big Bar Road",
+          "direction": "BOTH"
+        },
+        "what": "Big Bar Rd, in both directions. There is a wildfire between Hooke Rd and Little ",
+        "severity_label": "MAJOR",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "Lac des Mille Lacs Road",
+        "what": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 1",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 540",
+        "what": "Collision on HWY 540 Both Directions  at SHESHEGWANING RD-ROBINSON TWP, Sheshegw",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 11",
+        "what": "Daily Construction on HWY 11 Northbound  between KLOTZ LAKE CAMP WEST ENT(S) and",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 11",
+        "what": "Daily Construction on HWY 11 Northbound  between CLAVET TWP W BDY and KLOTZ LAKE",
+        "severity_label": "Unknown",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
       {
         "road": "QEW",
         "what": "Nightly Engineering Investigation on QEW Fort Erie Bound On-ramp at HWY 10/HURON",
@@ -106,18 +189,6 @@
         "road": "HWY 416",
         "what": "Daily Construction on HWY 416 Northbound  between BANKFIELD RD / BROPHY DR (IC 5",
         "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": {
-          "name": "Highway 1",
-          "from": "Trans-Canada Highway",
-          "direction": "E",
-          "state": "ALL_LANES_OPEN"
-        },
-        "what": "Vehicle incident. Right lane blocked. Expect delays. Surrey exit lanes, left lan",
-        "severity_label": "MAJOR",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
@@ -155,138 +226,10 @@
         "severity_label": "Unknown",
         "severity_class": "ok",
         "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Nightly Maintenance on HWY 403 MISSISSAUGA Westbound  between ERIN MILLS PKWY, M",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound  between QEW, Oakville and ",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at MISSINAIBI R BR - MATTICE/VAL COTE ",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 28",
-        "what": "Daily Construction on HWY 28 Southbound  between LITTLE IRELAND RD, Ireland and ",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "QEW",
-        "what": "Nightly Moving Maintenance Closure on QEW Toronto bound  between BRONTE ROAD, Oa",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "QEW",
-        "what": "Nightly Moving Maintenance Closure on QEW Fort Erie Bound  between EAST MALL, To",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 427",
-        "what": "Nightly Maintenance on HWY 427 Southbound Express between FINCH AVENUE and BROWN",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 427",
-        "what": "Nightly Maintenance on HWY 427 Northbound Express between BROWNS LINE and FINCH ",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 427",
-        "what": "Nightly Maintenance on HWY 427 Northbound Collector between BROWNS LINE and FINC",
-        "severity_label": "Unknown",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
       }
     ]
   },
-  "border_rows": [
-    {
-      "name": "Ambassador Bridge",
-      "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/"
-    },
-    {
-      "name": "Blue Water Bridge",
-      "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
-      "url": "/border-wait-times/"
-    },
-    {
-      "name": "Peace Bridge",
-      "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/"
-    },
-    {
-      "name": "Queenston-Lewiston Bridge",
-      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/"
-    },
-    {
-      "name": "Lacolle Border Crossing",
-      "sub": "Lacolle, QC \u2014 Champlain, NY \u00b7 A-15 / I-87 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
-      "url": "/border-wait-times/"
-    },
-    {
-      "name": "Coutts-Sweetgrass",
-      "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
-      "url": "/border-wait-times/"
-    },
-    {
-      "name": "Pacific Highway Crossing",
-      "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/"
-    },
-    {
-      "name": "Emerson-Pembina",
-      "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
-      "url": "/border-wait-times/"
-    }
-  ],
+  "border_rows": [],
   "market": [
     {
       "name": "Monthly GDP",
@@ -301,60 +244,16 @@
       "value_class": "up"
     }
   ],
-  "theft": [
-    {
-      "title": "Electronics load",
-      "value": "$250,000",
-      "meta": "2026-07-08 \u00b7 Brampton, ON",
-      "url": "/cargo-theft/"
-    },
-    {
-      "title": "47 trailers recovered in theft ring bust",
-      "value": "$4,000,000",
-      "meta": "2026-06-28 \u00b7 Greater Montreal, QC",
-      "url": "/cargo-theft/"
-    },
-    {
-      "title": "Reefer load \u2014 meat products",
-      "value": "$85,000",
-      "meta": "2026-06-15 \u00b7 Mississauga, ON",
-      "url": "/cargo-theft/"
-    },
-    {
-      "title": "Consumer electronics \u2014 US-bound",
-      "value": "$180,000",
-      "meta": "2026-06-02 \u00b7 Delta, BC",
-      "url": "/cargo-theft/"
-    },
-    {
-      "title": "Identity theft pickup",
-      "value": "$90,000",
-      "meta": "2026-05-18 \u00b7 Calgary, AB",
-      "url": "/cargo-theft/"
-    },
-    {
-      "title": "Building materials \u2014 two trailers",
-      "value": "$120,000",
-      "meta": "2026-05-05 \u00b7 Laval, QC",
-      "url": "/cargo-theft/"
-    },
-    {
-      "title": "Three reefers \u2014 food products",
-      "value": "$300,000",
-      "meta": "2026-04-22 \u00b7 Nisku, AB",
-      "url": "/cargo-theft/"
-    },
-    {
-      "title": "Five trailers \u2014 mixed freight",
-      "value": "$210,000",
-      "meta": "2026-04-08 \u00b7 Winnipeg, MB",
-      "url": "/cargo-theft/"
-    }
-  ],
+  "theft": [],
   "news": [
     {
       "category": "Trucking Info",
       "headline": "Trucking Fleets Faced Record Operating Costs During Third Year of Freight Recession",
+      "url": "#"
+    },
+    {
+      "category": "Truck News",
+      "headline": "Trump imposes 50%\u00a0tariffs\u00a0on Canadian goods",
       "url": "#"
     },
     {
@@ -374,6 +273,11 @@
     },
     {
       "category": "Truck News",
+      "headline": "New Pa. law raises penalty for operating unauthorized CDL school to $25,000",
+      "url": "#"
+    },
+    {
+      "category": "Truck News",
       "headline": "ECONOMIC TRUCKING TRENDS: Spot market flattens, while shippers continue to feel the pain",
       "url": "#"
     },
@@ -389,17 +293,7 @@
     },
     {
       "category": "The Trucker",
-      "headline": "3 common claims mistakes costing fleets at renewal \u2013\u2013 and how to avoid them",
-      "url": "#"
-    },
-    {
-      "category": "The Trucker",
-      "headline": "FTR, Truckstop: Spot rates fall seasonally in the latest week",
-      "url": "#"
-    },
-    {
-      "category": "The Trucker",
-      "headline": "ACT: Preliminary net trailer order activity shows seasonal slowing in June",
+      "headline": "3 common claims mistakes costing fleets at renewal \u2014 and how to avoid them",
       "url": "#"
     }
   ]
