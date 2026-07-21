@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-277445",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound HOV at BURLOAK DRIVE, Burlington. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.3959168,
+      "lng": -79.7555548,
+      "start": 1784627820,
+      "end": null,
+      "updated": 1784627820
+    },
+    {
       "id": "ON-276829",
       "province": "ON",
       "highway": "Lac des Mille Lacs Road",
@@ -698,38 +714,6 @@
       "updated": 1784551380
     },
     {
-      "id": "ON-277091",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between LAKE RD and LAKE RD, Brighton. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.04696,
-      "lng": -77.83172,
-      "start": 1784588400,
-      "end": 1784628000,
-      "updated": 1784551320
-    },
-    {
-      "id": "ON-277092",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Maintenance on HWY 401 Westbound  between LAKE RD and LAKE RD, Brighton. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.04696,
-      "lng": -77.83172,
-      "start": 1784588400,
-      "end": 1784628000,
-      "updated": 1784551320
-    },
-    {
       "id": "ON-277098",
       "province": "ON",
       "highway": "HWY 401",
@@ -808,10 +792,26 @@
       "start": 1784631600,
       "end": 1784768400,
       "updated": 1784546280
+    },
+    {
+      "id": "ON-277055",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Emergency Roadwork on HWY 404 Southbound RAMP at STOUFFVILLE ROAD, Stouffville-Richmondhill. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.9422046,
+      "lng": -79.39102586,
+      "start": 1784545740,
+      "end": null,
+      "updated": 1784545740
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T09:41:49.520241+00:00",
+  "updated": "2026-07-21T10:11:58.592676+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
