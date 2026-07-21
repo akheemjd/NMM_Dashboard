@@ -1,17 +1,48 @@
 {
-  "market": [
+  "indicators": [
     {
-      "name": "Monthly GDP",
-      "note": "More output = more freight",
-      "value": "\u2014",
-      "value_class": "down"
+      "name": "GDP Growth",
+      "label": "Monthly GDP",
+      "value": "+0.5%",
+      "detail": "$2353B (chained 2017)",
+      "direction": "up",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
     },
     {
-      "name": "Diesel vs baseline",
-      "note": "Fuel is 25-35% of operating cost",
-      "value": "\u2014",
-      "value_class": "up"
+      "name": "GDP YoY",
+      "label": "Year-over-year",
+      "value": "+1.1%",
+      "direction": "up",
+      "source": "Statistics Canada",
+      "what_it_means": "Longer-term freight demand trend."
+    },
+    {
+      "name": "Fuel Cost",
+      "label": "Diesel vs baseline",
+      "value": "0.0\u00a2/L",
+      "detail": "-100.0% vs 165\u00a2 baseline",
+      "direction": "down",
+      "source": "Industry surveys",
+      "what_it_means": "Fuel is typically 25-35% of operating costs. Above baseline = margin pressure."
+    },
+    {
+      "name": "CAD Impact",
+      "label": "USD/CAD vs 1.35 baseline",
+      "value": "1.3947",
+      "detail": "+3.3% \u2014 weaker CAD",
+      "direction": "up",
+      "source": "Bank of Canada",
+      "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
     }
   ],
-  "updated_at": "2026-07-21 02:31"
+  "rates_snapshot": {
+    "fuel_pct_of_ops": "25-35%",
+    "current_diesel": 0,
+    "usd_cad": 1.3947,
+    "note": "Rate data from DAT/Loadlink requires paid subscription. These are operating cost indicators that drive rate floors."
+  },
+  "updated": "2026-07-21T02:39:41.507491+00:00",
+  "note": "Public data from Statistics Canada, Bank of Canada, and industry surveys.",
+  "direction_summary": "3/4 indicators trending up"
 }
