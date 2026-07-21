@@ -3,7 +3,7 @@
 <meta name="description" content="Live map of major road closures and collisions on Canadian freight corridors, updated every 30 minutes. Click any incident for road, severity, clearance and detour.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/road-incidents/">
 <meta property="og:type" content="website"><meta property="og:title" content="Canadian Road Incidents — Live Map | Northern Mile"><meta property="og:description" content="Live closures and collisions on Canadian freight corridors. Updated every 30 min."><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-07-21 03:39">
+<meta name="build" content="2026-07-21 03:40">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -20,7 +20,7 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Road Incidents</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Closures + collisions · freight corridors</span><span>Updated 2026-07-21 03:39 · refresh 30 min</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Closures + collisions · freight corridors</span><span>Updated 2026-07-21 03:40 · refresh 30 min</span></div>
 
   <div class="mod"><span class="tab"></span><h2>Incident map</h2><span class="k">click a pin or row for detail</span><span class="rule"></span></div>
   <div id="map"></div>
@@ -53,7 +53,7 @@
   }).addTo(map);
   var list = document.getElementById('incList');
   if(!data.length){
-    list.innerHTML = '<div class="empty"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked 2026-07-21 03:39</div>';
+    list.innerHTML = '<div class="empty"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked 2026-07-21 03:40</div>';
     return;
   }
   var markers = [];

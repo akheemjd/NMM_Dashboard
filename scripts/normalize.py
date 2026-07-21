@@ -188,7 +188,18 @@ write("border.norm", {"border": border, "border_rows": border_rows, "updated_at"
 write("fx.norm", {"fx": fx, "updated_at": ts})
 write("incidents.norm", {"incidents": incidents, "updated_at": ts})
 write("theft.norm", {"theft": theft, "updated_at": ts})
-write("market.norm", {"market": market, "updated_at": ts})
+# Direction summary for market page
+dir_summary = raw_market.get("direction_summary", "")
+rates = raw_market.get("rates_snapshot", {})
+
+write("market.norm", {
+    "market": market,
+    "direction_summary": dir_summary,
+    "fuel_pct_of_ops": rates.get("fuel_pct_of_ops", "25-35%"),
+    "current_diesel": rates.get("current_diesel", "—"),
+    "usd_cad": rates.get("usd_cad", "—"),
+    "updated_at": ts,
+})
 write("news.norm", {"news": news, "updated_at": ts})
 
 print(f"Normalized at {ts}: home ({len(home)} keys) + 7 pages")
