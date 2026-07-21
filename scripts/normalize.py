@@ -209,8 +209,8 @@ for n in raw_news.get("headlines", [])[:10]:
 
 
 # ===== SPONSOR PLACEHOLDERS =====
-sponsor_page = {"name": "Your brand here", "line": "Reach 500+ Canadian fleet operators every week", "url": "https://northernmilemedia.com"}
-sponsor_border = {"name": "Your brand here", "line": "Sponsor the border crossings module", "url": "https://northernmilemedia.com"}
+sponsor_page = None
+sponsor_border = None
 
 # Build theft JSON early (needed by home page too)
 theft_json = []
