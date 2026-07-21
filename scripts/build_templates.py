@@ -30,7 +30,16 @@ def resolve_token(data, token):
 def fill(template, data):
     """Fill a template with data."""
 
-    # 1. Resolve {{nested.tokens}}
+    # 1. LOOP blocks — expand first so loop item tokens aren't overwritten
+    template = fill_loops(template, data)
+
+    # 2. OPTIONAL blocks — keep only if key exists and is truthy
+    template = fill_optionals(template, data)
+
+    # 3. IF blocks — keep if condition true
+    template = fill_ifs(template, data)
+
+    # 4. Resolve {{nested.tokens}} AFTER loops/optionals/ifs
     def replace_token(match):
         key = match.group(1)
         val = resolve_token(data, key)
@@ -41,15 +50,6 @@ def fill(template, data):
         return str(val)
 
     template = re.sub(r'\{\{(\w+(?:\.\w+)*)\}\}', replace_token, template)
-
-    # 2. LOOP blocks — repeat inner content per item
-    template = fill_loops(template, data)
-
-    # 3. OPTIONAL blocks — keep only if key exists and is truthy
-    template = fill_optionals(template, data)
-
-    # 4. IF blocks — keep if condition true
-    template = fill_ifs(template, data)
 
     # 5. Build meta
     template = template.replace("{{updated_at}}", datetime.utcnow().strftime("%Y-%m-%d %H:%M"))
@@ -141,17 +141,17 @@ def build_all():
             shutil.copy2(src, dst)
 
     # Load all data
-    home_data = load_json("home")
+    home_data = load_json("home.norm")
     page_data = {
         "index": home_data,
-        "fuel-prices": load_json("fuel"),
-        "exchange-rate": load_json("fx"),
-        "border-wait-times": load_json("border"),
-        "road-incidents": load_json("incidents"),
-        "cargo-theft": load_json("theft"),
-        "market-pulse": load_json("market"),
-        "industry-news": load_json("news"),
-        "fuel-cost-calculator": load_json("fx"),  # reuses fx data
+        "fuel-prices": load_json("fuel.norm"),
+        "exchange-rate": load_json("fx.norm"),
+        "border-wait-times": load_json("border.norm"),
+        "road-incidents": load_json("incidents.norm"),
+        "cargo-theft": load_json("theft.norm"),
+        "market-pulse": load_json("market.norm"),
+        "industry-news": load_json("news.norm"),
+        "fuel-cost-calculator": load_json("fx.norm"),  # reuses fx data
     }
 
     built = []
