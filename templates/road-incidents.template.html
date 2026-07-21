@@ -48,7 +48,7 @@
 (function(){
   var data = window.INCIDENTS || [];
   var map = L.map('map',{scrollWheelZoom:false}).setView([56.13,-106.35],4);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
     attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:19
   }).addTo(map);
   var list = document.getElementById('incList');
