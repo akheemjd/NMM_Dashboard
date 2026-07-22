@@ -242,6 +242,8 @@ home = {
     "theft": theft,
     "news": news,
     "theft_home_json": json.dumps(theft_json),
+    "calc_cities": json.dumps(calc_cities),
+    "calc_distances": json.dumps(calc_distances),
     "sponsor_page": sponsor_page,
     "sponsor_border": sponsor_border,
 }
