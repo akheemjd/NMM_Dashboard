@@ -327,9 +327,7 @@ write("market.norm", {
     "usd_cad": rates.get("usd_cad", "—"),
     "updated_at": ts,
 })
-write("news.norm", {"news": news_home, "updated_at": ts})
-# Home uses only first 2 news items
-news_home = news[:2]
+write("news.norm", {"news": news, "updated_at": ts})
 
 
 # ===== BORDER FUEL (US states) =====
