@@ -183,19 +183,20 @@ for t in raw_theft.get("incidents", [])[:8]:
 
 # Hotspots from theft data
 hotspots = []
+risk_labels = {"high": "High risk", "medium": "Moderate", "low": "Low"}
 for h in raw_theft.get("hotspots", []):
+    risk = h.get("risk", "medium")
     hotspots.append({
         "area": h.get("city", "GTA"),
-        "count": h.get("count", h.get("incidents", 0)),
-        "value": str(h.get("value", h.get("loss", "—"))),
+        "count": risk_labels.get(risk, risk.title()),
+        "value": h.get("note", "—")[:60],
     })
-# Fallback if no hotspots
 if not hotspots:
     hotspots = [
-        {"area": "Greater Toronto Area", "count": "most active", "value": "Highest"},
-        {"area": "Montreal", "count": "active", "value": "2nd highest"},
-        {"area": "Calgary/Edmonton", "count": "recurring", "value": "Western hub"},
-        {"area": "Vancouver", "count": "periodic", "value": "Port zone"},
+        {"area": "Greater Toronto Area", "count": "High risk", "value": "Highest cargo theft volume in Canada"},
+        {"area": "Montreal", "count": "High risk", "value": "Second highest. Port and Saint-Laurent zones"},
+        {"area": "Calgary/Edmonton", "count": "Moderate", "value": "Nisku, Balzac, and Acheson parks"},
+        {"area": "Vancouver", "count": "Moderate", "value": "Port area. Delta and Surrey"},
     ]
 
 # ===== NEWS =====
