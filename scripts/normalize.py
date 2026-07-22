@@ -231,10 +231,6 @@ for t in raw_theft.get("incidents", [])[:30]:
     })
 
 
-# Load calc data early (needed by home page)
-calc_cities = raw_dist.get("cities", [])
-calc_distances = raw_dist.get("distances", {})
-
 # ===== ASSEMBLE HOME =====
 home = {
     "updated_at": ts,
