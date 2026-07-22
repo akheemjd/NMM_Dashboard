@@ -226,6 +226,7 @@ for t in raw_theft.get("incidents", [])[:30]:
         "method": str(t.get("method",""))[:80],
         "prevention": str(t.get("prevention",""))[:100],
         "source_url": t.get("source_url", ""),
+        "business": str(t.get("business",""))[:80],
     })
 
 # ===== ASSEMBLE HOME =====
