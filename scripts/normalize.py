@@ -22,10 +22,15 @@ raw_inc = load("incidents.json")
 raw_theft = load("theft.json")
 raw_market = load("market.json")
 raw_news = load("news.json")
+raw_dist = load("distances.json")
 
 ts = now_fmt()
 provs = raw_fuel.get("provinces", {})
 fuel_nat = raw_fuel.get("diesel_national_avg", 171.9)
+
+# Calc data (needed by home page)
+calc_cities = raw_dist.get("cities", [])
+calc_distances = raw_dist.get("distances", {})
 
 # ===== FUEL =====
 d_vals = [(c, provs.get(c,{}).get("diesel",0)) for c in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]]

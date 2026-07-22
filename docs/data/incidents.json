@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-277939",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at GLENDALE AVENUE, Niagara-On-The-Lake. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.156396627,
+      "lng": -79.163360596,
+      "start": 1784679300,
+      "end": null,
+      "updated": 1784679300
+    },
+    {
       "id": "ON-277931",
       "province": "ON",
       "highway": "HWY 611",
@@ -95,22 +111,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1784662255
-    },
-    {
-      "id": "ON-277725",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Collision on HWY 11 Northbound  at FLYNN LAKE SIGN, Longlac. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 49.800300361,
-      "lng": -85.71364163,
-      "start": 1784660520,
-      "end": null,
-      "updated": 1784660520
     },
     {
       "id": "ON-277717",
@@ -561,22 +561,6 @@
       "updated": 1784639280
     },
     {
-      "id": "ON-277500",
-      "province": "ON",
-      "highway": "HWY 596",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 596 Northbound  at N JCT TROUT LAKE RD-GIDLEY TWP, Kenora. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 49.821561273,
-      "lng": -94.788385466,
-      "start": 1784638620,
-      "end": null,
-      "updated": 1784638620
-    },
-    {
       "id": "ON-277522",
       "province": "ON",
       "highway": "HWY 410",
@@ -799,10 +783,26 @@
       "start": 1785114000,
       "end": 1785574800,
       "updated": 1784636520
+    },
+    {
+      "id": "ON-277541",
+      "province": "ON",
+      "highway": "HWY 420",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 420 Westbound  between DRUMMOND ROAD and DORCHESTER ROAD/LUNDY'S LANE, Niagara Falls. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 43.096115,
+      "lng": -79.098,
+      "start": 1784847600,
+      "end": 1785409200,
+      "updated": 1784636340
     }
   ],
   "total": 50,
-  "updated": "2026-07-21T23:50:33.554628+00:00",
+  "updated": "2026-07-22T00:20:41.427788+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
