@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-277957",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at HWY 10 / HURONTARIO STREET, Mississauga. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.59863846,
+      "lng": -79.6455635,
+      "start": 1784687820,
+      "end": null,
+      "updated": 1784687820
+    },
+    {
+      "id": "ON-277956",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BASKET WEAVE/JANE ST, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.71866873,
+      "lng": -79.50050005,
+      "start": 1784687220,
+      "end": null,
+      "updated": 1784687220
+    },
+    {
       "id": "ON-276829",
       "province": "ON",
       "highway": "Lac des Mille Lacs Road",
@@ -47,22 +79,6 @@
       "start": 1785841200,
       "end": 1787349600,
       "updated": 1784676180
-    },
-    {
-      "id": "ON-277903",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Flooding on HWY 400 Northbound ON-RAMP at ESSA RD / SIMCOE RD 27, Barrie. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.361926,
-      "lng": -79.697463,
-      "start": 1784672040,
-      "end": null,
-      "updated": 1784672040
     },
     {
       "id": "ON-277746",
@@ -783,26 +799,10 @@
       "start": 1784847600,
       "end": 1785409200,
       "updated": 1784636340
-    },
-    {
-      "id": "ON-277518",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Continuous Maintenance on HWY 427 Northbound Off-ramp at HWY 7, Vaughan. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.769943,
-      "lng": -79.63495,
-      "start": 1784858400,
-      "end": 1784883600,
-      "updated": 1784635920
     }
   ],
   "total": 50,
-  "updated": "2026-07-22T02:21:20.011018+00:00",
+  "updated": "2026-07-22T02:51:25.585065+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
