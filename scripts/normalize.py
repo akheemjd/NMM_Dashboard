@@ -205,7 +205,7 @@ for n in raw_news.get("headlines", [])[:10]:
     news.append({
         "category": n.get("source","Industry"),
         "headline": n.get("title","")[:120],
-        "url": n.get("url","#"),
+        "url": n.get("link", n.get("url","#")),
     })
 
 
