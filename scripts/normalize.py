@@ -225,6 +225,8 @@ for n in raw_news.get("headlines", [])[:10]:
         "url": n.get("link", n.get("url","#")),
     })
 
+news_home = news[:2]  # home shows 2, news page shows all
+
 
 # ===== SPONSOR PLACEHOLDERS =====
 sponsor_page = None
