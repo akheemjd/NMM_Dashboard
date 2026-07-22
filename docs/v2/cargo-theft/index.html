@@ -31,7 +31,7 @@
 
   <div class="mod"><span class="tab"></span><h2>Hotspots</h2><span class="rule"></span></div>
   <div class="panel"><table class="tbl">
-  <tr><td class="prov">Toronto / GTA</td><td class="r mono">0 incidents</td><td class="r mono">—</td></tr><tr><td class="prov">Montreal</td><td class="r mono">0 incidents</td><td class="r mono">—</td></tr><tr><td class="prov">Calgary</td><td class="r mono">0 incidents</td><td class="r mono">—</td></tr><tr><td class="prov">Edmonton</td><td class="r mono">0 incidents</td><td class="r mono">—</td></tr><tr><td class="prov">Vancouver</td><td class="r mono">0 incidents</td><td class="r mono">—</td></tr><tr><td class="prov">Winnipeg</td><td class="r mono">0 incidents</td><td class="r mono">—</td></tr>
+  <tr><td class="prov">Toronto / GTA</td><td class="r mono">High risk incidents</td><td class="r mono">Highest cargo theft volume in Canada.</td></tr><tr><td class="prov">Montreal</td><td class="r mono">High risk incidents</td><td class="r mono">Second highest. Port and Saint-Laurent zones.</td></tr><tr><td class="prov">Calgary</td><td class="r mono">Moderate incidents</td><td class="r mono">Increasing. Balzac and Foothills.</td></tr><tr><td class="prov">Edmonton</td><td class="r mono">Moderate incidents</td><td class="r mono">Nisku and Acheson parks.</td></tr><tr><td class="prov">Vancouver</td><td class="r mono">Moderate incidents</td><td class="r mono">Port area. Delta and Surrey.</td></tr><tr><td class="prov">Winnipeg</td><td class="r mono">Low incidents</td><td class="r mono">Emerging. CentrePort area.</td></tr>
   </table></div>
 
   <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/cargo-theft/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Canadian%20cargo%20theft%20watch&url=https://dashboard.northernmilemedia.com/cargo-theft/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/cargo-theft/')">Copy link</button></div>
@@ -71,21 +71,48 @@
     m.bindPopup(popup);
     markers.push(m);
 
-    listHtml += '<div class="tft theft-row" data-idx="' + markers.length + '" style="cursor:pointer;">' +
+    listHtml += '<div class="tft theft-row" data-idx="' + markers.length + '" style="cursor:pointer;"' +
+      ' data-title="' + (it.title||'').replace(/"/g,'&quot;') + '"' +
+      ' data-location="' + (it.location||'').replace(/"/g,'&quot;') + '"' +
+      ' data-value="' + (it.value||'') + '"' +
+      ' data-date="' + (it.date||'') + '"' +
+      ' data-method="' + (it.method||'').replace(/"/g,'&quot;') + '"' +
+      ' data-prevention="' + (it.prevention||'').replace(/"/g,'&quot;') + '"' +
+      ' data-business="' + (it.business||'').replace(/"/g,'&quot;') + '"' +
+      '>' +
       '<div class="h">' + it.title + ' <span class="val">' + it.value + '</span></div>' +
       '<div class="m">' + it.location + '</div></div>';
   });
 
   listEl.innerHTML = listHtml || '<div class="empty">No recent incidents on monitored corridors</div>';
 
-  // Click handler: zoom to pin
+  // Detail popup panel
+  var detailEl = document.createElement('div');
+  detailEl.id = 'theft-detail';
+  detailEl.style.cssText = 'display:none;position:fixed;top:0;right:0;width:380px;max-width:100vw;height:100vh;background:var(--surface-1);border-left:1px solid var(--border);z-index:9999;overflow-y:auto;padding:24px;font-size:0.875rem;';
+  document.body.appendChild(detailEl);
+
+  function showDetail(row) {
+    detailEl.innerHTML =
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">' +
+      '<h2 style="margin:0;font-size:1rem;">Incident details</h2>' +
+      '<button onclick="document.getElementById('theft-detail').style.display='none'" style="background:none;border:none;color:var(--ink-3);cursor:pointer;font-size:1.25rem;">&times;</button></div>' +
+      '<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Title</div><div style="font-weight:600;color:var(--ink);">' + (row.getAttribute('data-title')||'') + '</div></div>' +
+      '<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Value</div><div style="font-size:1.25rem;font-weight:700;color:var(--red);">' + (row.getAttribute('data-value')||'') + '</div></div>' +
+      '<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Location</div><div>' + (row.getAttribute('data-location')||'') + ' &middot; ' + (row.getAttribute('data-date')||'') + '</div></div>' +
+      (row.getAttribute('data-business') ? '<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Where</div><div>' + row.getAttribute('data-business') + '</div></div>' : '') +
+      (row.getAttribute('data-method') ? '<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Method</div><div>' + row.getAttribute('data-method') + '</div></div>' : '') +
+      (row.getAttribute('data-prevention') ? '<div style="margin-bottom:16px;background:rgba(30,158,102,.08);border-left:2px solid var(--green);padding:12px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--green);margin-bottom:4px;">Prevention</div><div style="color:var(--ink-2);">' + row.getAttribute('data-prevention') + '</div></div>' : '');
+    detailEl.style.display = 'block';
+  }
+
   listEl.addEventListener('click', function(e) {
     var row = e.target.closest('.theft-row');
     if (!row) return;
+    showDetail(row);
     var idx = parseInt(row.getAttribute('data-idx')) - 1;
     if (markers[idx]) {
       map.setView(markers[idx].getLatLng(), 10);
-      markers[idx].openPopup();
     }
   });
 
