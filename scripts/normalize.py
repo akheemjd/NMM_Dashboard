@@ -198,6 +198,8 @@ for t in raw_theft.get("incidents", [])[:8]:
         "url": "/cargo-theft/",
     })
 
+theft_home = theft[:3]  # home shows 3
+
 # Hotspots from theft data
 hotspots = []
 risk_labels = {"high": "High risk", "medium": "Moderate", "low": "Low"}
@@ -260,7 +262,7 @@ home = {
     "incidents": incidents,
     "border_rows": border_rows,
     "market": market,
-    "theft": theft,
+    "theft": theft_home,
     "news": news_home,
     "theft_home_json": json.dumps(theft_json),
     "calc_cities": json.dumps(calc_cities),
@@ -314,7 +316,7 @@ write("incidents.norm", {
     "incidents_json": json.dumps(inc_json),
     "updated_at": ts,
 })
-write("theft.norm", {"theft": theft, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
+write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
