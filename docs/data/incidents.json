@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-277959",
+      "province": "ON",
+      "highway": "Frog Creek Road",
+      "direction": "Unknown",
+      "description": "Culvert replacement on Frog Creek Road, Alberton. One lane closed.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "No Data",
+      "lat": 48.648996,
+      "lng": -93.465501,
+      "start": 1785816000,
+      "end": 1784779200,
+      "updated": 1784718854
+    },
+    {
+      "id": "ON-276829",
+      "province": "ON",
+      "highway": "Lac des Mille Lacs Road",
+      "direction": "Both Directions",
+      "description": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 17, Upsala. All lanes closed.",
+      "event_type": "closures",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "No Data",
+      "lat": 48.950786,
+      "lng": -90.486138,
+      "start": 1784469600,
+      "end": null,
+      "updated": 1784718837
+    },
+    {
       "id": "ON-277985",
       "province": "ON",
       "highway": "HWY 24",
@@ -31,38 +63,6 @@
       "start": 1784716200,
       "end": 1784750400,
       "updated": 1784709840
-    },
-    {
-      "id": "ON-277959",
-      "province": "ON",
-      "highway": "Frog Creek Road",
-      "direction": "Unknown",
-      "description": "Culvert replacement on Frog Creek Road, Alberton. One lane closed.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "No Data",
-      "lat": 48.648996,
-      "lng": -93.465501,
-      "start": 1785816000,
-      "end": 1784779200,
-      "updated": 1784688654
-    },
-    {
-      "id": "ON-276829",
-      "province": "ON",
-      "highway": "Lac des Mille Lacs Road",
-      "direction": "Both Directions",
-      "description": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 17, Upsala. All lanes closed.",
-      "event_type": "closures",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "No Data",
-      "lat": 48.950786,
-      "lng": -90.486138,
-      "start": 1784469600,
-      "end": null,
-      "updated": 1784685657
     },
     {
       "id": "ON-277931",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-22T10:53:49.677662+00:00",
+  "updated": "2026-07-22T11:24:07.136260+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
