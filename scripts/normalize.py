@@ -231,8 +231,15 @@ news_home = news[:2]  # home shows 2, news page shows all
 
 
 # ===== SPONSOR PLACEHOLDERS =====
-sponsor_page = None
-sponsor_border = None
+sponsor = {"name": "YOUR BRAND — $2,500/wk", "line": "Reach 500+ Canadian fleet operators. One placement, every Wednesday.", "url": "https://northernmilemedia.com"}
+sponsor_page = sponsor
+sponsor_border = sponsor
+sponsor_fuel = sponsor
+sponsor_fx = sponsor
+sponsor_incidents = sponsor
+sponsor_theft = sponsor
+sponsor_market = sponsor
+sponsor_news = sponsor
 
 # Build theft JSON early (needed by home page too)
 theft_json = []
@@ -269,6 +276,12 @@ home = {
     "calc_distances": json.dumps(calc_distances),
     "sponsor_page": sponsor_page,
     "sponsor_border": sponsor_border,
+    "sponsor_fuel": sponsor,
+    "sponsor_fx": sponsor,
+    "sponsor_incidents": sponsor,
+    "sponsor_theft": sponsor,
+    "sponsor_market": sponsor,
+    "sponsor_news": sponsor,
 }
 
 write("home.norm", home)
