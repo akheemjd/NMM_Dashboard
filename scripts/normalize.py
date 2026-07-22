@@ -133,7 +133,11 @@ fx = {
 }
 
 # ===== INCIDENTS =====
-incidents_raw = raw_inc.get("incidents", [])
+# Already sorted above
+import time
+now_ts = int(time.time())
+raw_sorted = sorted(raw_inc.get("incidents", []), key=lambda x: x.get("start", 0) or 0, reverse=True)
+incidents_raw = raw_sorted
 incidents_active = [i for i in incidents_raw if i.get("event_type","") in ("accidentsandincidents","closures")]
 incidents_list = []
 for i in incidents_active[:2]:  # home shows 2 collisions/closures
