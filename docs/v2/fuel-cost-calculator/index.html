@@ -51,6 +51,30 @@
     <div class="readout"><div class="rl">Canadian equivalent</div><div class="big" id="us-result">—</div><div class="meta" id="us-detail"></div></div>
   </div>
 
+  <!-- 4. Break-even rate -->
+  <div class="mod"><span class="tab"></span><h2>Break-even rate</h2><span class="k">minimum you need per km</span><span class="rule"></span></div>
+  <div class="panel" style="padding:20px 22px">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
+      <div style="flex:1;min-width:120px;"><label class="fl" for="be-burn">Burn (L/100km)</label><input class="field" id="be-burn" type="number" value="38" min="1" oninput="calcBE()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="be-diesel">Diesel (c/L)</label><input class="field" id="be-diesel" type="number" value="" min="0" step="0.1" oninput="calcBE()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="be-fixed">Fixed cost/km (c)</label><input class="field" id="be-fixed" type="number" value="45" min="0" step="1" oninput="calcBE()"></div>
+    </div>
+    <p style="font-size:0.6875rem;color:var(--ink-3);margin-bottom:12px;">Fixed costs per km: truck payment, insurance, maintenance, plates. Industry average for a Class 8 tractor-trailer is 40–55c/km.</p>
+    <div class="readout"><div class="rl">Break-even rate</div><div class="big" id="be-result">—</div><div class="meta" id="be-detail"></div></div>
+  </div>
+
+  <!-- 5. Deadhead cost -->
+  <div class="mod"><span class="tab"></span><h2>Deadhead cost</h2><span class="k">what empty miles cost you</span><span class="rule"></span></div>
+  <div class="panel" style="padding:20px 22px">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-km">Deadhead (km)</label><input class="field" id="dh-km" type="number" value="200" min="0" oninput="calcDH()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-burn">Burn (L/100km)</label><input class="field" id="dh-burn" type="number" value="38" min="1" oninput="calcDH()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-diesel">Diesel (c/L)</label><input class="field" id="dh-diesel" type="number" value="" min="0" step="0.1" oninput="calcDH()"></div>
+    </div>
+    <div class="readout"><div class="rl">Cost of those empty miles</div><div class="big" id="dh-result">—</div><div class="meta" id="dh-detail"></div></div>
+    <div style="margin-top:16px;padding:8px 12px;background:rgba(245,197,24,.08);border-left:2px solid var(--yellow);font-size:0.75rem;color:var(--ink-2);" id="dh-tip"></div>
+  </div>
+
   <div class="mod"><span class="tab"></span><h2>Questions drivers ask</h2><span class="rule"></span></div>
   <div class="faq"><dl>
     <dt>What diesel price does this use?</dt><dd>Pre-loaded with today's Canadian national average (c/L), updated every 30 minutes. Change it to any pump price.</dd>
@@ -86,7 +110,23 @@ function calcUS(){
   document.getElementById('us-result').textContent=cadPerL+'c/L';
   document.getElementById('us-detail').textContent='$'+us.toFixed(2)+'/gal × '+fx.toFixed(4)+' ÷ 3.785 L/gal';
 }
-calcAll();calcUS();
+calcAll();calcUS();calcBE();calcDH();
+
+function calcBE(){
+  var b=+document.getElementById('be-burn').value||0, d=+document.getElementById('be-diesel').value||0, f=+document.getElementById('be-fixed').value||0;
+  var fuelPerKm=b*d/100, total=fuelPerKm+f;
+  document.getElementById('be-result').textContent=total.toFixed(1)+'c/km';
+  document.getElementById('be-detail').textContent=fuelPerKm.toFixed(1)+'c fuel + '+f+'c fixed · '+b+' L/100km at '+d+'c/L';
+}
+
+function calcDH(){
+  var km=+document.getElementById('dh-km').value||0, b=+document.getElementById('dh-burn').value||0, d=+document.getElementById('dh-diesel').value||0;
+  var litres=km/100*b, cost=litres*d/100, perKm=cost/km*100;
+  document.getElementById('dh-result').textContent='$'+cost.toFixed(2);
+  document.getElementById('dh-detail').textContent=litres.toFixed(0)+' L × '+d+'c/L · '+km+' km at '+b+' L/100km';
+  var loads=Math.round(cost/3); // ~$3/km average rate
+  document.getElementById('dh-tip').innerHTML='At an average rate of $3.00/km, you need to run roughly <strong>'+loads+' paid km</strong> just to cover these '+km+' deadhead km.';
+}
 </script>
 <script>
 /* Northern Mile Dashboard — shared behaviour for every page. */
