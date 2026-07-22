@@ -81,14 +81,14 @@
 
   <div class="mod"><span class="tab"></span><h2>Fuel cost calculator</h2><span class="k">at {{fuel.national_diesel}}c/L diesel</span><span class="rule"></span><a class="full" href="/fuel-cost-calculator/">Full calculator →</a></div>
   <div class="panel"><div class="row" style="margin:0;">
-    <div style="flex:1;min-width:200px;">
-      <div style="display:flex;gap:8px;margin-bottom:8px;">
-        <div style="flex:1;"><div style="font-size:0.5625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin-bottom:3px;">From</div><select id="home-from" style="width:100%;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:4px;padding:8px;font-size:0.8125rem;"></select></div>
-        <div style="flex:1;"><div style="font-size:0.5625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin-bottom:3px;">To</div><select id="home-to" style="width:100%;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:4px;padding:8px;font-size:0.8125rem;"></select></div>
+    <div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:8px;">
+      <div style="display:flex;gap:8px;">
+        <div style="flex:1;display:flex;flex-direction:column;gap:2px;"><span style="font-size:0.5625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);">From</span><select id="home-from" style="width:100%;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:4px;padding:7px 8px;font-size:0.8125rem;"></select></div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:2px;"><span style="font-size:0.5625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);">To</span><select id="home-to" style="width:100%;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:4px;padding:7px 8px;font-size:0.8125rem;"></select></div>
       </div>
       <div style="display:flex;gap:8px;align-items:flex-end;">
-        <div><div style="font-size:0.5625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin-bottom:3px;">Burn rate</div><input id="home-eff" type="number" value="35" min="20" max="60" style="width:60px;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:4px;padding:8px;font-size:0.8125rem;text-align:center;"></div>
-        <span style="font-size:0.6875rem;color:var(--ink-3);padding-bottom:8px;">L/100km</span>
+        <div style="display:flex;flex-direction:column;gap:2px;"><span style="font-size:0.5625rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);">Burn rate</span><input id="home-eff" type="number" value="35" min="20" max="60" style="width:64px;background:var(--surface-2);color:var(--ink);border:1px solid var(--border);border-radius:4px;padding:7px 8px;font-size:0.8125rem;text-align:center;"></div>
+        <span style="font-size:0.6875rem;color:var(--ink-3);padding-bottom:7px;">L/100km</span>
       </div>
     </div>
     <div style="flex:1;min-width:180px;display:flex;align-items:center;justify-content:center;">
