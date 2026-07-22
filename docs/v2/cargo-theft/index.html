@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Canadian Cargo Theft Watch — Recent Incidents | Northern Mile</title>
 <meta name="description" content="Recent cargo and trailer theft incidents across Canada, with prevention notes. Reference data from public bulletins, refreshed regularly.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/cargo-theft/">
 <meta property="og:type" content="website"><meta property="og:title" content="Canadian Cargo Theft Watch | Northern Mile"><meta property="og:description" content="Recent Canadian cargo theft incidents + prevention notes."><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-07-21 04:01">
+<meta name="build" content="07:15 EDT">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
@@ -18,14 +19,14 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Cargo Theft</div>
-  <div class="strip"><span>Reference</span><span>Public bulletins · last 90 days</span><span>Updated 2026-07-21 04:01</span></div>
+  <div class="strip"><span>Reference</span><span>Public bulletins · last 90 days</span><span>Updated 07:15 EDT</span></div>
 
   
 
-  <div class="mod"><span class="tab"></span><h2>Incident map</h2><span class="k">click a pin or a row</span><span class="rule"></span></div>
+  <div class="mod"><span class="tab"></span><h2>Cargo theft map</h2><span class="k">click a pin for details</span><span class="rule"></span></div>
   <div id="theft-map" style="height:400px;border-radius:6px;margin-bottom:20px;"></div>
 
-  <div class="mod"><span class="tab"></span><h2>Recent incidents</h2><span class="k">reference</span><span class="rule"></span></div>
+  <div class="mod"><span class="tab"></span><h2>Recent cargo theft</h2><span class="k">reference</span><span class="rule"></span></div>
   <div class="panel" id="theft-list"></div>
 
   <div class="mod"><span class="tab"></span><h2>Hotspots</h2><span class="rule"></span></div>
@@ -40,7 +41,7 @@
 
 <footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Reference data from public bulletins · Informational use only · © 2026</div></div></footer>
 
-<script>window.THEFT_DATA = [{"title": "Electronics load", "location": "Brampton, ON", "value": "$250,000", "lat": 43.69, "lng": -79.76}, {"title": "47 trailers recovered in theft ring bust", "location": "Greater Montreal, QC", "value": "$4,000,000", "lat": 45.51, "lng": -73.56}, {"title": "Reefer load \u2014 meat products", "location": "Mississauga, ON", "value": "$85,000", "lat": 43.59, "lng": -79.64}, {"title": "Consumer electronics \u2014 US-bound", "location": "Delta, BC", "value": "$180,000", "lat": 49.09, "lng": -123.06}, {"title": "Identity theft pickup", "location": "Calgary, AB", "value": "$90,000", "lat": 51.04, "lng": -114.07}, {"title": "Building materials \u2014 two trailers", "location": "Laval, QC", "value": "$120,000", "lat": 45.58, "lng": -73.75}, {"title": "Three reefers \u2014 food products", "location": "Nisku, AB", "value": "$300,000", "lat": 53.55, "lng": -113.49}, {"title": "Five trailers \u2014 mixed freight", "location": "Winnipeg, MB", "value": "$210,000", "lat": 49.9, "lng": -97.14}];</script>
+<script>window.THEFT_DATA = [{"title": "Electronics load", "location": "Brampton, ON", "value": "$250,000", "lat": 43.69, "lng": -79.76, "source_url": ""}, {"title": "47 trailers recovered in theft ring bust", "location": "Greater Montreal, QC", "value": "$4,000,000", "lat": 45.51, "lng": -73.56, "source_url": ""}, {"title": "Reefer load \u2014 meat products", "location": "Mississauga, ON", "value": "$85,000", "lat": 43.59, "lng": -79.64, "source_url": ""}, {"title": "Consumer electronics \u2014 US-bound", "location": "Delta, BC", "value": "$180,000", "lat": 49.09, "lng": -123.06, "source_url": ""}, {"title": "Identity theft pickup", "location": "Calgary, AB", "value": "$90,000", "lat": 51.04, "lng": -114.07, "source_url": ""}, {"title": "Building materials \u2014 two trailers", "location": "Laval, QC", "value": "$120,000", "lat": 45.58, "lng": -73.75, "source_url": ""}, {"title": "Three reefers \u2014 food products", "location": "Nisku, AB", "value": "$300,000", "lat": 53.55, "lng": -113.49, "source_url": ""}, {"title": "Five trailers \u2014 mixed freight", "location": "Winnipeg, MB", "value": "$210,000", "lat": 49.9, "lng": -97.14, "source_url": ""}];</script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="/assets/app.js"></script>
 <script>
