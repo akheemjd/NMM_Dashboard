@@ -76,14 +76,54 @@
     row.className = 'inc';
     row.setAttribute('tabindex','0');
     row.setAttribute('role','button');
-    row.innerHTML = '<div class="h">'+it.road+' · '+it.direction+' <span class="pill '+it.severity_class+'" style="float:right">'+it.severity_label+'</span></div><div class="m">'+it.what+' · clears '+it.clearance+(it.detour?' · detour '+it.detour:'')+'</div>';
-    function focus(){ map.flyTo([it.lat, it.lng], 9, {duration:.6}); markers[idx].openPopup(); row.scrollIntoView({block:'nearest'}); }
-    row.addEventListener('click', focus);
-    row.addEventListener('keydown', function(e){ if(e.key==='Enter') focus(); });
+    row.setAttribute('data-road', it.road||'');
+    row.setAttribute('data-direction', it.direction||'');
+    row.setAttribute('data-what', it.what||'');
+    row.setAttribute('data-severity', it.severity_label||'');
+    row.setAttribute('data-severity-class', it.severity_class||'');
+    row.setAttribute('data-event', it.event_type||'');
+    row.setAttribute('data-lanes', it.lanes||'');
+    row.setAttribute('data-closed', it.closed||'');
+    row.setAttribute('data-clearance', it.clearance||'');
+    row.setAttribute('data-end-time', it.end_time||'');
+    row.setAttribute('data-lat', it.lat||'');
+    row.setAttribute('data-lng', it.lng||'');
+    row.innerHTML = '<div class="h">'+it.road+' · '+it.direction+' <span class="pill '+it.severity_class+'" style="float:right">'+it.severity_label+'</span></div><div class="m">'+it.what+(it.clearance?' · clears '+it.clearance:'')+'</div>';
+    row.addEventListener('click', function(){ showIncDetail(row); map.flyTo([it.lat, it.lng], 10, {duration:.6}); });
+    row.addEventListener('keydown', function(e){ if(e.key==='Enter') showIncDetail(row); });
     list.appendChild(row);
   });
   var group = L.featureGroup(markers);
   map.fitBounds(group.getBounds().pad(0.2));
+
+  // Detail panel
+  var incDetail = document.createElement('div');
+  incDetail.id = 'inc-detail';
+  incDetail.style.cssText = 'display:none;position:fixed;top:0;right:0;width:380px;max-width:100vw;height:100vh;background:var(--surface-1);border-left:1px solid var(--border);z-index:9999;overflow-y:auto;padding:24px;font-size:0.875rem;';
+  document.body.appendChild(incDetail);
+
+  window.showIncDetail = function(row) {
+    var closed = row.getAttribute('data-closed');
+    var parts = [];
+    parts.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;"><h2 style="margin:0;font-size:1rem;">Incident details</h2><button class="inc-close-btn" style="background:none;border:none;color:var(--ink-3);cursor:pointer;font-size:1.25rem;">&times;</button></div>');
+    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Highway</div><div style="font-weight:600;color:var(--ink);font-size:1rem;">'+row.getAttribute('data-road')+' '+row.getAttribute('data-direction')+'</div></div>');
+    if (closed) parts.push('<div style="margin-bottom:16px;background:rgba(229,72,77,.12);border-left:2px solid var(--red);padding:12px;"><div style="font-size:0.75rem;font-weight:700;color:var(--red);">ROAD CLOSED</div></div>');
+    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Description</div><div style="color:var(--ink-2);">'+row.getAttribute('data-what')+'</div></div>');
+    var sev = '<span class="pill '+row.getAttribute('data-severity-class')+'">'+row.getAttribute('data-severity')+'</span>';
+    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Severity</div><div>'+sev+'</div></div>');
+    var eventType = row.getAttribute('data-event');
+    if (eventType) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Type</div><div>'+eventType+'</div></div>');
+    var lanes = row.getAttribute('data-lanes');
+    if (lanes) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Lanes</div><div>'+lanes+'</div></div>');
+    var clearance = row.getAttribute('data-clearance');
+    if (clearance) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Started</div><div>'+clearance+'</div></div>');
+    var endTime = row.getAttribute('data-end-time');
+    if (endTime) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Until</div><div>'+endTime+'</div></div>');
+    incDetail.innerHTML = parts.join('');
+    incDetail.style.display = 'block';
+    var closeBtn = incDetail.querySelector('.inc-close-btn');
+    if (closeBtn) closeBtn.onclick = function() { incDetail.style.display = 'none'; };
+  };
 })();
 </script>
 </body></html>
