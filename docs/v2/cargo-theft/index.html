@@ -51,7 +51,7 @@
   var listEl = document.getElementById('theft-list');
   if (!data.length || !mapEl) return;
 
-  var map = L.map('theft-map', {scrollWheelZoom: false}).setView([52, -90], 4);
+  var map = L.map('theft-map', {scrollWheelZoom: true}).setView([52, -90], 4);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; OSM'}).addTo(map);
   var markers = [];
   var listHtml = '';
