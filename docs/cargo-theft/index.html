@@ -105,6 +105,9 @@
     if (row.getAttribute('data-prevention')) parts.push('<div style="margin-bottom:16px;background:rgba(30,158,102,.08);border-left:2px solid var(--green);padding:12px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--green);margin-bottom:4px;">Prevention</div><div style="color:var(--ink-2);">' + row.getAttribute('data-prevention') + '</div></div>');
     detailEl.innerHTML = parts.join('');
     detailEl.style.display = 'block';
+    // Bind close button
+    var closeBtn = detailEl.querySelector('.close-detail-btn');
+    if (closeBtn) closeBtn.onclick = function() { detailEl.style.display = 'none'; };
   }
 
   listEl.addEventListener('click', function(e) {
