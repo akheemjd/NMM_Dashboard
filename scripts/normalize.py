@@ -275,12 +275,12 @@ home = {
     "calc_distances": json.dumps(calc_distances),
     "sponsor_page": sponsor_page,
     "sponsor_border": sponsor_border,
-    "sponsor_fuel": sponsor,
-    "sponsor_fx": sponsor,
-    "sponsor_incidents": sponsor,
-    "sponsor_theft": sponsor,
-    "sponsor_market": sponsor,
-    "sponsor_news": sponsor,
+    "sponsor_fuel": sponsor_fuel,
+    "sponsor_fx": sponsor_fx,
+    "sponsor_incidents": sponsor_incidents,
+    "sponsor_theft": sponsor_theft,
+    "sponsor_market": sponsor_market,
+    "sponsor_news": sponsor_news,
 }
 
 write("home.norm", home)
