@@ -259,7 +259,7 @@ home = {
     "border_rows": border_rows,
     "market": market,
     "theft": theft,
-    "news": news,
+    "news": news_home,
     "theft_home_json": json.dumps(theft_json),
     "calc_cities": json.dumps(calc_cities),
     "calc_distances": json.dumps(calc_distances),
@@ -325,7 +325,9 @@ write("market.norm", {
     "usd_cad": rates.get("usd_cad", "—"),
     "updated_at": ts,
 })
-write("news.norm", {"news": news, "updated_at": ts})
+write("news.norm", {"news": news_home, "updated_at": ts})
+# Home uses only first 2 news items
+news_home = news[:2]
 
 
 # ===== BORDER FUEL (US states) =====

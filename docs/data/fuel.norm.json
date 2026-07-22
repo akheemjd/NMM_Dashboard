@@ -13,44 +13,390 @@
         "name": "Alberta",
         "price": "158.9",
         "change": "\u2014",
-        "change_class": "flat"
+        "change_class": "flat",
+        "vs_national": "-13.0",
+        "vs_class": "lo",
+        "rowclass": "lo"
       },
       {
         "code": "SK",
         "name": "Saskatchewan",
         "price": "162.3",
         "change": "\u2014",
-        "change_class": "flat"
+        "change_class": "flat",
+        "vs_national": "-9.6",
+        "vs_class": "lo",
+        "rowclass": ""
       },
       {
         "code": "MB",
         "name": "Manitoba",
         "price": "165.7",
         "change": "\u2014",
-        "change_class": "flat"
+        "change_class": "flat",
+        "vs_national": "-6.2",
+        "vs_class": "lo",
+        "rowclass": ""
       },
       {
         "code": "ON",
         "name": "Ontario",
         "price": "171.2",
         "change": "\u2014",
-        "change_class": "flat"
+        "change_class": "flat",
+        "vs_national": "-0.7",
+        "vs_class": "lo",
+        "rowclass": ""
       },
       {
         "code": "NB",
         "name": "New Brunswick",
         "price": "173.4",
         "change": "\u2014",
-        "change_class": "flat"
+        "change_class": "flat",
+        "vs_national": "+1.5",
+        "vs_class": "hi",
+        "rowclass": ""
       },
       {
         "code": "NS",
         "name": "Nova Scotia",
         "price": "174.9",
         "change": "\u2014",
-        "change_class": "flat"
+        "change_class": "flat",
+        "vs_national": "+3.0",
+        "vs_class": "hi",
+        "rowclass": ""
       }
     ]
   },
+  "provinces": [
+    {
+      "code": "AB",
+      "name": "Alberta",
+      "price": "158.9",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "-13.0",
+      "vs_class": "lo",
+      "rowclass": "lo"
+    },
+    {
+      "code": "SK",
+      "name": "Saskatchewan",
+      "price": "162.3",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "-9.6",
+      "vs_class": "lo",
+      "rowclass": ""
+    },
+    {
+      "code": "MB",
+      "name": "Manitoba",
+      "price": "165.7",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "-6.2",
+      "vs_class": "lo",
+      "rowclass": ""
+    },
+    {
+      "code": "ON",
+      "name": "Ontario",
+      "price": "171.2",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "-0.7",
+      "vs_class": "lo",
+      "rowclass": ""
+    },
+    {
+      "code": "NB",
+      "name": "New Brunswick",
+      "price": "173.4",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+1.5",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "NS",
+      "name": "Nova Scotia",
+      "price": "174.9",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+3.0",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "QC",
+      "name": "Quebec",
+      "price": "175.8",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+3.9",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "PE",
+      "name": "PEI",
+      "price": "176.1",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+4.2",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "BC",
+      "name": "British Columbia",
+      "price": "178.5",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+6.6",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "NL",
+      "name": "Newfoundland",
+      "price": "182.5",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+10.6",
+      "vs_class": "hi",
+      "rowclass": "hi"
+    }
+  ],
+  "border_fuel": [
+    {
+      "prov_code": "BC",
+      "state_code": "WA",
+      "prov_name": "British Columbia",
+      "prov_price": "178.5",
+      "state_name": "Washington",
+      "state_cad": "1.4",
+      "state_usd": "3.89",
+      "verdict": "Save 177.1c/L"
+    },
+    {
+      "prov_code": "AB",
+      "state_code": "MT",
+      "prov_name": "Alberta",
+      "prov_price": "158.9",
+      "state_name": "Montana",
+      "state_cad": "1.4",
+      "state_usd": "3.75",
+      "verdict": "Save 157.5c/L"
+    },
+    {
+      "prov_code": "SK",
+      "state_code": "MT",
+      "prov_name": "Saskatchewan",
+      "prov_price": "162.3",
+      "state_name": "Montana",
+      "state_cad": "1.4",
+      "state_usd": "3.75",
+      "verdict": "Save 160.9c/L"
+    },
+    {
+      "prov_code": "MB",
+      "state_code": "ND",
+      "prov_name": "Manitoba",
+      "prov_price": "165.7",
+      "state_name": "North Dakota",
+      "state_cad": "1.4",
+      "state_usd": "3.72",
+      "verdict": "Save 164.3c/L"
+    },
+    {
+      "prov_code": "ON",
+      "state_code": "MI",
+      "prov_name": "Ontario",
+      "prov_price": "171.2",
+      "state_name": "Michigan",
+      "state_cad": "1.4",
+      "state_usd": "3.82",
+      "verdict": "Save 169.8c/L"
+    },
+    {
+      "prov_code": "ON",
+      "state_code": "NY",
+      "prov_name": "Ontario",
+      "prov_price": "171.2",
+      "state_name": "New York",
+      "state_cad": "1.5",
+      "state_usd": "3.95",
+      "verdict": "Save 169.7c/L"
+    },
+    {
+      "prov_code": "QC",
+      "state_code": "NY",
+      "prov_name": "Quebec",
+      "prov_price": "175.8",
+      "state_name": "New York",
+      "state_cad": "1.5",
+      "state_usd": "3.95",
+      "verdict": "Save 174.3c/L"
+    },
+    {
+      "prov_code": "NB",
+      "state_code": "ME",
+      "prov_name": "New Brunswick",
+      "prov_price": "173.4",
+      "state_name": "Maine",
+      "state_cad": "1.5",
+      "state_usd": "3.98",
+      "verdict": "Save 171.9c/L"
+    }
+  ],
+  "tax": [
+    {
+      "name": "British Columbia",
+      "base": "72",
+      "carbon": "18",
+      "fuel_tax": "15",
+      "sales": "9",
+      "pump": "178.5"
+    },
+    {
+      "name": "Alberta",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "9",
+      "sales": "0",
+      "pump": "158.9"
+    },
+    {
+      "name": "Saskatchewan",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "10",
+      "sales": "6",
+      "pump": "162.3"
+    },
+    {
+      "name": "Manitoba",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "11",
+      "sales": "7",
+      "pump": "165.7"
+    },
+    {
+      "name": "Ontario",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "10",
+      "sales": "8",
+      "pump": "171.2"
+    },
+    {
+      "name": "Quebec",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "14",
+      "sales": "10",
+      "pump": "175.8"
+    },
+    {
+      "name": "New Brunswick",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "12",
+      "sales": "10",
+      "pump": "173.4"
+    },
+    {
+      "name": "Nova Scotia",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "12",
+      "sales": "10",
+      "pump": "174.9"
+    },
+    {
+      "name": "PEI",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "12",
+      "sales": "10",
+      "pump": "176.1"
+    },
+    {
+      "name": "Newfoundland",
+      "base": "72",
+      "carbon": "14",
+      "fuel_tax": "13",
+      "sales": "10",
+      "pump": "182.5"
+    }
+  ],
+  "ifta": [
+    {
+      "name": "British Columbia",
+      "pump": "178.5",
+      "tax_portion": "42",
+      "per_100l": "$42.00"
+    },
+    {
+      "name": "Alberta",
+      "pump": "158.9",
+      "tax_portion": "23",
+      "per_100l": "$23.00"
+    },
+    {
+      "name": "Saskatchewan",
+      "pump": "162.3",
+      "tax_portion": "30",
+      "per_100l": "$30.00"
+    },
+    {
+      "name": "Manitoba",
+      "pump": "165.7",
+      "tax_portion": "32",
+      "per_100l": "$32.00"
+    },
+    {
+      "name": "Ontario",
+      "pump": "171.2",
+      "tax_portion": "32",
+      "per_100l": "$32.00"
+    },
+    {
+      "name": "Quebec",
+      "pump": "175.8",
+      "tax_portion": "38",
+      "per_100l": "$38.00"
+    },
+    {
+      "name": "New Brunswick",
+      "pump": "173.4",
+      "tax_portion": "36",
+      "per_100l": "$36.00"
+    },
+    {
+      "name": "Nova Scotia",
+      "pump": "174.9",
+      "tax_portion": "36",
+      "per_100l": "$36.00"
+    },
+    {
+      "name": "PEI",
+      "pump": "176.1",
+      "tax_portion": "36",
+      "per_100l": "$36.00"
+    },
+    {
+      "name": "Newfoundland",
+      "pump": "182.5",
+      "tax_portion": "37",
+      "per_100l": "$37.00"
+    }
+  ],
   "updated_at": "07:15 EDT"
 }

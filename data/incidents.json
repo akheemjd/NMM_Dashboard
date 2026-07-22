@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-277942",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at ALLEN ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.72979731,
+      "lng": -79.44886732,
+      "start": 1784681040,
+      "end": null,
+      "updated": 1784681040
+    },
+    {
+      "id": "ON-277941",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Emergency Roadwork on HWY 11 Northbound  at LINE 9, Oro Medonte. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 44.493198209,
+      "lng": -79.504785862,
+      "start": 1784680380,
+      "end": null,
+      "updated": 1784680380
+    },
+    {
       "id": "ON-277939",
       "province": "ON",
       "highway": "QEW",
@@ -767,42 +799,10 @@
       "start": 1785117600,
       "end": 1785582000,
       "updated": 1784636580
-    },
-    {
-      "id": "ON-277487",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 400 Southbound  between MAJOR MACKENZIE DRIVE and BASS PRO MILLS DRIVE, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.846935,
-      "lng": -79.54861,
-      "start": 1785114000,
-      "end": 1785574800,
-      "updated": 1784636520
-    },
-    {
-      "id": "ON-277541",
-      "province": "ON",
-      "highway": "HWY 420",
-      "direction": "Westbound",
-      "description": "Nightly Maintenance on HWY 420 Westbound  between DRUMMOND ROAD and DORCHESTER ROAD/LUNDY'S LANE, Niagara Falls. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.096115,
-      "lng": -79.098,
-      "start": 1784847600,
-      "end": 1785409200,
-      "updated": 1784636340
     }
   ],
   "total": 50,
-  "updated": "2026-07-22T00:20:41.427788+00:00",
+  "updated": "2026-07-22T00:50:51.785647+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
