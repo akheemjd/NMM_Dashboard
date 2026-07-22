@@ -58,7 +58,11 @@
 
   data.forEach(function(it, i) {
     if (!it.lat || !it.lng) return;
-    var popup = '<b>' + it.title + '</b><br>' + it.location + '<br><span style="color:#E5484D">' + it.value + '</span>';
+    var popup = '<b>' + it.title + '</b>' +
+      '<br>' + it.location + ' &middot; ' + (it.date||'') +
+      '<br><span style="color:#E5484D;font-weight:600;">' + it.value + '</span>' +
+      (it.method ? '<br><small>Method: ' + it.method + '</small>' : '') +
+      (it.prevention ? '<br><small style="color:var(--green);">Prevention: ' + it.prevention + '</small>' : '');
     if (it.source_url) {
       popup += '<br><a href="' + it.source_url + '" target="_blank" rel="noopener" style="font-size:0.75rem;">Source →</a>';
     }
