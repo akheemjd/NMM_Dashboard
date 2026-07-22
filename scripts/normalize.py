@@ -36,14 +36,24 @@ calc_distances = raw_dist.get("distances", {})
 d_vals = [(c, provs.get(c,{}).get("diesel",0)) for c in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]]
 d_sorted = sorted(d_vals, key=lambda x: x[1])
 fuel_top = []
-for code, price in d_sorted[:6]:
-    fuel_top.append({
+provinces_data = []
+names = {"BC":"British Columbia","AB":"Alberta","SK":"Saskatchewan","MB":"Manitoba","ON":"Ontario","QC":"Quebec","NB":"New Brunswick","NS":"Nova Scotia","PE":"PEI","NL":"Newfoundland"}
+for i, (code, price) in enumerate(d_sorted):
+    diff = price - fuel_nat
+    vs_val = f"{diff:+.1f}" if diff else "0.0"
+    vs_cls = "lo" if diff < 0 else "hi" if diff > 0 else ""
+    row_cls = "lo" if i == 0 else "hi" if i == len(d_sorted)-1 else ""
+    provinces_data.append({
         "code": code,
-        "name": {"BC":"British Columbia","AB":"Alberta","SK":"Saskatchewan","MB":"Manitoba","ON":"Ontario","QC":"Quebec","NB":"New Brunswick","NS":"Nova Scotia","PE":"PEI","NL":"Newfoundland"}[code],
+        "name": names[code],
         "price": f"{price:.1f}",
         "change": "—",
         "change_class": "flat",
+        "vs_national": vs_val,
+        "vs_class": vs_cls,
+        "rowclass": row_cls,
     })
+fuel_top = provinces_data[:6]  # home page shows top 6
 
 fuel = {
     "national_diesel": f"{fuel_nat:.1f}",
@@ -241,6 +251,7 @@ home = {
     "updated_at": ts,
     "border": border,
     "fuel": fuel,
+    "provinces": provinces_data,
     "fx": fx,
     "incidents": incidents,
     "border_rows": border_rows,
@@ -255,7 +266,7 @@ home = {
 }
 
 write("home.norm", home)
-write("fuel.norm", {"fuel": fuel, "updated_at": ts})
+write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts})
 write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts, "captured_at": ts})
 write("fx.norm", {"fx": fx, "updated_at": ts})
 # Build raw incidents JSON array for the map
