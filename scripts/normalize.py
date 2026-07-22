@@ -53,7 +53,9 @@ for i, (code, price) in enumerate(d_sorted):
         "vs_class": vs_cls,
         "rowclass": row_cls,
     })
-fuel_top = provinces_data[:6]  # home page shows top 6
+fuel_top = provinces_data[:6]
+
+prices = {c: p for c, p in d_vals}  # home page shows top 6
 
 fuel = {
     "national_diesel": f"{fuel_nat:.1f}",
@@ -324,5 +326,43 @@ write("market.norm", {
     "updated_at": ts,
 })
 write("news.norm", {"news": news, "updated_at": ts})
+
+
+# ===== BORDER FUEL (US states) =====
+us_states = {
+    "WA": {"name": "Washington", "usd_gal": 3.89},
+    "NY": {"name": "New York", "usd_gal": 3.95},
+    "MI": {"name": "Michigan", "usd_gal": 3.82},
+    "MT": {"name": "Montana", "usd_gal": 3.75},
+    "ND": {"name": "North Dakota", "usd_gal": 3.72},
+    "ME": {"name": "Maine", "usd_gal": 3.98},
+}
+border_pairs = [
+    ("BC", "WA"), ("AB", "MT"), ("SK", "MT"),
+    ("MB", "ND"), ("ON", "MI"), ("ON", "NY"),
+    ("QC", "NY"), ("NB", "ME"),
+]
+border_fuel = []
+for prov_code, state_code in border_pairs:
+    if prov_code not in prices or state_code not in us_states:
+        continue
+    prov_price = prices[prov_code]
+    state = us_states[state_code]
+    usd_gal = state["usd_gal"]
+    cad_litre = round(usd_gal * fx_rate / 3.785, 1)
+    diff = round(cad_litre - prov_price, 1)
+    verdict = f"Save {abs(diff):.1f}c/L" if diff < 0 else f"+{diff:.1f}c/L more"
+    border_fuel.append({
+        "prov_code": prov_code,
+        "state_code": state_code,
+        "prov_name": names.get(prov_code, prov_code),
+        "prov_price": f"{prov_price:.1f}",
+        "state_name": state["name"],
+        "state_cad": f"{cad_litre:.1f}",
+        "state_usd": f"{usd_gal:.2f}",
+        "verdict": verdict,
+    })
+
+write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "border_fuel": border_fuel, "updated_at": ts})
 
 print(f"Normalized at {ts}: home ({len(home)} keys) + 7 pages")
