@@ -415,6 +415,6 @@ for code in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]:
         "per_100l": f"${per_100l:.2f}",
     })
 
-write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "border_fuel": border_fuel, "tax": tax, "ifta": ifta, "updated_at": ts})
+write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "border_fuel": border_fuel, "tax": tax, "ifta": ifta, "updated_at": ts})
 
 print(f"Normalized at {ts}: home ({len(home)} keys) + 7 pages")
