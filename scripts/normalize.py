@@ -134,8 +134,9 @@ fx = {
 
 # ===== INCIDENTS =====
 incidents_raw = raw_inc.get("incidents", [])
+incidents_active = [i for i in incidents_raw if i.get("event_type","") in ("accidentsandincidents","closures")]
 incidents_list = []
-for i in incidents_raw[:2]:  # home shows 2
+for i in incidents_active[:2]:  # home shows 2 collisions/closures
     sev = i.get("severity","")
     cls = "heavy" if sev == "closed" else "mod" if sev == "heavy" else "ok"
     incidents_list.append({
@@ -148,9 +149,9 @@ for i in incidents_raw[:2]:  # home shows 2
 
 incidents = {
     "none": len(incidents_list) == 0,
-    "active_count": len(raw_inc.get("incidents", [])),
-    "gauge_class": "good" if len(incidents_list) == 0 else "warn",
-    "status_line": "monitored corridors clear" if len(incidents_list) == 0 else f"{len(incidents_list)} active",
+    "active_count": len(incidents_active),
+    "gauge_class": "good" if len(incidents_active) == 0 else "warn",
+    "status_line": "corridors clear" if len(incidents_active) == 0 else f"{len(incidents_active)} collisions + closures",
     "incidents": incidents_list,
 }
 
