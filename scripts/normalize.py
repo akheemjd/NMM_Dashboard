@@ -363,6 +363,54 @@ for prov_code, state_code in border_pairs:
         "verdict": verdict,
     })
 
-write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "border_fuel": border_fuel, "updated_at": ts})
+# fuel.norm written at end with tax+ifta
+
+
+# ===== TAX BREAKDOWN (approximate) =====
+tax = []
+# Approximate tax breakdown per province (base + carbon + fuel_tax + sales = pump)
+prov_tax_approx = {
+    "BC":  (72, 18, 15, 9),
+    "AB":  (72, 14, 9,  0),
+    "SK":  (72, 14, 10, 6),
+    "MB":  (72, 14, 11, 7),
+    "ON":  (72, 14, 10, 8),
+    "QC":  (72, 14, 14, 10),
+    "NB":  (72, 14, 12, 10),
+    "NS":  (72, 14, 12, 10),
+    "PE":  (72, 14, 12, 10),
+    "NL":  (72, 14, 13, 10),
+}
+for code in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]:
+    if code not in prices or code not in prov_tax_approx:
+        continue
+    base, carbon, fuel_tax, sales = prov_tax_approx[code]
+    pump = prices[code]
+    tax.append({
+        "name": names[code],
+        "base": str(base),
+        "carbon": str(carbon),
+        "fuel_tax": str(fuel_tax),
+        "sales": str(sales),
+        "pump": f"{pump:.1f}",
+    })
+
+# ===== IFTA REFERENCE =====
+ifta = []
+for code in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]:
+    if code not in prices or code not in prov_tax_approx:
+        continue
+    base, carbon, fuel_tax, sales = prov_tax_approx[code]
+    pump = prices[code]
+    tax_portion = carbon + fuel_tax + sales
+    per_100l = round(tax_portion * 100 / 100, 1)
+    ifta.append({
+        "name": names[code],
+        "pump": f"{pump:.1f}",
+        "tax_portion": f"{tax_portion}",
+        "per_100l": f"${per_100l:.2f}",
+    })
+
+write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "border_fuel": border_fuel, "tax": tax, "ifta": ifta, "updated_at": ts})
 
 print(f"Normalized at {ts}: home ({len(home)} keys) + 7 pages")
