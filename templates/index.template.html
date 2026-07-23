@@ -28,14 +28,14 @@
     <div class="gauge {{border.gauge_class}}" data-href="/border-wait-times/" role="link" tabindex="0" aria-label="Border crossings"><div class="gl">Border · busiest</div><div class="gv">{{border.heavy_count}} <small>Heavy</small></div><div class="gs">{{border.moderate_count}} moderate · {{border.closed_count}} closed</div></div>
     <div class="gauge" data-href="/fuel-prices/" role="link" tabindex="0" aria-label="Fuel prices"><div class="gl">Diesel · national</div><div class="odo" data-value="{{fuel.national_diesel}}" data-unit="c/L"></div><div class="gs">{{fuel.change_7d}} / 7d</div></div>
     <div class="gauge" data-href="/exchange-rate/" role="link" tabindex="0" aria-label="Exchange rate"><div class="gl">USD / CAD</div><div class="gv">{{fx.usd_cad}}</div><div class="gs">{{fx.direction}} · {{fx.change}}</div></div>
-    <div class="gauge {{incidents.gauge_class}}" data-href="/road-incidents/" role="link" tabindex="0" aria-label="Road incidents"><div class="gl">Collisions &amp; closures</div><div class="gv">{{incidents.active_count}}</div><div class="gs">{{incidents.status_line}}</div></div>
+    <div class="gauge {{incidents.gauge_class}}" data-href="/road-incidents/" role="link" tabindex="0" aria-label="Road incidents"><div class="gl">Collisions &amp; closures</div><div class="gv">{{incidents.active_count}}</div><div class="gs">monitored corridors</div></div>
   </div></section>
 
   <!--OPTIONAL:sponsor_page-->
   <div class="sp"><span class="t">Dashboard presented by</span><div><div class="n">{{sponsor_page.name}}</div><div class="l">{{sponsor_page.line}}</div></div><a class="c" href="{{sponsor_page.url}}">Learn more →</a></div>
   <!--/OPTIONAL:sponsor_page-->
 
-  <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">collisions &amp; closures · monitored corridors</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
+  <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">collisions &amp; closures on freight corridors</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
   <div class="panel">
     <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors</div><!--/IF:incidents.none-->
     <div class="news">
