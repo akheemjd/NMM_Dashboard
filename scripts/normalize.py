@@ -328,9 +328,29 @@ for i in raw_inc.get("incidents", [])[:50]:
         "source_url": "",
     })
 
+# Future scheduled roadwork
+coming_roadwork = []
+for i in raw_sorted:
+    if i.get("event_type") != "roadwork": continue
+    start = i.get("start", 0)
+    if not isinstance(start, (int,float)) or start < now_ts: continue
+    from datetime import datetime as dt2
+    end = i.get("end", 0)
+    start_str = dt2.utcfromtimestamp(start).strftime("%b %d")
+    end_str = dt2.utcfromtimestamp(end).strftime("%b %d") if end and isinstance(end,(int,float)) else ""
+    hwy = i.get("highway", "")
+    if isinstance(hwy, dict): hwy = hwy.get("name", "")
+    coming_roadwork.append({
+        "road": str(hwy),
+        "what": i.get("description","")[:80],
+        "when": start_str + (" – " + end_str if end_str else ""),
+        "lanes": i.get("lanes", ""),
+    })
+
 write("incidents.norm", {
     "incidents": incidents,
     "incidents_json": json.dumps(inc_json),
+    "coming_roadwork": coming_roadwork,
     "updated_at": ts,
 })
 write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
