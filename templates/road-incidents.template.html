@@ -36,7 +36,7 @@
     <div class="mod"><span class="tab"></span><h2>Scheduled work</h2><span class="k">coming closures &amp; construction</span><span class="rule"></span></div>
   <div class="panel" style="max-height:500px;overflow-y:auto;"><table class="tbl">
     <thead><tr><th>Highway</th><th>Work</th><th class="r">When</th><th class="r">Lanes</th></tr></thead>
-    <!--LOOP:coming_roadwork--><tr><td class="code">{{road}}</td><td>{{what}}</td><td class="r">{{when}}</td><td class="r mono">{{lanes}}</td></tr><!--/LOOP:coming_roadwork-->
+    <!--LOOP:coming_roadwork--><tr class="inc-row" data-road="{{road}}" data-what="{{what}}" data-clearance="{{when}}" data-lanes="{{lanes}}" data-severity="Roadwork" data-severity-class="mod" data-direction="" data-event="Scheduled roadwork" data-closed="" data-end-time="" style="cursor:pointer;" onclick="showIncDetail(this);"><td class="code">{{road}}</td><td>{{what}}</td><td class="r">{{when}}</td><td class="r mono">{{lanes}}</td></tr><!--/LOOP:coming_roadwork-->
   </table></div>
 
   <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canadian%20road%20closures%20for%20trucks&url=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/road-incidents/')">Copy link</button></div>
