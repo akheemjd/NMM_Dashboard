@@ -136,7 +136,7 @@ fx = {
 # Already sorted above
 import time
 now_ts = int(time.time())
-raw_sorted = sorted(raw_inc.get("incidents", []), key=lambda x: x.get("start", 0) or 0, reverse=True)
+raw_sorted = sorted(raw_inc.get("incidents", []), key=lambda x: int(x.get("start", 0)) if isinstance(x.get("start"), (int,float)) else 0, reverse=True)
 incidents_raw = raw_sorted
 incidents_active = [i for i in incidents_raw if i.get("event_type","") in ("accidentsandincidents","closures")]
 incidents_list = []
