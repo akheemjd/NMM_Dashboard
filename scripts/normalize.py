@@ -152,10 +152,10 @@ for i in incidents_active[:2]:  # home shows 2 collisions/closures
     })
 
 incidents = {
-    "none": len(incidents_list) == 0,
+"none": len(incidents_list) == 0,
     "active_count": len(incidents_active),
     "gauge_class": "good" if len(incidents_active) == 0 else "warn",
-    "status_line": "corridors clear" if len(incidents_active) == 0 else f"{len(incidents_active)} collisions + closures",
+    "status_line": "corridors clear" if len(incidents_active) == 0 else f"{len(incidents_active)} active",
     "incidents": incidents_list,
 }
 
