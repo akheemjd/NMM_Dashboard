@@ -313,7 +313,7 @@ for i in raw_inc.get("incidents", [])[:50]:
     inc_json.append({
         "lat": i.get("lat", 0),
         "lng": i.get("lng", 0),
-        "road": i.get("highway", ""),
+        "road": i.get("highway", "") if isinstance(i.get("highway"), str) else str(i.get("highway", {}).get("name", "")),
         "direction": i.get("direction", ""),
         "severity_class": sc,
         "severity_label": i.get("severity", "Moderate").title(),
