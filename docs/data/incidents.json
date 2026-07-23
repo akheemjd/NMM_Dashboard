@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-278335",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at HWY 410, Mississauga. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.6393672,
+      "lng": -79.661377,
+      "start": 1784770260,
+      "end": null,
+      "updated": 1784770260
+    },
+    {
       "id": "drivebc.ca/RIDE-100487",
       "province": "BC",
       "highway": {
@@ -788,26 +804,10 @@
       "start": 1785123000,
       "end": 1785486600,
       "updated": 1784725860
-    },
-    {
-      "id": "ON-278051",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 11 Southbound  between SEVERN RIVER BRIDGE/WEST BRANCH, Severn and HWY 400, Oro Medonte. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.762962,
-      "lng": -79.33468,
-      "start": 1786320000,
-      "end": 1786791600,
-      "updated": 1784725800
     }
   ],
   "total": 50,
-  "updated": "2026-07-23T01:28:09.011045+00:00",
+  "updated": "2026-07-23T01:58:15.979226+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

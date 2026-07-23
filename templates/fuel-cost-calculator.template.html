@@ -97,7 +97,7 @@ function calcAll(){
   // Per km table
   var rates=[55,45,38,35,30,25], html='';
   rates.forEach(function(r){
-    var perkm=(r*p/100).toFixed(1), per100=(r*p).toFixed(0), per1k=(r*p*10).toFixed(0);
+    var perkm=(r*p/100).toFixed(1), per100=(r*p/100).toFixed(2), per1k=(r*p*10/100).toFixed(2);
     html+='<tr><td>'+r+' L/100km</td><td class="r mono">'+perkm+'c</td><td class="r mono">$'+per100+'</td><td class="r mono">$'+per1k+'</td></tr>';
   });
   document.getElementById('perkm-table').innerHTML=html;
