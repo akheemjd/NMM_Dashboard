@@ -316,7 +316,6 @@ for i in raw_inc.get("incidents", [])[:50]:
         "road": i.get("highway", "") if isinstance(i.get("highway"), str) else str(i.get("highway", {}).get("name", "")),
         "direction": i.get("direction", ""),
         "severity_class": sc,
-        raw_sev = i.get("severity", "").lower()
     "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
         "what": i.get("description", "")[:80],
         "event_type": i.get("event_type", "").replace("accidentsandincidents","Collision").replace("roadwork","Roadwork").title(),
