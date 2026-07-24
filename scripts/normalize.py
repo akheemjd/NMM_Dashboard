@@ -313,10 +313,10 @@ for i in raw_inc.get("incidents", [])[:50]:
     inc_json.append({
         "lat": i.get("lat", 0),
         "lng": i.get("lng", 0),
-        "road": i.get("highway", "") if isinstance(i.get("highway"), str) else str(i.get("highway", {}).get("name", "")),
+        "road": i.get("highway", ""),
         "direction": i.get("direction", ""),
         "severity_class": sc,
-    "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
+        "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
         "what": i.get("description", "")[:80],
         "event_type": i.get("event_type", "").replace("accidentsandincidents","Collision").replace("roadwork","Roadwork").title(),
         "lanes": i.get("lanes", ""),
@@ -328,36 +328,9 @@ for i in raw_inc.get("incidents", [])[:50]:
         "source_url": "",
     })
 
-# Future scheduled roadwork
-coming_roadwork = []
-for i in raw_sorted:
-    if i.get("event_type") != "roadwork": continue
-    start = i.get("start", 0)
-    if not isinstance(start, (int,float)) or start < now_ts: continue
-    from datetime import datetime as dt2
-    end = i.get("end", 0)
-    start_str = dt2.utcfromtimestamp(start).strftime("%b %d")
-    end_str = dt2.utcfromtimestamp(end).strftime("%b %d") if end and isinstance(end,(int,float)) else ""
-    hwy = i.get("highway", "")
-    if isinstance(hwy, dict): hwy = hwy.get("name", "")
-    coming_roadwork.append({
-        "road": str(hwy),
-        desc = i.get("description","")
-    # Strip leading highway/direction info since road column already shows it
-    desc = desc.replace("Continuous Construction on ", "").replace("Nightly Construction on ", "").replace("Daily Construction on ", "").replace("Highway Maintenance on ", "").replace("Bridge maintenance. ", "")
-    # Remove highway name from start
-    words = desc.split()
-    if words and words[0].startswith(("HWY","Hwy","Highway")):
-        desc = " ".join(words[2:]) if len(words) > 2 else desc
-    "what": (desc[:55] + "..." if len(desc) > 55 else desc),
-        "when": start_str + (" – " + end_str if end_str else ""),
-        "lanes": i.get("lanes", ""),
-    })
-
 write("incidents.norm", {
     "incidents": incidents,
     "incidents_json": json.dumps(inc_json),
-    "coming_roadwork": coming_roadwork,
     "updated_at": ts,
 })
 write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
