@@ -313,7 +313,7 @@ for i in raw_inc.get("incidents", [])[:50]:
     inc_json.append({
         "lat": i.get("lat", 0),
         "lng": i.get("lng", 0),
-        "road": i.get("highway", ""),
+        "road": i.get("highway","") if isinstance(i.get("highway"), str) else str(i.get("highway",{}).get("name","")),
         "direction": i.get("direction", ""),
         "severity_class": sc,
         "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
@@ -328,9 +328,27 @@ for i in raw_inc.get("incidents", [])[:50]:
         "source_url": "",
     })
 
+coming_roadwork = []
+for i in raw_sorted:
+    start = i.get("start", 0) or 0
+    if not isinstance(start,(int,float)) or start < now_ts: continue
+    end = i.get("end", 0)
+    from datetime import datetime as dt2
+    start_str = dt2.utcfromtimestamp(int(start)).strftime("%b %d")
+    end_str = dt2.utcfromtimestamp(int(end)).strftime("%b %d") if end and isinstance(end,(int,float)) else ""
+    hwy = i.get("highway","")
+    if isinstance(hwy, dict): hwy = hwy.get("name","")
+    coming_roadwork.append({
+        "road": str(hwy),
+        "what": i.get("description","")[:55],
+        "when": start_str + (" - " + end_str if end_str else ""),
+        "lanes": i.get("lanes",""),
+    })
+
 write("incidents.norm", {
     "incidents": incidents,
     "incidents_json": json.dumps(inc_json),
+    "coming_roadwork": coming_roadwork,
     "updated_at": ts,
 })
 write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
