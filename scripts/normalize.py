@@ -145,14 +145,7 @@ for i in incidents_active[:2]:  # home shows 2 collisions/closures
     cls = "heavy" if sev == "closed" else "mod" if sev == "heavy" else "ok"
     incidents_list.append({
         "road": i.get("highway","") or i.get("description","")[:40],
-        desc = i.get("description","")
-    # Strip leading highway/direction info since road column already shows it
-    desc = desc.replace("Continuous Construction on ", "").replace("Nightly Construction on ", "").replace("Daily Construction on ", "").replace("Highway Maintenance on ", "").replace("Bridge maintenance. ", "")
-    # Remove highway name from start
-    words = desc.split()
-    if words and words[0].startswith(("HWY","Hwy","Highway")):
-        desc = " ".join(words[2:]) if len(words) > 2 else desc
-    "what": (desc[:55] + "..." if len(desc) > 55 else desc),
+        "what": i.get("description","")[:80],
         "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
         "severity_class": cls,
         "url": "/road-incidents/",
