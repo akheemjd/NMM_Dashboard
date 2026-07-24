@@ -146,7 +146,7 @@ for i in incidents_active[:2]:  # home shows 2 collisions/closures
     incidents_list.append({
         "road": i.get("highway","") or i.get("description","")[:40],
         "what": i.get("description","")[:80],
-        "severity_label": sev or "Moderate",
+        "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
         "severity_class": cls,
         "url": "/road-incidents/",
     })
