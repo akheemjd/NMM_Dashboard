@@ -317,13 +317,7 @@ for i in raw_inc.get("incidents", [])[:50]:
         "direction": i.get("direction", ""),
         "severity_class": sc,
         raw_sev = i.get("severity", "").lower()
-    evt = i.get("event_type", "")
-    if evt == "closures": sev_label = "Closed"
-    elif raw_sev in ("closed", "closure"): sev_label = "Closed"
-    elif evt == "accidentsandincidents": sev_label = "Collision"
-    elif raw_sev in ("heavy", "major", "high"): sev_label = "Major"
-    else: sev_label = "Minor"
-    "severity_label": sev_label,
+    "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
         "what": i.get("description", "")[:80],
         "event_type": i.get("event_type", "").replace("accidentsandincidents","Collision").replace("roadwork","Roadwork").title(),
         "lanes": i.get("lanes", ""),
