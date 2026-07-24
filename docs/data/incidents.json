@@ -1,20 +1,25 @@
 {
   "incidents": [
     {
-      "id": "ON-279074",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Southbound",
-      "description": "Collision on HWY 410 Southbound RAMP at 401, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/DBC-92707",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Clark Rd near Kamloops",
+        "to": "Jamieson Creek FSR near Kamloops",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Westsyde Rd, in both directions. Bridge construction between Clark Rd and Jamieson Creek FSR near Kamloops. Until Fri Aug 7 at 6:00 PM PDT. From 6:00 PM to 6:00 PM PDT daily. Detour in effect. Single lane alternating traffic. Expect minor delays. In effect 24 hours a day Bridge replacement. Detour in effect over temporary bridge. Watch for crew and equipment working.\nMaximum height clearance 4.8 meters Through Detour only. Last updated Fri Jul 24 at 2:56 PM PDT. (DBC-92707)",
+      "event_type": "construction",
+      "severity": "MINOR",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.6391343,
-      "lng": -79.66155132,
-      "start": 1784929080,
-      "end": null,
-      "updated": 1784929080
+      "lanes": "",
+      "lat": 50.883151,
+      "lng": -120.275039,
+      "start": "2026-06-12T09:33:14-07:00",
+      "end": "",
+      "updated": "2026-07-24T14:56:30-07:00"
     },
     {
       "id": "ON-279073",
@@ -175,22 +180,6 @@
       "start": 1784921040,
       "end": null,
       "updated": 1784921040
-    },
-    {
-      "id": "ON-278977",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MEADOWVALE ROAD, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.798897,
-      "lng": -79.180681,
-      "start": 1784919300,
-      "end": null,
-      "updated": 1784919300
     },
     {
       "id": "ON-278962",
@@ -799,10 +788,26 @@
       "start": 1785117600,
       "end": 1785229200,
       "updated": 1784834220
+    },
+    {
+      "id": "ON-278601",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Engineering Investigation on HWY 401 Eastbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.629856,
+      "lng": -79.6843,
+      "start": 1785124740,
+      "end": 1785229200,
+      "updated": 1784834100
     }
   ],
   "total": 50,
-  "updated": "2026-07-24T21:44:52.189090+00:00",
+  "updated": "2026-07-24T22:15:00.087173+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
