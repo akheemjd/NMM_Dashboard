@@ -1,50 +1,47 @@
-/* The Bulletin — shared JS. Flat numbers, no odometer. */
-(function(){
-  'use strict';
-  // Hero number display — plain text, no animation
-  document.querySelectorAll('.odo').forEach(function(el){
-    var val = el.getAttribute('data-value');
-    if (val) {
-      var unit = el.getAttribute('data-unit') || '';
-      el.innerHTML = val + (unit ? ' <small>' + unit + '</small>' : '');
+/* Northern Mile Dashboard — shared behaviour for every page. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* Split-flap odometer: builds flap tiles from a single data-value, rolls on load.
+     Markup: <div class="odo" data-value="171.9" data-unit="c/L"></div>  */
+  document.querySelectorAll('.odo[data-value]').forEach(function (odo) {
+    var val = (odo.getAttribute('data-value') || '').trim();
+    var unit = odo.getAttribute('data-unit') || '';
+    odo.innerHTML = '';
+    val.split('').forEach(function (ch) {
+      var s = document.createElement('span');
+      if (ch === '.' || ch === ',') { s.className = 'sep'; s.textContent = ch; }
+      else { s.className = 'd'; s.textContent = ch; }
+      odo.appendChild(s);
+    });
+    if (unit) { var u = document.createElement('span'); u.className = 'u'; u.textContent = unit; odo.appendChild(u); }
+    if (!reduce) {
+      odo.querySelectorAll('.d').forEach(function (f) {
+        var target = f.textContent, ticks = 6 + Math.floor(Math.random() * 5), i = 0;
+        var iv = setInterval(function () {
+          if (i >= ticks) { f.textContent = target; clearInterval(iv); return; }
+          f.textContent = Math.floor(Math.random() * 10); i++;
+        }, 45);
+      });
     }
   });
 
-  // Map helpers
-  window.initMap = function(id, data, tileUrl, attribution){
-    if (!window.L || !document.getElementById(id)) return;
-    var map = L.map(id, { scrollWheelZoom: true, zoomControl: false }).setView([52, -90], 4);
-    L.tileLayer(tileUrl || 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: attribution || '&copy; OpenStreetMap',
-      maxZoom: 18
-    }).addTo(map);
-    L.control.zoom({ position: 'bottomright' }).addTo(map);
-    return map;
-  };
-
-  window.addPins = function(map, data, popupFn){
-    if (!data || !data.length) return;
-    var bounds = [];
-    data.forEach(function(it){
-      if (it.lat && it.lng) {
-        var m = L.marker([it.lat, it.lng]).addTo(map);
-        if (popupFn) m.bindPopup(popupFn(it));
-        bounds.push([it.lat, it.lng]);
-      }
-    });
-    if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
-  };
-
-  // Detail panel
-  window.showDetail = function(content){
-    var panel = document.getElementById('inc-detail');
-    if (!panel) {
-      panel = document.createElement('div');
-      panel.id = 'inc-detail';
-      panel.className = 'detail-panel';
-      document.body.appendChild(panel);
-    }
-    panel.innerHTML = content;
-    panel.style.display = 'block';
-  };
+  /* Clickable rows/cards/gauges: any element with data-href navigates (mouse + Enter). */
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a')) return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
 })();
+
+function copyLink(btn, url) {
+  navigator.clipboard.writeText(url || location.href).then(function () {
+    var t = btn.textContent; btn.textContent = 'Copied';
+    setTimeout(function () { btn.textContent = t; }, 1500);
+  });
+}
