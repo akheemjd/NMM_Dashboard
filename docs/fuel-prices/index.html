@@ -1,95 +1,121 @@
 <!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Live diesel prices for all 10 Canadian provinces, US border state comparison, tax breakdown, and IFTA reference. Updated every 30 minutes.">
 <title>Canadian Diesel Prices by Province — Live | Northern Mile</title>
-<meta name="description" content="Live diesel prices for all ten Canadian provinces, updated every 30 minutes. Tax breakdown, US border-state comparison, IFTA reference and routing savings for truckers.">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:title" content="Canadian Diesel Prices by Province — Live">
+<meta property="og:description" content="Diesel prices for all provinces, US border fuel comparison, tax breakdown, and IFTA reference. Free. No signup.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/fuel-prices/">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-prices/">
-<meta property="og:type" content="website"><meta property="og:title" content="Canadian Diesel Prices — Live by Province | Northern Mile"><meta property="og:description" content="Diesel across 10 provinces + US border states. Tax breakdown, IFTA, routing savings."><meta property="og:image" content="https://dashboard.northernmilemedia.com/og-fuel.jpg"><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="07:15 EDT">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
+<meta name="robots" content="index,follow">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel Prices","item":"https://dashboard.northernmilemedia.com/fuel-prices/"}]},
-{"@type":"Dataset","name":"Canadian Diesel Prices by Province","description":"Live diesel prices for all ten Canadian provinces, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"07:15 EDT"},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Why is diesel different across provinces?","acceptedAnswer":{"@type":"Answer","text":"Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies; Alberta has lower levies and no provincial sales tax."}},
-{"@type":"Question","name":"Where should I fuel up to save money?","acceptedAnswer":{"@type":"Answer","text":"Alberta is cheapest, then Saskatchewan and Manitoba. Crossing into the US, diesel is usually cheaper once converted to Canadian cents per litre."}},
-{"@type":"Question","name":"How often do prices update?","acceptedAnswer":{"@type":"Answer","text":"Every 30 minutes from public fuel surveys across all ten provinces and US border states."}}]}
-]}
-</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
 </head><body>
+<div class="hd"><div class="wrap"><a href="/"><img src="/assets/logo.svg" alt=""></a><b>Northern Mile</b></div></div>
+<div class="nav"><div class="wrap">
+  <a href="/">Home</a>
+  <a href="/fuel-prices/">Fuel</a>
+  <a href="/border-wait-times/">Border</a>
+  <a href="/road-incidents/">Incidents</a>
+  <a href="/cargo-theft/">Theft</a>
+  <a href="/market-pulse/">Market</a>
+  <a href="/industry-news/">News</a>
+  <a href="/fuel-cost-calculator/">Calc</a>
+</div></div>
+<div class="wrap">
 
-<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
-<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/" class="on">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
+<div class="breadcrumb"><a href="/">Home</a> / Fuel Prices</div>
+<div class="mod" style="border-bottom:none"><span class="tab">&#x25A0;</span><h2>Diesel prices</h2><span class="k">current &middot; c/L &middot; updated 07:15 EDT</span></div>
 
-<main class="wrap">
-  <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Prices</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Diesel · all ten provinces</span><span>Updated 07:15 EDT · refresh 30 min</span></div>
+<div class="split" style="margin-bottom:16px">
+  <div class="card"><div class="el">National average</div><div class="odo" data-value="" data-unit="c/L"></div><div class="es"> change / 7d</div></div>
+  <div class="card"><div class="el">Spread</div><div class="ev"></div><div class="es"> &ndash; </div></div>
+</div>
 
-  <section class="cluster">
-    <div>
-      <div class="readlabel"><span class="tick">▸</span> National average · Diesel</div>
-      <div class="odo hero-odo" data-value="171.9" data-unit="c/L"></div>
-      <div class="trend"><span class="b">7-DAY</span> — &nbsp; <span class="b">30-DAY</span> </div>
-    </div>
-    <div class="clus-gauges">
-      <div class="g lo"><div class="gv">158.9</div><div class="gl">Cheapest · AB</div></div>
-      <div class="g hi"><div class="gv">182.5</div><div class="gl">Highest · NL</div></div>
-      <div class="g"><div class="gv">23.6</div><div class="gl">Spread c/L</div></div>
-    </div>
-  </section>
+<div class="mod" style="border-bottom:none"><h2>Diesel by province</h2><span class="k">c/L &middot; &Delta; since last</span></div>
+<table class="tbl">
+  <thead><tr><th>Prov</th><th>Region</th><th class="r">Price</th><th class="r">Change</th><th class="r">vs Nat</th></tr></thead>
+  <tr class="lo"><td class="code">AB</td><td>Alberta</td><td class="r">158.9</td><td class="r mono flat">—</td><td class="r mono lo">-13.0</td></tr><tr class=""><td class="code">SK</td><td>Saskatchewan</td><td class="r">162.3</td><td class="r mono flat">—</td><td class="r mono lo">-9.6</td></tr><tr class=""><td class="code">MB</td><td>Manitoba</td><td class="r">165.7</td><td class="r mono flat">—</td><td class="r mono lo">-6.2</td></tr><tr class=""><td class="code">ON</td><td>Ontario</td><td class="r">171.2</td><td class="r mono flat">—</td><td class="r mono lo">-0.7</td></tr><tr class=""><td class="code">NB</td><td>New Brunswick</td><td class="r">173.4</td><td class="r mono flat">—</td><td class="r mono hi">+1.5</td></tr><tr class=""><td class="code">NS</td><td>Nova Scotia</td><td class="r">174.9</td><td class="r mono flat">—</td><td class="r mono hi">+3.0</td></tr><tr class=""><td class="code">QC</td><td>Quebec</td><td class="r">175.8</td><td class="r mono flat">—</td><td class="r mono hi">+3.9</td></tr><tr class=""><td class="code">PE</td><td>PEI</td><td class="r">176.1</td><td class="r mono flat">—</td><td class="r mono hi">+4.2</td></tr><tr class=""><td class="code">BC</td><td>British Columbia</td><td class="r">178.5</td><td class="r mono flat">—</td><td class="r mono hi">+6.6</td></tr><tr class="hi"><td class="code">NL</td><td>Newfoundland</td><td class="r">182.5</td><td class="r mono flat">—</td><td class="r mono hi">+10.6</td></tr>
+</table>
 
-  
+<div class="mod"><h2>Fill before you cross</h2><span class="k">US border states &middot; CAD equiv</span></div>
+<table class="tbl">
+  <thead><tr><th></th><th class="r">CAD c/L</th><th>US state</th><th class="r">State (CAD)</th><th class="r">Verdict</th></tr></thead>
+  <tr><td class="code">BC &rarr; WA</td><td class="r">178.5</td><td>Washington</td><td class="r mono">1.4</td><td class="r mono" style="color:var(--yellow)">Save 177.1c/L</td></tr><tr><td class="code">AB &rarr; MT</td><td class="r">158.9</td><td>Montana</td><td class="r mono">1.4</td><td class="r mono" style="color:var(--yellow)">Save 157.5c/L</td></tr><tr><td class="code">SK &rarr; MT</td><td class="r">162.3</td><td>Montana</td><td class="r mono">1.4</td><td class="r mono" style="color:var(--yellow)">Save 160.9c/L</td></tr><tr><td class="code">MB &rarr; ND</td><td class="r">165.7</td><td>North Dakota</td><td class="r mono">1.4</td><td class="r mono" style="color:var(--yellow)">Save 164.3c/L</td></tr><tr><td class="code">ON &rarr; MI</td><td class="r">171.2</td><td>Michigan</td><td class="r mono">1.4</td><td class="r mono" style="color:var(--yellow)">Save 169.8c/L</td></tr><tr><td class="code">ON &rarr; NY</td><td class="r">171.2</td><td>New York</td><td class="r mono">1.5</td><td class="r mono" style="color:var(--yellow)">Save 169.7c/L</td></tr><tr><td class="code">QC &rarr; NY</td><td class="r">175.8</td><td>New York</td><td class="r mono">1.5</td><td class="r mono" style="color:var(--yellow)">Save 174.3c/L</td></tr><tr><td class="code">NB &rarr; ME</td><td class="r">173.4</td><td>Maine</td><td class="r mono">1.5</td><td class="r mono" style="color:var(--yellow)">Save 171.9c/L</td></tr>
+</table>
 
-  <div class="mod"><span class="tab"></span><h2>Diesel by province</h2><span class="k">c/L · Δ since last</span><span class="rule"></span></div>
-  <div class="scroll"><table class="tbl">
-    <thead><tr><th>Prov</th><th>Region</th><th class="r">Price</th><th class="r">Change</th><th class="r">vs Nat</th></tr></thead>
-    <tr class="lo"><td class="code">AB</td><td>Alberta</td><td class="r"><span class="px">158.9</span></td><td class="r mono flat">—</td><td class="r mono lo">-13.0</td></tr><tr class=""><td class="code">SK</td><td>Saskatchewan</td><td class="r"><span class="px">162.3</span></td><td class="r mono flat">—</td><td class="r mono lo">-9.6</td></tr><tr class=""><td class="code">MB</td><td>Manitoba</td><td class="r"><span class="px">165.7</span></td><td class="r mono flat">—</td><td class="r mono lo">-6.2</td></tr><tr class=""><td class="code">ON</td><td>Ontario</td><td class="r"><span class="px">171.2</span></td><td class="r mono flat">—</td><td class="r mono lo">-0.7</td></tr><tr class=""><td class="code">NB</td><td>New Brunswick</td><td class="r"><span class="px">173.4</span></td><td class="r mono flat">—</td><td class="r mono hi">+1.5</td></tr><tr class=""><td class="code">NS</td><td>Nova Scotia</td><td class="r"><span class="px">174.9</span></td><td class="r mono flat">—</td><td class="r mono hi">+3.0</td></tr><tr class=""><td class="code">QC</td><td>Quebec</td><td class="r"><span class="px">175.8</span></td><td class="r mono flat">—</td><td class="r mono hi">+3.9</td></tr><tr class=""><td class="code">PE</td><td>PEI</td><td class="r"><span class="px">176.1</span></td><td class="r mono flat">—</td><td class="r mono hi">+4.2</td></tr><tr class=""><td class="code">BC</td><td>British Columbia</td><td class="r"><span class="px">178.5</span></td><td class="r mono flat">—</td><td class="r mono hi">+6.6</td></tr><tr class="hi"><td class="code">NL</td><td>Newfoundland</td><td class="r"><span class="px">182.5</span></td><td class="r mono flat">—</td><td class="r mono hi">+10.6</td></tr>
-  </table></div>
-  <p class="note">Arrows show change vs. previous 30-min update. Public fuel surveys, all ten provinces.</p>
+<div class="mod"><h2>Diesel tax breakdown</h2><span class="k">estimated split &middot; c/L</span></div>
+<table class="tbl">
+  <thead><tr><th>Province</th><th class="r">Base</th><th class="r">Carbon</th><th class="r">Fuel tax</th><th class="r">Sales</th><th class="r">Pump</th></tr></thead>
+  <tr><td class="code">British Columbia</td><td class="r mono">72</td><td class="r mono">18</td><td class="r mono">15</td><td class="r mono">9</td><td class="r mono" style="color:var(--yellow)">178.5</td></tr><tr><td class="code">Alberta</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">9</td><td class="r mono">0</td><td class="r mono" style="color:var(--yellow)">158.9</td></tr><tr><td class="code">Saskatchewan</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">10</td><td class="r mono">6</td><td class="r mono" style="color:var(--yellow)">162.3</td></tr><tr><td class="code">Manitoba</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">11</td><td class="r mono">7</td><td class="r mono" style="color:var(--yellow)">165.7</td></tr><tr><td class="code">Ontario</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">10</td><td class="r mono">8</td><td class="r mono" style="color:var(--yellow)">171.2</td></tr><tr><td class="code">Quebec</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">14</td><td class="r mono">10</td><td class="r mono" style="color:var(--yellow)">175.8</td></tr><tr><td class="code">New Brunswick</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">12</td><td class="r mono">10</td><td class="r mono" style="color:var(--yellow)">173.4</td></tr><tr><td class="code">Nova Scotia</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">12</td><td class="r mono">10</td><td class="r mono" style="color:var(--yellow)">174.9</td></tr><tr><td class="code">PEI</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">12</td><td class="r mono">10</td><td class="r mono" style="color:var(--yellow)">176.1</td></tr><tr><td class="code">Newfoundland</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">13</td><td class="r mono">10</td><td class="r mono" style="color:var(--yellow)">182.5</td></tr>
+</table>
 
-  <div class="mod"><span class="tab"></span><h2>Fill before you cross</h2><span class="k">US border states · CAD equiv</span><span class="rule"></span></div>
-  <p class="intro">US diesel priced per gallon in USD, converted to Canadian cents/litre at 1.3977 so it lines up with the province next door.</p>
-  <div class="xb">
-  <div class="xr"><div class="pair">BC → WA</div><div class="cols"><div class="side"><div class="l">British Columbia</div><div class="p">178.5</div></div><div class="side"><div class="l">Washington</div><div class="p">1.4</div><div class="g">3.89/gal</div></div></div><div class="v">Save 177.1c/L</div></div><div class="xr"><div class="pair">AB → MT</div><div class="cols"><div class="side"><div class="l">Alberta</div><div class="p">158.9</div></div><div class="side"><div class="l">Montana</div><div class="p">1.4</div><div class="g">3.75/gal</div></div></div><div class="v">Save 157.5c/L</div></div><div class="xr"><div class="pair">SK → MT</div><div class="cols"><div class="side"><div class="l">Saskatchewan</div><div class="p">162.3</div></div><div class="side"><div class="l">Montana</div><div class="p">1.4</div><div class="g">3.75/gal</div></div></div><div class="v">Save 160.9c/L</div></div><div class="xr"><div class="pair">MB → ND</div><div class="cols"><div class="side"><div class="l">Manitoba</div><div class="p">165.7</div></div><div class="side"><div class="l">North Dakota</div><div class="p">1.4</div><div class="g">3.72/gal</div></div></div><div class="v">Save 164.3c/L</div></div><div class="xr"><div class="pair">ON → MI</div><div class="cols"><div class="side"><div class="l">Ontario</div><div class="p">171.2</div></div><div class="side"><div class="l">Michigan</div><div class="p">1.4</div><div class="g">3.82/gal</div></div></div><div class="v">Save 169.8c/L</div></div><div class="xr"><div class="pair">ON → NY</div><div class="cols"><div class="side"><div class="l">Ontario</div><div class="p">171.2</div></div><div class="side"><div class="l">New York</div><div class="p">1.5</div><div class="g">3.95/gal</div></div></div><div class="v">Save 169.7c/L</div></div><div class="xr"><div class="pair">QC → NY</div><div class="cols"><div class="side"><div class="l">Quebec</div><div class="p">175.8</div></div><div class="side"><div class="l">New York</div><div class="p">1.5</div><div class="g">3.95/gal</div></div></div><div class="v">Save 174.3c/L</div></div><div class="xr"><div class="pair">NB → ME</div><div class="cols"><div class="side"><div class="l">New Brunswick</div><div class="p">173.4</div></div><div class="side"><div class="l">Maine</div><div class="p">1.5</div><div class="g">3.98/gal</div></div></div><div class="v">Save 171.9c/L</div></div>
-  </div>
-  <p class="note">USD/gal × 1.3977 FX ÷ 3.785 L. State prices refresh 30 min. FX: Bank of Canada.</p>
+<div class="mod"><h2>IFTA diesel reference</h2><span class="k">current quarter</span></div>
+<table class="tbl">
+  <thead><tr><th>Jurisdiction</th><th class="r">Pump c/L</th><th class="r">Tax portion</th><th class="r">Per 100L</th></tr></thead>
+  <tr><td class="code">British Columbia</td><td class="r mono">178.5</td><td class="r mono">42</td><td class="r mono" style="color:var(--yellow)">$42.00</td></tr><tr><td class="code">Alberta</td><td class="r mono">158.9</td><td class="r mono">23</td><td class="r mono" style="color:var(--yellow)">$23.00</td></tr><tr><td class="code">Saskatchewan</td><td class="r mono">162.3</td><td class="r mono">30</td><td class="r mono" style="color:var(--yellow)">$30.00</td></tr><tr><td class="code">Manitoba</td><td class="r mono">165.7</td><td class="r mono">32</td><td class="r mono" style="color:var(--yellow)">$32.00</td></tr><tr><td class="code">Ontario</td><td class="r mono">171.2</td><td class="r mono">32</td><td class="r mono" style="color:var(--yellow)">$32.00</td></tr><tr><td class="code">Quebec</td><td class="r mono">175.8</td><td class="r mono">38</td><td class="r mono" style="color:var(--yellow)">$38.00</td></tr><tr><td class="code">New Brunswick</td><td class="r mono">173.4</td><td class="r mono">36</td><td class="r mono" style="color:var(--yellow)">$36.00</td></tr><tr><td class="code">Nova Scotia</td><td class="r mono">174.9</td><td class="r mono">36</td><td class="r mono" style="color:var(--yellow)">$36.00</td></tr><tr><td class="code">PEI</td><td class="r mono">176.1</td><td class="r mono">36</td><td class="r mono" style="color:var(--yellow)">$36.00</td></tr><tr><td class="code">Newfoundland</td><td class="r mono">182.5</td><td class="r mono">37</td><td class="r mono" style="color:var(--yellow)">$37.00</td></tr>
+</table>
 
-  <div class="km"><span class="post">KM 172</span><span class="rule"></span></div>
+  <div class="cta"><div class="e">The Northern Mile Brief</div><div class="b">Fuel, border and market shifts &mdash; every Wednesday, 6am. Free.</div><div class="s"><a href="https://northernmilemedia.com" style="color:var(--yellow)">Get it in your inbox &rarr;</a></div></div>
+  <div class="ft">Data from public sources &middot; Sponsors never influence the data &middot; Informational use only &middot; &copy; 2026 Northern Mile Media<br><a href="/sitemap.xml">Sitemap</a></div>
+</div>
+<script>
+/* The Bulletin — shared JS. Flat numbers, no odometer. */
+(function(){
+  'use strict';
+  // Hero number display — plain text, no animation
+  document.querySelectorAll('.odo').forEach(function(el){
+    var val = el.getAttribute('data-value');
+    if (val) {
+      var unit = el.getAttribute('data-unit') || '';
+      el.innerHTML = val + (unit ? ' <small>' + unit + '</small>' : '');
+    }
+  });
 
-  <div class="mod"><span class="tab"></span><h2>Diesel tax breakdown</h2><span class="k">estimated split · c/L</span><span class="rule"></span></div>
-  <div class="scroll"><table class="tbl">
-    <thead><tr><th>Province</th><th class="r">Base</th><th class="r">Carbon</th><th class="r">Fuel tax</th><th class="r">Sales</th><th class="r">Pump</th></tr></thead>
-    <tr><td>British Columbia</td><td class="r mono">72</td><td class="r mono">18</td><td class="r mono">15</td><td class="r mono">9</td><td class="r"><span class="px">178.5</span></td></tr><tr><td>Alberta</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">9</td><td class="r mono">0</td><td class="r"><span class="px">158.9</span></td></tr><tr><td>Saskatchewan</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">10</td><td class="r mono">6</td><td class="r"><span class="px">162.3</span></td></tr><tr><td>Manitoba</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">11</td><td class="r mono">7</td><td class="r"><span class="px">165.7</span></td></tr><tr><td>Ontario</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">10</td><td class="r mono">8</td><td class="r"><span class="px">171.2</span></td></tr><tr><td>Quebec</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">14</td><td class="r mono">10</td><td class="r"><span class="px">175.8</span></td></tr><tr><td>New Brunswick</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">12</td><td class="r mono">10</td><td class="r"><span class="px">173.4</span></td></tr><tr><td>Nova Scotia</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">12</td><td class="r mono">10</td><td class="r"><span class="px">174.9</span></td></tr><tr><td>PEI</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">12</td><td class="r mono">10</td><td class="r"><span class="px">176.1</span></td></tr><tr><td>Newfoundland</td><td class="r mono">72</td><td class="r mono">14</td><td class="r mono">13</td><td class="r mono">10</td><td class="r"><span class="px">182.5</span></td></tr>
-  </table></div>
-  <p class="note">Approximate — exact components wired from public rate tables. Base = wholesale + federal excise.</p>
+  // Map helpers
+  window.initMap = function(id, data, tileUrl, attribution){
+    if (!window.L || !document.getElementById(id)) return;
+    var map = L.map(id, { scrollWheelZoom: true, zoomControl: false }).setView([52, -90], 4);
+    L.tileLayer(tileUrl || 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: attribution || '&copy; OpenStreetMap',
+      maxZoom: 18
+    }).addTo(map);
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+    return map;
+  };
 
-  <div class="mod"><span class="tab"></span><h2>IFTA diesel reference</h2><span class="k">current quarter</span><span class="rule"></span></div>
-  <div class="scroll"><table class="tbl">
-    <thead><tr><th>Jurisdiction</th><th class="r">Pump c/L</th><th class="r">Tax portion</th><th class="r">Per 100L</th></tr></thead>
-    <tr><td>British Columbia</td><td class="r mono">178.5</td><td class="r mono">42</td><td class="r mono">$42.00</td></tr><tr><td>Alberta</td><td class="r mono">158.9</td><td class="r mono">23</td><td class="r mono">$23.00</td></tr><tr><td>Saskatchewan</td><td class="r mono">162.3</td><td class="r mono">30</td><td class="r mono">$30.00</td></tr><tr><td>Manitoba</td><td class="r mono">165.7</td><td class="r mono">32</td><td class="r mono">$32.00</td></tr><tr><td>Ontario</td><td class="r mono">171.2</td><td class="r mono">32</td><td class="r mono">$32.00</td></tr><tr><td>Quebec</td><td class="r mono">175.8</td><td class="r mono">38</td><td class="r mono">$38.00</td></tr><tr><td>New Brunswick</td><td class="r mono">173.4</td><td class="r mono">36</td><td class="r mono">$36.00</td></tr><tr><td>Nova Scotia</td><td class="r mono">174.9</td><td class="r mono">36</td><td class="r mono">$36.00</td></tr><tr><td>PEI</td><td class="r mono">176.1</td><td class="r mono">36</td><td class="r mono">$36.00</td></tr><tr><td>Newfoundland</td><td class="r mono">182.5</td><td class="r mono">37</td><td class="r mono">$37.00</td></tr>
-  </table></div>
-  <p class="note"><a href="/fuel-cost-calculator/">Open the fuel cost calculator →</a> to estimate quarterly IFTA spend by route.</p>
+  window.addPins = function(map, data, popupFn){
+    if (!data || !data.length) return;
+    var bounds = [];
+    data.forEach(function(it){
+      if (it.lat && it.lng) {
+        var m = L.marker([it.lat, it.lng]).addTo(map);
+        if (popupFn) m.bindPopup(popupFn(it));
+        bounds.push([it.lat, it.lng]);
+      }
+    });
+    if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
+  };
 
-  <div class="mod"><span class="tab"></span><h2>Questions drivers ask</h2><span class="rule"></span></div>
-  <div class="faq"><dl>
-    <dt>Why is diesel different across provinces?</dt><dd>Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies; Alberta has lower levies and no provincial sales tax. The AB–NL spread is 23.6c/L.</dd>
-    <dt>Where should I fuel up to save money?</dt><dd>Alberta is cheapest, then Saskatchewan and Manitoba — fill before leaving them. Crossing the border, US diesel is usually cheaper once converted to Canadian cents/litre. See the border comparison above.</dd>
-    <dt>How often do prices update?</dt><dd>Every 30 minutes, from public fuel surveys across all ten provinces and the US border states.</dd>
-    <dt>Do these prices include carbon tax?</dt><dd>Yes — all federal and provincial taxes are included in the pump price shown.</dd>
-  </dl></div>
+  // Detail panel
+  window.showDetail = function(content){
+    var panel = document.getElementById('inc-detail');
+    if (!panel) {
+      panel = document.createElement('div');
+      panel.id = 'inc-detail';
+      panel.className = 'detail-panel';
+      document.body.appendChild(panel);
+    }
+    panel.innerHTML = content;
+    panel.style.display = 'block';
+  };
+})();
 
-  <div class="share"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/fuel-prices/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canadian%20diesel%20prices%20by%20province&url=https://dashboard.northernmilemedia.com/fuel-prices/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/fuel-prices/')">Copy link</button></div>
-
-  <div class="cta"><div class="e">The Northern Mile Brief</div><div class="b">Fuel, border and market shifts — every Wednesday, 6am.</div><div class="s"><a href="https://northernmilemedia.com">Get it in your inbox →</a></div></div>
-
-  <div class="related"><a href="/exchange-rate/">CAD/USD →</a><a href="/border-wait-times/">Border waits →</a><a href="/road-incidents/">Road incidents →</a><a href="/cargo-theft/">Cargo theft →</a><a href="/market-pulse/">Market →</a><a href="/fuel-cost-calculator/">Calculator →</a></div>
-</main>
-
-<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-<script src="/assets/app.js"></script>
+</script>
 </body></html>

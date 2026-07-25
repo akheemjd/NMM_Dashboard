@@ -1,139 +1,93 @@
 <!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canadian Road Incidents &amp; Closures for Trucks — Live Map | Northern Mile</title>
-<meta name="description" content="Live map of major road closures and collisions on Canadian freight corridors, updated every 30 minutes. Click any incident for road, severity, clearance and detour.">
-<meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/road-incidents/">
-<meta property="og:type" content="website"><meta property="og:title" content="Canadian Road Incidents — Live Map | Northern Mile"><meta property="og:description" content="Live closures and collisions on Canadian freight corridors. Updated every 30 min."><meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="{{updated_at}}">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta name="description" content="Live map of road incidents, collisions, and closures on Canadian highways. Active incidents and scheduled construction. Updated every 30 minutes.">
+<title>Canadian Road Incidents & Collisions — Live Map | Northern Mile</title>
+<meta property="og:title" content="Canadian Road Incidents & Collisions — Live Map">
+<meta property="og:description" content="Collisions, closures, and scheduled roadwork on Canadian freight corridors. Free. Updated every 30 minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/road-incidents/">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/road-incidents/">
+<meta name="robots" content="index,follow">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/styles.css">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Road Incidents","item":"https://dashboard.northernmilemedia.com/road-incidents/"}]}
-]}
-</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
 </head><body>
+<div class="hd"><div class="wrap"><a href="/"><img src="/assets/logo.svg" alt=""></a><b>Northern Mile</b></div></div>
+<div class="nav"><div class="wrap">
+  <a href="/">Home</a>
+  <a href="/fuel-prices/">Fuel</a>
+  <a href="/border-wait-times/">Border</a>
+  <a href="/road-incidents/">Incidents</a>
+  <a href="/cargo-theft/">Theft</a>
+  <a href="/market-pulse/">Market</a>
+  <a href="/industry-news/">News</a>
+  <a href="/fuel-cost-calculator/">Calc</a>
+</div></div>
+<div class="wrap">
 
-<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
-<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/" class="on">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
+<div class="breadcrumb"><a href="/">Home</a> / Road Incidents</div>
+<div class="mod" style="border-bottom:none"><span class="tab">&#x25A0;</span><h2>Active incidents</h2><span class="k">collisions &amp; closures &middot; {{updated_at}}</span></div>
+<div class="split" style="margin-bottom:16px">
+  <div class="panel" id="incList" style="max-height:500px;overflow-y:auto"></div>
+  <div class="map-container" id="inc-map"></div>
+</div>
 
-<main class="wrap">
-  <div class="breadcrumb"><a href="/">Dashboard</a> › Road Incidents</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Closures + collisions · freight corridors</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
+<div class="mod"><h2>Scheduled work</h2><span class="k">coming closures &amp; construction</span></div>
+<div class="panel" style="max-height:500px;overflow-y:auto"><table class="tbl">
+  <thead><tr><th>Highway</th><th>Work</th><th class="r">When</th><th class="r">Lanes</th></tr></thead>
+  <!--LOOP:coming_roadwork--><tr class="inc-row" data-road="{{road}}" data-what="{{what}}" data-clearance="{{when}}" data-lanes="{{lanes}}" data-severity="Roadwork" data-direction="" data-event="Scheduled roadwork" style="cursor:pointer" onclick="showIncDetail(this)"><td class="code">{{road}}</td><td>{{what}}</td><td class="r">{{when}}</td><td class="r mono">{{lanes}}</td></tr><!--/LOOP:coming_roadwork-->
+</table></div>
 
-  <div class="mod"><span class="tab"></span><h2>Incident map</h2><span class="k">click a pin or row for detail</span><span class="rule"></span></div>
-  <div id="map"></div>
-
-  <!--OPTIONAL:sponsor_incidents--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_incidents.name}}</div><div class="l">{{sponsor_incidents.line}}</div></div><a class="c" href="{{sponsor_incidents.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_incidents-->
-
-  <div class="mod"><span class="tab"></span><h2>Active incidents</h2><span class="rule"></span></div>
-  <div class="panel" id="incList" style="max-height:500px;overflow-y:auto;"></div>
-
-    <div class="mod"><span class="tab"></span><h2>Scheduled work</h2><span class="k">coming closures &amp; construction</span><span class="rule"></span></div>
-  <div class="panel" style="max-height:500px;overflow-y:auto;"><table class="tbl">
-    <thead><tr><th>Highway</th><th>Work</th><th class="r">When</th><th class="r">Lanes</th></tr></thead>
-    <!--LOOP:coming_roadwork--><tr class="inc-row" data-road="{{road}}" data-what="{{what}}" data-clearance="{{when}}" data-lanes="{{lanes}}" data-severity="Roadwork" data-severity-class="mod" data-direction="" data-event="Scheduled roadwork" data-closed="" data-end-time="" style="cursor:pointer;" onclick="showIncDetail(this);"><td class="code">{{road}}</td><td>{{what}}</td><td class="r">{{when}}</td><td class="r mono">{{lanes}}</td></tr><!--/LOOP:coming_roadwork-->
-  </table></div>
-
-  <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canadian%20road%20closures%20for%20trucks&url=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/road-incidents/')">Copy link</button></div>
-
-  <div class="related"><a href="/border-wait-times/">Border waits →</a><a href="/fuel-prices/">Fuel prices →</a><a href="/cargo-theft/">Cargo theft →</a></div>
-
-  <div class="cta" style="margin:32px 0;"><div class="e">The Northern Mile Brief</div><div class="b">Fuel, border and market shifts — every Wednesday, 6am. Free.</div><div class="s"><a href="https://northernmilemedia.com">Get it in your inbox →</a></div></div>
-</main>
-
-<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-
-<!-- HERMES: write the incident array below. Each item:
-     {road,direction,severity,severity_label,severity_class,what,clearance,detour,source_url,lat,lng}
-     Leave [] for no incidents; the map + list show a clean "corridors clear" state. -->
-<script>window.INCIDENTS = {{incidents_json}};</script>
-
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="/assets/app.js"></script>
 <script>
+window.INCIDENTS = {{incidents_json}};
 (function(){
-  var data = window.INCIDENTS || [];
-  var map = L.map('map',{scrollWheelZoom:true}).setView([56.13,-106.35],4);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:19
-  }).addTo(map);
-  var list = document.getElementById('incList');
-  if(!data.length){
-    list.innerHTML = '<div class="empty"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked {{updated_at}}</div>';
-    return;
+  var map = window.initMap('inc-map', window.INCIDENTS);
+  if (map) {
+    window.addPins(map, window.INCIDENTS, function(it){
+      var lines = ['<b>'+it.road+'</b>'];
+      if (it.direction) lines[0] += ' &middot; '+it.direction;
+      if (it.what) lines.push(it.what.replace(/'/g,''));
+      if (it.event_type) lines.push('<span class="pill minor">'+it.event_type+'</span>');
+      if (it.lanes) lines.push('<b>Lanes:</b> '+it.lanes);
+      if (it.clearance) lines.push('<b>Clears:</b> '+it.clearance);
+      return lines.join('<br>');
+    });
   }
-  var markers = [];
-  data.forEach(function(it, idx){
-    var color = it.severity_class === 'closed' ? '#E5484D' : '#F5C518';
-    var m = L.circleMarker([it.lat, it.lng], {radius:8,color:color,fillColor:color,fillOpacity:.85,weight:2}).addTo(map);
-    m.bindPopup(
-      '<b>'+it.road+' '+it.direction+'</b>'+
-      '<br>'+it.what+
-      (it.event_type?'<br><small>'+it.event_type+'</small>':'')+
-      (it.lanes?'<br><small>Lanes: '+it.lanes+'</small>':'')+
-      (it.closed?'<br><span style="color:#E5484D;font-weight:600;">CLOSED</span>':'')+
-      (it.clearance?'<br><small>Started: '+it.clearance+'</small>':'')+
-      (it.end_time?'<br><small>Until: '+it.end_time+'</small>':'')+
-      (it.source_url?'<br><a href="'+it.source_url+'" target="_blank" rel="noopener">Source →</a>':'')
-    );
-    markers.push(m);
-    var row = document.createElement('div');
-    row.className = 'inc';
-    row.setAttribute('tabindex','0');
-    row.setAttribute('role','button');
-    row.setAttribute('data-road', it.road||'');
-    row.setAttribute('data-direction', it.direction||'');
-    row.setAttribute('data-what', it.what||'');
-    row.setAttribute('data-severity', it.severity_label||'');
-    row.setAttribute('data-severity-class', it.severity_class||'');
-    row.setAttribute('data-event', it.event_type||'');
-    row.setAttribute('data-lanes', it.lanes||'');
-    row.setAttribute('data-closed', it.closed||'');
-    row.setAttribute('data-clearance', it.clearance||'');
-    row.setAttribute('data-end-time', it.end_time||'');
-    row.setAttribute('data-lat', it.lat||'');
-    row.setAttribute('data-lng', it.lng||'');
-    row.innerHTML = '<div class="h">'+it.road+' · '+it.direction+' <span class="pill '+it.severity_class+'" style="float:right">'+it.severity_label+'</span></div><div class="m">'+it.what+(it.clearance?' · clears '+it.clearance:'')+'</div>';
-    row.addEventListener('click', function(){ showIncDetail(row); map.flyTo([it.lat, it.lng], 10, {duration:.6}); });
-    row.addEventListener('keydown', function(e){ if(e.key==='Enter') showIncDetail(row); });
-    list.appendChild(row);
-  });
-  var group = L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.2));
-
+  // Build list
+  var listEl = document.getElementById('incList');
+  if (listEl && window.INCIDENTS.length) {
+    var html = '<table class="tbl">';
+    window.INCIDENTS.forEach(function(it,i){
+      html += '<tr class="inc-row" data-idx="'+i+'" data-road="'+it.road+'" data-what="'+it.what+'" data-direction="'+(it.direction||'')+'" data-severity="'+it.severity_label+'" data-lanes="'+(it.lanes||'')+'" data-event="'+(it.event_type||'')+'" data-clearance="'+it.clearance+'" style="cursor:pointer" onclick="showIncDetail(this)"><td class="code">'+it.road+'</td><td>'+it.what+'</td><td class="r"><span class="pill '+(it.severity_class||'minor')+'">'+it.severity_label+'</span></td></tr>';
+    });
+    html += '</table>';
+    listEl.innerHTML = html;
+  }
   // Detail panel
-  var incDetail = document.createElement('div');
-  incDetail.id = 'inc-detail';
-  incDetail.style.cssText = 'display:none;position:fixed;top:0;right:0;width:380px;max-width:100vw;height:100vh;background:var(--surface-1);border-left:1px solid var(--border);z-index:9999;overflow-y:auto;padding:24px;font-size:0.875rem;';
-  document.body.appendChild(incDetail);
-
-  window.showIncDetail = function(row) {
-    var closed = row.getAttribute('data-closed');
+  window.showIncDetail = function(row){
     var parts = [];
-    parts.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;"><h2 style="margin:0;font-size:1rem;">Incident details</h2><button class="inc-close-btn" style="background:none;border:none;color:var(--ink-3);cursor:pointer;font-size:1.25rem;">&times;</button></div>');
-    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Highway</div><div style="font-weight:600;color:var(--ink);font-size:1rem;">'+row.getAttribute('data-road')+' '+row.getAttribute('data-direction')+'</div></div>');
-    if (closed) parts.push('<div style="margin-bottom:16px;background:rgba(229,72,77,.12);border-left:2px solid var(--red);padding:12px;"><div style="font-size:0.75rem;font-weight:700;color:var(--red);">ROAD CLOSED</div></div>');
-    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Description</div><div style="color:var(--ink-2);">'+row.getAttribute('data-what')+'</div></div>');
-    var sev = '<span class="pill '+row.getAttribute('data-severity-class')+'">'+row.getAttribute('data-severity')+'</span>';
-    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Severity</div><div>'+sev+'</div></div>');
-    var eventType = row.getAttribute('data-event');
-    if (eventType) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Type</div><div>'+eventType+'</div></div>');
-    var lanes = row.getAttribute('data-lanes');
-    if (lanes) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Lanes</div><div>'+lanes+'</div></div>');
-    var clearance = row.getAttribute('data-clearance');
-    if (clearance) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Started</div><div>'+clearance+'</div></div>');
-    var endTime = row.getAttribute('data-end-time');
-    if (endTime) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Until</div><div>'+endTime+'</div></div>');
-    incDetail.innerHTML = parts.join('');
-    incDetail.style.display = 'block';
-    var closeBtn = incDetail.querySelector('.inc-close-btn');
-    if (closeBtn) closeBtn.onclick = function() { incDetail.style.display = 'none'; };
+    var road = row.getAttribute('data-road') || '';
+    var dir = row.getAttribute('data-direction');
+    parts.push('<h3>'+road+(dir ? ' &middot; '+dir : '')+'</h3>');
+    if (row.getAttribute('data-severity') === 'Closed') parts.push('<div class="closed-banner">ROAD CLOSED</div>');
+    parts.push('<div class="row"><div class="label">Description</div><div>'+row.getAttribute('data-what')+'</div></div>');
+    parts.push('<div class="row"><div class="label">Severity</div><div><span class="pill '+row.getAttribute('data-severity-class')+'">'+row.getAttribute('data-severity')+'</span></div></div>');
+    if (row.getAttribute('data-event')) parts.push('<div class="row"><div class="label">Type</div><div>'+row.getAttribute('data-event')+'</div></div>');
+    if (row.getAttribute('data-lanes')) parts.push('<div class="row"><div class="label">Lanes</div><div>'+row.getAttribute('data-lanes')+'</div></div>');
+    if (row.getAttribute('data-clearance')) parts.push('<div class="row"><div class="label">Clears</div><div>'+row.getAttribute('data-clearance')+'</div></div>');
+    window.showDetail(parts.join('')+'<button class="close-btn" onclick="document.getElementById(\'inc-detail\').style.display=\'none\'">&times;</button>');
   };
 })();
 </script>
+
+  <div class="cta"><div class="e">The Northern Mile Brief</div><div class="b">Fuel, border and market shifts &mdash; every Wednesday, 6am. Free.</div><div class="s"><a href="https://northernmilemedia.com" style="color:var(--yellow)">Get it in your inbox &rarr;</a></div></div>
+  <div class="ft">Data from public sources &middot; Sponsors never influence the data &middot; Informational use only &middot; &copy; 2026 Northern Mile Media<br><a href="/sitemap.xml">Sitemap</a></div>
+</div>
 </body></html>
