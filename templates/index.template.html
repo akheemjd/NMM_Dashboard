@@ -40,7 +40,7 @@
   <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">collisions &amp; closures on freight corridors</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
   <div class="panel">
     <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors</div><!--/IF:incidents.none-->
-    <div class="news">
+    <div class="panel"><div class="news">
     <!--LOOP:incidents.incidents--><a href="{{url}}">{{what}}</a><!--/LOOP:incidents.incidents-->
     <a href="/road-incidents/" style="color:var(--ink-3);">View all incidents →</a>
     </div>
@@ -72,8 +72,8 @@
 
   <div class="mod"><span class="tab"></span><h2>Cargo theft</h2><span class="k">reference · last 90 days</span><span class="rule"></span><a class="full" href="/cargo-theft/">All incidents →</a></div>
   <div class="panel">
-  <!--LOOP:theft--><div class="tft" data-href="{{url}}" role="link" tabindex="0"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{meta}}</div></div><!--/LOOP:theft-->
-    <a href="/cargo-theft/" style="display:block;padding:8px 10px;color:var(--ink-3);font-size:0.75rem;border-top:1px solid var(--border);">More →</a>
+  <div class="panel"><!--LOOP:theft--><div class="tft" data-href="{{url}}" role="link" tabindex="0"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{meta}}</div></div><!--/LOOP:theft-->
+    </div><a href="/cargo-theft/" style="display:block;padding:8px 10px;color:var(--ink-3);font-size:0.75rem;border-top:1px solid var(--border);">More →</a>
   </div>
 
   <div class="mod"><span class="tab"></span><h2>Industry news</h2><span class="k">curated headlines</span><span class="rule"></span><a class="full" href="/industry-news/">All headlines →</a></div>
