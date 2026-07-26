@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-279551",
+      "id": "ON-279558",
       "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound  at HWY 6 NORTH, Burlington. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 417 Westbound  between PINECREST AVE / GREENBANK RD (IC 129) and HWY 416, Ottawa. 1 Left Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.29308284,
-      "lng": -79.8919664,
-      "start": 1785087900,
-      "end": null,
-      "updated": 1785087900
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.34951,
+      "lng": -75.78987,
+      "start": 1785200400,
+      "end": 1785319200,
+      "updated": 1785089940
+    },
+    {
+      "id": "ON-279553",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 417 Westbound Off-ramp at PALLADIUM DR (IC 142), Ottawa. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.29347,
+      "lng": -75.93772,
+      "start": 1785463200,
+      "end": 1785492000,
+      "updated": 1785088020
     },
     {
       "id": "ON-279549",
@@ -788,26 +804,10 @@
       "start": 1785153600,
       "end": 1785272400,
       "updated": 1784835180
-    },
-    {
-      "id": "ON-279040",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Continuous Construction on QEW Toronto bound  between DORVAL DRIVE and TRAFALGAR ROAD, Oakville. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.446465,
-      "lng": -79.70016,
-      "start": 1785286800,
-      "end": 1785315600,
-      "updated": 1784834820
     }
   ],
   "total": 50,
-  "updated": "2026-07-26T17:50:43.707646+00:00",
+  "updated": "2026-07-26T21:22:44.198141+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
