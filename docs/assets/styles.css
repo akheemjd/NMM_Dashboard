@@ -75,8 +75,8 @@ a{color:var(--green);text-decoration:none}
 @media(max-width:760px){.cluster{grid-template-columns:1fr;gap:24px;padding:24px 20px}}
 
 /* module header */
-.mod{display:flex;align-items:center;gap:12px;margin:36px 0 30px}
-.mod .tab{width:22px;height:14px;background:var(--green);border-radius:2px;flex-shrink:0;box-shadow:0 0 0 3px rgba(30,158,102,.12)}
+.mod{display:flex;align-items:center;gap:12px;margin:36px 0 30px;padding-bottom:4px}
+.mod .tab{width:22px;height:14px;background:var(--green);border-radius:2px;flex-shrink:0;box-shadow:0 0 0 3px rgba(30,158,102,.12);margin-bottom:4px}
 .mod h2{font-family:'Saira',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--ink)}
 .mod .k{font-family:'IBM Plex Mono',monospace;font-size:.5625rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 .mod .rule{flex:1;height:1px;background:var(--hair)}
