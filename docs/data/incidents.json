@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-279532",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at CENTENNIAL PKWY, Hamilton. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.24573725,
+      "lng": -79.75690966,
+      "start": 1785085140,
+      "end": null,
+      "updated": 1785102120
+    },
+    {
       "id": "ON-279558",
       "province": "ON",
       "highway": "HWY 417",
@@ -79,22 +95,6 @@
       "start": 1785205800,
       "end": 1785319200,
       "updated": 1785085680
-    },
-    {
-      "id": "ON-279532",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at CENTENNIAL PKWY, Hamilton. Left shoulder and 3 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 3 left lanes closed",
-      "lat": 43.24573725,
-      "lng": -79.75690966,
-      "start": 1785085140,
-      "end": null,
-      "updated": 1785085140
     },
     {
       "id": "ON-279361",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-07-26T21:22:44.198141+00:00",
+  "updated": "2026-07-26T21:52:53.669997+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
