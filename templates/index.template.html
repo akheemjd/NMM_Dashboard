@@ -41,8 +41,8 @@
   <div class="panel">
     <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors</div><!--/IF:incidents.none-->
     <div class="panel"><div class="news">
-    <!--LOOP:incidents.incidents--><a href="{{url}}">{{what}}</a><!--/LOOP:incidents.incidents-->
-    <a href="/road-incidents/" style="color:var(--ink-3);">View all incidents →</a>
+    <div class="panel"><!--LOOP:incidents.incidents--><a href="{{url}}" style="display:block;padding:11px 16px;border-bottom:1px solid var(--hair);color:var(--ink-2);font-size:.8125rem">{{what}}</a><!--/LOOP:incidents.incidents-->
+    <a href="/road-incidents/" style="display:block;padding:11px 16px;color:var(--ink-3);font-size:.6875rem;text-transform:uppercase;letter-spacing:.06em;font-family:IBM Plex Mono,monospace">View all →</a></div>
     </div>
   </div>
 
