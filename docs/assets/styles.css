@@ -75,8 +75,8 @@ a{color:var(--green);text-decoration:none}
 @media(max-width:760px){.cluster{grid-template-columns:1fr;gap:24px;padding:24px 20px}}
 
 /* module header */
-.mod{display:flex;align-items:center;gap:12px;margin:36px 0 30px;padding-bottom:4px}
-.mod .tab{width:22px;height:14px;background:var(--green);border-radius:2px;flex-shrink:0;box-shadow:0 0 0 3px rgba(30,158,102,.12);margin-bottom:4px}
+.mod{display:flex;align-items:center;gap:12px;margin:36px 0 30px;padding-bottom:10px}
+.mod .tab{width:22px;height:14px;background:var(--green);border-radius:2px;flex-shrink:0;box-shadow:0 0 0 3px rgba(30,158,102,.12);margin-bottom:10px}
 .mod h2{font-family:'Saira',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--ink)}
 .mod .k{font-family:'IBM Plex Mono',monospace;font-size:.5625rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
 .mod .rule{flex:1;height:1px;background:var(--hair)}
@@ -130,7 +130,7 @@ p.intro{color:var(--ink-3);font-size:.8125rem;margin:-4px 0 14px}
 
 /* empty / theft / news / cross-border / calculator */
 .empty{padding:22px;text-align:center;color:var(--ink-3);font-family:'IBM Plex Mono',monospace;font-size:.75rem}
-.empty b{color:var(--green);display:block;font-size:.9375rem;font-family:'Saira',sans-serif;margin-bottom:4px}
+.empty b{color:var(--green);display:block;font-size:.9375rem;font-family:'Saira',sans-serif;margin-bottom:10px}
 .tft{padding:14px 16px;border-bottom:1px solid var(--hair)}.tft:last-child{border-bottom:0}
 .tft .h{color:var(--ink);font-weight:600;font-size:.8125rem}
 .tft .m{color:var(--ink-3);font-size:.6875rem;font-family:'IBM Plex Mono',monospace;margin-top:3px}
