@@ -24,19 +24,19 @@
 
   <!--OPTIONAL:sponsor_market--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_market.name}}</div><div class="l">{{sponsor_market.line}}</div></div><a class="c" href="{{sponsor_market.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_market-->
 
-  <div class="mod"><h2>Indicators</h2><span class="rule"></span></div>
+  <div class="mod"><h2>Indicators</h2></div>
   <div class="panel">
   <!--LOOP:market--><div class="ind"><div class="nm">{{name}}<span>{{note}}</span></div><div class="vv {{value_class}}">{{value}}</div></div><!--/LOOP:market-->
   </div>
 
-  <div class="mod"><h2>How to read these</h2><span class="rule"></span></div>
+  <div class="mod"><h2>How to read these</h2></div>
   <div class="panel" style="color:var(--ink-2);font-size:0.875rem;line-height:1.6;">
     <p>Five indicators, one question each: <strong style="color:var(--ink);">is freight getting stronger or weaker?</strong></p>
     <p style="margin-top:12px;"><strong style="color:var(--green)">Green</strong> = signal is moving in your favour (more loads, lower costs). <strong style="color:var(--red)">Red</strong> = signal is moving against you (higher diesel, weaker demand). <strong style="color:var(--yellow)">Yellow</strong> = watch closely.</p>
     <p style="margin-top:12px;">Fuel costs sit at {{fuel_pct_of_ops}} of operating costs. At {{current_diesel}}c/L diesel and {{usd_cad}} USD/CAD, margin pressure on Canadian carriers is real. These indicators don't predict rates — they show the cost and demand floor that rates are built on.</p>
   </div>
 
-  <div class="mod"><h2>FAQ</h2><span class="rule"></span></div>
+  <div class="mod"><h2>FAQ</h2></div>
   <div class="faq"><dl>
     <dt>Why watch GDP for trucking?</dt><dd>Freight volume tracks economic output. Rising GDP means more loads moving; a contraction signals softening demand. The correlation isn't perfect — construction, retail, and manufacturing matter more than overall GDP — but it's the broadest signal available.</dd>
     <dt>What does "diesel vs baseline" tell me?</dt><dd>It shows whether fuel costs are above or below the long-run average. Above baseline = margin pressure on every load. Below baseline = breathing room. At {{current_diesel}}c/L, diesel sits where it does relative to the 165c baseline.</dd>
