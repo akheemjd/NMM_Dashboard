@@ -34,13 +34,13 @@
 
   <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
 
-  <div class="mod"><span class="tab"></span><h2>All commercial crossings</h2><span class="k">wait captured at update</span><span class="rule"></span></div>
+  <div class="mod"><h2>All commercial crossings</h2><span class="k">wait captured at update</span><span class="rule"></span></div>
   <div class="panel"><table class="tbl bx">
   <!--LOOP:crossings--><tr><td><span class="xname">{{name}}</span><div class="sub">{{sub}} · captured {{captured_at}}</div></td><td class="r"><span class="px">{{wait}}</span></td><td class="r"><span class="pill {{status_class}}">{{status_label}}</span></td></tr><!--/LOOP:crossings-->
   </table></div>
   <p class="note">Wait shown is the commercial-lane time captured at each crossing's last update. Direction: into the US unless noted.</p>
 
-  <div class="mod"><span class="tab"></span><h2>Common questions</h2><span class="rule"></span></div>
+  <div class="mod"><h2>Common questions</h2><span class="rule"></span></div>
   <div class="faq"><dl>
     <dt>Which crossing is fastest right now?</dt><dd>{{border.min_name}} at {{border.min_wait}} minutes. Times shift through the day — this page refreshes every 30 minutes.</dd>
     <dt>Are these commercial or passenger waits?</dt><dd>Commercial-vehicle lanes. Passenger waits differ and aren't shown here.</dd>
