@@ -46,12 +46,14 @@
     </div>
   </div>
 
-  <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">live updates</span><span class="rule"></span><a class="full" href="/border-wait-times/">All crossings →</a></div>
-  <div class="panel"><table class="tbl bx" style="table-layout:fixed;width:100%">
-  <colgroup><col style="width:auto"><col style="width:100px"><col style="width:90px"></colgroup>
-  <thead><tr><th>Crossing</th><th class="r">Wait</th><th class="r">Status</th></tr></thead>
-  <!--LOOP:border_rows--><tr data-href="{{url}}" role="link" tabindex="0" style="height:36px;"><td class="code" style="padding:8px;vertical-align:middle;">{{name}}</td><td class="r" style="padding:8px;vertical-align:middle;"><span class="px">{{wait}}</span></td><td class="r" style="padding:8px;vertical-align:middle;text-align:right;"><span class="pill {{status_class}}">{{status_label}}</span></td></tr><!--/LOOP:border_rows-->
-  </table></div>
+  <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">commercial wait</span><span class="rule"></span><a class="full" href="/border-wait-times/">All crossings →</a></div>
+  <div class="blist">
+  <!--LOOP:border_rows--><div class="blist-row" data-href="{{url}}" role="link" tabindex="0">
+    <span class="blist-name">{{name}}</span>
+    <span class="blist-wait">{{wait}}</span>
+    <span class="pill {{status_class}}">{{status_label}}</span>
+  </div><!--/LOOP:border_rows-->
+  </div>
   <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Border module by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
 
   <div class="mod"><span class="tab"></span><h2>Fuel &amp; exchange</h2><span class="k">diesel · USD/CAD</span><span class="rule"></span><a class="full" href="/fuel-prices/">Full fuel →</a></div>
