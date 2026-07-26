@@ -196,10 +196,15 @@ main{max-width:1160px;margin:0 auto;padding:6px 20px 48px;position:relative;z-in
 
 .xname{color:#FFFFFF;font-weight:700;font-size:.9375rem;display:block}
 
-/* Border list (home) */
-.blist{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--rc);overflow:hidden}
-.blist-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--hair);min-height:44px}
-.blist-row:last-child{border-bottom:0}
-.blist-row:hover{background:var(--surface-2)}
-.blist-name{color:var(--ink);font-weight:600;font-size:.8125rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:12px}
-.blist-wait{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);text-align:right;min-width:70px;margin-right:10px}
+
+/* Border crossings list */
+.bxlist{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--rc);overflow:hidden}
+.bxrow{display:flex;align-items:center;padding:11px 16px;border-bottom:1px solid var(--hair);text-decoration:none;gap:12px}
+.bxrow:last-child{border-bottom:0}
+.bxrow:hover{background:var(--surface-2)}
+.bxname{color:var(--ink);font-weight:600;font-size:.8125rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bxwait{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);text-align:right;min-width:60px;flex-shrink:0}
+.bxdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.bxdot.ok{background:var(--green)}
+.bxdot.mod{background:var(--yellow)}
+.bxdot.heavy,.bxdot.closed{background:var(--red)}

@@ -46,13 +46,13 @@
     </div>
   </div>
 
-  <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">commercial wait</span><span class="rule"></span><a class="full" href="/border-wait-times/">All crossings →</a></div>
-  <div class="blist">
-  <!--LOOP:border_rows--><div class="blist-row" data-href="{{url}}" role="link" tabindex="0">
-    <span class="blist-name">{{name}}</span>
-    <span class="blist-wait">{{wait}}</span>
-    <span class="pill {{status_class}}">{{status_label}}</span>
-  </div><!--/LOOP:border_rows-->
+  <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">commercial wait</span><span class="rule"></span><a class="full" href="/border-wait-times/">All &rarr;</a></div>
+  <div class="bxlist">
+  <!--LOOP:border_rows--><a class="bxrow" href="{{url}}">
+    <span class="bxname">{{name}}</span>
+    <span class="bxwait">{{wait}}</span>
+    <span class="bxdot {{status_class}}"></span>
+  </a><!--/LOOP:border_rows-->
   </div>
   <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Border module by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
 
