@@ -110,7 +110,7 @@ p.intro{color:var(--ink-3);font-size:.8125rem;margin:-4px 0 14px}
 .bx td .sub{color:var(--ink-3);font-size:.6875rem;font-family:'IBM Plex Mono',monospace}
 
 /* status pills */
-.pill{font-family:'IBM Plex Mono',monospace;font-size:.5625rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:3px;float:right}
+.pill{font-family:'IBM Plex Mono',monospace;font-size:.5625rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:3px;display:inline-block;margin-left:8px}
 .pill.mod{color:var(--green);background:rgba(30,158,102,.12)}
 .pill.heavy{color:var(--green);background:rgba(245,197,24,.12)}
 .pill.closed{color:var(--red);background:rgba(229,72,77,.12)}
