@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-279442",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 404 Southbound EXPRESS at SHEPPARD AVE, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7760109,
-      "lng": -79.3399046,
-      "start": 1785037020,
-      "end": null,
-      "updated": 1785037020
-    },
-    {
       "id": "ON-279361",
       "province": "ON",
       "highway": "HWY 417",
@@ -804,10 +788,26 @@
       "start": 1785124740,
       "end": 1785229200,
       "updated": 1784833920
+    },
+    {
+      "id": "ON-278595",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 407 ETR Westbound  between ASHBURN RD and HWY 412, Whitby. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 43.94865,
+      "lng": -78.97165,
+      "start": 1785376800,
+      "end": 1785405600,
+      "updated": 1784833860
     }
   ],
   "total": 50,
-  "updated": "2026-07-26T03:46:35.623826+00:00",
+  "updated": "2026-07-26T04:16:43.632658+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
