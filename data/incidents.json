@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-279460",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.73616852,
+      "lng": -79.5264349,
+      "start": 1785043080,
+      "end": null,
+      "updated": 1785043080
+    },
+    {
+      "id": "ON-279455",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WESTON ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.71325981,
+      "lng": -79.53596808,
+      "start": 1785039780,
+      "end": null,
+      "updated": 1785039780
+    },
+    {
       "id": "ON-279361",
       "province": "ON",
       "highway": "HWY 417",
@@ -772,42 +804,10 @@
       "start": 1785196800,
       "end": 1786179600,
       "updated": 1784833980
-    },
-    {
-      "id": "ON-278605",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Engineering Investigation on HWY 401 Westbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.629856,
-      "lng": -79.6843,
-      "start": 1785124740,
-      "end": 1785229200,
-      "updated": 1784833920
-    },
-    {
-      "id": "ON-278595",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Westbound",
-      "description": "Continuous Maintenance on HWY 407 ETR Westbound  between ASHBURN RD and HWY 412, Whitby. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.94865,
-      "lng": -78.97165,
-      "start": 1785376800,
-      "end": 1785405600,
-      "updated": 1784833860
     }
   ],
   "total": 50,
-  "updated": "2026-07-26T04:16:43.632658+00:00",
+  "updated": "2026-07-26T05:47:08.948843+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
