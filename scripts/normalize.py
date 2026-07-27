@@ -426,6 +426,7 @@ for code in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]:
     base, carbon, fuel_tax, sales = prov_tax_approx[code]
     pump = prices[code]
     tax.append({
+        "code": code,
         "name": names[code],
         "base": str(base),
         "carbon": str(carbon),
@@ -444,6 +445,7 @@ for code in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]:
     tax_portion = carbon + fuel_tax + sales
     per_100l = round(tax_portion * 100 / 100, 1)
     ifta.append({
+        "code": code,
         "name": names[code],
         "pump": f"{pump:.1f}",
         "tax_portion": f"{tax_portion}",
