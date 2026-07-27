@@ -64,14 +64,14 @@
   <div class="mod"><span class="tab"></span><h2>Diesel tax breakdown</h2><span class="k">estimated split · c/L</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Province</th><th class="r">Base</th><th class="r">Carbon</th><th class="r">Fuel tax</th><th class="r">Sales</th><th class="r">Pump</th></tr></thead>
-    <!--LOOP:tax--><tr><td>{{name}}</td><td class="r mono">{{base}}</td><td class="r mono">{{carbon}}</td><td class="r mono">{{fuel_tax}}</td><td class="r mono">{{sales}}</td><td class="r"><span class="px">{{pump}}</span></td></tr><!--/LOOP:tax-->
+    <!--LOOP:tax--><tr><td class="code">{{code}}</td><td class="r mono">{{base}}</td><td class="r mono">{{carbon}}</td><td class="r mono">{{fuel_tax}}</td><td class="r mono">{{sales}}</td><td class="r"><span class="px">{{pump}}</span></td></tr><!--/LOOP:tax-->
   </table></div>
   <p class="note">Approximate — exact components wired from public rate tables. Base = wholesale + federal excise.</p>
 
   <div class="mod"><span class="tab"></span><h2>IFTA diesel reference</h2><span class="k">current quarter</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Jurisdiction</th><th class="r">Pump c/L</th><th class="r">Tax portion</th><th class="r">Per 100L</th></tr></thead>
-    <!--LOOP:ifta--><tr><td>{{name}}</td><td class="r mono">{{pump}}</td><td class="r mono">{{tax_portion}}</td><td class="r mono">{{per_100l}}</td></tr><!--/LOOP:ifta-->
+    <!--LOOP:ifta--><tr><td class="code">{{code}}</td><td class="r mono">{{pump}}</td><td class="r mono">{{tax_portion}}</td><td class="r mono">{{per_100l}}</td></tr><!--/LOOP:ifta-->
   </table></div>
   <p class="note"><a href="/fuel-cost-calculator/">Open the fuel cost calculator →</a> to estimate quarterly IFTA spend by route.</p>
 
