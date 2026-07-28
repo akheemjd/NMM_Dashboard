@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Canada-US Border Wait Times — Northern Mile</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:transparent;color:#F2F4F7;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;overflow:hidden}
+.widget{background:#0B0D11;border:1px solid #20262F;border-radius:6px;padding:18px 22px;max-width:460px}
+.widget .header{font-size:11px;color:#A8B2BE;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.widget .crossings{list-style:none}
+.widget .crossing{display:flex;align-items:center;padding:8px 0;border-bottom:1px solid #191E26;font-size:14px}
+.widget .crossing:last-child{border-bottom:0}
+.widget .crossing .name{flex:1;color:#F2F4F7;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.widget .crossing .wait{font-weight:600;color:#D0D6E0;margin:0 10px;text-align:right;min-width:60px}
+.widget .crossing .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.widget .dot.ok{background:#1E9E66}
+.widget .dot.mod{background:#F5C518}
+.widget .dot.heavy{background:#E5484D}
+.widget .footer{font-size:10px;color:#A8B2BE;margin-top:12px}
+.widget .footer a{color:#1E9E66}
+</style></head><body>
+<div class="widget">
+  <div class="header">Cross-border wait times · commercial</div>
+  <ul class="crossings" id="crossings"></ul>
+  <div class="footer">Powered by <a href="https://dashboard.northernmilemedia.com" target="_top">Northern Mile</a> · live from CBSA</div>
+</div>
+<script>
+(async function(){
+  try {
+    const resp = await fetch('https://dashboard.northernmilemedia.com/data/border.json');
+    const data = await resp.json();
+    const crossings = (data.crossings || []).slice(0,5);
+    let html = '';
+    crossings.forEach(c => {
+      const cls = c.delay_minutes > 10 ? 'heavy' : c.delay_minutes > 0 ? 'mod' : 'ok';
+      html += '<li class="crossing"><span class="name">'+c.name+'</span><span class="wait">'+c.wait+'</span><span class="dot '+cls+'"></span></li>';
+    });
+    document.getElementById('crossings').innerHTML = html;
+  } catch(e) {}
+  const h = document.querySelector('.widget').offsetHeight + 8;
+  window.parent && window.parent.postMessage({type:'nmm-resize',height:h},'*');
+})();
+</script>
+</body></html>

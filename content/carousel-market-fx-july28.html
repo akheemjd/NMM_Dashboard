@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NMM Carousel — Market/FX</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px}
+.slide{width:1080px;height:1080px;background:#0B0D11;color:#F2F4F7;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:80px;border:1px solid #20262F;position:relative;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.slide h1{font-size:72px;font-weight:700;text-align:center;line-height:1.1;margin-bottom:24px}
+.slide h2{font-size:40px;font-weight:400;color:#A8B2BE;text-align:center;line-height:1.3;max-width:700px}
+.slide .big-number{font-size:160px;font-weight:700;color:#1E9E66;line-height:1;margin-bottom:16px}
+.slide .big-number .unit{font-size:48px;color:#A8B2BE;font-weight:400}
+.slide .stat-row{display:flex;gap:60px;margin-top:40px}
+.slide .stat{text-align:center}
+.slide .stat .val{font-size:56px;font-weight:700;color:#F2F4F7}
+.slide .stat .val.green{color:#1E9E66}
+.slide .stat .lbl{font-size:20px;color:#A8B2BE;margin-top:8px}
+.slide .trend-bar{display:flex;align-items:flex-end;gap:8px;height:300px;margin:40px 0}
+.slide .trend-bar .bar{width:30px;background:#1A1E25;border-radius:4px 4px 0 0;position:relative}
+.slide .trend-bar .bar.fill{background:#1E9E66}
+.slide .trend-label{display:flex;justify-content:space-between;width:100%;margin-top:12px;font-size:14px;color:#A8B2BE}
+.slide .tag{background:rgba(30,158,102,.15);color:#1E9E66;padding:8px 20px;border-radius:6px;font-size:18px;font-weight:600;margin-top:20px}
+.slide .cta-text{font-size:36px;text-align:center;color:#F2F4F7;max-width:700px;line-height:1.3}
+.slide .cta-url{font-size:28px;color:#1E9E66;margin-top:20px;font-weight:600}
+.slide .logo{position:absolute;top:40px;left:80px;font-size:22px;font-weight:700;color:#1E9E66;letter-spacing:.06em}
+.slide .slide-num{position:absolute;top:40px;right:80px;font-size:20px;color:#A8B2BE}
+.slide .footer-note{position:absolute;bottom:40px;font-size:16px;color:#A8B2BE}
+.slide .arrow-down{font-size:80px;color:#E5484D;line-height:1}
+.slide .arrow-up{font-size:80px;color:#1E9E66;line-height:1}
+</style></head><body>
+
+<!-- Slide 1: Cover -->
+<div class="slide">
+  <div class="logo">NORTHERN MILE</div>
+  <div class="slide-num">1/5</div>
+  <h1>The loonie is getting stronger</h1>
+  <h2>A 30-day look at what USD/CAD means for Canadian trucking</h2>
+  <div class="footer-note">July 28, 2026</div>
+</div>
+
+<!-- Slide 2: The Number -->
+<div class="slide">
+  <div class="logo">NORTHERN MILE</div>
+  <div class="slide-num">2/5</div>
+  <div class="big-number">1.3982<span class="unit"> CAD</span></div>
+  <h2>1 US dollar buys 1.3982 Canadian dollars today</h2>
+  <div class="tag">DOWN 1.3¢ this week</div>
+  <div class="footer-note">Bank of Canada · updated every 30 min</div>
+</div>
+
+<!-- Slide 3: 30-Day Trend -->
+<div class="slide">
+  <div class="logo">NORTHERN MILE</div>
+  <div class="slide-num">3/5</div>
+  <h2 style="margin-bottom:8px">30-day trend</h2>
+  <div class="arrow-down">↓</div>
+  <h2 style="color:#1E9E66;font-weight:600">1.422 → 1.398</h2>
+  <div class="stat-row">
+    <div class="stat"><div class="val green">-1.7%</div><div class="lbl">30-day change</div></div>
+    <div class="stat"><div class="val">1.411</div><div class="lbl">30-day high</div></div>
+    <div class="stat"><div class="val">1.398</div><div class="lbl">Current (30-day low)</div></div>
+  </div>
+  <div class="footer-note">USD/CAD has declined every week in July</div>
+</div>
+
+<!-- Slide 4: What It Means -->
+<div class="slide">
+  <div class="logo">NORTHERN MILE</div>
+  <div class="slide-num">4/5</div>
+  <h2 style="margin-bottom:40px">What this means for your lanes</h2>
+  <div style="display:flex;flex-direction:column;gap:32px;max-width:800px">
+    <div><div style="font-size:32px;font-weight:700;color:#E5484D">▼</div><div style="font-size:24px;color:#F2F4F7;margin-top:8px">Cross-border loads pay less in CAD. A $5,000 USD run was $7,110 CAD 30 days ago. Today it's $6,991.</div></div>
+    <div><div style="font-size:32px;font-weight:700;color:#1E9E66">▲</div><div style="font-size:24px;color:#F2F4F7;margin-top:8px">US-sourced equipment and parts cost less. The stronger loonie cuts input costs for Canadian carriers.</div></div>
+    <div><div style="font-size:32px;font-weight:700;color:#A8B2BE">—</div><div style="font-size:24px;color:#F2F4F7;margin-top:8px">Diesel priced in CAD is unaffected. The spread between BC and Alberta still sits at 19.6¢.</div></div>
+  </div>
+</div>
+
+<!-- Slide 5: CTA -->
+<div class="slide">
+  <div class="logo">NORTHERN MILE</div>
+  <div class="slide-num">5/5</div>
+  <div class="cta-text">We track fuel, border, FX and theft every week. Free. No signup.</div>
+  <div class="cta-url">northernmilemedia.com</div>
+  <h2 style="margin-top:40px">Get the Wednesday Snapshot</h2>
+  <div class="footer-note">dashboard.northernmilemedia.com — free Canadian trucking data</div>
+</div>
+
+</body></html>
