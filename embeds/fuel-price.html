@@ -5,7 +5,7 @@ body{background:transparent;color:#F2F4F7;font-family:-apple-system,BlinkMacSyst
 a{text-decoration:none;color:inherit}
 .widget{background:#0B0D11;border:1px solid #20262F;border-radius:8px;padding:28px;display:flex;align-items:center;gap:24px;max-width:440px;position:relative;overflow:hidden}
 .widget::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,#1E9E66,#0E4D33)}
-.widget .price{font-size:52px;font-weight:700;color:#1E9E66;line-height:1;font-variant-numeric:tabular-nums;font-family:'Saira Condensed',-apple-system,sans-serif;letter-spacing:-.02em;display:flex;align-items:center}
+.widget .price{font-size:52px;font-weight:700;color:#1E9E66;line-height:.85;font-variant-numeric:tabular-nums;font-family:'Saira Condensed',-apple-system,sans-serif;letter-spacing:-.02em;align-self:center}
 .widget .price .unit{font-size:20px;color:#A8B2BE;font-weight:400;margin-left:4px;letter-spacing:0}
 .widget .info{flex:1}
 .widget .label{font-size:11px;color:#A8B2BE;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;font-weight:600}
@@ -13,7 +13,6 @@ a{text-decoration:none;color:inherit}
 .widget .spread b{color:#F5C518;font-weight:600}
 .widget .footer{font-size:10px;color:#666;margin-top:10px;letter-spacing:.04em}
 .widget .footer a{color:#1E9E66}
-.widget .logo{position:absolute;top:12px;right:16px;font-size:10px;color:#2A2A2A;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
 </style></head><body>
 <div class="widget" id="widget">
   <div class="price" id="price">—<span class="unit">c/L</span></div>
@@ -22,7 +21,6 @@ a{text-decoration:none;color:inherit}
     <div class="spread" id="spread">Loading…</div>
     <div class="footer">Powered by <a href="https://dashboard.northernmilemedia.com" target="_top">Northern Mile</a></div>
   </div>
-  <div class="logo">NMM</div>
 </div>
 <script>
 (async function(){
