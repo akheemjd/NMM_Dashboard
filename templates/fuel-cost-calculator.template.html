@@ -77,6 +77,25 @@
     <div style="margin-top:16px;padding:8px 12px;background:rgba(245,197,24,.08);border-left:2px solid var(--yellow);font-size:0.75rem;color:var(--ink-2);" id="dh-tip"></div>
   </div>
 
+
+  </div>
+
+  <!-- 5. Rate floor -->
+  <div class="mod"><span class="tab"></span><h2>Rate floor</h2><span class="k">minimum rate before you move</span><span class="rule"></span></div>
+  <div class="panel"><div style="padding:20px 22px">
+    <div class="row" style="margin-bottom:12px">
+      <div><label class="fl" for="rf-dist">Distance (km)</label><input class="field" id="rf-dist" type="number" value="1380" min="0" oninput="calcRF()"></div>
+      <div><label class="fl" for="rf-burn">Burn (L/100km)</label><input class="field" id="rf-burn" type="number" value="38" min="1" oninput="calcRF()"></div>
+      <div><label class="fl" for="rf-diesel">Diesel (c/L)</label><input class="field" id="rf-diesel" type="number" value="{{fuel.national_diesel}}" min="0" step="0.1" oninput="calcRF()"></div>
+    </div>
+    <div class="row" style="margin-bottom:16px">
+      <div><label class="fl" for="rf-margin">Target margin (%)</label><input class="field" id="rf-margin" type="number" value="15" min="0" max="50" oninput="calcRF()"></div>
+      <div><label class="fl" for="rf-fixed">Fixed cost / trip ($)</label><input class="field" id="rf-fixed" type="number" value="150" min="0" oninput="calcRF()"></div>
+    </div>
+    <div class="readout"><div class="rl">Minimum rate</div><div class="big" id="rf-result">—</div><div class="meta" id="rf-detail"></div></div>
+    <div style="margin-top:16px;padding:12px 16px;background:rgba(30,158,102,.08);border-left:2px solid var(--green);font-size:0.8125rem;color:var(--ink-2);line-height:1.5" id="rf-tip"></div>
+  </div></div>
+
   <div class="mod"><span class="tab"></span><h2>Common questions</h2><span class="rule"></span></div>
   <div class="faq"><dl>
     <dt>What diesel price does this use?</dt><dd>Pre-loaded with today's Canadian national average ({{fuel.national_diesel}}c/L), updated every 30 minutes. Change it to any pump price.</dd>
