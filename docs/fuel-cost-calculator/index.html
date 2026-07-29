@@ -132,7 +132,7 @@ function calcUS(){
   document.getElementById('us-result').textContent=cadPerL+'c/L';
   document.getElementById('us-detail').textContent='$'+us.toFixed(2)+'/gal × '+fx.toFixed(4)+' ÷ 3.785 L/gal';
 }
-calcAll();calcUS();calcBE();calcDH();
+calcAll();calcUS();calcBE();calcDH();calcRF();
 
 function calcBE(){
   var b=+document.getElementById('be-burn').value||0, d=+document.getElementById('be-diesel').value||0, f=+document.getElementById('be-fixed').value||0;
