@@ -151,7 +151,7 @@ def build_all():
         "cargo-theft": load_json("theft.norm"),
         "market-pulse": load_json("market.norm"),
         "industry-news": load_json("news.norm"),
-        "fuel-cost-calculator": load_json("fx.norm"),  # reuses fx data
+        "fuel-cost-calculator": {**load_json("fx.norm"), **load_json("fuel.norm")},
     }
 
     built = []
