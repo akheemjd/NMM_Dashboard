@@ -132,7 +132,7 @@ function calcUS(){
   document.getElementById('us-result').textContent=cadPerL+'c/L';
   document.getElementById('us-detail').textContent='$'+us.toFixed(2)+'/gal × '+fx.toFixed(4)+' ÷ 3.785 L/gal';
 }
-calcAll();calcUS();calcBE();calcDH();calcRF();
+calcAll();calcUS();calcBE();calcDH();calcRF();calcRF();
 
 function calcBE(){
   var b=+document.getElementById('be-burn').value||0, d=+document.getElementById('be-diesel').value||0, f=+document.getElementById('be-fixed').value||0;
@@ -141,6 +141,15 @@ function calcBE(){
   document.getElementById('be-detail').textContent=fuelPerKm.toFixed(1)+'c fuel + '+f+'c fixed · '+b+' L/100km at '+d+'c/L';
 }
 
+function calcRF(){
+  var km=+document.getElementById('rf-dist').value||0, b=+document.getElementById('rf-burn').value||0, d=+document.getElementById('rf-diesel').value||0, m=+document.getElementById('rf-margin').value||0, f=+document.getElementById('rf-fixed').value||0;
+  var litres=km/100*b, fuelCost=litres*d/100;
+  var total=fuelCost+f, minRate=total*(1+m/100);
+  document.getElementById('rf-result').textContent='$'+minRate.toFixed(0);
+  document.getElementById('rf-detail').textContent='Fuel $'+fuelCost.toFixed(0)+' + Fixed $'+f+' = $'+total.toFixed(0)+' + '+m+'% margin';
+  var perKm=(minRate/km).toFixed(2);
+  document.getElementById('rf-tip').innerHTML='<strong>$'+perKm+'</strong> per km. Below this number, you are losing money on this lane. A broker offers less, you know your floor.';
+}
 function calcDH(){
   var km=+document.getElementById('dh-km').value||0, b=+document.getElementById('dh-burn').value||0, d=+document.getElementById('dh-diesel').value||0;
   var litres=km/100*b, cost=litres*d/100, perKm=cost/km*100;
