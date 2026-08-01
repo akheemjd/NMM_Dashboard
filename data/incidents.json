@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282116",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ETOBICOKE CREEK, Mississauga. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.66080721,
+      "lng": -79.61002948,
+      "start": 1785607800,
+      "end": null,
+      "updated": 1785607800
+    },
+    {
+      "id": "ON-282110",
+      "province": "ON",
+      "highway": "HWY 409",
+      "direction": "Westbound",
+      "description": "Collision on HWY 409 Westbound RAMP at HWY 427, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.698309,
+      "lng": -79.606405,
+      "start": 1785606600,
+      "end": null,
+      "updated": 1785606600
+    },
+    {
       "id": "ON-261152",
       "province": "ON",
       "highway": "HWY 61",
@@ -787,42 +819,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490320
-    },
-    {
-      "id": "ON-281471",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490200
-    },
-    {
-      "id": "ON-281598",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T17:45:26.652389+00:00",
+  "updated": "2026-08-01T18:15:34.563366+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
