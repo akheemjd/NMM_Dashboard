@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282099",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH DR, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.66899647,
+      "lng": -79.59157211,
+      "start": 1785604200,
+      "end": null,
+      "updated": 1785604200
+    },
+    {
+      "id": "ON-282098",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Collision on HWY 417 Westbound  at PARKDALE AVE (IC 122), Ottawa. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 45.3972,
+      "lng": -75.72696,
+      "start": 1785604140,
+      "end": null,
+      "updated": 1785604140
+    },
+    {
       "id": "drivebc.ca/RIDE-101015",
       "province": "BC",
       "highway": {
@@ -20,27 +52,6 @@
       "start": "2026-08-01T08:10:47-07:00",
       "end": "",
       "updated": "2026-08-01T09:39:41-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-101016",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 17",
-        "from": "Highway 17",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident. Left lane blocked. Right lane blocked. Traffic getting by on the shoulder.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.14843237,
-      "lng": -122.95924796,
-      "start": "2026-08-01T08:50:29-07:00",
-      "end": "",
-      "updated": "2026-08-01T09:37:16-07:00"
     },
     {
       "id": "ON-282089",
@@ -808,26 +819,10 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490320
-    },
-    {
-      "id": "ON-281596",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490320
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T16:44:21.688067+00:00",
+  "updated": "2026-08-01T17:15:17.791537+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
