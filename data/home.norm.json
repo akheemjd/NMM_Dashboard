@@ -1,14 +1,14 @@
 {
   "updated_at": "14:02 EDT",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "35 min"
+    "max_name": "Queenston-Lewiston Bridge",
+    "max_wait": "12 min"
   },
   "fuel": {
     "national_diesel": "171.9",
@@ -190,20 +190,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 409, HWY 400",
+    "status_line": "HWY 427, HWY 401, HWY 811, HWY 527",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ETOBICOKE CREEK, Mississauga.",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Northbound  at REXDALE BLVD / DERRY ROAD, Toronto. R",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 409",
-        "what": "Collision on HWY 409 Westbound RAMP at HWY 427, Toronto. Right lane and right sh",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound  at SIMCOE ST, Oshawa. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -227,25 +227,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "14:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "35 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "9 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "13 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,7 +272,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:00 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -281,7 +281,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 CDT"
+      "captured_at": "13:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
