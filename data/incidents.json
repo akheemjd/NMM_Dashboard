@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282075",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 403 HAMILTON Westbound  at WATERDOWN ROAD, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.31209876,
+      "lng": -79.86012323,
+      "start": 1785600120,
+      "end": null,
+      "updated": 1785600120
+    },
+    {
       "id": "drivebc.ca/RIDE-101015",
       "province": "BC",
       "highway": {
@@ -19,7 +35,49 @@
       "lng": -122.95554104,
       "start": "2026-08-01T08:10:47-07:00",
       "end": "",
-      "updated": "2026-08-01T08:10:47-07:00"
+      "updated": "2026-08-01T08:50:56-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101014",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident. Left lane blocked.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.05925631,
+      "lng": -122.38469342,
+      "start": "2026-08-01T06:50:17-07:00",
+      "end": "",
+      "updated": "2026-08-01T08:50:41-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101016",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 17",
+        "from": "Highway 17",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident. Left lane blocked.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.14843237,
+      "lng": -122.95924796,
+      "start": "2026-08-01T08:50:29-07:00",
+      "end": "",
+      "updated": "2026-08-01T08:50:29-07:00"
     },
     {
       "id": "ON-261152",
@@ -771,58 +829,10 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490320
-    },
-    {
-      "id": "ON-281596",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490320
-    },
-    {
-      "id": "ON-281471",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490200
-    },
-    {
-      "id": "ON-281598",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T15:43:50.700473+00:00",
+  "updated": "2026-08-01T16:13:59.462387+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
