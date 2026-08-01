@@ -1,75 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-282099",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH DR, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.66899647,
-      "lng": -79.59157211,
-      "start": 1785604200,
-      "end": null,
-      "updated": 1785604200
-    },
-    {
-      "id": "ON-282098",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Collision on HWY 417 Westbound  at PARKDALE AVE (IC 122), Ottawa. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 45.3972,
-      "lng": -75.72696,
-      "start": 1785604140,
-      "end": null,
-      "updated": 1785604140
-    },
-    {
-      "id": "drivebc.ca/RIDE-101015",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Highway 91 Conn Onramp",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident. Expect delays.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.14991576,
-      "lng": -122.95554104,
-      "start": "2026-08-01T08:10:47-07:00",
-      "end": "",
-      "updated": "2026-08-01T09:39:41-07:00"
-    },
-    {
-      "id": "ON-282089",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound RAMP at UPPER MIDDLE ROAD, Oakville. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.50064742,
-      "lng": -79.67658992,
-      "start": 1785602100,
-      "end": null,
-      "updated": 1785602100
-    },
-    {
       "id": "ON-261152",
       "province": "ON",
       "highway": "HWY 61",
@@ -377,6 +308,27 @@
       "start": 1785841200,
       "end": 1785871800,
       "updated": 1785524880
+    },
+    {
+      "id": "drivebc.ca/DBC-93850",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Carson Rd",
+        "to": "Almond Gardens Rd W",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Spraggett Rd, in both directions. Construction work planned between Carson Rd and Almond Gardens Rd W. Starting Thu Aug 13 until Fri Aug 28. Road closure planned. Last updated Fri Jul 31 at 11:42 AM PDT. (DBC-93850)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.019246,
+      "lng": -118.47485,
+      "start": "2026-07-31T11:42:27-07:00",
+      "end": "",
+      "updated": "2026-07-31T11:42:38-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-100771",
@@ -819,10 +771,58 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490320
+    },
+    {
+      "id": "ON-281596",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490320
+    },
+    {
+      "id": "ON-281471",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.426376,
+      "lng": -75.61628,
+      "start": 1785985200,
+      "end": 1786006800,
+      "updated": 1785490200
+    },
+    {
+      "id": "ON-281598",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T17:15:17.791537+00:00",
+  "updated": "2026-08-01T17:45:26.652389+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
