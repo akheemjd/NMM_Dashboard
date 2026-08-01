@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282166",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.74247141,
+      "lng": -79.42291341,
+      "start": 1785615240,
+      "end": null,
+      "updated": 1785615240
+    },
+    {
       "id": "drivebc.ca/RIDE-100839",
       "province": "BC",
       "highway": {
@@ -20,22 +36,6 @@
       "start": "2026-07-25T20:05:00-07:00",
       "end": "",
       "updated": "2026-08-01T12:32:47-07:00"
-    },
-    {
-      "id": "ON-282145",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.29851876,
-      "lng": -79.79709653,
-      "start": 1785611400,
-      "end": null,
-      "updated": 1785612180
     },
     {
       "id": "ON-261152",
@@ -827,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T20:16:09.311012+00:00",
+  "updated": "2026-08-01T20:46:18.754060+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
