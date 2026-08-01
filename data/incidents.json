@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282206",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound EXPRESS at HIGHWAY 7, Vaughan. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.7915099,
+      "lng": -79.53927903,
+      "start": 1785622260,
+      "end": null,
+      "updated": 1785622260
+    },
+    {
       "id": "ON-282193",
       "province": "ON",
       "highway": "QEW",
@@ -803,26 +819,10 @@
       "start": 1785888000,
       "end": 1786104000,
       "updated": 1785489900
-    },
-    {
-      "id": "ON-281467",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T21:46:37.536781+00:00",
+  "updated": "2026-08-01T22:16:46.743626+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
