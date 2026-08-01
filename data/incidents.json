@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-282209",
+      "id": "ON-282213",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at HWY 10/HURONTARIO, Mississauga. Right lane closed.",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound EXPRESS at HIGHWAY 7, Vaughan. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.56955145,
-      "lng": -79.59864174,
-      "start": 1785623520,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.79122614,
+      "lng": -79.53948054,
+      "start": 1785625500,
       "end": null,
-      "updated": 1785623520
+      "updated": 1785625500
+    },
+    {
+      "id": "ON-282212",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Vehicle Fire on HWY 401 Westbound  at BROCK ROAD, Pickering. 3 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 right lanes closed",
+      "lat": 43.840052294,
+      "lng": -79.068383574,
+      "start": 1785625200,
+      "end": null,
+      "updated": 1785625200
     },
     {
       "id": "drivebc.ca/RIDE-100839",
@@ -281,6 +297,27 @@
       "start": 1785841200,
       "end": 1785871800,
       "updated": 1785524880
+    },
+    {
+      "id": "drivebc.ca/DBC-93850",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Carson Rd",
+        "to": "Almond Gardens Rd W",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Spraggett Rd, in both directions. Construction work planned between Carson Rd and Almond Gardens Rd W. Starting Thu Aug 13 until Fri Aug 28. Road closure planned. Last updated Fri Jul 31 at 11:42 AM PDT. (DBC-93850)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.019246,
+      "lng": -118.47485,
+      "start": "2026-07-31T11:42:27-07:00",
+      "end": "",
+      "updated": "2026-07-31T11:42:38-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-100771",
@@ -787,42 +824,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785489960
-    },
-    {
-      "id": "ON-281468",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489900
-    },
-    {
-      "id": "ON-281467",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T22:46:54.612878+00:00",
+  "updated": "2026-08-01T23:17:11.765357+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

@@ -3,7 +3,7 @@
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -190,20 +190,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 811, HWY 527, Lac des ",
+    "status_line": "HWY 400, HWY 401, HWY 811, HWY 527",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at HWY 10/HURONTARIO, Mississauga. ",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound EXPRESS at HIGHWAY 7, Vaughan. Left shoul",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 811",
-        "what": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and SEC HWY",
+        "road": "HWY 401",
+        "what": "Vehicle Fire on HWY 401 Westbound  at BROCK ROAD, Pickering. 3 right lanes close",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -232,20 +232,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -254,7 +254,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:09 EDT"
+      "captured_at": "19:07 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -272,7 +272,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 PDT"
+      "captured_at": "16:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
