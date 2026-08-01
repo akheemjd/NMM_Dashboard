@@ -190,20 +190,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 400, HWY 811, HWY 527",
+    "status_line": "HWY 401, HWY 410, QEW, HWY 400",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1 left lane cl",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at LIVERPOOL ROAD, Pickering. 1 ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Police Investigation on HWY 400 Northbound ON-RAMP at FINCH AVENUE, Toronto. All",
+        "road": "HWY 410",
+        "what": "Disabled Vehicle on HWY 410 Northbound  at CLARK BLVD, Brampton. 1 right lane cl",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,16 +236,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -254,7 +254,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:50 EDT"
+      "captured_at": "15:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -263,7 +263,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:04 MDT"
+      "captured_at": "13:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -272,7 +272,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
