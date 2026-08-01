@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northern Mile Media — Friday Fuel · July 31, 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0B0D11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+  }
+
+  .slide {
+    width: 1080px;
+    height: 1080px;
+    background: #0B0D11;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Shared slide chrome */
+  .slide-num {
+    position: absolute;
+    top: 48px;
+    right: 56px;
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .brand-wordmark {
+    position: absolute;
+    top: 48px;
+    left: 56px;
+    color: #1E9E66;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .footer-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #1E9E66 0%, #1E9E66 120px, #1A1F28 120px, #1A1F28 100%);
+  }
+
+  .footer-text {
+    position: absolute;
+    bottom: 36px;
+    left: 56px;
+    right: 56px;
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+
+  /* === SLIDE 1 — COVER === */
+  .s1-accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 340px;
+    background: #1E9E66;
+    margin-top: 200px;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .s1-eyebrow {
+    position: absolute;
+    top: 260px;
+    left: 140px;
+    color: #A8B2BE;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .s1-headline {
+    position: absolute;
+    top: 310px;
+    left: 140px;
+    right: 120px;
+    color: #F2F4F7;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .s1-headline .green {
+    color: #1E9E66;
+  }
+
+  .s1-sub {
+    position: absolute;
+    top: 530px;
+    left: 140px;
+    color: #A8B2BE;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 640px;
+  }
+
+  .s1-date {
+    position: absolute;
+    bottom: 80px;
+    left: 56px;
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  /* === SLIDE 2 — NATIONAL PICTURE === */
+  .s2-bignum {
+    position: absolute;
+    top: 280px;
+    left: 140px;
+    color: #1E9E66;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -3px;
+  }
+
+  .s2-unit {
+    color: #4B5563;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-left: 8px;
+  }
+
+  .s2-label {
+    position: absolute;
+    top: 460px;
+    left: 140px;
+    color: #A8B2BE;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .s2-context {
+    position: absolute;
+    top: 520px;
+    left: 140px;
+    color: #6B7280;
+    font-size: 17px;
+    font-weight: 400;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .s2-stats-row {
+    position: absolute;
+    top: 660px;
+    left: 140px;
+    right: 140px;
+    display: flex;
+    gap: 80px;
+  }
+
+  .s2-stat .val {
+    color: #F2F4F7;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .s2-stat .val.lo { color: #1E9E66; }
+  .s2-stat .val.hi { color: #E5484D; }
+
+  .s2-stat .lbl {
+    color: #6B7280;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 6px;
+  }
+
+  /* === SLIDE 3 — THE SPREAD === */
+  .s3-headline {
+    position: absolute;
+    top: 200px;
+    left: 140px;
+    color: #F2F4F7;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .s3-comparison {
+    position: absolute;
+    top: 320px;
+    left: 140px;
+    right: 140px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .s3-prov {
+    text-align: center;
+  }
+
+  .s3-prov .code {
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: -2px;
+  }
+
+  .s3-prov .code.lo { color: #1E9E66; }
+  .s3-prov .code.hi { color: #E5484D; }
+
+  .s3-prov .price {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  .s3-prov .name {
+    font-size: 17px;
+    color: #6B7280;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+
+  .s3-versus {
+    color: #F5C518;
+    font-size: 28px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .s3-impact {
+    position: absolute;
+    top: 620px;
+    left: 140px;
+    right: 140px;
+    background: #14171D;
+    border: 1px solid #262D36;
+    border-radius: 8px;
+    padding: 32px 40px;
+  }
+
+  .s3-impact .delta {
+    color: #F2F4F7;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .s3-impact .delta .cents {
+    color: #F5C518;
+  }
+
+  .s3-impact .explain {
+    color: #A8B2BE;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .s3-verdict {
+    position: absolute;
+    top: 840px;
+    left: 140px;
+    color: #F2F4F7;
+    font-size: 22px;
+    font-weight: 600;
+    border-left: 3px solid #1E9E66;
+    padding-left: 16px;
+  }
+
+  /* === SLIDE 4 — LANE COSTS === */
+  .s4-headline {
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    right: 140px;
+    color: #F2F4F7;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .s4-lanes {
+    position: absolute;
+    top: 270px;
+    left: 140px;
+    right: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .s4-lane {
+    background: #14171D;
+    border: 1px solid #262D36;
+    border-radius: 8px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .s4-lane .route {
+    color: #F2F4F7;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .s4-lane .route .arrow {
+    color: #4B5563;
+    margin: 0 10px;
+    font-weight: 400;
+  }
+
+  .s4-lane .route .km {
+    color: #6B7280;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 8px;
+  }
+
+  .s4-lane .cost-block {
+    text-align: right;
+  }
+
+  .s4-lane .fill-where {
+    color: #A8B2BE;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .s4-lane .cost {
+    color: #1E9E66;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .s4-lane .saving {
+    color: #F5C518;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .s4-note {
+    position: absolute;
+    top: 750px;
+    left: 140px;
+    right: 140px;
+    color: #6B7280;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    border-top: 1px solid #1A1F28;
+    padding-top: 24px;
+  }
+
+  /* === SLIDE 5 — CTA === */
+  .s5-accent-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: #1E9E66;
+    border-radius: 0 0 2px 2px;
+  }
+
+  .s5-eyebrow {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4B5563;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .s5-headline {
+    position: absolute;
+    top: 280px;
+    left: 140px;
+    right: 140px;
+    color: #F2F4F7;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    text-align: center;
+  }
+
+  .s5-headline .green {
+    color: #1E9E66;
+  }
+
+  .s5-url {
+    position: absolute;
+    top: 560px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #1E9E66;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  .s5-sub {
+    position: absolute;
+    top: 640px;
+    left: 140px;
+    right: 140px;
+    color: #A8B2BE;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .s5-cta-box {
+    position: absolute;
+    top: 740px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #F5C518;
+    border-radius: 6px;
+    padding: 16px 36px;
+    color: #F5C518;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .s5-footnote {
+    position: absolute;
+    bottom: 100px;
+    left: 140px;
+    right: 140px;
+    color: #4B5563;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* Print: one slide per page */
+  @media print {
+    body { background: white; padding: 0; gap: 0; }
+    .slide {
+      page-break-after: always;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .slide:last-child { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 — COVER -->
+<div class="slide">
+  <div class="brand-wordmark">NORTHERN MILE</div>
+  <div class="slide-num">1/5</div>
+
+  <div class="s1-accent-bar"></div>
+
+  <div class="s1-eyebrow">Friday Fuel</div>
+  <div class="s1-headline">
+    What diesel costs<br>
+    <span class="green">on the lanes you run</span>
+  </div>
+  <div class="s1-sub">
+    Not just pump prices. Real trip costs for three of the busiest Canadian freight corridors.
+  </div>
+
+  <div class="s1-date">July 31, 2026</div>
+  <div class="footer-bar"></div>
+  <div class="footer-text">Northern Mile Media — Canadian trucking dashboard and newsletter</div>
+</div>
+
+<!-- SLIDE 2 — NATIONAL PICTURE -->
+<div class="slide">
+  <div class="brand-wordmark">NORTHERN MILE</div>
+  <div class="slide-num">2/5</div>
+
+  <div class="s2-bignum">
+    171<span style="font-size:80px">.</span>9<span class="s2-unit">c/L</span>
+  </div>
+  <div class="s2-label">Canadian diesel national average</div>
+  <div class="s2-context">
+    Prices steady this week. No major moves — but the gaps between provinces haven't closed. They never do.
+  </div>
+
+  <div class="s2-stats-row">
+    <div class="s2-stat">
+      <div class="val lo">158.9</div>
+      <div class="lbl">Lowest — Alberta</div>
+    </div>
+    <div class="s2-stat">
+      <div class="val hi">182.5</div>
+      <div class="lbl">Highest — Newfoundland</div>
+    </div>
+    <div class="s2-stat">
+      <div class="val" style="color:#F5C518">23.6</div>
+      <div class="lbl">National spread</div>
+    </div>
+  </div>
+
+  <div class="footer-bar"></div>
+  <div class="footer-text">Updated every 30 minutes — dashboard.northernmilemedia.com</div>
+</div>
+
+<!-- SLIDE 3 — THE SPREAD -->
+<div class="slide">
+  <div class="brand-wordmark">NORTHERN MILE</div>
+  <div class="slide-num">3/5</div>
+
+  <div class="s3-headline">The spread that costs real money</div>
+
+  <div class="s3-comparison">
+    <div class="s3-prov">
+      <div class="code lo">AB</div>
+      <div class="price" style="color:#1E9E66">158.9</div>
+      <div class="name">Alberta</div>
+    </div>
+    <div class="s3-versus">VS</div>
+    <div class="s3-prov">
+      <div class="code hi">BC</div>
+      <div class="price" style="color:#E5484D">178.5</div>
+      <div class="name">British Columbia</div>
+    </div>
+  </div>
+
+  <div class="s3-impact">
+    <div class="delta"><span class="cents">19.6 cents</span> per litre</div>
+    <div class="explain">
+      That's <strong style="color:#F5C518">$78</strong> on a 400-litre fill.<br>
+      Run that lane five times a week and you're leaving $390 on the table.
+    </div>
+  </div>
+
+  <div class="s3-verdict">Fill in Alberta. Every time you can.</div>
+
+  <div class="footer-bar"></div>
+  <div class="footer-text">Prices: July 31, 2026 — dashboard.northernmilemedia.com</div>
+</div>
+
+<!-- SLIDE 4 — LANE COSTS -->
+<div class="slide">
+  <div class="brand-wordmark">NORTHERN MILE</div>
+  <div class="slide-num">4/5</div>
+
+  <div class="s4-headline">What three common lanes actually cost</div>
+
+  <div class="s4-lanes">
+    <div class="s4-lane">
+      <div>
+        <div class="route">Calgary <span class="arrow">→</span> Vancouver <span class="km">970 km</span></div>
+      </div>
+      <div class="cost-block">
+        <div class="fill-where">Fill in Alberta</div>
+        <div class="cost">$586</div>
+        <div class="saving">Save $72 vs filling in BC</div>
+      </div>
+    </div>
+
+    <div class="s4-lane">
+      <div>
+        <div class="route">Toronto <span class="arrow">→</span> Montreal <span class="km">540 km</span></div>
+      </div>
+      <div class="cost-block">
+        <div class="fill-where">Fill in Ontario</div>
+        <div class="cost">$351</div>
+        <div class="saving">Minimal spread — focus elsewhere</div>
+      </div>
+    </div>
+
+    <div class="s4-lane">
+      <div>
+        <div class="route">Edmonton <span class="arrow">→</span> Winnipeg <span class="km">1,300 km</span></div>
+      </div>
+      <div class="cost-block">
+        <div class="fill-where">Fill in Alberta</div>
+        <div class="cost">$785</div>
+        <div class="saving">Save $34 vs filling in Manitoba</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="s4-note">
+    Based on 38 L/100km average consumption. Your truck, your numbers will vary. But the gap holds no matter what you're driving.
+  </div>
+
+  <div class="footer-bar"></div>
+  <div class="footer-text">Calculate your own lanes at the fuel cost calculator — dashboard.northernmilemedia.com</div>
+</div>
+
+<!-- SLIDE 5 — CTA -->
+<div class="slide">
+  <div class="brand-wordmark">NORTHERN MILE</div>
+  <div class="slide-num">5/5</div>
+
+  <div class="s5-accent-top"></div>
+
+  <div class="s5-eyebrow">Stop hunting for prices</div>
+
+  <div class="s5-headline">
+    We track diesel across<br>
+    all <span class="green">10 provinces</span>.<br>
+    Check before you leave the yard.
+  </div>
+
+  <div class="s5-url">northernmilemedia.com</div>
+
+  <div class="s5-sub">
+    Free. No signup. Updated every 30 minutes.<br>
+    Fuel, border waits, road incidents, exchange rates — one screen.
+  </div>
+
+  <div class="s5-cta-box">Get the Wednesday Snapshot</div>
+
+  <div class="s5-footnote">
+    Every Wednesday: diesel trends, border updates, and what's moving<br>
+    in Canadian freight. Straight to your inbox. Free.
+  </div>
+
+  <div class="footer-bar"></div>
+  <div class="footer-text">dashboard.northernmilemedia.com — built for Canadian trucking</div>
+</div>
+
+</body>
+</html>
