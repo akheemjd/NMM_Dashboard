@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-282166",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.74247141,
-      "lng": -79.42291341,
-      "start": 1785615240,
-      "end": null,
-      "updated": 1785615240
-    },
-    {
       "id": "drivebc.ca/RIDE-100839",
       "province": "BC",
       "highway": {
@@ -824,10 +808,26 @@
       "start": 1785888000,
       "end": 1786104000,
       "updated": 1785489900
+    },
+    {
+      "id": "ON-281467",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1785888000,
+      "end": 1786104000,
+      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-01T20:46:18.754060+00:00",
+  "updated": "2026-08-01T21:16:27.704776+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
