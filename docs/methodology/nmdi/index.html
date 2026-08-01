@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NMDI Methodology — Northern Mile</title>
+<meta name="description" content="Northern Mile Diesel Index methodology — how we measure Canadian diesel prices daily, by province.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/methodology/nmdi/">
+<meta property="og:title" content="NMDI Methodology — Northern Mile">
+<meta property="og:description" content="How Northern Mile measures Canadian diesel prices daily, by province.">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a>
+</div></nav>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="/">Dashboard</a> › Methodology › NMDI</div>
+
+  <div class="mod"><span class="tab"></span><h2>Northern Mile Diesel Index</h2><span class="k">v1.0 · methodology</span><span class="rule"></span></div>
+
+  <div class="panel" style="padding:24px 28px;line-height:1.7;color:var(--ink-2);font-size:0.9375rem">
+    <p>The Northern Mile Diesel Index (NMDI) is our daily measurement of Canadian retail diesel prices by province. It is not an estimate. It is a named proprietary series with a published methodology.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">What it measures</h3>
+    <p>The NMDI measures the average pump price of diesel fuel paid by truck operators in each Canadian province. It reflects what a carrier pays at the pump, not the wholesale rack price.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Source and collection</h3>
+    <p>The NMDI is compiled from provincial retail diesel surveys updated weekly. We collect one representative average per province drawn from major urban markets. This is not station-level scraping. It is a provincial composite for operational planning, not a transaction-level audit.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Coverage</h3>
+    <p>Ten provinces. One reading per province. National figure computed as the arithmetic mean of all ten provincial readings. Sample size of 10 is published with every print.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Cadence</h3>
+    <p>Updated every 30 minutes. The underlying survey updates weekly. Between survey updates, the NMDI holds its last reading — it does not interpolate or simulate. When a new survey lands, the NMDI updates within the next refresh cycle.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Relationship to NRCan</h3>
+    <p>The NMDI is an independent measurement. It is not the NRCan weekly fuel survey, it is not attributed to NRCan, and it is never presented as official government data. The NRCan survey measures a different sample on a different cadence. We publish the NRCan figure separately with attribution when available. The two series are never blended into a single number.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Reconciliation</h3>
+    <p>Every week, we compare the NMDI national reading to the NRCan weekly print. The mean absolute deviation is tracked and published. A widening deviation triggers an internal review. After six months of consistent tracking, the reconciliation history is public.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Revisions</h3>
+    <p>NMDI values are never silently changed. Corrections are versioned (v1.0 → v1.1) and published in the corrections log. Methodology changes are never applied retroactively.</p>
+
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Version</h3>
+    <p>NMDI v1.0 — established August 2026. Measurement: provincial composite mean of retail diesel prices. Sample: 10 provinces, one reading each. National: arithmetic mean.</p>
+  </div>
+</main>
+
+<footer class="ft"><div class="wrap">Northern Mile Media · methodology.northernmilemedia.com<div class="note">NMDI v1.0 · © 2026 Northern Mile Media</div></div></footer>
+<script>
+/* Northern Mile Dashboard — shared behaviour for every page. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* Split-flap odometer: builds flap tiles from a single data-value, rolls on load.
+     Markup: <div class="odo" data-value="171.9" data-unit="c/L"></div>  */
+  document.querySelectorAll('.odo[data-value]').forEach(function (odo) {
+    var val = (odo.getAttribute('data-value') || '').trim();
+    var unit = odo.getAttribute('data-unit') || '';
+    odo.innerHTML = '';
+    val.split('').forEach(function (ch) {
+      var s = document.createElement('span');
+      if (ch === '.' || ch === ',') { s.className = 'sep'; s.textContent = ch; }
+      else { s.className = 'd'; s.textContent = ch; }
+      odo.appendChild(s);
+    });
+    if (unit) { var u = document.createElement('span'); u.className = 'u'; u.textContent = unit; odo.appendChild(u); }
+    if (!reduce) {
+      odo.querySelectorAll('.d').forEach(function (f) {
+        var target = f.textContent, ticks = 6 + Math.floor(Math.random() * 5), i = 0;
+        var iv = setInterval(function () {
+          if (i >= ticks) { f.textContent = target; clearInterval(iv); return; }
+          f.textContent = Math.floor(Math.random() * 10); i++;
+        }, 45);
+      });
+    }
+  });
+
+  /* Clickable rows/cards/gauges: any element with data-href navigates (mouse + Enter). */
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a')) return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
+})();
+
+function copyLink(btn, url) {
+  navigator.clipboard.writeText(url || location.href).then(function () {
+    var t = btn.textContent; btn.textContent = 'Copied';
+    setTimeout(function () { btn.textContent = t; }, 1500);
+  });
+}
+
+</script>
+</body>
+</html>
