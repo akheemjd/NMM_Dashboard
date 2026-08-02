@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-282498",
-      "province": "ON",
-      "highway": "HWY 406",
-      "direction": "Southbound",
-      "description": "Flooding on HWY 406 Southbound  at GLENDALE AVE, St. Catharines. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.13431062,
-      "lng": -79.22108454,
-      "start": 1785691080,
-      "end": null,
-      "updated": 1785691080
-    },
-    {
       "id": "ON-282470",
       "province": "ON",
       "highway": "EASTPORT DRIVE",
@@ -824,10 +808,26 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
+    },
+    {
+      "id": "ON-281598",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T19:56:56.228002+00:00",
+  "updated": "2026-08-02T20:27:04.522638+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
