@@ -3,7 +3,7 @@
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -195,18 +195,18 @@
     "none": false,
     "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 401, HWY 811, HWY 527",
+    "status_line": "HWY 401, HWY 811, HWY 527",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. Right lane ",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound  at BROCK ROAD, Pickering. 2 centre lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Westbound  at BROCK ROAD, Pickering. 3 right lanes close",
+        "what": "Vehicle Fire on HWY 401 Westbound COLLECTOR at BROCK ROAD, Pickering. 2 right la",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -235,20 +235,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "20:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "20:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 PDT"
+      "captured_at": "17:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
