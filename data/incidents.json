@@ -1,41 +1,20 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-101022",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Port Mann Bridge",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall. Expect delays due to congestion. Right lane in 152 Street exit lanes is blocked at the west end.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.22336855,
-      "lng": -122.81493635,
-      "start": "2026-08-01T16:39:04-07:00",
-      "end": "",
-      "updated": "2026-08-01T17:28:47-07:00"
-    },
-    {
-      "id": "ON-282221",
+      "id": "ON-282233",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at BROCK ROAD, Pickering. 1 right lane and right shoulder closed.",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at DIXIE ROAD, Mississauga. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.840052294,
-      "lng": -79.068383574,
-      "start": 1785628980,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.59659275,
+      "lng": -79.56882047,
+      "start": 1785633180,
       "end": null,
-      "updated": 1785630480
+      "updated": 1785633180
     },
     {
       "id": "ON-277474",
@@ -824,10 +803,26 @@
       "start": 1785888000,
       "end": 1786104000,
       "updated": 1785489900
+    },
+    {
+      "id": "ON-281467",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1785888000,
+      "end": 1786104000,
+      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T00:48:05.498832+00:00",
+  "updated": "2026-08-02T01:18:22.866953+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
