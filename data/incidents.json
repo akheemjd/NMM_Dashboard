@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282296",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at LIVERPOOL ROAD, Pickering. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.827872,
+      "lng": -79.094667,
+      "start": 1785674580,
+      "end": null,
+      "updated": 1785674580
+    },
+    {
       "id": "ON-261152",
       "province": "ON",
       "highway": "HWY 61",
@@ -47,54 +63,6 @@
       "start": 1784639280,
       "end": null,
       "updated": 1785672840
-    },
-    {
-      "id": "ON-282251",
-      "province": "ON",
-      "highway": "HWY 17A",
-      "direction": "Westbound",
-      "description": "Collision on HWY 17A Westbound  at SEC HWY 596 (N)-TO MINAKI - DARLINGTON DR (S), Kenora. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 49.7856426,
-      "lng": -94.5875261,
-      "start": 1785639300,
-      "end": null,
-      "updated": 1785672840
-    },
-    {
-      "id": "ON-282291",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at BAYVIEW AVE, Toronto. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.76535079,
-      "lng": -79.37418085,
-      "start": 1785671400,
-      "end": null,
-      "updated": 1785672300
-    },
-    {
-      "id": "ON-282288",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at HWY 407, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.52783663,
-      "lng": -79.72424269,
-      "start": 1785671160,
-      "end": null,
-      "updated": 1785671160
     },
     {
       "id": "ON-282286",
@@ -819,10 +787,42 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490320
+    },
+    {
+      "id": "ON-281471",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.426376,
+      "lng": -75.61628,
+      "start": 1785985200,
+      "end": 1786006800,
+      "updated": 1785490200
+    },
+    {
+      "id": "ON-281598",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T12:22:17.510662+00:00",
+  "updated": "2026-08-02T12:53:12.793698+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
