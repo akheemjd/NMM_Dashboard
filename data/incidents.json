@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-282269",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Concession Rd 5-6, Tunis, Tunis. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.0588202,
+      "lng": -81.0297989,
+      "start": 1785655140,
+      "end": null,
+      "updated": 1785675960
+    },
+    {
+      "id": "ON-282304",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at STEVENSON ROAD, Oshawa. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.8764985,
+      "lng": -78.8756219,
+      "start": 1785675780,
+      "end": null,
+      "updated": 1785675780
+    },
+    {
+      "id": "ON-282302",
+      "province": "ON",
+      "highway": "HWY 420",
+      "direction": "Westbound",
+      "description": "Collision on HWY 420 Westbound  at DRUMMOND ROAD, Niagara Falls. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.09614766,
+      "lng": -79.09811849,
+      "start": 1785675420,
+      "end": null,
+      "updated": 1785675420
+    },
+    {
       "id": "ON-282296",
       "province": "ON",
       "highway": "HWY 401",
@@ -95,22 +143,6 @@
       "start": 1785670740,
       "end": null,
       "updated": 1785670740
-    },
-    {
-      "id": "ON-282269",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Matheson Hwy 11/101 West Jct, Matheson. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.0588202,
-      "lng": -81.0297989,
-      "start": 1785655140,
-      "end": null,
-      "updated": 1785669060
     },
     {
       "id": "drivebc.ca/RIDE-100839",
@@ -787,42 +819,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490320
-    },
-    {
-      "id": "ON-281471",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490200
-    },
-    {
-      "id": "ON-281598",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T12:53:12.793698+00:00",
+  "updated": "2026-08-02T13:23:36.273283+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
