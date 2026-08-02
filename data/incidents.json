@@ -1,38 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-282589",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 400 Southbound ON-RAMP at LLOYDTOWN-AURORA RD, Kettleby. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.001578,
-      "lng": -79.585988,
-      "start": 1785698160,
-      "end": null,
-      "updated": 1785698160
-    },
-    {
-      "id": "ON-282588",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Police Investigation on HWY 400 Northbound RAMP at HIGHWAY 7, Vaughan. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.78578002,
-      "lng": -79.53758267,
-      "start": 1785698040,
-      "end": null,
-      "updated": 1785698040
-    },
-    {
       "id": "ON-282498",
       "province": "ON",
       "highway": "HWY 406",
@@ -63,22 +31,6 @@
       "start": 1785689280,
       "end": null,
       "updated": 1785689280
-    },
-    {
-      "id": "ON-282468",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound ON-RAMP at MORNINGSIDE AVE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.795806,
-      "lng": -79.197717,
-      "start": 1785689100,
-      "end": null,
-      "updated": 1785689100
     },
     {
       "id": "ON-282269",
@@ -377,6 +329,27 @@
       "start": 1785841200,
       "end": 1785871800,
       "updated": 1785524880
+    },
+    {
+      "id": "drivebc.ca/DBC-93850",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Carson Rd",
+        "to": "Almond Gardens Rd W",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Spraggett Rd, in both directions. Construction work planned between Carson Rd and Almond Gardens Rd W. Starting Thu Aug 13 until Fri Aug 28. Road closure planned. Last updated Fri Jul 31 at 11:42 AM PDT. (DBC-93850)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.019246,
+      "lng": -118.47485,
+      "start": "2026-07-31T11:42:27-07:00",
+      "end": "",
+      "updated": "2026-07-31T11:42:38-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-100771",
@@ -819,10 +792,42 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490320
+    },
+    {
+      "id": "ON-281596",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490320
+    },
+    {
+      "id": "ON-281471",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.426376,
+      "lng": -75.61628,
+      "start": 1785985200,
+      "end": 1786006800,
+      "updated": 1785490200
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T19:26:47.411540+00:00",
+  "updated": "2026-08-02T19:56:56.228002+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
