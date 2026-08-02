@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282269",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Concession Rd 5-6, Tunis, Tunis. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.0588202,
+      "lng": -81.0297989,
+      "start": 1785655140,
+      "end": null,
+      "updated": 1785702420
+    },
+    {
       "id": "ON-282470",
       "province": "ON",
       "highway": "EASTPORT DRIVE",
@@ -15,22 +31,6 @@
       "start": 1785689280,
       "end": null,
       "updated": 1785689280
-    },
-    {
-      "id": "ON-282269",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Concession Rd 5-6, Tunis, Tunis. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.0588202,
-      "lng": -81.0297989,
-      "start": 1785655140,
-      "end": null,
-      "updated": 1785688560
     },
     {
       "id": "ON-282307",
@@ -827,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T20:27:04.522638+00:00",
+  "updated": "2026-08-02T20:57:12.776093+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
