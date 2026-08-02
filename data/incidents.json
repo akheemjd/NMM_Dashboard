@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-282550",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at HWY 427, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.61212971,
-      "lng": -79.55185083,
-      "start": 1785694920,
-      "end": null,
-      "updated": 1785694920
-    },
-    {
       "id": "ON-282320",
       "province": "ON",
       "highway": "HWY 402",
@@ -33,22 +17,6 @@
       "updated": 1785694260
     },
     {
-      "id": "ON-282540",
-      "province": "ON",
-      "highway": "HWY 407",
-      "direction": "Westbound",
-      "description": "Collision on HWY 407 Westbound  at LAKE RIDGE RD, Whitby. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.949415,
-      "lng": -79.021081,
-      "start": 1785693960,
-      "end": null,
-      "updated": 1785693960
-    },
-    {
       "id": "ON-282542",
       "province": "ON",
       "highway": "HWY 407",
@@ -63,22 +31,6 @@
       "start": 1785693960,
       "end": null,
       "updated": 1785693960
-    },
-    {
-      "id": "ON-282524",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at WHITES ROAD, Pickering. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.8164089,
-      "lng": -79.1143787,
-      "start": 1785692580,
-      "end": null,
-      "updated": 1785692580
     },
     {
       "id": "ON-282498",
@@ -819,10 +771,58 @@
       "start": 1782990000,
       "end": 1785841200,
       "updated": 1785490740
+    },
+    {
+      "id": "ON-281477",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA ROAD 174, Ottawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.425316,
+      "lng": -75.615814,
+      "start": 1785898800,
+      "end": 1785920400,
+      "updated": 1785490560
+    },
+    {
+      "id": "ON-281597",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound Off-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490560
+    },
+    {
+      "id": "ON-281470",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 417 Eastbound  between ST. LAURENT BLVD (IC 115) and AVIATION PKWY (IC 113A), Ottawa. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.42029,
+      "lng": -75.63509,
+      "start": 1785985200,
+      "end": 1786006800,
+      "updated": 1785490320
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T18:26:30.129406+00:00",
+  "updated": "2026-08-02T18:56:38.494882+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
