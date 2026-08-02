@@ -20,7 +20,7 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Cost Calculator</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with NMDI at c/L</span><span>Updated 14:53 EDT</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with NMDI at 224.2c/L</span><span>Updated 14:53 EDT</span></div>
 
   <!-- 1. Trip Fuel Cost -->
   <div class="mod"><span class="tab"></span><h2>Trip fuel cost</h2><span class="rule"></span></div>
@@ -28,9 +28,9 @@
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
       <div style="flex:1;min-width:120px;"><label class="fl" for="dist">Distance (km)</label><input class="field" id="dist" type="number" value="1000" min="0" oninput="calcAll()"></div>
       <div style="flex:1;min-width:120px;"><label class="fl" for="burn">Burn (L/100km)</label><input class="field" id="burn" type="number" value="38" min="1" oninput="calcAll()"></div>
-      <div style="flex:1;min-width:120px;"><label class="fl" for="price">Diesel (c/L)</label><input class="field" id="price" type="number" value="" min="0" step="0.1" oninput="calcAll()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="price">Diesel (c/L)</label><input class="field" id="price" type="number" value="224.2" min="0" step="0.1" oninput="calcAll()"></div>
     </div>
-    <button class="btn" onclick="document.getElementById('price').value='';calcAll()" style="margin-bottom:12px;">Reset to national avg</button>
+    <button class="btn" onclick="document.getElementById('price').value='224.2';calcAll()" style="margin-bottom:12px;">Reset to national avg</button>
     <div class="readout"><div class="rl">Trip fuel cost</div><div class="big" id="trip-cost">—</div><div class="meta" id="trip-detail"></div></div>
   </div>
 
@@ -58,7 +58,7 @@
   <div class="panel" style="padding:20px 22px">
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
       <div style="flex:1;min-width:120px;"><label class="fl" for="be-burn">Burn (L/100km)</label><input class="field" id="be-burn" type="number" value="38" min="1" oninput="calcBE()"></div>
-      <div style="flex:1;min-width:120px;"><label class="fl" for="be-diesel">Diesel (c/L)</label><input class="field" id="be-diesel" type="number" value="" min="0" step="0.1" oninput="calcBE()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="be-diesel">Diesel (c/L)</label><input class="field" id="be-diesel" type="number" value="224.2" min="0" step="0.1" oninput="calcBE()"></div>
       <div style="flex:1;min-width:120px;"><label class="fl" for="be-fixed">Fixed cost/km (c)</label><input class="field" id="be-fixed" type="number" value="45" min="0" step="1" oninput="calcBE()"></div>
     </div>
     <p style="font-size:0.6875rem;color:var(--ink-3);margin-bottom:12px;">Fixed costs per km: truck payment, insurance, maintenance, plates. Industry average for a Class 8 tractor-trailer is 40–55c/km.</p>
@@ -71,7 +71,7 @@
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
       <div style="flex:1;min-width:120px;"><label class="fl" for="dh-km">Deadhead (km)</label><input class="field" id="dh-km" type="number" value="200" min="0" oninput="calcDH()"></div>
       <div style="flex:1;min-width:120px;"><label class="fl" for="dh-burn">Burn (L/100km)</label><input class="field" id="dh-burn" type="number" value="38" min="1" oninput="calcDH()"></div>
-      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-diesel">Diesel (c/L)</label><input class="field" id="dh-diesel" type="number" value="" min="0" step="0.1" oninput="calcDH()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-diesel">Diesel (c/L)</label><input class="field" id="dh-diesel" type="number" value="224.2" min="0" step="0.1" oninput="calcDH()"></div>
     </div>
     <div class="readout"><div class="rl">Cost of those empty miles</div><div class="big" id="dh-result">—</div><div class="meta" id="dh-detail"></div></div>
     <div style="margin-top:16px;padding:8px 12px;background:rgba(245,197,24,.08);border-left:2px solid var(--yellow);font-size:0.75rem;color:var(--ink-2);" id="dh-tip"></div>
@@ -86,7 +86,7 @@
     <div class="row" style="margin-bottom:12px">
       <div><label class="fl" for="rf-dist">Distance (km)</label><input class="field" id="rf-dist" type="number" value="1380" min="0" oninput="calcRF()"></div>
       <div><label class="fl" for="rf-burn">Burn (L/100km)</label><input class="field" id="rf-burn" type="number" value="38" min="1" oninput="calcRF()"></div>
-      <div><label class="fl" for="rf-diesel">Diesel (c/L)</label><input class="field" id="rf-diesel" type="number" value="" min="0" step="0.1" oninput="calcRF()"></div>
+      <div><label class="fl" for="rf-diesel">Diesel (c/L)</label><input class="field" id="rf-diesel" type="number" value="224.2" min="0" step="0.1" oninput="calcRF()"></div>
     </div>
     <div class="row" style="margin-bottom:16px">
       <div><label class="fl" for="rf-margin">Target margin (%)</label><input class="field" id="rf-margin" type="number" value="15" min="0" max="50" oninput="calcRF()"></div>
@@ -98,7 +98,7 @@
 
   <div class="mod"><span class="tab"></span><h2>Common questions</h2><span class="rule"></span></div>
   <div class="faq"><dl>
-    <dt>What diesel price does this use?</dt><dd>Pre-loaded with the Northern Mile Diesel Index (c/L), updated every 30 minutes. Change it to any pump price.</dd>
+    <dt>What diesel price does this use?</dt><dd>Pre-loaded with the Northern Mile Diesel Index (224.2c/L), updated every 30 minutes. Change it to any pump price.</dd>
     <dt>How is the cost worked out?</dt><dd>Litres burned = distance ÷ 100 × burn rate. Cost = litres × price per litre.</dd>
     <dt>How do I use the cross-border calculator?</dt><dd>Enter the US pump price in USD per gallon and the current exchange rate. We convert to Canadian cents per litre so you can compare directly with your home province.</dd>
   </dl></div>

@@ -95,6 +95,7 @@ fuel_top = provinces_data[:6]
 prices = {c: p for c, p in d_vals}  # home page shows top 6
 
 fuel = {
+    "national_diesel": f"{fuel_nat:.1f}",
     "series": "NMDI",
     "national_nmdi": f"{fuel_nat:.1f}",
     
