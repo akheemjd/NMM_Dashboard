@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NMDI Methodology — Northern Mile</title>
+<meta name="description" content="Northern Mile Diesel Index (NMDI) methodology — how we measure diesel by province.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/methodology/nmdi/">
+<link rel="stylesheet" href="/assets/styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a>
+</div></nav>
+<main class="wrap">
+  <div class="breadcrumb"><a href="/">Dashboard</a> › Methodology › NMDI</div>
+  <div class="mod"><span class="tab"></span><h2>Northern Mile Diesel Index (NMDI)</h2><span class="k">v1.0 · methodology</span><span class="rule"></span></div>
+  <div class="panel" style="padding:24px 28px;line-height:1.7;color:var(--ink-2);font-size:0.9375rem">
+    <p>The Northern Mile Diesel Index (NMDI) is our daily measurement of retail diesel prices by province. It is a named proprietary series with a published methodology.</p>
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">What it measures</h3>
+    <p>Average pump price of diesel paid by truck operators in each Canadian province. Reflects what a carrier pays at the pump, not the wholesale rack price.</p>
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Collection</h3>
+    <p>Compiled from provincial retail diesel surveys updated weekly. One representative average per province from major urban markets. Ten provinces. National figure is the arithmetic mean.</p>
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Cadence</h3>
+    <p>Updated every 30 minutes. Underlying survey refreshes weekly. Between updates, the NMDI holds its last reading — it does not interpolate.</p>
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Revisions</h3>
+    <p>NMDI values are never silently changed. Corrections are versioned and published in the corrections log.</p>
+    <h3 style="color:var(--ink);margin:20px 0 8px;font-size:1.1rem">Version</h3>
+    <p>NMDI v1.0 — established August 2026.</p>
+  </div>
+</main>
+<footer class="ft"><div class="wrap">Northern Mile Media<div class="note">NMDI v1.0 · 2026 Northern Mile Media</div></div></footer>
+<script>
+/* Northern Mile Dashboard — shared behaviour for every page. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* Split-flap odometer: builds flap tiles from a single data-value, rolls on load.
+     Markup: <div class="odo" data-value="171.9" data-unit="c/L"></div>  */
+  document.querySelectorAll('.odo[data-value]').forEach(function (odo) {
+    var val = (odo.getAttribute('data-value') || '').trim();
+    var unit = odo.getAttribute('data-unit') || '';
+    odo.innerHTML = '';
+    val.split('').forEach(function (ch) {
+      var s = document.createElement('span');
+      if (ch === '.' || ch === ',') { s.className = 'sep'; s.textContent = ch; }
+      else { s.className = 'd'; s.textContent = ch; }
+      odo.appendChild(s);
+    });
+    if (unit) { var u = document.createElement('span'); u.className = 'u'; u.textContent = unit; odo.appendChild(u); }
+    if (!reduce) {
+      odo.querySelectorAll('.d').forEach(function (f) {
+        var target = f.textContent, ticks = 6 + Math.floor(Math.random() * 5), i = 0;
+        var iv = setInterval(function () {
+          if (i >= ticks) { f.textContent = target; clearInterval(iv); return; }
+          f.textContent = Math.floor(Math.random() * 10); i++;
+        }, 45);
+      });
+    }
+  });
+
+  /* Clickable rows/cards/gauges: any element with data-href navigates (mouse + Enter). */
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a')) return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
+})();
+
+function copyLink(btn, url) {
+  navigator.clipboard.writeText(url || location.href).then(function () {
+    var t = btn.textContent; btn.textContent = 'Copied';
+    setTimeout(function () { btn.textContent = t; }, 1500);
+  });
+}
+
+</script>
+</body>
+</html>

@@ -20,7 +20,7 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Cost Calculator</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with today's diesel at {{fuel.national_diesel}}c/L</span><span>Updated {{updated_at}}</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with NMDI at {{fuel.national_diesel}}c/L</span><span>Updated {{updated_at}}</span></div>
 
   <!-- 1. Trip Fuel Cost -->
   <div class="mod"><span class="tab"></span><h2>Trip fuel cost</h2><span class="rule"></span></div>
@@ -98,7 +98,7 @@
 
   <div class="mod"><span class="tab"></span><h2>Common questions</h2><span class="rule"></span></div>
   <div class="faq"><dl>
-    <dt>What diesel price does this use?</dt><dd>Pre-loaded with today's Canadian national average ({{fuel.national_diesel}}c/L), updated every 30 minutes. Change it to any pump price.</dd>
+    <dt>What diesel price does this use?</dt><dd>Pre-loaded with the Northern Mile Diesel Index ({{fuel.national_diesel}}c/L), updated every 30 minutes. Change it to any pump price.</dd>
     <dt>How is the cost worked out?</dt><dd>Litres burned = distance ÷ 100 × burn rate. Cost = litres × price per litre.</dd>
     <dt>How do I use the cross-border calculator?</dt><dd>Enter the US pump price in USD per gallon and the current exchange rate. We convert to Canadian cents per litre so you can compare directly with your home province.</dd>
   </dl></div>

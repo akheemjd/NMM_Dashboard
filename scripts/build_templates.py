@@ -152,6 +152,7 @@ def build_all():
         "market-pulse": load_json("market.norm"),
         "industry-news": load_json("news.norm"),
         "fuel-cost-calculator": {**load_json("fx.norm"), **load_json("fuel.norm")},
+        "methodology": load_json("home.norm"),
     }
 
     built = []
