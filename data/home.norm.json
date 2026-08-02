@@ -3,7 +3,7 @@
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 407, HWY 17A, HWY 17, HWY 11",
+    "status_line": "HWY 404, HWY 403 , HWY 17A, HWY 17",
     "incidents": [
       {
-        "road": "HWY 407",
-        "what": "Collision on HWY 407 Eastbound ON-RAMP at SIMCOE ST, Oshawa. All lanes closed.",
+        "road": "HWY 404",
+        "what": "Disabled Vehicle on HWY 404 Southbound ON-RAMP at 16TH AVE, Markham-Richmondhill",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17A",
-        "what": "Collision on HWY 17A Westbound  at SEC HWY 596 (N)-TO MINAKI - DARLINGTON DR (S)",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at ERIN MILLS PKWY, Mississauga. Rig",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -230,25 +230,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 EDT"
+      "captured_at": "03:03 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -257,7 +257,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:57 EDT"
+      "captured_at": "03:03 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 PDT"
+      "captured_at": "00:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
