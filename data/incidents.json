@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-282271",
+      "id": "ON-282274",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at WEST MALL/EVANS AVE, Toronto. Left shoulder and left lane closed.",
+      "highway": "HWY 406",
+      "direction": "Northbound",
+      "description": "Collision on HWY 406 Northbound  at WESTCHESTER AVE, St. Catharines. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "left shoulder and left lane closed",
-      "lat": 43.6068109,
-      "lng": -79.55781285,
-      "start": 1785656040,
+      "lat": 43.1579476,
+      "lng": -79.23596847,
+      "start": 1785657840,
       "end": null,
-      "updated": 1785656040
+      "updated": 1785657840
+    },
+    {
+      "id": "ON-282273",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.81034617,
+      "lng": -79.54373723,
+      "start": 1785657120,
+      "end": null,
+      "updated": 1785657120
     },
     {
       "id": "ON-282269",
@@ -63,22 +79,6 @@
       "start": 1785653700,
       "end": null,
       "updated": 1785653700
-    },
-    {
-      "id": "ON-282240",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Collision on HWY 11 Northbound  at SPRUCE DR(E), Temagami. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 47.11164519,
-      "lng": -79.79563564,
-      "start": 1785635640,
-      "end": null,
-      "updated": 1785651900
     },
     {
       "id": "ON-282251",
@@ -822,7 +822,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T07:50:44.042488+00:00",
+  "updated": "2026-08-02T08:20:51.970721+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
