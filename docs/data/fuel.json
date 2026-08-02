@@ -1,128 +1,81 @@
 {
   "provinces": {
-    "BC": {
-      "diesel": 178.5,
-      "gasoline": 185.9,
-      "trend": "down",
-      "note": "Lower Mainland average"
-    },
-    "AB": {
-      "diesel": 158.9,
-      "gasoline": 152.4,
-      "trend": "down",
-      "note": "Calgary/Edmonton average"
-    },
-    "SK": {
-      "diesel": 162.3,
-      "gasoline": 158.7,
-      "trend": "down",
-      "note": "Regina/Saskatoon average"
-    },
-    "MB": {
-      "diesel": 165.7,
-      "gasoline": 160.2,
-      "trend": "flat",
-      "note": "Winnipeg average"
-    },
-    "ON": {
-      "diesel": 171.2,
-      "gasoline": 167.8,
-      "trend": "down",
-      "note": "GTA average"
-    },
     "QC": {
-      "diesel": 175.8,
-      "gasoline": 172.5,
-      "trend": "down",
-      "note": "Montreal average"
+      "diesel": 252.7,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 8 locations"
     },
     "NB": {
-      "diesel": 173.4,
-      "gasoline": 169.1,
+      "diesel": 242.3,
+      "gasoline": null,
       "trend": "flat",
-      "note": "Moncton average"
+      "note": "NRCan daily \u2014 10 locations"
     },
-    "NS": {
-      "diesel": 174.9,
-      "gasoline": 170.3,
+    "NT": {
+      "diesel": 203.8,
+      "gasoline": null,
       "trend": "flat",
-      "note": "Halifax average"
+      "note": "NRCan daily \u2014 1 locations"
     },
     "PE": {
-      "diesel": 176.1,
-      "gasoline": 171.8,
+      "diesel": 244.3,
+      "gasoline": null,
       "trend": "flat",
-      "note": "Charlottetown average"
+      "note": "NRCan daily \u2014 1 locations"
+    },
+    "YT": {
+      "diesel": 209.9,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 1 locations"
+    },
+    "BC": {
+      "diesel": 232.4,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 7 locations"
+    },
+    "AB": {
+      "diesel": 199.0,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 6 locations"
+    },
+    "SK": {
+      "diesel": 201.3,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 4 locations"
+    },
+    "MB": {
+      "diesel": 206.3,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 2 locations"
+    },
+    "ON": {
+      "diesel": 218.6,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 19 locations"
+    },
+    "NS": {
+      "diesel": 237.3,
+      "gasoline": null,
+      "trend": "flat",
+      "note": "NRCan daily \u2014 6 locations"
     },
     "NL": {
-      "diesel": 182.5,
-      "gasoline": 178.0,
+      "diesel": 241.9,
+      "gasoline": null,
       "trend": "flat",
-      "note": "St. John's average"
-    },
-    "US-WA": {
-      "diesel": 195.2,
-      "gasoline": 192.8,
-      "trend": "down",
-      "note": "Pacific Northwest (WA/OR)"
-    },
-    "US-CA": {
-      "diesel": 215.7,
-      "gasoline": 208.4,
-      "trend": "down",
-      "note": "California"
-    },
-    "US-TX": {
-      "diesel": 166.3,
-      "gasoline": 158.9,
-      "trend": "down",
-      "note": "Gulf Coast / Texas"
-    },
-    "US-MN": {
-      "diesel": 182.1,
-      "gasoline": 175.6,
-      "trend": "flat",
-      "note": "Midwest (MN/WI/IA)"
-    },
-    "US-IL": {
-      "diesel": 188.5,
-      "gasoline": 181.2,
-      "trend": "flat",
-      "note": "Midwest / Chicago"
-    },
-    "US-MI": {
-      "diesel": 185.8,
-      "gasoline": 178.9,
-      "trend": "flat",
-      "note": "Great Lakes (MI/OH)"
-    },
-    "US-NY": {
-      "diesel": 198.4,
-      "gasoline": 190.1,
-      "trend": "down",
-      "note": "Northeast (NY/NJ/PA)"
-    },
-    "US-NJ": {
-      "diesel": 196.7,
-      "gasoline": 188.5,
-      "trend": "down",
-      "note": "New Jersey metro"
-    },
-    "US-GA": {
-      "diesel": 179.3,
-      "gasoline": 172.4,
-      "trend": "down",
-      "note": "Southeast / Atlanta"
-    },
-    "US-OR": {
-      "diesel": 197.8,
-      "gasoline": 194.2,
-      "trend": "down",
-      "note": "Oregon"
+      "note": "NRCan daily \u2014 4 locations"
     }
   },
-  "diesel_national_avg": 171.9,
-  "gasoline_national_avg": 168.7,
-  "updated": "2026-08-01T15:13:41.418053+00:00",
-  "source_note": "Estimates from weekly surveys. Real-time fuel API requires a paid data feed."
+  "diesel_national_avg": 224.2,
+  "gasoline_national_avg": null,
+  "updated": "2026-08-02T22:53:30.704662+00:00",
+  "source": "NRCan daily retail diesel survey",
+  "location_count": 72
 }

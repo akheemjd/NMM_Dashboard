@@ -1,5 +1,5 @@
 {
-  "updated_at": "07:15 EDT",
+  "updated_at": "18:15 EDT",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -7,75 +7,78 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "16 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "30 min"
   },
   "fuel": {
-    "national_diesel": "171.9",
+    "national_diesel": "224.2",
+    "series": "NMDI",
+    "national_nmdi": "224.2",
     "change_7d": "\u2014",
+    "change_7d_band": "noise",
     "low_code": "AB",
-    "low": "158.9",
-    "high_code": "NL",
-    "high": "182.5",
-    "spread": "23.6",
+    "low": "199.0",
+    "high_code": "QC",
+    "high": "252.7",
+    "spread": "53.7",
     "fuel_top": [
       {
         "code": "AB",
         "name": "Alberta",
-        "price": "158.9",
+        "price": "199.0",
         "change": "\u2014",
         "change_class": "flat",
-        "vs_national": "-13.0",
+        "vs_national": "-25.2",
         "vs_class": "lo",
         "rowclass": "lo"
       },
       {
         "code": "SK",
         "name": "Saskatchewan",
-        "price": "162.3",
+        "price": "201.3",
         "change": "\u2014",
         "change_class": "flat",
-        "vs_national": "-9.6",
+        "vs_national": "-22.9",
         "vs_class": "lo",
         "rowclass": ""
       },
       {
         "code": "MB",
         "name": "Manitoba",
-        "price": "165.7",
+        "price": "206.3",
         "change": "\u2014",
         "change_class": "flat",
-        "vs_national": "-6.2",
+        "vs_national": "-17.9",
         "vs_class": "lo",
         "rowclass": ""
       },
       {
         "code": "ON",
         "name": "Ontario",
-        "price": "171.2",
+        "price": "218.6",
         "change": "\u2014",
         "change_class": "flat",
-        "vs_national": "-0.7",
+        "vs_national": "-5.6",
         "vs_class": "lo",
         "rowclass": ""
       },
       {
-        "code": "NB",
-        "name": "New Brunswick",
-        "price": "173.4",
+        "code": "BC",
+        "name": "British Columbia",
+        "price": "232.4",
         "change": "\u2014",
         "change_class": "flat",
-        "vs_national": "+1.5",
+        "vs_national": "+8.2",
         "vs_class": "hi",
         "rowclass": ""
       },
       {
         "code": "NS",
         "name": "Nova Scotia",
-        "price": "174.9",
+        "price": "237.3",
         "change": "\u2014",
         "change_class": "flat",
-        "vs_national": "+3.0",
+        "vs_national": "+13.1",
         "vs_class": "hi",
         "rowclass": ""
       }
@@ -85,100 +88,100 @@
     {
       "code": "AB",
       "name": "Alberta",
-      "price": "158.9",
+      "price": "199.0",
       "change": "\u2014",
       "change_class": "flat",
-      "vs_national": "-13.0",
+      "vs_national": "-25.2",
       "vs_class": "lo",
       "rowclass": "lo"
     },
     {
       "code": "SK",
       "name": "Saskatchewan",
-      "price": "162.3",
+      "price": "201.3",
       "change": "\u2014",
       "change_class": "flat",
-      "vs_national": "-9.6",
+      "vs_national": "-22.9",
       "vs_class": "lo",
       "rowclass": ""
     },
     {
       "code": "MB",
       "name": "Manitoba",
-      "price": "165.7",
+      "price": "206.3",
       "change": "\u2014",
       "change_class": "flat",
-      "vs_national": "-6.2",
+      "vs_national": "-17.9",
       "vs_class": "lo",
       "rowclass": ""
     },
     {
       "code": "ON",
       "name": "Ontario",
-      "price": "171.2",
+      "price": "218.6",
       "change": "\u2014",
       "change_class": "flat",
-      "vs_national": "-0.7",
+      "vs_national": "-5.6",
       "vs_class": "lo",
       "rowclass": ""
     },
     {
-      "code": "NB",
-      "name": "New Brunswick",
-      "price": "173.4",
+      "code": "BC",
+      "name": "British Columbia",
+      "price": "232.4",
       "change": "\u2014",
       "change_class": "flat",
-      "vs_national": "+1.5",
+      "vs_national": "+8.2",
       "vs_class": "hi",
       "rowclass": ""
     },
     {
       "code": "NS",
       "name": "Nova Scotia",
-      "price": "174.9",
+      "price": "237.3",
       "change": "\u2014",
       "change_class": "flat",
-      "vs_national": "+3.0",
-      "vs_class": "hi",
-      "rowclass": ""
-    },
-    {
-      "code": "QC",
-      "name": "Quebec",
-      "price": "175.8",
-      "change": "\u2014",
-      "change_class": "flat",
-      "vs_national": "+3.9",
-      "vs_class": "hi",
-      "rowclass": ""
-    },
-    {
-      "code": "PE",
-      "name": "PEI",
-      "price": "176.1",
-      "change": "\u2014",
-      "change_class": "flat",
-      "vs_national": "+4.2",
-      "vs_class": "hi",
-      "rowclass": ""
-    },
-    {
-      "code": "BC",
-      "name": "British Columbia",
-      "price": "178.5",
-      "change": "\u2014",
-      "change_class": "flat",
-      "vs_national": "+6.6",
+      "vs_national": "+13.1",
       "vs_class": "hi",
       "rowclass": ""
     },
     {
       "code": "NL",
       "name": "Newfoundland",
-      "price": "182.5",
+      "price": "241.9",
       "change": "\u2014",
       "change_class": "flat",
-      "vs_national": "+10.6",
+      "vs_national": "+17.7",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "NB",
+      "name": "New Brunswick",
+      "price": "242.3",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+18.1",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "PE",
+      "name": "PEI",
+      "price": "244.3",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+20.1",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "QC",
+      "name": "Quebec",
+      "price": "252.7",
+      "change": "\u2014",
+      "change_class": "flat",
+      "vs_national": "+28.5",
       "vs_class": "hi",
       "rowclass": "hi"
     }
@@ -192,18 +195,18 @@
     "none": false,
     "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 403 , HWY 400",
+    "status_line": "HWY 17, HWY 400, HWY 406, EASTPORT",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at PORT UNION ROAD, Toronto. Right",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Both Directions  between GILLAN (CR 6)/LOCHWINNOCH RD (CR 6)",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Debris on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. Left should",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. 1 right lane",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,7 +221,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:23 EDT"
+      "captured_at": "18:08 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -227,25 +230,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "18:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 EDT"
+      "captured_at": "18:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "16 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 EDT"
+      "captured_at": "18:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -254,7 +257,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "17:52 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -263,16 +266,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 MDT"
+      "captured_at": "15:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 PDT"
+      "captured_at": "15:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -281,7 +284,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:28 CDT"
+      "captured_at": "14:52 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -290,7 +293,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "18:15 EDT"
     }
   ],
   "market": [
@@ -308,15 +311,15 @@
     },
     {
       "name": "Diesel vs baseline",
-      "note": "+4.2% vs 165\u00a2 baseline",
-      "value": "171.9\u00a2/L",
+      "note": "+35.9% vs 165\u00a2 baseline",
+      "value": "224.2\u00a2/L",
       "value_class": "up"
     },
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC diese",
-      "value": "19.6\u00a2/L",
-      "value_class": "down"
+      "value": "33.4\u00a2/L",
+      "value_class": "up"
     },
     {
       "name": "USD/CAD vs 1.35 baseline",

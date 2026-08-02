@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282677",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17 Both Directions  between GILLAN (CR 6)/LOCHWINNOCH RD (CR 6) and HWY 60 (O'BRIEN RD), Renfrew. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.46899,
+      "lng": -76.62285,
+      "start": 1785711000,
+      "end": null,
+      "updated": 1785711000
+    },
+    {
+      "id": "ON-282673",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.81034617,
+      "lng": -79.54373723,
+      "start": 1785710640,
+      "end": null,
+      "updated": 1785710640
+    },
+    {
       "id": "ON-282668",
       "province": "ON",
       "highway": "HWY 406",
@@ -792,42 +824,10 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490320
-    },
-    {
-      "id": "ON-281596",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490320
-    },
-    {
-      "id": "ON-281471",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490200
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T22:27:40.318912+00:00",
+  "updated": "2026-08-02T22:53:30.357589+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
