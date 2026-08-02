@@ -1,6 +1,43 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101022",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Port Mann Bridge",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall. Expect delays due to congestion. Right lane in 152 Street exit lanes is blocked at the west end.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.22336855,
+      "lng": -122.81493635,
+      "start": "2026-08-01T16:39:04-07:00",
+      "end": "",
+      "updated": "2026-08-01T18:42:06-07:00"
+    },
+    {
+      "id": "ON-282239",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17 Both Directions  between GORMANVILLE RD, North Bay and Coursol Rd / Front St, Sturgeon Fall, Sturgeon Falls. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 46.332025703,
+      "lng": -79.486552508,
+      "start": 1785634920,
+      "end": null,
+      "updated": 1785634920
+    },
+    {
       "id": "ON-282233",
       "province": "ON",
       "highway": "QEW",
@@ -787,42 +824,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785489960
-    },
-    {
-      "id": "ON-281468",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489900
-    },
-    {
-      "id": "ON-281467",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T01:18:22.866953+00:00",
+  "updated": "2026-08-02T01:46:21.597669+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

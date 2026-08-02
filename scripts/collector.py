@@ -14,6 +14,7 @@ from datetime import datetime, timezone
 # Import market pulse collector
 sys.path.insert(0, os.path.dirname(__file__))
 from market_pulse import collect_market_pulse
+from collect_nrcan_diesel import collect as collect_fuel
 from incidents import collect_incidents
 from health_tracker import record_success, record_failure
 
@@ -115,50 +116,6 @@ def collect_weather():
         "updated": datetime.now(timezone.utc).isoformat(),
     })
     print(f"  Weather: {len(results)} cities")
-
-
-def collect_fuel():
-    """Diesel and gasoline price estimates by province and US region.
-    Updated weekly from public surveys.
-    """
-    # Provincial fuel prices (cents/litre) - diesel and regular gasoline
-    # Diesel: industry surveys  |  Gasoline: retail averages
-    provinces = {
-        "BC":      {"diesel": 178.5, "gasoline": 185.9, "trend": "down", "note": "Lower Mainland average"},
-        "AB":      {"diesel": 158.9, "gasoline": 152.4, "trend": "down", "note": "Calgary/Edmonton average"},
-        "SK":      {"diesel": 162.3, "gasoline": 158.7, "trend": "down", "note": "Regina/Saskatoon average"},
-        "MB":      {"diesel": 165.7, "gasoline": 160.2, "trend": "flat",  "note": "Winnipeg average"},
-        "ON":      {"diesel": 171.2, "gasoline": 167.8, "trend": "down", "note": "GTA average"},
-        "QC":      {"diesel": 175.8, "gasoline": 172.5, "trend": "down", "note": "Montreal average"},
-        "NB":      {"diesel": 173.4, "gasoline": 169.1, "trend": "flat",  "note": "Moncton average"},
-        "NS":      {"diesel": 174.9, "gasoline": 170.3, "trend": "flat",  "note": "Halifax average"},
-        "PE":      {"diesel": 176.1, "gasoline": 171.8, "trend": "flat",  "note": "Charlottetown average"},
-        "NL":      {"diesel": 182.5, "gasoline": 178.0, "trend": "flat",  "note": "St. John's average"},
-        # US regions (USD/gallon, converted to approximate CAD cents/L for comparison)
-        # Source: US EIA weekly retail diesel/gas prices, regional averages
-        "US-WA":   {"diesel": 195.2, "gasoline": 192.8, "trend": "down", "note": "Pacific Northwest (WA/OR)"},
-        "US-CA":   {"diesel": 215.7, "gasoline": 208.4, "trend": "down", "note": "California"},
-        "US-TX":   {"diesel": 166.3, "gasoline": 158.9, "trend": "down", "note": "Gulf Coast / Texas"},
-        "US-MN":   {"diesel": 182.1, "gasoline": 175.6, "trend": "flat",  "note": "Midwest (MN/WI/IA)"},
-        "US-IL":   {"diesel": 188.5, "gasoline": 181.2, "trend": "flat",  "note": "Midwest / Chicago"},
-        "US-MI":   {"diesel": 185.8, "gasoline": 178.9, "trend": "flat",  "note": "Great Lakes (MI/OH)"},
-        "US-NY":   {"diesel": 198.4, "gasoline": 190.1, "trend": "down", "note": "Northeast (NY/NJ/PA)"},
-        "US-NJ":   {"diesel": 196.7, "gasoline": 188.5, "trend": "down", "note": "New Jersey metro"},
-        "US-GA":   {"diesel": 179.3, "gasoline": 172.4, "trend": "down", "note": "Southeast / Atlanta"},
-        "US-OR":   {"diesel": 197.8, "gasoline": 194.2, "trend": "down", "note": "Oregon"},
-    }
-
-    diesel_avg = round(sum(p["diesel"] for k, p in provinces.items() if not k.startswith("US-")) / 10, 1)
-    gas_avg = round(sum(p["gasoline"] for k, p in provinces.items() if not k.startswith("US-")) / 10, 1)
-
-    save("fuel", {
-        "provinces": provinces,
-        "diesel_national_avg": diesel_avg,
-        "gasoline_national_avg": gas_avg,
-        "updated": datetime.now(timezone.utc).isoformat(),
-        "source_note": "Estimates from weekly surveys. Real-time fuel API requires a paid data feed.",
-    })
-    print(f"  Fuel: diesel {diesel_avg}¢/L, gas {gas_avg}¢/L")
 
 
 def collect_news():
