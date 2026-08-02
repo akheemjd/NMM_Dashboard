@@ -8,7 +8,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 420, EASTPORT",
+    "status_line": "HWY 400, HWY 407, EASTPORT",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at STEVENSON ROAD, Oshawa. 2 left lanes closed.",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound  at STEELES AVENUE, Vaughan. 1 right lane",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 420",
-        "what": "Collision on HWY 420 Westbound  at DRUMMOND ROAD, Niagara Falls. Left lane close",
+        "road": "HWY 407",
+        "what": "Collision on HWY 407 Westbound ON-RAMP at HARMONY RD N, Oshawa. Right lane and r",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -235,11 +235,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 EDT"
+      "captured_at": "09:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -248,7 +248,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 EDT"
+      "captured_at": "09:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -266,16 +266,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:37 MDT"
+      "captured_at": "07:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 PDT"
+      "captured_at": "06:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -297,6 +297,18 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2362B (chained 2017)",
+      "value": "+0.3%",
+      "value_class": "up"
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.7%",
+      "value_class": "up"
+    },
     {
       "name": "Diesel vs baseline",
       "note": "+35.9% vs 165\u00a2 baseline",
