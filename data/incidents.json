@@ -1,36 +1,41 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101022",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Port Mann Bridge",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall. Expect delays due to congestion. Right lane in 152 Street exit lanes is blocked at the west end.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.22336855,
+      "lng": -122.81493635,
+      "start": "2026-08-01T16:39:04-07:00",
+      "end": "",
+      "updated": "2026-08-01T17:28:47-07:00"
+    },
+    {
       "id": "ON-282221",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at BROCK ROAD, Pickering. 2 centre lanes closed.",
+      "description": "Collision on HWY 401 Westbound  at BROCK ROAD, Pickering. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 centre lanes closed",
+      "lanes": "1 right lane and right shoulder closed",
       "lat": 43.840052294,
       "lng": -79.068383574,
       "start": 1785628980,
       "end": null,
-      "updated": 1785628980
-    },
-    {
-      "id": "ON-282220",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Vehicle Fire on HWY 401 Westbound COLLECTOR at BROCK ROAD, Pickering. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.838709657,
-      "lng": -79.071446657,
-      "start": 1785628920,
-      "end": null,
-      "updated": 1785628920
+      "updated": 1785630480
     },
     {
       "id": "ON-277474",
@@ -297,27 +302,6 @@
       "start": 1785841200,
       "end": 1785871800,
       "updated": 1785524880
-    },
-    {
-      "id": "drivebc.ca/DBC-93850",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Carson Rd",
-        "to": "Almond Gardens Rd W",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Spraggett Rd, in both directions. Construction work planned between Carson Rd and Almond Gardens Rd W. Starting Thu Aug 13 until Fri Aug 28. Road closure planned. Last updated Fri Jul 31 at 11:42 AM PDT. (DBC-93850)",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.019246,
-      "lng": -118.47485,
-      "start": "2026-07-31T11:42:27-07:00",
-      "end": "",
-      "updated": "2026-07-31T11:42:38-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-100771",
@@ -824,10 +808,26 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785489960
+    },
+    {
+      "id": "ON-281468",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1785888000,
+      "end": 1786104000,
+      "updated": 1785489900
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T00:17:47.029990+00:00",
+  "updated": "2026-08-02T00:48:05.498832+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
