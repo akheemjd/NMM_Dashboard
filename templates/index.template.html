@@ -28,7 +28,7 @@
 
   <section class="cockpit"><div class="gauges">
     <div class="gauge {{border.gauge_class}}" data-href="/border-wait-times/" role="link" tabindex="0" aria-label="Border crossings"><div class="gl">Border · busiest</div><div class="gv">{{border.heavy_count}} <small>Heavy</small></div><div class="gs">{{border.moderate_count}} moderate · {{border.closed_count}} closed</div></div>
-    <div class="gauge" data-href="/fuel-prices/" role="link" tabindex="0" aria-label="Fuel prices"><div class="gl">NMDI · national</div><div class="odo" data-value="{{fuel.national_diesel}}" data-unit="c/L"></div><div class="gs">{{fuel.change_7d}} / 7d</div></div>
+    <div class="gauge" data-href="/fuel-prices/" role="link" tabindex="0" aria-label="Fuel prices"><div class="gl">Diesel · national</div><div class="odo" data-value="{{fuel.national_diesel}}" data-unit="c/L"></div><div class="gs">{{fuel.change_7d}} / 7d</div></div>
     <div class="gauge" data-href="/exchange-rate/" role="link" tabindex="0" aria-label="Exchange rate"><div class="gl">USD / CAD</div><div class="gv">{{fx.usd_cad}}</div><div class="gs">{{fx.direction}} · {{fx.change}}</div></div>
     <div class="gauge {{incidents.gauge_class}}" data-href="/road-incidents/" role="link" tabindex="0" aria-label="Road incidents"><div class="gl">Collisions &amp; closures</div><div class="gv">{{incidents.active_count}}</div><div class="gs">{{incidents.status_line}}</div></div>
   </div></section>
@@ -53,9 +53,9 @@
   </table></div>
   <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Border module by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
 
-  <div class="mod"><span class="tab"></span><h2>Fuel &amp; exchange</h2><span class="k">NMDI · USD/CAD</span><span class="rule"></span><a class="full" href="/fuel-prices/">Full fuel →</a></div>
+  <div class="mod"><span class="tab"></span><h2>Fuel &amp; exchange</h2><span class="k">Diesel · USD/CAD</span><span class="rule"></span><a class="full" href="/fuel-prices/">Full fuel →</a></div>
   <div class="row">
-    <div class="panel"><div class="readout"><div class="rl">NMDI · national average</div><div class="big">{{fuel.national_diesel}}<small> c/L</small></div><div class="meta">{{fuel.low_code}} {{fuel.low}} low · {{fuel.high_code}} {{fuel.high}} high · spread {{fuel.spread}}c · {{fuel.sample_stations}} stations</div></div>
+    <div class="panel"><div class="readout"><div class="rl">Diesel · national average</div><div class="big">{{fuel.national_diesel}}<small> c/L</small></div><div class="meta">{{fuel.low_code}} {{fuel.low}} low · {{fuel.high_code}} {{fuel.high}} high · spread {{fuel.spread}}c</div></div>
       <table class="tbl">
       <!--LOOP:fuel_top--><tr data-href="/fuel-prices/" role="link" tabindex="0"><td class="code">{{code}}</td><td>{{name}}</td><td class="r"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}">{{change}}</td></tr><!--/LOOP:fuel_top-->
       </table></div>

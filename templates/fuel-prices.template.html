@@ -28,11 +28,11 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Prices</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Northern Mile Diesel Index · all ten provinces</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Diesel · all ten provinces</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
 
   <section class="cluster">
     <div>
-      <div class="readlabel"><span class="tick">▸</span> NMDI · National</div>
+      <div class="readlabel"><span class="tick">▸</span> National average · Diesel</div>
       <div class="odo hero-odo" data-value="{{fuel.national_diesel}}" data-unit="c/L"></div>
       <div class="trend"><span class="b">7-DAY</span> {{fuel.change_7d}} &nbsp; <span class="b">30-DAY</span> {{fuel.change_30d}}</div>
     </div>
@@ -45,7 +45,7 @@
 
   <!--OPTIONAL:sponsor_fuel--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_fuel.name}}</div><div class="l">{{sponsor_fuel.line}}</div></div><a class="c" href="{{sponsor_fuel.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_fuel-->
 
-  <div class="mod"><span class="tab"></span><h2>NMDI by province</h2><span class="k">c/L · Δ since last</span><span class="rule"></span></div>
+  <div class="mod"><span class="tab"></span><h2>Diesel by province</h2><span class="k">c/L · Δ since last</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Prov</th><th>Region</th><th class="r">Price</th><th class="r">Change</th><th class="r">vs Nat</th></tr></thead>
     <!--LOOP:provinces--><tr class="{{rowclass}}"><td class="code">{{code}}</td><td>{{name}}</td><td class="r"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}">{{change}}</td><td class="r mono {{vs_class}}">{{vs_national}}</td></tr><!--/LOOP:provinces-->

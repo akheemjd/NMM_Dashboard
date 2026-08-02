@@ -103,7 +103,7 @@ fuel = {
     "low_code": d_sorted[0][0], "low": f"{d_sorted[0][1]:.1f}",
     "high_code": d_sorted[-1][0], "high": f"{d_sorted[-1][1]:.1f}",
     "spread": f"{d_sorted[-1][1]-d_sorted[0][1]:.1f}",
-    "sample_stations": 10, "sample_markets": 10,
+    
     "fuel_top": fuel_top,
 }
 
