@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-282250",
+      "id": "ON-282251",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound TRANSFER at Etobicoke Creek Express to Collector, Mississauga. Right lane and right shoulder closed.",
+      "highway": "HWY 17A",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17A Both Directions  at SEC HWY 596 (N)-TO MINAKI - DARLINGTON DR (S), Kenora. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.66153611,
-      "lng": -79.61094444,
-      "start": 1785638340,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.7856426,
+      "lng": -94.5875261,
+      "start": 1785639300,
       "end": null,
-      "updated": 1785638340
-    },
-    {
-      "id": "ON-282248",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at KENNEDY RD -SCARBOROUGH, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.77471905,
-      "lng": -79.28433085,
-      "start": 1785637980,
-      "end": null,
-      "updated": 1785637980
+      "updated": 1785639300
     },
     {
       "id": "ON-282239",
@@ -819,10 +803,26 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
+    },
+    {
+      "id": "ON-281598",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T02:49:15.670901+00:00",
+  "updated": "2026-08-02T03:19:25.670684+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
