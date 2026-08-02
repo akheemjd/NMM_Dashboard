@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282271",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at WEST MALL/EVANS AVE, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.6068109,
+      "lng": -79.55781285,
+      "start": 1785656040,
+      "end": null,
+      "updated": 1785656040
+    },
+    {
+      "id": "ON-282269",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Matheson Hwy 11/101 Jct, Matheson. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.0588202,
+      "lng": -81.0297989,
+      "start": 1785655140,
+      "end": null,
+      "updated": 1785655140
+    },
+    {
       "id": "ON-282243",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,22 +47,6 @@
       "start": 1785636420,
       "end": null,
       "updated": 1785654900
-    },
-    {
-      "id": "ON-282268",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 404 Southbound ON-RAMP at 16TH AVE, Markham-Richmondhill . Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.865196,
-      "lng": -79.375361,
-      "start": 1785654840,
-      "end": null,
-      "updated": 1785654840
     },
     {
       "id": "ON-282265",
@@ -803,26 +819,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490320
-    },
-    {
-      "id": "ON-281471",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490200
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T07:20:34.817592+00:00",
+  "updated": "2026-08-02T07:50:44.042488+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

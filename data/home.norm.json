@@ -7,8 +7,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "12 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 403 , HWY 17A, HWY 17",
+    "status_line": "QEW, HWY 11, HWY 403 , HWY 17A",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Southbound ON-RAMP at 16TH AVE, Markham-Richmondhill",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at WEST MALL/EVANS AVE, Toronto. Left s",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at ERIN MILLS PKWY, Mississauga. Rig",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -221,7 +221,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -230,16 +230,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:03 EDT"
+      "captured_at": "03:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 EDT"
+      "captured_at": "03:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -248,7 +248,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 EDT"
+      "captured_at": "03:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -266,7 +266,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 MDT"
+      "captured_at": "01:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 PDT"
+      "captured_at": "00:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -284,7 +284,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 CDT"
+      "captured_at": "02:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
