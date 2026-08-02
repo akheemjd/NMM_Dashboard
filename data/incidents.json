@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-282276",
+      "id": "ON-282273",
       "province": "ON",
-      "highway": "HWY 427",
+      "highway": "HWY 400",
       "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound RAMP at HWY 401, Toronto. Left shoulder and left lane closed.",
+      "description": "Collision on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. Left shoulder and 2 left lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.67159181,
-      "lng": -79.58433486,
-      "start": 1785662400,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.81034617,
+      "lng": -79.54373723,
+      "start": 1785657120,
       "end": null,
-      "updated": 1785662400
+      "updated": 1785665640
     },
     {
       "id": "ON-282251",
@@ -31,22 +31,6 @@
       "start": 1785639300,
       "end": null,
       "updated": 1785660660
-    },
-    {
-      "id": "ON-282273",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.81034617,
-      "lng": -79.54373723,
-      "start": 1785657120,
-      "end": null,
-      "updated": 1785657120
     },
     {
       "id": "ON-282269",
@@ -819,10 +803,26 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
+    },
+    {
+      "id": "ON-281598",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T09:51:18.267802+00:00",
+  "updated": "2026-08-02T10:21:27.648037+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
