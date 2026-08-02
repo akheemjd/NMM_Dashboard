@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-282503",
+      "id": "ON-282524",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at RED HILL, Hamilton. Left shoulder and 2 left lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at WHITES ROAD, Pickering. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.25056639,
-      "lng": -79.7623322,
-      "start": 1785691260,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.8164089,
+      "lng": -79.1143787,
+      "start": 1785692580,
       "end": null,
-      "updated": 1785691260
+      "updated": 1785692580
+    },
+    {
+      "id": "ON-282521",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound RAMP at NIKOLA TESLA, Hamilton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.2585035,
+      "lng": -79.7657876,
+      "start": 1785692280,
+      "end": null,
+      "updated": 1785692280
+    },
+    {
+      "id": "ON-282514",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound RAMP at HIGHWAY 7, Vaughan. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.79326215,
+      "lng": -79.54113666,
+      "start": 1785692100,
+      "end": null,
+      "updated": 1785692100
     },
     {
       "id": "ON-282498",
@@ -31,22 +63,6 @@
       "start": 1785691080,
       "end": null,
       "updated": 1785691080
-    },
-    {
-      "id": "ON-282489",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Flooding on QEW Fort Erie bound RAMP at RED HILL, Hamilton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.24872727,
-      "lng": -79.76326883,
-      "start": 1785690420,
-      "end": null,
-      "updated": 1785690420
     },
     {
       "id": "ON-282470",
@@ -79,22 +95,6 @@
       "start": 1785689100,
       "end": null,
       "updated": 1785689100
-    },
-    {
-      "id": "ON-282460",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Flooding on QEW Fort Erie bound  at CAWTHRA ROAD, Mississauga. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.58352621,
-      "lng": -79.58328062,
-      "start": 1785688620,
-      "end": null,
-      "updated": 1785688620
     },
     {
       "id": "ON-282269",
@@ -822,7 +822,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T17:26:12.376005+00:00",
+  "updated": "2026-08-02T17:56:20.549131+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
