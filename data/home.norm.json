@@ -1,14 +1,14 @@
 {
-  "updated_at": "02:21 EDT",
+  "updated_at": "04:15 EDT",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 2,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 1,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "16 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 406, HWY 400, HWY 11, HWY 403 ",
+    "status_line": "HWY 400, HWY 11, HWY 403 , HWY 17A",
     "incidents": [
       {
-        "road": "HWY 406",
-        "what": "Collision on HWY 406 Northbound  at WESTCHESTER AVE, St. Catharines. Left should",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. Left shoulder and 1",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. Left shoulder and 1",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -235,11 +235,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "16 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "04:00 EDT"
+      "captured_at": "04:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -248,7 +248,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:00 EDT"
+      "captured_at": "04:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -266,7 +266,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:10 MDT"
+      "captured_at": "02:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:00 PDT"
+      "captured_at": "01:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -293,7 +293,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:21 EDT"
+      "captured_at": "04:15 EDT"
     }
   ],
   "market": [
