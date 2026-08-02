@@ -1,0 +1,64 @@
+# Northern Mile — Materiality Thresholds v1 (provisional, recalibrate week 8)
+# Every threshold here is a starting point. Replace with real distributions at week 8.
+
+diesel_weekly:
+  unit: cents_per_litre
+  mention_floor: 1.0
+  lead_floor: 3.0
+  alert_floor: 6.0
+  sigma_material: 1.0
+  sigma_lead: 2.0
+  sigma_alert: 2.5
+  display_decimals: 1
+  drift_periods: [4, 8, 12]
+  drift_consistency: 0.75
+
+diesel_spread:
+  unit: cents_per_litre
+  mention_floor: 2.0
+  lead_floor: 5.0
+  alert_condition: "12-month maximum"
+  display_decimals: 1
+
+usdcad_daily:
+  unit: percent_change
+  mention_floor: 0.2
+  lead_floor: 0.5
+  alert_floor: 1.0
+  display_decimals: 2
+  round_handle_alerts: [1.35, 1.40, 1.45]
+
+border_wait:
+  unit: minutes
+  mention_floor: 10
+  lead_floor: 20
+  alert_floor: 45
+  alert_sustain: 60   # minutes sustained at alert level
+  alert_absolute: 90   # absolute commercial wait
+  baseline_window: 4   # compare to 4-week same-weekday baseline
+
+road_incidents:
+  core_corridors: ["401", "QEW", "Hwy 1", "Hwy 5", "Hwy 16", "A-20"]
+  lane_restriction_floor: 4      # hours — anything below is noise
+  closure_material: true          # any full closure on core corridor is material
+  closure_alert: 6               # hours — full closure ≥ this is alert
+
+cargo_theft:
+  any_incident_material: true    # any confirmed incident is material
+  require_verified_source: true  # unverified reports are never published
+
+market_pulse:
+  unit: percent_change_wow
+  mention_floor: 2.0
+  lead_floor: 5.0
+  alert_floor: 8.0
+  display_decimals: 1
+
+# Verb-magnitude mapping
+verbs:
+  noise: ["held", "unchanged", "flat", "steady"]
+  notable: ["edged up", "edged down", "ticked up", "ticked down", "drifted"]
+  material: ["rose", "fell", "climbed", "dropped", "gained", "lost"]
+  alert: ["jumped", "surged", "plunged", "spiked"]
+  forbidden_noise: ["rose", "fell", "climbed", "dropped", "jumped", "surged", "plunged", "spiked", "soared"]
+  forbidden_notable: ["jumped", "surged", "plunged", "spiked", "soared"]

@@ -3,6 +3,43 @@
 import json, os
 from datetime import datetime
 
+# ── Materiality band classification ──
+import yaml
+thresh = {}
+try:
+    with open(os.path.join(os.path.dirname(DATA), "config", "thresholds.yaml")) as tf:
+        thresh = yaml.safe_load(tf)
+except: pass
+
+def classify_band(change, series, thresh):
+    """Classify a data point into noise/notable/material/alert band."""
+    if not thresh or series not in thresh:
+        return "notable"
+    t = thresh[series]
+    abs_change = abs(change)
+    if abs_change >= t.get("alert_floor", 99):
+        return "alert"
+    if abs_change >= t.get("lead_floor", 99):
+        return "material"
+    if abs_change >= t.get("mention_floor", 99):
+        return "notable"
+    return "noise"
+
+def get_verb(band, direction, thresh):
+    """Return the appropriate verb for a given band and direction."""
+    if not thresh or "verbs" not in thresh:
+        return "changed"
+    dir_key = "down" if direction < 0 else "up" if direction > 0 else "flat"
+    verbs = thresh["verbs"].get(band, ["held"])
+    if dir_key == "flat":
+        return "held"
+    # Simple heuristic — take the first directional verb
+    for v in verbs:
+        if ("up" in v and direction > 0) or ("down" in v and direction < 0):
+            return v
+    return verbs[0] if verbs else "changed"
+
+
 DATA = os.path.expanduser("~/northern-mile-dashboard/data")
 
 def load(name):
@@ -62,6 +99,7 @@ fuel = {
     "national_nmdi": f"{fuel_nat:.1f}",
     
     "change_7d": "—",
+    "change_7d_band": "noise",
     "low_code": d_sorted[0][0], "low": f"{d_sorted[0][1]:.1f}",
     "high_code": d_sorted[-1][0], "high": f"{d_sorted[-1][1]:.1f}",
     "spread": f"{d_sorted[-1][1]-d_sorted[0][1]:.1f}",

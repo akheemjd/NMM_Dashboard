@@ -195,3 +195,28 @@ We send this every Wednesday. Get it in your inbox. Free. northernmilemedia.com
 - Never say "according to" — we are the source
 - Observations come from the dashboard, not invented sources
 - Depth over surface. Every number has a story. Tell it.
+
+
+---
+
+## PART 5: WHEN NOTHING HAPPENED
+
+**The quiet edition is a feature.** If no data point clears the materiality threshold, publish the short version. Do not manufacture an angle to fill a slot.
+
+A quiet post looks like this:
+
+> Diesel held across all ten provinces this week. Largest move was 0.6 cents in Manitoba. Border ran to baseline at every crossing. Nothing to act on.
+
+That paragraph takes fifteen seconds, is completely true, and makes the reader believe you when you say something moved three weeks later.
+
+**Materiality rules:**
+- Diesel ±1.0¢: noise — say "held" or "unchanged"
+- Diesel ±1.0-2.9¢: notable — say "edged up" or "ticked down"
+- Diesel ±3.0-5.9¢: material — say "rose" or "fell"
+- Diesel ±6.0¢+: alert — say "jumped" or "surged"
+- USD/CAD ±0.2%: noise — table only
+- Border ±10 min: noise — table only
+- Border ±20 min: material — may lead
+- Any confirmed cargo theft: always material
+
+**Verb enforcement:** Never use "surged" for a 0.4 cent move. Never use "jumped" for noise. The verb must match the magnitude.
