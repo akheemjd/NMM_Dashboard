@@ -1,32 +1,11 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-101022",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Port Mann Bridge",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall. Expect delays due to congestion. Right lane in 152 Street exit lanes is blocked at the west end.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.22336855,
-      "lng": -122.81493635,
-      "start": "2026-08-01T16:39:04-07:00",
-      "end": "",
-      "updated": "2026-08-01T18:42:06-07:00"
-    },
-    {
       "id": "ON-282239",
       "province": "ON",
       "highway": "HWY 17",
       "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  between GORMANVILLE RD, North Bay and Coursol Rd / Front St, Sturgeon Fall, Sturgeon Falls. All lanes closed.",
+      "description": "Collision on HWY 17 Both Directions  between GORMANVILLE RD, North Bay and HWY 64-OTTAWA ST(N) STURGEON FALLS, Sturgeon Falls. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
@@ -35,23 +14,39 @@
       "lng": -79.486552508,
       "start": 1785634920,
       "end": null,
-      "updated": 1785634920
+      "updated": 1785636480
     },
     {
-      "id": "ON-282233",
+      "id": "ON-282243",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at DIXIE ROAD, Mississauga. Left shoulder and left lane closed.",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 17 Eastbound  at MICROWAVE TOWER RD (N) - DESMOND TWP, Kenora. Lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.59659275,
-      "lng": -79.56882047,
-      "start": 1785633180,
+      "lanes": "lane closed",
+      "lat": 49.794214481,
+      "lng": -94.043157187,
+      "start": 1785636420,
       "end": null,
-      "updated": 1785633180
+      "updated": 1785636420
+    },
+    {
+      "id": "ON-282240",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Collision on HWY 11 Northbound  at SPRUCE DR(E), Temagami. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 47.11164519,
+      "lng": -79.79563564,
+      "start": 1785635640,
+      "end": null,
+      "updated": 1785635640
     },
     {
       "id": "ON-277474",
@@ -827,7 +822,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-02T01:48:39.780142+00:00",
+  "updated": "2026-08-02T02:18:57.630659+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
