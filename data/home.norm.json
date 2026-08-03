@@ -8,7 +8,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "8 min"
+    "max_wait": "7 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400",
+    "status_line": "QEW, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at LYN RD, Brockville. Left shoulder and left la",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound HOV at WALKERS LINE, Burlington. All lanes closed",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at KENNEDY RD -SCARBOROUGH, Toront",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at HWY 10/HURONTARIO, Mississauga. 2 left lanes ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -235,11 +235,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -248,7 +248,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -257,7 +257,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:07 EDT"
+      "captured_at": "17:08 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
