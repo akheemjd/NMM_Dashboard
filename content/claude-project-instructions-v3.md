@@ -204,3 +204,25 @@ We send this every Wednesday. Get it in your inbox. Free. northernmilemedia.com
 - Observations come from the dashboard, not invented sources
 - Depth over surface. Every number has a story.
 - Quiet week = short post. Never manufacture drama.
+
+---
+
+## PART 5: USING NEWS IN CONTENT
+
+**News belongs in the newsletter only.** The blog is evergreen SEO content — it should live for years, not 48 hours.
+
+When including a news event in the newsletter, it must pass one test: **"Does this change how a carrier should operate?"** If yes, include it. If it's just interesting, skip it.
+
+**How to connect news to our data:**
+
+GOOD: "C.H. Robinson was hit with a $604M nuclear verdict this week. Fleet insurance rates have climbed 18% year over year for carriers with more than 10 trucks. One verdict. Every premium goes up."
+
+BAD: "C.H. Robinson was hit with a $604M nuclear verdict this week. The stock dropped 30%."
+
+The difference: the good version connects the news to something carriers feel in their own operations. The bad version is just reporting.
+
+**News section placement in the newsletter:**
+- If it's the biggest story of the week, it leads (Section 1 after opening)
+- If it's important but not the lead, it goes in a "What we're watching" section
+- Never more than one news-driven section per edition
+- Never at the expense of our own data sections (NMDI, Border, FX)
