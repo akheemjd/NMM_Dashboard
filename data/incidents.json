@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282830",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.79363237,
+      "lng": -79.21586112,
+      "start": 1785765900,
+      "end": null,
+      "updated": 1785765900
+    },
+    {
+      "id": "ON-282829",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound HOV at 407, Brampton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.66899895,
+      "lng": -79.6999618,
+      "start": 1785765840,
+      "end": null,
+      "updated": 1785765840
+    },
+    {
       "id": "ON-282815",
       "province": "ON",
       "highway": "HWY 7",
@@ -792,42 +824,10 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
-    },
-    {
-      "id": "ON-281598",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490140
-    },
-    {
-      "id": "ON-281595",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at CONCESSION ROAD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.90993,
-      "lng": -78.92815,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785489960
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T13:42:32.796442+00:00",
+  "updated": "2026-08-03T14:12:42.666523+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
