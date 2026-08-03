@@ -1,38 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-282833",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.59655811,
-      "lng": -79.56909452,
-      "start": 1785767700,
-      "end": null,
-      "updated": 1785767700
-    },
-    {
-      "id": "ON-282831",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 410 Southbound COLLECTOR RAMP at Derry Road/Courtney Park Drive, Mississauga. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.667366,
-      "lng": -79.698617,
-      "start": 1785766680,
-      "end": null,
-      "updated": 1785766680
-    },
-    {
       "id": "ON-282815",
       "province": "ON",
       "highway": "HWY 7",
@@ -47,22 +15,6 @@
       "start": 1785761400,
       "end": null,
       "updated": 1785762420
-    },
-    {
-      "id": "ON-282810",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound HOV at KING ROAD, King. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.92064701,
-      "lng": -79.56601396,
-      "start": 1785760260,
-      "end": null,
-      "updated": 1785760260
     },
     {
       "id": "ON-276829",
@@ -819,10 +771,58 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490140
+    },
+    {
+      "id": "ON-281595",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at CONCESSION ROAD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.90993,
+      "lng": -78.92815,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785489960
+    },
+    {
+      "id": "ON-281468",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1785888000,
+      "end": 1786104000,
+      "updated": 1785489900
+    },
+    {
+      "id": "ON-281467",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1785888000,
+      "end": 1786104000,
+      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T14:42:51.150851+00:00",
+  "updated": "2026-08-03T15:14:02.708609+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
