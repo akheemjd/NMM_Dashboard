@@ -3,12 +3,12 @@
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 427, HWY 406",
+    "status_line": "HWY 401, HWY 403 , HWY 427, HWY 406",
     "incidents": [
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Collision on HWY 403 HAMILTON Westbound  at LINCOLN M. ALEXANDER PARKWAY, Hamilt",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. Left shoulder a",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound ON-RAMP at EVA ROAD, Toronto. All lanes closed.",
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Westbound  at LINCOLN M. ALEXANDER PARKWAY, Hamilt",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -230,25 +230,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
-    },
-    {
-      "name": "Queenston-Lewiston Bridge",
-      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
       "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
+    },
+    {
+      "name": "Queenston-Lewiston Bridge",
+      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
+      "url": "/border-wait-times/",
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -266,16 +266,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:13 MDT"
+      "captured_at": "22:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -284,7 +284,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 CDT"
+      "captured_at": "23:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
