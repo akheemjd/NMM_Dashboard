@@ -3,7 +3,7 @@
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -193,9 +193,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 410",
+    "status_line": "HWY 401, HWY 400",
     "incidents": [
       {
         "road": "HWY 401",
@@ -230,7 +230,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "16:15 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -239,16 +239,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
