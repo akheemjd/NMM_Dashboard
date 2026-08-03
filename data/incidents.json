@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282802",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound  at EGLINTON AVENUE, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.66773177,
+      "lng": -79.57388728,
+      "start": 1785756180,
+      "end": null,
+      "updated": 1785756180
+    },
+    {
       "id": "ON-282801",
       "province": "ON",
       "highway": "HWY 7",
@@ -47,22 +63,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1785754194
-    },
-    {
-      "id": "ON-282787",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  between Leeds & Grenville CR 2 W/B (IC 648) and Leeds & Grenville CR 32 (IC 645) (Gananoque), Gananoque. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.34318,
-      "lng": -76.13531,
-      "start": 1785735960,
-      "end": null,
-      "updated": 1785750960
     },
     {
       "id": "ON-282798",
@@ -827,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T11:09:47.969565+00:00",
+  "updated": "2026-08-03T11:39:56.828375+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
