@@ -1,14 +1,14 @@
 {
   "updated_at": "17:47 EDT",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "10 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "22 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 811, HWY 527, Lac des ",
+    "status_line": "HWY 401, HWY 400",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Vehicle Fire on HWY 403 MISSISSAUGA Eastbound  at WINSTON CHURCHILL BLVD, Missis",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at NEILSON ROAD, Toronto. R",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 811",
-        "what": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and SEC HWY",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. 1 centre lane c",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -221,7 +221,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:13 EDT"
+      "captured_at": "18:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -230,25 +230,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "18:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "22 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "10 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -257,7 +257,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:08 EDT"
+      "captured_at": "18:16 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
