@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282895",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 410 Southbound COLLECTOR RAMP at DERRY ROAD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.66392341,
+      "lng": -79.69523214,
+      "start": 1785784020,
+      "end": null,
+      "updated": 1785784020
+    },
+    {
+      "id": "ON-282896",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at HWY 10/HURONTARIO, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.56810179,
+      "lng": -79.60019449,
+      "start": 1785784020,
+      "end": null,
+      "updated": 1785784020
+    },
+    {
       "id": "ON-282815",
       "province": "ON",
       "highway": "HWY 7",
@@ -787,42 +819,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785489960
-    },
-    {
-      "id": "ON-281468",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489900
-    },
-    {
-      "id": "ON-281467",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T18:50:04.216451+00:00",
+  "updated": "2026-08-03T19:20:14.222700+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
