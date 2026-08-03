@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282787",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  between Leeds & Grenville CR 2 W/B (IC 648) and Leeds & Grenville CR 32 (IC 645) (Gananoque), Gananoque. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.34318,
+      "lng": -76.13531,
+      "start": 1785735960,
+      "end": null,
+      "updated": 1785736500
+    },
+    {
       "id": "ON-282785",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,38 +31,6 @@
       "start": 1785733680,
       "end": null,
       "updated": 1785733680
-    },
-    {
-      "id": "ON-282779",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.78103077,
-      "lng": -79.25480516,
-      "start": 1785730380,
-      "end": null,
-      "updated": 1785730380
-    },
-    {
-      "id": "ON-282269",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Concession Rd 5-6, Tunis, Tunis. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.0588202,
-      "lng": -81.0297989,
-      "start": 1785655140,
-      "end": null,
-      "updated": 1785726900
     },
     {
       "id": "ON-282771",
@@ -824,10 +808,26 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490320
+    },
+    {
+      "id": "ON-281596",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490320
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T05:33:48.559992+00:00",
+  "updated": "2026-08-03T06:04:00.472082+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
