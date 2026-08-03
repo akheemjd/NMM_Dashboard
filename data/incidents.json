@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282269",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Concession Rd 5-6, Tunis, Tunis. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.0588202,
+      "lng": -81.0297989,
+      "start": 1785655140,
+      "end": null,
+      "updated": 1785726900
+    },
+    {
+      "id": "ON-282774",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound ON-RAMP at EVA ROAD, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.638739,
+      "lng": -79.56062,
+      "start": 1785726180,
+      "end": null,
+      "updated": 1785726180
+    },
+    {
       "id": "ON-282771",
       "province": "ON",
       "highway": "HWY 406",
@@ -47,22 +79,6 @@
       "start": 1785723840,
       "end": null,
       "updated": 1785723840
-    },
-    {
-      "id": "ON-282269",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 11 Both Directions  between WESTERN AVE (HWY 579), Cochrane and Concession Rd 5-6, Tunis, Tunis. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.0588202,
-      "lng": -81.0297989,
-      "start": 1785655140,
-      "end": null,
-      "updated": 1785713820
     },
     {
       "id": "ON-261152",
@@ -808,26 +824,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490560
-    },
-    {
-      "id": "ON-281470",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 417 Eastbound  between ST. LAURENT BLVD (IC 115) and AVIATION PKWY (IC 113A), Ottawa. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.42029,
-      "lng": -75.63509,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490320
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T03:03:01.602891+00:00",
+  "updated": "2026-08-03T03:33:10.559676+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
