@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-282793",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound RAMP at HWY 401, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.67098597,
+      "lng": -79.58987494,
+      "start": 1785743820,
+      "end": null,
+      "updated": 1785743820
+    },
+    {
+      "id": "ON-282791",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Vehicle Fire on HWY 404 Northbound  at MULOCK DRIVE, Newmarket. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 44.05003624,
+      "lng": -79.4163862,
+      "start": 1785742560,
+      "end": null,
+      "updated": 1785743280
+    },
+    {
       "id": "ON-282787",
       "province": "ON",
       "highway": "HWY 401",
@@ -792,42 +824,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490560
-    },
-    {
-      "id": "ON-281470",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 417 Eastbound  between ST. LAURENT BLVD (IC 115) and AVIATION PKWY (IC 113A), Ottawa. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.42029,
-      "lng": -75.63509,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490320
-    },
-    {
-      "id": "ON-281596",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490320
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T07:35:47.046733+00:00",
+  "updated": "2026-08-03T08:05:55.440592+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
