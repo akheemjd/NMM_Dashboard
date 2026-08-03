@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-282855",
+      "id": "ON-282867",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at HWY 11 JCT, Springwater. All lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. 3 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.42683123,
-      "lng": -79.65205826,
-      "start": 1785773580,
+      "closure": false,
+      "lanes": "3 right lanes closed",
+      "lat": 43.84906194,
+      "lng": -79.04025259,
+      "start": 1785776460,
       "end": null,
-      "updated": 1785773580
+      "updated": 1785777180
+    },
+    {
+      "id": "ON-282872",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at BURLOAK DRIVE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.39533301,
+      "lng": -79.75633071,
+      "start": 1785777000,
+      "end": null,
+      "updated": 1785777000
+    },
+    {
+      "id": "ON-282871",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at RENFORTH DR, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.66861342,
+      "lng": -79.59099053,
+      "start": 1785776820,
+      "end": null,
+      "updated": 1785776820
     },
     {
       "id": "ON-282815",
@@ -29,22 +61,6 @@
       "lat": 44.64782,
       "lng": -77.12147,
       "start": 1785761400,
-      "end": null,
-      "updated": 1785772080
-    },
-    {
-      "id": "ON-282849",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at HWY 427, Toronto. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.60773625,
-      "lng": -79.55678904,
-      "start": 1785771720,
       "end": null,
       "updated": 1785772080
     },
@@ -808,26 +824,10 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
-    },
-    {
-      "id": "ON-281598",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T16:47:28.604814+00:00",
+  "updated": "2026-08-03T17:18:38.148838+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
