@@ -33,22 +33,6 @@
       "updated": 1785754800
     },
     {
-      "id": "ON-282800",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound  at DIXON ROAD/AIRPORT ROAD, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.686292806,
-      "lng": -79.6011132,
-      "start": 1785754680,
-      "end": null,
-      "updated": 1785754680
-    },
-    {
       "id": "ON-276829",
       "province": "ON",
       "highway": "Lac des Mille Lacs Road",
@@ -824,10 +808,26 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
+    },
+    {
+      "id": "ON-281598",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T11:39:56.828375+00:00",
+  "updated": "2026-08-03T12:10:05.250669+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
