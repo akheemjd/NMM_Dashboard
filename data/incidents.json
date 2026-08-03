@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-282918",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at LYN RD, Brockville. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 44.5799,
+      "lng": -75.73341,
+      "start": 1785787800,
+      "end": null,
+      "updated": 1785787800
+    },
+    {
+      "id": "ON-282913",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at KENNEDY RD -SCARBOROUGH, Toronto. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.77378992,
+      "lng": -79.28702465,
+      "start": 1785786780,
+      "end": null,
+      "updated": 1785787620
+    },
+    {
+      "id": "ON-282815",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Both Directions",
+      "description": "Flooding on HWY 7 Both Directions  between Hwy 41 (Kaladar), Kaladar and HWY 37, Actinolite. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.64782,
+      "lng": -77.12147,
+      "start": 1785761400,
+      "end": null,
+      "updated": 1785786900
+    },
+    {
       "id": "ON-282911",
       "province": "ON",
       "highway": "HWY 400",
@@ -15,22 +63,6 @@
       "start": 1785786420,
       "end": null,
       "updated": 1785786420
-    },
-    {
-      "id": "ON-282910",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Vehicle Fire on HWY 400 Northbound  at PORT SEVERN ROAD, Port Severn. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.797363,
-      "lng": -79.712587,
-      "start": 1785786180,
-      "end": null,
-      "updated": 1785786180
     },
     {
       "id": "ON-282909",
@@ -111,22 +143,6 @@
       "start": 1785785520,
       "end": null,
       "updated": 1785785520
-    },
-    {
-      "id": "ON-282815",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Both Directions",
-      "description": "Flooding on HWY 7 Both Directions  between Hwy 41 (Kaladar), Kaladar and HWY 37, Actinolite. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.64782,
-      "lng": -77.12147,
-      "start": 1785761400,
-      "end": null,
-      "updated": 1785772080
     },
     {
       "id": "ON-276829",
@@ -803,26 +819,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490320
-    },
-    {
-      "id": "ON-281471",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1785985200,
-      "end": 1786006800,
-      "updated": 1785490200
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T19:50:34.487368+00:00",
+  "updated": "2026-08-03T20:20:52.170700+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
