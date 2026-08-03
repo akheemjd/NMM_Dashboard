@@ -1,14 +1,14 @@
 {
-  "updated_at": "14:01 EDT",
+  "updated_at": "15:27 EDT",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "8 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 410, QEW, HWY 7, HWY 811",
+    "status_line": "HWY 400, HWY 410, HWY 401",
     "incidents": [
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Southbound COLLECTOR RAMP at DERRY ROAD, Mississauga",
+        "road": "HWY 400",
+        "what": "Vehicle Fire on HWY 400 Northbound  at NB EXIT 156/Honey Harbour Rd/Port Severn ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at HWY 10/HURONTARIO, Mississauga. Righ",
+        "road": "HWY 400",
+        "what": "Vehicle Fire on HWY 400 Northbound  at PORT SEVERN ROAD, Port Severn. Right lane",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -221,7 +221,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -235,20 +235,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -257,7 +257,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:24 EDT"
+      "captured_at": "15:29 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -266,16 +266,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:19 MDT"
+      "captured_at": "13:17 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -284,7 +284,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 CDT"
+      "captured_at": "14:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -293,7 +293,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:01 EDT"
+      "captured_at": "15:27 EDT"
     }
   ],
   "market": [
