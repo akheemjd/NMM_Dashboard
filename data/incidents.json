@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282776",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 HAMILTON Westbound  at LINCOLN M. ALEXANDER PARKWAY, Hamilton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.23218654,
+      "lng": -79.95105273,
+      "start": 1785728340,
+      "end": null,
+      "updated": 1785728340
+    },
+    {
       "id": "ON-282269",
       "province": "ON",
       "highway": "HWY 11",
@@ -63,22 +79,6 @@
       "start": 1785725100,
       "end": null,
       "updated": 1785725100
-    },
-    {
-      "id": "ON-282763",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound  at AURORA ROAD, Whitchurch-Stouffville. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 44.01357918,
-      "lng": -79.40687326,
-      "start": 1785723840,
-      "end": null,
-      "updated": 1785723840
     },
     {
       "id": "ON-261152",
@@ -827,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T03:33:10.559676+00:00",
+  "updated": "2026-08-03T04:03:19.123905+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
