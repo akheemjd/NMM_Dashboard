@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-282795",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at DUFFERIN STREET, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.72803927,
+      "lng": -79.45798094,
+      "start": 1785745620,
+      "end": null,
+      "updated": 1785745620
+    },
+    {
       "id": "ON-282793",
       "province": "ON",
       "highway": "HWY 427",
@@ -15,22 +31,6 @@
       "start": 1785743820,
       "end": null,
       "updated": 1785743820
-    },
-    {
-      "id": "ON-282791",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Vehicle Fire on HWY 404 Northbound  at MULOCK DRIVE, Newmarket. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.05003624,
-      "lng": -79.4163862,
-      "start": 1785742560,
-      "end": null,
-      "updated": 1785743280
     },
     {
       "id": "ON-282787",
@@ -127,38 +127,6 @@
       "start": 1784639280,
       "end": null,
       "updated": 1785712920
-    },
-    {
-      "id": "ON-282470",
-      "province": "ON",
-      "highway": "EASTPORT DRIVE",
-      "direction": "Southbound",
-      "description": "Flooding on EASTPORT DRIVE Southbound  at BEACH BLVD, Burlington. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.293819,
-      "lng": -79.793478,
-      "start": 1785689280,
-      "end": null,
-      "updated": 1785689280
-    },
-    {
-      "id": "ON-282307",
-      "province": "ON",
-      "highway": "EASTPORT DRIVE",
-      "direction": "Northbound",
-      "description": "Flooding on EASTPORT DRIVE Northbound  at BEACH BLVD, Burlington. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.293619,
-      "lng": -79.793678,
-      "start": 1785677460,
-      "end": null,
-      "updated": 1785677460
     },
     {
       "id": "drivebc.ca/RIDE-100839",
@@ -824,10 +792,42 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490560
+    },
+    {
+      "id": "ON-281470",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 417 Eastbound  between ST. LAURENT BLVD (IC 115) and AVIATION PKWY (IC 113A), Ottawa. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.42029,
+      "lng": -75.63509,
+      "start": 1785985200,
+      "end": 1786006800,
+      "updated": 1785490320
+    },
+    {
+      "id": "ON-281596",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Daily Construction on QEW Toronto bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490320
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T08:05:55.440592+00:00",
+  "updated": "2026-08-03T08:36:03.734129+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
