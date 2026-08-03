@@ -3,7 +3,7 @@
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -195,18 +195,18 @@
     "none": false,
     "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 410, HWY 7, HWY 400",
+    "status_line": "QEW, HWY 410, HWY 7, HWY 400",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Right la",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. Right lane ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Northbound HOV at 407, Brampton. All lanes closed.",
+        "what": "Disabled Vehicle on HWY 410 Southbound COLLECTOR RAMP at Derry Road/Courtney Par",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -230,16 +230,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "10:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 EDT"
+      "captured_at": "10:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -248,7 +248,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 EDT"
+      "captured_at": "10:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -266,7 +266,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 MDT"
+      "captured_at": "08:18 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:00 PDT"
+      "captured_at": "07:20 PDT"
     },
     {
       "name": "Emerson-Pembina",

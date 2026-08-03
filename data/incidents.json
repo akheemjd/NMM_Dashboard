@@ -1,36 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-282830",
+      "id": "ON-282833",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Right lane and right shoulder closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.79363237,
-      "lng": -79.21586112,
-      "start": 1785765900,
+      "lat": 43.59655811,
+      "lng": -79.56909452,
+      "start": 1785767700,
       "end": null,
-      "updated": 1785765900
+      "updated": 1785767700
     },
     {
-      "id": "ON-282829",
+      "id": "ON-282831",
       "province": "ON",
       "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound HOV at 407, Brampton. All lanes closed.",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 410 Southbound COLLECTOR RAMP at Derry Road/Courtney Park Drive, Mississauga. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.66899895,
-      "lng": -79.6999618,
-      "start": 1785765840,
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.667366,
+      "lng": -79.698617,
+      "start": 1785766680,
       "end": null,
-      "updated": 1785765840
+      "updated": 1785766680
     },
     {
       "id": "ON-282815",
@@ -329,27 +329,6 @@
       "start": 1785841200,
       "end": 1785871800,
       "updated": 1785524880
-    },
-    {
-      "id": "drivebc.ca/DBC-93850",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Carson Rd",
-        "to": "Almond Gardens Rd W",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Spraggett Rd, in both directions. Construction work planned between Carson Rd and Almond Gardens Rd W. Starting Thu Aug 13 until Fri Aug 28. Road closure planned. Last updated Fri Jul 31 at 11:42 AM PDT. (DBC-93850)",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.019246,
-      "lng": -118.47485,
-      "start": "2026-07-31T11:42:27-07:00",
-      "end": "",
-      "updated": "2026-07-31T11:42:38-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-100771",
@@ -824,10 +803,26 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
+    },
+    {
+      "id": "ON-281598",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.9116,
+      "lng": -78.94058,
+      "start": 1785924000,
+      "end": 1786744800,
+      "updated": 1785490140
     }
   ],
   "total": 50,
-  "updated": "2026-08-03T14:12:42.666523+00:00",
+  "updated": "2026-08-03T14:42:51.150851+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
