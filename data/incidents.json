@@ -1,20 +1,68 @@
 {
   "incidents": [
     {
-      "id": "ON-283376",
+      "id": "ON-283368",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at CARLINGVIEW DRIVE, Toronto. 1 right lane and right shoulder closed.",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at MAJOR MACKENZIE DRIVE, Vaughan. 3 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.68125746,
-      "lng": -79.57522487,
-      "start": 1785875940,
+      "lanes": "3 right lanes and right shoulder closed",
+      "lat": 43.84681326,
+      "lng": -79.54870803,
+      "start": 1785875400,
       "end": null,
-      "updated": 1785875940
+      "updated": 1785877560
+    },
+    {
+      "id": "ON-283385",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at NIKOLA TESLA, Hamilton. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.2548886,
+      "lng": -79.76536572,
+      "start": 1785877380,
+      "end": null,
+      "updated": 1785877380
+    },
+    {
+      "id": "ON-283078",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 17 Westbound  at BOOM CREEK BRIDGE, MATTAWA, Mattawa. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 46.306544792,
+      "lng": -78.720099454,
+      "start": 1785842880,
+      "end": null,
+      "updated": 1785877200
+    },
+    {
+      "id": "ON-283382",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Moving Maintenance Closure on HWY 401 Westbound  between QUEBEC/ONTARIO BORDER, Qb Border and SD&G RD 31 (IC 750) - Morrisburg, Morrisburg. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.20854,
+      "lng": -74.34824,
+      "start": 1785927600,
+      "end": 1785970800,
+      "updated": 1785877020
     },
     {
       "id": "ON-261152",
@@ -81,22 +129,6 @@
       "updated": 1785875880
     },
     {
-      "id": "ON-283371",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at CENTENNIAL PKWY, Hamilton. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.24573725,
-      "lng": -79.75690966,
-      "start": 1785875580,
-      "end": null,
-      "updated": 1785875580
-    },
-    {
       "id": "ON-283369",
       "province": "ON",
       "highway": "QEW",
@@ -127,22 +159,6 @@
       "start": 1785875460,
       "end": null,
       "updated": 1785875460
-    },
-    {
-      "id": "ON-283368",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at MAJOR MACKENZIE DRIVE, Vaughan. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.84681326,
-      "lng": -79.54870803,
-      "start": 1785875400,
-      "end": null,
-      "updated": 1785875400
     },
     {
       "id": "ON-283363",
@@ -404,22 +420,6 @@
       "start": 1785864360,
       "end": null,
       "updated": 1785864360
-    },
-    {
-      "id": "ON-283078",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at BOOM CREEK BRIDGE, MATTAWA, Mattawa. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 46.306544792,
-      "lng": -78.720099454,
-      "start": 1785842880,
-      "end": null,
-      "updated": 1785864180
     },
     {
       "id": "ON-283281",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T20:42:32.675137+00:00",
+  "updated": "2026-08-04T21:12:42.885140+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
