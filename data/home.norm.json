@@ -1,11 +1,11 @@
 {
-  "updated_at": "19:57 EDT",
+  "updated_at": "20:47 EDT",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 3,
-    "moderate_count": 1,
+    "moderate_count": 0,
     "closed_count": 0,
-    "min_name": "Emerson-Pembina",
+    "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "26 min"
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 811",
+    "status_line": "HWY 427, HWY 404, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Right la",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Northbound EXPRESS at BLOOR STREET, Toronto. Right l",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ISLINGTON AVE, Toronto. Right",
+        "road": "HWY 404",
+        "what": "Disabled Vehicle on HWY 404 Northbound  at FINCH AVE, Toronto. 1 right lane and ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -239,16 +239,16 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "21 min",
+      "wait": "17 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT"
+      "captured_at": "18:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -284,16 +284,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 CDT"
+      "captured_at": "20:08 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:57 EDT"
+      "captured_at": "20:47 EDT"
     }
   ],
   "market": [
