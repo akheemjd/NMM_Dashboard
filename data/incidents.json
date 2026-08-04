@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-283090",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 427 Southbound  at FINCH AVENUE, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.73389147,
+      "lng": -79.62747473,
+      "start": 1785846120,
+      "end": null,
+      "updated": 1785846120
+    },
+    {
+      "id": "ON-283091",
+      "province": "ON",
+      "highway": "HWY 625",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 625 Northbound  between MANITOUWADGE INDUSTRIAL RD (W) and MANITOUWADGE INDUSTRIAL RD (W), Longlac. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 49.619724,
+      "lng": -86.13083,
+      "start": 1785841200,
+      "end": 1786233600,
+      "updated": 1785846000
+    },
+    {
       "id": "ON-283085",
       "province": "ON",
       "highway": "HWY 10",
@@ -792,42 +824,10 @@
       "start": 1785985200,
       "end": 1786006800,
       "updated": 1785490200
-    },
-    {
-      "id": "ON-281598",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at THOMPSON RD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.9116,
-      "lng": -78.94058,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785490140
-    },
-    {
-      "id": "ON-281595",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at CONCESSION ROAD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.90993,
-      "lng": -78.92815,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785489960
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T12:04:52.945449+00:00",
+  "updated": "2026-08-04T12:35:02.517728+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
