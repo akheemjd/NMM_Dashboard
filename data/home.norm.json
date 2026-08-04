@@ -1,14 +1,14 @@
 {
-  "updated_at": "19:15 EDT",
+  "updated_at": "19:57 EDT",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
-    "min_name": "Thousand Islands Bridge",
+    "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "23 min"
+    "max_wait": "17 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 101, HWY 401",
+    "status_line": "QEW, HWY 401, HWY 811",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound RAMP at HIGHWAY 7, Vaughan. Right lane an",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at GLENDALE AVENUE, Niagara-On-The-",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 101",
-        "what": "Collision on HWY 101 Both Directions  at Hwy 7072(Young St)Foleyet, Foleyet. All",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at VICTORIA PARK AVE, Toronto. 1 right la",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -235,20 +235,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "23 min",
+      "wait": "17 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "15 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT"
+      "captured_at": "17:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -289,11 +289,11 @@
     {
       "name": "Thousand Islands Bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 EDT"
+      "captured_at": "19:57 EDT"
     }
   ],
   "market": [
