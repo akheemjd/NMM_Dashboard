@@ -128,7 +128,7 @@ def collect():
             "diesel_national_avg": national_avg,
             "gasoline_national_avg": None,
             "updated": datetime.now(timezone.utc).isoformat(),
-            "source": "NRCan daily retail diesel survey",
+            "source": "Kalibrate DPPS daily survey (used by NRCan for analysis)",
             "location_count": len(prices),
         }
         
