@@ -1,36 +1,68 @@
 {
   "incidents": [
     {
-      "id": "ON-283290",
+      "id": "ON-283306",
       "province": "ON",
       "highway": "QEW",
       "direction": "Fort Erie Bound",
-      "description": "Highway Maintenance on QEW Fort Erie bound RAMP at WINSTON CHURCHILL BLVD, Oakville. Right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at CAWTHRA ROAD, Mississauga. Centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.51161726,
-      "lng": -79.66262451,
-      "start": 1785864780,
+      "lanes": "centre lane closed",
+      "lat": 43.58503738,
+      "lng": -79.58243881,
+      "start": 1785866640,
       "end": null,
-      "updated": 1785864780
+      "updated": 1785866640
     },
     {
-      "id": "ON-283289",
+      "id": "ON-283304",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 403 HAMILTON Westbound Off-ramp at ABERDEEN AVE, Hamilton. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.25535,
+      "lng": -79.90704,
+      "start": 1785985200,
+      "end": 1786093200,
+      "updated": 1785866280
+    },
+    {
+      "id": "ON-283301",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1 centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.72961984,
-      "lng": -79.4488332,
-      "start": 1785864720,
+      "lanes": "1 centre lane closed",
+      "lat": 43.69200023,
+      "lng": -79.56896285,
+      "start": 1785866220,
       "end": null,
-      "updated": 1785864720
+      "updated": 1785866220
+    },
+    {
+      "id": "ON-283300",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Highway Maintenance on QEW Fort Erie bound ON-RAMP at WINSTON CHURCHILL BLVD, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.509481,
+      "lng": -79.664,
+      "start": 1785866100,
+      "end": null,
+      "updated": 1785866100
     },
     {
       "id": "ON-283285",
@@ -63,22 +95,6 @@
       "start": 1785842880,
       "end": null,
       "updated": 1785864180
-    },
-    {
-      "id": "ON-283268",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at HWY 400, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.716279162,
-      "lng": -79.517892301,
-      "start": 1785863520,
-      "end": null,
-      "updated": 1785863520
     },
     {
       "id": "ON-283281",
@@ -143,22 +159,6 @@
       "start": 1785863280,
       "end": null,
       "updated": 1785863280
-    },
-    {
-      "id": "ON-283264",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound HOV at APPLEBY LINE, Burlington. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.380820767,
-      "lng": -79.772345424,
-      "start": 1785863220,
-      "end": null,
-      "updated": 1785863220
     },
     {
       "id": "ON-283278",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T17:38:39.740081+00:00",
+  "updated": "2026-08-04T18:08:48.433030+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
