@@ -1,6 +1,86 @@
 {
   "incidents": [
     {
+      "id": "ON-283260",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 417 Eastbound  at CARLING AVE / KIRKWOOD AVE (IC 124), Ottawa. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 45.38373,
+      "lng": -75.74005,
+      "start": 1785862800,
+      "end": null,
+      "updated": 1785862800
+    },
+    {
+      "id": "ON-283257",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Moving Maintenance Closure on HWY 417 Eastbound  between CARP RD (IC 144)/CR 5 and HOLLY ACRES RD EXIT E/B (IC 130), Ottawa. 1 Left(with HOV) Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left(with HOV) Lane(s)",
+      "lat": 45.28104,
+      "lng": -75.9573,
+      "start": 1786024800,
+      "end": 1786127400,
+      "updated": 1785862440
+    },
+    {
+      "id": "ON-283252",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at WESTON ROAD, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.71454654,
+      "lng": -79.53386683,
+      "start": 1785862200,
+      "end": null,
+      "updated": 1785862200
+    },
+    {
+      "id": "ON-283246",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 417 Westbound  between INNES RD (IC 112) and INNES RD (IC 112), Ottawa. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.41404,
+      "lng": -75.61011,
+      "start": 1786111200,
+      "end": 1786125600,
+      "updated": 1785861720
+    },
+    {
+      "id": "ON-283247",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 6 Southbound  between Wellington 6th Line and Wellington Road 51 / Guelph-Nichol Townline, Guelph. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.65767,
+      "lng": -80.33029,
+      "start": 1786014000,
+      "end": 1787346000,
+      "updated": 1785861540
+    },
+    {
       "id": "ON-283238",
       "province": "ON",
       "highway": "QEW",
@@ -129,22 +209,6 @@
       "updated": 1785860040
     },
     {
-      "id": "ON-283225",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at GUELPH LINE, Milton. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.49118566,
-      "lng": -79.98777262,
-      "start": 1785858720,
-      "end": null,
-      "updated": 1785858720
-    },
-    {
       "id": "ON-283223",
       "province": "ON",
       "highway": "QEW",
@@ -177,38 +241,6 @@
       "updated": 1785858180
     },
     {
-      "id": "ON-283217",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at BROCK ROAD, Pickering. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.840052294,
-      "lng": -79.068383574,
-      "start": 1785857700,
-      "end": null,
-      "updated": 1785857700
-    },
-    {
-      "id": "ON-283215",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Markham Collector to Express, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.78306531,
-      "lng": -79.24611147,
-      "start": 1785857580,
-      "end": null,
-      "updated": 1785857580
-    },
-    {
       "id": "ON-283213",
       "province": "ON",
       "highway": "HWY 416",
@@ -223,22 +255,6 @@
       "start": 1785927600,
       "end": 1785970800,
       "updated": 1785857280
-    },
-    {
-      "id": "ON-283195",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 404 Southbound ON-RAMP at FAIRVIEW MALL DRIVE / SHEPPARD AVE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.778759371,
-      "lng": -79.340686798,
-      "start": 1785855180,
-      "end": null,
-      "updated": 1785855180
     },
     {
       "id": "ON-283189",
@@ -447,22 +463,6 @@
       "start": 1786327200,
       "end": 1786784400,
       "updated": 1785853380
-    },
-    {
-      "id": "ON-283157",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 527 Southbound  at TCPL COMP STA 68 RD (W) - MACGREGOR TWP, Thunder Bay. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 48.548552827,
-      "lng": -89.140821062,
-      "start": 1785852480,
-      "end": null,
-      "updated": 1785852480
     },
     {
       "id": "ON-283161",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T16:38:20.189105+00:00",
+  "updated": "2026-08-04T17:08:29.876367+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
