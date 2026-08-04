@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-283043",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.77486841,
-      "lng": -79.28440092,
-      "start": 1785819840,
-      "end": null,
-      "updated": 1785819840
-    },
-    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -819,10 +803,26 @@
       "start": 1785888000,
       "end": 1786104000,
       "updated": 1785489900
+    },
+    {
+      "id": "ON-281467",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1785888000,
+      "end": 1786104000,
+      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T06:00:06.428901+00:00",
+  "updated": "2026-08-04T06:30:14.976628+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
