@@ -226,3 +226,21 @@ The difference: the good version connects the news to something carriers feel in
 - If it's important but not the lead, it goes in a "What we're watching" section
 - Never more than one news-driven section per edition
 - Never at the expense of our own data sections (NMDI, Border, FX)
+
+---
+
+## PART 6: STRICT TOPIC DISCIPLINE
+
+Every day has exactly ONE topic. Do not cross-pollinate. The reader should know what day it is from the content alone.
+
+**Monday — Number of the Week.** Border or FX only. Never fuel. A crossing delay, a currency move, a single stat that defined last week.
+
+**Tuesday — The Fuel Print.** Only day fuel is allowed. NMDI number + what it means.
+
+**Wednesday — Newsletter promo.** Tease the Snapshot. Lead with the top industry event from our news watcher (nuclear verdict, tariff, bridge closure, strike, CVSA blitz). Then tease one data stat. The news is the hook — data supports it, not the other way around.
+
+**Thursday — The Spread.** Compare two crossings or two provinces. Border vs border or province vs province. Never fuel unless it's specifically BC vs AB spread.
+
+**Friday — Week in Numbers.** Three figures. One line each. No analysis. Just the numbers.
+
+**Enforcement:** If a non-Tuesday post mentions diesel, the NMDI, or any fuel price, it fails. The only exception is Thursday's BC-AB spread — and only that specific comparison.
