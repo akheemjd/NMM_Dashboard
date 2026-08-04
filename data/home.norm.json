@@ -8,7 +8,7 @@
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 10, HWY 17, Frog Cre",
+    "status_line": "HWY 17, HWY 401, HWY 531, HWY 622",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Southbound  at FINCH AVENUE, Toronto. 2 right lanes ",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Westbound  at STEWART LAKE RD NORTH (W), Nipigon. ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 10",
-        "what": "Collision on HWY 10 Both Directions  between County Road 10 / 10 Sideroad, Cardw",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at WHITES ROAD, Pickering. 1 right lane",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -235,20 +235,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -271,11 +271,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 PDT"
+      "captured_at": "05:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
