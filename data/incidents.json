@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-283028",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.72997534,
+      "lng": -79.44901142,
+      "start": 1785811140,
+      "end": null,
+      "updated": 1785811980
+    },
+    {
+      "id": "ON-283027",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound RAMP at RUTHERFORD, Vaughan. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.82655911,
+      "lng": -79.54459169,
+      "start": 1785810480,
+      "end": null,
+      "updated": 1785810480
+    },
+    {
       "id": "ON-283020",
       "province": "ON",
       "highway": "HWY 400",
@@ -787,42 +819,10 @@
       "start": 1785924000,
       "end": 1786744800,
       "updated": 1785490140
-    },
-    {
-      "id": "ON-281595",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at CONCESSION ROAD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.90993,
-      "lng": -78.92815,
-      "start": 1785924000,
-      "end": 1786744800,
-      "updated": 1785489960
-    },
-    {
-      "id": "ON-281468",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1785888000,
-      "end": 1786104000,
-      "updated": 1785489900
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T02:28:04.412130+00:00",
+  "updated": "2026-08-04T02:58:13.661535+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
