@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-283404",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MAVIS ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.619976,
-      "lng": -79.709223,
-      "start": 1785881160,
-      "end": null,
-      "updated": 1785881160
-    },
-    {
       "id": "ON-283399",
       "province": "ON",
       "highway": "HWY 401",
@@ -140,22 +124,6 @@
       "lanes": "left shoulder and 1 left lane closed",
       "lat": 43.36424464,
       "lng": -79.78947155,
-      "start": 1785875460,
-      "end": null,
-      "updated": 1785875460
-    },
-    {
-      "id": "ON-283370",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Collision on HWY 17 Westbound  at OLIVER RD - THUNDER BAY, Thunder Bay. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 48.41915819,
-      "lng": -89.284233149,
       "start": 1785875460,
       "end": null,
       "updated": 1785875460
@@ -804,10 +772,42 @@
       "start": 1786327200,
       "end": 1786784400,
       "updated": 1785853560
+    },
+    {
+      "id": "ON-283174",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Nightly Maintenance on QEW Toronto bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.583523,
+      "lng": -79.58313,
+      "start": 1786327200,
+      "end": 1786784400,
+      "updated": 1785853500
+    },
+    {
+      "id": "ON-283178",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound Collector between FINCH AVENUE and BURNHAMTHORPE ROAD, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.733997,
+      "lng": -79.62741,
+      "start": 1786327200,
+      "end": 1786784400,
+      "updated": 1785853500
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T22:13:00.957776+00:00",
+  "updated": "2026-08-04T22:43:09.961569+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
