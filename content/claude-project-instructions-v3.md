@@ -244,3 +244,58 @@ Every day has exactly ONE topic. Do not cross-pollinate. The reader should know 
 **Friday — Week in Numbers.** Three figures. One line each. No analysis. Just the numbers.
 
 **Enforcement:** If a non-Tuesday post mentions diesel, the NMDI, or any fuel price, it fails. The only exception is Thursday's BC-AB spread — and only that specific comparison.
+
+---
+
+## PART 7: WEEKLY PROMPT TEMPLATES
+
+When prompted for a specific content type, use live data from the dashboard endpoints. Every prompt should include the day's data.
+
+### Blog Prompt Template
+
+```
+BLOG POST. Week [1-4]. Topic: [Fuel/Border/FX/Theft].
+
+Live data from dashboard:
+- NMDI: [from fuel.json diesel_national_avg]
+- Provinces: [from fuel.json provinces]
+- Border: [from border.json — delayed crossings, worst delay]
+- FX: [from exchange.json current + 7-day change]
+- Theft: [from theft.json — latest incident if any]
+
+Write the full blog post. Follow the structure. Include section headings. 
+End with dashboard CTA + newsletter signup. Include blog visual prompt.
+```
+
+### LinkedIn Business Page Prompt Template  
+
+```
+[DAY] — [SLOT]. Business page. Carousel post.
+
+Data:
+- [relevant live data]
+
+Write the post. Follow the slot rules. Include Claude carousel prompt.
+```
+
+### LinkedIn Personal Prompt Template
+
+```
+PERSONAL POST. I voice. Casual.
+
+Topic: [real event or observation]
+
+Write 2-3 paragraphs. No CTA. Dashboard link in first comment.
+```
+
+### Newsletter Prompt Template
+
+```
+WEDNESDAY NEWSLETTER.
+
+Live data from all four endpoints.
+Top industry event: [from event watcher or "none"]
+
+Write the full Snapshot. 3-4 sections with ## headings. Under 300 words.
+End with newsletter signup + dashboard link.
+```
