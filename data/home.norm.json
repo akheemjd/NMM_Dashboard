@@ -1,14 +1,14 @@
 {
-  "updated_at": "20:47 EDT",
+  "updated_at": "21:46 EDT",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 3,
-    "moderate_count": 0,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
-    "min_name": "Thousand Islands Bridge",
+    "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "26 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "224.2",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 404, HWY 401",
+    "status_line": "HWY 401, HWY 427, HWY 404, HWY 811",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Northbound EXPRESS at BLOOR STREET, Toronto. Right l",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound  at HALTON ROAD 22/TREMAINE RD, Milton. Right lan",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Northbound  at FINCH AVE, Toronto. 1 right lane and ",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Northbound EXPRESS at BLOOR STREET, Toronto. Right l",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -230,25 +230,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:38 EDT"
+      "captured_at": "21:24 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "26 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "6 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "17 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -275,7 +275,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 PDT"
+      "captured_at": "18:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -284,16 +284,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:08 CDT"
+      "captured_at": "20:45 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:47 EDT"
+      "captured_at": "21:46 EDT"
     }
   ],
   "market": [
