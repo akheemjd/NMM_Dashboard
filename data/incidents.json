@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-283332",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 89 Both Directions  between 1st Line EHS and 3rd Line EHS, Violet Hill. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.09716,
+      "lng": -80.10693,
+      "start": 1785870180,
+      "end": null,
+      "updated": 1785870180
+    },
+    {
+      "id": "ON-283327",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Highway Maintenance on QEW Toronto bound ON-RAMP at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.523626,
+      "lng": -79.648209,
+      "start": 1785869040,
+      "end": null,
+      "updated": 1785869040
+    },
+    {
       "id": "drivebc.ca/RIDE-101046",
       "province": "BC",
       "highway": {
@@ -38,22 +70,6 @@
       "updated": 1785867720
     },
     {
-      "id": "ON-283318",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at CENTENNIAL PKWY, Hamilton. Centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.24573725,
-      "lng": -79.75690966,
-      "start": 1785867600,
-      "end": null,
-      "updated": 1785867600
-    },
-    {
       "id": "ON-283316",
       "province": "ON",
       "highway": "HWY 404",
@@ -84,22 +100,6 @@
       "start": 1787054400,
       "end": 1787349600,
       "updated": 1785866940
-    },
-    {
-      "id": "ON-283306",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at CAWTHRA ROAD, Mississauga. Centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.58503738,
-      "lng": -79.58243881,
-      "start": 1785866640,
-      "end": null,
-      "updated": 1785866640
     },
     {
       "id": "ON-283311",
@@ -148,22 +148,6 @@
       "start": 1785985200,
       "end": 1786093200,
       "updated": 1785866280
-    },
-    {
-      "id": "ON-283300",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Highway Maintenance on QEW Fort Erie bound ON-RAMP at WINSTON CHURCHILL BLVD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.509481,
-      "lng": -79.664,
-      "start": 1785866100,
-      "end": null,
-      "updated": 1785866100
     },
     {
       "id": "ON-283285",
@@ -804,10 +788,26 @@
       "start": 1786327200,
       "end": 1786784400,
       "updated": 1785851220
+    },
+    {
+      "id": "ON-283155",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Nightly Maintenance on HWY 427 Northbound Express between BROWNS LINE and FINCH AVENUE, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.61127,
+      "lng": -79.548874,
+      "start": 1786327200,
+      "end": 1786784400,
+      "updated": 1785851160
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T18:39:57.693230+00:00",
+  "updated": "2026-08-04T19:11:05.939885+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
