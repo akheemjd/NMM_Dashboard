@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-283046",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound HOV at MISSISSAUGA ROAD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.56089949,
-      "lng": -79.68614531,
-      "start": 1785826560,
-      "end": null,
-      "updated": 1785826560
-    },
-    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -819,10 +803,26 @@
       "start": 1785888000,
       "end": 1786104000,
       "updated": 1785489900
+    },
+    {
+      "id": "ON-281467",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1785888000,
+      "end": 1786104000,
+      "updated": 1785489780
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T07:00:24.380431+00:00",
+  "updated": "2026-08-04T07:30:32.888075+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
