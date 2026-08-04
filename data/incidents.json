@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-283425",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound EXPRESS HOV at DERRY ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.66759,
+      "lng": -79.698681,
+      "start": 1785883800,
+      "end": null,
+      "updated": 1785883800
+    },
+    {
+      "id": "ON-283421",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at BARTLETT AVENUE, Grimsby. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.18988807,
+      "lng": -79.5237707,
+      "start": 1785883320,
+      "end": null,
+      "updated": 1785883320
+    },
+    {
+      "id": "ON-283419",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound ON-RAMP at BURLOAK DRIVE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.395736,
+      "lng": -79.756392,
+      "start": 1785883260,
+      "end": null,
+      "updated": 1785883260
+    },
+    {
       "id": "ON-283399",
       "province": "ON",
       "highway": "HWY 401",
@@ -111,22 +159,6 @@
       "start": 1784639280,
       "end": null,
       "updated": 1785875880
-    },
-    {
-      "id": "ON-283369",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at WALKERS LINE, Burlington. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.36424464,
-      "lng": -79.78947155,
-      "start": 1785875460,
-      "end": null,
-      "updated": 1785875460
     },
     {
       "id": "drivebc.ca/DBC-93773",
@@ -772,42 +804,10 @@
       "start": 1786327200,
       "end": 1786784400,
       "updated": 1785853560
-    },
-    {
-      "id": "ON-283174",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Maintenance on QEW Toronto bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.583523,
-      "lng": -79.58313,
-      "start": 1786327200,
-      "end": 1786784400,
-      "updated": 1785853500
-    },
-    {
-      "id": "ON-283178",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 427 Southbound Collector between FINCH AVENUE and BURNHAMTHORPE ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.733997,
-      "lng": -79.62741,
-      "start": 1786327200,
-      "end": 1786784400,
-      "updated": 1785853500
     }
   ],
   "total": 50,
-  "updated": "2026-08-04T22:43:09.961569+00:00",
+  "updated": "2026-08-04T23:13:21.164732+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
