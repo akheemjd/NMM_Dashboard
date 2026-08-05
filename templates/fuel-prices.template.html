@@ -45,14 +45,14 @@
 
   <!--OPTIONAL:sponsor_fuel--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_fuel.name}}</div><div class="l">{{sponsor_fuel.line}}</div></div><a class="c" href="{{sponsor_fuel.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_fuel-->
 
-  <div class="mod"><span class="tab"></span><h2>NMDI by province</h2><span class="k">c/L · Δ since last</span><span class="rule"></span></div>
+  <div class="sechead"><h2>NMDI by province</h2><span class="sub">c/L · Δ since last</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Prov</th><th>Region</th><th class="r">Price</th><th class="r">Change</th><th class="r">vs Nat</th></tr></thead>
     <!--LOOP:provinces--><tr class="{{rowclass}}"><td class="code">{{code}}</td><td>{{name}}</td><td class="r"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}">{{change}}</td><td class="r mono {{vs_class}}">{{vs_national}}</td></tr><!--/LOOP:provinces-->
   </table></div>
   <p class="note">Arrows show change vs. previous 30-min update. Public fuel surveys, all ten provinces.</p>
 
-  <div class="mod"><span class="tab"></span><h2>Fill before you cross</h2><span class="k">US border states · CAD equiv</span><span class="rule"></span></div>
+  <div class="sechead"><h2>Fill before you cross</h2><span class="sub">US border states · CAD equiv</span><span class="rule"></span></div>
   <p class="intro">US diesel priced per gallon in USD, converted to Canadian cents/litre at {{fx.usd_cad}} so it lines up with the province next door.</p>
   <div class="xb">
   <!--LOOP:border_fuel--><div class="xr"><div class="pair">{{prov_code}} → {{state_code}}</div><div class="cols"><div class="side"><div class="l">{{prov_name}}</div><div class="p">{{prov_price}}</div></div><div class="side"><div class="l">{{state_name}}</div><div class="p">{{state_cad}}</div><div class="g">{{state_usd}}/gal</div></div></div><div class="v">{{verdict}}</div></div><!--/LOOP:border_fuel-->
@@ -61,21 +61,21 @@
 
   
 
-  <div class="mod"><span class="tab"></span><h2>Fuel tax breakdown</h2><span class="k">estimated split · c/L</span><span class="rule"></span></div>
+  <div class="sechead"><h2>Fuel tax breakdown</h2><span class="sub">estimated split · c/L</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Province</th><th class="r">Base</th><th class="r">Carbon</th><th class="r">Fuel tax</th><th class="r">Sales</th><th class="r">Pump</th></tr></thead>
     <!--LOOP:tax--><tr><td class="code">{{code}}</td><td class="r mono">{{base}}</td><td class="r mono">{{carbon}}</td><td class="r mono">{{fuel_tax}}</td><td class="r mono">{{sales}}</td><td class="r"><span class="px">{{pump}}</span></td></tr><!--/LOOP:tax-->
   </table></div>
   <p class="note">Approximate — exact components wired from public rate tables. Base = wholesale + federal excise.</p>
 
-  <div class="mod"><span class="tab"></span><h2>IFTA diesel reference</h2><span class="k">current quarter</span><span class="rule"></span></div>
+  <div class="sechead"><h2>IFTA diesel reference</h2><span class="sub">current quarter</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Jurisdiction</th><th class="r">Pump c/L</th><th class="r">Tax portion</th><th class="r">Per 100L</th></tr></thead>
     <!--LOOP:ifta--><tr><td class="code">{{code}}</td><td class="r mono">{{pump}}</td><td class="r mono">{{tax_portion}}</td><td class="r mono">{{per_100l}}</td></tr><!--/LOOP:ifta-->
   </table></div>
   <p class="note"><a href="/fuel-cost-calculator/">Open the fuel cost calculator →</a> to estimate quarterly IFTA spend by route.</p>
 
-  <div class="mod"><span class="tab"></span><h2>Common questions</h2><span class="rule"></span></div>
+  <div class="sechead"><h2>Common questions</h2><span class="rule"></span></div>
   <div class="faq"><dl>
     <dt>Why is diesel different across provinces?</dt><dd>Provincial fuel taxes drive most of the gap. BC adds carbon tax and transit levies; Alberta has lower levies and no provincial sales tax. The {{fuel.low_code}}–{{fuel.high_code}} spread is {{fuel.spread}}c/L.</dd>
     <dt>Where should I fuel up to save money?</dt><dd>Alberta is cheapest, then Saskatchewan and Manitoba — fill before leaving them. Crossing the border, US diesel is usually cheaper once converted to Canadian cents/litre. See the border comparison above.</dd>

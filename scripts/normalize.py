@@ -4,6 +4,11 @@ import json, os
 from datetime import datetime
 from history import snapshot, delta, average, span_days
 
+def clip(text, limit=110):
+    if len(text) <= limit:
+        return text
+    return text[:limit].rsplit(" ", 1)[0] + "\u2026"
+
 # ── Materiality band classification ──
 import yaml
 thresh = {}
@@ -188,7 +193,7 @@ for i in incidents_active[:2]:  # home shows 2 collisions/closures
     cls = "heavy" if sev == "closed" else "mod" if sev == "heavy" else "ok"
     incidents_list.append({
         "road": i.get("highway","") or i.get("description","")[:40],
-        "what": i.get("description","")[:80],
+        "what": clip(i.get("description",""), 80),
         "severity_label": ("Closed" if i.get("event_type") == "closures" else "Collision" if i.get("event_type") == "accidentsandincidents" else "Minor"),
         "severity_class": cls,
         "url": "/road-incidents/",
@@ -383,7 +388,7 @@ for i in raw_sorted:
     if isinstance(hwy, dict): hwy = hwy.get("name","")
     coming_roadwork.append({
         "road": str(hwy),
-        "what": i.get("description","")[:55],
+        "what": clip(i.get("description",""), 55),
         "when": start_str + (" - " + end_str if end_str else ""),
         "lanes": i.get("lanes",""),
     })

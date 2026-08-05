@@ -38,7 +38,7 @@
   <div class="sp"><span class="t">Dashboard presented by</span><div><div class="n">{{sponsor_page.name}}</div><div class="l">{{sponsor_page.line}}</div></div><a class="c" href="{{sponsor_page.url}}">Learn more →</a></div>
   <!--/OPTIONAL:sponsor_page-->
 
-  <div class="mod"><span class="tab"></span><h2>Road incidents</h2><span class="k">collisions &amp; closures on freight corridors</span><span class="rule"></span><a class="full" href="/road-incidents/">Open map →</a></div>
+  <div class="sechead"><h2>Road incidents</h2><span class="sub">collisions &amp; closures on freight corridors</span><a class="more" href="/road-incidents/">Open map →</a></div>
   <div class="panel">
     <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors</div><!--/IF:incidents.none-->
     <div class="news">
@@ -47,14 +47,14 @@
     </div>
   </div>
 
-  <div class="mod"><span class="tab"></span><h2>Border crossings</h2><span class="k">commercial wait</span><span class="rule"></span><a class="full" href="/border-wait-times/">All crossings →</a></div>
+  <div class="sechead"><h2>Border crossings</h2><span class="sub">commercial wait</span><a class="more" href="/border-wait-times/">All crossings →</a></div>
   <div class="panel"><table class="tbl bx" style="table-layout:fixed;width:100%">
   <colgroup><col style="width:auto"><col style="width:80px"><col style="width:85px"></colgroup>
   <!--LOOP:border_rows--><tr data-href="{{url}}" role="link" tabindex="0" style="height:36px;"><td style="padding:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{name}}</td><td class="r" style="padding:8px;vertical-align:middle;"><span class="px">{{wait}}</span></td><td class="r" style="padding:8px;vertical-align:middle;"><span class="pill {{status_class}}">{{status_label}}</span></td></tr><!--/LOOP:border_rows-->
   </table></div>
   <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Border module by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
 
-  <div class="mod"><span class="tab"></span><h2>Fuel &amp; exchange</h2><span class="k">NMDI · USD/CAD</span><span class="rule"></span><a class="full" href="/fuel-prices/">Full fuel →</a></div>
+  <div class="sechead"><h2>Fuel &amp; exchange</h2><span class="sub">NMDI · USD/CAD</span><a class="more" href="/fuel-prices/">Full fuel →</a></div>
   <div class="row">
     <div class="panel"><div class="readout"><div class="rl">NMDI (Northern Mile Diesel Index) · national average</div><div class="big">{{fuel.national_diesel}}<small> c/L</small></div><div class="meta">{{fuel.low_code}} {{fuel.low}} low · {{fuel.high_code}} {{fuel.high}} high · spread {{fuel.spread}}c</div></div>
       <table class="tbl">
@@ -65,26 +65,26 @@
       <div class="ind" data-href="/fuel-prices/" role="link" tabindex="0"><div class="nm">IFTA reference<span>Per-jurisdiction tax portion</span></div><div class="vv" style="font-size:.75rem;font-family:'IBM Plex Mono',monospace;color:var(--green)">See →</div></div></div>
   </div>
 
-  <div class="km"><span class="post">KM 172</span><span class="rule"></span></div>
+  
 
-  <div class="mod"><span class="tab"></span><h2>Market pulse</h2><span class="k">freight demand signals</span><span class="rule"></span><a class="full" href="/market-pulse/">Full market →</a></div>
+  <div class="sechead"><h2>Market pulse</h2><span class="sub">freight demand signals</span><a class="more" href="/market-pulse/">Full market →</a></div>
   <div class="panel">
   <!--LOOP:market--><div class="ind" data-href="/market-pulse/" role="link" tabindex="0"><div class="nm">{{name}}<span>{{note}}</span></div><div class="vv {{value_class}}">{{value}}</div></div><!--/LOOP:market-->
   </div>
 
-  <div class="mod-ref"><span class="tab"></span><h2>Cargo theft</h2><span class="k">reference · last 12 months</span><span class="rule"></span><a class="full" href="/cargo-theft/">All incidents →</a></div>
+  <div class="sechead sechead--ref"><h2>Cargo theft</h2><span class="sub">reference · last 12 months</span><a class="more" href="/cargo-theft/">All incidents →</a></div>
   <div class="panel">
   <!--LOOP:theft--><div class="tft" data-href="{{url}}" role="link" tabindex="0"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{meta}}</div></div><!--/LOOP:theft-->
     <a href="/cargo-theft/" style="display:block;padding:8px 10px;color:var(--ink-3);font-size:0.75rem;border-top:1px solid var(--border);">More →</a>
   </div>
 
-  <div class="mod-ref"><span class="tab"></span><h2>Industry news</h2><span class="k">curated headlines</span><span class="rule"></span><a class="full" href="/industry-news/">All headlines →</a></div>
+  <div class="sechead sechead--ref"><h2>Industry news</h2><span class="sub">curated headlines</span><a class="more" href="/industry-news/">All headlines →</a></div>
   <div class="panel"><div class="news">
   <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
     <a href="/industry-news/"><span class="src">More</span>All industry headlines →</a>
   </div></div>
 
-  <div class="mod-ref"><span class="tab"></span><h2>Fuel cost calculator</h2><span class="rule"></span></div>
+  <div class="sechead sechead--ref"><h2>Fuel cost calculator</h2></div>
   <div class="panel"><div class="calc"><div class="txt">Trip fuel cost by distance, burn rate and current diesel — pre-loaded with today's national average.</div><a href="/fuel-cost-calculator/">Open calculator →</a></div></div>
 
     <div class="cta" style="text-align:center;"><div class="e">The Northern Mile Brief</div><div class="b">Fuel, border and market shifts — every Wednesday, 6am. Free.</div>

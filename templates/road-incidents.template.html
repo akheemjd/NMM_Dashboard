@@ -25,15 +25,15 @@
   <div class="breadcrumb"><a href="/">Dashboard</a> › Road Incidents</div>
   <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Closures + collisions · freight corridors</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
 
-  <div class="mod"><span class="tab"></span><h2>Incident map</h2><span class="k">click a pin or row for detail</span><span class="rule"></span></div>
+  <div class="sechead"><h2>Incident map</h2><span class="sub">click a pin or row for detail</span><span class="rule"></span></div>
   <div id="map"></div>
 
   <!--OPTIONAL:sponsor_incidents--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_incidents.name}}</div><div class="l">{{sponsor_incidents.line}}</div></div><a class="c" href="{{sponsor_incidents.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_incidents-->
 
-  <div class="mod"><span class="tab"></span><h2>Active incidents</h2><span class="rule"></span></div>
+  <div class="sechead"><h2>Active incidents</h2><span class="rule"></span></div>
   <div class="panel" id="incList" style="max-height:500px;overflow-y:auto;"></div>
 
-    <div class="mod"><span class="tab"></span><h2>Scheduled work</h2><span class="k">coming closures &amp; construction</span><span class="rule"></span></div>
+    <div class="sechead"><h2>Scheduled work</h2><span class="sub">coming closures &amp; construction</span><span class="rule"></span></div>
   <div class="panel" style="max-height:500px;overflow-y:auto;"><table class="tbl">
     <thead><tr><th>Highway</th><th>Work</th><th class="r">When</th><th class="r">Lanes</th></tr></thead>
     <!--LOOP:coming_roadwork--><tr class="inc-row" data-road="{{road}}" data-what="{{what}}" data-clearance="{{when}}" data-lanes="{{lanes}}" data-severity="Roadwork" data-severity-class="mod" data-direction="" data-event="Scheduled roadwork" data-closed="" data-end-time="" style="cursor:pointer;" onclick="showIncDetail(this);"><td class="code">{{road}}</td><td>{{what}}</td><td class="r">{{when}}</td><td class="r mono">{{lanes}}</td></tr><!--/LOOP:coming_roadwork-->
