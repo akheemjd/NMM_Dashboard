@@ -2,8 +2,8 @@
   "updated_at": "13:15 EDT",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 3,
+    "heavy_count": 1,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 13,
     "gauge_class": "warn",
-    "status_line": "HWY 654, HWY 102, HWY 24, HWY 17",
+    "status_line": "HWY 417, HWY 11, HWY 654",
     "incidents": [
       {
-        "road": "HWY 654",
-        "what": "Highway Maintenance on HWY 654 Southbound  at HAZELGLEN RD-NIPISSING TWP L 5-6 (",
+        "road": "HWY 417",
+        "what": "Collision on HWY 417 Westbound  at PARKDALE AVE (IC 122), Ottawa. Left shoulder ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 102",
-        "what": "Highway Maintenance on HWY 102 Eastbound  at HILL RD (N), Thunder Bay. Lane and ",
+        "road": "HWY 11",
+        "what": "Emergency Roadwork on HWY 11 Southbound  at COOPER FALLS ROAD/CANAL ROAD/COUNTY ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -235,20 +235,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "9 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
-    },
-    {
-      "name": "Queenston-Lewiston Bridge",
-      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
       "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "13:40 EDT"
+    },
+    {
+      "name": "Queenston-Lewiston Bridge",
+      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "13:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -271,11 +271,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 PDT"
+      "captured_at": "10:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
