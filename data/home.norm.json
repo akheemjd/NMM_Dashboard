@@ -3,12 +3,12 @@
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "9 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "224.8",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "HWY 7, HWY 417, HWY 24, HWY 94",
+    "status_line": "HWY 401, HWY 17, QEW, HWY 400",
     "incidents": [
       {
-        "road": "HWY 7",
-        "what": "Collision on HWY 7 Both Directions  at County Road 118 / 19th Line/ROUNDABOUT, S",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at WARDEN AVE, Toronto. 2 lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 417",
-        "what": "Collision on HWY 417 Eastbound  at LEES AVE, Ottawa. Right lane and right should",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Westbound  at LAKESHORE DR (E) - MACGREGOR TWP, Th",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -230,25 +230,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:45 EDT"
+      "captured_at": "07:53 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "9 min",
+      "wait": "11 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -271,11 +271,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT"
+      "captured_at": "05:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
