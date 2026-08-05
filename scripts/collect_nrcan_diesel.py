@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """NRCan diesel price collector — scrapes the RSS feed for 60+ Canadian locations.
-Replaces hardcoded fuel prices with official NRCan daily data.
+Replaces hardcoded fuel prices with official Kalibrate DPPS survey data.
 Runs: every 30 min via collector pipeline."""
 
 import json, os, sys, urllib.request, xml.etree.ElementTree as ET
@@ -106,7 +106,7 @@ def compute_provincial(prices):
             "diesel": avg_cents,
             "gasoline": None,  # separate feed for gasoline
             "trend": "flat",
-            "note": f"NRCan daily — {len(vals)} locations",
+            "note": f"Kalibrate DPPS survey — {len(vals)} locations",
         }
     
     # National average
