@@ -75,12 +75,12 @@ a{color:var(--green);text-decoration:none}
 @media(max-width:760px){.cluster{grid-template-columns:1fr;gap:24px;padding:24px 20px}}
 
 /* section headers — single component, two variants */
-.sechead{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;margin:34px 0 12px}
-.sechead h2{font-family:'Saira',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--ink);flex:1 1 100%}
+.sechead{display:flex;align-items:baseline;gap:8px 14px;flex-wrap:wrap;justify-content:flex-start;margin:34px 0 12px}
+.sechead h2{font-family:'Saira',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--ink);text-align:left;flex:0 1 auto;margin:0}
 .sechead .sub{font-size:.75rem;color:var(--ink-3);white-space:nowrap;flex-shrink:0}
 .sechead .more{font-size:.75rem;color:var(--green);white-space:nowrap;margin-left:auto;flex-shrink:0}
 .sechead .more::before{content:'';display:inline-block;width:.75em}
-@media(min-width:720px){.sechead h2{flex:0 0 auto}}
+@media(min-width:720px){.sechead h2{flex:0 0 auto}}@media(max-width:719px){.sechead h2{flex:1 1 100%}}
 .sechead::before{content:'';width:14px;height:14px;background:var(--green);border-radius:2px;flex-shrink:0;box-shadow:0 0 0 3px rgba(30,158,102,.12)}
 .sechead--ref::before{background:transparent;border:1px solid var(--hair);box-shadow:none}
 
