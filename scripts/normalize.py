@@ -216,7 +216,7 @@ for ind in mk_indicators[:6]:
     cls = "up" if direction == "up" else "down" if direction == "down" else "flat"
     # Build a useful one-line note
     detail = ind.get("detail", "")
-    note = detail if detail else ind.get("what_it_means", "")[:60]
+    note = detail if detail else clip(ind.get("what_it_means", ""), 60)
     market.append({
         "name": ind.get("label", ind.get("name", "")),
         "note": note,

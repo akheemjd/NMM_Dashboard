@@ -1,5 +1,7 @@
-import urllib.request, io, zipfile, csv, json, os
+import urllib.request, io, zipfile, csv, json, os, sys
 from datetime import datetime, timezone
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from history import span_days, average
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 

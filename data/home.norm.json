@@ -7,8 +7,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_name": "Blue Water Bridge",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "228.3",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 16,
+    "active_count": 18,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 401, HWY 417, QEW",
+    "status_line": "ALLEN RO, HWY 401, HWY 427, HWY 400",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. Both shoulders and\u2026",
+        "road": "ALLEN ROAD",
+        "what": "Collision on ALLEN ROAD Northbound RAMP at 401, Toronto. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Eastbound  at REGIONAL ROAD 25, Milton. 2 right lanes\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Bayview Collector to Express,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -217,11 +217,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:12 EDT"
+      "captured_at": "15:16 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -235,20 +235,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -271,11 +271,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT"
+      "captured_at": "12:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -317,14 +317,8 @@
     },
     {
       "name": "BC vs AB diesel spread",
-      "note": "Wide gaps create arbitrage on cross-province lanes. BC diese",
+      "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
       "value": "32.9\u00a2/L",
-      "value_class": "up"
-    },
-    {
-      "name": "USD/CAD vs 1.35 baseline",
-      "note": "+4.9% \u2014 weaker CAD",
-      "value": "1.4162",
       "value_class": "up"
     }
   ],
