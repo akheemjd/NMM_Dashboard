@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """NRCan diesel price collector — scrapes the RSS feed for 60+ Canadian locations.
-Replaces hardcoded fuel prices with official Kalibrate DPPS survey data.
+Fetches NRCan weekly diesel survey via RSS (productID=5).
 Runs: every 30 min via collector pipeline."""
 
 import json, os, sys, urllib.request, xml.etree.ElementTree as ET
@@ -106,12 +106,15 @@ def compute_provincial(prices):
             "diesel": avg_cents,
             "gasoline": None,  # separate feed for gasoline
             "trend": "flat",
-            "note": f"Kalibrate DPPS survey — {len(vals)} locations",
+            "note": f"NRCan survey — {len(vals)} locations",
         }
     
-    # National average
-    all_prices = [result[prov]["diesel"] for prov in result]
-    national_avg = round(sum(all_prices) / len(all_prices), 1) if all_prices else 171.9
+    # National average — 10 freight-relevant provinces only
+    # YT and NT are collected but excluded: equal-weighting distorts the index
+    INDEX_PROVINCES = ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]
+    indexed = [result[p]["diesel"] for p in INDEX_PROVINCES
+               if result.get(p, {}).get("diesel") is not None]
+    national_avg = round(sum(indexed) / len(indexed), 1) if indexed else 171.9
     
     return result, national_avg
 
@@ -128,7 +131,7 @@ def collect():
             "diesel_national_avg": national_avg,
             "gasoline_national_avg": None,
             "updated": datetime.now(timezone.utc).isoformat(),
-            "source": "Kalibrate DPPS daily survey (used by NRCan for analysis)",
+            "source": "Natural Resources Canada weekly diesel survey",
             "location_count": len(prices),
         }
         

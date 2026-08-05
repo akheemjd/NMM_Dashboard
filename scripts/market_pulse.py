@@ -83,18 +83,18 @@ def collect_market_pulse():
         with open(os.path.join(DATA_DIR, "fuel.json")) as f:
             fuel = json.load(f)
         diesel_avg = fuel.get("diesel_national_avg", 0)
-        # Compare to a rough baseline of 165 cents
-        baseline = 165
-        fuel_pct = round((diesel_avg - baseline) / baseline * 100, 1)
+        # Fuel cost per 1,000 km — self-updating, no baseline constant
+        BURN = 35  # L/100km, loaded highway
+        cost_1000km = round(diesel_avg * BURN * 10 / 100, 2)
 
         pulse["indicators"].append({
             "name": "Fuel Cost",
-            "label": "Diesel vs baseline",
-            "value": f"{diesel_avg:.1f}¢/L",
-            "detail": f"{fuel_pct:+.1f}% vs 165¢ baseline",
-            "direction": "down" if fuel_pct < 0 else "up",
-            "source": "Industry surveys",
-            "what_it_means": "Fuel is typically 25-35% of operating costs. Above baseline = margin pressure."
+            "label": "Fuel cost per 1,000 km",
+            "value": f"${cost_1000km:,.0f}",
+            "detail": f"At {diesel_avg:.1f}¢/L and {BURN} L/100km",
+            "direction": "up" if diesel_avg > 200 else "down",
+            "source": "NRCan weekly diesel survey",
+            "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
         })
 
         # Regional spread

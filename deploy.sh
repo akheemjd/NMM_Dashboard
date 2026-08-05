@@ -6,8 +6,7 @@ cd /home/hermes/northern-mile-dashboard
 echo "=== Deploy $(date) ==="
 
 # 1. Collect fresh data
-python3 scripts/collect_border.py
-python3 scripts/collector.py && python3 scripts/collect_border.py && python3 scripts/normalize.py && python3 scripts/build_templates.py 2>&1
+python3 scripts/collector.py && python3 scripts/normalize.py && python3 scripts/build_templates.py 2>&1
 COLLECT_EXIT=$?
 
 # 2. Health check — record status for each source

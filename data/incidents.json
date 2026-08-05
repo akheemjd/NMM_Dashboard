@@ -1,41 +1,84 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-101068",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Port Mann Bridge",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Police incident. Right Coquitlam exit lane blocked at the east end of the bridge.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.21448604,
-      "lng": -122.81070752,
-      "start": "2026-08-05T10:48:45-07:00",
-      "end": "",
-      "updated": "2026-08-05T10:48:45-07:00"
-    },
-    {
-      "id": "ON-283700",
+      "id": "ON-283717",
       "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Collision on HWY 417 Westbound  at PARKDALE AVE (IC 122), Ottawa. Left shoulder and 1 left lane closed.",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound RAMP at MAJOR MACKENZIE DRIVE, Vaughan. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 45.3972,
-      "lng": -75.72696,
-      "start": 1785951960,
+      "lanes": "left lane closed",
+      "lat": 43.8484362,
+      "lng": -79.5501892,
+      "start": 1785954000,
       "end": null,
-      "updated": 1785951960
+      "updated": 1785954000
+    },
+    {
+      "id": "ON-283714",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 417 Eastbound  at ST. ALBERT RD (IC 66)/CR 7 (Casselman), Casselman. Both shoulders and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "both shoulders and left lane closed",
+      "lat": 45.3028,
+      "lng": -75.08013,
+      "start": 1785953940,
+      "end": null,
+      "updated": 1785953940
+    },
+    {
+      "id": "ON-283078",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 17 Westbound  at BOOM CREEK BRIDGE, MATTAWA, Mattawa. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 46.306544792,
+      "lng": -78.720099454,
+      "start": 1785842880,
+      "end": null,
+      "updated": 1785953760
+    },
+    {
+      "id": "ON-283711",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound RAMP at APPLEBY LINE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.38347112,
+      "lng": -79.7698595,
+      "start": 1785953580,
+      "end": null,
+      "updated": 1785953580
+    },
+    {
+      "id": "ON-283707",
+      "province": "ON",
+      "highway": "HWY 101",
+      "direction": "Both Directions",
+      "description": "Other on HWY 101 Both Directions  at BRADLEY BROS LTD RD, Matheson, Matheson. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 48.511760031,
+      "lng": -79.992381438,
+      "start": 1785953100,
+      "end": null,
+      "updated": 1785953100
     },
     {
       "id": "ON-283695",
@@ -70,27 +113,6 @@
       "updated": 1785951480
     },
     {
-      "id": "drivebc.ca/RIDE-101067",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 13",
-        "from": "264 Street",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident. Lane closures in both directions. Expect delays. Westbound lanes closed. Northbound lanes closed. Detour via eastbound on 16th Ave.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.03127864,
-      "lng": -122.49252141,
-      "start": "2026-08-05T09:59:45-07:00",
-      "end": "",
-      "updated": "2026-08-05T10:15:50-07:00"
-    },
-    {
       "id": "ON-283692",
       "province": "ON",
       "highway": "HWY 9",
@@ -105,22 +127,6 @@
       "start": 1786014000,
       "end": 1786032000,
       "updated": 1785949980
-    },
-    {
-      "id": "ON-283673",
-      "province": "ON",
-      "highway": "HWY 654",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 654 Southbound  at HAZELGLEN RD-NIPISSING TWP L 5-6 (S), Nipissing. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 46.110462749,
-      "lng": -79.482002332,
-      "start": 1785947880,
-      "end": null,
-      "updated": 1785947880
     },
     {
       "id": "ON-283672",
@@ -393,22 +399,6 @@
       "start": 1786327200,
       "end": 1786352400,
       "updated": 1785936540
-    },
-    {
-      "id": "ON-283078",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at BOOM CREEK BRIDGE, MATTAWA, Mattawa. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 46.306544792,
-      "lng": -78.720099454,
-      "start": 1785842880,
-      "end": null,
-      "updated": 1785936360
     },
     {
       "id": "ON-283567",
@@ -812,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T17:59:58.263135+00:00",
+  "updated": "2026-08-05T18:30:17.520924+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

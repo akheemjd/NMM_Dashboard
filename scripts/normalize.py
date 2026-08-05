@@ -2,6 +2,7 @@
 """Normalize collector data into exact template-fillable format (v3 — matches kit data shapes)."""
 import json, os
 from datetime import datetime
+from history import snapshot, delta, average, span_days
 
 # ── Materiality band classification ──
 import yaml
@@ -495,5 +496,10 @@ for code in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]:
     })
 
 write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "border_fuel": border_fuel, "tax": tax, "ifta": ifta, "updated_at": ts})
+
+# Snapshots — idempotent, per calendar day
+snapshot("diesel", "national", fuel_nat)
+for code, p in provs.items():
+    snapshot("diesel", code, p.get("diesel"))
 
 print(f"Normalized at {ts}: home ({len(home)} keys) + 7 pages")
