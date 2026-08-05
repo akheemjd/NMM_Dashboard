@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Normalize collector data into exact template-fillable format (v3 — matches kit data shapes)."""
-import json, os
+import json, os, time
 from datetime import datetime
 from history import snapshot, delta, average, span_days
 
@@ -68,8 +68,7 @@ raw_news = load("news.json")
 raw_dist = load("distances.json")
 
 ts = now_fmt()
-build_timestamp = int(time.time())
-build_version = "1785961422"  # cache-busting
+build_version = str(int(time.time()))  # cache-busting, fresh each build
 provs = raw_fuel.get("provinces", {})
 fuel_nat = raw_fuel.get("diesel_national_avg", 171.9)
 
