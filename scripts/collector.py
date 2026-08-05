@@ -8,8 +8,10 @@ import json
 import os
 import sys
 import urllib.request
-import xml.etree.ElementTree as ET
+import re
+from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
+import xml.etree.ElementTree as ET
 
 # Import market pulse collector
 sys.path.insert(0, os.path.dirname(__file__))
@@ -136,6 +138,14 @@ def collect_news():
         "drivers": ["driver", "recruitment", "retention", "wage", "shortage", "training", "workforce", "labour"],
         "safety": ["safety", "crash", "accident", "collision", "inspection", "cvsa", "blitz", "brake"],
     }
+    # Canadian signal keywords for flag_canadian
+    canada_words = [
+        "canada", "canadian", "ontario", "quebec", "alberta", "british columbia",
+        "manitoba", "saskatchewan", "nova scotia", "new brunswick", "pei",
+        "newfoundland", "yukon", "nunavut", "toronto", "montreal", "vancouver",
+        "calgary", "edmonton", "ottawa", "winnipeg", "halifax", "cvor", "ifta",
+        "cbsa", "nrcan", "transport canada", "mto", "saaq",
+    ]
 
     headlines = []
     for source, url in feeds:
@@ -172,20 +182,61 @@ def collect_news():
                 if not matched:
                     matched = ["industry"]
 
+                # Parse date for sorting
+                try:
+                    dt = parsedate_to_datetime(pub_date)
+                    date_iso = dt.isoformat()
+                except Exception:
+                    dt = datetime(1970,1,1,tzinfo=timezone.utc)
+                    date_iso = None
+                
+                # Canadian flag
+                title_lower = title.lower()
+                is_canadian = any(kw in title_lower for kw in canada_words)
+                
                 headlines.append({
                     "source": source,
                     "title": title,
                     "link": link,
                     "date": pub_date,
-                    "categories": matched[:2],  # max 2 categories
+                    "date_iso": date_iso,
+                    "categories": matched[:2],
+                    "flag_canadian": is_canadian,
+                    "_sort_dt": dt,
                 })
         except Exception as e:
             print(f"  News {source}: {e}")
 
     # Sort by date (most recent first), then limit
-    headlines.sort(key=lambda h: h.get("date") or "", reverse=True)
-    headlines = headlines[:15]
+    # Sort by parsed date, then dedupe by normalized title
+    headlines.sort(key=lambda h: h.get("_sort_dt", datetime(1970,1,1,tzinfo=timezone.utc)), reverse=True)
+    
+    # Dedupe: drop near-duplicate titles
+    def norm_title(t):
+        return re.sub(r"[^a-z0-9 ]", "", t.lower().split("|")[0].strip())
+    seen = set()
+    deduped = []
+    for h in headlines:
+        nt = norm_title(h["title"])
+        if nt not in seen:
+            seen.add(nt)
+            deduped.append(h)
+    headlines = deduped[:15]
+    
+    # Remove internal sort key
+    for h in headlines:
+        h.pop("_sort_dt", None)
 
+        # Health tracking
+    try:
+        from health_tracker import record_success, record_failure
+        if headlines:
+            record_success("news", len(headlines))
+        else:
+            record_failure("news", "No headlines collected")
+    except Exception:
+        pass
+    
     save("news", {
         "headlines": headlines,
         "count": len(headlines),
