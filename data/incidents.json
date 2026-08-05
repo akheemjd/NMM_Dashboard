@@ -1,36 +1,25 @@
 {
   "incidents": [
     {
-      "id": "ON-283679",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at NEILSON ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/RIDE-101067",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 13",
+        "from": "264 Street",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident. Lane closures in both directions. Expect delays. Westbound lanes closed. Northbound lanes closed. Detour via eastbound on 16th Ave.",
+      "event_type": "incident",
+      "severity": "MAJOR",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.79224382,
-      "lng": -79.21808313,
-      "start": 1785948960,
-      "end": null,
-      "updated": 1785948960
-    },
-    {
-      "id": "ON-283677",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at HWY 88, Bradford. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.09961091,
-      "lng": -79.63073115,
-      "start": 1785948240,
-      "end": null,
-      "updated": 1785948240
+      "lanes": "",
+      "lat": 49.03127864,
+      "lng": -122.49252141,
+      "start": "2026-08-05T09:59:45-07:00",
+      "end": "",
+      "updated": "2026-08-05T10:15:50-07:00"
     },
     {
       "id": "ON-283673",
@@ -161,6 +150,22 @@
       "updated": 1785943560
     },
     {
+      "id": "ON-283690",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 401 Westbound Express between HWY 404 and YONGE ST, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.767586,
+      "lng": -79.33804,
+      "start": 1786593540,
+      "end": 1786698000,
+      "updated": 1785943560
+    },
+    {
       "id": "ON-283644",
       "province": "ON",
       "highway": "HWY 17",
@@ -287,22 +292,6 @@
       "start": 1786240800,
       "end": 1786870800,
       "updated": 1785940740
-    },
-    {
-      "id": "ON-283616",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at PENINSULA RD (FORMER HWY 626 TO MARATHON) (S), Marathon. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 48.7479579,
-      "lng": -86.338681,
-      "start": 1785938640,
-      "end": null,
-      "updated": 1785938640
     },
     {
       "id": "ON-283606",
@@ -799,10 +788,26 @@
       "start": 1785844800,
       "end": 1786741200,
       "updated": 1785893520
+    },
+    {
+      "id": "ON-283459",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Daily Maintenance on HWY 17 Eastbound  between DAVID SMITH RD, MASSEY and SELDOM SEEN RD, MASSEY, Massey. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 46.203545,
+      "lng": -82.15804,
+      "start": 1785844800,
+      "end": 1786741200,
+      "updated": 1785890940
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T16:59:37.133944+00:00",
+  "updated": "2026-08-05T17:29:46.732342+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

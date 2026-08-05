@@ -1,14 +1,14 @@
 {
-  "updated_at": "11:15 EDT",
+  "updated_at": "13:15 EDT",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Blue Water Bridge",
-    "max_wait": "10 min"
+    "max_wait": "25 min"
   },
   "fuel": {
     "national_diesel": "224.8",
@@ -193,20 +193,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 13,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 654, HWY 102",
+    "status_line": "HWY 654, HWY 102, HWY 24, HWY 17",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at NEILSON ROAD, Toronto. R",
+        "road": "HWY 654",
+        "what": "Highway Maintenance on HWY 654 Southbound  at HAZELGLEN RD-NIPISSING TWP L 5-6 (",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at HWY 88, Bradford. Right lane and right shoul",
+        "road": "HWY 102",
+        "what": "Highway Maintenance on HWY 102 Eastbound  at HILL RD (N), Thunder Bay. Lane and ",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -217,38 +217,38 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:26 EDT"
+      "captured_at": "13:12 EDT"
     },
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:54 EDT"
+      "captured_at": "12:58 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "9 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -271,11 +271,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -293,7 +293,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT"
+      "captured_at": "13:15 EDT"
     }
   ],
   "market": [
