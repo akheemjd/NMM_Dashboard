@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-283631",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Daily Engineering Investigation on HWY 17 Eastbound  between INGLIS RD (S) and INGLIS RD (S), Kenora. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 49.72561,
+      "lng": -94.69756,
+      "start": 1786359600,
+      "end": 1787785200,
+      "updated": 1785941040
+    },
+    {
+      "id": "ON-283629",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound  between GUELPH LINE and REGIONAL ROAD 25, Milton. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.49118,
+      "lng": -79.987885,
+      "start": 1786240800,
+      "end": 1786870800,
+      "updated": 1785940740
+    },
+    {
+      "id": "ON-283621",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Collision on HWY 404 Southbound HOV at MAJOR MACKENZIE DRIVE, Markham-Richmondhill . All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.883210953,
+      "lng": -79.380016467,
+      "start": 1785939840,
+      "end": null,
+      "updated": 1785939840
+    },
+    {
       "id": "ON-283620",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +79,6 @@
       "start": 1785938640,
       "end": null,
       "updated": 1785938640
-    },
-    {
-      "id": "ON-283613",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at KENNEDY RD -SCARBOROUGH, Toronto. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.77511978,
-      "lng": -79.28482205,
-      "start": 1785938220,
-      "end": null,
-      "updated": 1785938220
     },
     {
       "id": "ON-283606",
@@ -161,6 +193,22 @@
       "updated": 1785931860
     },
     {
+      "id": "ON-283625",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound Off-ramp at FINCH AVENUE, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.733997,
+      "lng": -79.62741,
+      "start": 1786500000,
+      "end": 1786784400,
+      "updated": 1785931740
+    },
+    {
       "id": "ON-283575",
       "province": "ON",
       "highway": "HWY 427",
@@ -255,22 +303,6 @@
       "start": 1786330800,
       "end": 1786870800,
       "updated": 1785929520
-    },
-    {
-      "id": "ON-283534",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 17 Eastbound  at Mica Bay, Algoma, Algoma. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 47.105721152,
-      "lng": -84.71032743,
-      "start": 1785923760,
-      "end": null,
-      "updated": 1785929460
     },
     {
       "id": "ON-283562",
@@ -772,42 +804,10 @@
       "start": 1786053600,
       "end": 1786096800,
       "updated": 1785871620
-    },
-    {
-      "id": "ON-283343",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 403 HAMILTON Eastbound On-ramp at HWY 52, Hamilton. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.201202,
-      "lng": -80.04482,
-      "start": 1786068000,
-      "end": 1786093200,
-      "updated": 1785871200
-    },
-    {
-      "id": "ON-283346",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound Off-ramp at ONTARIO STREET -BEAMSVILLE, Lincoln. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.18898,
-      "lng": -79.47688,
-      "start": 1786068000,
-      "end": 1787389200,
-      "updated": 1785871020
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T14:24:50.449660+00:00",
+  "updated": "2026-08-05T14:55:01.687055+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
