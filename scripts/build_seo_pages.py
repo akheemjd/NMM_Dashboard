@@ -284,14 +284,14 @@ hero = f'''<div class="hero"><div><div class="hl">Canadian trucking market</div>
 <div class="hm"><div class="hs">
 <div class="hst"><div class="hsv" style="color:var(--amber);">{mk.get('gdp','—')}</div><div class="hsl">GDP growth</div></div>
 <div class="hst"><div class="hsv">{mk.get('freight_trend','—')}</div><div class="hsl">Freight trend</div></div>
-<div class="hst"><div class="hsv">{mk.get('diesel_vs_baseline','—')}</div><div class="hsl">Diesel vs baseline</div></div>
+<div class="hst"><div class="hsv">{mk.get('fuel_cost_per_1000km','—')}</div><div class="hsl">Fuel cost per 1,000 km</div></div>
 <div class="hst"><div class="hsv">{mk.get('bc_ab_spread','—')}</div><div class="hsl">BC-AB spread</div></div>
 </div></div></div>'''
 
 market_indicators = [
     ('GDP Growth', mk.get('gdp','—'), 'Monthly', 'Canadian economic output. Strong GDP means more freight to move.'),
     ('Freight Trend', mk.get('freight_trend','—'), 'Year-over-year', 'Direction of freight volumes. Up means more loads. Down means softer demand.'),
-    ('Diesel vs Baseline', mk.get('diesel_vs_baseline','—'), 'Current', 'How current diesel prices compare to historical baseline. Above baseline squeezes margins.'),
+    ('Fuel cost per 1,000 km', mk.get('fuel_cost_per_1000km','—'), 'Current', 'Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes.'),
     ('BC-AB Fuel Spread', mk.get('bc_ab_spread','—'), 'Current', 'The gap between Canada\'s most and least expensive diesel provinces.'),
 ]
 indicator_rows = '\n'.join(f'<tr><td><strong>{n}</strong><br><span style="color:var(--text-muted);font-size:.6875rem;">{d}</span></td><td class="val">{v}</td><td>{p}</td></tr>' for n,v,p,d in market_indicators)
@@ -305,7 +305,7 @@ body = f'''<h2>Market indicators</h2>
 <dt>How often do they update?</dt><dd>GDP monthly from Statistics Canada. Freight trend and fuel indicators update every 30 minutes from our live data pipeline.</dd>
 </dl></div>'''
 
-sz = write_page('/market-pulse/', 'Canadian Trucking Market Indicators', 'Canadian trucking market indicators: GDP growth, freight trends, diesel vs baseline, BC-AB fuel spread. Free.', 'Market', hero, body, '')
+sz = write_page('/market-pulse/', 'Canadian Trucking Market Indicators', 'Canadian trucking market indicators: GDP growth, freight trends, fuel cost per 1,000 km, BC-AB fuel spread. Free.', 'Market', hero, body, '')
 print(f"Market page: {sz:,} bytes")
 
 # ==============================

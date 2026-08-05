@@ -117,19 +117,19 @@ def collect_market_pulse():
         with open(os.path.join(DATA_DIR, "exchange.json")) as f:
             fx = json.load(f)
         rate = fx.get("current", 0)
-        # Rough baseline
-        fx_baseline = 1.35
-        fx_pct = round((rate - fx_baseline) / fx_baseline * 100, 1)
-        direction = "down" if fx_pct < 0 else "up"
-        pulse["indicators"].append({
-            "name": "CAD Impact",
-            "label": "USD/CAD vs 1.35 baseline",
-            "value": f"{rate:.4f}",
-            "detail": f"{fx_pct:+.1f}% — {'weaker CAD' if direction=='up' else 'stronger CAD'}",
-            "direction": direction,
-            "source": "Bank of Canada",
-            "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
-        })
+        # Guarded: only show when 30 days of history exist
+        if span_days("fx", "usd_cad") >= 30:
+            avg30 = average("fx", "usd_cad", 30)
+            if avg30 is not None:
+                pulse["indicators"].append({
+                    "name": "CAD Impact",
+                    "label": "USD/CAD vs 30-day average",
+                    "value": f"{rate:.4f}",
+                    "detail": f"{(rate - avg30):+.4f} vs 30-day avg {avg30:.4f}",
+                    "direction": "up" if rate > avg30 else "down",
+                    "source": "Bank of Canada",
+                    "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
+                })
     except Exception as e:
         print(f"  Exchange pulse: {e}")
 
