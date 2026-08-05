@@ -68,6 +68,7 @@ raw_news = load("news.json")
 raw_dist = load("distances.json")
 
 ts = now_fmt()
+build_timestamp = int(time.time())
 build_version = "1785961422"  # cache-busting
 provs = raw_fuel.get("provinces", {})
 fuel_nat = raw_fuel.get("diesel_national_avg", 171.9)
