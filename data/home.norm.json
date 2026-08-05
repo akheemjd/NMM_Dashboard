@@ -4,12 +4,12 @@
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "30 min"
+    "max_wait": "35 min"
   },
   "fuel": {
     "national_diesel": "228.3",
@@ -188,26 +188,26 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4162",
+    "usd_cad": "1.4200",
     "direction": "weaker CAD",
-    "change": "+0.0094"
+    "change": "+0.0174"
   },
   "incidents": {
     "none": false,
-    "active_count": 16,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 427",
+    "status_line": "HWY 427, QEW, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Left\u2026",
+        "road": "HWY 427",
+        "what": "Collision on HWY 427 Southbound COLLECTOR RAMP at BURNHAMTHORPE ROAD, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound  at WESTNEY ROAD, Ajax. 1 right lane and\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at LAKE STREET, St. Catharines.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -227,11 +227,11 @@
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:17 EDT"
+      "captured_at": "16:08 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -240,16 +240,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,16 +267,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 MDT"
+      "captured_at": "14:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "30 min",
+      "wait": "35 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
