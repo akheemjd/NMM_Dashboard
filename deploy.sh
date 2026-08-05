@@ -50,7 +50,7 @@ print('Health recorded.')
 # 4. Rebuild both
 
 echo "[5/6] Copying docs..."
-mkdir -p docs/v2 && cp -r assets docs/
+mkdir -p docs/v2 && cp -r assets/. docs/assets/
 echo "[6/6] Deploying..."
 # Commit and push
 echo "=== Git push ==="

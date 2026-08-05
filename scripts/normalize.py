@@ -68,6 +68,7 @@ raw_news = load("news.json")
 raw_dist = load("distances.json")
 
 ts = now_fmt()
+build_version = "1785961422"  # cache-busting
 provs = raw_fuel.get("provinces", {})
 fuel_nat = raw_fuel.get("diesel_national_avg", 171.9)
 
@@ -314,6 +315,7 @@ for t in raw_theft.get("incidents", [])[:30]:
 # ===== ASSEMBLE HOME =====
 home = {
     "updated_at": ts,
+    "build_version": build_version,
     "border": border,
     "fuel": fuel,
     "provinces": provinces_data,
@@ -338,7 +340,8 @@ home = {
 
 write("home.norm", home)
 write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts})
-write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts, "captured_at": ts})
+write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts,
+    "build_version": build_version, "captured_at": ts})
 write("fx.norm", {"fx": fx, "updated_at": ts})
 # Build raw incidents JSON array for the map
 inc_json = []
@@ -398,6 +401,7 @@ write("incidents.norm", {
     "incidents_json": json.dumps(inc_json),
     "coming_roadwork": coming_roadwork,
     "updated_at": ts,
+    "build_version": build_version,
 })
 write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
 # Direction summary for market page
@@ -411,6 +415,7 @@ write("market.norm", {
     "current_diesel": rates.get("current_diesel", "—"),
     "usd_cad": rates.get("usd_cad", "—"),
     "updated_at": ts,
+    "build_version": build_version,
 })
 write("news.norm", {"news": news, "updated_at": ts})
 
