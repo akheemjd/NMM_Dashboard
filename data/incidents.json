@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-283495",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at AVENUE ROAD, Toronto. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.7407904,
+      "lng": -79.4248552,
+      "start": 1785911460,
+      "end": null,
+      "updated": 1785912240
+    },
+    {
+      "id": "ON-283496",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 427 Northbound COLLECTOR RAMP at VALHALLA INN ROAD, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.6410142,
+      "lng": -79.55980919,
+      "start": 1785911580,
+      "end": null,
+      "updated": 1785911580
+    },
+    {
       "id": "ON-283494",
       "province": "ON",
       "highway": "HWY 17",
@@ -65,22 +97,6 @@
       "updated": 1785904860
     },
     {
-      "id": "ON-283484",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 427 Northbound EXPRESS RAMP at DUNDAS STREET, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.633901764,
-      "lng": -79.557396083,
-      "start": 1785904260,
-      "end": null,
-      "updated": 1785904260
-    },
-    {
       "id": "ON-283481",
       "province": "ON",
       "highway": "HWY 401",
@@ -95,22 +111,6 @@
       "start": 1785902340,
       "end": 1786237200,
       "updated": 1785901860
-    },
-    {
-      "id": "ON-283473",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at HWY 405, Niagara-On-The-Lake. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.15185202,
-      "lng": -79.14988799,
-      "start": 1785898380,
-      "end": null,
-      "updated": 1785898380
     },
     {
       "id": "ON-283472",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T06:18:23.254920+00:00",
+  "updated": "2026-08-05T06:48:31.643447+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
