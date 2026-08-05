@@ -1,15 +1,15 @@
 {
   "updated_at": "13:15 EDT",
-  "build_version": "1785964027",
+  "build_version": "1785965529",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 1,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "25 min"
+    "max_name": "Lacolle Border Crossing",
+    "max_wait": "40 min"
   },
   "fuel": {
     "national_diesel": "228.3",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 17,
+    "active_count": 13,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 401",
+    "status_line": "HWY 401, QEW",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at FIFTY ROAD, Hamilton. Right lane and right\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. Right lane and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound RAMP at BROCK ROAD, Pickering. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:25 EDT"
+      "captured_at": "17:17 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,16 +249,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
       "sub": "Lacolle, QC \u2014 Champlain, NY \u00b7 A-15 / I-87 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "40 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:34 EDT"
+      "captured_at": "17:08 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:20 PDT"
     },
     {
       "name": "Emerson-Pembina",

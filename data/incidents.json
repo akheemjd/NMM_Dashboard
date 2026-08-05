@@ -1,20 +1,94 @@
 {
   "incidents": [
     {
-      "id": "ON-283797",
+      "id": "drivebc.ca/RIDE-101071",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 17",
+        "from": "Highway 17",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall. Right lane blocked.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.21453066,
+      "lng": -122.82078272,
+      "start": "2026-08-05T12:46:52-07:00",
+      "end": "",
+      "updated": "2026-08-05T14:30:18-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101079",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 7",
+        "from": "Lougheed Highway",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road maintenance. Starting Wed Aug 5. HOV lane closed. Watch for traffic control. Use caution when passing.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.23094612,
+      "lng": -122.68933667,
+      "start": "2026-08-05T14:28:52-07:00",
+      "end": "",
+      "updated": "2026-08-05T14:28:52-07:00"
+    },
+    {
+      "id": "ON-283814",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at FIFTY ROAD, Hamilton. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. 1 centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.21717319,
-      "lng": -79.63699722,
-      "start": 1785963360,
+      "lanes": "1 centre lane closed",
+      "lat": 43.72997534,
+      "lng": -79.44901142,
+      "start": 1785965100,
       "end": null,
-      "updated": 1785963360
+      "updated": 1785965100
+    },
+    {
+      "id": "ON-283807",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound RAMP at BROCK ROAD, Pickering. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.840532077,
+      "lng": -79.068260193,
+      "start": 1785964800,
+      "end": null,
+      "updated": 1785964800
+    },
+    {
+      "id": "ON-283805",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Emergency Roadwork on HWY 401 Eastbound  at GUELPH LINE, Milton. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.49118566,
+      "lng": -79.98777262,
+      "start": 1785964680,
+      "end": null,
+      "updated": 1785964680
     },
     {
       "id": "ON-283798",
@@ -31,22 +105,6 @@
       "start": 1785963360,
       "end": null,
       "updated": 1785963360
-    },
-    {
-      "id": "ON-283789",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Police Investigation on HWY 401 Eastbound TRANSFER at McCowan Express to Collector, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.78202607,
-      "lng": -79.24899787,
-      "start": 1785962640,
-      "end": null,
-      "updated": 1785962640
     },
     {
       "id": "ON-283783",
@@ -79,38 +137,6 @@
       "start": 1785960900,
       "end": null,
       "updated": 1785962160
-    },
-    {
-      "id": "ON-283781",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Dixie Express to Collector, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.65890567,
-      "lng": -79.61351106,
-      "start": 1785962100,
-      "end": null,
-      "updated": 1785962100
-    },
-    {
-      "id": "ON-283778",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Police Investigation on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. Left shoulder and right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and right lane closed",
-      "lat": 43.78103077,
-      "lng": -79.25480516,
-      "start": 1785961800,
-      "end": null,
-      "updated": 1785961800
     },
     {
       "id": "ON-283774",
@@ -294,22 +320,6 @@
       "updated": 1785958020
     },
     {
-      "id": "ON-283732",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound EXPRESS at DUNDAS STREET, Toronto. Left shoulder and 4 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 4 left lanes closed",
-      "lat": 43.62833109,
-      "lng": -79.55690389,
-      "start": 1785956700,
-      "end": null,
-      "updated": 1785957180
-    },
-    {
       "id": "ON-283759",
       "province": "ON",
       "highway": "HWY 401",
@@ -342,22 +352,6 @@
       "updated": 1785956400
     },
     {
-      "id": "ON-283725",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 401 Eastbound  at REGIONAL ROAD 25, Milton. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.5281053,
-      "lng": -79.90482,
-      "start": 1785955560,
-      "end": null,
-      "updated": 1785955560
-    },
-    {
       "id": "ON-283729",
       "province": "ON",
       "highway": "HWY 406",
@@ -372,22 +366,6 @@
       "start": 1785985200,
       "end": 1786096800,
       "updated": 1785955500
-    },
-    {
-      "id": "ON-283714",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 417 Eastbound  at ST. ALBERT RD (IC 66)/CR 7 (Casselman), Casselman. Both shoulders and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "both shoulders and left lane closed",
-      "lat": 45.3028,
-      "lng": -75.08013,
-      "start": 1785953940,
-      "end": null,
-      "updated": 1785953940
     },
     {
       "id": "ON-283078",
@@ -804,10 +782,42 @@
       "start": 1787569200,
       "end": 1787871600,
       "updated": 1785929820
+    },
+    {
+      "id": "ON-283553",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound On-ramp at BROCK ROAD, Pickering. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.838993,
+      "lng": -79.07033,
+      "start": 1786330800,
+      "end": 1786870800,
+      "updated": 1785929520
+    },
+    {
+      "id": "ON-283562",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and HWY 12 N JCT, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1787569200,
+      "end": 1787871600,
+      "updated": 1785929400
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T21:01:49.299261+00:00",
+  "updated": "2026-08-05T21:32:06.836986+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
