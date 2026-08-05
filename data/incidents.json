@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-283582",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Warden Express to Collector, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.7712509,
-      "lng": -79.29935802,
-      "start": 1785933720,
-      "end": null,
-      "updated": 1785934080
-    },
-    {
       "id": "ON-283579",
       "province": "ON",
       "highway": "HWY 102",
@@ -31,22 +15,6 @@
       "start": 1785933300,
       "end": null,
       "updated": 1785933300
-    },
-    {
-      "id": "ON-283574",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound RAMP at HWY 10 / HURONTARIO STREET, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.60275061,
-      "lng": -79.64325357,
-      "start": 1785932940,
-      "end": null,
-      "updated": 1785932940
     },
     {
       "id": "ON-283567",
@@ -804,10 +772,42 @@
       "start": 1786068000,
       "end": 1786093200,
       "updated": 1785870780
+    },
+    {
+      "id": "ON-283336",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Construction on QEW Fort Erie Bound Off-ramp at MCLEOD ROAD, Niagara Falls. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.070297,
+      "lng": -79.120995,
+      "start": 1786068000,
+      "end": 1786093200,
+      "updated": 1785870000
+    },
+    {
+      "id": "ON-283313",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Daily Construction on HWY 401 Eastbound  between Dillon Rd  and Dillon Rd , Chatham. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 42.331596,
+      "lng": -82.221695,
+      "start": 1787054400,
+      "end": 1787349600,
+      "updated": 1785866940
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T12:52:23.190858+00:00",
+  "updated": "2026-08-05T13:22:37.617355+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
