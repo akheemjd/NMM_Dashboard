@@ -1,36 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-283836",
+      "id": "ON-283843",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Police Investigation on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. Right lane closed.",
+      "highway": "DON VALLEY PKWY",
+      "direction": "Southbound",
+      "description": "Collision on DON VALLEY PKWY Southbound  at YORK MILLS ROAD, Toronto. 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.78103077,
-      "lng": -79.25480516,
-      "start": 1785967080,
+      "lanes": "1 left lane closed",
+      "lat": 43.75815553,
+      "lng": -79.33584648,
+      "start": 1785967800,
       "end": null,
-      "updated": 1785967080
+      "updated": 1785967800
     },
     {
-      "id": "ON-283837",
+      "id": "ON-283707",
       "province": "ON",
-      "highway": "HWY 85",
-      "direction": "Northbound",
-      "description": "Collision on HWY 85 Northbound  at UNIVERSITY AV UP IC-KITCHENER, Waterloo. 1 lane closed.",
+      "highway": "HWY 101",
+      "direction": "Eastbound",
+      "description": "Other on HWY 101 Eastbound  at BRADLEY BROS LTD RD, Matheson, Matheson. Lane and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 lane closed",
-      "lat": 43.4860491,
-      "lng": -80.5015277,
-      "start": 1785967020,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.511760031,
+      "lng": -79.992381438,
+      "start": 1785953100,
       "end": null,
-      "updated": 1785967020
+      "updated": 1785967320
     },
     {
       "id": "ON-283834",
@@ -86,22 +86,6 @@
       "updated": "2026-08-05T14:52:17-07:00"
     },
     {
-      "id": "ON-283707",
-      "province": "ON",
-      "highway": "HWY 101",
-      "direction": "Both Directions",
-      "description": "Other on HWY 101 Both Directions  at BRADLEY BROS LTD RD, Matheson, Matheson. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 48.511760031,
-      "lng": -79.992381438,
-      "start": 1785953100,
-      "end": null,
-      "updated": 1785966660
-    },
-    {
       "id": "drivebc.ca/RIDE-101071",
       "province": "BC",
       "highway": {
@@ -139,22 +123,6 @@
       "updated": 1785966180
     },
     {
-      "id": "ON-283805",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Emergency Roadwork on HWY 401 Eastbound  at GUELPH LINE, Milton. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.49118566,
-      "lng": -79.98777262,
-      "start": 1785964680,
-      "end": null,
-      "updated": 1785965700
-    },
-    {
       "id": "ON-283814",
       "province": "ON",
       "highway": "HWY 401",
@@ -169,22 +137,6 @@
       "start": 1785965100,
       "end": null,
       "updated": 1785965100
-    },
-    {
-      "id": "ON-283783",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound RAMP at Townline Road / Wellington Rd 33 (286KM), Cambridge. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.418924,
-      "lng": -80.28668,
-      "start": 1785962280,
-      "end": null,
-      "updated": 1785962280
     },
     {
       "id": "drivebc.ca/RIDE-101075",
@@ -814,10 +766,58 @@
       "start": 1786330800,
       "end": 1786870800,
       "updated": 1785929520
+    },
+    {
+      "id": "ON-283562",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and HWY 12 N JCT, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1787569200,
+      "end": 1787871600,
+      "updated": 1785929400
+    },
+    {
+      "id": "ON-283561",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1787544000,
+      "end": 1787975940,
+      "updated": 1785929160
+    },
+    {
+      "id": "ON-283564",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between PORT SEVERN ROAD and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.79756,
+      "lng": -79.71239,
+      "start": 1786964400,
+      "end": 1787266800,
+      "updated": 1785928980
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T22:02:23.117455+00:00",
+  "updated": "2026-08-05T22:32:31.790030+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
