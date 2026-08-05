@@ -192,7 +192,7 @@ def collect_news():
                 
                 # Canadian flag
                 title_lower = title.lower()
-                is_canadian = any(kw in title_lower for kw in canada_words)
+                is_canadian = source in ("Truck News", "Today's Trucking") or any(kw in title_lower for kw in canada_words)
                 
                 headlines.append({
                     "source": source,
@@ -221,7 +221,11 @@ def collect_news():
         if nt not in seen:
             seen.add(nt)
             deduped.append(h)
-    headlines = deduped[:15]
+    # Reserved slots: 6 Canadian-flagged first, then fill by date
+    canadian_items = [h for h in deduped if h.get("flag_canadian")]
+    other_items = [h for h in deduped if not h.get("flag_canadian")]
+    headlines = canadian_items[:6] + other_items
+    headlines = headlines[:15]
     
     # Remove internal sort key
     for h in headlines:
