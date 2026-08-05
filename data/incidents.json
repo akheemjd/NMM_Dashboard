@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-283502",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Vehicle Fire on HWY 427 Northbound  at HWY 409, Toronto. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.700533,
+      "lng": -79.609201,
+      "start": 1785920520,
+      "end": null,
+      "updated": 1785920520
+    },
+    {
       "id": "ON-283500",
       "province": "ON",
       "highway": "HWY 17",
@@ -788,26 +804,10 @@
       "start": 1786327200,
       "end": 1786784400,
       "updated": 1785853920
-    },
-    {
-      "id": "ON-283183",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 427 Southbound Collector between DUNDAS STREET and EVANS AVE, Toronto. 2 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Left Lane(s)",
-      "lat": 43.628445,
-      "lng": -79.5568,
-      "start": 1786327200,
-      "end": 1786784400,
-      "updated": 1785853920
     }
   ],
   "total": 50,
-  "updated": "2026-08-05T08:50:09.664762+00:00",
+  "updated": "2026-08-05T09:20:19.770828+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
