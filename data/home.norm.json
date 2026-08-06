@@ -1,6 +1,6 @@
 {
-  "updated_at": "12:59 EDT",
-  "build_version": "1786040444",
+  "updated_at": "14:15 EDT",
+  "build_version": "1786042309",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 410, HWY 400, QEW",
+    "status_line": "HWY 401, HWY 17, HWY 410",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Southbound  at 407, Brampton. 1 right lane and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at LESLIE STREET, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -231,25 +231,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "14:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 EDT"
+      "captured_at": "14:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 EDT"
+      "captured_at": "14:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:09 EDT"
+      "captured_at": "14:22 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 MDT"
+      "captured_at": "12:23 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:00 PDT"
+      "captured_at": "11:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 CDT"
+      "captured_at": "13:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:59 EDT"
+      "captured_at": "14:15 EDT"
     }
   ],
   "market": [
@@ -354,14 +354,14 @@
   ],
   "news": [
     {
-      "category": "The Trucker",
-      "headline": "USDOT rolls out National Roadway Safety Strategy",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/usdot-rolls-out-national-roadway-safety-strategy"
+      "category": "Trucking Info",
+      "headline": "What Three Fleets Are Doing Differently When Buying Truck Parts in 2026",
+      "url": "https://www.truckinginfo.com/news/what-three-fleets-are-doing-differently-when-buying-truck-parts-in-2026"
     },
     {
       "category": "The Trucker",
-      "headline": "ACT: Preliminary Class 8 orders up in July y/y",
-      "url": "https://www.thetrucker.com/trucking-news/business/act-preliminary-class-8-orders-up-in-july-y-y"
+      "headline": "USDOT rolls out National Roadway Safety Strategy",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/usdot-rolls-out-national-roadway-safety-strategy"
     }
   ],
   "theft_home_json": "[{\"title\": \"Electronics load\", \"location\": \"Brampton, ON\", \"value\": \"$250,000\", \"lat\": 43.69, \"lng\": -79.76, \"date\": \"2026-07-08\", \"method\": \"Yard break-in overnight\", \"prevention\": \"High-security padlocks on all parked trailers. Motion-activated lighting. CCTV with remote monitorin\", \"source_url\": \"\", \"business\": \"Secured carrier yard \\u2014 Rutherford Rd & Steeles area\"}, {\"title\": \"47 trailers recovered in theft ring bust\", \"location\": \"Greater Montreal, QC\", \"value\": \"$4,000,000\", \"lat\": 45.51, \"lng\": -73.56, \"date\": \"2026-06-28\", \"method\": \"Organized theft ring \\u2014 coordinated yard hits\", \"prevention\": \"GPS tracking on all trailers. Geofence alerts when equipment leaves yard after hours.\", \"source_url\": \"\", \"business\": \"Multiple industrial yards \\u2014 Saint-Laurent and Anjou\"}, {\"title\": \"Reefer load \\u2014 meat products\", \"location\": \"Mississauga, ON\", \"value\": \"$85,000\", \"lat\": 43.59, \"lng\": -79.64, \"date\": \"2026-06-15\", \"method\": \"Stolen while driver inside truck stop\", \"prevention\": \"Never leave loaded reefer unattended at unsecured stops. Use attended parking or secured yards only.\", \"source_url\": \"\", \"business\": \"Truck stop \\u2014 Dixie Rd & 401 corridor\"}, {\"title\": \"Consumer electronics \\u2014 US-bound\", \"location\": \"Delta, BC\", \"value\": \"$180,000\", \"lat\": 49.09, \"lng\": -123.06, \"date\": \"2026-06-02\", \"method\": \"Trailer stolen from yard with fictitious paperwork\", \"prevention\": \"Verify carrier credentials before releasing loads. Call references. Check insurance and authorities.\", \"source_url\": \"\", \"business\": \"Industrial yard \\u2014 Annacis Island\"}, {\"title\": \"Identity theft pickup\", \"location\": \"Calgary, AB\", \"value\": \"$90,000\", \"lat\": 51.04, \"lng\": -114.07, \"date\": \"2026-05-18\", \"method\": \"Fictitious pickup \\u2014 stolen carrier credentials\", \"prevention\": \"Always verify MC number and insurance. Call the carrier directly using publicly listed number, not t\", \"source_url\": \"\", \"business\": \"Freight broker load \\u2014 cross-dock facility\"}, {\"title\": \"Building materials \\u2014 two trailers\", \"location\": \"Laval, QC\", \"value\": \"$120,000\", \"lat\": 45.58, \"lng\": -73.75, \"date\": \"2026-05-05\", \"method\": \"Coordinated yard hit \\u2014 fencing cut\", \"prevention\": \"King pin locks on all trailers. Perimeter fencing inspections. Overnight security patrols.\", \"source_url\": \"\", \"business\": \"Industrial park \\u2014 Autoroute 440 corridor\"}, {\"title\": \"Three reefers \\u2014 food products\", \"location\": \"Nisku, AB\", \"value\": \"$300,000\", \"lat\": 53.55, \"lng\": -113.49, \"date\": \"2026-04-22\", \"method\": \"Weekend break-in \\u2014 fence cut, trucks driven out\", \"prevention\": \"Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.\", \"source_url\": \"\", \"business\": \"Nisku industrial yard \\u2014 41 Ave SW\"}, {\"title\": \"Five trailers \\u2014 mixed freight\", \"location\": \"Winnipeg, MB\", \"value\": \"$210,000\", \"lat\": 49.9, \"lng\": -97.14, \"date\": \"2026-04-08\", \"method\": \"Serial thefts \\u2014 unlocked trailers\", \"prevention\": \"Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.\", \"source_url\": \"\", \"business\": \"CentrePort industrial area\"}]",
