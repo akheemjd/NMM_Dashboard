@@ -1,6 +1,6 @@
 {
   "updated_at": "12:59 EDT",
-  "build_version": "1786038629",
+  "build_version": "1786040444",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "10 min"
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "228.3",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 400",
+    "status_line": "HWY 17, HWY 410, HWY 400, QEW",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at GUELPH LINE, Burlington. Left\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound HOV at BRONTE ROAD, Oakville. All lanes closed.",
+        "road": "HWY 410",
+        "what": "Disabled Vehicle on HWY 410 Southbound  at 407, Brampton. 1 right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:12 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:31 EDT"
+      "captured_at": "14:09 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
