@@ -1,10 +1,10 @@
 {
   "updated_at": "13:15 EDT",
-  "build_version": "1785972772",
+  "build_version": "1785974580",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 4,
-    "moderate_count": 1,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, DON VALL",
+    "status_line": "HWY 401, HWY 101, HWY 17, Frog Cre",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Emergency Roadwork on HWY 401 Eastbound COLLECTOR at MARKHAM ROAD, Toronto.\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "DON VALLEY PKWY",
-        "what": "Collision on DON VALLEY PKWY Southbound  at YORK MILLS ROAD, Toronto. 1 left\u2026",
+        "road": "HWY 101",
+        "what": "Other on HWY 101 Eastbound  at BRADLEY BROS LTD RD, Matheson, Matheson. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "40 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:30 EDT"
+      "captured_at": "19:41 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "19 min",
+      "wait": "17 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 PDT"
+      "captured_at": "16:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
