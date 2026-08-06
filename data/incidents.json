@@ -1,41 +1,36 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-101101",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Trans-Canada Highway",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall. Left lane blocked. Expect delays.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.03493812,
-      "lng": -122.30140705,
-      "start": "2026-08-06T06:10:36-07:00",
-      "end": "",
-      "updated": "2026-08-06T06:10:36-07:00"
-    },
-    {
-      "id": "ON-284001",
+      "id": "ON-284028",
       "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound  at ABERDEEN AVE, Hamilton. Left shoulder and left lane closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at MAVIS ROAD, Mississauga. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "left shoulder and left lane closed",
-      "lat": 43.25532373,
-      "lng": -79.90681398,
-      "start": 1786019460,
+      "lat": 43.621331,
+      "lng": -79.706966,
+      "start": 1786023240,
       "end": null,
-      "updated": 1786021140
+      "updated": 1786023240
+    },
+    {
+      "id": "ON-284020",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 401 Westbound  between NORTHUMBERLAND RD 26 and NORTHUMBERLAND RD 26, Brighton. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.07906,
+      "lng": -77.74211,
+      "start": 1786057200,
+      "end": 1786096800,
+      "updated": 1786022040
     },
     {
       "id": "ON-284010",
@@ -812,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T13:14:07.735097+00:00",
+  "updated": "2026-08-06T13:45:14.913084+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
