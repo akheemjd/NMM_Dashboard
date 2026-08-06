@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-283949",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at CENTENNIAL PKWY, Hamilton. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.24573725,
+      "lng": -79.75690966,
+      "start": 1785994260,
+      "end": null,
+      "updated": 1785994260
+    },
+    {
       "id": "ON-283944",
       "province": "ON",
       "highway": "HWY 410",
@@ -15,22 +31,6 @@
       "start": 1785990900,
       "end": null,
       "updated": 1785990900
-    },
-    {
-      "id": "ON-283941",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at WESTON ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.71454654,
-      "lng": -79.53386683,
-      "start": 1785989940,
-      "end": null,
-      "updated": 1785989940
     },
     {
       "id": "ON-283937",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T05:05:29.321573+00:00",
+  "updated": "2026-08-06T05:35:37.842613+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
