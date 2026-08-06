@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-283915",
+      "id": "ON-283927",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Right lane and right shoulder closed.",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at KIPLING AVE, Toronto. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7854924,
-      "lng": -79.2351519,
-      "start": 1785982920,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.70077773,
+      "lng": -79.56167724,
+      "start": 1785984840,
       "end": null,
-      "updated": 1785982920
+      "updated": 1785984840
+    },
+    {
+      "id": "ON-283928",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at WHITES ROAD, Pickering. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.82124,
+      "lng": -79.10945,
+      "start": 1785984780,
+      "end": null,
+      "updated": 1785984780
     },
     {
       "id": "ON-276829",
@@ -793,26 +809,10 @@
       "start": 1786964400,
       "end": 1787266800,
       "updated": 1785928440
-    },
-    {
-      "id": "ON-283559",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1786939200,
-      "end": 1787371140,
-      "updated": 1785928140
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T02:34:44.833826+00:00",
+  "updated": "2026-08-06T03:04:53.141028+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
