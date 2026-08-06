@@ -1,6 +1,6 @@
 {
   "updated_at": "13:15 EDT",
-  "build_version": "1785994540",
+  "build_version": "1785996348",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 410, HWY 17, Frog Cre",
+    "status_line": "HWY 401, HWY 410",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at CENTENNIAL PKWY, Hamilton. Left\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at CARLINGVIEW DR, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 410",
-        "what": "Collision on HWY 410 Northbound RAMP at STEELES AVE, Brampton. All lanes closed.",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound  at GUELPH LINE, Milton. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:20 EDT"
+      "captured_at": "01:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:20 EDT"
+      "captured_at": "01:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 PDT"
+      "captured_at": "22:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
