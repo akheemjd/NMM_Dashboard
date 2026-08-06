@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-283900",
+      "id": "ON-283909",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at KIPLING AVE, Toronto. Left shoulder and 1 left lane closed.",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound  at KING/VAUGHAN TOWNLINE ROAD, King. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.70077773,
-      "lng": -79.56167724,
-      "start": 1785979680,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.90222386,
+      "lng": -79.5618342,
+      "start": 1785981000,
       "end": null,
-      "updated": 1785979680
-    },
-    {
-      "id": "ON-283901",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound ON-RAMP at HWY 88, Bradford. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.099247,
-      "lng": -79.631215,
-      "start": 1785979620,
-      "end": null,
-      "updated": 1785979620
+      "updated": 1785981000
     },
     {
       "id": "ON-283897",
@@ -95,6 +79,68 @@
       "start": 1786363200,
       "end": 1788559200,
       "updated": 1785971520
+    },
+    {
+      "id": "drivebc.ca/RIDE-101087",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 31",
+        "from": "Highway 31",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Ditch maintenance. Starting Tue Aug 4 until Wed Aug 19. From 9:00 AM to 5:00 PM PDT, weekdays. Single lane alternating traffic. Expect minor delays.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.69655308,
+      "lng": -116.91853909,
+      "start": "2026-08-05T15:58:04-07:00",
+      "end": "",
+      "updated": "2026-08-05T15:58:04-07:00"
+    },
+    {
+      "id": "drivebc.ca/DBC-93841",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 16",
+        "from": "East of 35 Mile",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Highway 16 (Yellowhead Highway), in both directions. Bridge maintenance planned between East of 35 Mile and Level Crossing (50 km west of Terrace). Starting Tue Aug 11 until Thu Aug 13. From 8:30 AM to 4:00 PM PDT on Tuesday, Wednesday and Thursday. Single lane alternating traffic will be in effect. Last updated Wed Aug 5 at 3:57 PM PDT. (DBC-93841)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 54.332707,
+      "lng": -129.296863,
+      "start": "2026-07-30T10:14:17-07:00",
+      "end": "",
+      "updated": "2026-08-05T15:57:11-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101085",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Spraggett Road",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road construction. Starting Thu Aug 13 until Tue Aug 18. Centre lane closed in both directions. Work happening between Carson Rd and Almond Gardens Rd W.  Road Closure planned.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.01472036,
+      "lng": -118.47498683,
+      "start": "2026-08-05T15:42:01-07:00",
+      "end": "",
+      "updated": "2026-08-05T15:42:01-07:00"
     },
     {
       "id": "ON-283078",
@@ -777,42 +823,10 @@
       "start": 1786964400,
       "end": 1787266800,
       "updated": 1785928980
-    },
-    {
-      "id": "ON-283560",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between QUARRY RD/SIMCOE 59 and QUARRY RD/SIMCOE 59, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.767105,
-      "lng": -79.69368,
-      "start": 1786964400,
-      "end": 1787266800,
-      "updated": 1785928740
-    },
-    {
-      "id": "ON-283563",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and HWY 12 N JCT, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1786964400,
-      "end": 1787266800,
-      "updated": 1785928440
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T01:33:26.600634+00:00",
+  "updated": "2026-08-06T02:04:36.111119+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
