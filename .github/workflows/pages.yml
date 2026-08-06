@@ -16,10 +16,10 @@ concurrency:
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v4
@@ -27,5 +27,5 @@ jobs:
         with:
           path: docs
       - name: Deploy
-        id: deployment
+        id: deploy
         uses: actions/deploy-pages@v4
