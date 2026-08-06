@@ -1,52 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-283957",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Collision on HWY 11 Southbound  at LINE 13/BASS LAKE RD, Oro Medonte. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.535167,
-      "lng": -79.45867,
-      "start": 1785999780,
-      "end": null,
-      "updated": 1785999780
-    },
-    {
-      "id": "ON-283955",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at KIPLING AVE, Toronto. 3 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 left lanes closed",
-      "lat": 43.70077773,
-      "lng": -79.56167724,
-      "start": 1785997440,
-      "end": null,
-      "updated": 1785998280
-    },
-    {
       "id": "ON-283956",
       "province": "ON",
       "highway": "QEW",
       "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound RAMP at GLENDALE AVENUE, Niagara-On-The-Lake. Left lane closed.",
+      "description": "Collision on QEW Fort Erie bound RAMP at GLENDALE AVENUE, Niagara-On-The-Lake. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
+      "closure": true,
+      "lanes": "All lanes closed",
       "lat": 43.156396627,
       "lng": -79.163360596,
       "start": 1785997680,
       "end": null,
-      "updated": 1785997680
+      "updated": 1785999900
     },
     {
       "id": "ON-283954",
@@ -143,6 +111,27 @@
       "start": 1786363200,
       "end": 1788559200,
       "updated": 1785971520
+    },
+    {
+      "id": "drivebc.ca/RIDE-101085",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Spraggett Road",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road construction. Starting Thu Aug 13 until Tue Aug 18. Centre lane closed in both directions. Work happening between Carson Rd and Almond Gardens Rd W.  Road Closure planned.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.01472036,
+      "lng": -118.47498683,
+      "start": "2026-08-05T15:42:01-07:00",
+      "end": "",
+      "updated": "2026-08-05T15:42:01-07:00"
     },
     {
       "id": "ON-283078",
@@ -804,10 +793,26 @@
       "start": 1786964400,
       "end": 1787266800,
       "updated": 1785928980
+    },
+    {
+      "id": "ON-283560",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between QUARRY RD/SIMCOE 59 and QUARRY RD/SIMCOE 59, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.767105,
+      "lng": -79.69368,
+      "start": 1786964400,
+      "end": 1787266800,
+      "updated": 1785928740
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T07:07:03.673423+00:00",
+  "updated": "2026-08-06T07:37:11.884139+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
