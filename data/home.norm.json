@@ -1,6 +1,6 @@
 {
   "updated_at": "13:15 EDT",
-  "build_version": "1786018309",
+  "build_version": "1786020178",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "228.3",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 17, Frog Cre, HWY 811",
+    "status_line": "HWY 534, HWY 403 , HWY 401, HWY 410",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Eastbound  at W JCT SUDBURY REG RD 55, Whitefish.\u2026",
+        "road": "HWY 534",
+        "what": "Highway Maintenance on HWY 534 Westbound  at GURD TWP - GRAVEL RD LOT 10-11,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Westbound  at BOOM CREEK BRIDGE, MATTAWA,\u2026",
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Eastbound  at ABERDEEN AVE, Hamilton. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -231,16 +231,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:47 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 EDT"
+      "captured_at": "08:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 EDT"
+      "captured_at": "08:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,16 +267,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 MDT"
+      "captured_at": "06:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 PDT"
+      "captured_at": "05:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:04 CDT"
+      "captured_at": "07:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
