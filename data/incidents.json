@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-283956",
+      "id": "ON-283078",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound RAMP at GLENDALE AVENUE, Niagara-On-The-Lake. All lanes closed.",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 17 Westbound  at BOOM CREEK BRIDGE, MATTAWA, Mattawa. Lane and WEST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.156396627,
-      "lng": -79.163360596,
-      "start": 1785997680,
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 46.306544792,
+      "lng": -78.720099454,
+      "start": 1785842880,
       "end": null,
-      "updated": 1785999900
+      "updated": 1786003380
     },
     {
       "id": "ON-283954",
@@ -132,22 +132,6 @@
       "start": "2026-08-05T15:42:01-07:00",
       "end": "",
       "updated": "2026-08-05T15:42:01-07:00"
-    },
-    {
-      "id": "ON-283078",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at BOOM CREEK BRIDGE, MATTAWA, Mattawa. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 46.306544792,
-      "lng": -78.720099454,
-      "start": 1785842880,
-      "end": null,
-      "updated": 1785969300
     },
     {
       "id": "drivebc.ca/DBC-93875",
@@ -809,10 +793,26 @@
       "start": 1786964400,
       "end": 1787266800,
       "updated": 1785928740
+    },
+    {
+      "id": "ON-283563",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and HWY 12 N JCT, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1786964400,
+      "end": 1787266800,
+      "updated": 1785928440
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T07:37:11.884139+00:00",
+  "updated": "2026-08-06T08:07:21.348672+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
