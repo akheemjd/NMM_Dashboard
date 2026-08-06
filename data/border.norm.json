@@ -1,13 +1,13 @@
 {
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "25 min"
+    "max_wait": "15 min"
   },
   "border_rows": [
     {
@@ -31,20 +31,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
-    },
-    {
-      "name": "Queenston-Lewiston Bridge",
-      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
       "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "13:00 EDT"
+    },
+    {
+      "name": "Queenston-Lewiston Bridge",
+      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -53,7 +53,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "12:50 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -67,11 +67,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -89,7 +89,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:13 EDT"
+      "captured_at": "12:59 EDT"
     }
   ],
   "crossings": [
@@ -114,20 +114,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
-    },
-    {
-      "name": "Queenston-Lewiston Bridge",
-      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
       "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "13:00 EDT"
+    },
+    {
+      "name": "Queenston-Lewiston Bridge",
+      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -136,7 +136,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "12:50 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -150,11 +150,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -172,10 +172,10 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:13 EDT"
+      "captured_at": "12:59 EDT"
     }
   ],
-  "updated_at": "12:13 EDT",
-  "build_version": "1786034950",
-  "captured_at": "12:13 EDT"
+  "updated_at": "12:59 EDT",
+  "build_version": "1786036760",
+  "captured_at": "12:59 EDT"
 }
