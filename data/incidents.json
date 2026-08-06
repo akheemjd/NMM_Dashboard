@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-283957",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Collision on HWY 11 Southbound  at LINE 13/BASS LAKE RD, Oro Medonte. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.535167,
+      "lng": -79.45867,
+      "start": 1785999780,
+      "end": null,
+      "updated": 1785999780
+    },
+    {
+      "id": "ON-283955",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at KIPLING AVE, Toronto. 3 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 left lanes closed",
+      "lat": 43.70077773,
+      "lng": -79.56167724,
+      "start": 1785997440,
+      "end": null,
+      "updated": 1785998280
+    },
+    {
       "id": "ON-283956",
       "province": "ON",
       "highway": "QEW",
@@ -17,22 +49,6 @@
       "updated": 1785997680
     },
     {
-      "id": "ON-283955",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at KIPLING AVE, Toronto. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.70077773,
-      "lng": -79.56167724,
-      "start": 1785997440,
-      "end": null,
-      "updated": 1785997620
-    },
-    {
       "id": "ON-283954",
       "province": "ON",
       "highway": "HWY 540",
@@ -47,22 +63,6 @@
       "start": 1785997020,
       "end": null,
       "updated": 1785997020
-    },
-    {
-      "id": "ON-283953",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound RAMP at 401 EAST COLL, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.71607414,
-      "lng": -79.51850808,
-      "start": 1785996960,
-      "end": null,
-      "updated": 1785996960
     },
     {
       "id": "ON-283944",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T06:35:55.650271+00:00",
+  "updated": "2026-08-06T07:07:03.673423+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
