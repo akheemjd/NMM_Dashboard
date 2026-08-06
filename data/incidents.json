@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-283884",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at WESTON ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.712116,
+      "lng": -79.5383189,
+      "start": 1785976020,
+      "end": null,
+      "updated": 1785976020
+    },
+    {
+      "id": "ON-283880",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Vehicle Fire on HWY 400 Southbound  at ESSA RD / SIMCOE RD 27, Barrie. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 44.36195866,
+      "lng": -79.69728585,
+      "start": 1785975600,
+      "end": null,
+      "updated": 1785975600
+    },
+    {
+      "id": "ON-283876",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 2/KINGSTON ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.79671987,
+      "lng": -79.15766431,
+      "start": 1785975060,
+      "end": null,
+      "updated": 1785975060
+    },
+    {
       "id": "ON-283859",
       "province": "ON",
       "highway": "HWY 17",
@@ -47,22 +95,6 @@
       "start": 1785953100,
       "end": null,
       "updated": 1785967320
-    },
-    {
-      "id": "ON-283832",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.69200023,
-      "lng": -79.56896285,
-      "start": 1785966840,
-      "end": null,
-      "updated": 1785966840
     },
     {
       "id": "drivebc.ca/DBC-93875",
@@ -777,42 +809,10 @@
       "start": 1786939200,
       "end": 1787371140,
       "updated": 1785928140
-    },
-    {
-      "id": "ON-277959",
-      "province": "ON",
-      "highway": "Frog Creek Road",
-      "direction": "Both Directions",
-      "description": "Culvert replacement on Frog Creek Road, Alberton Township. All lanes closed.",
-      "event_type": "closures",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "No Data",
-      "lat": 48.648996,
-      "lng": -93.465501,
-      "start": 1785841200,
-      "end": 1787349600,
-      "updated": 1785927643
-    },
-    {
-      "id": "ON-276829",
-      "province": "ON",
-      "highway": "Lac des Mille Lacs Road",
-      "direction": "Both Directions",
-      "description": "Forest Fire on Lac des Mille Lacs Road, both directions, from Inwood Rd to Hwy 17, Upsala. All lanes closed.",
-      "event_type": "closures",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "No Data",
-      "lat": 48.950786,
-      "lng": -90.486138,
-      "start": 1784469600,
-      "end": null,
-      "updated": 1785927637
     }
   ],
   "total": 50,
-  "updated": "2026-08-06T00:02:58.518498+00:00",
+  "updated": "2026-08-06T00:33:07.828714+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
