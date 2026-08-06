@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Truck Fuel Cost Calculator — Canada | Northern Mile</title>
+<meta name="description" content="Trip fuel cost, cost per km, and break-even rate calculator. Pre-loaded with today's Canadian diesel average. Free for owner-operators and dispatchers.">
+<meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
+<meta property="og:type" content="website"><meta property="og:title" content="Truck Fuel Cost Calculator — Canada | Northern Mile"><meta property="og:description" content="Trip fuel cost, per-km rate and break-even calculator. Free for truckers."><meta name="twitter:card" content="summary_large_image">
+<meta name="build" content="14:15 EDT">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/styles.css?v=">
+<script type="application/ld+json">
+{"@context":"https://***@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel Cost Calculator","item":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/"}]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
+</head><body>
+
+<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
+<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/" class="on">Calc</a></div></nav>
+
+<main class="wrap">
+  <div class="breadcrumb"><a href="/">Dashboard</a> › Fuel Cost Calculator</div>
+  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Pre-loaded with NMDI at 228.3c/L</span><span>Updated 14:15 EDT</span></div>
+
+  <!-- 1. Trip Fuel Cost -->
+  <div class="sechead"><h2>Trip fuel cost</h2><span class="rule"></span></div>
+  <div class="panel" style="padding:20px 22px">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dist">Distance (km)</label><input class="field" id="dist" type="number" value="1000" min="0" oninput="calcAll()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="burn">Burn (L/100km)</label><input class="field" id="burn" type="number" value="38" min="1" oninput="calcAll()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="price">Diesel (c/L)</label><input class="field" id="price" type="number" value="228.3" min="0" step="0.1" oninput="calcAll()"></div>
+    </div>
+    <button class="btn" onclick="document.getElementById('price').value='228.3';calcAll()" style="margin-bottom:12px;">Reset to national avg</button>
+    <div class="readout"><div class="rl">Trip fuel cost</div><div class="big" id="trip-cost">—</div><div class="meta" id="trip-detail"></div></div>
+  </div>
+
+  <!-- 2. Cost per km -->
+  <div class="sechead"><h2>Cost per km</h2><span class="sub">quick rate card</span><span class="rule"></span></div>
+  <div class="panel" style="padding:16px 22px">
+    <div class="scroll"><table class="tbl">
+      <thead><tr><th>Burn rate</th><th class="r">Per km</th><th class="r">Per 100km</th><th class="r">Per 1,000km</th></tr></thead>
+      <tbody id="perkm-table"></tbody>
+    </table></div>
+  </div>
+
+  <!-- 3. Cross-border fuel -->
+  <div class="sechead"><h2>Cross-border fuel</h2><span class="sub">USD/gal → CAD c/L</span><span class="rule"></span></div>
+  <div class="panel" style="padding:20px 22px">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
+      <div style="flex:1;min-width:120px;"><label class="fl" for="usd-gal">US diesel (USD/gal)</label><input class="field" id="usd-gal" type="number" value="3.85" step="0.01" oninput="calcUS()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="fx-rate">USD/CAD</label><input class="field" id="fx-rate" type="number" value="1.4200" step="0.0001" oninput="calcUS()"></div>
+    </div>
+    <div class="readout"><div class="rl">Canadian equivalent</div><div class="big" id="us-result">—</div><div class="meta" id="us-detail"></div></div>
+  </div>
+
+  <!-- 4. Break-even rate -->
+  <div class="sechead"><h2>Break-even rate</h2><span class="sub">minimum you need per km</span><span class="rule"></span></div>
+  <div class="panel" style="padding:20px 22px">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
+      <div style="flex:1;min-width:120px;"><label class="fl" for="be-burn">Burn (L/100km)</label><input class="field" id="be-burn" type="number" value="38" min="1" oninput="calcBE()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="be-diesel">Diesel (c/L)</label><input class="field" id="be-diesel" type="number" value="228.3" min="0" step="0.1" oninput="calcBE()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="be-fixed">Fixed cost/km (c)</label><input class="field" id="be-fixed" type="number" value="45" min="0" step="1" oninput="calcBE()"></div>
+    </div>
+    <p style="font-size:0.6875rem;color:var(--ink-3);margin-bottom:12px;">Fixed costs per km: truck payment, insurance, maintenance, plates. Industry average for a Class 8 tractor-trailer is 40–55c/km.</p>
+    <div class="readout"><div class="rl">Break-even rate</div><div class="big" id="be-result">—</div><div class="meta" id="be-detail"></div></div>
+  </div>
+
+  <!-- 5. Deadhead cost -->
+  <div class="sechead"><h2>Deadhead cost</h2><span class="sub">what empty miles cost you</span><span class="rule"></span></div>
+  <div class="panel" style="padding:20px 22px">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-km">Deadhead (km)</label><input class="field" id="dh-km" type="number" value="200" min="0" oninput="calcDH()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-burn">Burn (L/100km)</label><input class="field" id="dh-burn" type="number" value="38" min="1" oninput="calcDH()"></div>
+      <div style="flex:1;min-width:120px;"><label class="fl" for="dh-diesel">Diesel (c/L)</label><input class="field" id="dh-diesel" type="number" value="228.3" min="0" step="0.1" oninput="calcDH()"></div>
+    </div>
+    <div class="readout"><div class="rl">Cost of those empty miles</div><div class="big" id="dh-result">—</div><div class="meta" id="dh-detail"></div></div>
+    <div style="margin-top:16px;padding:8px 12px;background:rgba(245,197,24,.08);border-left:2px solid var(--yellow);font-size:0.75rem;color:var(--ink-2);" id="dh-tip"></div>
+  </div>
+
+
+  </div>
+
+  <!-- 5. Rate floor -->
+  <div class="sechead"><h2>Rate floor</h2><span class="sub">minimum rate before you move</span><span class="rule"></span></div>
+  <div class="panel"><div style="padding:20px 22px">
+    <div class="row" style="margin-bottom:12px">
+      <div><label class="fl" for="rf-dist">Distance (km)</label><input class="field" id="rf-dist" type="number" value="1380" min="0" oninput="calcRF()"></div>
+      <div><label class="fl" for="rf-burn">Burn (L/100km)</label><input class="field" id="rf-burn" type="number" value="38" min="1" oninput="calcRF()"></div>
+      <div><label class="fl" for="rf-diesel">Diesel (c/L)</label><input class="field" id="rf-diesel" type="number" value="228.3" min="0" step="0.1" oninput="calcRF()"></div>
+    </div>
+    <div class="row" style="margin-bottom:16px">
+      <div><label class="fl" for="rf-margin">Target margin (%)</label><input class="field" id="rf-margin" type="number" value="15" min="0" max="50" oninput="calcRF()"></div>
+      <div><label class="fl" for="rf-fixed">Fixed cost / trip ($)</label><input class="field" id="rf-fixed" type="number" value="150" min="0" oninput="calcRF()"></div>
+    </div>
+    <div class="readout"><div class="rl">Minimum rate</div><div class="big" id="rf-result">—</div><div class="meta" id="rf-detail"></div></div>
+    <div style="margin-top:16px;padding:12px 16px;background:rgba(30,158,102,.08);border-left:2px solid var(--green);font-size:0.8125rem;color:var(--ink-2);line-height:1.5" id="rf-tip"></div>
+  </div></div>
+
+  <div class="sechead"><h2>Common questions</h2><span class="rule"></span></div>
+  <div class="faq"><dl>
+    <dt>What diesel price does this use?</dt><dd>Pre-loaded with the Northern Mile Diesel Index (228.3c/L), updated every 30 minutes. Change it to any pump price.</dd>
+    <dt>How is the cost worked out?</dt><dd>Litres burned = distance ÷ 100 × burn rate. Cost = litres × price per litre.</dd>
+    <dt>How do I use the cross-border calculator?</dt><dd>Enter the US pump price in USD per gallon and the current exchange rate. We convert to Canadian cents per litre so you can compare directly with your home province.</dd>
+  </dl></div>
+
+  <div class="related"><a href="/fuel-prices/">Fuel prices →</a><a href="/exchange-rate/">CAD/USD →</a><a href="/border-wait-times/">Border waits →</a></div>
+
+</main>
+
+<!-- subscribe partial — Ghost Portal GET form, works cross-origin -->
+
+
+<!-- subscribe partial — link to Ghost Portal, cross-origin safe -->
+<div class="cta">
+  <div class="e">The Northern Mile Brief</div>
+  <div class="b">Fuel, border and market shifts. Every Wednesday, 6am.</div>
+  <a class="sub-btn" href="https://northernmilemedia.com/subscribe/">Subscribe</a>
+  <div class="s" style="margin-top:8px">Free. One email a week. Unsubscribe anytime.</div>
+</div>
+
+<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Estimates only · Informational use · © 2026 Northern Mile Media</div></div></footer>
+<script>
+// Trip cost
+function calcAll(){
+  var d=+document.getElementById('dist').value||0, b=+document.getElementById('burn').value||0, p=+document.getElementById('price').value||0;
+  var litres=d/100*b, cost=litres*p/100;
+  document.getElementById('trip-cost').textContent='$'+cost.toFixed(2);
+  document.getElementById('trip-detail').textContent=litres.toFixed(0)+' L × '+p.toFixed(1)+'c/L · '+d+' km at '+b+' L/100km';
+
+  // Per km table
+  var rates=[55,45,38,35,30,25], html='';
+  rates.forEach(function(r){
+    var perkm=(r*p/100).toFixed(1), per100=(r*p/100).toFixed(2), per1k=(r*p*10/100).toFixed(2);
+    html+='<tr><td>'+r+' L/100km</td><td class="r mono">'+perkm+'c</td><td class="r mono">$'+per100+'</td><td class="r mono">$'+per1k+'</td></tr>';
+  });
+  document.getElementById('perkm-table').innerHTML=html;
+}
+
+// Cross-border
+function calcUS(){
+  var us=+document.getElementById('usd-gal').value||0, fx=+document.getElementById('fx-rate').value||0;
+  var cadPerL=(us*fx/3.785).toFixed(1);
+  document.getElementById('us-result').textContent=cadPerL+'c/L';
+  document.getElementById('us-detail').textContent='$'+us.toFixed(2)+'/gal × '+fx.toFixed(4)+' ÷ 3.785 L/gal';
+}
+calcAll();calcUS();calcBE();calcDH();calcRF();calcRF();
+
+function calcBE(){
+  var b=+document.getElementById('be-burn').value||0, d=+document.getElementById('be-diesel').value||0, f=+document.getElementById('be-fixed').value||0;
+  var fuelPerKm=b*d/100, total=fuelPerKm+f;
+  document.getElementById('be-result').textContent=total.toFixed(1)+'c/km';
+  document.getElementById('be-detail').textContent=fuelPerKm.toFixed(1)+'c fuel + '+f+'c fixed · '+b+' L/100km at '+d+'c/L';
+}
+
+function calcRF(){
+  var km=+document.getElementById('rf-dist').value||0, b=+document.getElementById('rf-burn').value||0, d=+document.getElementById('rf-diesel').value||0, m=+document.getElementById('rf-margin').value||0, f=+document.getElementById('rf-fixed').value||0;
+  var litres=km/100*b, fuelCost=litres*d/100;
+  var total=fuelCost+f, minRate=total*(1+m/100);
+  document.getElementById('rf-result').textContent='$'+minRate.toFixed(0);
+  document.getElementById('rf-detail').textContent='Fuel $'+fuelCost.toFixed(0)+' + Fixed $'+f+' = $'+total.toFixed(0)+' + '+m+'% margin';
+  var perKm=(minRate/km).toFixed(2);
+  document.getElementById('rf-tip').innerHTML='<strong>$'+perKm+'</strong> per km. Below this number, you are losing money on this lane. A broker offers less, you know your floor.';
+}
+function calcDH(){
+  var km=+document.getElementById('dh-km').value||0, b=+document.getElementById('dh-burn').value||0, d=+document.getElementById('dh-diesel').value||0;
+  var litres=km/100*b, cost=litres*d/100, perKm=cost/km*100;
+  document.getElementById('dh-result').textContent='$'+cost.toFixed(2);
+  document.getElementById('dh-detail').textContent=litres.toFixed(0)+' L × '+d+'c/L · '+km+' km at '+b+' L/100km';
+  var loads=Math.round(cost/3); // ~$3/km average rate
+  document.getElementById('dh-tip').innerHTML='At an average rate of $3.00/km, you need to run roughly <strong>'+loads+' paid km</strong> just to cover these '+km+' deadhead km.';
+}
+</script>
+<script>
+/* Northern Mile Dashboard — shared behaviour for every page. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  /* Split-flap odometer: builds flap tiles from a single data-value, rolls on load.
+     Markup: <div class="odo" data-value="171.9" data-unit="c/L"></div>  */
+  document.querySelectorAll('.odo[data-value]').forEach(function (odo) {
+    var val = (odo.getAttribute('data-value') || '').trim();
+    var unit = odo.getAttribute('data-unit') || '';
+    odo.innerHTML = '';
+    val.split('').forEach(function (ch) {
+      var s = document.createElement('span');
+      if (ch === '.' || ch === ',') { s.className = 'sep'; s.textContent = ch; }
+      else { s.className = 'd'; s.textContent = ch; }
+      odo.appendChild(s);
+    });
+    if (unit) { var u = document.createElement('span'); u.className = 'u'; u.textContent = unit; odo.appendChild(u); }
+    if (!reduce) {
+      odo.querySelectorAll('.d').forEach(function (f) {
+        var target = f.textContent, ticks = 6 + Math.floor(Math.random() * 5), i = 0;
+        var iv = setInterval(function () {
+          if (i >= ticks) { f.textContent = target; clearInterval(iv); return; }
+          f.textContent = Math.floor(Math.random() * 10); i++;
+        }, 45);
+      });
+    }
+  });
+
+  /* Clickable rows/cards/gauges: any element with data-href navigates (mouse + Enter). */
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('a')) return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter') return;
+    var el = e.target.closest('[data-href]');
+    if (el) window.location.href = el.getAttribute('data-href');
+  });
+})();
+
+function copyLink(btn, url) {
+  navigator.clipboard.writeText(url || location.href).then(function () {
+    var t = btn.textContent; btn.textContent = 'Copied';
+    setTimeout(function () { btn.textContent = t; }, 1500);
+  });
+}
+
+</script>
+</body></html>
