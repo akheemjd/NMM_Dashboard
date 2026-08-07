@@ -1,36 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-284430",
+      "id": "ON-284164",
       "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 410 Southbound  at HWY 401, Mississauga. Right lane and right shoulder closed.",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.63904064,
-      "lng": -79.66051787,
-      "start": 1786078560,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 46.315646952,
+      "lng": -78.703113335,
+      "start": 1786039440,
       "end": null,
-      "updated": 1786078560
+      "updated": 1786080360
     },
     {
-      "id": "ON-284429",
+      "id": "ON-284433",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. Right lane closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at ONTARIO STREET -BEAMSVILLE, Lincoln. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.2851185,
-      "lng": -79.67958049,
-      "start": 1786078500,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.18899202,
+      "lng": -79.47673979,
+      "start": 1786080060,
       "end": null,
-      "updated": 1786078500
+      "updated": 1786080060
     },
     {
       "id": "drivebc.ca/RIDE-101084",
@@ -116,22 +116,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786067744
-    },
-    {
-      "id": "ON-284164",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.315646952,
-      "lng": -78.703113335,
-      "start": 1786039440,
-      "end": null,
-      "updated": 1786067340
     },
     {
       "id": "drivebc.ca/RIDE-101136",
@@ -814,10 +798,26 @@
       "start": 1787576400,
       "end": 1787943600,
       "updated": 1786033740
+    },
+    {
+      "id": "ON-284113",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 12 Northbound  between DURHAM RD 50, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.496002,
+      "lng": -79.156,
+      "start": 1787576400,
+      "end": 1787857200,
+      "updated": 1786033680
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T05:01:33.140968+00:00",
+  "updated": "2026-08-07T05:31:42.937730+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
