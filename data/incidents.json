@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-284674",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Daily Construction on HWY 417 Eastbound  between WALKLEY RD (IC 110) and HUNT CLUB RD, Ottawa. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.39809,
+      "lng": -75.59279,
+      "start": 1786957200,
+      "end": 1789063200,
+      "updated": 1786120860
+    },
+    {
+      "id": "ON-284672",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between DICKINSON RD (IC 770)/CR 14 and DICKINSON RD (IC 770)/CR 14, Ingleside. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.01102,
+      "lng": -74.99781,
+      "start": 1786359600,
+      "end": 1786395600,
+      "updated": 1786120620
+    },
+    {
       "id": "ON-284667",
       "province": "ON",
       "highway": "QEW",
@@ -15,38 +47,6 @@
       "start": 1786119600,
       "end": null,
       "updated": 1786119600
-    },
-    {
-      "id": "ON-284643",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.6520701,
-      "lng": -79.627282,
-      "start": 1786116480,
-      "end": null,
-      "updated": 1786117560
-    },
-    {
-      "id": "ON-284646",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Collision on HWY 417 Westbound  at NICHOLAS ST (IC 118)/MANN AVE, Ottawa. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 45.41639,
-      "lng": -75.6738,
-      "start": 1786116720,
-      "end": null,
-      "updated": 1786117560
     },
     {
       "id": "ON-284652",
@@ -303,22 +303,6 @@
       "start": 1786359600,
       "end": 1786402800,
       "updated": 1786108200
-    },
-    {
-      "id": "ON-284557",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at LARUE MILLS RD, Mallorytown. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.44437,
-      "lng": -75.8907,
-      "start": 1786106640,
-      "end": null,
-      "updated": 1786106640
     },
     {
       "id": "ON-284424",
@@ -814,10 +798,26 @@
       "start": 1786500000,
       "end": 1786784400,
       "updated": 1786039860
+    },
+    {
+      "id": "ON-284162",
+      "province": "ON",
+      "highway": "HWY 71",
+      "direction": "Southbound",
+      "description": "Daily Engineering Investigation on HWY 71 Southbound  between HWY 17 - LONGBOW CORS and HWY 17 - LONGBOW CORS, Kenora. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 49.726448,
+      "lng": -94.24886,
+      "start": 1786190400,
+      "end": 1786831200,
+      "updated": 1786038960
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T16:24:03.376037+00:00",
+  "updated": "2026-08-07T16:55:13.453134+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
