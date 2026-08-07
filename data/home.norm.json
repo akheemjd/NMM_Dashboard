@@ -1,6 +1,6 @@
 {
   "updated_at": "13:52 EDT",
-  "build_version": "1786129130",
+  "build_version": "1786130999",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 3,
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 17, HWY 402",
+    "status_line": "HWY 401, QEW, HWY 17",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Spill on QEW Fort Erie bound ON-RAMP at FORD DRIVE, Oakville. All lanes closed.",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at DIXIE ROAD, Mississauga. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Eastbound  at OLIVER RD - THUNDER BAY, Thunder Bay. Lane\u2026",
+        "road": "QEW",
+        "what": "Spill on QEW Fort Erie bound ON-RAMP at FORD DRIVE, Oakville. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,16 +258,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:53 EDT"
+      "captured_at": "14:55 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "25 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:11 MDT"
+      "captured_at": "13:05 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,16 +276,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT"
+      "captured_at": "12:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
       "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
-      "wait": "30 min",
+      "wait": "20 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "13:35 CDT"
+      "captured_at": "14:18 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -355,13 +355,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "NACFE releases emissions report on the Messy Middle",
-      "url": "https://www.thetrucker.com/trucking-news/business/nacfe-releases-emissions-report-on-the-messy-middle"
+      "headline": "U.S. Bank Freight Payment Index: Shippers pay more as trucking capacity tightens",
+      "url": "https://www.thetrucker.com/trucking-news/business/u-s-bank-freight-payment-index-shippers-pay-more-as-trucking-capacity-tightens"
     },
     {
       "category": "The Trucker",
-      "headline": "TechCelerate Now website adds new resources and tools",
-      "url": "https://www.thetrucker.com/trucking-news/business/techcelerate-now-website-adds-new-resources-and-tools"
+      "headline": "Cargo theft losses more than double to $304M in Q2",
+      "url": "https://www.thetrucker.com/trucking-news/business/cargo-theft-losses-more-than-double-to-304m-in-q2"
     }
   ],
   "theft_home_json": "[{\"title\": \"Electronics load\", \"location\": \"Brampton, ON\", \"value\": \"$250,000\", \"lat\": 43.69, \"lng\": -79.76, \"date\": \"2026-07-08\", \"method\": \"Yard break-in overnight\", \"prevention\": \"High-security padlocks on all parked trailers. Motion-activated lighting. CCTV with remote monitorin\", \"source_url\": \"\", \"business\": \"Secured carrier yard \\u2014 Rutherford Rd & Steeles area\"}, {\"title\": \"47 trailers recovered in theft ring bust\", \"location\": \"Greater Montreal, QC\", \"value\": \"$4,000,000\", \"lat\": 45.51, \"lng\": -73.56, \"date\": \"2026-06-28\", \"method\": \"Organized theft ring \\u2014 coordinated yard hits\", \"prevention\": \"GPS tracking on all trailers. Geofence alerts when equipment leaves yard after hours.\", \"source_url\": \"\", \"business\": \"Multiple industrial yards \\u2014 Saint-Laurent and Anjou\"}, {\"title\": \"Reefer load \\u2014 meat products\", \"location\": \"Mississauga, ON\", \"value\": \"$85,000\", \"lat\": 43.59, \"lng\": -79.64, \"date\": \"2026-06-15\", \"method\": \"Stolen while driver inside truck stop\", \"prevention\": \"Never leave loaded reefer unattended at unsecured stops. Use attended parking or secured yards only.\", \"source_url\": \"\", \"business\": \"Truck stop \\u2014 Dixie Rd & 401 corridor\"}, {\"title\": \"Consumer electronics \\u2014 US-bound\", \"location\": \"Delta, BC\", \"value\": \"$180,000\", \"lat\": 49.09, \"lng\": -123.06, \"date\": \"2026-06-02\", \"method\": \"Trailer stolen from yard with fictitious paperwork\", \"prevention\": \"Verify carrier credentials before releasing loads. Call references. Check insurance and authorities.\", \"source_url\": \"\", \"business\": \"Industrial yard \\u2014 Annacis Island\"}, {\"title\": \"Identity theft pickup\", \"location\": \"Calgary, AB\", \"value\": \"$90,000\", \"lat\": 51.04, \"lng\": -114.07, \"date\": \"2026-05-18\", \"method\": \"Fictitious pickup \\u2014 stolen carrier credentials\", \"prevention\": \"Always verify MC number and insurance. Call the carrier directly using publicly listed number, not t\", \"source_url\": \"\", \"business\": \"Freight broker load \\u2014 cross-dock facility\"}, {\"title\": \"Building materials \\u2014 two trailers\", \"location\": \"Laval, QC\", \"value\": \"$120,000\", \"lat\": 45.58, \"lng\": -73.75, \"date\": \"2026-05-05\", \"method\": \"Coordinated yard hit \\u2014 fencing cut\", \"prevention\": \"King pin locks on all trailers. Perimeter fencing inspections. Overnight security patrols.\", \"source_url\": \"\", \"business\": \"Industrial park \\u2014 Autoroute 440 corridor\"}, {\"title\": \"Three reefers \\u2014 food products\", \"location\": \"Nisku, AB\", \"value\": \"$300,000\", \"lat\": 53.55, \"lng\": -113.49, \"date\": \"2026-04-22\", \"method\": \"Weekend break-in \\u2014 fence cut, trucks driven out\", \"prevention\": \"Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.\", \"source_url\": \"\", \"business\": \"Nisku industrial yard \\u2014 41 Ave SW\"}, {\"title\": \"Five trailers \\u2014 mixed freight\", \"location\": \"Winnipeg, MB\", \"value\": \"$210,000\", \"lat\": 49.9, \"lng\": -97.14, \"date\": \"2026-04-08\", \"method\": \"Serial thefts \\u2014 unlocked trailers\", \"prevention\": \"Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.\", \"source_url\": \"\", \"business\": \"CentrePort industrial area\"}]",
