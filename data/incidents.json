@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-284667",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Vehicle Fire on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.58355731,
+      "lng": -79.58300598,
+      "start": 1786119600,
+      "end": null,
+      "updated": 1786119600
+    },
+    {
       "id": "ON-284643",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +47,6 @@
       "start": 1786116720,
       "end": null,
       "updated": 1786117560
-    },
-    {
-      "id": "ON-284649",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound RAMP at REXDALE BLVD / DERRY ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.71598781,
-      "lng": -79.6183466,
-      "start": 1786117260,
-      "end": null,
-      "updated": 1786117260
     },
     {
       "id": "ON-284652",
@@ -319,22 +319,6 @@
       "start": 1786106640,
       "end": null,
       "updated": 1786106640
-    },
-    {
-      "id": "ON-284550",
-      "province": "ON",
-      "highway": "HWY 534",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 534 Eastbound  at GURD TWP - GRAVEL RD LOT 10-11, Restoule. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.045311151,
-      "lng": -79.610197613,
-      "start": 1786105920,
-      "end": null,
-      "updated": 1786105920
     },
     {
       "id": "ON-284424",
@@ -814,10 +798,26 @@
       "start": "2026-08-06T11:17:20-07:00",
       "end": "",
       "updated": "2026-08-06T11:17:20-07:00"
+    },
+    {
+      "id": "ON-284170",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Westbound  between UPPER MIDDLE ROAD and UPPER MIDDLE ROAD, Oakville. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 43.500023,
+      "lng": -79.67477,
+      "start": 1786500000,
+      "end": 1786784400,
+      "updated": 1786039860
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T15:52:54.826885+00:00",
+  "updated": "2026-08-07T16:24:03.376037+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
