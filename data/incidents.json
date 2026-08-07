@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-284434",
+      "id": "ON-284435",
       "province": "ON",
       "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound HOV at DORVAL DRIVE, Oakville. All lanes closed.",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound HOV at DORVAL DRIVE, Oakville. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 43.446901987,
-      "lng": -79.69946444,
-      "start": 1786081080,
+      "lat": 43.446134739,
+      "lng": -79.70066607,
+      "start": 1786083120,
       "end": null,
-      "updated": 1786081080
+      "updated": 1786083120
     },
     {
       "id": "ON-284164",
@@ -31,22 +31,6 @@
       "start": 1786039440,
       "end": null,
       "updated": 1786080360
-    },
-    {
-      "id": "ON-284433",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at ONTARIO STREET -BEAMSVILLE, Lincoln. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.18899202,
-      "lng": -79.47673979,
-      "start": 1786080060,
-      "end": null,
-      "updated": 1786080060
     },
     {
       "id": "drivebc.ca/RIDE-101084",
@@ -814,10 +798,26 @@
       "start": 1787576400,
       "end": 1787943600,
       "updated": 1786033740
+    },
+    {
+      "id": "ON-284113",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 12 Northbound  between DURHAM RD 50, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.496002,
+      "lng": -79.156,
+      "start": 1787576400,
+      "end": 1787857200,
+      "updated": 1786033680
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T06:02:51.129354+00:00",
+  "updated": "2026-08-07T06:34:01.484452+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
