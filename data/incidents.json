@@ -65,22 +65,6 @@
       "updated": 1786135500
     },
     {
-      "id": "ON-284774",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 404 Southbound RAMP at HWY 7, Markham-Richmondhill . Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.84921537,
-      "lng": -79.3724421,
-      "start": 1786135500,
-      "end": null,
-      "updated": 1786135500
-    },
-    {
       "id": "ON-284766",
       "province": "ON",
       "highway": "HWY 6",
@@ -95,22 +79,6 @@
       "start": 1786590000,
       "end": 1786705200,
       "updated": 1786134360
-    },
-    {
-      "id": "ON-284757",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at FINCH AVENUE, Toronto. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.75425671,
-      "lng": -79.53072531,
-      "start": 1786133520,
-      "end": null,
-      "updated": 1786133520
     },
     {
       "id": "ON-284756",
@@ -809,10 +777,42 @@
       "start": 1786413600,
       "end": 1786784400,
       "updated": 1786048620
+    },
+    {
+      "id": "ON-284588",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Nightly Engineering Investigation on HWY 404 Southbound  between BOAG ROAD and QUEENSVILLE SIDEROAD, Gwillimbury. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.17774,
+      "lng": -79.44854,
+      "start": 1786413600,
+      "end": 1786611600,
+      "updated": 1786048380
+    },
+    {
+      "id": "ON-284242",
+      "province": "ON",
+      "highway": "HWY 412",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 412 Northbound  between HWY 401 and TAUNTON RD, Whitby. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.864986,
+      "lng": -78.97283,
+      "start": 1786413600,
+      "end": 1786788000,
+      "updated": 1786046340
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T21:02:24.748128+00:00",
+  "updated": "2026-08-07T21:32:46.907829+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
