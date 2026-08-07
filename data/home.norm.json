@@ -1,15 +1,15 @@
 {
   "updated_at": "08:37 EDT",
-  "build_version": "1786110614",
+  "build_version": "1786112484",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "7 min"
+    "max_wait": "8 min"
   },
   "fuel": {
     "national_diesel": "224.1",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 14,
+    "active_count": 15,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 416, HWY 17",
+    "status_line": "HWY 406, HWY 401, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at STEELES AVENUE, Vaughan. Right lane and\u2026",
+        "road": "HWY 406",
+        "what": "Collision on HWY 406 Southbound  at WESTCHESTER AVE, St. Catharines. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at INNISFIL BEACH RD - SIMCOE ROAD 21,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT"
+      "captured_at": "10:06 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:18 EDT"
+      "captured_at": "09:48 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
