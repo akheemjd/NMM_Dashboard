@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101139",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Ironworkers Memorial Bridge",
+        "direction": "S",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall. Right lane blocked. Expect delays due to congestion. Traffic control en route.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.29777803,
+      "lng": -123.02642711,
+      "start": "2026-08-06T19:50:13-07:00",
+      "end": "",
+      "updated": "2026-08-06T19:50:29-07:00"
+    },
+    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -793,26 +814,10 @@
       "start": 1787576400,
       "end": 1787857200,
       "updated": 1786033680
-    },
-    {
-      "id": "ON-284110",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 11 Northbound  between LACLIE STREET, Orillia and SEVERN RIVER BRIDGE/WEST BRANCH, Severn. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.642235,
-      "lng": -79.42286,
-      "start": 1787576400,
-      "end": 1787860800,
-      "updated": 1786033620
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T02:28:57.262714+00:00",
+  "updated": "2026-08-07T02:59:57.010004+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
