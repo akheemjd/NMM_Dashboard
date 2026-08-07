@@ -1,6 +1,70 @@
 {
   "incidents": [
     {
+      "id": "ON-261152",
+      "province": "ON",
+      "highway": "HWY 61",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1781491500,
+      "end": null,
+      "updated": 1786102860
+    },
+    {
+      "id": "ON-277509",
+      "province": "ON",
+      "highway": "HWY 811",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and DOG RIVER RD, Armstrong. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.677192448,
+      "lng": -89.929768235,
+      "start": 1784639280,
+      "end": null,
+      "updated": 1786102860
+    },
+    {
+      "id": "ON-284424",
+      "province": "ON",
+      "highway": "HWY 527",
+      "direction": "Both Directions",
+      "description": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 50.00823315,
+      "lng": -89.111322082,
+      "start": 1786075200,
+      "end": null,
+      "updated": 1786102860
+    },
+    {
+      "id": "ON-284511",
+      "province": "ON",
+      "highway": "HWY 412",
+      "direction": "Northbound",
+      "description": "Vehicle Fire on HWY 412 Northbound  at HWY 7, Whitby. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.94264,
+      "lng": -79.006658,
+      "start": 1786102320,
+      "end": null,
+      "updated": 1786102320
+    },
+    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -31,22 +95,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786100409
-    },
-    {
-      "id": "ON-284451",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at ISLINGTON AVE, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.7089653,
-      "lng": -79.5506716,
-      "start": 1786098120,
-      "end": null,
-      "updated": 1786098120
     },
     {
       "id": "ON-284164",
@@ -84,38 +132,6 @@
       "start": "2026-08-05T15:21:33-07:00",
       "end": "",
       "updated": "2026-08-06T21:26:12-07:00"
-    },
-    {
-      "id": "ON-277509",
-      "province": "ON",
-      "highway": "HWY 811",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and DOG RIVER RD, Armstrong. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.677192448,
-      "lng": -89.929768235,
-      "start": 1784639280,
-      "end": null,
-      "updated": 1786075260
-    },
-    {
-      "id": "ON-284424",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Both Directions",
-      "description": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE - ARMSTRONG - HWY 527 ENDS, Armstrong. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 50.00823315,
-      "lng": -89.111322082,
-      "start": 1786075200,
-      "end": null,
-      "updated": 1786075200
     },
     {
       "id": "drivebc.ca/RIDE-101136",
@@ -249,22 +265,6 @@
       "start": 1786363200,
       "end": 1788559200,
       "updated": 1786048680
-    },
-    {
-      "id": "ON-261152",
-      "province": "ON",
-      "highway": "HWY 61",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.055068306,
-      "lng": -89.540597444,
-      "start": 1781491500,
-      "end": null,
-      "updated": 1786047180
     },
     {
       "id": "ON-284242",
@@ -817,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T11:14:24.696991+00:00",
+  "updated": "2026-08-07T11:45:32.795076+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
