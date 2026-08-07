@@ -122,6 +122,9 @@ def build_page(name, data):
 
     # Write output
     dir_name = "" if name == "index" else name
+    # methodology goes to /methodology/nmdi/ for permanent URL
+    if name == "methodology":
+        dir_name = "methodology/nmdi"
     out_dir = os.path.join(DOCS, dir_name)
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "index.html")

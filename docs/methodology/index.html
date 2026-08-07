@@ -1,73 +1,7 @@
 <!DOCTYPE html>
-<html lang="en-CA">
-<head>
+<html><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<title>NMDI Methodology — Northern Mile</title>
-<meta name="description" content="How the Northern Mile Diesel Index is calculated — population, method, source, cadence, and revision history.">
-<meta name="robots" content="index,follow">
-<link rel="canonical" href="https://dashboard.northernmilemedia.com/methodology/nmdi/">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&family=Saira:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css?v=1786105007">
-</head>
-<body>
-<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
-<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
-
-<main class="wrap">
-  <div class="strip"><span><span class="dot"></span>Methodology</span><span>Northern Mile Diesel Index (NMDI)</span></div>
-
-  <section style="max-width:720px;margin:32px 0 48px">
-    <h1 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.75rem;margin:0 0 8px;color:var(--ink)">NMDI — Northern Mile Diesel Index</h1>
-    <p style="color:var(--ink-3);font-size:0.875rem;margin:0 0 32px">Version 1.1 · Effective 2026-08-05</p>
-
-    <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin:32px 0 12px">Population</h2>
-    <p>The NMDI is computed from ten provinces: British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland and Labrador.</p>
-    <p>Yukon and the Northwest Territories are collected from the same NRCan survey and displayed on the fuel page. They are excluded from the national index and the spread because they carry negligible national freight volume and equal-weighting them distorts both figures.</p>
-    <p>This is a volume-relevance exclusion, not a price-outlier exclusion. Territorial diesel is supplied off Edmonton and typically prices near Alberta — below the national mean. Including them would pull the index down, not up, which makes the exclusion the more conservative choice.</p>
-
-    <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin:32px 0 12px">Method</h2>
-    <p>Each provincial figure is the unweighted arithmetic mean of NRCan survey city prices within that province. The number of survey cities varies by province — Alberta has six, Ontario has nineteen, Prince Edward Island has one.</p>
-    <p>The national index is the unweighted mean of the ten provincial figures. It is <em>not</em> a population-weighted or freight-volume-weighted average. This means the national figure treats every province equally regardless of its share of national diesel consumption.</p>
-    <p>The rationale: a province-weighting or volume-weighting scheme introduces its own assumptions about which data series to weight by and how frequently to update the weights. An unweighted mean of provincial means is simpler to verify and harder to manipulate, and it changes only when diesel prices change, not when weighting methodology changes.</p>
-
-    <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin:32px 0 12px">Source</h2>
-    <p>Natural Resources Canada weekly diesel survey, RSS productID=5. The survey covers 72 retail locations across all provinces and territories. Data is published weekly, collected by Kalibrate Technologies under contract to NRCan.</p>
-    <p>All figures are published inclusive of federal and provincial fuel taxes, carbon taxes, and sales taxes. The federal excise tax on diesel (normally 4 cents per litre) is suspended from April 20 through September 7, 2026 per Finance Canada and CBSA Customs Notice 26-11.</p>
-
-    <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin:32px 0 12px">Cadence</h2>
-    <p>NRCan surveys weekly. The dashboard rebuilds every 30 minutes from the most recent survey data, so the diesel figure holds steady between surveys. Deltas step once per week when a new print lands — they do not drift daily. The border wait times, road incidents, and exchange rate modules are genuinely live; diesel is not.</p>
-
-    <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin:32px 0 12px">Revision history</h2>
-    <p><strong>2026-08-05</strong> — Index moved from a 12-unit basis (including YT and NT) to a 10-unit basis (excluding territories). The national figure shifted from 224.8 to 228.3¢/L as a function of this methodology change. Historical values and percentiles computed before this date are not directly comparable with post-change values.</p>
-    <p><strong>2026-07-28</strong> — Initial publication. 12-unit basis, unweighted mean of provincial means.</p>
-
-    <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin:32px 0 12px">Corrections policy</h2>
-    <p>Errors in the underlying NRCan data are corrected when NRCan publishes a revision. Errors in computation are corrected immediately and logged in the revision history above. A corrected figure is never retroactively substituted — the new value appears with the correction date and both values are recorded.</p>
-    <p style="margin-top:32px;color:var(--ink-3);font-size:0.875rem">Questions: <a href="mailto:northernmilemedia@gmail.com" style="color:var(--green)">northernmilemedia@gmail.com</a></p>
-  </section>
-
-<!-- subscribe partial — link to Ghost Portal, cross-origin safe -->
-<div class="cta">
-  <div class="e">The Northern Mile Brief</div>
-  <div class="b">Fuel, border and market shifts. Every Wednesday, 6am.</div>
-  <a class="sub-btn" href="https://northernmilemedia.com/subscribe/">Subscribe</a>
-  <div class="s" style="margin-top:8px">Free. One email a week. Unsubscribe anytime.</div>
-</div>
-  </div>
-</main>
-
-
-
-
-
-
-
-<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<br><a href="/methodology/nmdi/" style="color:var(--ink-3)">NMDI methodology</a><div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-<script src="/assets/app.js?v=1786105007"></script>
-</body>
-</html>
+<meta http-equiv="refresh" content="0; url=/methodology/nmdi/">
+<link rel="canonical" href="/methodology/nmdi/">
+<title>NMDI Methodology — Northern Mile Media</title>
+</head><body><p>Redirecting to <a href="/methodology/nmdi/">NMDI methodology</a>…</p></body></html>
