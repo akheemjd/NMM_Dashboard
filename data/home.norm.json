@@ -1,15 +1,15 @@
 {
   "updated_at": "12:48 EDT",
-  "build_version": "1786121717",
+  "build_version": "1786123587",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 6,
+    "gauge_class": "warn",
+    "heavy_count": 2,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "224.1",
@@ -196,18 +196,18 @@
     "none": false,
     "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 402, HWY 416, HWY 17",
+    "status_line": "HWY 17, QEW, HWY 402, HWY 416",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Vehicle Fire on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. Right lane and\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Both Directions  between JONES RD (N) - MATHESON BAY RD (S)\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 402",
-        "what": "Collision on HWY 402 Westbound RAMP at Highway 40 / Modeland Road, Sarnia. All\u2026",
+        "road": "QEW",
+        "what": "Vehicle Fire on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. 2 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "12:13 EDT"
+      "captured_at": "13:09 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -231,25 +231,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:54 EDT"
+      "captured_at": "12:54 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "14 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,16 +258,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:23 EDT"
+      "captured_at": "12:53 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:14 MDT"
+      "captured_at": "11:11 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 CDT"
+      "captured_at": "12:06 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
