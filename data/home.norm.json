@@ -1,15 +1,15 @@
 {
   "updated_at": "00:15 EDT",
-  "build_version": "1786080719",
+  "build_version": "1786082574",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "224.1",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 527, HWY 17, Frog Cre",
+    "status_line": "QEW, HWY 527, HWY 17",
     "incidents": [
       {
         "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at ONTARIO STREET -BEAMSVILLE, Lincoln. 2\u2026",
+        "what": "Collision on QEW Toronto bound HOV at DORVAL DRIVE, Oakville. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Fort Erie bound  at ONTARIO STREET -BEAMSVILLE, Lincoln. 2\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:20 EDT"
+      "captured_at": "01:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:20 EDT"
+      "captured_at": "01:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 PDT"
+      "captured_at": "22:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
