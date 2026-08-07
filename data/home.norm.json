@@ -1,6 +1,6 @@
 {
   "updated_at": "20:15 EDT",
-  "build_version": "1786064266",
+  "build_version": "1786066093",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -9,7 +9,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "35 min"
+    "max_wait": "27 min"
   },
   "fuel": {
     "national_diesel": "224.1",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 410, HWY 17",
+    "status_line": "HWY 400, HWY 17, HWY 811, HWY 527",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at LESLIE STREET, Toronto. 1\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at RUTHERFORD, Vaughan. 1 right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga.\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "35 min",
+      "wait": "27 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT"
+      "captured_at": "18:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
