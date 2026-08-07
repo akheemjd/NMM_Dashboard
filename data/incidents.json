@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-284417",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Southbound",
+      "description": "Vehicle Fire on HWY 410 Southbound  at HWY 401, Mississauga. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.63904064,
+      "lng": -79.66051787,
+      "start": 1786071600,
+      "end": null,
+      "updated": 1786072200
+    },
+    {
       "id": "drivebc.ca/RIDE-101139",
       "province": "BC",
       "highway": {
@@ -798,26 +814,10 @@
       "start": 1787576400,
       "end": 1787943600,
       "updated": 1786033740
-    },
-    {
-      "id": "ON-284113",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 12 Northbound  between DURHAM RD 50, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.496002,
-      "lng": -79.156,
-      "start": 1787576400,
-      "end": 1787857200,
-      "updated": 1786033680
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T02:59:57.010004+00:00",
+  "updated": "2026-08-07T03:31:04.958106+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
