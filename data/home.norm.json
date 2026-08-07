@@ -1,6 +1,6 @@
 {
   "updated_at": "10:33 EDT",
-  "build_version": "1786114355",
+  "build_version": "1786116166",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -8,8 +8,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "9 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "224.1",
@@ -196,18 +196,18 @@
     "none": false,
     "active_count": 13,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401, HWY 402, HWY 416",
+    "status_line": "HWY 410, HWY 401, HWY 402, HWY 416",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Southbound  at FINCH AVE, Toronto. 1 right lane and\u2026",
+        "road": "HWY 410",
+        "what": "Collision on HWY 410 Northbound  at WILLIAMS PKWY, Brampton. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH DR, Toronto. Right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "9 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:41 EDT"
+      "captured_at": "11:04 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT"
+      "captured_at": "08:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 CDT"
+      "captured_at": "09:49 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -355,13 +355,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "Indiana CVED found more than 8,600 big rig violations over 30-day period",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/indiana-cved-found-more-than-8600-big-rig-violations-over-30-day-period"
+      "headline": "Florida Imperial Dade drivers oust Teamsters",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/florida-imperial-dade-drivers-oust-teamsters"
     },
     {
       "category": "The Trucker",
-      "headline": "Pickup truck driver killed, passenger seriously hurt in crash with semi truck in Missouri",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/pickup-truck-driver-killed-passenger-seriously-hurt-in-crash-with-semi-truck-in-missouri"
+      "headline": "Indiana CVED found more than 8,600 big rig violations over 30-day period",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/indiana-cved-found-more-than-8600-big-rig-violations-over-30-day-period"
     }
   ],
   "theft_home_json": "[{\"title\": \"Electronics load\", \"location\": \"Brampton, ON\", \"value\": \"$250,000\", \"lat\": 43.69, \"lng\": -79.76, \"date\": \"2026-07-08\", \"method\": \"Yard break-in overnight\", \"prevention\": \"High-security padlocks on all parked trailers. Motion-activated lighting. CCTV with remote monitorin\", \"source_url\": \"\", \"business\": \"Secured carrier yard \\u2014 Rutherford Rd & Steeles area\"}, {\"title\": \"47 trailers recovered in theft ring bust\", \"location\": \"Greater Montreal, QC\", \"value\": \"$4,000,000\", \"lat\": 45.51, \"lng\": -73.56, \"date\": \"2026-06-28\", \"method\": \"Organized theft ring \\u2014 coordinated yard hits\", \"prevention\": \"GPS tracking on all trailers. Geofence alerts when equipment leaves yard after hours.\", \"source_url\": \"\", \"business\": \"Multiple industrial yards \\u2014 Saint-Laurent and Anjou\"}, {\"title\": \"Reefer load \\u2014 meat products\", \"location\": \"Mississauga, ON\", \"value\": \"$85,000\", \"lat\": 43.59, \"lng\": -79.64, \"date\": \"2026-06-15\", \"method\": \"Stolen while driver inside truck stop\", \"prevention\": \"Never leave loaded reefer unattended at unsecured stops. Use attended parking or secured yards only.\", \"source_url\": \"\", \"business\": \"Truck stop \\u2014 Dixie Rd & 401 corridor\"}, {\"title\": \"Consumer electronics \\u2014 US-bound\", \"location\": \"Delta, BC\", \"value\": \"$180,000\", \"lat\": 49.09, \"lng\": -123.06, \"date\": \"2026-06-02\", \"method\": \"Trailer stolen from yard with fictitious paperwork\", \"prevention\": \"Verify carrier credentials before releasing loads. Call references. Check insurance and authorities.\", \"source_url\": \"\", \"business\": \"Industrial yard \\u2014 Annacis Island\"}, {\"title\": \"Identity theft pickup\", \"location\": \"Calgary, AB\", \"value\": \"$90,000\", \"lat\": 51.04, \"lng\": -114.07, \"date\": \"2026-05-18\", \"method\": \"Fictitious pickup \\u2014 stolen carrier credentials\", \"prevention\": \"Always verify MC number and insurance. Call the carrier directly using publicly listed number, not t\", \"source_url\": \"\", \"business\": \"Freight broker load \\u2014 cross-dock facility\"}, {\"title\": \"Building materials \\u2014 two trailers\", \"location\": \"Laval, QC\", \"value\": \"$120,000\", \"lat\": 45.58, \"lng\": -73.75, \"date\": \"2026-05-05\", \"method\": \"Coordinated yard hit \\u2014 fencing cut\", \"prevention\": \"King pin locks on all trailers. Perimeter fencing inspections. Overnight security patrols.\", \"source_url\": \"\", \"business\": \"Industrial park \\u2014 Autoroute 440 corridor\"}, {\"title\": \"Three reefers \\u2014 food products\", \"location\": \"Nisku, AB\", \"value\": \"$300,000\", \"lat\": 53.55, \"lng\": -113.49, \"date\": \"2026-04-22\", \"method\": \"Weekend break-in \\u2014 fence cut, trucks driven out\", \"prevention\": \"Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.\", \"source_url\": \"\", \"business\": \"Nisku industrial yard \\u2014 41 Ave SW\"}, {\"title\": \"Five trailers \\u2014 mixed freight\", \"location\": \"Winnipeg, MB\", \"value\": \"$210,000\", \"lat\": 49.9, \"lng\": -97.14, \"date\": \"2026-04-08\", \"method\": \"Serial thefts \\u2014 unlocked trailers\", \"prevention\": \"Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.\", \"source_url\": \"\", \"business\": \"CentrePort industrial area\"}]",
