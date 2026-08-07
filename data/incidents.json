@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-284571",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Northbound",
+      "description": "Continuous Maintenance on HWY 416 Northbound  between BANKFIELD RD / BROPHY DR (IC 57) (CR 8), Manotick and FALLOWFIELD RD (IC 66), Ottawa. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.2097,
+      "lng": -75.73695,
+      "start": 1786359600,
+      "end": 1786402800,
+      "updated": 1786108380
+    },
+    {
+      "id": "ON-284570",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Continuous Maintenance on HWY 416 Southbound  between FALLOWFIELD RD (IC 66), Ottawa and HWY 16 (IC 1), Johnstown. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.27087,
+      "lng": -75.79581,
+      "start": 1786359600,
+      "end": 1786402800,
+      "updated": 1786108200
+    },
+    {
+      "id": "ON-284560",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 17 Eastbound  at JACKFISH LAKE MOTEL (WEST ENT) (N), Terrace Bay. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.828759065,
+      "lng": -86.942869193,
+      "start": 1786107120,
+      "end": null,
+      "updated": 1786107120
+    },
+    {
       "id": "ON-284557",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +79,6 @@
       "start": 1786105920,
       "end": null,
       "updated": 1786105920
-    },
-    {
-      "id": "ON-284511",
-      "province": "ON",
-      "highway": "HWY 412",
-      "direction": "Northbound",
-      "description": "Vehicle Fire on HWY 412 Northbound  at HWY 7, Whitby. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.94264,
-      "lng": -79.006658,
-      "start": 1786102320,
-      "end": null,
-      "updated": 1786104600
     },
     {
       "id": "ON-284532",
@@ -782,42 +814,10 @@
       "start": 1787576400,
       "end": 1787857200,
       "updated": 1786033860
-    },
-    {
-      "id": "ON-284118",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Eastbound",
-      "description": "Daily Maintenance on HWY 26 Eastbound  between POPLAR SIDEROAD, Clearview and CARSON ROAD, Springwater. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.488663,
-      "lng": -80.16752,
-      "start": 1787576400,
-      "end": 1787857200,
-      "updated": 1786033860
-    },
-    {
-      "id": "ON-284108",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Southbound",
-      "description": "Daily Maintenance on HWY 12 Southbound  between HWY 93/SIMCOE ROAD 93, Midland and HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.7188,
-      "lng": -79.89764,
-      "start": 1787576400,
-      "end": 1787943600,
-      "updated": 1786033800
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T12:47:52.787436+00:00",
+  "updated": "2026-08-07T13:19:01.081735+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
