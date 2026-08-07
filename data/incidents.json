@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-284430",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 410 Southbound  at HWY 401, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.63904064,
+      "lng": -79.66051787,
+      "start": 1786078560,
+      "end": null,
+      "updated": 1786078560
+    },
+    {
+      "id": "ON-284429",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 44.2851185,
+      "lng": -79.67958049,
+      "start": 1786078500,
+      "end": null,
+      "updated": 1786078500
+    },
+    {
       "id": "drivebc.ca/RIDE-101084",
       "province": "BC",
       "highway": {
@@ -20,22 +52,6 @@
       "start": "2026-08-05T15:21:33-07:00",
       "end": "",
       "updated": "2026-08-06T21:26:12-07:00"
-    },
-    {
-      "id": "ON-284426",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. Centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.77015354,
-      "lng": -79.30383775,
-      "start": 1786075740,
-      "end": null,
-      "updated": 1786075740
     },
     {
       "id": "ON-277509",
@@ -798,26 +814,10 @@
       "start": 1787576400,
       "end": 1787943600,
       "updated": 1786033740
-    },
-    {
-      "id": "ON-284113",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 12 Northbound  between DURHAM RD 50, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.496002,
-      "lng": -79.156,
-      "start": 1787576400,
-      "end": 1787857200,
-      "updated": 1786033680
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T04:31:24.627536+00:00",
+  "updated": "2026-08-07T05:01:33.140968+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

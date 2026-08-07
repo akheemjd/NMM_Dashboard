@@ -1,15 +1,15 @@
 {
   "updated_at": "00:15 EDT",
-  "build_version": "1786077086",
+  "build_version": "1786078894",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min"
+    "max_wait": "50 min"
   },
   "fuel": {
     "national_diesel": "224.1",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 527, HWY 17, Frog Cre",
+    "status_line": "HWY 410, HWY 400, HWY 527, HWY 17",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. Centre\u2026",
+        "road": "HWY 410",
+        "what": "Highway Maintenance on HWY 410 Southbound  at HWY 401, Mississauga. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -240,16 +240,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:20 EDT"
+      "captured_at": "00:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:20 EDT"
+      "captured_at": "00:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "50 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 PDT"
+      "captured_at": "21:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
