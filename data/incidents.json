@@ -1,6 +1,59 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101189",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle recovery. Until Sat Aug 8. Single lane alternating traffic.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.97992471,
+      "lng": -118.31303009,
+      "start": "2026-08-08T08:20:12-07:00",
+      "end": "",
+      "updated": "2026-08-08T10:22:13-07:00"
+    },
+    {
+      "id": "ON-285676",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound TRANSFER at Allen Road Express to Collector, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.73040965,
+      "lng": -79.44417322,
+      "start": 1786206660,
+      "end": null,
+      "updated": 1786209480
+    },
+    {
+      "id": "ON-285686",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at JAMES SNOW PKWY, Milton. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.5445588,
+      "lng": -79.8598146,
+      "start": 1786209420,
+      "end": null,
+      "updated": 1786209420
+    },
+    {
       "id": "ON-285684",
       "province": "ON",
       "highway": "ALLEN ROAD",
@@ -31,38 +84,6 @@
       "start": 1786207680,
       "end": null,
       "updated": 1786207680
-    },
-    {
-      "id": "ON-285094",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 17 Eastbound  at PAYS PLAT RIVER BR, Rossport. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 48.882029777,
-      "lng": -87.559254906,
-      "start": 1786185420,
-      "end": null,
-      "updated": 1786207500
-    },
-    {
-      "id": "ON-285676",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Allen Road Express to Collector, Toronto. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.73040965,
-      "lng": -79.44417322,
-      "start": 1786206660,
-      "end": null,
-      "updated": 1786207500
     },
     {
       "id": "ON-285670",
@@ -111,27 +132,6 @@
       "start": 1786402800,
       "end": 1786442400,
       "updated": 1786203120
-    },
-    {
-      "id": "drivebc.ca/RIDE-101189",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Trans-Canada Highway",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle recovery. Single lane alternating traffic.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.97992471,
-      "lng": -118.31303009,
-      "start": "2026-08-08T08:20:12-07:00",
-      "end": "",
-      "updated": "2026-08-08T08:20:12-07:00"
     },
     {
       "id": "drivebc.ca/DBC-93879",
@@ -821,7 +821,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T16:57:59.925414+00:00",
+  "updated": "2026-08-08T17:28:23.619403+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

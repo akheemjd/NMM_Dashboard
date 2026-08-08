@@ -1,6 +1,6 @@
 {
   "updated_at": "12:42 EDT",
-  "build_version": "1786208283",
+  "build_version": "1786210108",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -196,18 +196,18 @@
     "none": false,
     "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "ALLEN RO, QEW, HWY 401",
+    "status_line": "HWY 401, ALLEN RO, QEW",
     "incidents": [
       {
-        "road": "ALLEN ROAD",
-        "what": "Collision on ALLEN ROAD Northbound RAMP at 401, Toronto. Left lane closed.",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at JAMES SNOW PKWY,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at GUELPH LINE, Burlington. Left\u2026",
+        "road": "ALLEN ROAD",
+        "what": "Collision on ALLEN ROAD Northbound RAMP at 401, Toronto. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -298,18 +298,6 @@
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2362B (chained 2017)",
-      "value": "+0.3%",
-      "value_class": "up"
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.7%",
-      "value_class": "up"
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 222.9\u00a2/L and 35 L/100km",
