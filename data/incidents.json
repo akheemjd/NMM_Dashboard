@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101186",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle fire. Right lane blocked. Emergency vehicles on scene. Expect delays. Traffic control has been advised. Use caution when passing.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.0407036,
+      "lng": -122.21542664,
+      "start": "2026-08-07T17:22:49-07:00",
+      "end": "",
+      "updated": "2026-08-07T17:22:49-07:00"
+    },
+    {
       "id": "ON-284837",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,38 +36,6 @@
       "start": 1786146600,
       "end": null,
       "updated": 1786146600
-    },
-    {
-      "id": "ON-284830",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound RAMP at FORD DRIVE, Oakville. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.49210007,
-      "lng": -79.67252069,
-      "start": 1786145460,
-      "end": null,
-      "updated": 1786145460
-    },
-    {
-      "id": "ON-284828",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 44.20045992,
-      "lng": -79.65473612,
-      "start": 1786144860,
-      "end": null,
-      "updated": 1786145340
     },
     {
       "id": "ON-277509",
@@ -809,10 +798,26 @@
       "start": 1786413600,
       "end": 1786611600,
       "updated": 1786048380
+    },
+    {
+      "id": "ON-284242",
+      "province": "ON",
+      "highway": "HWY 412",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 412 Northbound  between HWY 401 and TAUNTON RD, Whitby. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.864986,
+      "lng": -78.97283,
+      "start": 1786413600,
+      "end": 1786788000,
+      "updated": 1786046340
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T00:05:18.525784+00:00",
+  "updated": "2026-08-08T00:35:29.306804+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
