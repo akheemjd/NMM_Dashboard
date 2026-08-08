@@ -1,6 +1,6 @@
 {
   "updated_at": "07:30 EDT",
-  "build_version": "1786189832",
+  "build_version": "1786191700",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 404",
+    "status_line": "HWY 17, HWY 403 , HWY 404",
     "incidents": [
       {
         "road": "HWY 17",
-        "what": "Collision on HWY 17 Eastbound  at PAYS PLAT RIVER BR, Rossport. Lane and EAST\u2026",
+        "what": "Collision on HWY 17 Both Directions  at MTO PATROL YARD, WAWA, Wawa. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound ON-RAMP at FINCH AVE, Toronto. All lanes closed.",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at EASTGATE/CAWTHRA,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT"
+      "captured_at": "05:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
