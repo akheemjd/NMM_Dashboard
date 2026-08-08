@@ -1,10 +1,10 @@
 {
-  "updated_at": "05:15 EDT",
-  "build_version": "1786186093",
+  "updated_at": "06:49 EDT",
+  "build_version": "1786187962",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 404",
+    "status_line": "HWY 401, HWY 17, HWY 404",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Eastbound  at PAYS PLAT RIVER BR, Rossport. Lane and EAST\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at NEILSON ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound ON-RAMP at FINCH AVE, Toronto. All lanes closed.",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Eastbound  at PAYS PLAT RIVER BR, Rossport. Lane and EAST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -240,16 +240,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "03:20 PDT"
+      "captured_at": "04:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 EDT"
+      "captured_at": "06:49 EDT"
     }
   ],
   "market": [
