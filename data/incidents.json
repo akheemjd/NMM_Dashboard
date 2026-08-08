@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-285796",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 427 Southbound HOV at FINCH AVENUE, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.734173,
+      "lng": -79.627302,
+      "start": 1786222560,
+      "end": null,
+      "updated": 1786222560
+    },
+    {
+      "id": "ON-285793",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound ON-RAMP at BLOOMINGTON ROAD, Aurora. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.977501,
+      "lng": -79.393079,
+      "start": 1786222260,
+      "end": null,
+      "updated": 1786222260
+    },
+    {
+      "id": "ON-285792",
+      "province": "ON",
+      "highway": "HWY 407",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 407 Eastbound  at WINCHESTER RD, Oshawa. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.9786953,
+      "lng": -78.8549207,
+      "start": 1786222080,
+      "end": null,
+      "updated": 1786222080
+    },
+    {
       "id": "ON-285772",
       "province": "ON",
       "highway": "HWY 407",
@@ -17,22 +65,6 @@
       "updated": 1786220580
     },
     {
-      "id": "ON-285764",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at KEELE ST, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.72113406,
-      "lng": -79.48778348,
-      "start": 1786220220,
-      "end": null,
-      "updated": 1786220220
-    },
-    {
       "id": "ON-285753",
       "province": "ON",
       "highway": "HWY 404",
@@ -45,22 +77,6 @@
       "lat": 43.97792579,
       "lng": -79.39267765,
       "start": 1786219200,
-      "end": null,
-      "updated": 1786219260
-    },
-    {
-      "id": "ON-285755",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at Trussler Road / Greenfield Road, Kitchener. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.298788889,
-      "lng": -80.486783333,
-      "start": 1786219260,
       "end": null,
       "updated": 1786219260
     },
@@ -95,38 +111,6 @@
       "start": 1786363200,
       "end": 1786482000,
       "updated": 1786219080
-    },
-    {
-      "id": "ON-285752",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Northbound",
-      "description": "Other on HWY 416 Northbound  at HWY 16 (IC 1), Johnstown. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.76288,
-      "lng": -75.49675,
-      "start": 1786218960,
-      "end": null,
-      "updated": 1786218960
-    },
-    {
-      "id": "ON-285742",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound COLLECTOR at NORTH OF HWY 401, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.773193324,
-      "lng": -79.339506626,
-      "start": 1786217940,
-      "end": null,
-      "updated": 1786217940
     },
     {
       "id": "drivebc.ca/DBC-93840",
@@ -808,10 +792,31 @@
       "start": 1786359600,
       "end": 1786402800,
       "updated": 1786108200
+    },
+    {
+      "id": "drivebc.ca/RIDE-101136",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Yoho Bridge",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Bridge maintenance. Starting Mon Aug 10 until Thu Aug 13. From 7:00 AM to 7:00 PM MDT, Monday to Thursday. Eastbound lane closure. Westbound lane closure. Watch for traffic control. Reduced to one lane. August 10th Eastbound slow lane closure\nAugust 11th Westbound slow lane closure\nAugust 12th Eastbound fast lane closure\nAugust 13th Westbound fast lane closure.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 51.29551065,
+      "lng": -116.85464161,
+      "start": "2026-08-06T17:37:08-07:00",
+      "end": "",
+      "updated": "2026-08-06T17:37:08-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T20:35:23.985102+00:00",
+  "updated": "2026-08-08T21:06:19.951656+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
