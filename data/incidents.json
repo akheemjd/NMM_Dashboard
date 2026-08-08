@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-284879",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BAYVIEW AVE, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.76315733,
+      "lng": -79.38695567,
+      "start": 1786158420,
+      "end": null,
+      "updated": 1786158420
+    },
+    {
+      "id": "ON-284876",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.78103077,
+      "lng": -79.25480516,
+      "start": 1786156980,
+      "end": null,
+      "updated": 1786157280
+    },
+    {
+      "id": "ON-284872",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. 3 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 left lanes closed",
+      "lat": 43.52426591,
+      "lng": -79.64802322,
+      "start": 1786155780,
+      "end": null,
+      "updated": 1786157220
+    },
+    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -63,22 +111,6 @@
       "start": 1786155360,
       "end": null,
       "updated": 1786155900
-    },
-    {
-      "id": "ON-284872",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.52426591,
-      "lng": -79.64802322,
-      "start": 1786155780,
-      "end": null,
-      "updated": 1786155780
     },
     {
       "id": "ON-284867",
@@ -777,42 +809,10 @@
       "start": 1786496400,
       "end": 1786784400,
       "updated": 1786049940
-    },
-    {
-      "id": "ON-284268",
-      "province": "ON",
-      "highway": "HWY 522",
-      "direction": "Eastbound",
-      "description": "Continuous Special Event on HWY 522 Eastbound  between LEGROU'S LAKE RD(S)EAST MILLS TWP and LONG LAKE RD(S)EAST MILLS TWP, Arnstein. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.908104,
-      "lng": -79.91126,
-      "start": 1786719600,
-      "end": 1786723200,
-      "updated": 1786049460
-    },
-    {
-      "id": "ON-284583",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at HARMONY RD N, Oshawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.98243,
-      "lng": -78.86877,
-      "start": 1786417200,
-      "end": 1786784400,
-      "updated": 1786048740
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T02:39:07.241777+00:00",
+  "updated": "2026-08-08T03:10:17.353873+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
