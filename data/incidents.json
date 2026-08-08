@@ -49,26 +49,6 @@
       "updated": 1786203120
     },
     {
-      "id": "drivebc.ca/DBC-93879",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 5",
-        "from": "Inks Lake Rd",
-        "direction": "S"
-      },
-      "direction": "",
-      "description": "Highway 5 (Coquihalla North), southbound. Vehicle recovery between Inks Lake Rd and Chuwhels Mountain Rd (2 km south of Kamloops). Until Sat Aug 8 at 12:00 PM PDT. Right lane closed. Last updated Wed Aug 5 at 9:54 AM PDT. (DBC-93879)",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.603209,
-      "lng": -120.475413,
-      "start": "2026-08-05T09:54:16-07:00",
-      "end": "",
-      "updated": "2026-08-08T08:00:00-07:00"
-    },
-    {
       "id": "ON-285640",
       "province": "ON",
       "highway": "HWY 401",
@@ -682,27 +662,6 @@
       "updated": 1786108200
     },
     {
-      "id": "drivebc.ca/RIDE-101136",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Yoho Bridge",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Bridge maintenance. Starting Mon Aug 10 until Thu Aug 13. From 7:00 AM to 7:00 PM MDT, Monday to Thursday. Eastbound lane closure. Westbound lane closure. Watch for traffic control. Reduced to one lane. August 10th Eastbound slow lane closure\nAugust 11th Westbound slow lane closure\nAugust 12th Eastbound fast lane closure\nAugust 13th Westbound fast lane closure.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.29551065,
-      "lng": -116.85464161,
-      "start": "2026-08-06T17:37:08-07:00",
-      "end": "",
-      "updated": "2026-08-06T17:37:08-07:00"
-    },
-    {
       "id": "ON-284330",
       "province": "ON",
       "highway": "HWY 417",
@@ -813,10 +772,42 @@
       "start": 1786719600,
       "end": 1786723200,
       "updated": 1786049460
+    },
+    {
+      "id": "ON-284583",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at HARMONY RD N, Oshawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.98243,
+      "lng": -78.86877,
+      "start": 1786417200,
+      "end": 1786784400,
+      "updated": 1786048740
+    },
+    {
+      "id": "ON-284260",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Daily Engineering Investigation on HWY 6 Southbound  between COWAN'S SDRD(E) ASSIGINACK TWP, Wikwemikong and SOUTH BAYMOUTH-FERRY DOCKS, . 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.688007,
+      "lng": -81.86004,
+      "start": 1786363200,
+      "end": 1788559200,
+      "updated": 1786048680
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T18:30:41.700875+00:00",
+  "updated": "2026-08-08T19:01:56.471478+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
