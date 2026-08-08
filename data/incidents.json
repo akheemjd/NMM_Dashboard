@@ -17,22 +17,6 @@
       "updated": 1786162980
     },
     {
-      "id": "ON-284892",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound  at WILLIAMS PKWY, Brampton. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.7158546,
-      "lng": -79.75201129,
-      "start": 1786162320,
-      "end": null,
-      "updated": 1786162320
-    },
-    {
       "id": "drivebc.ca/RIDE-101169",
       "province": "BC",
       "highway": {
@@ -52,22 +36,6 @@
       "start": "2026-08-07T12:25:58-07:00",
       "end": "",
       "updated": "2026-08-07T20:24:14-07:00"
-    },
-    {
-      "id": "ON-284879",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BAYVIEW AVE, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.76315733,
-      "lng": -79.38695567,
-      "start": 1786158420,
-      "end": null,
-      "updated": 1786158420
     },
     {
       "id": "ON-277959",
@@ -100,22 +68,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786156204
-    },
-    {
-      "id": "ON-284867",
-      "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 409 Westbound  at MARTIN GROVE ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.69904694,
-      "lng": -79.57443118,
-      "start": 1786154940,
-      "end": null,
-      "updated": 1786154940
     },
     {
       "id": "ON-284845",
@@ -814,10 +766,58 @@
       "start": 1786719600,
       "end": 1786723200,
       "updated": 1786049460
+    },
+    {
+      "id": "ON-284583",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at HARMONY RD N, Oshawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.98243,
+      "lng": -78.86877,
+      "start": 1786417200,
+      "end": 1786784400,
+      "updated": 1786048740
+    },
+    {
+      "id": "ON-284260",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Daily Engineering Investigation on HWY 6 Southbound  between COWAN'S SDRD(E) ASSIGINACK TWP, Wikwemikong and SOUTH BAYMOUTH-FERRY DOCKS, . 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.688007,
+      "lng": -81.86004,
+      "start": 1786363200,
+      "end": 1788559200,
+      "updated": 1786048680
+    },
+    {
+      "id": "ON-284590",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Westbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 407 ETR Westbound On-ramp at HWY 412, Whitby. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.95089,
+      "lng": -79.00955,
+      "start": 1786413600,
+      "end": 1786784400,
+      "updated": 1786048680
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T04:41:57.117444+00:00",
+  "updated": "2026-08-08T05:12:14.726290+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
