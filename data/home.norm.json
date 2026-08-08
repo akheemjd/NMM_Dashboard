@@ -1,15 +1,15 @@
 {
   "updated_at": "11:07 EDT",
-  "build_version": "1786204605",
+  "build_version": "1786206415",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 2,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "30 min"
+    "max_wait": "40 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 400, QEW, HWY 17, HWY 527",
+    "status_line": "HWY 401, HWY 17, HWY 527, Frog Cre",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Southbound  at LLOYDTOWN-AURORA RD, Kettleby. Right\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at BROCK ROAD, Pickering. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at FIFTY ROAD, Hamilton. Right\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Eastbound  at PAYS PLAT RIVER BR, Rossport. Lane and EAST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "30 min",
+      "wait": "40 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:21 EDT"
+      "captured_at": "12:10 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,25 +267,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 MDT"
+      "captured_at": "10:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "30 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT"
+      "captured_at": "09:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
       "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 CDT"
+      "captured_at": "11:09 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

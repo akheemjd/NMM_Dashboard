@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-285670",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at BROCK ROAD, Pickering. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.839847225,
+      "lng": -79.068287015,
+      "start": 1786205700,
+      "end": null,
+      "updated": 1786205700
+    },
+    {
       "id": "ON-285659",
       "province": "ON",
       "highway": "HWY 401",
@@ -54,22 +70,6 @@
       "updated": "2026-08-08T08:20:12-07:00"
     },
     {
-      "id": "ON-285650",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound  at LLOYDTOWN-AURORA RD, Kettleby. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.00146,
-      "lng": -79.58604142,
-      "start": 1786201740,
-      "end": null,
-      "updated": 1786201740
-    },
-    {
       "id": "drivebc.ca/DBC-93879",
       "province": "BC",
       "highway": {
@@ -104,22 +104,6 @@
       "start": 1786359600,
       "end": 1786392000,
       "updated": 1786200300
-    },
-    {
-      "id": "ON-285631",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at FIFTY ROAD, Hamilton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.21745099,
-      "lng": -79.64014591,
-      "start": 1786199520,
-      "end": null,
-      "updated": 1786199520
     },
     {
       "id": "ON-285553",
@@ -818,10 +802,26 @@
       "start": 1786320000,
       "end": 1786708800,
       "updated": 1786050840
+    },
+    {
+      "id": "ON-284283",
+      "province": "ON",
+      "highway": "HWY 94",
+      "direction": "Southbound",
+      "description": "Continuous Special Event on HWY 94 Southbound  between LANSDOWNE ST(W)CALLANDER BAY DR(N) and LANSDOWNE ST(W)CALLANDER BAY DR(N), Corbeil. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.2244,
+      "lng": -79.35847,
+      "start": 1786536000,
+      "end": 1786557600,
+      "updated": 1786050300
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T15:56:42.115370+00:00",
+  "updated": "2026-08-08T16:26:51.238447+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
