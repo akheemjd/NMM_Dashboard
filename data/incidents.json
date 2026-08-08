@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101169",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 23",
+        "from": "Upper Arrow Lake Ferry",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Behind schedule 20 minutes.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.62694225,
+      "lng": -117.86728161,
+      "start": "2026-08-07T12:25:58-07:00",
+      "end": "",
+      "updated": "2026-08-07T20:24:14-07:00"
+    },
+    {
       "id": "ON-284879",
       "province": "ON",
       "highway": "HWY 401",
@@ -95,22 +116,6 @@
       "start": 1786155960,
       "end": null,
       "updated": 1786155960
-    },
-    {
-      "id": "ON-284868",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.7963749,
-      "lng": -79.1968699,
-      "start": 1786155360,
-      "end": null,
-      "updated": 1786155900
     },
     {
       "id": "ON-284867",
@@ -812,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T03:10:17.353873+00:00",
+  "updated": "2026-08-08T03:41:26.656004+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
