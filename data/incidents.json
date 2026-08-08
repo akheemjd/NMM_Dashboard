@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-284911",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound TRANSFER at Matheson Express to Collector, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.632169304,
+      "lng": -79.650975466,
+      "start": 1786167120,
+      "end": null,
+      "updated": 1786167120
+    },
+    {
+      "id": "ON-284909",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound  at GREEN LANE, Gwillimbury. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 44.08494795,
+      "lng": -79.42245955,
+      "start": 1786165980,
+      "end": null,
+      "updated": 1786165980
+    },
+    {
       "id": "ON-284898",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -782,42 +814,10 @@
       "start": 1786417200,
       "end": 1786784400,
       "updated": 1786048740
-    },
-    {
-      "id": "ON-284260",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Southbound",
-      "description": "Daily Engineering Investigation on HWY 6 Southbound  between COWAN'S SDRD(E) ASSIGINACK TWP, Wikwemikong and SOUTH BAYMOUTH-FERRY DOCKS, . 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.688007,
-      "lng": -81.86004,
-      "start": 1786363200,
-      "end": 1788559200,
-      "updated": 1786048680
-    },
-    {
-      "id": "ON-284590",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Westbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 407 ETR Westbound On-ramp at HWY 412, Whitby. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.95089,
-      "lng": -79.00955,
-      "start": 1786413600,
-      "end": 1786784400,
-      "updated": 1786048680
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T05:12:14.726290+00:00",
+  "updated": "2026-08-08T05:42:33.109549+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
