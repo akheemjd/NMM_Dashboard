@@ -1,15 +1,15 @@
 {
-  "updated_at": "13:26 EDT",
-  "build_version": "1786211977",
+  "updated_at": "14:03 EDT",
+  "build_version": "1786213847",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 5,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, ALLEN RO, QEW, HWY 527",
+    "status_line": "HWY 404, HWY 527, Frog Cre, HWY 811",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at YONGE ST, Toronto. Left shoulder\u2026",
+        "road": "HWY 404",
+        "what": "Disabled Vehicle on HWY 404 Northbound RAMP at STEELES AVE, Toronto-Markham. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "ALLEN ROAD",
-        "what": "Collision on ALLEN ROAD Northbound RAMP at 401, Toronto. Left lane closed.",
+        "road": "HWY 527",
+        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:36 EDT"
+      "captured_at": "13:58 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -231,16 +231,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:47 EDT"
+      "captured_at": "14:13 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:39 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 MDT"
+      "captured_at": "12:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,16 +276,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
       "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:31 CDT"
+      "captured_at": "13:11 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:26 EDT"
+      "captured_at": "14:03 EDT"
     }
   ],
   "market": [
