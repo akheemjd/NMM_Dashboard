@@ -1,13 +1,13 @@
 {
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
+    "heavy_count": 2,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Coutts-Sweetgrass",
-    "max_wait": "25 min"
+    "max_name": "Blue Water Bridge",
+    "max_wait": "30 min"
   },
   "border_rows": [
     {
@@ -22,29 +22,29 @@
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:19 EDT"
+      "captured_at": "22:22 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -67,11 +67,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -105,29 +105,29 @@
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:19 EDT"
+      "captured_at": "22:22 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -150,11 +150,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -176,6 +176,6 @@
     }
   ],
   "updated_at": "21:15 EDT",
-  "build_version": "1786154880",
+  "build_version": "1786156750",
   "captured_at": "21:15 EDT"
 }
