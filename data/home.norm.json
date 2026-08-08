@@ -1,6 +1,6 @@
 {
-  "updated_at": "15:21 EDT",
-  "build_version": "1786219445",
+  "updated_at": "16:02 EDT",
+  "build_version": "1786221327",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -8,8 +8,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "12 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 416, HWY 401",
+    "status_line": "HWY 407, HWY 401, HWY 404",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Northbound  at BLOOMINGTON ROAD, Aurora. 3 right lanes and\u2026",
+        "road": "HWY 407",
+        "what": "Collision on HWY 407 Westbound  at HARMONY RD, Oshawa. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 416",
-        "what": "Other on HWY 416 Northbound  at HWY 16 (IC 1), Johnstown. All lanes closed.",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound EXPRESS at KEELE ST, Toronto. 1 right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "12 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:57 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 MDT"
+      "captured_at": "14:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -294,22 +294,10 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:21 EDT"
+      "captured_at": "16:02 EDT"
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2362B (chained 2017)",
-      "value": "+0.3%",
-      "value_class": "up"
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.7%",
-      "value_class": "up"
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 222.9\u00a2/L and 35 L/100km",
