@@ -1,10 +1,10 @@
 {
   "updated_at": "18:15 EDT",
-  "build_version": "1786228743",
+  "build_version": "1786230599",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 410, HWY 407, HWY 427, HWY 77",
+    "status_line": "HWY 401, HWY 77, HWY 404, HWY 527",
     "incidents": [
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Southbound  at 407, Brampton. Right lane closed.",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound RAMP at STEVENSON ROAD, Oshawa. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 407",
-        "what": "Disabled Vehicle on HWY 407 Westbound  at BETHESDA ROAD, Clarington. Right lane\u2026",
+        "road": "HWY 77",
+        "what": "Collision on HWY 77 Both Directions  between Mersea Road 7, Blytheswood and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 EDT"
+      "captured_at": "18:59 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -231,7 +231,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:45 EDT"
+      "captured_at": "18:59 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -240,16 +240,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -298,6 +298,18 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2362B (chained 2017)",
+      "value": "+0.3%",
+      "value_class": "up"
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.7%",
+      "value_class": "up"
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 222.9\u00a2/L and 35 L/100km",
