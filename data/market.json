@@ -1,6 +1,23 @@
 {
   "indicators": [
     {
+      "name": "GDP Growth",
+      "label": "Monthly GDP",
+      "value": "+0.3%",
+      "detail": "$2362B (chained 2017)",
+      "direction": "up",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "GDP YoY",
+      "label": "Year-over-year",
+      "value": "+1.7%",
+      "direction": "up",
+      "source": "Statistics Canada",
+      "what_it_means": "Longer-term freight demand trend."
+    },
+    {
       "name": "Fuel Cost",
       "label": "Fuel cost per 1,000 km",
       "value": "$780",
@@ -24,7 +41,7 @@
     "usd_cad": 1.4204,
     "note": "Rate data from DAT/Loadlink requires paid subscription. These are operating cost indicators that drive rate floors."
   },
-  "updated": "2026-08-08T19:01:40.173672+00:00",
+  "updated": "2026-08-08T19:32:49.105133+00:00",
   "note": "Public data from Statistics Canada, Bank of Canada, and industry surveys.",
-  "direction_summary": "2/2 indicators trending up"
+  "direction_summary": "4/4 indicators trending up"
 }
