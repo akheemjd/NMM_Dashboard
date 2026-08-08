@@ -1,15 +1,15 @@
 {
   "updated_at": "23:15 EDT",
-  "build_version": "1786162304",
+  "build_version": "1786164118",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 3,
+    "heavy_count": 2,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Blue Water Bridge",
-    "max_wait": "25 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -196,18 +196,18 @@
     "none": false,
     "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 409, QEW",
+    "status_line": "HWY 403 , HWY 410, HWY 401, HWY 409",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BAYVIEW AVE, Toronto. Right\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound COLLECTOR at SOUTH OF HWY\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 409",
-        "what": "Disabled Vehicle on HWY 409 Westbound ON-RAMP at MARTIN GROVE ROAD, Toronto.\u2026",
+        "road": "HWY 410",
+        "what": "Disabled Vehicle on HWY 410 Northbound  at WILLIAMS PKWY, Brampton. 2 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -227,29 +227,29 @@
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:26 EDT"
+      "captured_at": "00:13 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "9 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "23 min",
+      "wait": "17 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -263,20 +263,20 @@
     {
       "name": "Coutts-Sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:05 MDT"
+      "captured_at": "22:23 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",

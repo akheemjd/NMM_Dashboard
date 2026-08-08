@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-284898",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Westbound COLLECTOR at SOUTH OF HWY 401, Mississauga. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.633435045,
+      "lng": -79.652971029,
+      "start": 1786162980,
+      "end": null,
+      "updated": 1786162980
+    },
+    {
+      "id": "ON-284892",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound  at WILLIAMS PKWY, Brampton. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.7158546,
+      "lng": -79.75201129,
+      "start": 1786162320,
+      "end": null,
+      "updated": 1786162320
+    },
+    {
       "id": "drivebc.ca/RIDE-101169",
       "province": "BC",
       "highway": {
@@ -38,22 +70,6 @@
       "updated": 1786158420
     },
     {
-      "id": "ON-284872",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. 3 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 left lanes closed",
-      "lat": 43.52426591,
-      "lng": -79.64802322,
-      "start": 1786155780,
-      "end": null,
-      "updated": 1786157220
-    },
-    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -84,22 +100,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786156204
-    },
-    {
-      "id": "ON-284875",
-      "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 409 Westbound ON-RAMP at MARTIN GROVE ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.699351,
-      "lng": -79.573712,
-      "start": 1786155960,
-      "end": null,
-      "updated": 1786155960
     },
     {
       "id": "ON-284867",
@@ -817,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T04:11:42.128674+00:00",
+  "updated": "2026-08-08T04:41:57.117444+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
