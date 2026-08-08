@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-285525",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound HOV at HWY 10 / HURONTARIO ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.6047924,
+      "lng": -79.6399013,
+      "start": 1786192680,
+      "end": null,
+      "updated": 1786192680
+    },
+    {
       "id": "ON-285473",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,22 +31,6 @@
       "start": 1786191540,
       "end": null,
       "updated": 1786191540
-    },
-    {
-      "id": "ON-285454",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at EASTGATE/CAWTHRA, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.6135963,
-      "lng": -79.6309669,
-      "start": 1786191240,
-      "end": null,
-      "updated": 1786191240
     },
     {
       "id": "ON-285094",
@@ -812,7 +812,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T12:21:37.229161+00:00",
+  "updated": "2026-08-08T12:52:00.342854+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
