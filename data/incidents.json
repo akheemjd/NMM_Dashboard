@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-285525",
+      "id": "ON-285553",
       "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
+      "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound HOV at HWY 10 / HURONTARIO ROAD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
+      "description": "Nightly Construction on HWY 401 Eastbound  between Townline Road / Wellington Rd 33 (286KM), Cambridge and Wellington Road 36, Morriston. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.6047924,
-      "lng": -79.6399013,
-      "start": 1786192680,
-      "end": null,
-      "updated": 1786192680
-    },
-    {
-      "id": "ON-285473",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  at MTO PATROL YARD, WAWA, Wawa. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 47.978933163,
-      "lng": -84.791900336,
-      "start": 1786191540,
-      "end": null,
-      "updated": 1786191540
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.420834,
+      "lng": -80.283104,
+      "start": 1786406400,
+      "end": 1786791600,
+      "updated": 1786193460
     },
     {
       "id": "ON-285094",
@@ -809,10 +793,26 @@
       "start": 1786719600,
       "end": 1786723200,
       "updated": 1786049460
+    },
+    {
+      "id": "ON-284583",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at HARMONY RD N, Oshawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.98243,
+      "lng": -78.86877,
+      "start": 1786417200,
+      "end": 1786784400,
+      "updated": 1786048740
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T12:52:00.342854+00:00",
+  "updated": "2026-08-08T13:22:55.344588+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

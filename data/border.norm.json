@@ -1,32 +1,32 @@
 {
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Blue Water Bridge",
-    "max_wait": "25 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "border_rows": [
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:07 EDT"
     },
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:02 EDT"
+      "captured_at": "08:55 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -35,7 +35,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -44,7 +44,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -71,7 +71,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -96,20 +96,20 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:07 EDT"
     },
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:02 EDT"
+      "captured_at": "08:55 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -118,7 +118,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -127,7 +127,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -154,7 +154,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -176,6 +176,6 @@
     }
   ],
   "updated_at": "07:30 EDT",
-  "build_version": "1786193523",
+  "build_version": "1786195379",
   "captured_at": "07:30 EDT"
 }
