@@ -1,15 +1,15 @@
 {
-  "updated_at": "11:07 EDT",
-  "build_version": "1786206415",
+  "updated_at": "12:42 EDT",
+  "build_version": "1786208283",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 3,
+    "heavy_count": 1,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "40 min"
+    "max_name": "Emerson-Pembina",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 17, HWY 527, Frog Cre",
+    "status_line": "ALLEN RO, QEW, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at BROCK ROAD, Pickering. 1 right lane\u2026",
+        "road": "ALLEN ROAD",
+        "what": "Collision on ALLEN ROAD Northbound RAMP at 401, Toronto. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Eastbound  at PAYS PLAT RIVER BR, Rossport. Lane and EAST\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at GUELPH LINE, Burlington. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "40 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:10 EDT"
+      "captured_at": "12:36 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:01 EDT"
+      "captured_at": "12:39 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 PDT"
+      "captured_at": "09:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:07 EDT"
+      "captured_at": "12:42 EDT"
     }
   ],
   "market": [
