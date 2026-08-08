@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-284837",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at TRAFALGAR ROAD, Halton-Milton. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.5706799,
+      "lng": -79.8294209,
+      "start": 1786146600,
+      "end": null,
+      "updated": 1786146600
+    },
+    {
       "id": "ON-284830",
       "province": "ON",
       "highway": "QEW",
@@ -276,22 +292,6 @@
       "start": 1786359600,
       "end": 1786748400,
       "updated": 1786127880
-    },
-    {
-      "id": "ON-284619",
-      "province": "ON",
-      "highway": "HWY 402",
-      "direction": "Westbound",
-      "description": "Collision on HWY 402 Westbound RAMP at Highway 40 / Modeland Road, Sarnia. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 42.991245,
-      "lng": -82.345589,
-      "start": 1786113300,
-      "end": null,
-      "updated": 1786127700
     },
     {
       "id": "ON-284691",
@@ -812,7 +812,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-07T23:35:08.922880+00:00",
+  "updated": "2026-08-08T00:05:18.525784+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
