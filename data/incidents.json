@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-285593",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at DIXON RD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.70752137,
-      "lng": -79.55527932,
-      "start": 1786195680,
-      "end": null,
-      "updated": 1786195680
-    },
-    {
       "id": "ON-285553",
       "province": "ON",
       "highway": "HWY 401",
@@ -809,10 +793,26 @@
       "start": 1786719600,
       "end": 1786723200,
       "updated": 1786049460
+    },
+    {
+      "id": "ON-284583",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at HARMONY RD N, Oshawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.98243,
+      "lng": -78.86877,
+      "start": 1786417200,
+      "end": 1786784400,
+      "updated": 1786048740
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T13:53:04.770614+00:00",
+  "updated": "2026-08-08T14:23:14.342406+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
