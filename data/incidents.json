@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-284952",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound  at EASTGATE/CAWTHRA, Mississauga. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.61363858,
+      "lng": -79.63182068,
+      "start": 1786178280,
+      "end": null,
+      "updated": 1786178280
+    },
+    {
+      "id": "ON-284951",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at DIXON ROAD, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.68917987,
+      "lng": -79.57106395,
+      "start": 1786178220,
+      "end": null,
+      "updated": 1786178220
+    },
+    {
       "id": "ON-284943",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +47,6 @@
       "start": 1786175400,
       "end": null,
       "updated": 1786175400
-    },
-    {
-      "id": "ON-284942",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.73616852,
-      "lng": -79.5264349,
-      "start": 1786174560,
-      "end": null,
-      "updated": 1786174560
     },
     {
       "id": "ON-277959",
@@ -793,26 +809,10 @@
       "start": 1786363200,
       "end": 1788559200,
       "updated": 1786048680
-    },
-    {
-      "id": "ON-284590",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Westbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 407 ETR Westbound On-ramp at HWY 412, Whitby. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.95089,
-      "lng": -79.00955,
-      "start": 1786413600,
-      "end": 1786784400,
-      "updated": 1786048680
     }
   ],
   "total": 50,
-  "updated": "2026-08-08T08:14:25.515818+00:00",
+  "updated": "2026-08-08T08:45:34.069980+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
