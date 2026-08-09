@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-285928",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at BROCK ROAD, Pickering. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.840052294,
-      "lng": -79.068383574,
-      "start": 1786248660,
-      "end": null,
-      "updated": 1786248660
-    },
-    {
       "id": "ON-277509",
       "province": "ON",
       "highway": "HWY 811",
@@ -813,10 +797,26 @@
       "start": 1786536000,
       "end": 1786557600,
       "updated": 1786050300
+    },
+    {
+      "id": "ON-284596",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Nightly Construction on QEW Toronto bound  between NIKOLA TESLA and BEACH BLVD, Hamilton. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.254734,
+      "lng": -79.76535,
+      "start": 1786496400,
+      "end": 1786784400,
+      "updated": 1786049940
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T05:23:45.005292+00:00",
+  "updated": "2026-08-09T05:53:54.571106+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
