@@ -1,6 +1,6 @@
 {
   "updated_at": "14:08 EDT",
-  "build_version": "1786299542",
+  "build_version": "1786301398",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "12 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 401, HWY 11",
+    "status_line": "HWY 401, HWY 11",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. 2 left lanes\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at EAST OF WARDEN AVE, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at LESLIE STREET, Toronto. 2 right\u2026",
+        "what": "Collision on HWY 401 Eastbound ON-RAMP at HWY 2A, Toronto. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "14:10 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "12 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "9 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:00 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -298,6 +298,18 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2362B (chained 2017)",
+      "value": "+0.3%",
+      "value_class": "up"
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.7%",
+      "value_class": "up"
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 222.9\u00a2/L and 35 L/100km",
