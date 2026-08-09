@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-285898",
+      "id": "ON-285922",
       "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound  at DIXON ROAD/AIRPORT ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at AVENUE ROAD, Toronto. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.686292806,
-      "lng": -79.6011132,
-      "start": 1786242120,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.74232372,
+      "lng": -79.42277452,
+      "start": 1786246740,
       "end": null,
-      "updated": 1786242120
+      "updated": 1786246740
+    },
+    {
+      "id": "ON-285921",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound ON-RAMP at CHRISTIE ST / LAKEVIEW AVE, Grimsby. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.199826483,
+      "lng": -79.5631814,
+      "start": 1786246500,
+      "end": null,
+      "updated": 1786246500
     },
     {
       "id": "ON-285884",
@@ -797,26 +813,10 @@
       "start": 1786014000,
       "end": 1787954400,
       "updated": 1786053720
-    },
-    {
-      "id": "ON-284287",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1786320000,
-      "end": 1786708800,
-      "updated": 1786050840
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T03:19:13.755098+00:00",
+  "updated": "2026-08-09T03:50:17.674392+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
