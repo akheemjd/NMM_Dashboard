@@ -1,15 +1,15 @@
 {
-  "updated_at": "03:15 EDT",
-  "build_version": "1786265944",
+  "updated_at": "05:15 EDT",
+  "build_version": "1786267816",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,9 +194,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 401",
+    "status_line": "HWY 403 ",
     "incidents": [
       {
         "road": "HWY 403 MISSISSAUGA",
@@ -206,8 +206,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Mavis Express to Collector,\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at HWY 407, Mississauga. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 EDT"
+      "captured_at": "05:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,16 +267,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 MDT"
+      "captured_at": "03:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:40 PDT"
+      "captured_at": "02:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 CDT"
+      "captured_at": "04:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 EDT"
+      "captured_at": "05:15 EDT"
     }
   ],
   "market": [

@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-285945",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at HWY 407, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.539013,
+      "lng": -79.714639,
+      "start": 1786265220,
+      "end": null,
+      "updated": 1786266420
+    },
+    {
       "id": "ON-285946",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -15,38 +31,6 @@
       "start": 1786265280,
       "end": null,
       "updated": 1786265280
-    },
-    {
-      "id": "ON-285944",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Mavis Express to Collector, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.626994,
-      "lng": -79.692315,
-      "start": 1786265220,
-      "end": null,
-      "updated": 1786265220
-    },
-    {
-      "id": "ON-285945",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at HWY 407, Mississauga. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.539013,
-      "lng": -79.714639,
-      "start": 1786265220,
-      "end": null,
-      "updated": 1786265220
     },
     {
       "id": "ON-261152",
@@ -817,10 +801,26 @@
       "start": "2026-08-06T17:37:08-07:00",
       "end": "",
       "updated": "2026-08-06T17:37:08-07:00"
+    },
+    {
+      "id": "ON-284330",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.426376,
+      "lng": -75.61628,
+      "start": 1786503600,
+      "end": 1786525200,
+      "updated": 1786054620
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T08:58:59.875693+00:00",
+  "updated": "2026-08-09T09:30:11.513890+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
