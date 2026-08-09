@@ -1,6 +1,6 @@
 {
-  "updated_at": "15:34 EDT",
-  "build_version": "1786307012",
+  "updated_at": "16:19 EDT",
+  "build_version": "1786308844",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 527, Frog Cre",
+    "status_line": "HWY 401, QEW",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at CORPORATE DRIVE, Toronto. All\u2026",
+        "what": "Collision on HWY 401 Eastbound ON-RAMP at DIXON ROAD, Toronto. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  at DIXON ROAD, Toronto. 1 right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -294,22 +294,10 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:34 EDT"
+      "captured_at": "16:19 EDT"
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2362B (chained 2017)",
-      "value": "+0.3%",
-      "value_class": "up"
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.7%",
-      "value_class": "up"
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 222.9\u00a2/L and 35 L/100km",

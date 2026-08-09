@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-286074",
+      "id": "ON-286084",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at CORPORATE DRIVE, Toronto. All lanes closed.",
+      "description": "Collision on HWY 401 Eastbound ON-RAMP at DIXON ROAD, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.781332,
-      "lng": -79.253895,
-      "start": 1786306200,
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.691064,
+      "lng": -79.568749,
+      "start": 1786307640,
       "end": null,
-      "updated": 1786306200
+      "updated": 1786307640
+    },
+    {
+      "id": "ON-286080",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at DIXON ROAD, Toronto. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.69381372,
+      "lng": -79.56746367,
+      "start": 1786307520,
+      "end": null,
+      "updated": 1786307520
+    },
+    {
+      "id": "ON-286079",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at LAKE RIDGE ROAD, Whitby. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.8625201,
+      "lng": -78.9833114,
+      "start": 1786307340,
+      "end": null,
+      "updated": 1786307340
     },
     {
       "id": "ON-286067",
@@ -47,27 +79,6 @@
       "start": 1786304880,
       "end": null,
       "updated": 1786304880
-    },
-    {
-      "id": "drivebc.ca/RIDE-101200",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 23",
-        "from": "Upper Arrow Lake Ferry",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Expect delay of 60-90 minutes.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.62776277,
-      "lng": -117.86842945,
-      "start": "2026-08-09T11:41:23-07:00",
-      "end": "",
-      "updated": "2026-08-09T11:41:23-07:00"
     },
     {
       "id": "ON-261152",
@@ -801,31 +812,10 @@
       "start": 1786359600,
       "end": 1786402800,
       "updated": 1786108200
-    },
-    {
-      "id": "drivebc.ca/RIDE-101136",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Yoho Bridge",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Bridge maintenance. Starting Mon Aug 10 until Thu Aug 13. From 7:00 AM to 7:00 PM MDT, Monday to Thursday. Eastbound lane closure. Westbound lane closure. Watch for traffic control. Reduced to one lane. August 10th Eastbound slow lane closure\nAugust 11th Westbound slow lane closure\nAugust 12th Eastbound fast lane closure\nAugust 13th Westbound fast lane closure.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.29551065,
-      "lng": -116.85464161,
-      "start": "2026-08-06T17:37:08-07:00",
-      "end": "",
-      "updated": "2026-08-06T17:37:08-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T20:23:27.902603+00:00",
+  "updated": "2026-08-09T20:54:00.189079+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
