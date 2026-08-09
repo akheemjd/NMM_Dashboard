@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-286049",
+      "id": "ON-286048",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at EAST OF WARDEN AVE, Toronto. Right lane and right shoulder closed.",
+      "description": "Collision on HWY 401 Eastbound ON-RAMP at HWY 2A, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.795397,
+      "lng": -79.148971,
+      "start": 1786300860,
+      "end": null,
+      "updated": 1786302720
+    },
+    {
+      "id": "ON-286052",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound  at HWY 5 / DUNDAS STREET, Mississauga. Centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "centre lane closed",
+      "lat": 43.51225661,
+      "lng": -79.69322025,
+      "start": 1786302360,
+      "end": null,
+      "updated": 1786302360
+    },
+    {
+      "id": "ON-286050",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound ON-RAMP at WARDEN AVE, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.771968,
-      "lng": -79.29601,
-      "start": 1786301100,
+      "lat": 43.770257,
+      "lng": -79.301755,
+      "start": 1786301700,
       "end": null,
-      "updated": 1786301100
+      "updated": 1786301700
     },
     {
       "id": "drivebc.ca/RIDE-101200",
@@ -36,22 +68,6 @@
       "start": "2026-08-09T11:41:23-07:00",
       "end": "",
       "updated": "2026-08-09T11:41:23-07:00"
-    },
-    {
-      "id": "ON-286048",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound ON-RAMP at HWY 2A, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.795397,
-      "lng": -79.148971,
-      "start": 1786300860,
-      "end": null,
-      "updated": 1786300860
     },
     {
       "id": "ON-261152",
@@ -148,38 +164,6 @@
       "start": 1786270800,
       "end": null,
       "updated": 1786270800
-    },
-    {
-      "id": "ON-285942",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Police Investigation on HWY 403 HAMILTON Westbound RAMP at MAIN STREET EAST, Hamilton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.26531179,
-      "lng": -79.89323795,
-      "start": 1786259460,
-      "end": null,
-      "updated": 1786259460
-    },
-    {
-      "id": "ON-285941",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Police Investigation on HWY 403 HAMILTON Eastbound RAMP at MAIN STREET WEST, Hamilton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.2599949,
-      "lng": -79.89401853,
-      "start": 1786258980,
-      "end": null,
-      "updated": 1786258980
     },
     {
       "id": "drivebc.ca/DBC-93701",
@@ -817,10 +801,26 @@
       "start": 1786330800,
       "end": 1786352400,
       "updated": 1786109100
+    },
+    {
+      "id": "ON-284571",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Northbound",
+      "description": "Continuous Maintenance on HWY 416 Northbound  between BANKFIELD RD / BROPHY DR (IC 57) (CR 8), Manotick and FALLOWFIELD RD (IC 66), Ottawa. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.2097,
+      "lng": -75.73695,
+      "start": 1786359600,
+      "end": 1786402800,
+      "updated": 1786108380
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T18:49:53.842726+00:00",
+  "updated": "2026-08-09T19:21:16.349759+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
