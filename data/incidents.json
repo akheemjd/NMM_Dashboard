@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101198",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 10",
+        "from": "56 Avenue",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident. Right turn lane closed.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.10434802,
+      "lng": -122.75660877,
+      "start": "2026-08-09T09:07:00-07:00",
+      "end": "",
+      "updated": "2026-08-09T09:07:00-07:00"
+    },
+    {
       "id": "ON-285969",
       "province": "ON",
       "highway": "HWY 417",
@@ -796,31 +817,10 @@
       "start": 1786359600,
       "end": 1786402800,
       "updated": 1786108200
-    },
-    {
-      "id": "drivebc.ca/RIDE-101136",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Yoho Bridge",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Bridge maintenance. Starting Mon Aug 10 until Thu Aug 13. From 7:00 AM to 7:00 PM MDT, Monday to Thursday. Eastbound lane closure. Westbound lane closure. Watch for traffic control. Reduced to one lane. August 10th Eastbound slow lane closure\nAugust 11th Westbound slow lane closure\nAugust 12th Eastbound fast lane closure\nAugust 13th Westbound fast lane closure.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.29551065,
-      "lng": -116.85464161,
-      "start": "2026-08-06T17:37:08-07:00",
-      "end": "",
-      "updated": "2026-08-06T17:37:08-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T15:42:59.565067+00:00",
+  "updated": "2026-08-09T16:14:22.247003+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
