@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-285931",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 404 Southbound COLLECTOR RAMP at FAIRVIEW MALL DRIVE / SHEPPARD AVE, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.779878716,
+      "lng": -79.340794086,
+      "start": 1786249620,
+      "end": null,
+      "updated": 1786249620
+    },
+    {
       "id": "ON-285928",
       "province": "ON",
       "highway": "HWY 401",
@@ -95,22 +111,6 @@
       "start": 1781491500,
       "end": null,
       "updated": 1786247340
-    },
-    {
-      "id": "ON-285921",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound ON-RAMP at CHRISTIE ST / LAKEVIEW AVE, Grimsby. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.199826483,
-      "lng": -79.5631814,
-      "start": 1786246500,
-      "end": null,
-      "updated": 1786246500
     },
     {
       "id": "ON-285757",
@@ -816,7 +816,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T04:21:27.439936+00:00",
+  "updated": "2026-08-09T04:52:35.841696+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
