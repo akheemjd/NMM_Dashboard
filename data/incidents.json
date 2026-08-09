@@ -1,20 +1,56 @@
 {
   "incidents": [
     {
-      "id": "ON-285939",
+      "id": "ON-285942",
       "province": "ON",
-      "highway": "HWY 401",
+      "highway": "HWY 403 HAMILTON",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at VICTORIA PARK AVE, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Police Investigation on HWY 403 HAMILTON Westbound RAMP at MAIN STREET EAST, Hamilton. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.76835616,
-      "lng": -79.31981091,
-      "start": 1786258140,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.26531179,
+      "lng": -79.89323795,
+      "start": 1786259460,
       "end": null,
-      "updated": 1786258140
+      "updated": 1786259460
+    },
+    {
+      "id": "ON-285941",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Police Investigation on HWY 403 HAMILTON Eastbound RAMP at MAIN STREET WEST, Hamilton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.2599949,
+      "lng": -79.89401853,
+      "start": 1786258980,
+      "end": null,
+      "updated": 1786258980
+    },
+    {
+      "id": "drivebc.ca/DBC-93701",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "at Port Mann Bridge",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Highway 1 (TransCanada Highway), in both directions. Bridge maintenance at Port Mann Bridge (Surrey). Until Fri Aug 21. From 7:00 PM to 6:00 AM PDT on Sunday, Monday, Tuesday, Wednesday and Thursday. HOV lane closed. Watch for traffic control. Watch for traffic control and crews on scene. Last updated Mon Jul 20 at 11:15 AM PDT. (DBC-93701)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.21973,
+      "lng": -122.813328,
+      "start": "2026-07-20T11:15:07-07:00",
+      "end": "",
+      "updated": "2026-08-09T00:00:00-07:00"
     },
     {
       "id": "ON-277509",
@@ -781,42 +817,10 @@
       "start": 1786014000,
       "end": 1787954400,
       "updated": 1786053720
-    },
-    {
-      "id": "ON-284287",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1786320000,
-      "end": 1786708800,
-      "updated": 1786050840
-    },
-    {
-      "id": "ON-284283",
-      "province": "ON",
-      "highway": "HWY 94",
-      "direction": "Southbound",
-      "description": "Continuous Special Event on HWY 94 Southbound  between LANSDOWNE ST(W)CALLANDER BAY DR(N) and LANSDOWNE ST(W)CALLANDER BAY DR(N), Corbeil. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.2244,
-      "lng": -79.35847,
-      "start": 1786536000,
-      "end": 1786557600,
-      "updated": 1786050300
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T06:56:13.393553+00:00",
+  "updated": "2026-08-09T07:26:29.446459+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
