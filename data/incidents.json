@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-286025",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.55233005,
+      "lng": -79.61354776,
+      "start": 1786296960,
+      "end": null,
+      "updated": 1786299240
+    },
+    {
       "id": "ON-286017",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,54 +31,6 @@
       "start": 1786295820,
       "end": null,
       "updated": 1786297260
-    },
-    {
-      "id": "ON-286026",
-      "province": "ON",
-      "highway": "HWY 17A",
-      "direction": "Westbound",
-      "description": "Other on HWY 17A Westbound  at SEC HWY 596 (N)-TO MINAKI - DARLINGTON DR (S), Kenora. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 49.7856426,
-      "lng": -94.5875261,
-      "start": 1786297080,
-      "end": null,
-      "updated": 1786297080
-    },
-    {
-      "id": "ON-286025",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.55233005,
-      "lng": -79.61354776,
-      "start": 1786296960,
-      "end": null,
-      "updated": 1786296960
-    },
-    {
-      "id": "ON-286024",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at BASKET WEAVE/JANE ST, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.718070422,
-      "lng": -79.49925094,
-      "start": 1786296900,
-      "end": null,
-      "updated": 1786296900
     },
     {
       "id": "ON-286019",
@@ -812,10 +780,42 @@
       "start": 1786964400,
       "end": 1787266800,
       "updated": 1786109580
+    },
+    {
+      "id": "ON-284604",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound  between INNISFIL BEACH RD - SIMCOE ROAD 21 and INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 44.285004,
+      "lng": -79.67951,
+      "start": 1786492800,
+      "end": 1787400000,
+      "updated": 1786109580
+    },
+    {
+      "id": "ON-284579",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at MOODIE DR (IC 134), Ottawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.33849,
+      "lng": -75.84131,
+      "start": 1786330800,
+      "end": 1786352400,
+      "updated": 1786109100
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T17:47:48.407072+00:00",
+  "updated": "2026-08-09T18:18:57.775779+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
