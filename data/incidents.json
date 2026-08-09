@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-285976",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17 Both Directions  at HWY 108-ELLIOT LAKE RD, Serpent River. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 46.2122094,
+      "lng": -82.5741141,
+      "start": 1786282260,
+      "end": null,
+      "updated": 1786282260
+    },
+    {
+      "id": "ON-285972",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at RENFORTH DR, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.6661575,
+      "lng": -79.5971848,
+      "start": 1786281780,
+      "end": null,
+      "updated": 1786281780
+    },
+    {
       "id": "ON-285969",
       "province": "ON",
       "highway": "HWY 417",
@@ -15,38 +47,6 @@
       "start": 1786363200,
       "end": 1786390200,
       "updated": 1786280460
-    },
-    {
-      "id": "ON-285966",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at ISLINGTON AVE, Toronto. 1 left lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane and right shoulder closed",
-      "lat": 43.70935828,
-      "lng": -79.55216537,
-      "start": 1786280340,
-      "end": null,
-      "updated": 1786280340
-    },
-    {
-      "id": "ON-285964",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 427 Southbound EXPRESS at RATHBURN ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.65402186,
-      "lng": -79.56747308,
-      "start": 1786280040,
-      "end": null,
-      "updated": 1786280040
     },
     {
       "id": "ON-261152",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T13:08:13.560531+00:00",
+  "updated": "2026-08-09T13:39:21.698361+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
