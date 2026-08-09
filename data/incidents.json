@@ -1,20 +1,68 @@
 {
   "incidents": [
     {
-      "id": "ON-286118",
+      "id": "ON-286139",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane and right shoulder closed.",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto. Centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.78085209,
-      "lng": -79.25477778,
-      "start": 1786314060,
+      "lanes": "centre lane closed",
+      "lat": 43.76855405,
+      "lng": -79.31985853,
+      "start": 1786317720,
       "end": null,
-      "updated": 1786314060
+      "updated": 1786317720
+    },
+    {
+      "id": "ON-286138",
+      "province": "ON",
+      "highway": "HWY 7/8",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 7/8 Eastbound  at Homer Watson Boulevard, Kitchener. 1 lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 lane closed",
+      "lat": 43.427638656,
+      "lng": -80.484248128,
+      "start": 1786317120,
+      "end": null,
+      "updated": 1786317120
+    },
+    {
+      "id": "ON-286137",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.73616852,
+      "lng": -79.5264349,
+      "start": 1786316880,
+      "end": null,
+      "updated": 1786316880
+    },
+    {
+      "id": "ON-286136",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at FIFTY ROAD, Hamilton. Centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "centre lane closed",
+      "lat": 43.21717319,
+      "lng": -79.63699722,
+      "start": 1786316820,
+      "end": null,
+      "updated": 1786316820
     },
     {
       "id": "ON-261152",
@@ -147,26 +195,6 @@
       "start": 1786363200,
       "end": 1786482000,
       "updated": 1786219080
-    },
-    {
-      "id": "drivebc.ca/DBC-93840",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 16",
-        "from": "Gossen Creek St",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Highway 16 (Yellowhead Highway), in both directions. Bridge maintenance between Gossen Creek St and Kleanza Park Rd (15 km east of Terrace). Until Sun Aug 9 at 5:00 PM PDT. Single lane alternating traffic. 24 hour traffic control. Last updated Sat Aug 8 at 12:11 PM PDT. (DBC-93840)",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 54.597884,
-      "lng": -128.402521,
-      "start": "2026-07-30T10:12:35-07:00",
-      "end": "",
-      "updated": "2026-08-08T12:11:23-07:00"
     },
     {
       "id": "ON-285659",
@@ -785,42 +813,10 @@
       "start": "2026-08-06T17:37:08-07:00",
       "end": "",
       "updated": "2026-08-06T17:37:08-07:00"
-    },
-    {
-      "id": "ON-284330",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1786503600,
-      "end": 1786525200,
-      "updated": 1786054620
-    },
-    {
-      "id": "ON-284329",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 417 Eastbound  between ST. LAURENT BLVD (IC 115) and AVIATION PKWY (IC 113A), Ottawa. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.42029,
-      "lng": -75.63509,
-      "start": 1786503600,
-      "end": 1786525200,
-      "updated": 1786054440
     }
   ],
   "total": 50,
-  "updated": "2026-08-09T22:57:13.028468+00:00",
+  "updated": "2026-08-09T23:28:19.341558+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
