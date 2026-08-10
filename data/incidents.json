@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-286458",
+      "id": "ON-286480",
       "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 409 Westbound  at MARTIN GROVE ROAD, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Flooding on HWY 400 Southbound  at JANE STREET, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.69904694,
-      "lng": -79.57443118,
-      "start": 1786393800,
+      "lat": 43.711343226,
+      "lng": -79.505589008,
+      "start": 1786394880,
       "end": null,
-      "updated": 1786393800
+      "updated": 1786394880
+    },
+    {
+      "id": "ON-286481",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 6 Southbound RAMP at HWY 403 (HAMILTON), Hamilton. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.294074919,
+      "lng": -79.894165993,
+      "start": 1786394880,
+      "end": null,
+      "updated": 1786394880
     },
     {
       "id": "ON-286452",
@@ -111,22 +127,6 @@
       "start": 1786391760,
       "end": null,
       "updated": 1786391760
-    },
-    {
-      "id": "ON-286406",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS RAMP at HWY 403, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.64211676,
-      "lng": -79.65372435,
-      "start": 1786391580,
-      "end": null,
-      "updated": 1786391580
     },
     {
       "id": "ON-286424",
@@ -244,27 +244,6 @@
       "start": 1786618800,
       "end": 1786748400,
       "updated": 1786387200
-    },
-    {
-      "id": "drivebc.ca/RIDE-101219",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 23",
-        "from": "Upper Arrow Lake Ferry",
-        "direction": "N",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Expect delay of 60-90 minutes. One hour sailing wait from Galena Bay to Shelter Bay.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.62904948,
-      "lng": -117.89732869,
-      "start": "2026-08-10T11:31:43-07:00",
-      "end": "",
-      "updated": "2026-08-10T11:31:43-07:00"
     },
     {
       "id": "ON-286368",
@@ -814,10 +793,26 @@
       "start": 1787025540,
       "end": 1787302800,
       "updated": 1786371180
+    },
+    {
+      "id": "ON-286407",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Off-ramp at 401, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.714108,
+      "lng": -79.515656,
+      "start": 1787022000,
+      "end": 1787302800,
+      "updated": 1786371180
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T20:36:00.703048+00:00",
+  "updated": "2026-08-10T21:06:09.781777+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
