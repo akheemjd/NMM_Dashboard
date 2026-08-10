@@ -1,36 +1,41 @@
 {
   "incidents": [
     {
-      "id": "ON-286358",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/RIDE-101219",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 23",
+        "from": "Upper Arrow Lake Ferry",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Expect delay of 60-90 minutes. One hour sailing wait from Galena Bay to Shelter Bay.",
+      "event_type": "incident",
+      "severity": "MAJOR",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.7535367,
-      "lng": -79.40848595,
-      "start": 1786384560,
-      "end": null,
-      "updated": 1786384560
+      "lanes": "",
+      "lat": 50.62904948,
+      "lng": -117.89732869,
+      "start": "2026-08-10T11:31:43-07:00",
+      "end": "",
+      "updated": "2026-08-10T11:31:43-07:00"
     },
     {
-      "id": "ON-286350",
+      "id": "ON-286368",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS RAMP at 404/DVP, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 11 Northbound  between KANICHEE MINE RD(W) and SPRUCE DR(E), Temagami. 1 Right Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.76691296,
-      "lng": -79.343212,
-      "start": 1786383240,
-      "end": null,
-      "updated": 1786383240
+      "lanes": "1 Right Lane(s)",
+      "lat": 47.105854,
+      "lng": -79.79313,
+      "start": 1787572800,
+      "end": 1787947200,
+      "updated": 1786386300
     },
     {
       "id": "ON-286349",
@@ -326,26 +331,6 @@
       "updated": "2026-08-10T08:58:38-07:00"
     },
     {
-      "id": "drivebc.ca/DBC-93909",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 3",
-        "from": "Kennedy Lake Rd",
-        "direction": "NONE"
-      },
-      "direction": "",
-      "description": "Highway 3 (Crowsnest Highway). Bridge maintenance between Kennedy Lake Rd and Whipsaw Creek Rd (11 km west of Princeton). Until Sat Aug 22. From 7:00 AM to 5:00 PM PDT daily. Single lane alternating traffic. Expect minor delays. Watch for traffic control. Last updated Mon Aug 10 at 8:14 AM PDT. (DBC-93909)",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.367714,
-      "lng": -120.578992,
-      "start": "2026-08-10T08:14:29-07:00",
-      "end": "",
-      "updated": "2026-08-10T08:14:29-07:00"
-    },
-    {
       "id": "ON-286289",
       "province": "ON",
       "highway": "HWY 401",
@@ -376,6 +361,22 @@
       "start": 1786590000,
       "end": 1786698000,
       "updated": 1786373700
+    },
+    {
+      "id": "ON-286367",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound  between HWY 35/115 and LIBERTY ST, Clarington. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.902897,
+      "lng": -78.62546,
+      "start": 1786575600,
+      "end": 1786705200,
+      "updated": 1786372980
     },
     {
       "id": "ON-286290",
@@ -815,7 +816,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T18:01:27.353951+00:00",
+  "updated": "2026-08-10T18:32:36.471697+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
