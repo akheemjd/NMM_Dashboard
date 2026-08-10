@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286192",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound EXPRESS RAMP at GARDINER EXPRESSWAY, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.61373468,
+      "lng": -79.54995306,
+      "start": 1786329300,
+      "end": null,
+      "updated": 1786330380
+    },
+    {
+      "id": "ON-286195",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound  at SOUTH OF 401, Toronto. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.71425093,
+      "lng": -79.51774324,
+      "start": 1786330320,
+      "end": null,
+      "updated": 1786330320
+    },
+    {
       "id": "ON-261152",
       "province": "ON",
       "highway": "HWY 61",
@@ -781,42 +813,10 @@
       "start": 1786503600,
       "end": 1786525200,
       "updated": 1786054620
-    },
-    {
-      "id": "ON-284329",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 417 Eastbound  between ST. LAURENT BLVD (IC 115) and AVIATION PKWY (IC 113A), Ottawa. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.42029,
-      "lng": -75.63509,
-      "start": 1786503600,
-      "end": 1786525200,
-      "updated": 1786054440
-    },
-    {
-      "id": "ON-284318",
-      "province": "ON",
-      "highway": "HWY 129",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 129 Northbound  between LAFOE CK BR,  and SEYMOUR LAKE RD-STURGEON TWP (E), Aubrey Falls. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.638203,
-      "lng": -83.42,
-      "start": 1786014000,
-      "end": 1787954400,
-      "updated": 1786053720
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T02:34:38.174847+00:00",
+  "updated": "2026-08-10T03:05:47.935030+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
