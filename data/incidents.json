@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-286253",
+      "id": "ON-286259",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at CARLINGVIEW DR, Toronto. Left shoulder and 1 left lane closed.",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound RAMP at WEST MALL/EVANS AVE, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.67487383,
-      "lng": -79.57884819,
-      "start": 1786367820,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.60601809,
+      "lng": -79.55783542,
+      "start": 1786369380,
       "end": null,
-      "updated": 1786367820
+      "updated": 1786369380
+    },
+    {
+      "id": "ON-286256",
+      "province": "ON",
+      "highway": "HWY 4",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 4 Southbound  between WATERLOO STREET (EXETER SOUTH LIMITS), Exeter and Highway 4 and Highway 7 / Elginfield Road, Elginfield. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.341644,
+      "lng": -81.47948,
+      "start": 1786446000,
+      "end": 1786485600,
+      "updated": 1786368360
+    },
+    {
+      "id": "ON-286255",
+      "province": "ON",
+      "highway": "HWY 595",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 595 Southbound  at TURK RD (W), Hymers. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 48.268287921,
+      "lng": -89.701427423,
+      "start": 1786368180,
+      "end": null,
+      "updated": 1786368180
     },
     {
       "id": "ON-286250",
@@ -31,22 +63,6 @@
       "start": 1786367220,
       "end": null,
       "updated": 1786367220
-    },
-    {
-      "id": "ON-286245",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MEADOWVALE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7996109,
-      "lng": -79.16626765,
-      "start": 1786366260,
-      "end": null,
-      "updated": 1786366260
     },
     {
       "id": "ON-286239",
@@ -792,26 +808,10 @@
       "start": 1786359600,
       "end": 1786402800,
       "updated": 1786108380
-    },
-    {
-      "id": "ON-284570",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Continuous Maintenance on HWY 416 Southbound  between FALLOWFIELD RD (IC 66), Ottawa and HWY 16 (IC 1), Johnstown. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.27087,
-      "lng": -75.79581,
-      "start": 1786359600,
-      "end": 1786402800,
-      "updated": 1786108200
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T13:23:49.850428+00:00",
+  "updated": "2026-08-10T13:55:13.915531+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
