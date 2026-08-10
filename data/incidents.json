@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286173",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS HOV at TRAFALGAR ROAD, Halton-Milton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.5709192,
+      "lng": -79.8297449,
+      "start": 1786323180,
+      "end": null,
+      "updated": 1786323180
+    },
+    {
+      "id": "ON-286169",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 11 Both Directions  at DALEY TWP-LONGLAC E LTS, Longlac. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.778147586,
+      "lng": -86.492396358,
+      "start": 1786322160,
+      "end": null,
+      "updated": 1786322160
+    },
+    {
       "id": "ON-286165",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +63,6 @@
       "start": 1786321260,
       "end": null,
       "updated": 1786321260
-    },
-    {
-      "id": "ON-286160",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS HOV at TRAFALGAR ROAD, Halton-Milton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.5709192,
-      "lng": -79.8297449,
-      "start": 1786320720,
-      "end": null,
-      "updated": 1786320720
     },
     {
       "id": "ON-261152",
@@ -797,26 +813,10 @@
       "start": "2026-08-06T17:37:08-07:00",
       "end": "",
       "updated": "2026-08-06T17:37:08-07:00"
-    },
-    {
-      "id": "ON-284330",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1786503600,
-      "end": 1786525200,
-      "updated": 1786054620
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T00:30:08.909720+00:00",
+  "updated": "2026-08-10T01:01:12.790152+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
