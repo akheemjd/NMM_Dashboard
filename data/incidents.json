@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-286243",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound RAMP at BRONTE ROAD, Oakville. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.41068223,
+      "lng": -79.73905943,
+      "start": 1786365900,
+      "end": null,
+      "updated": 1786365900
+    },
+    {
+      "id": "ON-286239",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at PENINSULA RD (FORMER HWY 626 TO MARATHON) (S), Marathon. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.7477579,
+      "lng": -86.338881,
+      "start": 1786364880,
+      "end": null,
+      "updated": 1786364880
+    },
+    {
+      "id": "ON-286235",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at DIXON RD/MARTIN GROVE RD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.691742,
+      "lng": -79.56898,
+      "start": 1786364460,
+      "end": null,
+      "updated": 1786364460
+    },
+    {
       "id": "ON-286228",
       "province": "ON",
       "highway": "HWY 400",
@@ -15,22 +63,6 @@
       "start": 1786362300,
       "end": null,
       "updated": 1786363980
-    },
-    {
-      "id": "ON-286226",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WESTON ROAD, Toronto. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.71325981,
-      "lng": -79.53596808,
-      "start": 1786361100,
-      "end": null,
-      "updated": 1786361100
     },
     {
       "id": "ON-286224",
@@ -339,6 +371,22 @@
       "start": 1786489200,
       "end": 1786528800,
       "updated": 1786149120
+    },
+    {
+      "id": "ON-286244",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound On-ramp at BROCK ROAD, Pickering. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.838993,
+      "lng": -79.07033,
+      "start": 1786413600,
+      "end": 1786784400,
+      "updated": 1786145520
     },
     {
       "id": "ON-284766",
@@ -760,63 +808,10 @@
       "start": 1786359600,
       "end": 1786402800,
       "updated": 1786108380
-    },
-    {
-      "id": "ON-284570",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Continuous Maintenance on HWY 416 Southbound  between FALLOWFIELD RD (IC 66), Ottawa and HWY 16 (IC 1), Johnstown. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.27087,
-      "lng": -75.79581,
-      "start": 1786359600,
-      "end": 1786402800,
-      "updated": 1786108200
-    },
-    {
-      "id": "drivebc.ca/RIDE-101136",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Yoho Bridge",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Bridge maintenance. Starting Mon Aug 10 until Thu Aug 13. From 7:00 AM to 7:00 PM MDT, Monday to Thursday. Eastbound lane closure. Westbound lane closure. Watch for traffic control. Reduced to one lane. August 10th Eastbound slow lane closure\nAugust 11th Westbound slow lane closure\nAugust 12th Eastbound fast lane closure\nAugust 13th Westbound fast lane closure.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.29551065,
-      "lng": -116.85464161,
-      "start": "2026-08-06T17:37:08-07:00",
-      "end": "",
-      "updated": "2026-08-06T17:37:08-07:00"
-    },
-    {
-      "id": "ON-284330",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound Off-ramp at OTTAWA RD 174 WB (IC 113), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.426376,
-      "lng": -75.61628,
-      "start": 1786503600,
-      "end": 1786525200,
-      "updated": 1786054620
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T12:22:30.862485+00:00",
+  "updated": "2026-08-10T12:52:54.090351+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
