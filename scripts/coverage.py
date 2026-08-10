@@ -75,6 +75,15 @@ def compute(records, series, key, latest_obs):
             block["staleness_days"] = None
     block["comparable_7d"] = has_snapshot_near(series, key, 7)
     block["comparable_yoy"] = has_snapshot_near(series, key, 365, tolerance=10)
+    
+    # Border: add quantitative_field
+    if series == "border":
+        block["quantitative_field"] = "delay_minutes"
+    
+    # Theft: add field_completeness (computed by caller)
+    if series == "theft":
+        block["field_completeness"] = {}
+    
     return block
 
 
