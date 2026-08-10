@@ -287,4 +287,44 @@ if __name__ == "__main__":
     collect_news()
     collect_border()
 
+    # Coverage report
+    from coverage import write as write_coverage
+    import json as _json, os as _os
+    DATA = _os.path.dirname(_os.path.abspath(__file__)).replace("scripts", "data")
+
+    def _count(path):
+        try:
+            with open(_os.path.join(DATA, path)) as f:
+                d = _json.load(f)
+            if path == "fuel.json":
+                return len(d.get("provinces", {})) + 1
+            if path == "exchange.json":
+                return 1 if d.get("current") else 0
+            if path == "border.json":
+                return len(d.get("crossings", []))
+            if path == "incidents.json":
+                return len(d.get("incidents", []))
+        except Exception:
+            return 0
+        return 0
+
+    def _latest(path):
+        try:
+            with open(_os.path.join(DATA, path)) as f:
+                d = _json.load(f)
+            return d.get("updated", "")[:10] if d.get("updated") else None
+        except Exception:
+            return None
+
+    write_coverage(
+        fuel_records=_count("fuel.json"),
+        fx_records=_count("exchange.json"),
+        border_records=_count("border.json"),
+        theft_records=_count("incidents.json"),
+        fuel_obs=_latest("fuel.json"),
+        fx_obs=_latest("exchange.json"),
+        border_obs=_latest("border.json"),
+        theft_obs=_latest("incidents.json"),
+    )
+
     print(f"\nDone. Data saved to {DATA_DIR}/")

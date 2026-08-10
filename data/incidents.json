@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-286228",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.73616852,
+      "lng": -79.5264349,
+      "start": 1786362300,
+      "end": null,
+      "updated": 1786362300
+    },
+    {
+      "id": "ON-286226",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WESTON ROAD, Toronto. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.71325981,
+      "lng": -79.53596808,
+      "start": 1786361100,
+      "end": null,
+      "updated": 1786361100
+    },
+    {
+      "id": "ON-286224",
+      "province": "ON",
+      "highway": "HWY 33",
+      "direction": "Both Directions",
+      "description": "Ferry Outages on HWY 33 Both Directions  between GLENORA FERRY DOCK - WEST, Glenora  and GLENORA FERRY DOCK - EAST, Adolphustown. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.04145,
+      "lng": -77.05948,
+      "start": 1786360800,
+      "end": null,
+      "updated": 1786360800
+    },
+    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -31,22 +79,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786359608
-    },
-    {
-      "id": "ON-286215",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at REGIONAL ROAD 25, Milton. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.527885,
-      "lng": -79.9058779,
-      "start": 1786358040,
-      "end": null,
-      "updated": 1786358040
     },
     {
       "id": "ON-277509",
@@ -781,42 +813,10 @@
       "start": 1786503600,
       "end": 1786525200,
       "updated": 1786054620
-    },
-    {
-      "id": "ON-284329",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 417 Eastbound  between ST. LAURENT BLVD (IC 115) and AVIATION PKWY (IC 113A), Ottawa. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.42029,
-      "lng": -75.63509,
-      "start": 1786503600,
-      "end": 1786525200,
-      "updated": 1786054440
-    },
-    {
-      "id": "ON-284318",
-      "province": "ON",
-      "highway": "HWY 129",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 129 Northbound  between LAFOE CK BR,  and SEYMOUR LAKE RD-STURGEON TWP (E), Aubrey Falls. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.638203,
-      "lng": -83.42,
-      "start": 1786014000,
-      "end": 1787954400,
-      "updated": 1786053720
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T11:22:11.138139+00:00",
+  "updated": "2026-08-10T11:52:20.400485+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
