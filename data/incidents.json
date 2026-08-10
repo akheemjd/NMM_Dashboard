@@ -1,36 +1,62 @@
 {
   "incidents": [
     {
-      "id": "ON-286545",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound HOV at ERIN MILLS PKWY, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.55394462,
-      "lng": -79.69710724,
-      "start": 1786401660,
-      "end": null,
-      "updated": 1786401660
+      "id": "drivebc.ca/DBC-93843",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Hwy 3A in Keremeos",
+        "to": "2694 Upper bench Rd in Keremeos",
+        "direction": "E"
+      },
+      "direction": "",
+      "description": "Upper Bench Rd, eastbound. Road cleared between Hwy 3A and 2694 Upper bench Rd in Keremeos. Last updated Mon Aug 10 at 4:35 PM PDT. (DBC-93843)",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.215153,
+      "lng": -119.81524,
+      "start": "2026-07-30T11:33:02-07:00",
+      "end": "",
+      "updated": "2026-08-10T16:35:47-07:00"
     },
     {
-      "id": "ON-286540",
+      "id": "drivebc.ca/RIDE-101230",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 91",
+        "from": "Highway 91",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident. Left lane blocked. Expect delays due to congestion.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.17233768,
+      "lng": -122.96723931,
+      "start": "2026-08-10T15:27:36-07:00",
+      "end": "",
+      "updated": "2026-08-10T16:34:07-07:00"
+    },
+    {
+      "id": "ON-286561",
       "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
+      "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at ERIN MILLS PKWY, Mississauga. 2 left lanes closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.55395876,
-      "lng": -79.69708938,
-      "start": 1786401000,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.7811849,
+      "lng": -79.25514924,
+      "start": 1786404660,
       "end": null,
-      "updated": 1786401000
+      "updated": 1786404660
     },
     {
       "id": "drivebc.ca/RIDE-101228",
@@ -803,26 +829,10 @@
       "start": 1787025540,
       "end": 1787302800,
       "updated": 1786371180
-    },
-    {
-      "id": "ON-286407",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Off-ramp at 401, Toronto. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.714108,
-      "lng": -79.515656,
-      "start": 1787022000,
-      "end": 1787302800,
-      "updated": 1786371180
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T23:08:59.362874+00:00",
+  "updated": "2026-08-10T23:40:10.480854+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

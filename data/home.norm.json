@@ -1,15 +1,15 @@
 {
   "updated_at": "18:15 EDT",
-  "build_version": "1786403342",
+  "build_version": "1786405212",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "8 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "40 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 17",
+    "status_line": "HWY 401, HWY 17",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Collision on HWY 403 MISSISSAUGA Westbound HOV at ERIN MILLS PKWY, Mississauga.\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Collision on HWY 403 MISSISSAUGA Westbound  at ERIN MILLS PKWY, Mississauga. 2\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Westbound  at HURDMAN ST, Mattawa. Lane and WEST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 EDT"
+      "captured_at": "19:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "8 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "40 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 PDT"
+      "captured_at": "16:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 CDT"
+      "captured_at": "18:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
