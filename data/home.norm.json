@@ -1,15 +1,15 @@
 {
   "updated_at": "20:48 EDT",
-  "build_version": "1786323676",
+  "build_version": "1786325544",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "15 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,13 +194,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11",
+    "status_line": "HWY 401, HWY 11, HWY 527, Frog Cre",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS HOV at TRAFALGAR ROAD,\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at DUFFERIN STREET, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:34 EDT"
+      "captured_at": "21:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -231,25 +231,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:50 EDT"
+      "captured_at": "20:55 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,16 +267,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:32 MDT"
+      "captured_at": "19:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT"
+      "captured_at": "18:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 CDT"
+      "captured_at": "20:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
