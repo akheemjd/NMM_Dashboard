@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T22:07:28.669493+00:00",
+  "generated_at": "2026-08-10T22:08:58.683700+00:00",
   "categories": {
     "fuel": {
       "records": 13,
@@ -27,13 +27,20 @@
       "quantitative_field": "delay_minutes"
     },
     "theft": {
-      "records": 50,
+      "records": 8,
       "history_days": 0,
-      "latest_observation": "2026-08-10",
-      "staleness_days": 0,
+      "latest_observation": "2026-07-13",
+      "staleness_days": 28,
       "comparable_7d": false,
       "comparable_yoy": false,
-      "field_completeness": {}
+      "field_completeness": {
+        "province": 8,
+        "value_cad": 8,
+        "commodity_type": 8,
+        "incident_date": 8,
+        "location": 8,
+        "title": 8
+      }
     }
   }
 }

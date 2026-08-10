@@ -114,12 +114,22 @@ def validate():
     required = ["fuel", "fx", "border", "theft"]
     fields = ["records", "history_days", "latest_observation",
               "staleness_days", "comparable_7d", "comparable_yoy"]
+    border_extras = ["quantitative_field"]
+    theft_extras = ["field_completeness"]
     for cat in required:
         if cat not in report.get("categories", {}):
             raise AssertionError(f"coverage.json missing category: {cat}")
         for field in fields:
             if field not in report["categories"][cat]:
                 raise AssertionError(f"coverage.json missing field {cat}.{field}")
+        if cat == "border":
+            for f in border_extras:
+                if f not in report["categories"][cat]:
+                    raise AssertionError(f"coverage.json missing border field {f}")
+        if cat == "theft":
+            for f in theft_extras:
+                if f not in report["categories"][cat]:
+                    raise AssertionError(f"coverage.json missing theft field {f}")
     return True
 
 

@@ -302,6 +302,8 @@ if __name__ == "__main__":
                 return 1 if d.get("current") else 0
             if path == "border.json":
                 return len(d.get("crossings", []))
+            if path == "theft.json":
+                return len(d.get("incidents", []))
             if path == "incidents.json":
                 return len(d.get("incidents", []))
         except Exception:
@@ -324,15 +326,71 @@ if __name__ == "__main__":
         except Exception:
             return None
 
+    def _theft_completeness():
+        """Count how many theft records have each field populated vs null."""
+        try:
+            with open(_os.path.join(DATA, "theft.json")) as f:
+                d = _json.load(f)
+            incs = d.get("incidents", [])
+        except Exception:
+            incs = []
+        if not incs:
+            return {}
+        fields = ["province", "value_cad", "commodity_type", "incident_date", "location", "title"]
+        result = {}
+        for field in fields:
+            count = 0
+            for i in incs:
+                if field == "province":
+                    loc = i.get("location", "")
+                    parts = loc.split(",")
+                    count += 1 if len(parts) >= 2 else 0
+                elif field == "value_cad":
+                    val = i.get("value", "")
+                    count += 1 if val and ("$" in str(val) or "CAD" in str(val)) else 0
+                elif field == "commodity_type":
+                    title = i.get("title", "")
+                    count += 1 if title else 0
+                elif field == "incident_date":
+                    count += 1 if i.get("date") else 0
+                elif field == "location":
+                    count += 1 if i.get("location") else 0
+                elif field == "title":
+                    count += 1 if i.get("title") else 0
+            result[field] = count
+        return result
+
+    # Record border history
+    try:
+        from border_history import record_run
+        b = _json.load(open(_os.path.join(DATA, "border.json")))
+        record_run(b.get("crossings", []))
+    except Exception:
+        pass
+
+    # Theft uses theft.json, not incidents.json
+    theft_recs = _count("theft.json")
+    theft_obs = _latest("theft.json")
+    theft_comp = _theft_completeness()
+
     write_coverage(
         fuel_records=_count("fuel.json"),
         fx_records=_count("exchange.json"),
         border_records=_count("border.json"),
-        theft_records=_count("incidents.json"),
+        theft_records=theft_recs,
         fuel_obs=_latest("fuel.json"),
         fx_obs=_latest("exchange.json"),
         border_obs=_latest("border.json"),
-        theft_obs=_latest("incidents.json"),
+        theft_obs=theft_obs,
     )
+
+    # Inject field_completeness
+    cov_path = _os.path.join(DATA, "coverage.json")
+    if _os.path.exists(cov_path):
+        with open(cov_path) as f:
+            cov = _json.load(f)
+        cov["categories"]["theft"]["field_completeness"] = theft_comp
+        with open(cov_path, "w") as f:
+            _json.dump(cov, f, indent=2)
 
     print(f"\nDone. Data saved to {DATA_DIR}/")
