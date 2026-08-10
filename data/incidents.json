@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286540",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at ERIN MILLS PKWY, Mississauga. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.55395876,
+      "lng": -79.69708938,
+      "start": 1786401000,
+      "end": null,
+      "updated": 1786401000
+    },
+    {
+      "id": "ON-286534",
+      "province": "ON",
+      "highway": "HWY 409",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 409 Eastbound RAMP at HWY 427, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.694664,
+      "lng": -79.609642,
+      "start": 1786400160,
+      "end": null,
+      "updated": 1786400160
+    },
+    {
       "id": "drivebc.ca/RIDE-101228",
       "province": "BC",
       "highway": {
@@ -43,22 +75,6 @@
       "updated": "2026-08-10T14:59:53-07:00"
     },
     {
-      "id": "ON-286521",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at ISLINGTON AVE, Toronto. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.70935828,
-      "lng": -79.55216537,
-      "start": 1786398900,
-      "end": null,
-      "updated": 1786398900
-    },
-    {
       "id": "ON-286517",
       "province": "ON",
       "highway": "HWY 410",
@@ -73,22 +89,6 @@
       "start": 1786398660,
       "end": null,
       "updated": 1786398660
-    },
-    {
-      "id": "ON-286515",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DUFFERIN STREET, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.72824868,
-      "lng": -79.45802779,
-      "start": 1786398480,
-      "end": null,
-      "updated": 1786398480
     },
     {
       "id": "drivebc.ca/RIDE-101160",
@@ -110,27 +110,6 @@
       "start": "2026-08-07T10:47:22-07:00",
       "end": "",
       "updated": "2026-08-10T14:43:47-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-101163",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Trans-Canada Highway E",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Bridge maintenance. Starting Sun Aug 16 until Sun Aug 16. Eastbound lane closure. Watch for traffic control. Reduced to one lane.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.27647688,
-      "lng": -116.77097213,
-      "start": "2026-08-07T11:10:17-07:00",
-      "end": "",
-      "updated": "2026-08-10T14:42:09-07:00"
     },
     {
       "id": "ON-286453",
@@ -829,10 +808,26 @@
       "start": 1786932000,
       "end": 1787389200,
       "updated": 1786371240
+    },
+    {
+      "id": "ON-286272",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound Collector between FINCH AVENUE and BROWNS LINE, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.733997,
+      "lng": -79.62741,
+      "start": 1786932000,
+      "end": 1787389200,
+      "updated": 1786371180
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T22:08:57.479609+00:00",
+  "updated": "2026-08-10T22:37:36.848026+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
