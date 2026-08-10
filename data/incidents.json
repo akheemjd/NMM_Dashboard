@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-286243",
+      "id": "ON-286253",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at BRONTE ROAD, Oakville. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at CARLINGVIEW DR, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.67487383,
+      "lng": -79.57884819,
+      "start": 1786367820,
+      "end": null,
+      "updated": 1786367820
+    },
+    {
+      "id": "ON-286250",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 11 Northbound  at Beach Lake, Marten River, Marten River. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 46.736343561,
+      "lng": -79.804534227,
+      "start": 1786367220,
+      "end": null,
+      "updated": 1786367220
+    },
+    {
+      "id": "ON-286245",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MEADOWVALE ROAD, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.41068223,
-      "lng": -79.73905943,
-      "start": 1786365900,
+      "lat": 43.7996109,
+      "lng": -79.16626765,
+      "start": 1786366260,
       "end": null,
-      "updated": 1786365900
+      "updated": 1786366260
     },
     {
       "id": "ON-286239",
@@ -47,38 +79,6 @@
       "start": 1786364460,
       "end": null,
       "updated": 1786364460
-    },
-    {
-      "id": "ON-286228",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.73616852,
-      "lng": -79.5264349,
-      "start": 1786362300,
-      "end": null,
-      "updated": 1786363980
-    },
-    {
-      "id": "ON-286224",
-      "province": "ON",
-      "highway": "HWY 33",
-      "direction": "Both Directions",
-      "description": "Ferry Outages on HWY 33 Both Directions  between GLENORA FERRY DOCK - WEST, Glenora  and GLENORA FERRY DOCK - EAST, Adolphustown. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.04145,
-      "lng": -77.05948,
-      "start": 1786360800,
-      "end": null,
-      "updated": 1786360800
     },
     {
       "id": "ON-277959",
@@ -159,22 +159,6 @@
       "start": 1786075200,
       "end": null,
       "updated": 1786357500
-    },
-    {
-      "id": "ON-286211",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 401 Eastbound  at LAKE RD, Brighton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.04676,
-      "lng": -77.83192,
-      "start": 1786356060,
-      "end": null,
-      "updated": 1786356060
     },
     {
       "id": "ON-286067",
@@ -808,10 +792,26 @@
       "start": 1786359600,
       "end": 1786402800,
       "updated": 1786108380
+    },
+    {
+      "id": "ON-284570",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Continuous Maintenance on HWY 416 Southbound  between FALLOWFIELD RD (IC 66), Ottawa and HWY 16 (IC 1), Johnstown. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.27087,
+      "lng": -75.79581,
+      "start": 1786359600,
+      "end": 1786402800,
+      "updated": 1786108200
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T12:52:54.090351+00:00",
+  "updated": "2026-08-10T13:23:49.850428+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
