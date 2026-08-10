@@ -61,8 +61,25 @@ def fetch_rss():
 
 
 def parse_prices(root):
-    """Parse RSS items into {city: price_dollars_per_litre} dict."""
+    """Parse RSS items into {city: price_dollars_per_litre} dict.
+    Returns (prices, pub_date) — pub_date is the most recent past print from <pubDate>."""
+    from datetime import datetime
+    
     prices = {}
+    
+    # Find the most recent pubDate that is not in the future
+    now = datetime.now()
+    all_dates = []
+    for item in root.findall(".//item"):
+        pub_el = item.find("pubDate")
+        if pub_el is not None and pub_el.text:
+            try:
+                dt = datetime.strptime(pub_el.text.strip(), "%a, %d %b %Y")
+                all_dates.append((dt, pub_el.text.strip()))
+            except Exception:
+                pass
+    past_dates = sorted([(dt, s) for dt, s in all_dates if dt <= now], reverse=True)
+    pub_date = past_dates[0][1] if past_dates else None
     
     for item in root.findall(".//item"):
         title_el = item.find("title")
@@ -81,7 +98,7 @@ def parse_prices(root):
         if city not in prices:
             prices[city] = price
     
-    return prices
+    return prices, pub_date
 
 
 def compute_provincial(prices):
@@ -123,7 +140,7 @@ def collect():
     """Main collector — fetch NRCan data and save fuel.json."""
     try:
         root = fetch_rss()
-        prices = parse_prices(root)
+        prices, pub_date = parse_prices(root)
         provinces, national_avg = compute_provincial(prices)
         
         save_data = {
@@ -131,6 +148,7 @@ def collect():
             "diesel_national_avg": national_avg,
             "gasoline_national_avg": None,
             "updated": datetime.now(timezone.utc).isoformat(),
+            "print_date": pub_date,
             "source": "Natural Resources Canada weekly diesel survey",
             "location_count": len(prices),
         }

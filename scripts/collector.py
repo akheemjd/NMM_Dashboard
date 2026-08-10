@@ -312,7 +312,15 @@ if __name__ == "__main__":
         try:
             with open(_os.path.join(DATA, path)) as f:
                 d = _json.load(f)
-            return d.get("updated", "")[:10] if d.get("updated") else None
+            # Use print_date (source publication date) if available, else fetch date
+            obs = d.get("print_date") or d.get("updated")
+            if obs:
+                from datetime import datetime
+                try:
+                    return datetime.strptime(obs, "%a, %d %b %Y").strftime("%Y-%m-%d")
+                except Exception:
+                    return obs[:10] if obs else None
+            return None
         except Exception:
             return None
 
