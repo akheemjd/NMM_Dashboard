@@ -1,6 +1,6 @@
 {
   "updated_at": "19:35 EDT",
-  "build_version": "1786319932",
+  "build_version": "1786321812",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -8,7 +8,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
+    "max_name": "Pacific Highway Crossing",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, QEW",
+    "status_line": "HWY 401, HWY 527",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Left lane\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound EXPRESS at TRAFALGAR ROAD, Halton-Milton. Left\u2026",
+        "what": "Collision on HWY 401 Eastbound ON-RAMP at CORPORATE DRIVE, Toronto. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -231,25 +231,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 EDT"
+      "captured_at": "19:50 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "5 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:16 EDT"
+      "captured_at": "20:11 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT"
+      "captured_at": "17:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
