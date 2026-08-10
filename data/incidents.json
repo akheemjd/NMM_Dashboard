@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286212",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at HWY 10 / HURONTARIO STREET, Mississauga. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.629808586,
+      "lng": -79.684159756,
+      "start": 1786356660,
+      "end": null,
+      "updated": 1786356660
+    },
+    {
+      "id": "ON-286211",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Vehicle Fire on HWY 401 Eastbound  at LAKE RD, Brighton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.04676,
+      "lng": -77.83192,
+      "start": 1786356060,
+      "end": null,
+      "updated": 1786356060
+    },
+    {
       "id": "ON-286208",
       "province": "ON",
       "highway": "HWY 401",
@@ -781,42 +813,10 @@
       "start": 1786503600,
       "end": 1786525200,
       "updated": 1786054440
-    },
-    {
-      "id": "ON-284318",
-      "province": "ON",
-      "highway": "HWY 129",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 129 Northbound  between LAFOE CK BR,  and SEYMOUR LAKE RD-STURGEON TWP (E), Aubrey Falls. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.638203,
-      "lng": -83.42,
-      "start": 1786014000,
-      "end": 1787954400,
-      "updated": 1786053720
-    },
-    {
-      "id": "ON-284287",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1786320000,
-      "end": 1786708800,
-      "updated": 1786050840
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T09:49:44.784087+00:00",
+  "updated": "2026-08-10T10:20:54.813131+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
