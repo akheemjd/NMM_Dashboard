@@ -1,6 +1,6 @@
 {
   "updated_at": "12:15 EDT",
-  "build_version": "1786379387",
+  "build_version": "1786381197",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -8,8 +8,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "8 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 595, HWY 527, Frog Cre",
+    "status_line": "HWY 400, HWY 595, HWY 527",
     "incidents": [
       {
         "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil. 2 left\u2026",
+        "what": "Disabled Vehicle on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 595",
-        "what": "Highway Maintenance on HWY 595 Southbound  at TURK RD (W), Hymers. Lane and\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -240,16 +240,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "8 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 PDT"
+      "captured_at": "09:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
