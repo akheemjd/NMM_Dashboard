@@ -1,15 +1,15 @@
 {
-  "updated_at": "10:15 EDT",
-  "build_version": "1786371970",
+  "updated_at": "10:49 EDT",
+  "build_version": "1786373780",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.9",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 595, HWY 11, HWY 527",
+    "status_line": "HWY 401, HWY 404, QEW, HWY 595",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WHITES ROAD, Pickering. 1\u2026",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at MAVIS ROAD, Mississauga. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 595",
-        "what": "Highway Maintenance on HWY 595 Southbound  at TURK RD (W), Hymers. Lane and\u2026",
+        "road": "HWY 404",
+        "what": "Highway Maintenance on HWY 404 Northbound RAMP at ELGIN MILLS ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -240,16 +240,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,16 +267,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 MDT"
+      "captured_at": "08:30 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:00 PDT"
+      "captured_at": "07:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "10:49 EDT"
     }
   ],
   "market": [
