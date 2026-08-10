@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-286206",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at WOODWARD AVENUE, Hamilton. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.26367384,
+      "lng": -79.77241525,
+      "start": 1786341660,
+      "end": null,
+      "updated": 1786341660
+    },
+    {
       "id": "ON-261152",
       "province": "ON",
       "highway": "HWY 61",
@@ -797,26 +813,10 @@
       "start": 1786014000,
       "end": 1787954400,
       "updated": 1786053720
-    },
-    {
-      "id": "ON-284287",
-      "province": "ON",
-      "highway": "HWY 15",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.03812,
-      "lng": -76.05842,
-      "start": 1786320000,
-      "end": 1786708800,
-      "updated": 1786050840
     }
   ],
   "total": 50,
-  "updated": "2026-08-10T05:41:32.797305+00:00",
+  "updated": "2026-08-10T06:12:40.887390+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
