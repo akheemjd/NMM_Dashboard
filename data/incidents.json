@@ -1,7 +1,7 @@
 {
   "incidents": [
     {
-      "id": "ON-286691",
+      "id": "ON-286698",
       "province": "ON",
       "highway": "QEW",
       "direction": "Fort Erie Bound",
@@ -12,9 +12,57 @@
       "lanes": "All lanes closed",
       "lat": 43.460979442,
       "lng": -79.684342146,
-      "start": 1786459800,
+      "start": 1786461720,
       "end": null,
-      "updated": 1786459800
+      "updated": 1786461720
+    },
+    {
+      "id": "ON-286697",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 11 Southbound  at THUNDER BAY-RAINY RIVER DIST BDY, Atikokan. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 48.677383733,
+      "lng": -90.964033137,
+      "start": 1786461360,
+      "end": null,
+      "updated": 1786461360
+    },
+    {
+      "id": "ON-286696",
+      "province": "ON",
+      "highway": "HWY 23",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 23 Both Directions  between Union Line / Line 10 and Kirk Ave, Kirkton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.340233457,
+      "lng": -81.299989522,
+      "start": 1786460760,
+      "end": null,
+      "updated": 1786460760
+    },
+    {
+      "id": "ON-286695",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at WHITES ROAD, Pickering. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.81659602,
+      "lng": -79.11484211,
+      "start": 1786460280,
+      "end": null,
+      "updated": 1786460280
     },
     {
       "id": "ON-286690",
@@ -127,22 +175,6 @@
       "start": 1786939200,
       "end": 1787302800,
       "updated": 1786455720
-    },
-    {
-      "id": "ON-286679",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 404 Southbound  at FINCH AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.7949496,
-      "lng": -79.3437899,
-      "start": 1786454880,
-      "end": null,
-      "updated": 1786454880
     },
     {
       "id": "ON-286678",
@@ -291,43 +323,6 @@
       "start": "2026-07-30T10:14:17-07:00",
       "end": "",
       "updated": "2026-08-11T00:00:00-07:00"
-    },
-    {
-      "id": "ON-286606",
-      "province": "ON",
-      "highway": "HWY 17A",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 17A Westbound  at JONES RD (S), Kenora. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 49.7944312,
-      "lng": -94.3466656,
-      "start": 1786428180,
-      "end": null,
-      "updated": 1786428180
-    },
-    {
-      "id": "drivebc.ca/RIDE-101239",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 19",
-        "from": "Island Highway N",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Road maintenance. Starting Mon Aug 10. From 8:30 PM to 11:00 PM PDT, Monday. Left lane closed in both directions. Watch for traffic control.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.2440988,
-      "lng": -124.07768217,
-      "start": "2026-08-10T20:33:57-07:00",
-      "end": "",
-      "updated": "2026-08-10T20:36:34-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-101228",
@@ -826,7 +821,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T14:54:32.994821+00:00",
+  "updated": "2026-08-11T15:25:30.990649+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
