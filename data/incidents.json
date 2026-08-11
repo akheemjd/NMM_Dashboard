@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-286609",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 427 Southbound ON-RAMP at FINCH AVENUE, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.733999,
+      "lng": -79.627409,
+      "start": 1786432800,
+      "end": null,
+      "updated": 1786432800
+    },
+    {
       "id": "drivebc.ca/DBC-93841",
       "province": "BC",
       "highway": {
@@ -807,26 +823,10 @@
       "start": 1786932000,
       "end": 1787389200,
       "updated": 1786371300
-    },
-    {
-      "id": "ON-286276",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Maintenance on QEW Fort Erie Bound  between EAST MALL, Toronto and BRONTE ROAD, Oakville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.614532,
-      "lng": -79.545135,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786371300
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T07:16:16.806686+00:00",
+  "updated": "2026-08-11T07:46:33.942105+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
