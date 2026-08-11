@@ -1,7 +1,39 @@
 {
   "incidents": [
     {
-      "id": "ON-286602",
+      "id": "ON-286606",
+      "province": "ON",
+      "highway": "HWY 17A",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 17A Westbound  at JONES RD (S), Kenora. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 49.7944312,
+      "lng": -94.3466656,
+      "start": 1786428180,
+      "end": null,
+      "updated": 1786428180
+    },
+    {
+      "id": "ON-286573",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 46.315646952,
+      "lng": -78.703113335,
+      "start": 1786410960,
+      "end": null,
+      "updated": 1786428060
+    },
+    {
+      "id": "ON-286603",
       "province": "ON",
       "highway": "HWY 427",
       "direction": "Northbound",
@@ -12,25 +44,25 @@
       "lanes": "right lane and right shoulder closed",
       "lat": 43.7856499,
       "lng": -79.6363952,
-      "start": 1786426800,
+      "start": 1786427220,
       "end": null,
-      "updated": 1786426800
+      "updated": 1786427220
     },
     {
-      "id": "ON-286601",
+      "id": "ON-286604",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 410, Mississauga. Right lane and right shoulder closed.",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at BROCK ROAD, Pickering. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.6389284,
-      "lng": -79.6609391,
-      "start": 1786424640,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.838709657,
+      "lng": -79.071446657,
+      "start": 1786427220,
       "end": null,
-      "updated": 1786424640
+      "updated": 1786427220
     },
     {
       "id": "ON-286599",
@@ -132,22 +164,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786416508
-    },
-    {
-      "id": "ON-286573",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.315646952,
-      "lng": -78.703113335,
-      "start": 1786410960,
-      "end": null,
-      "updated": 1786410960
     },
     {
       "id": "drivebc.ca/RIDE-101228",
@@ -808,26 +824,10 @@
       "start": 1786536000,
       "end": 1786649400,
       "updated": 1786371480
-    },
-    {
-      "id": "ON-286275",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Maintenance on QEW Toronto bound  between BRONTE ROAD, Oakville and EAST MALL, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.409355,
-      "lng": -79.74126,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786371360
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T05:45:21.360341+00:00",
+  "updated": "2026-08-11T06:15:40.193261+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
