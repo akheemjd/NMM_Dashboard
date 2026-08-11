@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-286726",
+      "province": "ON",
+      "highway": "HWY 412",
+      "direction": "Southbound",
+      "description": "Collision on HWY 412 Southbound ON-RAMP at HWY 7, Whitby. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.941082,
+      "lng": -79.008208,
+      "start": 1786472760,
+      "end": null,
+      "updated": 1786472760
+    },
+    {
+      "id": "ON-286723",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 404, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.76748822,
+      "lng": -79.33802329,
+      "start": 1786471860,
+      "end": null,
+      "updated": 1786471860
+    },
+    {
+      "id": "ON-286721",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.74247141,
+      "lng": -79.42291341,
+      "start": 1786471680,
+      "end": null,
+      "updated": 1786471680
+    },
+    {
       "id": "ON-286704",
       "province": "ON",
       "highway": "HWY 17",
@@ -79,22 +127,6 @@
       "start": 1786536000,
       "end": 1786649400,
       "updated": 1786469100
-    },
-    {
-      "id": "ON-286716",
-      "province": "ON",
-      "highway": "HWY 534",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 534 Eastbound  at MAPLE HILL RD, Powassan. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.077420529,
-      "lng": -79.387403167,
-      "start": 1786467840,
-      "end": null,
-      "updated": 1786467840
     },
     {
       "id": "ON-286714",
@@ -781,42 +813,10 @@
       "start": 1786626000,
       "end": 1786654800,
       "updated": 1786378560
-    },
-    {
-      "id": "ON-286346",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 427 Southbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786378560
-    },
-    {
-      "id": "ON-286348",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 427 Northbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786378500
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T18:01:12.560805+00:00",
+  "updated": "2026-08-11T18:32:21.103885+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

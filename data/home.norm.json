@@ -1,15 +1,15 @@
 {
-  "updated_at": "12:15 EDT",
-  "build_version": "1786471276",
+  "updated_at": "14:15 EDT",
+  "build_version": "1786473144",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "26 min"
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 534, HWY 11, HWY 17",
+    "status_line": "HWY 412, HWY 401, QEW",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at FRUITLAND ROAD, Hamilton. Right lane\u2026",
+        "road": "HWY 412",
+        "what": "Collision on HWY 412 Southbound ON-RAMP at HWY 7, Whitby. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 534",
-        "what": "Highway Maintenance on HWY 534 Eastbound  at MAPLE HILL RD, Powassan. Lane and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 404, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -218,11 +218,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:32 EDT"
+      "captured_at": "13:57 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "26 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "13 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 MDT"
+      "captured_at": "12:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 CDT"
+      "captured_at": "13:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "14:15 EDT"
     }
   ],
   "market": [
