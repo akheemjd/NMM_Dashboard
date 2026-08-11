@@ -1,6 +1,6 @@
 {
   "updated_at": "00:15 EDT",
-  "build_version": "1786425301",
+  "build_version": "1786427124",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -8,8 +8,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, EASTPORT, QEW",
+    "status_line": "HWY 427, HWY 401, EASTPORT, QEW",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 410, Mississauga. Right\u2026",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Northbound RAMP at LANGSTAFF RD, Vaughan. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "EASTPORT DRIVE",
-        "what": "Police Investigation on EASTPORT DRIVE Northbound  at LIFT BRIDGE, Burlington.\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 410, Mississauga. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT"
+      "captured_at": "01:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:00 EDT"
+      "captured_at": "01:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:00 EDT"
+      "captured_at": "01:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 PDT"
+      "captured_at": "22:20 PDT"
     },
     {
       "name": "Emerson-Pembina",

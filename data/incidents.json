@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-286602",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 427 Northbound RAMP at LANGSTAFF RD, Vaughan. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.7856499,
+      "lng": -79.6363952,
+      "start": 1786426800,
+      "end": null,
+      "updated": 1786426800
+    },
+    {
       "id": "ON-286601",
       "province": "ON",
       "highway": "HWY 401",
@@ -808,26 +824,10 @@
       "start": 1786932000,
       "end": 1787389200,
       "updated": 1786371360
-    },
-    {
-      "id": "ON-286269",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Engineering Investigation on HWY 427 Southbound Express between FINCH AVENUE and BROWNS LINE, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.733997,
-      "lng": -79.62741,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786371300
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T05:15:00.619768+00:00",
+  "updated": "2026-08-11T05:45:21.360341+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
