@@ -1,6 +1,48 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101235",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Highway 99",
+        "direction": "S",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall. Right lane blocked.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.38177191,
+      "lng": -123.26284889,
+      "start": "2026-08-10T18:20:52-07:00",
+      "end": "",
+      "updated": "2026-08-10T20:40:33-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101239",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 19",
+        "from": "Island Highway N",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road maintenance. Starting Mon Aug 10. From 8:30 PM to 11:00 PM PDT, Monday. Left lane closed in both directions. Watch for traffic control.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.2440988,
+      "lng": -124.07768217,
+      "start": "2026-08-10T20:33:57-07:00",
+      "end": "",
+      "updated": "2026-08-10T20:36:34-07:00"
+    },
+    {
       "id": "ON-277959",
       "province": "ON",
       "highway": "Frog Creek Road",
@@ -31,27 +73,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786416508
-    },
-    {
-      "id": "drivebc.ca/RIDE-101235",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 99",
-        "from": "Highway 99",
-        "direction": "S",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall. Right lane blocked.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.38177191,
-      "lng": -123.26284889,
-      "start": "2026-08-10T18:20:52-07:00",
-      "end": "",
-      "updated": "2026-08-10T19:09:25-07:00"
     },
     {
       "id": "ON-286575",
@@ -808,26 +829,10 @@
       "start": 1786932000,
       "end": 1787389200,
       "updated": 1786371240
-    },
-    {
-      "id": "ON-286272",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 427 Southbound Collector between FINCH AVENUE and BROWNS LINE, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.733997,
-      "lng": -79.62741,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786371180
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T03:13:06.979017+00:00",
+  "updated": "2026-08-11T03:44:13.215828+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
