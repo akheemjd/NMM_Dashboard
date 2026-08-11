@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286599",
+      "province": "ON",
+      "highway": "EASTPORT DRIVE",
+      "direction": "Northbound",
+      "description": "Police Investigation on EASTPORT DRIVE Northbound  at LIFT BRIDGE, Burlington. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.298967,
+      "lng": -79.795543,
+      "start": 1786423260,
+      "end": null,
+      "updated": 1786423260
+    },
+    {
+      "id": "ON-286597",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Police Investigation on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.29851876,
+      "lng": -79.79709653,
+      "start": 1786422720,
+      "end": null,
+      "updated": 1786422720
+    },
+    {
       "id": "ON-286591",
       "province": "ON",
       "highway": "QEW",
@@ -15,43 +47,6 @@
       "start": 1786420620,
       "end": null,
       "updated": 1786420620
-    },
-    {
-      "id": "ON-286590",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at MAVIS ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.58237926,
-      "lng": -79.66331571,
-      "start": 1786419780,
-      "end": null,
-      "updated": 1786420500
-    },
-    {
-      "id": "drivebc.ca/RIDE-101235",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 99",
-        "from": "Highway 99",
-        "direction": "S",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall. Right lane blocked.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.38177191,
-      "lng": -123.26284889,
-      "start": "2026-08-10T18:20:52-07:00",
-      "end": "",
-      "updated": "2026-08-10T20:40:33-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-101239",
@@ -832,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T04:14:25.913794+00:00",
+  "updated": "2026-08-11T04:44:43.294771+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
