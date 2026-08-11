@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-286601",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 410, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.6389284,
+      "lng": -79.6609391,
+      "start": 1786424640,
+      "end": null,
+      "updated": 1786424640
+    },
+    {
       "id": "ON-286599",
       "province": "ON",
       "highway": "EASTPORT DRIVE",
@@ -100,22 +116,6 @@
       "start": 1784469600,
       "end": null,
       "updated": 1786416508
-    },
-    {
-      "id": "ON-286575",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Highway Maintenance on QEW Toronto bound RAMP at CAWTHRA ROAD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.58185825,
-      "lng": -79.58355862,
-      "start": 1786412580,
-      "end": null,
-      "updated": 1786412580
     },
     {
       "id": "ON-286573",
@@ -827,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T04:44:43.294771+00:00",
+  "updated": "2026-08-11T05:15:00.619768+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
