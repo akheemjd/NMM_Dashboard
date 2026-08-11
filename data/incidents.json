@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286591",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Emergency Roadwork on QEW Fort Erie bound  at GLENDALE AVENUE, Niagara-On-The-Lake. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.1570534,
+      "lng": -79.164425,
+      "start": 1786420620,
+      "end": null,
+      "updated": 1786420620
+    },
+    {
+      "id": "ON-286590",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at MAVIS ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.58237926,
+      "lng": -79.66331571,
+      "start": 1786419780,
+      "end": null,
+      "updated": 1786420500
+    },
+    {
       "id": "drivebc.ca/RIDE-101235",
       "province": "BC",
       "highway": {
@@ -797,42 +829,10 @@
       "start": 1786932000,
       "end": 1787389200,
       "updated": 1786371300
-    },
-    {
-      "id": "ON-286276",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Maintenance on QEW Fort Erie Bound  between EAST MALL, Toronto and BRONTE ROAD, Oakville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.614532,
-      "lng": -79.545135,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786371300
-    },
-    {
-      "id": "ON-286270",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Engineering Investigation on HWY 427 Northbound Express between BROWNS LINE and FINCH AVENUE, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.61127,
-      "lng": -79.548874,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786371240
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T03:44:13.215828+00:00",
+  "updated": "2026-08-11T04:14:25.913794+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

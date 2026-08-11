@@ -1,15 +1,15 @@
 {
   "updated_at": "22:15 EDT",
-  "build_version": "1786419855",
+  "build_version": "1786421667",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "28 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "8 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 17, Frog Cre, Lac des ",
+    "status_line": "QEW, HWY 403 , HWY 17",
     "incidents": [
       {
         "road": "QEW",
-        "what": "Highway Maintenance on QEW Toronto bound RAMP at CAWTHRA ROAD, Mississauga. All\u2026",
+        "what": "Emergency Roadwork on QEW Fort Erie bound  at GLENDALE AVENUE,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at MAVIS ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "00:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "28 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "00:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:12 EDT"
+      "captured_at": "23:43 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -272,11 +272,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:20 PDT"
+      "captured_at": "21:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
