@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-286776",
+      "id": "ON-286778",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at WALKERS LINE, Burlington. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at KENNEDY ROAD (SCARBOROUGH), Toronto. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.36644963,
-      "lng": -79.78811842,
-      "start": 1786484160,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.77433189,
+      "lng": -79.2860143,
+      "start": 1786485660,
       "end": null,
-      "updated": 1786484160
+      "updated": 1786485660
+    },
+    {
+      "id": "ON-286777",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Westbound ON-RAMP at MAVIS ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.585839,
+      "lng": -79.660333,
+      "start": 1786484580,
+      "end": null,
+      "updated": 1786484580
     },
     {
       "id": "ON-286773",
@@ -113,22 +129,6 @@
       "updated": 1786481520
     },
     {
-      "id": "ON-286766",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at KIPLING AVE, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.70077773,
-      "lng": -79.56167724,
-      "start": 1786481460,
-      "end": null,
-      "updated": 1786481460
-    },
-    {
       "id": "ON-286763",
       "province": "ON",
       "highway": "HWY 125",
@@ -143,22 +143,6 @@
       "start": 1786705200,
       "end": 1787612400,
       "updated": 1786480920
-    },
-    {
-      "id": "ON-286759",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at DUFFERIN STREET, Toronto. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.72824868,
-      "lng": -79.45802779,
-      "start": 1786479960,
-      "end": null,
-      "updated": 1786479960
     },
     {
       "id": "ON-286753",
@@ -813,10 +797,26 @@
       "start": 1786503600,
       "end": 1786525200,
       "updated": 1786393380
+    },
+    {
+      "id": "ON-286432",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 401 Westbound Off-ramp at CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.19239,
+      "lng": -74.38103,
+      "start": 1786446000,
+      "end": 1786489200,
+      "updated": 1786392180
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T21:39:16.759507+00:00",
+  "updated": "2026-08-11T22:10:25.506382+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
