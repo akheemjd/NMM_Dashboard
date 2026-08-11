@@ -1,6 +1,6 @@
 {
-  "updated_at": "18:15 EDT",
-  "build_version": "1786407079",
+  "updated_at": "20:15 EDT",
+  "build_version": "1786408933",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -8,8 +8,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_name": "Queenston-Lewiston Bridge",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 3,
     "gauge_class": "warn",
     "status_line": "HWY 401, HWY 17",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at ALLEN ROAD, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Westbound  at HURDMAN ST, Mattawa. Lane and WEST\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -240,16 +240,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "9 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:30 EDT"
+      "captured_at": "20:12 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -267,16 +267,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 MDT"
+      "captured_at": "18:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 PDT"
+      "captured_at": "17:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 EDT"
+      "captured_at": "20:15 EDT"
     }
   ],
   "market": [

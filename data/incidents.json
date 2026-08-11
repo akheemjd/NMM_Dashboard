@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286567",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at ALLEN ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.73016868,
+      "lng": -79.44904569,
+      "start": 1786408380,
+      "end": null,
+      "updated": 1786408380
+    },
+    {
+      "id": "ON-286340",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 17 Westbound  at HURDMAN ST, Mattawa. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 46.314190119,
+      "lng": -78.703603077,
+      "start": 1786382940,
+      "end": null,
+      "updated": 1786408080
+    },
+    {
       "id": "ON-286561",
       "province": "ON",
       "highway": "HWY 401",
@@ -270,22 +302,6 @@
       "start": 1787572800,
       "end": 1787947200,
       "updated": 1786383120
-    },
-    {
-      "id": "ON-286340",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at HURDMAN ST, Mattawa. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 46.314190119,
-      "lng": -78.703603077,
-      "start": 1786382940,
-      "end": null,
-      "updated": 1786382940
     },
     {
       "id": "ON-286334",
@@ -803,26 +819,10 @@
       "start": 1787022000,
       "end": 1787302800,
       "updated": 1786371180
-    },
-    {
-      "id": "ON-286268",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 427 Northbound Collector between BROWNS LINE and FINCH AVENUE, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.61127,
-      "lng": -79.548874,
-      "start": 1786932000,
-      "end": 1787389200,
-      "updated": 1786371120
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T00:11:17.734220+00:00",
+  "updated": "2026-08-11T00:42:11.363077+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
