@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-286632",
+      "id": "ON-286573",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at BURLOAK DRIVE, Burlington. Right lane and right shoulder closed.",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.39533301,
-      "lng": -79.75633071,
-      "start": 1786443240,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 46.315646952,
+      "lng": -78.703113335,
+      "start": 1786410960,
       "end": null,
-      "updated": 1786443240
+      "updated": 1786444440
+    },
+    {
+      "id": "ON-286620",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.29851876,
+      "lng": -79.79709653,
+      "start": 1786442340,
+      "end": null,
+      "updated": 1786443540
     },
     {
       "id": "ON-277509",
@@ -65,22 +81,6 @@
       "updated": 1786443000
     },
     {
-      "id": "ON-286620",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.29851876,
-      "lng": -79.79709653,
-      "start": 1786442340,
-      "end": null,
-      "updated": 1786442340
-    },
-    {
       "id": "drivebc.ca/DBC-93841",
       "province": "BC",
       "highway": {
@@ -115,22 +115,6 @@
       "start": 1786428180,
       "end": null,
       "updated": 1786428180
-    },
-    {
-      "id": "ON-286573",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.315646952,
-      "lng": -78.703113335,
-      "start": 1786410960,
-      "end": null,
-      "updated": 1786428060
     },
     {
       "id": "ON-277959",
@@ -823,10 +807,26 @@
       "start": 1786932000,
       "end": 1787389200,
       "updated": 1786371360
+    },
+    {
+      "id": "ON-286269",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Engineering Investigation on HWY 427 Southbound Express between FINCH AVENUE and BROWNS LINE, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.733997,
+      "lng": -79.62741,
+      "start": 1786932000,
+      "end": 1787389200,
+      "updated": 1786371300
     }
   ],
   "total": 50,
-  "updated": "2026-08-11T10:17:50.889133+00:00",
+  "updated": "2026-08-11T10:48:02.554698+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
