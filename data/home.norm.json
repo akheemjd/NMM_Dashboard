@@ -1,6 +1,6 @@
 {
-  "updated_at": "00:15 EDT",
-  "build_version": "1786428945",
+  "updated_at": "02:15 EDT",
+  "build_version": "1786430760",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,9 +194,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 17A, HWY 427, HWY 401, EASTPORT",
+    "status_line": "HWY 17A, HWY 401, EASTPORT, QEW",
     "incidents": [
       {
         "road": "HWY 17A",
@@ -206,8 +206,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Northbound RAMP at LANGSTAFF RD, Vaughan. Right\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at BROCK ROAD, Pickering. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -240,7 +240,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:00 EDT"
+      "captured_at": "02:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:00 EDT"
+      "captured_at": "02:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,16 +267,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 MDT"
+      "captured_at": "00:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:00 PDT"
+      "captured_at": "23:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:49 CDT"
+      "captured_at": "01:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 EDT"
+      "captured_at": "02:15 EDT"
     }
   ],
   "market": [
