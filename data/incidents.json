@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-286829",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at McCOWAN ROAD, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.78140055,
+      "lng": -79.25519493,
+      "start": 1786515420,
+      "end": null,
+      "updated": 1786517340
+    },
+    {
       "id": "ON-286573",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,22 +31,6 @@
       "start": 1786410960,
       "end": null,
       "updated": 1786515600
-    },
-    {
-      "id": "ON-286829",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.78140055,
-      "lng": -79.25519493,
-      "start": 1786515420,
-      "end": null,
-      "updated": 1786515420
     },
     {
       "id": "ON-286813",
@@ -820,7 +820,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T06:25:12.631843+00:00",
+  "updated": "2026-08-12T06:56:20.827029+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
