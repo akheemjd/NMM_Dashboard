@@ -3,18 +3,18 @@
 set -e
 DRY_RUN="${DRY_RUN:-0}"
 
-# Guard against shadowing. This script must run from the repo, and the
-# Hermes entry point must be a symlink to it, never a copy.
+# Guard against shadowing. The Hermes entry point must remain a thin exec
+# wrapper. A full copy of this script there will drift and run stale in
+# production, which is what happened Aug 1-12 2026.
 EXPECTED="/home/hermes/northern-mile-dashboard/deploy.sh"
 HERMES_ENTRY="$HOME/.hermes/scripts/deploy.sh"
-if [ -e "$HERMES_ENTRY" ] && [ ! -L "$HERMES_ENTRY" ]; then
-  echo "FATAL: $HERMES_ENTRY is a real file, not a symlink to $EXPECTED"
-  echo "A stale copy is shadowing the repo script. Refusing to run."
-  exit 1
-fi
-if [ -L "$HERMES_ENTRY" ] && [ "$(readlink -f "$HERMES_ENTRY")" != "$EXPECTED" ]; then
-  echo "FATAL: $HERMES_ENTRY points at $(readlink -f "$HERMES_ENTRY"), expected $EXPECTED"
-  exit 1
+if [ -f "$HERMES_ENTRY" ]; then
+  ENTRY_LINES=$(grep -cvE '^\s*(#|$)' "$HERMES_ENTRY")
+  if [ "$ENTRY_LINES" -gt 3 ] || ! grep -qF "exec $EXPECTED" "$HERMES_ENTRY"; then
+    echo "FATAL: $HERMES_ENTRY is not a thin exec wrapper ($ENTRY_LINES logic lines)."
+    echo "A stale copy is shadowing the repo script. Refusing to run."
+    exit 1
+  fi
 fi
 
 cd /home/hermes/northern-mile-dashboard
