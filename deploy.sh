@@ -22,7 +22,14 @@ cd /home/hermes/northern-mile-dashboard
 echo "=== Deploy $(date) ==="
 
 # 1. Collect fresh data
-python3 scripts/collector.py && python3 scripts/normalize.py && python3 scripts/build_templates.py && python3 scripts/build_og.py 2>&1
+python3 scripts/collector.py && python3 scripts/normalize.py 2>&1
+
+# 1b. Copy assets BEFORE build so a stylesheet/app change lands in this
+# deploy alongside the code that needs it (build_templates also copies
+# assets; running this first keeps both in agreement).
+mkdir -p docs/assets && cp -r assets/. docs/assets/
+
+python3 scripts/build_templates.py && python3 scripts/build_og.py 2>&1
 
 # 2. Health check — freshness-based for the four sources with an honest date signal
 python3 -c "
@@ -73,10 +80,16 @@ print('Health recorded.')
 
 # 4. Rebuild both
 
-echo "[5/6] Copying docs..."
-mkdir -p docs/assets && cp -r assets/. docs/assets/
 echo "[6/6] Deploying..."
 # Commit and push
+echo "=== Asset freshness ==="
+for f in styles.css app.js; do
+  if ! cmp -s "assets/$f" "docs/assets/$f"; then
+    echo "FATAL: docs/assets/$f differs from assets/$f — asset copy did not run"
+    exit 1
+  fi
+done
+echo "  assets in sync"
 echo "=== Coverage validation ==="
 python3 scripts/coverage.py validate || { echo "COVERAGE VALIDATION FAILED — aborting deploy"; exit 1; }
 echo "=== Git push ==="

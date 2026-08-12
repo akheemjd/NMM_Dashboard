@@ -1,23 +1,23 @@
 {
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "10 min"
+    "max_wait": "30 min"
   },
   "border_rows": [
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:03 EDT"
+      "captured_at": "19:09 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -96,11 +96,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:03 EDT"
+      "captured_at": "19:09 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -175,8 +175,8 @@
       "captured_at": "18:44 EDT"
     }
   ],
-  "updated_at": "2026-08-12 23:12 UTC",
-  "updated_iso": "2026-08-12T23:12:58+00:00",
-  "build_version": "1786576378",
-  "captured_at": "2026-08-12 23:12 UTC"
+  "updated_at": "2026-08-12 23:16 UTC",
+  "updated_iso": "2026-08-12T23:16:15+00:00",
+  "build_version": "1786576575",
+  "captured_at": "2026-08-12 23:16 UTC"
 }
