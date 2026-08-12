@@ -59,5 +59,41 @@ def build_fuel_card():
     print(f"  og-fuel.jpg written ({nat:.1f})")
 
 
+def build_home_card():
+    with open(os.path.join(DATA, "fuel.json")) as f:
+        fuel = json.load(f)
+    with open(os.path.join(DATA, "exchange.json")) as f:
+        fx = json.load(f)
+
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+
+    d.text((70, 70), "NORTHERN MILE", font=font("DejaVuSans-Bold.ttf", 28), fill=AMBER)
+    d.text((70, 115), "Canadian trucking data, published daily",
+           font=font("DejaVuSans.ttf", 32), fill=MUTED)
+
+    d.text((70, 220), f"{fuel['diesel_national_avg']:.1f}",
+           font=font("DejaVuSans-Bold.ttf", 96), fill=INK)
+    d.text((70, 330), "NMDI  ·  cents per litre",
+           font=font("DejaVuSans.ttf", 26), fill=MUTED)
+
+    d.text((640, 220), f"{fx['current']:.4f}",
+           font=font("DejaVuSans-Bold.ttf", 96), fill=INK)
+    d.text((640, 330), "USD/CAD  ·  Bank of Canada",
+           font=font("DejaVuSans.ttf", 26), fill=MUTED)
+
+    d.text((70, 440), "Diesel  ·  Border waits  ·  Exchange  ·  Cargo theft",
+           font=font("DejaVuSans.ttf", 30), fill=INK)
+
+    d.text((70, 545), f"NRCan survey {fuel.get('print_date','')}  ·  BoC {fx.get('observation_date','')}",
+           font=font("DejaVuSans.ttf", 22), fill=MUTED)
+    d.text((70, 578), "dashboard.northernmilemedia.com",
+           font=font("DejaVuSans.ttf", 24), fill=AMBER)
+
+    img.save(os.path.join(DOCS, "og.jpg"), "JPEG", quality=88)
+    print("  og.jpg written")
+
+
 if __name__ == "__main__":
     build_fuel_card()
+    build_home_card()
