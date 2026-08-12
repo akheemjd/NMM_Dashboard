@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-286832",
+      "province": "ON",
+      "highway": "HWY 409",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 409 Westbound  at MARTIN GROVE ROAD, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.69904694,
+      "lng": -79.57443118,
+      "start": 1786524000,
+      "end": null,
+      "updated": 1786524000
+    },
+    {
       "id": "ON-286573",
       "province": "ON",
       "highway": "HWY 17",
@@ -806,26 +822,10 @@
       "start": 1786402800,
       "end": 1786701600,
       "updated": 1786389720
-    },
-    {
-      "id": "ON-286387",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 400 Southbound  between HWY 9/DAVIS DR, Kettleby and JANE STREET, Toronto. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 44.02938,
-      "lng": -79.594284,
-      "start": 1786402800,
-      "end": 1786701600,
-      "updated": 1786389300
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T08:29:48.904769+00:00",
+  "updated": "2026-08-12T09:00:58.860732+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
