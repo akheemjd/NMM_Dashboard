@@ -1,6 +1,7 @@
 #!/bin/bash
 # Deploy dashboard to GitHub Pages
 set -e
+DRY_RUN="${DRY_RUN:-0}"
 cd /home/hermes/northern-mile-dashboard
 
 echo "=== Deploy $(date) ==="
@@ -64,7 +65,11 @@ echo "[6/6] Deploying..."
 echo "=== Coverage validation ==="
 python3 scripts/coverage.py validate || { echo "COVERAGE VALIDATION FAILED — aborting deploy"; exit 1; }
 echo "=== Git push ==="
-git add -A
-git commit -m "Auto-update $(date '+%Y-%m-%d %H:%M')" || echo "  (nothing to commit)"
-git push origin master || echo "  Push failed — check GitHub auth"
+if [ "$DRY_RUN" = "1" ]; then
+  echo "  DRY_RUN=1 — skipping commit and push"
+else
+  git add -A
+  git commit -m "Auto-update $(date '+%Y-%m-%d %H:%M')" || echo "  (nothing to commit)"
+  git push origin master || echo "  Push failed — check GitHub auth"
+fi
 echo "Done."

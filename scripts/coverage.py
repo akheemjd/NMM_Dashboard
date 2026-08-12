@@ -99,6 +99,20 @@ def write(fuel_records, fx_records, border_records, theft_records,
             "theft":  compute(theft_records,  "theft",   "incidents", theft_obs),
         }
     }
+
+    health_path = os.path.join(ROOT, "data", "health.json")
+    if os.path.exists(health_path):
+        try:
+            with open(health_path) as hf:
+                health = json.load(hf)
+            report["source_health"] = {
+                k: v.get("status") for k, v in health.get("sources", {}).items()
+            }
+        except Exception:
+            report["source_health"] = {}
+    else:
+        report["source_health"] = {}
+
     os.makedirs(os.path.dirname(COVERAGE_PATH), exist_ok=True)
     with open(COVERAGE_PATH, "w") as f:
         json.dump(report, f, indent=2)

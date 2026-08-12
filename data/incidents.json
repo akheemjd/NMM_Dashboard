@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-287057",
+      "id": "ON-287068",
       "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound EXPRESS at DUNDAS STREET, Toronto. Left shoulder and left lane closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WHITES ROAD, Pickering. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.62858489,
-      "lng": -79.5567846,
-      "start": 1786548840,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.8165886,
+      "lng": -79.1144832,
+      "start": 1786550580,
       "end": null,
-      "updated": 1786548840
+      "updated": 1786550580
+    },
+    {
+      "id": "ON-287064",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BURLOAK DRIVE, Burlington. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.39799018,
+      "lng": -79.7541197,
+      "start": 1786550220,
+      "end": null,
+      "updated": 1786550220
+    },
+    {
+      "id": "ON-287063",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at Highway 4 / Colonel Talbot Rd, London. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 42.853552778,
+      "lng": -81.275172222,
+      "start": 1786550040,
+      "end": null,
+      "updated": 1786550040
     },
     {
       "id": "ON-287056",
@@ -95,22 +127,6 @@
       "start": 1787011200,
       "end": 1787389200,
       "updated": 1786548000
-    },
-    {
-      "id": "ON-287047",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at KING ROAD, King. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.92064701,
-      "lng": -79.56601396,
-      "start": 1786547400,
-      "end": null,
-      "updated": 1786547400
     },
     {
       "id": "ON-287050",
@@ -788,26 +804,10 @@
       "start": 1787022000,
       "end": 1787130000,
       "updated": 1786478220
-    },
-    {
-      "id": "ON-287021",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 410 Southbound  between MAYFIELD ROAD and SANDALWOOD PARKWAY, Brampton. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.75677,
-      "lng": -79.79935,
-      "start": 1787360400,
-      "end": 1787562000,
-      "updated": 1786477860
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T15:46:48.626880+00:00",
+  "updated": "2026-08-12T16:10:36.346044+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
