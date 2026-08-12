@@ -1,15 +1,15 @@
 {
-  "updated_at": "20:15 EDT",
-  "build_version": "1786500964",
+  "updated_at": "22:15 EDT",
+  "build_version": "1786502831",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "32 min"
+    "max_wait": "11 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 15,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "HWY 417, HWY 404",
+    "status_line": "HWY 401, HWY 417, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 417",
-        "what": "Police Investigation on HWY 417 Westbound RAMP at OTTAWA ROAD 174, Ottawa. All\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound  at Kenessaire Rd , Ridgetown. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 417",
-        "what": "Police Investigation on HWY 417 Eastbound  at OTTAWA ROAD 174, Ottawa. All\u2026",
+        "what": "Police Investigation on HWY 417 Westbound RAMP at OTTAWA ROAD 174, Ottawa. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,11 +236,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "32 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "11 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -249,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -258,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:47 EDT"
+      "captured_at": "22:23 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT"
+      "captured_at": "20:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 PDT"
+      "captured_at": "19:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 CDT"
+      "captured_at": "21:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     }
   ],
   "market": [
