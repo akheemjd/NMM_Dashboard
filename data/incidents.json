@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-286800",
+      "id": "ON-286573",
       "province": "ON",
-      "highway": "HWY 401",
+      "highway": "HWY 17",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MARKHAM ROAD, Toronto. Right lane and right shoulder closed.",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.78533038,
-      "lng": -79.23509759,
-      "start": 1786496580,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 46.315646952,
+      "lng": -78.703113335,
+      "start": 1786410960,
       "end": null,
-      "updated": 1786496580
+      "updated": 1786498920
+    },
+    {
+      "id": "ON-286804",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Markham Collector to Express, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.78306531,
+      "lng": -79.24611147,
+      "start": 1786497840,
+      "end": null,
+      "updated": 1786497840
+    },
+    {
+      "id": "ON-286803",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DUFFERIN STREET, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.72824868,
+      "lng": -79.45802779,
+      "start": 1786497540,
+      "end": null,
+      "updated": 1786497540
     },
     {
       "id": "ON-286797",
@@ -31,22 +63,6 @@
       "start": 1786532400,
       "end": 1786575600,
       "updated": 1786494720
-    },
-    {
-      "id": "ON-286753",
-      "province": "ON",
-      "highway": "HWY 7/8",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 7/8 Both Directions  between Road 106, Shakespeare and Road 102, New Hamburg. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.369267008,
-      "lng": -80.811945862,
-      "start": 1786478580,
-      "end": null,
-      "updated": 1786492680
     },
     {
       "id": "ON-286773",
@@ -159,22 +175,6 @@
       "start": 1786532400,
       "end": 1786575600,
       "updated": 1786483380
-    },
-    {
-      "id": "ON-286573",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.315646952,
-      "lng": -78.703113335,
-      "start": 1786410960,
-      "end": null,
-      "updated": 1786481520
     },
     {
       "id": "ON-286763",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T01:13:41.211133+00:00",
+  "updated": "2026-08-12T01:44:49.516404+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
