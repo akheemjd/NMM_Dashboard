@@ -131,7 +131,10 @@ def compute_provincial(prices):
     INDEX_PROVINCES = ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]
     indexed = [result[p]["diesel"] for p in INDEX_PROVINCES
                if result.get(p, {}).get("diesel") is not None]
-    national_avg = round(sum(indexed) / len(indexed), 1) if indexed else 171.9
+    if len(indexed) != len(INDEX_PROVINCES):
+        missing = [p for p in INDEX_PROVINCES if p not in result]
+        raise ValueError(f"NMDI requires all 10 index provinces, missing: {missing}")
+    national_avg = round(sum(indexed) / len(indexed), 1)
     
     return result, national_avg
 
@@ -174,7 +177,7 @@ def collect():
         return True
     except Exception as e:
         print(f"  NRCan diesel failed: {e}")
-        return False
+        raise
 
 
 if __name__ == "__main__":

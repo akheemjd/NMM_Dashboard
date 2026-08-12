@@ -77,14 +77,20 @@ ts = now_fmt()
 ts_iso = now_iso()
 build_version = str(int(time.time()))  # cache-busting, fresh each build
 provs = raw_fuel.get("provinces", {})
-fuel_nat = raw_fuel.get("diesel_national_avg", 171.9)
+fuel_nat = raw_fuel.get("diesel_national_avg")
+if fuel_nat is None:
+    raise ValueError("fuel.json has no diesel_national_avg — refusing to build")
 
 # Calc data (needed by home page)
 calc_cities = raw_dist.get("cities", [])
 calc_distances = raw_dist.get("distances", {})
 
 # ===== FUEL =====
-d_vals = [(c, provs.get(c,{}).get("diesel",0)) for c in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]]
+INDEX_PROVINCES = ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]
+_missing = [c for c in INDEX_PROVINCES if provs.get(c, {}).get("diesel") is None]
+if _missing:
+    raise ValueError(f"fuel.json missing index provinces: {_missing} — refusing to build")
+d_vals = [(c, provs[c]["diesel"]) for c in INDEX_PROVINCES]
 d_sorted = sorted(d_vals, key=lambda x: x[1])
 fuel_top = []
 provinces_data = []
@@ -176,7 +182,9 @@ for c in crossings[:12]:
     crossings_for_page.append(item)
 
 # ===== FX =====
-fx_rate = raw_ex.get("current") or raw_ex.get("close", 1.32)
+fx_rate = raw_ex.get("current")
+if fx_rate is None:
+    raise ValueError("exchange.json has no current rate — refusing to build")
 fx_chg = raw_ex.get("change", 0)
 try: fx_chg = float(fx_chg)
 except: fx_chg = 0
