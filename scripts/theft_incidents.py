@@ -138,6 +138,20 @@ def collect_theft_incidents():
                 if not matched_keywords:
                     continue
 
+                # Canada only. A US theft story is not our beat and the
+                # geocoder will happily place it in a same-named city.
+                canada_words = [
+                    "canada", "canadian", "ontario", "quebec", "alberta",
+                    "british columbia", "manitoba", "saskatchewan",
+                    "nova scotia", "new brunswick", "newfoundland",
+                    "toronto", "montreal", "vancouver", "calgary",
+                    "edmonton", "ottawa", "winnipeg", "halifax", "brampton",
+                    "mississauga", "peel", "surrey", "delta", "laval",
+                    "opp", "rcmp", "sûreté", "surete",
+                ]
+                if not any(w in combined for w in canada_words):
+                    continue
+
                 # Try to geocode from title + description
                 coords = geocode_city(combined)
                 if not coords:
@@ -146,14 +160,19 @@ def collect_theft_incidents():
 
                 lat, lng = coords if coords else (None, None)
 
+                if not link:
+                    continue
+
                 incidents.append({
                     "title": title,
-                    "link": link,
+                    "source_url": link,
                     "date": pub_date,
                     "source": source,
                     "keywords": matched_keywords[:3],
+                    "location": "",
                     "lat": lat,
                     "lng": lng,
+                    "geocoded": bool(coords),
                 })
         except Exception as e:
             print(f"  Theft {source}: {e}")

@@ -308,31 +308,16 @@ for ind in mk_indicators[:6]:
 # ===== THEFT =====
 theft = []
 for t in raw_theft.get("incidents", [])[:8]:
-    val = t.get("value","0")
-    if isinstance(val, (int,float)) and val >= 1000:
-        val_str = f"${val/1000:,.0f}K"
-    elif isinstance(val, (int,float)):
-        val_str = f"${val:,}"
-    else:
-        val_str = f"${val}" if not str(val).startswith("$") else str(val)
-    
-    # Try to split title into commodity context
-    title = t.get("title", t.get("description",""))[:60]
-    location = t.get("location","")
-    prevention = "Secure overnight parking · GPS tracking"  # default
-    commodity = t.get("commodity", t.get("type", "Mixed freight"))
-    
+    if not t.get("source_url"):
+        continue
     theft.append({
-        "title": title,
-        "value": val_str,
-        "date": t.get("date", "Recent"),
-        "location": location,
-        "commodity": commodity,
-        "prevention": prevention,
-        "url": "/cargo-theft/",
+        "title": t.get("title", "")[:110],
+        "date": str(t.get("date", ""))[:16],
+        "source": t.get("source", ""),
+        "source_url": t.get("source_url", ""),
     })
 
-theft_home = theft[:3]  # home shows 3
+theft_home = theft[:3]
 
 # Hotspots from theft data
 hotspots = []
@@ -377,18 +362,15 @@ sponsor_news = None
 # Build theft JSON early (needed by home page too)
 theft_json = []
 for t in raw_theft.get("incidents", [])[:30]:
-    val = t.get("value",0)
+    if not t.get("source_url") or not t.get("geocoded"):
+        continue
     theft_json.append({
-        "title": t.get("title", t.get("description",""))[:60],
-        "location": str(t.get("location","")),
-        "value": "${:,}".format(val) if isinstance(val, (int,float)) else str(val),
-        "lat": t.get("lat", 0),
-        "lng": t.get("lng", 0),
-        "date": str(t.get("date",""))[:10],
-        "method": str(t.get("method",""))[:80],
-        "prevention": str(t.get("prevention",""))[:100],
+        "title": t.get("title", "")[:110],
+        "lat": t.get("lat"),
+        "lng": t.get("lng"),
+        "date": str(t.get("date", ""))[:16],
+        "source": t.get("source", ""),
         "source_url": t.get("source_url", ""),
-        "business": str(t.get("business",""))[:80],
     })
 
 
