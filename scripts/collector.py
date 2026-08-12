@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from market_pulse import collect_market_pulse
 from collect_nrcan_diesel import collect as collect_fuel
 from incidents import collect_incidents
+from collect_border import collect_border_live
 from health_tracker import record_success, record_failure
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
@@ -261,34 +262,6 @@ def collect_news():
     print(f"  News: {len(headlines)} headlines from {len(feeds)} sources")
 
 
-def collect_border():
-    """Update border crossing data and refresh blitz calendar.
-    CBSA and CBP wait time APIs are behind paywalls.
-    This updates the static border.json metadata.
-    """
-    try:
-        with open(os.path.join(DATA_DIR, "border.json")) as f:
-            border_data = json.load(f)
-    except Exception:
-        border_data = {"crossings": [], "blitz_dates": []}
-
-    # Update timestamp
-    border_data["updated"] = datetime.now(timezone.utc).isoformat()
-
-    # Keep blitz dates current (remove passed dates)
-    now = datetime.now(timezone.utc).date()
-    if border_data.get("blitz_dates"):
-        border_data["blitz_dates"] = [
-            b for b in border_data["blitz_dates"]
-            if datetime.fromisoformat(b["date"]).date() >= now
-        ]
-
-    save("border", border_data)
-    crossings = len(border_data.get("crossings", []))
-    blitzes = len(border_data.get("blitz_dates", []))
-    print(f"  Border: {crossings} crossings, {blitzes} upcoming blitz dates")
-
-
 if __name__ == "__main__":
     print(f"=== Northern Mile Collector {datetime.now().strftime('%Y-%m-%d %H:%M')} ===\n")
 
@@ -299,7 +272,7 @@ if __name__ == "__main__":
         ("incidents", collect_incidents),
         ("fuel", collect_fuel),
         ("news", collect_news),
-        ("border", collect_border),
+        ("border", collect_border_live),
     ]:
         try:
             fn()
@@ -338,10 +311,10 @@ if __name__ == "__main__":
             with open(_os.path.join(DATA, path)) as f:
                 d = _json.load(f)
             if path == "border.json":
-                # 'updated' is a fetch timestamp, not an observation time.
-                # Crossings carry only time-of-day with no date, so there is
-                # no honest observation date to report until Phase 5.
-                return None
+                if not d.get("live_fetch_ok"):
+                    return None
+                caps = [c.get("captured_utc") for c in d.get("crossings", []) if c.get("captured_utc")]
+                return max(caps)[:10] if caps else None
             # Use print_date (source publication date) if available, else fetch date
             obs = d.get("print_date") or d.get("updated")
             if obs:

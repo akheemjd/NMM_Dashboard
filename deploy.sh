@@ -7,7 +7,7 @@ cd /home/hermes/northern-mile-dashboard
 echo "=== Deploy $(date) ==="
 
 # 1. Collect fresh data
-python3 scripts/collector.py && python3 scripts/normalize.py && python3 scripts/build_templates.py 2>&1
+python3 scripts/collector.py && python3 scripts/normalize.py && python3 scripts/build_templates.py && python3 scripts/build_og.py 2>&1
 
 # 2. Health check — freshness-based for the four sources with an honest date signal
 python3 -c "

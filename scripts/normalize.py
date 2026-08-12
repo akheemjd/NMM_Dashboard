@@ -115,6 +115,15 @@ if _missing:
     raise ValueError(f"fuel.json missing index provinces: {_missing} — refusing to build")
 d_vals = [(c, provs[c]["diesel"]) for c in INDEX_PROVINCES]
 d_sorted = sorted(d_vals, key=lambda x: x[1])
+
+
+def _fmt_delta(v):
+    """Never render a fabricated zero. None means not enough history."""
+    if v is None:
+        return "n/a"
+    return f"{v:+.1f}"
+
+
 fuel_top = []
 provinces_data = []
 names = {"BC":"British Columbia","AB":"Alberta","SK":"Saskatchewan","MB":"Manitoba","ON":"Ontario","QC":"Quebec","NB":"New Brunswick","NS":"Nova Scotia","PE":"PEI","NL":"Newfoundland"}
@@ -127,8 +136,13 @@ for i, (code, price) in enumerate(d_sorted):
         "code": code,
         "name": names[code],
         "price": f"{price:.1f}",
-        "change": "—",
-        "change_class": "flat",
+        "change": _fmt_delta(delta("diesel", code, 7)),
+        "change_class": (
+            "flat" if delta("diesel", code, 7) is None
+            else "up" if delta("diesel", code, 7) > 0
+            else "down" if delta("diesel", code, 7) < 0
+            else "flat"
+        ),
         "vs_national": vs_val,
         "vs_class": vs_cls,
         "rowclass": row_cls,
@@ -137,14 +151,23 @@ fuel_top = provinces_data[:6]
 
 prices = {c: p for c, p in d_vals}  # home page shows top 6
 
+_d7 = delta("diesel", "national", 7)
+_d30 = delta("diesel", "national", 30)
+
+
+if _d7 is None:
+    _band_7d = "noise"
+else:
+    _band_7d = classify_band(_d7, "diesel_weekly", thresh)
+
 fuel = {
     "national_diesel": f"{fuel_nat:.1f}",
     "series": "NMDI",
     "national_nmdi": f"{fuel_nat:.1f}",
     
-    "change_7d": "—",
-    "change_7d_band": "noise",
-    "change_30d": "—",
+    "change_7d": _fmt_delta(_d7),
+    "change_7d_band": _band_7d,
+    "change_30d": _fmt_delta(_d30),
     "low_code": d_sorted[0][0], "low": f"{d_sorted[0][1]:.1f}",
     "high_code": d_sorted[-1][0], "high": f"{d_sorted[-1][1]:.1f}",
     "spread": f"{d_sorted[-1][1]-d_sorted[0][1]:.1f}",
@@ -483,5 +506,16 @@ write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "update
 snapshot("diesel", "national", fuel_nat)
 for code, p in provs.items():
     snapshot("diesel", code, p.get("diesel"))
+
+# FX: snapshot against the observation date, not today, so a stale
+# collector cannot backfill a weekend with Friday's rate.
+_fx_obs = raw_ex.get("observation_date")
+if _fx_obs and fx_rate is not None:
+    from datetime import date as _date
+    snapshot("fx", "usd_cad", fx_rate, when=_date.fromisoformat(_fx_obs))
+
+# Border and theft are deliberately not snapshotted. Border carries no
+# dated observation time, and theft has no live collector. Snapshotting
+# either would manufacture a history that does not exist.
 
 print(f"Normalized at {ts}: home ({len(home)} keys) + 7 pages")

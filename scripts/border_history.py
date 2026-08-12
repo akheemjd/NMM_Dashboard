@@ -39,7 +39,7 @@ def record_run(crossings, run_date=None):
         if delay is None:
             continue
         crossing_id = c.get("id", c.get("name", "unknown"))
-        obs_time = c.get("live_updated", "")
+        obs_time = c.get("captured_utc", "")
         rows.append(f"{run_date},{crossing_id},{delay},{obs_time}")
 
     tmp = STORE + ".tmp"
