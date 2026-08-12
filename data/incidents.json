@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-286832",
+      "id": "ON-286833",
       "province": "ON",
-      "highway": "HWY 409",
+      "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 409 Westbound  at MARTIN GROVE ROAD, Toronto. Right lane closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound ON-RAMP at BRIMLEY ROAD, Toronto. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.69904694,
-      "lng": -79.57443118,
-      "start": 1786524000,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.779801,
+      "lng": -79.264373,
+      "start": 1786526880,
       "end": null,
-      "updated": 1786524000
+      "updated": 1786526880
     },
     {
       "id": "ON-286573",
@@ -31,22 +31,6 @@
       "start": 1786410960,
       "end": null,
       "updated": 1786515600
-    },
-    {
-      "id": "ON-286813",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Police Investigation on HWY 417 Eastbound  at OTTAWA ROAD 174, Ottawa. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.421047,
-      "lng": -75.614115,
-      "start": 1786500600,
-      "end": null,
-      "updated": 1786513740
     },
     {
       "id": "ON-277959",
@@ -501,22 +485,6 @@
       "updated": 1786466880
     },
     {
-      "id": "ON-286729",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 403 MISSISSAUGA Westbound  between WINSTON CHURCHILL BLVD and WINSTON CHURCHILL BLVD, Mississauga. 2 Left(with HOV) Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Left(with HOV) Lane(s)",
-      "lat": 43.54323,
-      "lng": -79.70957,
-      "start": 1786496400,
-      "end": 1786525200,
-      "updated": 1786466700
-    },
-    {
       "id": "ON-286700",
       "province": "ON",
       "highway": "HWY 132",
@@ -595,22 +563,6 @@
       "start": 1787022000,
       "end": 1787216400,
       "updated": 1786458180
-    },
-    {
-      "id": "ON-286690",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 403 MISSISSAUGA Westbound  between WINSTON CHURCHILL BLVD and WINSTON CHURCHILL BLVD, Mississauga. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.54323,
-      "lng": -79.70957,
-      "start": 1786496400,
-      "end": 1786525200,
-      "updated": 1786456680
     },
     {
       "id": "ON-286682",
@@ -776,22 +728,6 @@
       "updated": "2026-08-10T14:43:47-07:00"
     },
     {
-      "id": "ON-286454",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 417 Westbound On-ramp at MOODIE DR (IC 134), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.33849,
-      "lng": -75.84131,
-      "start": 1786503600,
-      "end": 1786525200,
-      "updated": 1786393380
-    },
-    {
       "id": "ON-286423",
       "province": "ON",
       "highway": "QEW",
@@ -822,10 +758,79 @@
       "start": 1786402800,
       "end": 1786701600,
       "updated": 1786389720
+    },
+    {
+      "id": "ON-286387",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 400 Southbound  between HWY 9/DAVIS DR, Kettleby and JANE STREET, Toronto. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 44.02938,
+      "lng": -79.594284,
+      "start": 1786402800,
+      "end": 1786701600,
+      "updated": 1786389300
+    },
+    {
+      "id": "ON-286672",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Nightly Maintenance on QEW Toronto bound  between MARTINDALE ROAD and MARTINDALE ROAD, St. Catharines. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.177544,
+      "lng": -79.27608,
+      "start": 1786500000,
+      "end": 1786615200,
+      "updated": 1786388100
+    },
+    {
+      "id": "drivebc.ca/DBC-93780",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Big Bar Rd",
+        "to": "Pavilion Clinton Rd",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Jesmond Rd, in both directions. There is a wildfire between Big Bar Rd and Pavilion Clinton Rd. Road closed. Road closed to all traffic except emergency vehicles. Next update time Fri Aug 14 at 12:00 PM PDT. Last updated Mon Aug 10 at 11:45 AM PDT. (DBC-93780)",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 51.137574,
+      "lng": -121.90665,
+      "start": "2026-07-26T11:34:57-07:00",
+      "end": "",
+      "updated": "2026-08-10T11:45:40-07:00"
+    },
+    {
+      "id": "ON-286377",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Continuous Construction on QEW Fort Erie Bound  between BAKER ROAD, Niagara Falls and BOWEN ROAD, Fort Erie. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.974876,
+      "lng": -79.03748,
+      "start": 1786618800,
+      "end": 1786748400,
+      "updated": 1786387200
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T09:00:58.860732+00:00",
+  "updated": "2026-08-12T09:32:07.121715+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
