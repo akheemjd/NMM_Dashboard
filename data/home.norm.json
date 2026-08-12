@@ -1,6 +1,6 @@
 {
   "updated_at": "02:49 EDT",
-  "build_version": "1786517784",
+  "build_version": "1786519654",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 417, HWY 17",
+    "status_line": "HWY 401, HWY 417",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at McCOWAN ROAD, Toronto. 2 right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at DIXON RD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 417",
-        "what": "Police Investigation on HWY 417 Westbound RAMP at OTTAWA ROAD 174, Ottawa. All\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -222,7 +222,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -231,25 +231,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "7 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 MDT"
+      "captured_at": "01:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 PDT"
+      "captured_at": "00:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -285,7 +285,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 CDT"
+      "captured_at": "02:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
