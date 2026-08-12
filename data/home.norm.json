@@ -1,6 +1,6 @@
 {
   "updated_at": "08:40 EDT",
-  "build_version": "1786542039",
+  "build_version": "1786543896",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -8,8 +8,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -194,20 +194,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 16,
+    "active_count": 15,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401, HWY 403 , HWY 7",
+    "status_line": "HWY 522, HWY 401, HWY 5, HWY 404",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Emergency Roadwork on HWY 404 Southbound ON-RAMP at STEELES AVE,\u2026",
+        "road": "HWY 522",
+        "what": "Highway Maintenance on HWY 522 Westbound  at EAST RD-NORTH RD-WILSON & HARDY\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. 1 right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 409, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,20 +236,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "5 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -276,7 +276,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 PDT"
+      "captured_at": "07:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -298,6 +298,18 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2362B (chained 2017)",
+      "value": "+0.3%",
+      "value_class": "up"
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.7%",
+      "value_class": "up"
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 222.2\u00a2/L and 35 L/100km",
@@ -343,13 +355,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "3 plead guilty in CDL fraud scheme in Louisiana",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/3-plead-guilty-in-cdl-fraud-scheme-in-louisiana"
+      "headline": "NTDC 2026 begins as 429 state champions welcome FMCSA Administrator Derek Barrs",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/ntdc-2026-begins-as-429-state-champions-welcome-fmcsa-administrator-derek-barrs"
     },
     {
       "category": "The Trucker",
-      "headline": "NYSP operation finds more than 900 CMV violations",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/nysp-operation-finds-more-than-900-cmv-violations"
+      "headline": "Inflation cooled last month as gas prices fell, though costs remain elevated",
+      "url": "https://www.thetrucker.com/trucking-news/business/inflation-cooled-last-month-as-gas-prices-fell-though-costs-remain-elevated"
     }
   ],
   "theft_home_json": "[{\"title\": \"Electronics load\", \"location\": \"Brampton, ON\", \"value\": \"$250,000\", \"lat\": 43.69, \"lng\": -79.76, \"date\": \"2026-07-08\", \"method\": \"Yard break-in overnight\", \"prevention\": \"High-security padlocks on all parked trailers. Motion-activated lighting. CCTV with remote monitorin\", \"source_url\": \"\", \"business\": \"Secured carrier yard \\u2014 Rutherford Rd & Steeles area\"}, {\"title\": \"47 trailers recovered in theft ring bust\", \"location\": \"Greater Montreal, QC\", \"value\": \"$4,000,000\", \"lat\": 45.51, \"lng\": -73.56, \"date\": \"2026-06-28\", \"method\": \"Organized theft ring \\u2014 coordinated yard hits\", \"prevention\": \"GPS tracking on all trailers. Geofence alerts when equipment leaves yard after hours.\", \"source_url\": \"\", \"business\": \"Multiple industrial yards \\u2014 Saint-Laurent and Anjou\"}, {\"title\": \"Reefer load \\u2014 meat products\", \"location\": \"Mississauga, ON\", \"value\": \"$85,000\", \"lat\": 43.59, \"lng\": -79.64, \"date\": \"2026-06-15\", \"method\": \"Stolen while driver inside truck stop\", \"prevention\": \"Never leave loaded reefer unattended at unsecured stops. Use attended parking or secured yards only.\", \"source_url\": \"\", \"business\": \"Truck stop \\u2014 Dixie Rd & 401 corridor\"}, {\"title\": \"Consumer electronics \\u2014 US-bound\", \"location\": \"Delta, BC\", \"value\": \"$180,000\", \"lat\": 49.09, \"lng\": -123.06, \"date\": \"2026-06-02\", \"method\": \"Trailer stolen from yard with fictitious paperwork\", \"prevention\": \"Verify carrier credentials before releasing loads. Call references. Check insurance and authorities.\", \"source_url\": \"\", \"business\": \"Industrial yard \\u2014 Annacis Island\"}, {\"title\": \"Identity theft pickup\", \"location\": \"Calgary, AB\", \"value\": \"$90,000\", \"lat\": 51.04, \"lng\": -114.07, \"date\": \"2026-05-18\", \"method\": \"Fictitious pickup \\u2014 stolen carrier credentials\", \"prevention\": \"Always verify MC number and insurance. Call the carrier directly using publicly listed number, not t\", \"source_url\": \"\", \"business\": \"Freight broker load \\u2014 cross-dock facility\"}, {\"title\": \"Building materials \\u2014 two trailers\", \"location\": \"Laval, QC\", \"value\": \"$120,000\", \"lat\": 45.58, \"lng\": -73.75, \"date\": \"2026-05-05\", \"method\": \"Coordinated yard hit \\u2014 fencing cut\", \"prevention\": \"King pin locks on all trailers. Perimeter fencing inspections. Overnight security patrols.\", \"source_url\": \"\", \"business\": \"Industrial park \\u2014 Autoroute 440 corridor\"}, {\"title\": \"Three reefers \\u2014 food products\", \"location\": \"Nisku, AB\", \"value\": \"$300,000\", \"lat\": 53.55, \"lng\": -113.49, \"date\": \"2026-04-22\", \"method\": \"Weekend break-in \\u2014 fence cut, trucks driven out\", \"prevention\": \"Weekend security patrols. Air brake valve locks. GPS on all power units and trailers.\", \"source_url\": \"\", \"business\": \"Nisku industrial yard \\u2014 41 Ave SW\"}, {\"title\": \"Five trailers \\u2014 mixed freight\", \"location\": \"Winnipeg, MB\", \"value\": \"$210,000\", \"lat\": 49.9, \"lng\": -97.14, \"date\": \"2026-04-08\", \"method\": \"Serial thefts \\u2014 unlocked trailers\", \"prevention\": \"Gladhand locks and king pin locks on all parked trailers. Report suspicious activity immediately.\", \"source_url\": \"\", \"business\": \"CentrePort industrial area\"}]",
