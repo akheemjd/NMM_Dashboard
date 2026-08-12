@@ -292,12 +292,23 @@ def collect_border():
 if __name__ == "__main__":
     print(f"=== Northern Mile Collector {datetime.now().strftime('%Y-%m-%d %H:%M')} ===\n")
 
-    collect_exchange_rate()
-    collect_market_pulse()
-    collect_incidents()
-    collect_fuel()
-    collect_news()
-    collect_border()
+    failures = []
+    for label, fn in [
+        ("exchange", collect_exchange_rate),
+        ("market", collect_market_pulse),
+        ("incidents", collect_incidents),
+        ("fuel", collect_fuel),
+        ("news", collect_news),
+        ("border", collect_border),
+    ]:
+        try:
+            fn()
+        except Exception as e:
+            print(f"  COLLECTOR FAILED: {label}: {e}")
+            failures.append(label)
+
+    if failures:
+        print(f"\nCollectors failed this run: {', '.join(failures)}")
 
     # Coverage report
     from coverage import write as write_coverage

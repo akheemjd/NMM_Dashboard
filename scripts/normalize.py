@@ -81,6 +81,28 @@ fuel_nat = raw_fuel.get("diesel_national_avg")
 if fuel_nat is None:
     raise ValueError("fuel.json has no diesel_national_avg — refusing to build")
 
+from datetime import datetime as _dt, timezone as _tz
+
+MAX_STALENESS_DAYS = {"fuel": 10}
+
+_print_date = raw_fuel.get("print_date")
+if _print_date:
+    try:
+        _pd = _dt.strptime(_print_date, "%a, %d %b %Y").date()
+        _age = (_dt.now(_tz.utc).date() - _pd).days
+        if _age > MAX_STALENESS_DAYS["fuel"]:
+            raise ValueError(
+                f"fuel.json print_date {_print_date} is {_age} days old, "
+                f"ceiling is {MAX_STALENESS_DAYS['fuel']} — refusing to build"
+            )
+        print(f"  fuel data age: {_age} days (print date {_print_date})")
+    except ValueError as _e:
+        if "refusing to build" in str(_e):
+            raise
+        print(f"  WARNING: could not parse print_date {_print_date!r}")
+else:
+    raise ValueError("fuel.json has no print_date — refusing to build")
+
 # Calc data (needed by home page)
 calc_cities = raw_dist.get("cities", [])
 calc_distances = raw_dist.get("distances", {})

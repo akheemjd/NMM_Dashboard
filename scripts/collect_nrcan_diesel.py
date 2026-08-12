@@ -177,7 +177,10 @@ def collect():
         return True
     except Exception as e:
         print(f"  NRCan diesel failed: {e}")
-        raise
+        if not os.path.exists(os.path.join(DATA_DIR, "fuel.json")):
+            raise
+        print("  Keeping last good fuel.json on disk. Staleness will be reported by coverage.")
+        return False
 
 
 if __name__ == "__main__":
