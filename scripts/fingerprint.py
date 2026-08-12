@@ -18,7 +18,8 @@ STATE = os.path.join(DATA, ".last_fingerprint")
 VOLATILE_KEYS = {
     "updated", "updated_at", "updated_iso", "build_version", "build_id",
     "generated_at", "last_success", "last_attempt", "live_updated",
-    "captured_at", "source_note", "dateModified",
+    "captured_at", "source_note", "dateModified", "captured_utc",
+    "fetch_attempted",
 }
 
 # Files whose values determine what the site says.

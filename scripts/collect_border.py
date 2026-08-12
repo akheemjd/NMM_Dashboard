@@ -39,7 +39,7 @@ def collect_border_live():
 
     # Update crossing data
     updated = datetime.now(timezone.utc).isoformat()
-    live_count = 0
+    live_ids = set()
 
     for cbsa in data.get("waitTimes", []):
         name = cbsa.get("poe-name", "")
@@ -82,11 +82,12 @@ def collect_border_live():
                     crossing["live_updated"] = cbsa.get("poe-updated", "")
                     crossing["captured_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
                     crossing["source"] = "cbsa"
-                    live_count += 1
+                    live_ids.add(matched)
                     break
 
     existing["updated"] = updated
     unique_ids = len({our_id for _, our_id in CBSA_MAP})
+    live_count = len(live_ids)
     if live_count == 0:
         existing["source_note"] = "CBSA fetch returned no matching crossings. Delays below are from the last successful fetch."
         existing["live_fetch_ok"] = False
