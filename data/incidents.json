@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-287070",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at NORTH OF 401 BEFORE SHEPPARD, Toronto. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.72174659,
+      "lng": -79.52240528,
+      "start": 1786551420,
+      "end": null,
+      "updated": 1786551420
+    },
+    {
       "id": "drivebc.ca/DBC-93772",
       "province": "BC",
       "highway": {
@@ -84,22 +100,6 @@
       "start": 1786550040,
       "end": null,
       "updated": 1786550040
-    },
-    {
-      "id": "ON-287056",
-      "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 409 Eastbound  at MARTIN GROVE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.69892212,
-      "lng": -79.57415474,
-      "start": 1786548780,
-      "end": null,
-      "updated": 1786548780
     },
     {
       "id": "ON-287055",
@@ -812,7 +812,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T16:18:08.990026+00:00",
+  "updated": "2026-08-12T16:21:02.698537+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
