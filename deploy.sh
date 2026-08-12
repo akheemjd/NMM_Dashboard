@@ -68,17 +68,17 @@ echo "=== Git push ==="
 if [ "$DRY_RUN" = "1" ]; then
   echo "  DRY_RUN=1 — skipping commit and push"
 else
-  git add -A
-  SUBSTANTIVE=$(git diff --cached --numstat -- docs/ data/ \
-    | awk '$1+$2 > 2 {print $3}' \
-    | grep -v -E 'data/(health|coverage)\.json' || true)
-  if [ -z "$SUBSTANTIVE" ]; then
-    echo "  No substantive change — resetting index, skipping deploy"
-    git reset >/dev/null
-  else
-    echo "  Changed: $(echo "$SUBSTANTIVE" | tr '\n' ' ')"
+  if python3 scripts/fingerprint.py; then
+    git add -A
     git commit -m "Auto-update $(date '+%Y-%m-%d %H:%M')" || echo "  (nothing to commit)"
-    git push origin master || echo "  Push failed — check GitHub auth"
+    if git push origin master; then
+      python3 scripts/fingerprint.py commit
+    else
+      echo "  Push failed — fingerprint not advanced, will retry next run"
+    fi
+  else
+    echo "  No data change — skipping deploy"
+    git reset >/dev/null
   fi
 fi
 echo "Done."
