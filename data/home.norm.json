@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-12 22:42 UTC",
-  "updated_iso": "2026-08-12T22:42:41+00:00",
-  "build_version": "1786574561",
+  "updated_at": "2026-08-12 22:52 UTC",
+  "updated_iso": "2026-08-12T22:52:40+00:00",
+  "build_version": "1786575160",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 4,
     "closed_count": 0,
-    "min_name": "Emerson-Pembina",
+    "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Thousand Islands Bridge",
-    "max_wait": "20 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 404, QEW, HWY 11",
+    "status_line": "QEW, HWY 11, HWY 17",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at LIVERPOOL ROAD, Pickering. 2\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at HWY 10/HURONTARIO, Mississauga. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Southbound  at HWY 401, Toronto. Left shoulder and\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  at MUSKOKA RD 117 UP, Bracebridge. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -245,16 +245,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -295,11 +295,11 @@
     {
       "name": "Thousand Islands Bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:02 EDT"
+      "captured_at": "18:44 EDT"
     }
   ],
   "market": [

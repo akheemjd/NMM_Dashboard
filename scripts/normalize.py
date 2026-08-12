@@ -292,7 +292,9 @@ mk_indicators = raw_market.get("indicators", [])
 dir_summary = raw_market.get("direction_summary", "")
 for ind in mk_indicators[:6]:
     direction = ind.get("direction", "flat")
-    cls = "up" if direction == "up" else "down" if direction == "down" else "flat"
+    # Market indicators mix cost and growth series, where "up" means the
+    # opposite thing in each. Neutral until sentiment is modelled properly.
+    cls = "flat"
     # Build a useful one-line note
     detail = ind.get("detail", "")
     note = detail if detail else clip(ind.get("what_it_means", ""), 60)

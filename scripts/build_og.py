@@ -10,10 +10,10 @@ DATA = os.path.join(ROOT, "data")
 DOCS = os.path.join(ROOT, "docs")
 
 W, H = 1200, 630
-BG = "#15171A"
-INK = "#E8EAEC"
-MUTED = "#8B939C"
-AMBER = "#F2A900"
+BG = "#0B0D11"
+INK = "#FFFFFF"
+MUTED = "#C8CFD8"
+AMBER = "#F5C518"
 
 FONT_DIR = "/usr/share/fonts/truetype/dejavu"
 
