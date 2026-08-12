@@ -1,38 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-286830",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at DIXON RD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.70434179,
-      "lng": -79.55766936,
-      "start": 1786519440,
-      "end": null,
-      "updated": 1786519440
-    },
-    {
-      "id": "ON-286829",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.78140055,
-      "lng": -79.25519493,
-      "start": 1786515420,
-      "end": null,
-      "updated": 1786518780
-    },
-    {
       "id": "ON-286573",
       "province": "ON",
       "highway": "HWY 17",
@@ -822,10 +790,42 @@
       "start": 1786503600,
       "end": 1786525200,
       "updated": 1786393380
+    },
+    {
+      "id": "ON-286423",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Nightly Construction on QEW Toronto bound  between CENTENNIAL PKWY and NIKOLA TESLA, Hamilton. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.24609,
+      "lng": -79.75694,
+      "start": 1786582800,
+      "end": 1786788000,
+      "updated": 1786392120
+    },
+    {
+      "id": "ON-286394",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Maintenance on HWY 400 Northbound  between JANE STREET, Toronto and HWY 9/DAVIS DR, Kettleby. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.711494,
+      "lng": -79.50609,
+      "start": 1786402800,
+      "end": 1786701600,
+      "updated": 1786389720
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T07:27:30.947747+00:00",
+  "updated": "2026-08-12T07:58:40.576301+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
