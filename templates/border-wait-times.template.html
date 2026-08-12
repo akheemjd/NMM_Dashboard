@@ -23,7 +23,7 @@
 
 <main class="wrap">
   <div class="breadcrumb"><a href="/">Dashboard</a> › Border Wait Times</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Commercial lanes</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
+  <div class="strip"><span>Commercial lanes</span><span>Page rebuilt {{updated_at}} · see note below on capture times</span></div>
 
   <section class="cockpit"><div class="gauges">
     <div class="gauge {{border.gauge_class}}"><div class="gl">Busiest now</div><div class="gv">{{border.heavy_count}} <small>Heavy</small></div><div class="gs">{{border.moderate_count}} moderate</div></div>
@@ -38,7 +38,7 @@
   <div class="panel"><table class="tbl bx">
   <!--LOOP:crossings--><tr><td>{{name}}<div class="sub">{{sub}} · captured {{captured_at}}</div></td><td class="r"><span class="px">{{wait}}</span></td><td class="r"><span class="pill {{status_class}}">{{status_label}}</span></td></tr><!--/LOOP:crossings-->
   </table></div>
-  <p class="note">Wait shown is the commercial-lane time captured at each crossing's last update. Direction: into the US unless noted.</p>
+  <p class="note">Wait times are captured from CBSA's published feed. Each crossing carries its own capture time, shown above in local time at that crossing. Capture times are not currently date-stamped, so treat them as indicative rather than guaranteed-current. This is being corrected.</p>
 
   <div class="sechead"><h2>Common questions</h2><span class="rule"></span></div>
   <div class="faq"><dl>

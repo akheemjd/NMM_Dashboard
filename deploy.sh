@@ -59,7 +59,7 @@ print('Health recorded.')
 # 4. Rebuild both
 
 echo "[5/6] Copying docs..."
-mkdir -p docs/v2 docs/assets && cp -r assets/. docs/assets/
+mkdir -p docs/assets && cp -r assets/. docs/assets/
 echo "[6/6] Deploying..."
 # Commit and push
 echo "=== Coverage validation ==="
@@ -69,7 +69,16 @@ if [ "$DRY_RUN" = "1" ]; then
   echo "  DRY_RUN=1 — skipping commit and push"
 else
   git add -A
-  git commit -m "Auto-update $(date '+%Y-%m-%d %H:%M')" || echo "  (nothing to commit)"
-  git push origin master || echo "  Push failed — check GitHub auth"
+  SUBSTANTIVE=$(git diff --cached --numstat -- docs/ data/ \
+    | awk '$1+$2 > 2 {print $3}' \
+    | grep -v -E 'data/(health|coverage)\.json' || true)
+  if [ -z "$SUBSTANTIVE" ]; then
+    echo "  No substantive change — resetting index, skipping deploy"
+    git reset >/dev/null
+  else
+    echo "  Changed: $(echo "$SUBSTANTIVE" | tr '\n' ' ')"
+    git commit -m "Auto-update $(date '+%Y-%m-%d %H:%M')" || echo "  (nothing to commit)"
+    git push origin master || echo "  Push failed — check GitHub auth"
+  fi
 fi
 echo "Done."

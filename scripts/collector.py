@@ -337,6 +337,11 @@ if __name__ == "__main__":
         try:
             with open(_os.path.join(DATA, path)) as f:
                 d = _json.load(f)
+            if path == "border.json":
+                # 'updated' is a fetch timestamp, not an observation time.
+                # Crossings carry only time-of-day with no date, so there is
+                # no honest observation date to report until Phase 5.
+                return None
             # Use print_date (source publication date) if available, else fetch date
             obs = d.get("print_date") or d.get("updated")
             if obs:
