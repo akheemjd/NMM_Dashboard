@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
+      "id": "ON-287077",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at SEC HWY 614 (TO MANITOUWADGE), Marathon. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.7034452,
+      "lng": -85.8585873,
+      "start": 1786553160,
+      "end": null,
+      "updated": 1786553160
+    },
+    {
+      "id": "ON-287074",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 89 Both Directions  at SLIGO ROAD WEST / LOVER'S LANE (MT FOREST WEST LIMITS), Mt Forest. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.98259,
+      "lng": -80.70427,
+      "start": 1786552380,
+      "end": null,
+      "updated": 1786552380
+    },
+    {
       "id": "ON-287070",
       "province": "ON",
       "highway": "HWY 400",
       "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at NORTH OF 401 BEFORE SHEPPARD, Toronto. 1 right lane closed.",
+      "description": "Collision on HWY 400 Northbound  at NORTH OF 401 BEFORE SHEPPARD, Toronto. 2 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane closed",
+      "lanes": "2 right lanes closed",
       "lat": 43.72174659,
       "lng": -79.52240528,
       "start": 1786551420,
       "end": null,
-      "updated": 1786551420
+      "updated": 1786551900
     },
     {
       "id": "drivebc.ca/DBC-93772",
@@ -68,38 +100,6 @@
       "start": 1786550580,
       "end": null,
       "updated": 1786550580
-    },
-    {
-      "id": "ON-287064",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BURLOAK DRIVE, Burlington. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.39799018,
-      "lng": -79.7541197,
-      "start": 1786550220,
-      "end": null,
-      "updated": 1786550220
-    },
-    {
-      "id": "ON-287063",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at Highway 4 / Colonel Talbot Rd, London. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 42.853552778,
-      "lng": -81.275172222,
-      "start": 1786550040,
-      "end": null,
-      "updated": 1786550040
     },
     {
       "id": "ON-287055",
@@ -347,22 +347,6 @@
       "updated": 1786543740
     },
     {
-      "id": "ON-287027",
-      "province": "ON",
-      "highway": "HWY 522",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 522 Westbound  at EAST RD-NORTH RD-WILSON & HARDY TWPS, Port Loring. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 45.9330121,
-      "lng": -79.9947189,
-      "start": 1786543500,
-      "end": null,
-      "updated": 1786543500
-    },
-    {
       "id": "ON-287040",
       "province": "ON",
       "highway": "HWY 5",
@@ -377,22 +361,6 @@
       "start": 1786941000,
       "end": 1787805000,
       "updated": 1786543200
-    },
-    {
-      "id": "ON-287020",
-      "province": "ON",
-      "highway": "HWY 5",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 5 Eastbound  at HWY 6 / CLAPPISON CORNER'S, Hamilton. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.31195,
-      "lng": -79.917923,
-      "start": 1786542480,
-      "end": null,
-      "updated": 1786542480
     },
     {
       "id": "ON-287016",
@@ -809,10 +777,42 @@
       "start": 1786626000,
       "end": 1787079600,
       "updated": 1786478460
+    },
+    {
+      "id": "ON-286755",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 11 Northbound Off-ramp at SIMCOE ROAD 93/PENETANGUISHENE ROAD, Oro Medonte. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.435024,
+      "lng": -79.643555,
+      "start": 1786626000,
+      "end": 1787079600,
+      "updated": 1786478340
+    },
+    {
+      "id": "ON-287048",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 427 Southbound Off-ramp at HWY 409, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.697174,
+      "lng": -79.60728,
+      "start": 1787022000,
+      "end": 1787130000,
+      "updated": 1786478220
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T16:26:06.692123+00:00",
+  "updated": "2026-08-12T16:51:36.660699+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
