@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-12 18:55 UTC",
-  "updated_iso": "2026-08-12T18:55:13+00:00",
-  "build_version": "1786560913",
+  "updated_at": "2026-08-12 20:40 UTC",
+  "updated_iso": "2026-08-12T20:40:50+00:00",
+  "build_version": "1786567250",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "14 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -190,16 +190,16 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.3927",
-    "direction": "stronger CAD",
-    "change": "-0.0015",
-    "vs_baseline": "-0.0163",
+    "usd_cad": "1.3930",
+    "direction": "weaker CAD",
+    "change": "+0.0003",
+    "vs_baseline": "-0.0151",
     "high_52w": "\u2014",
     "low_52w": "\u2014"
   },
   "incidents": {
     "none": false,
-    "active_count": 13,
+    "active_count": 7,
     "gauge_class": "warn",
     "status_line": "HWY 404, HWY 11, HWY 17, HWY 89",
     "incidents": [
@@ -223,11 +223,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:50 EDT"
+      "captured_at": "16:24 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -236,16 +236,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -254,7 +254,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,7 +272,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:26 MDT"
+      "captured_at": "14:20 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT"
+      "captured_at": "13:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -290,7 +290,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -299,7 +299,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "16:15 EDT"
     }
   ],
   "market": [
