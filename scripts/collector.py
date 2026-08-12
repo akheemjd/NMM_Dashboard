@@ -65,21 +65,33 @@ def collect_exchange_rate():
                 "date": o["d"],
                 "rate": round(float(o["FXUSDCAD"]["v"]), 4)
             })
+        if not rates:
+            raise ValueError("Bank of Canada returned no observations")
+
+        rates.sort(key=lambda r: r["date"])
+
         current = rates[-1]["rate"]
-        prev = rates[0]["rate"] if len(rates) > 1 else current
+        observation_date = rates[-1]["date"]
+        prev = rates[-2]["rate"] if len(rates) > 1 else current
+        prev_date = rates[-2]["date"] if len(rates) > 1 else observation_date
         change = round(current - prev, 4)
         change_pct = round((change / prev) * 100, 2) if prev else 0
 
         save("exchange", {
             "current": current,
+            "observation_date": observation_date,
+            "previous": prev,
+            "previous_date": prev_date,
             "change": change,
             "change_pct": change_pct,
+            "change_window": "vs previous published observation",
             "history": rates,
             "updated": datetime.now(timezone.utc).isoformat(),
         })
-        print(f"  USD/CAD: {current} ({change:+.4f})")
+        print(f"  USD/CAD: {current} on {observation_date} ({change:+.4f} vs {prev_date})")
     except Exception as e:
         print(f"  Exchange rate failed: {e}")
+        raise
 
 
 def collect_weather():
