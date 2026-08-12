@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-287085",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Collision on HWY 11 Northbound  at High Falls Rd/Muskoka Rd 50/Holiday Park Dr - Bracebridge, Bracebridge. 1 lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 lane closed",
+      "lat": 45.091175365,
+      "lng": -79.301802653,
+      "start": 1786555620,
+      "end": null,
+      "updated": 1786555620
+    },
+    {
+      "id": "ON-287074",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 89 Both Directions  between SLIGO ROAD WEST / LOVER'S LANE (MT FOREST WEST LIMITS), Mt Forest and Concession 2, Conn. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.98259,
+      "lng": -80.70427,
+      "start": 1786552380,
+      "end": null,
+      "updated": 1786553760
+    },
+    {
       "id": "ON-287077",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,38 +47,6 @@
       "start": 1786553160,
       "end": null,
       "updated": 1786553160
-    },
-    {
-      "id": "ON-287074",
-      "province": "ON",
-      "highway": "HWY 89",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 89 Both Directions  at SLIGO ROAD WEST / LOVER'S LANE (MT FOREST WEST LIMITS), Mt Forest. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.98259,
-      "lng": -80.70427,
-      "start": 1786552380,
-      "end": null,
-      "updated": 1786552380
-    },
-    {
-      "id": "ON-287070",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at NORTH OF 401 BEFORE SHEPPARD, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.72174659,
-      "lng": -79.52240528,
-      "start": 1786551420,
-      "end": null,
-      "updated": 1786551900
     },
     {
       "id": "drivebc.ca/DBC-93772",
@@ -68,6 +68,22 @@
       "start": "2026-07-24T15:03:25-07:00",
       "end": "",
       "updated": "2026-08-12T09:15:23-07:00"
+    },
+    {
+      "id": "ON-287084",
+      "province": "ON",
+      "highway": "HWY 7A",
+      "direction": "Westbound",
+      "description": "Daily Construction on HWY 7A Westbound  between NESBITT LINE ROAD and REGIONAL ROAD 57 SOUTH, Port Perry. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.15459,
+      "lng": -78.73721,
+      "start": 1786960800,
+      "end": 1787342400,
+      "updated": 1786549560
     },
     {
       "id": "ON-287055",
@@ -212,27 +228,6 @@
       "start": 1786532400,
       "end": 1786744800,
       "updated": 1786546020
-    },
-    {
-      "id": "drivebc.ca/RIDE-101282",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1A",
-        "from": "Marine Drive Offramp",
-        "direction": "S",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Road maintenance. Starting Wed Aug 12 until Wed Aug 12. From 7:45 AM to 12:00 PM PDT, Wednesday. Watch for traffic control. Crews will be working in the bus lane in the cloverleaf.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.32687949,
-      "lng": -123.1273128,
-      "start": "2026-08-12T07:41:29-07:00",
-      "end": "",
-      "updated": "2026-08-12T07:41:29-07:00"
     },
     {
       "id": "ON-287038",
@@ -812,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T16:58:08.596834+00:00",
+  "updated": "2026-08-12T17:33:26.782807+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
