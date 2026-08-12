@@ -9,6 +9,14 @@ DATA = os.path.join(BASE, "data")
 DOCS = os.path.join(BASE, "docs")
 ASSETS = os.path.join(BASE, "assets")
 
+# Tokens legitimately absent on some pages. Anything not listed here that
+# fails to resolve stops the build rather than rendering blank.
+OPTIONAL_TOKENS = {
+    "sponsor_page", "sponsor_border", "sponsor_fuel", "sponsor_fx",
+    "sponsor_incidents", "sponsor_theft", "sponsor_market", "sponsor_news",
+    "meta",
+}
+
 def load_json(name):
     p = os.path.join(DATA, name + ".json")
     return json.load(open(p)) if os.path.exists(p) else {}
@@ -40,16 +48,26 @@ def fill(template, data):
     template = fill_ifs(template, data)
 
     # 4. Resolve {{nested.tokens}} AFTER loops/optionals/ifs
+    unresolved = []
+
     def replace_token(match):
         key = match.group(1)
         val = resolve_token(data, key)
         if val is None:
-            return ""  # clean missing tokens silently
+            if key in OPTIONAL_TOKENS:
+                return ""
+            unresolved.append(key)
+            return match.group(0)
         if isinstance(val, (dict, list)):
             return match.group(0)  # leave complex objects for loops
         return str(val)
 
     template = re.sub(r'\{\{(\w+(?:\.\w+)*)\}\}', replace_token, template)
+
+    if unresolved:
+        raise ValueError(
+            f"unresolved template tokens: {sorted(set(unresolved))}"
+        )
 
     # 5. Build meta
     template = template.replace("{{updated_at}}", datetime.utcnow().strftime("%Y-%m-%d %H:%M"))

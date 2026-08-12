@@ -1,6 +1,7 @@
 {
-  "updated_at": "10:15 EDT",
-  "build_version": "1786545708",
+  "updated_at": "2026-08-12 15:46 UTC",
+  "updated_iso": "2026-08-12T15:46:51+00:00",
+  "build_version": "1786549611",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -17,6 +18,7 @@
     "national_nmdi": "222.2",
     "change_7d": "\u2014",
     "change_7d_band": "noise",
+    "change_30d": "\u2014",
     "low_code": "AB",
     "low": "200.4",
     "high_code": "QC",
@@ -188,26 +190,29 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4206",
-    "direction": "weaker CAD",
-    "change": "+0.0279"
+    "usd_cad": "1.3927",
+    "direction": "stronger CAD",
+    "change": "-0.0015",
+    "vs_baseline": "-0.0163",
+    "high_52w": "\u2014",
+    "low_52w": "\u2014"
   },
   "incidents": {
     "none": false,
-    "active_count": 15,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 6, HWY 522, HWY 5",
+    "status_line": "HWY 427, HWY 409, HWY 400, HWY 522",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Northbound  at SWAN LAKE PARK RD(W), Swastika.\u2026",
+        "road": "HWY 427",
+        "what": "Collision on HWY 427 Northbound EXPRESS at DUNDAS STREET, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 6",
-        "what": "Disabled Vehicle on HWY 6 Southbound RAMP at HWY 403 (HAMILTON), Hamilton.\u2026",
+        "road": "HWY 409",
+        "what": "Disabled Vehicle on HWY 409 Eastbound  at MARTIN GROVE ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"

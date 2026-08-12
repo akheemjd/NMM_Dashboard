@@ -9,13 +9,16 @@ def clip(text, limit=110):
         return text
     return text[:limit].rsplit(" ", 1)[0] + "\u2026"
 
+DATA = os.path.expanduser("~/northern-mile-dashboard/data")
+
 # ── Materiality band classification ──
 import yaml
-thresh = {}
-try:
-    with open(os.path.join(os.path.dirname(DATA), "config", "thresholds.yaml")) as tf:
-        thresh = yaml.safe_load(tf)
-except: pass
+_thresh_path = os.path.join(os.path.dirname(DATA), "config", "thresholds.yaml")
+with open(_thresh_path) as tf:
+    thresh = yaml.safe_load(tf)
+if not thresh or "verbs" not in thresh:
+    raise ValueError(f"thresholds.yaml at {_thresh_path} loaded empty or malformed")
+print(f"  thresholds loaded: {len(thresh)} series")
 
 def classify_band(change, series, thresh):
     """Classify a data point into noise/notable/material/alert band."""
@@ -45,8 +48,6 @@ def get_verb(band, direction, thresh):
             return v
     return verbs[0] if verbs else "changed"
 
-
-DATA = os.path.expanduser("~/northern-mile-dashboard/data")
 
 def load(name):
     p = os.path.join(DATA, name + ".json" if not name.endswith(".json") else name)
@@ -143,6 +144,7 @@ fuel = {
     
     "change_7d": "—",
     "change_7d_band": "noise",
+    "change_30d": "—",
     "low_code": d_sorted[0][0], "low": f"{d_sorted[0][1]:.1f}",
     "high_code": d_sorted[-1][0], "high": f"{d_sorted[-1][1]:.1f}",
     "spread": f"{d_sorted[-1][1]-d_sorted[0][1]:.1f}",
@@ -217,6 +219,22 @@ fx = {
     "direction": direction,
     "change": f"{'+' if fx_chg>0 else ''}{fx_chg:.4f}",
 }
+
+# FX context gauges — computed from exchange.json history where available.
+_fx_hist = raw_ex.get("history", [])
+if isinstance(_fx_hist, list) and _fx_hist:
+    _fx_rates = [h["rate"] for h in _fx_hist if isinstance(h, dict) and h.get("rate") is not None]
+    if len(_fx_rates) >= 2:
+        _avg30 = round(sum(_fx_rates) / len(_fx_rates), 4)
+        fx["vs_baseline"] = f"{fx_rate - _avg30:+.4f}"
+    else:
+        fx["vs_baseline"] = "—"
+else:
+    fx["vs_baseline"] = "—"
+
+# 52-week high/low need 52 weeks of history. exchange.json carries 30 days.
+fx["high_52w"] = "—"
+fx["low_52w"] = "—"
 
 # ===== INCIDENTS =====
 # Already sorted above
@@ -377,10 +395,10 @@ home = {
 }
 
 write("home.norm", home)
-write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso})
+write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts,
     "updated_iso": ts_iso, "build_version": build_version, "captured_at": ts})
-write("fx.norm", {"fx": fx, "updated_at": ts, "updated_iso": ts_iso})
+write("fx.norm", {"fx": fx, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 # Build raw incidents JSON array for the map
 inc_json = []
 for i in raw_inc.get("incidents", [])[:50]:
@@ -442,7 +460,7 @@ write("incidents.norm", {
     "updated_iso": ts_iso,
     "build_version": build_version,
 })
-write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts, "updated_iso": ts_iso})
+write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
@@ -457,9 +475,9 @@ write("market.norm", {
     "updated_iso": ts_iso,
     "build_version": build_version,
 })
-write("news.norm", {"news": news, "updated_at": ts, "updated_iso": ts_iso})
+write("news.norm", {"news": news, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 
-write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso})
+write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 
 # Snapshots — idempotent, per calendar day
 snapshot("diesel", "national", fuel_nat)
