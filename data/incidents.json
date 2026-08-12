@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-286822",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 400, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.716474962,
+      "lng": -79.518004954,
+      "start": 1786505160,
+      "end": null,
+      "updated": 1786505160
+    },
+    {
+      "id": "ON-286821",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at VICTORIA PARK AVE, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.76800217,
+      "lng": -79.31961432,
+      "start": 1786504620,
+      "end": null,
+      "updated": 1786504620
+    },
+    {
       "id": "ON-286820",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +47,6 @@
       "start": 1786503300,
       "end": null,
       "updated": 1786503300
-    },
-    {
-      "id": "ON-286819",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at KEELE ST, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.72145827,
-      "lng": -79.48370247,
-      "start": 1786503120,
-      "end": null,
-      "updated": 1786503120
     },
     {
       "id": "ON-286818",
@@ -791,31 +807,10 @@
       "start": "2026-07-30T10:14:17-07:00",
       "end": "",
       "updated": "2026-08-11T00:00:00-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-101228",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Trans-Canada Highway W",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Bridge maintenance. Starting Sat Aug 15 until Sat Aug 15. Westbound lane closure. Reduced to one lane. Watch for traffic control. Slow lane closure. Reduce speed.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.29068052,
-      "lng": -116.84170691,
-      "start": "2026-08-10T15:00:23-07:00",
-      "end": "",
-      "updated": "2026-08-10T15:00:23-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-08-12T03:18:16.964095+00:00",
+  "updated": "2026-08-12T03:49:25.057466+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
