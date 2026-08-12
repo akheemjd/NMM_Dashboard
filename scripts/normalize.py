@@ -56,7 +56,13 @@ def write(name, data):
     with open(os.path.join(DATA, name + ".json"), "w") as f:
         json.dump(data, f, indent=2)
 
-def now_fmt(): return datetime.utcnow().strftime("%Y-%m-%d %H:%M")
+from datetime import timezone
+
+def now_fmt():
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+
+def now_iso():
+    return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 raw_fuel = load("fuel.json")
 raw_ex = load("exchange.json")
@@ -68,6 +74,7 @@ raw_news = load("news.json")
 raw_dist = load("distances.json")
 
 ts = now_fmt()
+ts_iso = now_iso()
 build_version = str(int(time.time()))  # cache-busting, fresh each build
 provs = raw_fuel.get("provinces", {})
 fuel_nat = raw_fuel.get("diesel_national_avg", 171.9)
@@ -150,11 +157,11 @@ for c in crossings[:12]:
     else: cls = "ok"
     wait = f"{d} min" if d > 0 else "No delay"
     wait_num = str(d) if d > 0 else "0"
-    ts = c.get("live_updated", "") or c.get("updated", "")
-    if ts and len(ts) >= 16:
-        ts = ts[:16].replace("T"," ")
-    elif not ts:
-        ts = "recent"
+    cap_ts = c.get("live_updated", "") or c.get("updated", "")
+    if cap_ts and len(cap_ts) >= 16:
+        cap_ts = cap_ts[:16].replace("T"," ")
+    elif not cap_ts:
+        cap_ts = "recent"
     
     item = {
         "name": c.get("name",""),
@@ -163,7 +170,7 @@ for c in crossings[:12]:
         "status_label": "Heavy" if d>15 else "Moderate" if d>0 else "Flowing",
         "status_class": cls,
         "url": "/border-wait-times/",
-        "captured_at": ts,
+        "captured_at": cap_ts,
     }
     border_rows.append(item)
     crossings_for_page.append(item)
@@ -315,6 +322,7 @@ for t in raw_theft.get("incidents", [])[:30]:
 # ===== ASSEMBLE HOME =====
 home = {
     "updated_at": ts,
+    "updated_iso": ts_iso,
     "build_version": build_version,
     "border": border,
     "fuel": fuel,
@@ -339,10 +347,10 @@ home = {
 }
 
 write("home.norm", home)
-write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts})
+write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso})
 write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts,
-    "build_version": build_version, "captured_at": ts})
-write("fx.norm", {"fx": fx, "updated_at": ts})
+    "updated_iso": ts_iso, "build_version": build_version, "captured_at": ts})
+write("fx.norm", {"fx": fx, "updated_at": ts, "updated_iso": ts_iso})
 # Build raw incidents JSON array for the map
 inc_json = []
 for i in raw_inc.get("incidents", [])[:50]:
@@ -401,9 +409,10 @@ write("incidents.norm", {
     "incidents_json": json.dumps(inc_json),
     "coming_roadwork": coming_roadwork,
     "updated_at": ts,
+    "updated_iso": ts_iso,
     "build_version": build_version,
 })
-write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts})
+write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts, "updated_iso": ts_iso})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
@@ -415,9 +424,10 @@ write("market.norm", {
     "current_diesel": rates.get("current_diesel", "—"),
     "usd_cad": rates.get("usd_cad", "—"),
     "updated_at": ts,
+    "updated_iso": ts_iso,
     "build_version": build_version,
 })
-write("news.norm", {"news": news, "updated_at": ts})
+write("news.norm", {"news": news, "updated_at": ts, "updated_iso": ts_iso})
 
 
 # ===== BORDER FUEL (US states) =====
@@ -505,7 +515,7 @@ for code in ["BC","AB","SK","MB","ON","QC","NB","NS","PE","NL"]:
         "per_100l": f"${per_100l:.2f}",
     })
 
-write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "border_fuel": border_fuel, "tax": tax, "ifta": ifta, "updated_at": ts})
+write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "border_fuel": border_fuel, "tax": tax, "ifta": ifta, "updated_at": ts, "updated_iso": ts_iso})
 
 # Snapshots — idempotent, per calendar day
 snapshot("diesel", "national", fuel_nat)
