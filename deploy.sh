@@ -2,6 +2,21 @@
 # Deploy dashboard to GitHub Pages
 set -e
 DRY_RUN="${DRY_RUN:-0}"
+
+# Guard against shadowing. This script must run from the repo, and the
+# Hermes entry point must be a symlink to it, never a copy.
+EXPECTED="/home/hermes/northern-mile-dashboard/deploy.sh"
+HERMES_ENTRY="$HOME/.hermes/scripts/deploy.sh"
+if [ -e "$HERMES_ENTRY" ] && [ ! -L "$HERMES_ENTRY" ]; then
+  echo "FATAL: $HERMES_ENTRY is a real file, not a symlink to $EXPECTED"
+  echo "A stale copy is shadowing the repo script. Refusing to run."
+  exit 1
+fi
+if [ -L "$HERMES_ENTRY" ] && [ "$(readlink -f "$HERMES_ENTRY")" != "$EXPECTED" ]; then
+  echo "FATAL: $HERMES_ENTRY points at $(readlink -f "$HERMES_ENTRY"), expected $EXPECTED"
+  exit 1
+fi
+
 cd /home/hermes/northern-mile-dashboard
 
 echo "=== Deploy $(date) ==="
