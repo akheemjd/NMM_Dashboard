@@ -14,6 +14,8 @@ FEEDS = [
     ("Canadian Trucking Alliance", "https://cantruck.ca/feed/"),
 ]
 
+UA = "Mozilla/5.0 (compatible; NorthernMileDashboard/1.0; +https://dashboard.northernmilemedia.com)"
+
 # Canadian city coordinate lookup
 CITY_COORDS = {
     "toronto": (43.70, -79.42), "brampton": (43.69, -79.76), "mississauga": (43.59, -79.64),
@@ -117,13 +119,19 @@ def collect_theft_incidents():
     ]
 
     incidents = []
-    
+    feed_status = []
+
     for source, url in FEEDS:
+        status = "unknown"
+        items_seen = 0
+        matched = 0
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
             xml_text = urllib.request.urlopen(req, timeout=15).read().decode("utf-8", errors="replace")
+            status = 200
             root = ET.fromstring(xml_text)
             items = root.findall(".//item")
+            items_seen = len(items)
 
             for item in items:
                 title = ""
@@ -189,8 +197,18 @@ def collect_theft_incidents():
                     "lng": lng,
                     "geocoded": bool(coords),
                 })
+                matched += 1
         except Exception as e:
+            status = str(e)
             print(f"  Theft {source}: {e}")
+
+        feed_status.append({
+            "name": source,
+            "url": url,
+            "status": status,
+            "items_seen": items_seen,
+            "matched": matched,
+        })
 
     # Load existing data and merge new matches (accumulate, don't replace)
     hotspots = []
@@ -249,6 +267,7 @@ def collect_theft_incidents():
         json.dump({
             "hotspots": hotspots,
             "incidents": merged,
+            "feeds": feed_status,
             "top_targets": targets,
             "prevention": tips,
             "source": "industry news feeds",
