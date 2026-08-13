@@ -33,22 +33,6 @@
       "updated": 1786588149
     },
     {
-      "id": "ON-287379",
-      "province": "ON",
-      "highway": "HWY 9",
-      "direction": "Westbound",
-      "description": "Collision on HWY 9 Westbound  at AIRPORT ROAD, Caledon. 1 lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane and WEST shoulder closed",
-      "lat": 43.946439,
-      "lng": -79.970379,
-      "start": 1786587660,
-      "end": null,
-      "updated": 1786587660
-    },
-    {
       "id": "ON-287362",
       "province": "ON",
       "highway": "HWY 401",
@@ -804,10 +788,26 @@
       "start": 1786962600,
       "end": 1787952600,
       "updated": 1786542180
+    },
+    {
+      "id": "ON-287019",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound Off-ramp at GILMORE ROAD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.919228,
+      "lng": -78.96801,
+      "start": 1786962600,
+      "end": 1787952600,
+      "updated": 1786542000
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T02:48:16.654117+00:00",
+  "updated": "2026-08-13T02:50:58.911585+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

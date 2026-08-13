@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-13 02:48 UTC",
-  "updated_iso": "2026-08-13T02:48:22+00:00",
-  "build_version": "1786589302",
+  "updated_at": "2026-08-13 02:51 UTC",
+  "updated_iso": "2026-08-13T02:51:03+00:00",
+  "build_version": "1786589463",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -199,9 +199,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 9, EASTPORT",
+    "status_line": "HWY 401, EASTPORT",
     "incidents": [
       {
         "road": "HWY 401",
@@ -211,8 +211,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 9",
-        "what": "Collision on HWY 9 Westbound  at AIRPORT ROAD, Caledon. 1 lane and WEST\u2026",
+        "road": "HWY 401",
+        "what": "Highway Maintenance on HWY 401 Westbound COLLECTOR at YONGE ST, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -232,20 +232,20 @@
     {
       "name": "Blue Water Bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 EDT"
+      "captured_at": "22:44 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "12 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "16 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -254,7 +254,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 PDT"
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
