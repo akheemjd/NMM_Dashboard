@@ -4,6 +4,7 @@ Fetches NRCan weekly diesel survey via RSS (productID=5).
 Runs: every 30 min via collector pipeline."""
 
 import json, os, sys, urllib.request, xml.etree.ElementTree as ET
+import unicodedata
 from datetime import datetime, timezone
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
@@ -33,6 +34,11 @@ CITY_PROVINCE = {
     "Woodstock": "NB", "Yarmouth": "NS", "Yellowknife": "NT",
     "Canada": "CA",
 }
+
+def _norm(s):
+    return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii").strip()
+
+CITY_PROVINCE_NORM = {_norm(k): v for k, v in CITY_PROVINCE.items()}
 
 # All location IDs for diesel RSS feed
 LOCATION_IDS = [
@@ -94,7 +100,13 @@ def parse_prices(root):
         except (ValueError, AttributeError):
             continue
         
-        # Only keep most recent entry per city
+        # Guard: a repeated title with a different price signals a same-named
+        # location collision (two distinct cities sharing a name). Fail loudly.
+        if city in prices and prices[city] != price:
+            raise ValueError(
+                f"Duplicate NRCan city title with differing price: {city} "
+                f"({prices[city]} vs {price})"
+            )
         if city not in prices:
             prices[city] = price
     
@@ -103,13 +115,16 @@ def parse_prices(root):
 
 def compute_provincial(prices):
     """Average city prices into provincial + national figures."""
+    # Hard-fail on any city that doesn't resolve to a province (accent-normalized).
+    unmapped = [c for c in prices if _norm(c) not in CITY_PROVINCE_NORM]
+    if unmapped:
+        raise ValueError(f"Unmapped NRCan cities: {unmapped}")
+
     provinces = {}
-    
     for city, price in prices.items():
-        prov = CITY_PROVINCE.get(city)
+        prov = CITY_PROVINCE_NORM[_norm(city)]
         if not prov or prov == "CA":
             continue
-        
         if prov not in provinces:
             provinces[prov] = []
         provinces[prov].append(price)
