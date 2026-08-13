@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13 07:00 UTC",
-  "updated_iso": "2026-08-13T07:00:15+00:00",
-  "build_version": "1786604415",
+  "updated_at": "2026-08-13 07:31 UTC",
+  "updated_iso": "2026-08-13T07:31:26+00:00",
+  "build_version": "1786606286",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "9 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -201,18 +201,18 @@
     "none": false,
     "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 401, HWY 427",
+    "status_line": "HWY 401, HWY 17, HWY 427",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Vehicle Fire on HWY 17 Westbound  at W JCT HWY 102-SISTONEN CORNERS, Kakabeka\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  at HWY 16 (IC 721B), Johnstown. Left shoulder\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at VICTORIA PARK AVE, Toronto. 2\u2026",
+        "road": "HWY 17",
+        "what": "Vehicle Fire on HWY 17 Westbound  at W JCT HWY 102-SISTONEN CORNERS, Kakabeka\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -227,7 +227,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -241,20 +241,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "9 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,16 +272,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 MDT"
+      "captured_at": "01:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 PDT"
+      "captured_at": "00:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
