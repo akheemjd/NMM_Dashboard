@@ -211,7 +211,6 @@ def collect_theft_incidents():
         })
 
     # Load existing data and merge new matches (accumulate, don't replace)
-    hotspots = []
     targets = []
     tips = []
     existing_incidents = []
@@ -219,7 +218,6 @@ def collect_theft_incidents():
         with open(os.path.join(DATA_DIR, "theft.json")) as f:
             existing = json.load(f)
             existing_incidents = existing.get("incidents", [])
-            hotspots = existing.get("hotspots", [])
             targets = existing.get("top_targets", [])
             tips = existing.get("prevention", [])
     except Exception:
@@ -265,7 +263,6 @@ def collect_theft_incidents():
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(path, "w") as f:
         json.dump({
-            "hotspots": hotspots,
             "incidents": merged,
             "feeds": feed_status,
             "top_targets": targets,

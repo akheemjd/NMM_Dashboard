@@ -319,24 +319,6 @@ for t in raw_theft.get("incidents", [])[:8]:
 
 theft_home = theft[:3]
 
-# Hotspots from theft data
-hotspots = []
-risk_labels = {"high": "High risk", "medium": "Moderate", "low": "Low"}
-for h in raw_theft.get("hotspots", []):
-    risk = h.get("risk", "medium")
-    hotspots.append({
-        "area": h.get("city", "GTA"),
-        "count": risk_labels.get(risk, risk.title()),
-        "value": h.get("note", "—")[:60],
-    })
-if not hotspots:
-    hotspots = [
-        {"area": "Greater Toronto Area", "count": "High risk", "value": "Highest cargo theft volume in Canada"},
-        {"area": "Montreal", "count": "High risk", "value": "Second highest. Port and Saint-Laurent zones"},
-        {"area": "Calgary/Edmonton", "count": "Moderate", "value": "Nisku, Balzac, and Acheson parks"},
-        {"area": "Vancouver", "count": "Moderate", "value": "Port area. Delta and Surrey"},
-    ]
-
 # ===== NEWS =====
 news = []
 for n in raw_news.get("headlines", [])[:10]:
@@ -467,7 +449,7 @@ write("incidents.norm", {
     "updated_iso": ts_iso,
     "build_version": build_version,
 })
-write("theft.norm", {"theft": theft_home, "theft_none": len(theft) == 0, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
+write("theft.norm", {"theft": theft_home, "theft_none": len(theft) == 0, "theft_json": json.dumps(theft_json), "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
