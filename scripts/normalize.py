@@ -116,6 +116,17 @@ if _missing:
 d_vals = [(c, provs[c]["diesel"]) for c in INDEX_PROVINCES]
 d_sorted = sorted(d_vals, key=lambda x: x[1])
 
+# Percentile within the provincial price range (0 = cheapest, 100 = dearest).
+_lo = d_sorted[0][1]
+_hi = d_sorted[-1][1]
+_span = _hi - _lo
+
+
+def _pct(v):
+    if _span == 0:
+        return 50.0
+    return round(min(max((v - _lo) / _span * 100, 0), 100), 1)
+
 
 def _fmt_delta(v):
     """Never render a fabricated zero. None means not enough history."""
@@ -136,6 +147,7 @@ for i, (code, price) in enumerate(d_sorted):
         "code": code,
         "name": names[code],
         "price": f"{price:.1f}",
+        "pct": _pct(price),
         "change": _fmt_delta(delta("diesel", code, 7)),
         "change_class": (
             "flat" if delta("diesel", code, 7) is None
@@ -160,18 +172,30 @@ if _d7 is None:
 else:
     _band_7d = classify_band(_d7, "diesel_weekly", thresh)
 
+if _d7 is None:
+    _change_7d_class = "flat"
+elif _d7 > 0:
+    _change_7d_class = "up"
+elif _d7 < 0:
+    _change_7d_class = "down"
+else:
+    _change_7d_class = "flat"
+
 fuel = {
     "national_diesel": f"{fuel_nat:.1f}",
     "series": "NMDI",
     "national_nmdi": f"{fuel_nat:.1f}",
-    
+    "print_date": _print_date,
+    "national_pct": _pct(fuel_nat),
+
     "change_7d": _fmt_delta(_d7),
     "change_7d_band": _band_7d,
+    "change_7d_class": _change_7d_class,
     "change_30d": _fmt_delta(_d30),
     "low_code": d_sorted[0][0], "low": f"{d_sorted[0][1]:.1f}",
     "high_code": d_sorted[-1][0], "high": f"{d_sorted[-1][1]:.1f}",
     "spread": f"{d_sorted[-1][1]-d_sorted[0][1]:.1f}",
-    
+
     "fuel_top": fuel_top,
 }
 
