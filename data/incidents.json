@@ -1,6 +1,59 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101328",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 97",
+        "from": "Highway 97 N",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident. Reduced to one lane. Emergency vehicles on scene. Watch for traffic control. Hwy 97 northbound traffic reduced to 1 lane through the intersection.  Eastbound Hwy 33 left lane traffic blocked.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.88945465,
+      "lng": -119.42044188,
+      "start": "2026-08-12T23:52:44-07:00",
+      "end": "",
+      "updated": "2026-08-12T23:52:44-07:00"
+    },
+    {
+      "id": "ON-287463",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Vehicle Fire on HWY 17 Westbound  at W JCT HWY 102-SISTONEN CORNERS, Kakabeka Falls. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 48.5340363,
+      "lng": -89.6496099,
+      "start": 1786603800,
+      "end": null,
+      "updated": 1786603800
+    },
+    {
+      "id": "ON-287462",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at VICTORIA PARK AVE, Toronto. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.76891048,
+      "lng": -79.31000274,
+      "start": 1786603260,
+      "end": null,
+      "updated": 1786603500
+    },
+    {
       "id": "ON-287455",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +68,6 @@
       "start": 1786601820,
       "end": null,
       "updated": 1786601820
-    },
-    {
-      "id": "ON-287453",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.77486841,
-      "lng": -79.28440092,
-      "start": 1786599900,
-      "end": null,
-      "updated": 1786599900
     },
     {
       "id": "ON-287432",
@@ -772,42 +809,10 @@
       "start": 1786960800,
       "end": 1787954400,
       "updated": 1786545300
-    },
-    {
-      "id": "ON-287036",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 26 Westbound  between LOCKE AVE and MOSLEY STREET/SIMCOE ROAD 92, Clearview. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.42583,
-      "lng": -80.09732,
-      "start": 1787007600,
-      "end": 1787835600,
-      "updated": 1786543920
-    },
-    {
-      "id": "ON-287035",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 26 Eastbound  between MOSLEY STREET/SIMCOE ROAD 92 and LOCKE AVE, Clearview. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.46677,
-      "lng": -80.1075,
-      "start": 1787007600,
-      "end": 1787835600,
-      "updated": 1786543740
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T06:29:02.705724+00:00",
+  "updated": "2026-08-13T07:00:11.069801+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
