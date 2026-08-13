@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13 15:48 UTC",
-  "updated_iso": "2026-08-13T15:48:20+00:00",
-  "build_version": "1786636100",
+  "updated_at": "2026-08-13 16:19 UTC",
+  "updated_iso": "2026-08-13T16:19:29+00:00",
+  "build_version": "1786637969",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "8 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 17, HWY 11",
+    "status_line": "HWY 401, HWY 17",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at MILL ST, Newcastle. Right lane and\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at WARDEN AVE, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Westbound  at Old Nairn Rd, Nairn Centre, Nairn\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at HWY 10 / HURONTARIO STREET,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -241,20 +241,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 PDT"
+      "captured_at": "09:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -299,7 +299,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT"
+      "captured_at": "11:52 EDT"
     }
   ],
   "market": [
