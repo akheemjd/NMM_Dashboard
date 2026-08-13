@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-277959",
+      "province": "ON",
+      "highway": "Frog Creek Road",
+      "direction": "Both Directions",
+      "description": "Culvert replacement on Frog Creek Road, Alberton Township. All lanes closed.",
+      "event_type": "closures",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "No Data",
+      "lat": 48.648996,
+      "lng": -93.465501,
+      "start": 1785841200,
+      "end": 1787349600,
+      "updated": 1786618866
+    },
+    {
+      "id": "ON-287696",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 11 Southbound  at HWY 17B-FISHER ST, North Bay. 1 lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 lane and SOUTH shoulder closed",
+      "lat": 46.3128622,
+      "lng": -79.4433915,
+      "start": 1786618680,
+      "end": null,
+      "updated": 1786618680
+    },
+    {
       "id": "ON-286573",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,38 +47,6 @@
       "start": 1786410960,
       "end": null,
       "updated": 1786617240
-    },
-    {
-      "id": "ON-287570",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at ODESSA SERVICE CTR EB E6 (Onroute), Odessa. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 44.28508,
-      "lng": -76.65633,
-      "start": 1786616640,
-      "end": null,
-      "updated": 1786616640
-    },
-    {
-      "id": "ON-287481",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at FAIRVIEW STREET/PLAINS ROAD, Burlington. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.32738645,
-      "lng": -79.82552829,
-      "start": 1786613460,
-      "end": null,
-      "updated": 1786613460
     },
     {
       "id": "ON-287479",
@@ -111,22 +111,6 @@
       "start": 1786075200,
       "end": null,
       "updated": 1786591020
-    },
-    {
-      "id": "ON-277959",
-      "province": "ON",
-      "highway": "Frog Creek Road",
-      "direction": "Both Directions",
-      "description": "Culvert replacement on Frog Creek Road, Alberton Township. All lanes closed.",
-      "event_type": "closures",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "No Data",
-      "lat": 48.648996,
-      "lng": -93.465501,
-      "start": 1785841200,
-      "end": 1787349600,
-      "updated": 1786588149
     },
     {
       "id": "ON-287199",
@@ -804,10 +788,26 @@
       "start": 1786962600,
       "end": 1787952600,
       "updated": 1786542180
+    },
+    {
+      "id": "ON-287019",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound Off-ramp at GILMORE ROAD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.919228,
+      "lng": -78.96801,
+      "start": 1786962600,
+      "end": 1787952600,
+      "updated": 1786542000
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T10:38:18.629711+00:00",
+  "updated": "2026-08-13T11:09:28.591868+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

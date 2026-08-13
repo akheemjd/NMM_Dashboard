@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-13 10:38 UTC",
-  "updated_iso": "2026-08-13T10:38:24+00:00",
-  "build_version": "1786617504",
+  "updated_at": "2026-08-13 11:09 UTC",
+  "updated_iso": "2026-08-13T11:09:33+00:00",
+  "build_version": "1786619373",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 7, HWY 17",
+    "status_line": "HWY 11, HWY 7, HWY 17, HWY 527",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at ODESSA SERVICE CTR EB E6 (Onroute), Odessa.\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Southbound  at HWY 17B-FISHER ST, North Bay. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at FAIRVIEW STREET/PLAINS ROAD, Burlington.\u2026",
+        "road": "HWY 7",
+        "what": "Collision on HWY 7 Both Directions  between Slanted Rd, Lindsay and POST RD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -241,20 +241,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:20 PDT"
+      "captured_at": "03:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -331,14 +331,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Trucking Info",
-      "headline": "Tight Trucking Capacity Pushes Rates Higher Even as Freight Volumes Fall",
-      "url": "https://www.truckinginfo.com/news/tight-trucking-capacity-pushes-rates-higher-even-as-freight-volumes-fall"
+      "category": "The Trucker",
+      "headline": "Arizona police place 3 out of service after parking, logbook issues",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/arizona-police-place-3-out-of-service-after-parking-logbook-issues"
     },
     {
       "category": "Trucking Info",
-      "headline": "Geotab Launches Tool to Speed Fleet Incident Investigations",
-      "url": "https://www.truckinginfo.com/news/geotab-launches-tool-to-speed-fleet-incident-investigations"
+      "headline": "Tight Trucking Capacity Pushes Rates Higher Even as Freight Volumes Fall",
+      "url": "https://www.truckinginfo.com/news/tight-trucking-capacity-pushes-rates-higher-even-as-freight-volumes-fall"
     }
   ],
   "theft_home_json": "[]",
