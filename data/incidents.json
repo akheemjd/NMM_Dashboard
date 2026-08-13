@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-287455",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at GUELPH LINE, Milton. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.4912624,
+      "lng": -79.98811157,
+      "start": 1786601820,
+      "end": null,
+      "updated": 1786601820
+    },
+    {
       "id": "ON-287453",
       "province": "ON",
       "highway": "HWY 401",
@@ -788,26 +804,10 @@
       "start": 1787007600,
       "end": 1787835600,
       "updated": 1786543740
-    },
-    {
-      "id": "ON-287040",
-      "province": "ON",
-      "highway": "HWY 5",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 5 Eastbound  between HIGHWAY 8 / PETER'S CORNERS and BROCK ROAD / HAM/WENT ROAD 504, Hamilton. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.28072,
-      "lng": -80.066086,
-      "start": 1786941000,
-      "end": 1787805000,
-      "updated": 1786543200
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T05:57:54.571028+00:00",
+  "updated": "2026-08-13T06:29:02.705724+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
