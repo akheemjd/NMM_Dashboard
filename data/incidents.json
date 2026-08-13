@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-288099",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 17 Westbound  at Old Nairn Rd, Nairn Centre, Nairn Centre. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 46.325077202,
+      "lng": -81.621451081,
+      "start": 1786633440,
+      "end": null,
+      "updated": 1786633440
+    },
+    {
+      "id": "ON-286573",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 46.315646952,
+      "lng": -78.703113335,
+      "start": 1786410960,
+      "end": null,
+      "updated": 1786633320
+    },
+    {
+      "id": "ON-287696",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 11 Southbound  at HWY 17B-FISHER ST, North Bay. 1 lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 lane and SOUTH shoulder closed",
+      "lat": 46.3128622,
+      "lng": -79.4433915,
+      "start": 1786618680,
+      "end": null,
+      "updated": 1786633320
+    },
+    {
       "id": "ON-288084",
       "province": "ON",
       "highway": "HWY 401",
@@ -33,20 +81,20 @@
       "updated": 1786631340
     },
     {
-      "id": "ON-288081",
+      "id": "ON-288090",
       "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Collision on HWY 17 Westbound  at HWY 60 (O'BRIEN RD), Renfrew. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 48",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 48 Northbound  between HOLMES POINT ROAD and RIVERSIDE DRIVE, Georgina. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 45.48252,
-      "lng": -76.64626,
-      "start": 1786630380,
-      "end": null,
-      "updated": 1786630380
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.329235,
+      "lng": -79.22305,
+      "start": 1787176800,
+      "end": 1787392800,
+      "updated": 1786630980
     },
     {
       "id": "ON-288082",
@@ -127,22 +175,6 @@
       "start": 1786627020,
       "end": null,
       "updated": 1786627020
-    },
-    {
-      "id": "ON-288054",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound RAMP at FINCH AVENUE, Toronto. Centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.7323946,
-      "lng": -79.62623014,
-      "start": 1786626960,
-      "end": null,
-      "updated": 1786626960
     },
     {
       "id": "ON-288043",
@@ -257,22 +289,6 @@
       "updated": 1786621860
     },
     {
-      "id": "ON-286573",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.315646952,
-      "lng": -78.703113335,
-      "start": 1786410960,
-      "end": null,
-      "updated": 1786621440
-    },
-    {
       "id": "ON-287799",
       "province": "ON",
       "highway": "HWY 401",
@@ -303,22 +319,6 @@
       "start": 1785841200,
       "end": 1787349600,
       "updated": 1786618866
-    },
-    {
-      "id": "ON-287696",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at HWY 17B-FISHER ST, North Bay. 1 lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane and SOUTH shoulder closed",
-      "lat": 46.3128622,
-      "lng": -79.4433915,
-      "start": 1786618680,
-      "end": null,
-      "updated": 1786618680
     },
     {
       "id": "ON-287971",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T14:45:55.828172+00:00",
+  "updated": "2026-08-13T15:17:07.741649+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
