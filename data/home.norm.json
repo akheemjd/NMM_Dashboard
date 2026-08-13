@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13 11:40 UTC",
-  "updated_iso": "2026-08-13T11:40:43+00:00",
-  "build_version": "1786621243",
+  "updated_at": "2026-08-13 12:10 UTC",
+  "updated_iso": "2026-08-13T12:10:56+00:00",
+  "build_version": "1786623056",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "8 min"
+    "max_wait": "14 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 7, HWY 17",
+    "status_line": "QEW, HWY 400, HWY 401, HWY 11",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at MAVIS ROAD,\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at WALKERS LINE, Burlington. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at HWY 17B-FISHER ST, North Bay. 1\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at TESTON ROAD, Vaughan. 2 left lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -241,11 +241,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -254,7 +254,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -263,7 +263,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:34 EDT"
+      "captured_at": "07:39 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:20 PDT"
+      "captured_at": "05:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
