@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-287443",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BURLOAK DRIVE, Burlington. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.39799018,
-      "lng": -79.7541197,
-      "start": 1786596420,
-      "end": null,
-      "updated": 1786596420
-    },
-    {
       "id": "ON-287441",
       "province": "ON",
       "highway": "QEW",
@@ -804,10 +788,26 @@
       "start": 1786960800,
       "end": 1787954400,
       "updated": 1786545300
+    },
+    {
+      "id": "ON-287036",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 26 Westbound  between LOCKE AVE and MOSLEY STREET/SIMCOE ROAD 92, Clearview. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.42583,
+      "lng": -80.09732,
+      "start": 1787007600,
+      "end": 1787835600,
+      "updated": 1786543920
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T04:55:36.985418+00:00",
+  "updated": "2026-08-13T05:26:45.644893+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
