@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-287407",
+      "id": "ON-287443",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at BRIMLEY ROAD, Toronto. 2 right lanes closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BURLOAK DRIVE, Burlington. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.7791905,
-      "lng": -79.2646368,
-      "start": 1786590960,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.39799018,
+      "lng": -79.7541197,
+      "start": 1786596420,
       "end": null,
-      "updated": 1786594020
+      "updated": 1786596420
+    },
+    {
+      "id": "ON-287441",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at BURLOAK DRIVE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.39532871,
+      "lng": -79.75669063,
+      "start": 1786596060,
+      "end": null,
+      "updated": 1786596060
     },
     {
       "id": "ON-287432",
@@ -63,22 +79,6 @@
       "start": 1786593060,
       "end": null,
       "updated": 1786593060
-    },
-    {
-      "id": "ON-287410",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at YONGE ST, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.75330605,
-      "lng": -79.40807605,
-      "start": 1786591380,
-      "end": null,
-      "updated": 1786591380
     },
     {
       "id": "ON-277509",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T04:24:28.437127+00:00",
+  "updated": "2026-08-13T04:55:36.985418+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
