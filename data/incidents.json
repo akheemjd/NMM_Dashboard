@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-287368",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at Wesleyville Rd (IC 456)/Morrish Church Rd, Port Hope. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.95353,
+      "lng": -78.38822,
+      "start": 1786585380,
+      "end": null,
+      "updated": 1786585380
+    },
+    {
+      "id": "ON-287366",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 HAMILTON Eastbound  at HWY 6 NORTH, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.29308284,
+      "lng": -79.8919664,
+      "start": 1786584660,
+      "end": null,
+      "updated": 1786584660
+    },
+    {
       "id": "ON-287362",
       "province": "ON",
       "highway": "HWY 401",
@@ -772,42 +804,10 @@
       "start": 1786962600,
       "end": 1787952600,
       "updated": 1786542180
-    },
-    {
-      "id": "ON-287019",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound Off-ramp at GILMORE ROAD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.919228,
-      "lng": -78.96801,
-      "start": 1786962600,
-      "end": 1787952600,
-      "updated": 1786542000
-    },
-    {
-      "id": "ON-287014",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound Off-ramp at CENTRAL AVENUE, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.90832,
-      "lng": -78.91716,
-      "start": 1787004000,
-      "end": 1787911200,
-      "updated": 1786541820
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T01:17:32.240538+00:00",
+  "updated": "2026-08-13T01:48:41.003622+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
