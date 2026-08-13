@@ -4,9 +4,15 @@ Filters for theft-related headlines, extracts location, and geocodes.
 """
 
 import json, os, re, urllib.request, xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+
+FEEDS = [
+    ("Inside Logistics", "https://www.insidelogistics.ca/feed/"),
+    ("Canadian Trucking Alliance", "https://cantruck.ca/feed/"),
+]
 
 # Canadian city coordinate lookup
 CITY_COORDS = {
@@ -83,15 +89,24 @@ def geocode_city(text):
             return CITY_COORDS[city]
     return None
 
+def parse_date(s):
+    """Parse an RSS pubDate string into a timezone-aware datetime, or None."""
+    if not s:
+        return None
+    s = s.strip()
+    try:
+        return datetime.fromisoformat(s.replace("Z", "+00:00"))
+    except Exception:
+        pass
+    try:
+        return parsedate_to_datetime(s)
+    except Exception:
+        pass
+    return None
+
 def collect_theft_incidents():
     """Search RSS feeds for cargo theft stories and geocode them."""
     
-    feeds = [
-        ("Truck News", "https://www.trucknews.com/feed/"),
-        ("Trucking Info", "https://www.truckinginfo.com/rss/news/"),
-        ("The Trucker", "https://www.thetrucker.com/feed/"),
-    ]
-
     theft_keywords = [
         "cargo theft", "stolen cargo", "stolen trailer", "stolen truck",
         "freight theft", "trailer theft", "cargo stolen", "load stolen",
@@ -103,7 +118,7 @@ def collect_theft_incidents():
 
     incidents = []
     
-    for source, url in feeds:
+    for source, url in FEEDS:
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             xml_text = urllib.request.urlopen(req, timeout=15).read().decode("utf-8", errors="replace")
@@ -177,36 +192,71 @@ def collect_theft_incidents():
         except Exception as e:
             print(f"  Theft {source}: {e}")
 
-    # Load existing hotspot data
+    # Load existing data and merge new matches (accumulate, don't replace)
     hotspots = []
     targets = []
     tips = []
+    existing_incidents = []
     try:
         with open(os.path.join(DATA_DIR, "theft.json")) as f:
             existing = json.load(f)
+            existing_incidents = existing.get("incidents", [])
             hotspots = existing.get("hotspots", [])
             targets = existing.get("top_targets", [])
             tips = existing.get("prevention", [])
     except Exception:
         pass
 
-    # Sort by date
-    incidents.sort(key=lambda i: i.get("date") or "", reverse=True)
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=90)
+    seen = set()
+    merged = []
+
+    def keepable(rec):
+        url = rec.get("source_url")
+        if not url:
+            return None
+        d = parse_date(rec.get("date"))
+        if d is None or d < cutoff:
+            return None
+        return d
+
+    for rec in existing_incidents:
+        if keepable(rec) is None:
+            continue
+        seen.add(rec["source_url"])
+        merged.append(rec)
+
+    first_seen = now.isoformat()
+    for rec in incidents:
+        if keepable(rec) is None:
+            continue
+        if rec["source_url"] in seen:
+            continue
+        rec["first_seen"] = first_seen
+        seen.add(rec["source_url"])
+        merged.append(rec)
+
+    # Sort newest first by parsed publication date
+    merged.sort(
+        key=lambda r: parse_date(r.get("date")) or datetime.min.replace(tzinfo=timezone.utc),
+        reverse=True,
+    )
 
     path = os.path.join(DATA_DIR, "theft.json")
     os.makedirs(DATA_DIR, exist_ok=True)
     with open(path, "w") as f:
         json.dump({
             "hotspots": hotspots,
-            "incidents": incidents[:15],
+            "incidents": merged,
             "top_targets": targets,
             "prevention": tips,
-            "source": "Équité Association, Insurance Bureau of Canada, industry news",
-            "updated": datetime.now(timezone.utc).isoformat(),
+            "source": "industry news feeds",
+            "updated": now.isoformat(),
         }, f, indent=2, default=str)
 
-    with_coords = sum(1 for i in incidents if i.get("lat"))
-    print(f"  Cargo Theft: {len(incidents)} incidents, {with_coords} geocoded")
+    with_coords = sum(1 for i in merged if i.get("lat"))
+    print(f"  Cargo Theft: {len(merged)} incidents, {with_coords} geocoded")
 
 if __name__ == "__main__":
     collect_theft_incidents()
