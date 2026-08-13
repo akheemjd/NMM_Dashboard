@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-13 19:26 UTC",
-  "updated_iso": "2026-08-13T19:26:23+00:00",
-  "build_version": "1786649183",
+  "updated_at": "2026-08-13 19:57 UTC",
+  "updated_iso": "2026-08-13T19:57:30+00:00",
+  "build_version": "1786651050",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 4,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "35 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "14 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 13,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 403 ",
+    "status_line": "QEW, HWY 401, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound ON-RAMP at WHITES ROAD, Pickering. All lanes\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at APPLEBY LINE, Burlington. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Emergency Roadwork on HWY 403 HAMILTON Westbound ON-RAMP at LINCOLN M.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound ON-RAMP at WHITES ROAD, Pickering. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -223,11 +223,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "35 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:06 EDT"
+      "captured_at": "15:47 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -245,16 +245,16 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -268,20 +268,20 @@
     {
       "name": "Coutts-Sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:06 MDT"
+      "captured_at": "13:21 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
