@@ -26,10 +26,11 @@
   <!--OPTIONAL:sponsor_theft--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_theft.name}}</div><div class="l">{{sponsor_theft.line}}</div></div><a class="c" href="{{sponsor_theft.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_theft-->
 
   <div class="sechead"><h2>Recent incidents</h2><span class="sub">from published reporting</span><span class="rule"></span></div>
+  <!--IF:theft_none--><div class="panel"><div class="empty"><b>No incidents this period</b>Collected by keyword match against Canadian trucking trade feeds. An empty list means nothing matched, not that nothing happened. Regional risk context below is drawn from published industry reporting.</div></div><!--/IF:theft_none-->
   <div class="panel">
   <!--LOOP:theft--><div class="tft"><div class="h"><a href="{{source_url}}" target="_blank" rel="noopener">{{title}}</a></div><div class="m">{{source}} · {{date}}</div></div><!--/LOOP:theft-->
   </div>
-  <p class="note">Each incident links to the published report it came from. Collected by keyword match against Canadian trucking trade feeds, so coverage is partial and reflects what was reported, not total incidence. Dollar values and locations are only shown where the source states them.</p>
+  <p class="note">Each incident links to the published report it came from. Coverage is partial and reflects what was reported, not total incidence.</p>
 
   <div class="sechead"><h2>Hotspots</h2><span class="rule"></span></div>
   <div class="panel"><table class="tbl">

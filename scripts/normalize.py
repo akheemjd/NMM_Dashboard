@@ -467,7 +467,7 @@ write("incidents.norm", {
     "updated_iso": ts_iso,
     "build_version": build_version,
 })
-write("theft.norm", {"theft": theft_home, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
+write("theft.norm", {"theft": theft_home, "theft_none": len(theft) == 0, "hotspots": hotspots, "theft_json": json.dumps(theft_json), "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 # Direction summary for market page
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
