@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13 12:10 UTC",
-  "updated_iso": "2026-08-13T12:10:56+00:00",
-  "build_version": "1786623056",
+  "updated_at": "2026-08-13 12:41 UTC",
+  "updated_iso": "2026-08-13T12:41:31+00:00",
+  "build_version": "1786624891",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "14 min"
+    "max_wait": "6 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 400, HWY 401, HWY 11",
+    "status_line": "HWY 403 , HWY 401, HWY 613",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at WALKERS LINE, Burlington. Right lane\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Westbound  at WINSTON CHURCHILL BLVD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at TESTON ROAD, Vaughan. 2 left lanes closed.",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound  at BOUNDARY RD (IC 796), Cornwall. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -236,25 +236,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "14 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 EDT"
+      "captured_at": "08:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 EDT"
+      "captured_at": "08:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 PDT"
+      "captured_at": "05:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -290,7 +290,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 CDT"
+      "captured_at": "07:29 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -299,22 +299,10 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:24 EDT"
+      "captured_at": "08:15 EDT"
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2362B (chained 2017)",
-      "value": "+0.3%",
-      "value_class": "flat"
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.7%",
-      "value_class": "flat"
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 222.2\u00a2/L and 35 L/100km",
