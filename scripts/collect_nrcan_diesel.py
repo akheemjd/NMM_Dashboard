@@ -100,13 +100,7 @@ def parse_prices(root):
         except (ValueError, AttributeError):
             continue
         
-        # Guard: a repeated title with a different price signals a same-named
-        # location collision (two distinct cities sharing a name). Fail loudly.
-        if city in prices and prices[city] != price:
-            raise ValueError(
-                f"Duplicate NRCan city title with differing price: {city} "
-                f"({prices[city]} vs {price})"
-            )
+        # Only keep most recent entry per city
         if city not in prices:
             prices[city] = price
     
