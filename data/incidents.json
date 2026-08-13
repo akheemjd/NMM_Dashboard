@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-287441",
+      "id": "ON-287453",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at BURLOAK DRIVE, Burlington. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.39532871,
-      "lng": -79.75669063,
-      "start": 1786596060,
+      "lanes": "left lane closed",
+      "lat": 43.77486841,
+      "lng": -79.28440092,
+      "start": 1786599900,
       "end": null,
-      "updated": 1786596060
+      "updated": 1786599900
     },
     {
       "id": "ON-287432",
@@ -127,38 +127,6 @@
       "start": 1785841200,
       "end": 1787349600,
       "updated": 1786588149
-    },
-    {
-      "id": "ON-287352",
-      "province": "ON",
-      "highway": "EASTPORT DRIVE",
-      "direction": "Southbound",
-      "description": "Flooding on EASTPORT DRIVE Southbound  at LIFT BRIDGE, Burlington. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.299167,
-      "lng": -79.795343,
-      "start": 1786580880,
-      "end": null,
-      "updated": 1786580880
-    },
-    {
-      "id": "ON-287353",
-      "province": "ON",
-      "highway": "EASTPORT DRIVE",
-      "direction": "Northbound",
-      "description": "Flooding on EASTPORT DRIVE Northbound  at LIFT BRIDGE, Burlington. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.298967,
-      "lng": -79.795543,
-      "start": 1786580880,
-      "end": null,
-      "updated": 1786580880
     },
     {
       "id": "ON-287199",
@@ -804,10 +772,42 @@
       "start": 1787007600,
       "end": 1787835600,
       "updated": 1786543920
+    },
+    {
+      "id": "ON-287035",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 26 Eastbound  between MOSLEY STREET/SIMCOE ROAD 92 and LOCKE AVE, Clearview. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.46677,
+      "lng": -80.1075,
+      "start": 1787007600,
+      "end": 1787835600,
+      "updated": 1786543740
+    },
+    {
+      "id": "ON-287040",
+      "province": "ON",
+      "highway": "HWY 5",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 5 Eastbound  between HIGHWAY 8 / PETER'S CORNERS and BROCK ROAD / HAM/WENT ROAD 504, Hamilton. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.28072,
+      "lng": -80.066086,
+      "start": 1786941000,
+      "end": 1787805000,
+      "updated": 1786543200
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T05:26:45.644893+00:00",
+  "updated": "2026-08-13T05:57:54.571028+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
