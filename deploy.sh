@@ -92,12 +92,18 @@ done
 echo "  assets in sync"
 echo "=== Coverage validation ==="
 python3 scripts/coverage.py validate || { echo "COVERAGE VALIDATION FAILED — aborting deploy"; exit 1; }
+echo "=== Source-tree guard ==="
+if [ -n "$(git status --porcelain -- scripts/ templates/ assets/ config/ '*.yml' '*.sh' 2>/dev/null)" ]; then
+  echo "FATAL: uncommitted source changes present. Scheduler will not auto-commit source."
+  git status --short -- scripts/ templates/ assets/ config/ '*.yml' '*.sh'
+  exit 1
+fi
 echo "=== Git push ==="
 if [ "$DRY_RUN" = "1" ]; then
   echo "  DRY_RUN=1 — skipping commit and push"
 else
   if python3 scripts/fingerprint.py; then
-    git add -A
+    git add data/ docs/
     git commit -m "Auto-update $(date '+%Y-%m-%d %H:%M')" || echo "  (nothing to commit)"
     if git push origin master; then
       python3 scripts/fingerprint.py commit
