@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-288349",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at 407, Miss.-Halton. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.58573038,
+      "lng": -79.81288886,
+      "start": 1786656420,
+      "end": null,
+      "updated": 1786656420
+    },
+    {
+      "id": "ON-288332",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MEADOWVALE ROAD, Toronto. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.7991599,
+      "lng": -79.166169,
+      "start": 1786655040,
+      "end": null,
+      "updated": 1786655040
+    },
+    {
+      "id": "ON-288331",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 11 Northbound  at O'BRIEN ST, North Bay. 1 lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 lane and NORTH shoulder closed",
+      "lat": 46.327964832,
+      "lng": -79.457520641,
+      "start": 1786654980,
+      "end": null,
+      "updated": 1786654980
+    },
+    {
       "id": "ON-288323",
       "province": "ON",
       "highway": "HWY 400",
@@ -31,22 +79,6 @@
       "start": 1786653480,
       "end": null,
       "updated": 1786653480
-    },
-    {
-      "id": "ON-288305",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.78103077,
-      "lng": -79.25480516,
-      "start": 1786652640,
-      "end": null,
-      "updated": 1786652640
     },
     {
       "id": "ON-288291",
@@ -767,42 +799,10 @@
       "start": 1788181200,
       "end": 1788462000,
       "updated": 1786635360
-    },
-    {
-      "id": "ON-288144",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Eastbound",
-      "description": "Daily Maintenance on HWY 26 Eastbound  between POPLAR SIDEROAD, Clearview and CARSON ROAD, Springwater. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.488663,
-      "lng": -80.16752,
-      "start": 1788181200,
-      "end": 1788462000,
-      "updated": 1786635300
-    },
-    {
-      "id": "ON-288148",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 26 Westbound  between CARSON ROAD, Springwater and POPLAR SIDEROAD, Clearview. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.42869,
-      "lng": -79.7241,
-      "start": 1788181200,
-      "end": 1788462000,
-      "updated": 1786635300
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T20:59:43.926947+00:00",
+  "updated": "2026-08-13T21:30:54.108156+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
