@@ -47,7 +47,7 @@
   <div class="sechead"><h2>NMDI by province</h2><span class="sub">c/L · Δ since last</span><span class="rule"></span></div>
   <div class="scroll"><table class="tbl">
     <thead><tr><th>Prov</th><th>Region</th><th class="r">Price</th><th class="r">Change</th><th class="r">vs Nat</th></tr></thead>
-    <!--LOOP:provinces--><tr class="{{rowclass}}"><td class="code">{{code}}</td><td>{{name}}</td><td class="r"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}">{{change}}</td><td class="r mono {{vs_class}}">{{vs_national}}</td></tr><!--/LOOP:provinces-->
+    <!--LOOP:provinces--><tr class="{{rowclass}}"><td class="code">{{code}}</td><td>{{name}}</td><td class="r" data-label="Price"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}" data-label="7-day">{{change}}</td><td class="r mono {{vs_class}}" data-label="vs National">{{vs_national}}</td></tr><!--/LOOP:provinces-->
   </table></div>
   <p class="note">NRCan weekly diesel survey, unweighted mean of provincial means across all ten provinces. Territories excluded — see <a href="/methodology/nmdi/">methodology</a>.</p>
 
