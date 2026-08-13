@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-13 11:09 UTC",
-  "updated_iso": "2026-08-13T11:09:33+00:00",
-  "build_version": "1786619373",
+  "updated_at": "2026-08-13 11:40 UTC",
+  "updated_iso": "2026-08-13T11:40:43+00:00",
+  "build_version": "1786621243",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "8 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 7, HWY 17, HWY 527",
+    "status_line": "HWY 401, HWY 11, HWY 7, HWY 17",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at HWY 17B-FISHER ST, North Bay. 1\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at MAVIS ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 7",
-        "what": "Collision on HWY 7 Both Directions  between Slanted Rd, Lindsay and POST RD,\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Southbound  at HWY 17B-FISHER ST, North Bay. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -227,7 +227,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 EDT"
+      "captured_at": "07:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -241,20 +241,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -272,7 +272,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 MDT"
+      "captured_at": "05:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT"
+      "captured_at": "04:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -332,13 +332,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "Arizona police place 3 out of service after parking, logbook issues",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/arizona-police-place-3-out-of-service-after-parking-logbook-issues"
+      "headline": "A surprise credit after an overseas purchase: The tariff refunds now flowing through shippers",
+      "url": "https://www.thetrucker.com/trucking-news/business/a-surprise-credit-after-an-overseas-purchase-the-tariff-refunds-now-flowing-through-shippers"
     },
     {
-      "category": "Trucking Info",
-      "headline": "Tight Trucking Capacity Pushes Rates Higher Even as Freight Volumes Fall",
-      "url": "https://www.truckinginfo.com/news/tight-trucking-capacity-pushes-rates-higher-even-as-freight-volumes-fall"
+      "category": "The Trucker",
+      "headline": "Arizona police place 3 out of service after parking, logbook issues",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/arizona-police-place-3-out-of-service-after-parking-logbook-issues"
     }
   ],
   "theft_home_json": "[]",
