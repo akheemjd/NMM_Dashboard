@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13 02:19 UTC",
-  "updated_iso": "2026-08-13T02:19:53+00:00",
-  "build_version": "1786587593",
+  "updated_at": "2026-08-13 02:46 UTC",
+  "updated_iso": "2026-08-13T02:46:11+00:00",
+  "build_version": "1786589171",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 403 ",
+    "status_line": "HWY 401, HWY 9, EASTPORT",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Emergency Roadwork on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 2 left\u2026",
+        "what": "Vehicle Fire on HWY 401 Eastbound  at GUELPH LINE, Milton. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at Wesleyville Rd (IC 456)/Morrish Church Rd,\u2026",
+        "road": "HWY 9",
+        "what": "Collision on HWY 9 Westbound  at AIRPORT ROAD, Caledon. 1 lane and WEST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -241,20 +241,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -281,7 +281,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 PDT"
+      "captured_at": "19:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -290,7 +290,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 CDT"
+      "captured_at": "21:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

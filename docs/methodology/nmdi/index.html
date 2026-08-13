@@ -12,7 +12,7 @@
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/methodology/nmdi/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css?v=1786587593">
+<link rel="stylesheet" href="/assets/styles.css?v=1786589171">
 </head>
 <body>
 <header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
@@ -43,6 +43,7 @@
     <p>NRCan surveys weekly. The dashboard rebuilds every 30 minutes from the most recent survey data, so the diesel figure holds steady between surveys. Deltas step once per week when a new print lands — they do not drift daily. The road incidents module is live. The exchange rate reflects the most recent Bank of Canada published observation, which is business-daily rather than continuous. Border wait times are currently under review and their refresh cadence is not guaranteed; treat the timestamp on that page as the capture time, not a freshness guarantee.</p>
 
     <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.25rem;color:var(--ink);margin:32px 0 12px">Revision history</h2>
+    <p><strong>2026-08-12</strong> — Correction. The USD/CAD exchange rate published on this dashboard was incorrect from 2026-07-13, the site's first public deploy, through 2026-08-12. The Bank of Canada API returns observations newest first; the collector read them as oldest first and published the oldest observation in the retrieved window as the current rate. The day-over-day change was computed against the newest observation, so its direction was inverted. At the time the error was found the dashboard displayed 1.4206, an observation dated 2026-06-29, when the correct current observation was 1.3927 dated 2026-08-11. The error affected the exchange rate module only. Diesel prices, the NMDI, and all provincial figures come from a separate source and were not affected. The collector now sorts observations by date, publishes the observation date alongside the rate, and fails loudly rather than falling back to a default value when the fetch fails.</p>
     <p><strong>2026-08-05</strong> — Index moved from a 12-unit basis (including YT and NT) to a 10-unit basis (excluding territories). The national figure shifted from 224.8 to 228.3¢/L as a function of this methodology change. Historical values and percentiles computed before this date are not directly comparable with post-change values.</p>
     <p><strong>2026-07-28</strong> — Initial publication. 12-unit basis, unweighted mean of provincial means.</p>
 
@@ -67,6 +68,6 @@
 
 
 <footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<br><a href="/methodology/nmdi/" style="color:var(--ink-3)">NMDI methodology</a><div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-<script src="/assets/app.js?v=1786587593"></script>
+<script src="/assets/app.js?v=1786589171"></script>
 </body>
 </html>
