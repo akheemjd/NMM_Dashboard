@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-288197",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound EXPRESS at MATHESON BLVD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.63034373,
+      "lng": -79.64761426,
+      "start": 1786641240,
+      "end": null,
+      "updated": 1786641240
+    },
+    {
+      "id": "ON-288190",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at FORD DRIVE, Oakville. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.4945712,
+      "lng": -79.6738943,
+      "start": 1786640040,
+      "end": null,
+      "updated": 1786640040
+    },
+    {
       "id": "ON-288183",
       "province": "ON",
       "highway": "HWY 417",
@@ -767,42 +799,10 @@
       "start": 1786410960,
       "end": null,
       "updated": 1786633320
-    },
-    {
-      "id": "ON-288090",
-      "province": "ON",
-      "highway": "HWY 48",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 48 Northbound  between HOLMES POINT ROAD and RIVERSIDE DRIVE, Georgina. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.329235,
-      "lng": -79.22305,
-      "start": 1787176800,
-      "end": 1787392800,
-      "updated": 1786630980
-    },
-    {
-      "id": "ON-288082",
-      "province": "ON",
-      "highway": "HWY 9",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 9 Westbound  between 6TH LINE EAST and HEARTLAKE ROAD, Caledon. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.94424,
-      "lng": -79.985054,
-      "start": 1787011200,
-      "end": 1787392800,
-      "updated": 1786629720
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T16:50:33.930592+00:00",
+  "updated": "2026-08-13T17:21:40.124047+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
