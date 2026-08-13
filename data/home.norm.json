@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-13 00:53 UTC",
-  "updated_iso": "2026-08-13T00:53:22+00:00",
-  "build_version": "1786582402",
+  "updated_at": "2026-08-13 01:17 UTC",
+  "updated_iso": "2026-08-13T01:17:37+00:00",
+  "build_version": "1786583857",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "45 min"
+    "max_wait": "40 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -199,20 +199,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "EASTPORT, HWY 403 , HWY 427",
+    "status_line": "HWY 401, EASTPORT, HWY 403 ",
     "incidents": [
       {
-        "road": "EASTPORT DRIVE",
-        "what": "Flooding on EASTPORT DRIVE Southbound  at LIFT BRIDGE, Burlington. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Highway Maintenance on HWY 401 Westbound COLLECTOR at YONGE ST, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "EASTPORT DRIVE",
-        "what": "Flooding on EASTPORT DRIVE Northbound  at LIFT BRIDGE, Burlington. Right lane\u2026",
+        "what": "Flooding on EASTPORT DRIVE Southbound  at LIFT BRIDGE, Burlington. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -223,11 +223,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "45 min",
+      "wait": "40 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:57 EDT"
+      "captured_at": "20:59 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -241,11 +241,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "11 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -254,7 +254,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -277,11 +277,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT"
+      "captured_at": "18:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
