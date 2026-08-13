@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-287467",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.77486841,
+      "lng": -79.28440092,
+      "start": 1786607520,
+      "end": null,
+      "updated": 1786608240
+    },
+    {
       "id": "ON-286573",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,22 +31,6 @@
       "start": 1786410960,
       "end": null,
       "updated": 1786607820
-    },
-    {
-      "id": "ON-287467",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.77486841,
-      "lng": -79.28440092,
-      "start": 1786607520,
-      "end": null,
-      "updated": 1786607520
     },
     {
       "id": "ON-287462",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-13T08:02:30.650136+00:00",
+  "updated": "2026-08-13T08:33:41.689814+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
