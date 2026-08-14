@@ -9,17 +9,29 @@
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-prices/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Northern Mile Media">
-<meta property="og:title" content="Diesel Prices by Province in Canada — {{fuel.national_diesel}}¢/L | Northern Mile">
-<meta property="og:description" content="Diesel prices for all ten Canadian provinces from the NRCan weekly survey, print {{fuel.print_date}}. National average {{fuel.national_diesel}}¢/L, cheapest {{fuel.low_code}} at {{fuel.low}}, dearest {{fuel.high_code}} at {{fuel.high}}, spread {{fuel.spread}}¢/L.">
+<meta property="og:title" content="Diesel Prices by Province in Canada — {{fuel.national_diesel}}¢/L">
+<meta property="og:description" content="Ten provinces, NRCan survey print {{fuel.print_date}}. Spread {{fuel.spread}}¢/L between {{fuel.low_code}} and {{fuel.high_code}}.">
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/fuel-prices/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og-fuel.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="build" content="{{updated_iso}}">
+<script>
+(function(){try{var t=localStorage.getItem('nm-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/nm.css?v={{build_version}}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Diesel prices by province","item":"https://dashboard.northernmilemedia.com/fuel-prices/"}]},{"@type":"Dataset","name":"Canadian Diesel Prices by Province","description":"Retail diesel prices for all ten Canadian provinces, from the Natural Resources Canada weekly retail survey. Each provincial figure is the unweighted mean of the survey cities in that province.","url":"https://dashboard.northernmilemedia.com/fuel-prices/","creator":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com/"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"{{updated_iso}}"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do diesel prices differ between Canadian provinces?","acceptedAnswer":{"@type":"Answer","text":"Provincial fuel tax rates are set independently, carbon pricing differs by jurisdiction, and distance from refining and distribution capacity adds haul cost in northern and island markets. The current spread between the cheapest and dearest province is {{fuel.spread}} cents per litre."}},{"@type":"Question","name":"Which Canadian province has the cheapest diesel right now?","acceptedAnswer":{"@type":"Answer","text":"In the Natural Resources Canada survey print dated {{fuel.print_date}}, the lowest provincial average was {{fuel.low_code}} at {{fuel.low}} cents per litre and the highest was {{fuel.high_code}} at {{fuel.high}} cents per litre. These figures change weekly."}},{"@type":"Question","name":"Are Yukon and the Northwest Territories included?","acceptedAnswer":{"@type":"Answer","text":"They are surveyed by Natural Resources Canada and shown separately, but they are excluded from the Northern Mile Diesel Index because equal-weighting them alongside provinces distorts a national freight figure. The reasoning is documented on the methodology page."}}]}]}
+{"@context":"https://schema.org","@graph":[
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},
+{"@type":"ListItem","position":2,"name":"Diesel prices by province","item":"https://dashboard.northernmilemedia.com/fuel-prices/"}]},
+{"@type":"Dataset","name":"Canadian Diesel Prices by Province","description":"Retail diesel prices for all ten Canadian provinces, from the Natural Resources Canada weekly retail survey. Each provincial figure is the unweighted mean of the survey cities in that province.","url":"https://dashboard.northernmilemedia.com/fuel-prices/","creator":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com/"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"{{updated_iso}}"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Why do diesel prices differ between Canadian provinces?","acceptedAnswer":{"@type":"Answer","text":"Provincial fuel tax rates are set independently, carbon pricing differs by jurisdiction, and distance from refining and distribution capacity adds haul cost in northern and island markets. The current spread between the cheapest and dearest province is {{fuel.spread}} cents per litre."}},
+{"@type":"Question","name":"Which Canadian province has the cheapest diesel right now?","acceptedAnswer":{"@type":"Answer","text":"In the Natural Resources Canada survey print dated {{fuel.print_date}}, the lowest provincial average was {{fuel.low_code}} at {{fuel.low}} cents per litre and the highest was {{fuel.high_code}} at {{fuel.high}} cents per litre. These figures change weekly."}},
+{"@type":"Question","name":"Are Yukon and the Northwest Territories included?","acceptedAnswer":{"@type":"Answer","text":"They are surveyed by Natural Resources Canada and shown separately, but they are excluded from the Northern Mile Diesel Index because equal-weighting them alongside provinces distorts a national freight figure. The reasoning is documented on the methodology page."}}]}
+]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
@@ -29,18 +41,27 @@
 
 <header class="hd"><div class="wrap">
   <a class="mark" href="/"><b>Northern Mile</b><span>Canadian trucking data</span></a>
+  <button class="themebtn" id="themebtn" type="button" aria-pressed="false"><span class="tl">Dark</span></button>
 </div></header>
 
 <nav class="nav" aria-label="Sections"><div class="wrap">
-  <a href="/">Home</a>
-  <a href="/fuel-prices/" class="on" aria-current="page">Diesel</a>
-  <a href="/fuel-cost-calculator/">Calculator</a>
-  <a href="/border-wait-times/">Border</a>
-  <a href="/exchange-rate/">Exchange</a>
-  <a href="/road-incidents/">Incidents</a>
-  <a href="/market-pulse/">Market</a>
-  <a href="/industry-news/">News</a>
-  <a href="/methodology/nmdi/">Methodology</a>
+  <div class="bar">
+    <span class="here">Diesel</span>
+    <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="ml">Menu</span><span class="mi" aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <a href="/">Home<span class="d">Everything at a glance</span></a>
+    <a href="/fuel-prices/" class="on">Diesel<span class="d">Prices by province</span></a>
+    <a href="/fuel-cost-calculator/">Calculator<span class="d">What a run costs</span></a>
+    <a href="/border-wait-times/">Border<span class="d">Commercial waits</span></a>
+    <a href="/exchange-rate/">Exchange<span class="d">USD/CAD</span></a>
+    <a href="/road-incidents/">Incidents<span class="d">Corridor closures</span></a>
+    <a href="/market-pulse/">Market<span class="d">Freight demand</span></a>
+    <a href="/industry-news/">News<span class="d">Headlines</span></a>
+    <a href="/methodology/nmdi/">Methodology<span class="d">How the index works</span></a>
+  </div>
 </div></nav>
 
 <main class="wrap" id="main">
@@ -49,7 +70,7 @@
   <h1>Diesel prices by province</h1>
 
   <div class="figure">
-    <span class="n">{{fuel.national_diesel}}</span>
+    <span class="n" data-count>{{fuel.national_diesel}}</span>
     <span class="u">¢/L national</span>
     <span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span>
   </div>
@@ -124,16 +145,15 @@
 <footer class="ft"><div class="wrap">
   <div class="links">
     <a href="/">Dashboard home</a>
-    <a href="/fuel-prices/">Diesel</a>
-    <a href="/fuel-cost-calculator/">Calculator</a>
-    <a href="/border-wait-times/">Border</a>
-    <a href="/exchange-rate/">Exchange</a>
-    <a href="/road-incidents/">Incidents</a>
-    <a href="/market-pulse/">Market</a>
-    <a href="/industry-news/">News</a>
-    <a href="/methodology/nmdi/">Methodology</a>
+    <a href="/border-wait-times/">Border wait times</a>
+    <a href="/exchange-rate/">USD/CAD exchange rate</a>
+    <a href="/road-incidents/">Road incidents</a>
+    <a href="/market-pulse/">Market pulse</a>
+    <a href="/industry-news/">Industry news</a>
+    <a href="/fuel-cost-calculator/">Fuel cost calculator</a>
+    <a href="/methodology/nmdi/">NMDI methodology</a>
   </div>
-  <div class="fine">Northern Mile Media · Rebuilt {{updated_at}} UTC</div>
+  <div class="fine">Northern Mile Media · Rebuilt {{updated_at}} UTC · NRCan survey print {{fuel.print_date}}</div>
 </div></footer>
 
 <script src="/assets/nm.js?v={{build_version}}"></script>

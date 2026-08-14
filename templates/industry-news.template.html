@@ -1,46 +1,92 @@
-<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canadian Trucking Industry News — Curated Headlines | Northern Mile</title>
-<meta name="description" content="Curated Canadian and North American trucking headlines: freight markets, equipment, regulations and fuel. Refreshed through the day.">
-<meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/industry-news/">
-<meta property="og:type" content="website"><meta property="og:title" content="Trucking Industry News — Curated | Northern Mile"><meta property="og:description" content="Curated Canadian trucking headlines, refreshed daily."><meta name="twitter:card" content="summary_large_image">
+<title>Canadian Trucking Industry News | Northern Mile</title>
+<meta name="description" content="Headlines we are reading in Canadian trucking and freight, alongside live diesel prices and border wait times.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/industry-news/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Northern Mile Media">
+<meta property="og:title" content="Canadian Trucking Industry News | Northern Mile">
+<meta property="og:description" content="Headlines we are reading in Canadian trucking and freight, alongside live diesel prices and border wait times.">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/industry-news/">
+<meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="build" content="{{updated_iso}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css?v={{build_version}}">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nm.css?v={{build_version}}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Industry News","item":"https://dashboard.northernmilemedia.com/industry-news/"}]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Industry news","item":"https://dashboard.northernmilemedia.com/industry-news/"}]}]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
-</head><body>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
-<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/" class="on">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
+<header class="hd"><div class="wrap">
+  <a class="mark" href="/"><b>Northern Mile</b><span>Canadian trucking data</span></a>
+</div></header>
 
-<main class="wrap">
-  <div class="breadcrumb"><a href="/">Dashboard</a> › Industry News</div>
-  <div class="strip"><span><span class="dot"></span><b>Daily</b></span><span>Curated headlines</span><span>Updated {{updated_at}}</span></div>
+<nav class="nav" aria-label="Sections"><div class="wrap">
+  <a href="/">Home</a>
+  <a href="/fuel-prices/">Diesel</a>
+  <a href="/fuel-cost-calculator/">Calculator</a>
+  <a href="/border-wait-times/">Border</a>
+  <a href="/exchange-rate/">Exchange</a>
+  <a href="/road-incidents/">Incidents</a>
+  <a href="/market-pulse/">Market</a>
+  <a href="/industry-news/" class="on" aria-current="page">News</a>
+  <a href="/methodology/nmdi/">Methodology</a>
+</div></nav>
 
-  <!--OPTIONAL:sponsor_news--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_news.name}}</div><div class="l">{{sponsor_news.line}}</div></div><a class="c" href="{{sponsor_news.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_news-->
+<main class="wrap" id="main">
 
-  <div class="sechead"><h2>Headlines</h2><span class="sub">links open at the source</span><span class="rule"></span></div>
-  <div class="panel"><div class="news">
+  <p class="eyebrow" style="margin-top:var(--v)">Headlines we are reading</p>
+  <h1>Industry news</h1>
+  <p class="stand">Links out to the outlets doing the reporting. We do not rewrite their work, and every headline goes to the original.</p>
+
+  <div class="meta">
+    <span>Rebuilt {{updated_at}} UTC</span>
+  </div>
+
+  <div class="links-list">
   <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
-  </div></div>
+  </div>
+  <p class="note">Collected from Canadian trucking and logistics trade feeds. An empty or short list means the feeds were quiet, not that nothing happened.</p>
 
-  <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/industry-news/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Canadian%20trucking%20headlines&url=https://dashboard.northernmilemedia.com/industry-news/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/industry-news/')">Copy link</button></div>
+  <!--OPTIONAL:sponsor_news-->
+  <div class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_news.name}}</span><span class="l">{{sponsor_news.line}}</span><a class="c" href="{{sponsor_news.url}}">Learn more</a></div>
+  <!--/OPTIONAL:sponsor_news-->
 
-  
+  <section class="sub" aria-labelledby="brief">
+    <div class="e">The Northern Mile Brief</div>
+    <h2 id="brief">The week in one email</h2>
+    <p>The numbers that moved and the stories behind them, with every figure dated. Wednesday mornings.</p>
+    <a class="sub-btn" href="https://www.northernmilemedia.com/subscribe/">Subscribe free</a>
+    <div class="fine">One email a week. Unsubscribe any time.</div>
+  </section>
 
-<!-- subscribe partial — link to Ghost Portal, cross-origin safe -->
-<div class="cta">
-  <div class="e">The Northern Mile Brief</div>
-  <div class="b">Fuel, border and market shifts. Every Wednesday, 6am.</div>
-  <a class="sub-btn" href="https://northernmilemedia.com/subscribe/">Subscribe</a>
-  <div class="s" style="margin-top:8px">Free. One email a week. Unsubscribe anytime.</div>
-</div>
+</main>
 
-<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Headlines link to their original publishers · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-<script src="/assets/app.js?v={{build_version}}"></script>
-</body></html>
+<footer class="ft"><div class="wrap">
+  <div class="links">
+    <a href="/">Dashboard home</a>
+    <a href="/fuel-prices/">Diesel</a>
+    <a href="/fuel-cost-calculator/">Calculator</a>
+    <a href="/border-wait-times/">Border</a>
+    <a href="/exchange-rate/">Exchange</a>
+    <a href="/road-incidents/">Incidents</a>
+    <a href="/market-pulse/">Market</a>
+    <a href="/industry-news/">News</a>
+    <a href="/methodology/nmdi/">Methodology</a>
+  </div>
+  <div class="fine">Northern Mile Media · Rebuilt {{updated_at}} UTC</div>
+</div></footer>
+
+<script src="/assets/nm.js?v={{build_version}}"></script>
+</body>
+</html>

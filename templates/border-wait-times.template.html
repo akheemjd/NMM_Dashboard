@@ -1,69 +1,100 @@
-<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canada–US Border Wait Times for Trucks — Live | Northern Mile</title>
-<meta name="description" content="Live commercial border wait times at the major Canada–US crossings, updated every 30 minutes. Ambassador, Blue Water, Peace Bridge, Pacific Highway and more.">
-<meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://dashboard.northernmilemedia.com/border-wait-times/">
-<meta property="og:type" content="website"><meta property="og:title" content="Canada–US Truck Border Wait Times — Live | Northern Mile"><meta property="og:description" content="Live commercial wait times at the major Canada–US crossings. Updated every 30 min."><meta name="twitter:card" content="summary_large_image">
+<title>Canada-US Commercial Border Wait Times | Northern Mile</title>
+<meta name="description" content="Live commercial lane wait times at Canada-US border crossings, from the CBSA feed. Each figure carries CBSA's own capture time for that crossing.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/border-wait-times/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Northern Mile Media">
+<meta property="og:title" content="Canada-US Commercial Border Wait Times | Northern Mile">
+<meta property="og:description" content="Live commercial lane wait times at Canada-US border crossings, from the CBSA feed. Each figure carries CBSA's own capture time for that crossing.">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/border-wait-times/">
+<meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="build" content="{{updated_iso}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css?v={{build_version}}">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nm.css?v={{build_version}}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Border Wait Times","item":"https://dashboard.northernmilemedia.com/border-wait-times/"}]},
-{"@type":"Dataset","name":"Canada-US Commercial Border Wait Times","description":"Live commercial vehicle wait times at major Canada-US border crossings, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"dateModified":"{{updated_iso}}"}
-]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Border wait times","item":"https://dashboard.northernmilemedia.com/border-wait-times/"}]},{"@type":"Dataset","name":"Canada-US Commercial Border Wait Times","description":"Commercial lane wait times at Canada-United States border crossings, collected from the Canada Border Services Agency feed.","url":"https://dashboard.northernmilemedia.com/border-wait-times/","creator":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com/"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"{{updated_iso}}"}]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
-</head><body>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
-<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/" class="on">Border</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
+<header class="hd"><div class="wrap">
+  <a class="mark" href="/"><b>Northern Mile</b><span>Canadian trucking data</span></a>
+</div></header>
 
-<main class="wrap">
-  <div class="breadcrumb"><a href="/">Dashboard</a> › Border Wait Times</div>
-  <div class="strip"><span>Commercial lanes</span><span>Page rebuilt {{updated_at}} · see note below on capture times</span></div>
+<nav class="nav" aria-label="Sections"><div class="wrap">
+  <a href="/">Home</a>
+  <a href="/fuel-prices/">Diesel</a>
+  <a href="/fuel-cost-calculator/">Calculator</a>
+  <a href="/border-wait-times/" class="on" aria-current="page">Border</a>
+  <a href="/exchange-rate/">Exchange</a>
+  <a href="/road-incidents/">Incidents</a>
+  <a href="/market-pulse/">Market</a>
+  <a href="/industry-news/">News</a>
+  <a href="/methodology/nmdi/">Methodology</a>
+</div></nav>
 
-  <section class="cockpit"><div class="gauges">
-    <div class="gauge {{border.gauge_class}}"><div class="gl">Busiest now</div><div class="gv">{{border.heavy_count}} <small>Heavy</small></div><div class="gs">{{border.moderate_count}} moderate</div></div>
-    <div class="gauge"><div class="gl">Closed</div><div class="gv">{{border.closed_count}}</div><div class="gs">crossings</div></div>
-    <div class="gauge"><div class="gl">Longest wait</div><div class="gv">{{border.max_wait}}<small> min</small></div><div class="gs">{{border.max_name}}</div></div>
-    <div class="gauge good"><div class="gl">Fastest</div><div class="gv">{{border.min_wait}}<small> min</small></div><div class="gs">{{border.min_name}}</div></div>
-  </div></section>
+<main class="wrap" id="main">
 
-  <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
+  <p class="eyebrow" style="margin-top:var(--v)">CBSA commercial lanes</p>
+  <h1>Border wait times</h1>
+  <p class="stand">Commercial lane waits at Canada-US crossings, polled every 30 minutes. Each time shown is CBSA's own capture time for that crossing, not our fetch time, so it reflects how current their data is rather than how recently we asked.</p>
 
-  <div class="sechead"><h2>All commercial crossings</h2><span class="sub">wait captured at update</span><span class="rule"></span></div>
-  <div class="panel"><table class="tbl bx">
-  <!--LOOP:crossings--><tr><td>{{name}}<div class="sub">{{sub}} · captured {{captured_at}}</div></td><td class="r"><span class="px">{{wait}}</span></td><td class="r"><span class="pill {{status_class}}">{{status_label}}</span></td></tr><!--/LOOP:crossings-->
-  </table></div>
-  <p class="note">Wait times are captured from CBSA's published feed. Each crossing carries its own capture time, shown above in local time at that crossing. Capture times are not currently date-stamped, so treat them as indicative rather than guaranteed-current. This is being corrected.</p>
+  <div class="meta">
+    <span>Rebuilt {{updated_at}} UTC</span>
+  </div>
 
-  <div class="sechead"><h2>Common questions</h2><span class="rule"></span></div>
-  <div class="faq"><dl>
-    <dt>Which crossing is fastest right now?</dt><dd>{{border.min_name}} at {{border.min_wait}} minutes. Times shift through the day — this page refreshes every 30 minutes.</dd>
-    <dt>Are these commercial or passenger waits?</dt><dd>Commercial-vehicle lanes. Passenger waits differ and aren't shown here.</dd>
-    <dt>How current is the number?</dt><dd>Each crossing carries its own capture time. The overall page updates every 30 minutes.</dd>
-  </dl></div>
+  <div class="rows">
+  <!--LOOP:crossings--><div class="r"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></div><!--/LOOP:crossings-->
+  </div>
+  <p class="note">Source: Canada Border Services Agency commercial lane feed. Waits change quickly and a figure that is thirty minutes old may not describe the queue you arrive at.</p>
 
-  <div class="share"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/border-wait-times/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canada-US%20truck%20border%20wait%20times&url=https://dashboard.northernmilemedia.com/border-wait-times/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/border-wait-times/')">Copy link</button></div>
+  <!--OPTIONAL:sponsor_border-->
+  <div class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_border.name}}</span><span class="l">{{sponsor_border.line}}</span><a class="c" href="{{sponsor_border.url}}">Learn more</a></div>
+  <!--/OPTIONAL:sponsor_border-->
 
-  <div class="related"><a href="/fuel-prices/">Fuel prices →</a><a href="/road-incidents/">Road incidents →</a><a href="/exchange-rate/">CAD/USD →</a></div>
+  <section class="sub" aria-labelledby="brief">
+    <div class="e">The Northern Mile Brief</div>
+    <h2 id="brief">Border and diesel, weekly</h2>
+    <p>Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.</p>
+    <a class="sub-btn" href="https://www.northernmilemedia.com/subscribe/">Subscribe free</a>
+    <div class="fine">One email a week. Unsubscribe any time.</div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Reading these numbers</h2><p>What the feed does and does not tell you.</p></div>
+    <div class="reading">
+      <p class="note" style="margin-top:0">These are commercial lane figures, not passenger lanes. A crossing showing a short wait can still be slow for a specific load if secondary inspection is busy, and the feed carries no visibility into that.</p>
+      <p class="note">We publish CBSA's capture time rather than our own so you can judge staleness yourself. If a crossing has not reported recently, that shows in the timestamp rather than being hidden behind a fresh-looking page rebuild.</p>
+    </div>
+  </section>
 
 </main>
 
-<!-- subscribe partial — Ghost Portal GET form, works cross-origin -->
+<footer class="ft"><div class="wrap">
+  <div class="links">
+    <a href="/">Dashboard home</a>
+    <a href="/fuel-prices/">Diesel</a>
+    <a href="/fuel-cost-calculator/">Calculator</a>
+    <a href="/border-wait-times/">Border</a>
+    <a href="/exchange-rate/">Exchange</a>
+    <a href="/road-incidents/">Incidents</a>
+    <a href="/market-pulse/">Market</a>
+    <a href="/industry-news/">News</a>
+    <a href="/methodology/nmdi/">Methodology</a>
+  </div>
+  <div class="fine">Northern Mile Media · Rebuilt {{updated_at}} UTC</div>
+</div></footer>
 
-
-<!-- subscribe partial — link to Ghost Portal, cross-origin safe -->
-<div class="cta">
-  <div class="e">The Northern Mile Brief</div>
-  <div class="b">Fuel, border and market shifts. Every Wednesday, 6am.</div>
-  <a class="sub-btn" href="https://northernmilemedia.com/subscribe/">Subscribe</a>
-  <div class="s" style="margin-top:8px">Free. One email a week. Unsubscribe anytime.</div>
-</div>
-
-<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-<script src="/assets/app.js?v={{build_version}}"></script>
-</body></html>
+<script src="/assets/nm.js?v={{build_version}}"></script>
+</body>
+</html>
