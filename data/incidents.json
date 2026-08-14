@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-277959",
+      "province": "ON",
+      "highway": "Frog Creek Road",
+      "direction": "Both Directions",
+      "description": "Culvert replacement on Frog Creek Road, Alberton Township. All lanes closed.",
+      "event_type": "closures",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "No Data",
+      "lat": 48.648996,
+      "lng": -93.465501,
+      "start": 1785841200,
+      "end": 1787349600,
+      "updated": 1786705217
+    },
+    {
       "id": "ON-286573",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,43 +31,6 @@
       "start": 1786410960,
       "end": null,
       "updated": 1786703160
-    },
-    {
-      "id": "drivebc.ca/RIDE-101356",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 91",
-        "from": "Highway 91",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall at Highway 91, In Richmond and 93m West of Anik Railway Overpass. Right lane blocked. Watch for traffic control. Last update: August 14th, 2026 at 3:22am PDT. Next update: August 14th, 2026 at 4:00am PDT. Disabled vehicle. Pass with caution.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.16952002,
-      "lng": -123.0003735,
-      "start": "2026-08-14T03:22:21-07:00",
-      "end": "",
-      "updated": "2026-08-14T03:22:21-07:00"
-    },
-    {
-      "id": "ON-288501",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MARKHAM ROAD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.7855712,
-      "lng": -79.2353806,
-      "start": 1786698000,
-      "end": null,
-      "updated": 1786698000
     },
     {
       "id": "ON-288474",
@@ -132,22 +111,6 @@
       "start": 1786752000,
       "end": 1786960800,
       "updated": 1786673280
-    },
-    {
-      "id": "ON-277959",
-      "province": "ON",
-      "highway": "Frog Creek Road",
-      "direction": "Both Directions",
-      "description": "Culvert replacement on Frog Creek Road, Alberton Township. All lanes closed.",
-      "event_type": "closures",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "No Data",
-      "lat": 48.648996,
-      "lng": -93.465501,
-      "start": 1785841200,
-      "end": 1787349600,
-      "updated": 1786672492
     },
     {
       "id": "ON-288452",
@@ -804,10 +767,42 @@
       "start": 1787097600,
       "end": 1788256800,
       "updated": 1786636320
+    },
+    {
+      "id": "ON-288163",
+      "province": "ON",
+      "highway": "HWY 7/12",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 7/12 Southbound  between HWY 7 NORTH JCT./BROCK TWP 8TH LINE, Sunderland and COLUMBUS ROAD, Whitby. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.28824,
+      "lng": -79.07316,
+      "start": 1787097600,
+      "end": 1788256800,
+      "updated": 1786635900
+    },
+    {
+      "id": "ON-288152",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 12 Northbound  between HWY 7 NORTH JCT, Whitby and HWY. 48 NORTH JCT, Brock. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.28825,
+      "lng": -79.07333,
+      "start": 1787097600,
+      "end": 1788256800,
+      "updated": 1786635660
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T10:59:18.081330+00:00",
+  "updated": "2026-08-14T11:30:27.878348+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
