@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-14 07:21 UTC",
-  "updated_iso": "2026-08-14T07:21:23+00:00",
-  "build_version": "1786692083",
+  "updated_at": "2026-08-14 07:52 UTC",
+  "updated_iso": "2026-08-14T07:52:29+00:00",
+  "build_version": "1786693949",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 17, HWY 527",
+    "status_line": "HWY 11, HWY 17, HWY 527, Frog Cre",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at SALEM ROAD, Ajax. All lanes closed.",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Southbound  at HWY 12 SOUTH JCT/OLD BARRIE ROAD EAST,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Southbound  at HWY 12 SOUTH JCT/OLD BARRIE ROAD EAST,\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "18 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "11 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 EDT"
+      "captured_at": "03:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 EDT"
+      "captured_at": "03:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -282,7 +282,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:32 EDT"
+      "captured_at": "03:32 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -291,7 +291,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:48 MDT"
+      "captured_at": "01:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -300,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 PDT"
+      "captured_at": "00:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -318,7 +318,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     }
   ],
   "market": [
