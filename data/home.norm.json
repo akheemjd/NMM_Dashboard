@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-14 22:54 UTC",
-  "updated_iso": "2026-08-14T22:54:57+00:00",
-  "build_version": "1786748097",
+  "updated_at": "2026-08-14 23:26 UTC",
+  "updated_iso": "2026-08-14T23:26:06+00:00",
+  "build_version": "1786749966",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -220,18 +220,18 @@
     "none": false,
     "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 407",
+    "status_line": "HWY 401, HWY 400, QEW",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WESTON ROAD, Toronto. 1 centre\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at THIRD LINE, Oakville. Right lane\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound HOV at LLOYDTOWN-AURORA RD, Kettleby.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "16 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "12 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -273,7 +273,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -296,11 +296,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 PDT"
+      "captured_at": "16:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -309,7 +309,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 CDT"
+      "captured_at": "18:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-288747",
+      "province": "ON",
+      "highway": "HWY 35",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 35 Both Directions  between CONCESSION RD 3 / ROYAL CEDAR RD, Coboconk and GLENARM RD (KAWARTHA LAKES RD 8 ), Isaacs Glen. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.60633,
+      "lng": -78.78934,
+      "start": 1786735560,
+      "end": null,
+      "updated": 1786749600
+    },
+    {
+      "id": "ON-288852",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.75346694,
+      "lng": -79.40817931,
+      "start": 1786749180,
+      "end": null,
+      "updated": 1786749180
+    },
+    {
+      "id": "ON-288850",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound HOV at LLOYDTOWN-AURORA RD, Kettleby. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.001379,
+      "lng": -79.586062,
+      "start": 1786749000,
+      "end": null,
+      "updated": 1786749000
+    },
+    {
       "id": "ON-288842",
       "province": "ON",
       "highway": "HWY 401",
@@ -17,22 +65,6 @@
       "updated": 1786747560
     },
     {
-      "id": "ON-288839",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at THIRD LINE, Oakville. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.42396733,
-      "lng": -79.72548106,
-      "start": 1786747260,
-      "end": null,
-      "updated": 1786747260
-    },
-    {
       "id": "ON-288832",
       "province": "ON",
       "highway": "QEW",
@@ -47,22 +79,6 @@
       "start": 1786746300,
       "end": null,
       "updated": 1786746300
-    },
-    {
-      "id": "ON-288824",
-      "province": "ON",
-      "highway": "HWY 407",
-      "direction": "Westbound",
-      "description": "Collision on HWY 407 Westbound  at WESTNEY RD N, Ajax. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.93769,
-      "lng": -79.070164,
-      "start": 1786744860,
-      "end": null,
-      "updated": 1786745880
     },
     {
       "id": "ON-288821",
@@ -227,22 +243,6 @@
       "start": 1786766400,
       "end": 1788984000,
       "updated": 1786735860
-    },
-    {
-      "id": "ON-288747",
-      "province": "ON",
-      "highway": "HWY 35",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 35 Both Directions  between CONCESSION RD 3 / ROYAL CEDAR RD, Coboconk and GLENARM RD (KAWARTHA LAKES RD 8 ), Isaacs Glen. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.60633,
-      "lng": -78.78934,
-      "start": 1786735560,
-      "end": null,
-      "updated": 1786735560
     },
     {
       "id": "ON-288745",
@@ -822,7 +822,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T22:54:52.741119+00:00",
+  "updated": "2026-08-14T23:26:02.915020+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
