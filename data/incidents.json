@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-288496",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at HWY 405, Niagara-On-The-Lake. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.15132847,
+      "lng": -79.14987125,
+      "start": 1786687800,
+      "end": null,
+      "updated": 1786687800
+    },
+    {
       "id": "ON-288495",
       "province": "ON",
       "highway": "QEW",
@@ -783,26 +799,10 @@
       "start": 1787097600,
       "end": 1788256800,
       "updated": 1786637940
-    },
-    {
-      "id": "ON-288161",
-      "province": "ON",
-      "highway": "HWY 7/12",
-      "direction": "Northbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 7/12 Northbound  between COLUMBUS ROAD, Whitby and HWY 7 NORTH JCT./BROCK TWP 8TH LINE, Sunderland. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.97106,
-      "lng": -78.96026,
-      "start": 1787097600,
-      "end": 1788256800,
-      "updated": 1786636320
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T05:47:49.954162+00:00",
+  "updated": "2026-08-14T06:18:58.216250+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
