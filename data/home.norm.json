@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-14 15:08 UTC",
-  "updated_iso": "2026-08-14T15:08:38+00:00",
-  "build_version": "1786720118",
+  "updated_at": "2026-08-14 15:39 UTC",
+  "updated_iso": "2026-08-14T15:39:48+00:00",
+  "build_version": "1786721988",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "17 min"
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 16,
+    "active_count": 15,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 427, HWY 410",
+    "status_line": "QEW, HWY 427, HWY 17",
     "incidents": [
       {
         "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound RAMP at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
+        "what": "Collision on QEW Toronto bound  at WOODWARD AVENUE, Hamilton. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Northbound RAMP at HWY 401, Toronto. Right lane closed.",
+        "road": "QEW",
+        "what": "Collision on QEW Fort Erie bound RAMP at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -242,11 +242,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "11:04 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -255,25 +255,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT"
+      "captured_at": "11:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "17 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "8 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -291,7 +291,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 MDT"
+      "captured_at": "09:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -300,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT"
+      "captured_at": "08:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -318,7 +318,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "11:20 EDT"
     }
   ],
   "market": [
