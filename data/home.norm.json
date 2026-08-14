@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-14 01:40 UTC",
-  "updated_iso": "2026-08-14T01:40:20+00:00",
-  "build_version": "1786671620",
+  "updated_at": "2026-08-14 02:11 UTC",
+  "updated_iso": "2026-08-14T02:11:32+00:00",
+  "build_version": "1786673492",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401, HWY 400",
+    "status_line": "QEW, HWY 11, HWY 401, HWY 400",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound  at AURORA ROAD, Whitchurch-Stouffville. Right\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound RAMP at BRONTE ROAD, Oakville. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at BROCK ROAD, Pickering. Left shoulder\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Southbound  at HWY 12 SOUTH JCT/OLD BARRIE ROAD EAST,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -287,20 +287,20 @@
     {
       "name": "Coutts-Sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:41 MDT"
+      "captured_at": "19:58 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 PDT"
+      "captured_at": "19:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -350,14 +350,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Truck News",
-      "headline": "Xos cuts 2026 outlook as electric truck deliveries slow",
-      "url": "https://www.trucknews.com/sustainability/xos-cuts-2026-outlook-as-electric-truck-deliveries-slow/1003219978/"
+      "category": "The Trucker",
+      "headline": "PACCAR Parts celebrates grand opening of Calgary parts distribution center",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/paccar-parts-celebrates-grand-opening-of-calgary-parts-distribution-center"
     },
     {
-      "category": "Truck News",
-      "headline": "WSIB audits uncover nearly $6M in trucking levies",
-      "url": "https://www.trucknews.com/business-management/wsib-audits-uncover-nearly-6m-in-trucking-levies/1003219975/"
+      "category": "The Trucker",
+      "headline": "ATA backs bill to preserve universal vehicle safety regulations",
+      "url": "https://www.thetrucker.com/trucking-news/business/ata-backs-bill-to-preserve-universal-vehicle-safety-regulations"
     }
   ],
   "theft_home_json": "[]",
