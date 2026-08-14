@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-14 19:48 UTC",
-  "updated_iso": "2026-08-14T19:48:01+00:00",
-  "build_version": "1786736881",
+  "updated_at": "2026-08-14 20:19 UTC",
+  "updated_iso": "2026-08-14T20:19:09+00:00",
+  "build_version": "1786738749",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
+    "heavy_count": 1,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "40 min"
+    "max_wait": "45 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -209,29 +209,29 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.3938",
-    "direction": "weaker CAD",
-    "change": "+0.0008",
-    "vs_baseline": "-0.0134",
+    "usd_cad": "1.3875",
+    "direction": "stronger CAD",
+    "change": "-0.0063",
+    "vs_baseline": "-0.0186",
     "high_52w": "\u2014",
     "low_52w": "\u2014"
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 13,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 401, HWY 35",
+    "status_line": "HWY 401, HWY 21, QEW",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at ISLINGTON AVE, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WARDEN AVE, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -242,11 +242,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "40 min",
+      "wait": "45 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "15:07 EDT"
+      "captured_at": "16:07 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "18 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "6 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -296,11 +296,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 PDT"
+      "captured_at": "13:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -309,7 +309,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:00 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
