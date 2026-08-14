@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-288679",
+      "id": "ON-288690",
       "province": "ON",
       "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Police Investigation on QEW Toronto bound  at BRANT STREET, Burlington. 1 right lane and right shoulder closed.",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at VICTORIA AVENUE, Lincoln. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.1861911,
+      "lng": -79.39330231,
+      "start": 1786729080,
+      "end": null,
+      "updated": 1786729080
+    },
+    {
+      "id": "ON-288686",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Collision on HWY 417 Westbound  at ISLAND PARK DR W/B (IC 123), Ottawa. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 45.3901,
+      "lng": -75.73378,
+      "start": 1786728660,
+      "end": null,
+      "updated": 1786728660
+    },
+    {
+      "id": "ON-288680",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.3416727,
-      "lng": -79.82216982,
-      "start": 1786727280,
+      "lat": 43.76855405,
+      "lng": -79.31985853,
+      "start": 1786727760,
       "end": null,
-      "updated": 1786727280
+      "updated": 1786727760
     },
     {
       "id": "ON-288676",
@@ -287,22 +319,6 @@
       "start": 1787018400,
       "end": 1787389200,
       "updated": 1786712700
-    },
-    {
-      "id": "ON-288589",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at KENINGTON POINT RD, DESBARATS, Desbarats. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.340144345,
-      "lng": -83.938099436,
-      "start": 1786712040,
-      "end": null,
-      "updated": 1786712040
     },
     {
       "id": "ON-288577",
@@ -783,26 +799,10 @@
       "start": 1786921200,
       "end": 1786960800,
       "updated": 1786656540
-    },
-    {
-      "id": "ON-288595",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 401 Westbound  between SIMCOE ST and PARK ROAD, Oshawa. 2 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Right Lane(s)",
-      "lat": 43.881462,
-      "lng": -78.856285,
-      "start": 1787191200,
-      "end": 1787216400,
-      "updated": 1786655700
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T17:13:10.148852+00:00",
+  "updated": "2026-08-14T17:44:21.426438+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
