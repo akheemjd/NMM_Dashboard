@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-14 19:16 UTC",
-  "updated_iso": "2026-08-14T19:16:50+00:00",
-  "build_version": "1786735010",
+  "updated_at": "2026-08-14 19:48 UTC",
+  "updated_iso": "2026-08-14T19:48:01+00:00",
+  "build_version": "1786736881",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "HWY 400, QEW, HWY 622, HWY 11",
+    "status_line": "QEW, HWY 401, HWY 35",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Southbound  at MCKAY ROAD, Innisfil. Left shoulder\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at VICTORIA AVENUE, Lincoln. Right\u2026",
+        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "18 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -273,7 +273,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -282,7 +282,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:08 EDT"
+      "captured_at": "15:38 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -300,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -351,13 +351,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "Road rage alert: The cities in America where tempers flare most",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/road-rage-alert-the-cities-in-america-where-tempers-flare-most"
+      "headline": "Kodiak receives permit for autonomous truck testing in California",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california"
     },
     {
       "category": "The Trucker",
-      "headline": "Geotab launches Geotab Investigations to accelerate the resolution of road incidents",
-      "url": "https://www.thetrucker.com/trucking-news/business/geotab-launches-geotab-investigations-to-accelerate-the-resolution-of-road-incidents"
+      "headline": "Road rage alert: The cities in America where tempers flare most",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/road-rage-alert-the-cities-in-america-where-tempers-flare-most"
     }
   ],
   "theft_home_json": "[]",
