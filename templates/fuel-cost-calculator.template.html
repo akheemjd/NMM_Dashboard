@@ -45,13 +45,23 @@
 </div></header>
 
 <nav class="nav" aria-label="Sections"><div class="wrap">
-  <a href="/">Home</a>
-  <a href="/fuel-prices/">Diesel</a>
-  <a href="/border-wait-times/">Border</a>
-  <a href="/exchange-rate/">Exchange</a>
-  <a href="/road-incidents/">Incidents</a>
-  <a href="/fuel-cost-calculator/" class="on">Calculator</a>
-  <a href="/methodology/nmdi/">Methodology</a>
+  <div class="bar">
+    <span class="here">Calculator</span>
+    <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="ml">Menu</span><span class="mi" aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <a href="/">Home<span class="d">Everything at a glance</span></a>
+    <a href="/fuel-prices/">Diesel<span class="d">Prices by province</span></a>
+    <a href="/fuel-cost-calculator/" class="on">Calculator<span class="d">What a run costs</span></a>
+    <a href="/border-wait-times/">Border<span class="d">Commercial waits</span></a>
+    <a href="/exchange-rate/">Exchange<span class="d">USD/CAD</span></a>
+    <a href="/road-incidents/">Incidents<span class="d">Corridor closures</span></a>
+    <a href="/market-pulse/">Market<span class="d">Freight demand</span></a>
+    <a href="/industry-news/">News<span class="d">Headlines</span></a>
+    <a href="/methodology/nmdi/">Methodology<span class="d">How the index works</span></a>
+  </div>
 </div></nav>
 
 <main class="wrap" id="main">
