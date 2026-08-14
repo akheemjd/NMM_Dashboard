@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-14 02:42 UTC",
-  "updated_iso": "2026-08-14T02:42:39+00:00",
-  "build_version": "1786675359",
+  "updated_at": "2026-08-14 03:12 UTC",
+  "updated_iso": "2026-08-14T03:12:57+00:00",
+  "build_version": "1786677177",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 3,
+    "heavy_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 11, HWY 401",
+    "status_line": "HWY 401, HWY 11, HWY 17",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound  at HWY 89/SIMCOE ROAD 89, Innisfil.\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KENNEDY RD -SCARBOROUGH,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Southbound  at HWY 12 SOUTH JCT/OLD BARRIE ROAD EAST,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at DIXIE ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
-      "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
-    },
-    {
-      "name": "Queenston-Lewiston Bridge",
-      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
       "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
+      "captured_at": "23:00 EDT"
+    },
+    {
+      "name": "Queenston-Lewiston Bridge",
+      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
+      "url": "/border-wait-times/",
+      "captured_at": "23:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -296,11 +296,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 PDT"
+      "captured_at": "20:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
