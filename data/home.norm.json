@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-14 14:37 UTC",
-  "updated_iso": "2026-08-14T14:37:29+00:00",
-  "build_version": "1786718249",
+  "updated_at": "2026-08-14 15:08 UTC",
+  "updated_iso": "2026-08-14T15:08:38+00:00",
+  "build_version": "1786720118",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 1,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_wait": "17 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 16,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 8, HWY 17",
+    "status_line": "QEW, HWY 427, HWY 410",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. 1 right lane\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Fort Erie bound RAMP at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at GLENDALE AVENUE,\u2026",
+        "road": "HWY 427",
+        "what": "Collision on HWY 427 Northbound RAMP at HWY 401, Toronto. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "17 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -300,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 PDT"
+      "captured_at": "07:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -351,13 +351,13 @@
   "news": [
     {
       "category": "Truck News",
-      "headline": "Get Trucks Back on the Road Faster with TruckDown\u2019s API",
-      "url": "https://www.trucknews.com/transportation/get-trucks-back-on-the-road-faster-with-truckdowns-api/1003219559/"
+      "headline": "Georgia woman accused of defrauding truck drivers in tax scheme",
+      "url": "https://www.trucknews.com/transportation/georgia-woman-accused-of-defrauding-truck-drivers-in-tax-scheme/1003219997/"
     },
     {
       "category": "Truck News",
-      "headline": "Montreal port begins Contrec\u0153ur terminal expansion project",
-      "url": "https://www.trucknews.com/supply-chain/montreal-port-begins-contrecoeur-terminal-expansion-project/1003219985/"
+      "headline": "Get Trucks Back on the Road Faster with TruckDown\u2019s API",
+      "url": "https://www.trucknews.com/transportation/get-trucks-back-on-the-road-faster-with-truckdowns-api/1003219559/"
     }
   ],
   "theft_home_json": "[]",
