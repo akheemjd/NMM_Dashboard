@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-288824",
+      "province": "ON",
+      "highway": "HWY 407",
+      "direction": "Westbound",
+      "description": "Collision on HWY 407 Westbound  at WESTNEY RD N, Ajax. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.93769,
+      "lng": -79.070164,
+      "start": 1786744860,
+      "end": null,
+      "updated": 1786745880
+    },
+    {
+      "id": "ON-288827",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.7535367,
+      "lng": -79.40848595,
+      "start": 1786745340,
+      "end": null,
+      "updated": 1786745340
+    },
+    {
       "id": "ON-288821",
       "province": "ON",
       "highway": "HWY 417",
@@ -15,22 +47,6 @@
       "start": 1786921200,
       "end": 1787392800,
       "updated": 1786743960
-    },
-    {
-      "id": "ON-288816",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound COLLECTOR at BURNHAMTHORPE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.64565681,
-      "lng": -79.5629123,
-      "start": 1786742940,
-      "end": null,
-      "updated": 1786742940
     },
     {
       "id": "ON-288808",
@@ -121,38 +137,6 @@
       "start": "2026-07-24T15:03:25-07:00",
       "end": "",
       "updated": "2026-08-14T13:46:37-07:00"
-    },
-    {
-      "id": "ON-288789",
-      "province": "ON",
-      "highway": "HWY 37",
-      "direction": "Southbound",
-      "description": "Continuous Construction on HWY 37 Southbound  between O'BRIEN RD and O'BRIEN RD, Thrasher'S Corners. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.2717,
-      "lng": -77.365,
-      "start": 1786705200,
-      "end": 1786744800,
-      "updated": 1786740180
-    },
-    {
-      "id": "ON-288786",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound HOV at WINSTON CHURCHILL BLVD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.600415,
-      "lng": -79.78818,
-      "start": 1786740060,
-      "end": null,
-      "updated": 1786740060
     },
     {
       "id": "drivebc.ca/DBC-93780",
@@ -814,10 +798,26 @@
       "start": 1787104800,
       "end": 1787302800,
       "updated": 1786708200
+    },
+    {
+      "id": "ON-288602",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 401 Eastbound Collector between HWY 400 and MORNINGSIDE AVE, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.716507,
+      "lng": -79.518456,
+      "start": 1787104800,
+      "end": 1787302800,
+      "updated": 1786708140
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T21:52:33.276059+00:00",
+  "updated": "2026-08-14T22:23:42.916289+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
