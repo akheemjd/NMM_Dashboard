@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-288698",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DUFFERIN STREET, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.72824868,
+      "lng": -79.45802779,
+      "start": 1786730160,
+      "end": null,
+      "updated": 1786730160
+    },
+    {
+      "id": "ON-288695",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 6 Northbound  between KEI WILL DR - TOWER RD and KEI WILL DR - TOWER RD, Espanola. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.23652,
+      "lng": -81.74205,
+      "start": 1787054400,
+      "end": 1787259600,
+      "updated": 1786729200
+    },
+    {
       "id": "ON-288690",
       "province": "ON",
       "highway": "QEW",
@@ -767,42 +799,10 @@
       "start": 1787022000,
       "end": 1787389200,
       "updated": 1786657440
-    },
-    {
-      "id": "ON-288354",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 401 Westbound  between MALLORYTOWN RD (IC 675)/Leeds & Grenville CR 5, Mallorytown and ESCOTT - ROCKPORT RD, Gananoque. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.47432,
-      "lng": -75.86948,
-      "start": 1787007600,
-      "end": 1787047200,
-      "updated": 1786657020
-    },
-    {
-      "id": "ON-288351",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 401 Westbound  between WILTON RD (IC 599)/CR 6 and CAMDEN EAST RD (IC 593)/CR 4, Odessa. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.28253,
-      "lng": -76.71596,
-      "start": 1786921200,
-      "end": 1786960800,
-      "updated": 1786656540
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T17:44:21.426438+00:00",
+  "updated": "2026-08-14T18:15:29.109612+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
