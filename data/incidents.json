@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-288842",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WESTON ROAD, Toronto. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.71325981,
+      "lng": -79.53596808,
+      "start": 1786747560,
+      "end": null,
+      "updated": 1786747560
+    },
+    {
+      "id": "ON-288839",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at THIRD LINE, Oakville. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.42396733,
+      "lng": -79.72548106,
+      "start": 1786747260,
+      "end": null,
+      "updated": 1786747260
+    },
+    {
+      "id": "ON-288832",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at CAWTHRA ROAD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.58503738,
+      "lng": -79.58243881,
+      "start": 1786746300,
+      "end": null,
+      "updated": 1786746300
+    },
+    {
       "id": "ON-288824",
       "province": "ON",
       "highway": "HWY 407",
@@ -15,22 +63,6 @@
       "start": 1786744860,
       "end": null,
       "updated": 1786745880
-    },
-    {
-      "id": "ON-288827",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.7535367,
-      "lng": -79.40848595,
-      "start": 1786745340,
-      "end": null,
-      "updated": 1786745340
     },
     {
       "id": "ON-288821",
@@ -137,6 +169,27 @@
       "start": "2026-07-24T15:03:25-07:00",
       "end": "",
       "updated": "2026-08-14T13:46:37-07:00"
+    },
+    {
+      "id": "drivebc.ca/DBC-93680",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Jesmond Rd",
+        "to": "Highway 97",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Big Bar Rd, in both directions. There is a wildfire between Jesmond Rd and Highway 97. Road closed. Road closed to all traffic except emergency vehicles. Next update time Sat Aug 15 at 12:00 PM PDT. Last updated Fri Aug 14 at 1:46 PM PDT. (DBC-93680)",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 51.296199,
+      "lng": -121.779245,
+      "start": "2026-07-18T12:10:09-07:00",
+      "end": "",
+      "updated": "2026-08-14T13:46:26-07:00"
     },
     {
       "id": "drivebc.ca/DBC-93780",
@@ -766,58 +819,10 @@
       "start": 1787104800,
       "end": 1787302800,
       "updated": 1786708260
-    },
-    {
-      "id": "ON-288604",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 401 Westbound Express between NEILSON ROAD and HWY 400, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.794125,
-      "lng": -79.21104,
-      "start": 1787104800,
-      "end": 1787302800,
-      "updated": 1786708260
-    },
-    {
-      "id": "ON-288605",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 401 Eastbound Express between HWY 400 and MORNINGSIDE AVE, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.716507,
-      "lng": -79.518456,
-      "start": 1787104800,
-      "end": 1787302800,
-      "updated": 1786708200
-    },
-    {
-      "id": "ON-288602",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 401 Eastbound Collector between HWY 400 and MORNINGSIDE AVE, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.716507,
-      "lng": -79.518456,
-      "start": 1787104800,
-      "end": 1787302800,
-      "updated": 1786708140
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T22:23:42.916289+00:00",
+  "updated": "2026-08-14T22:54:52.741119+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
