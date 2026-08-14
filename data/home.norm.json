@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-14 20:50 UTC",
-  "updated_iso": "2026-08-14T20:50:19+00:00",
-  "build_version": "1786740619",
+  "updated_at": "2026-08-14 21:21 UTC",
+  "updated_iso": "2026-08-14T21:21:28+00:00",
+  "build_version": "1786742488",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
+    "heavy_count": 2,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "45 min"
+    "max_wait": "55 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -218,9 +218,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 410, HWY 35",
+    "status_line": "HWY 401, HWY 410, HWY 35, HWY 11",
     "incidents": [
       {
         "road": "HWY 401",
@@ -231,7 +231,7 @@
       },
       {
         "road": "HWY 410",
-        "what": "Collision on HWY 410 Northbound EXPRESS at HWY 401, Mississauga. 2 left lanes\u2026",
+        "what": "Collision on HWY 410 Northbound EXPRESS at HWY 401, Mississauga. 2 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -242,11 +242,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "45 min",
+      "wait": "55 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:07 EDT"
+      "captured_at": "17:06 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "23 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -300,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -309,7 +309,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:44 CDT"
+      "captured_at": "16:00 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -350,14 +350,14 @@
   "theft": [],
   "news": [
     {
-      "category": "The Trucker",
-      "headline": "Kodiak receives permit for autonomous truck testing in California",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california"
+      "category": "Trucking Info",
+      "headline": "FMCSA: Stop Using These 15 Electronic Logging Devices",
+      "url": "https://www.truckinginfo.com/news/fmcsa-stop-using-these-15-electronic-logging-devices"
     },
     {
       "category": "The Trucker",
-      "headline": "Road rage alert: The cities in America where tempers flare most",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/road-rage-alert-the-cities-in-america-where-tempers-flare-most"
+      "headline": "Kodiak receives permit for autonomous truck testing in California",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-receives-permit-for-autonomous-truck-testing-in-california"
     }
   ],
   "theft_home_json": "[]",
