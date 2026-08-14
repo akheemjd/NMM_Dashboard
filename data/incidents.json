@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-288622",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.78103077,
+      "lng": -79.25480516,
+      "start": 1786717140,
+      "end": null,
+      "updated": 1786717140
+    },
+    {
       "id": "ON-288615",
       "province": "ON",
       "highway": "QEW",
@@ -15,22 +31,6 @@
       "start": 1786715040,
       "end": null,
       "updated": 1786715040
-    },
-    {
-      "id": "ON-288609",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound RAMP at CENTENNIAL PKWY, Hamilton. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.24478917,
-      "lng": -79.75004661,
-      "start": 1786714020,
-      "end": null,
-      "updated": 1786714020
     },
     {
       "id": "ON-288593",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T14:06:13.706748+00:00",
+  "updated": "2026-08-14T14:37:23.795501+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
