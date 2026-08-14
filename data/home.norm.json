@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-14 12:32 UTC",
-  "updated_iso": "2026-08-14T12:32:50+00:00",
-  "build_version": "1786710770",
+  "updated_at": "2026-08-14 13:03 UTC",
+  "updated_iso": "2026-08-14T13:03:59+00:00",
+  "build_version": "1786712639",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
-    "min_name": "Thousand Islands Bridge",
+    "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Thousand Islands Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "222.2",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 13,
+    "active_count": 15,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 637",
+    "status_line": "HWY 17, HWY 400, HWY 401, HWY 11",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 400, Toronto. Left\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Eastbound  at KENINGTON POINT RD, DESBARATS,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Southbound  at LINE 1, Oro Medonte. All lanes closed.",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound  at MAJOR MACKENZIE DRIVE, Vaughan.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -300,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 PDT"
+      "captured_at": "05:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -309,16 +309,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT"
+      "captured_at": "07:28 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "08:33 EDT"
     }
   ],
   "market": [
@@ -356,8 +356,8 @@
     },
     {
       "category": "The Trucker",
-      "headline": "Oil prices tick upward overnight",
-      "url": "https://www.thetrucker.com/trucking-news/business/oil-prices-tick-upward-overnight"
+      "headline": "SCF gives truck drivers a shot at staying healthy",
+      "url": "https://www.thetrucker.com/trucking-news/trucking-life/scf-gives-truck-drivers-a-shot-at-staying-healthy"
     }
   ],
   "theft_home_json": "[]",
