@@ -1,137 +1,184 @@
-<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
-<title>Northern Mile — Live Canadian Trucking Dashboard</title>
-<meta name="description" content="One tab for Canadian trucking: live diesel prices, border wait times, road incidents, cargo theft, FX and market data. Updated every 30 minutes. Free, no signup.">
+<title>Canadian Diesel Prices Today — {{fuel.national_diesel}}¢/L National Average | Northern Mile</title>
+<meta name="description" content="The Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L across ten Canadian provinces from the NRCan weekly survey, print {{fuel.print_date}}. Live commercial border wait times and the Bank of Canada exchange rate.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/">
-<meta property="og:type" content="website"><meta property="og:title" content="Northern Mile — Live Canadian Trucking Dashboard"><meta property="og:description" content="Diesel, border waits, road incidents, FX and market data. One tab. Updated every 30 min. Free."><meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Northern Mile Media">
+<meta property="og:title" content="Canadian Diesel Prices Today — {{fuel.national_diesel}}¢/L National Average">
+<meta property="og:description" content="Ten provinces, NRCan survey print {{fuel.print_date}}. Border waits and USD/CAD alongside.">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/">
+<meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="build" content="{{updated_iso}}">
+<script>
+(function(){try{var t=localStorage.getItem('nm-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css?v={{build_version}}">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nm.css?v={{build_version}}">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"WebSite","name":"Northern Mile Dashboard","url":"https://dashboard.northernmilemedia.com/","publisher":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com"}},
-{"@type":"Dataset","name":"Canadian Trucking Live Data","description":"Live diesel prices, border wait times, road incidents, FX and market indicators, updated every 30 minutes.","creator":{"@type":"Organization","name":"Northern Mile Media"},"spatialCoverage":{"@type":"Place","name":"Canada"},"dateModified":"{{updated_iso}}"}
+{"@type":"Organization","@id":"https://northernmilemedia.com/#org","name":"Northern Mile Media","url":"https://northernmilemedia.com/","description":"Canadian trucking and fuel data publication."},
+{"@type":"WebSite","@id":"https://dashboard.northernmilemedia.com/#site","url":"https://dashboard.northernmilemedia.com/","name":"Northern Mile Dashboard","publisher":{"@id":"https://northernmilemedia.com/#org"},"inLanguage":"en-CA"},
+{"@type":"Dataset","@id":"https://dashboard.northernmilemedia.com/#nmdi","name":"Northern Mile Diesel Index (NMDI)","alternateName":"NMDI","description":"A national Canadian retail diesel average computed as the unweighted mean of ten provincial averages from the Natural Resources Canada weekly retail survey. Yukon and the Northwest Territories are excluded.","url":"https://dashboard.northernmilemedia.com/","creator":{"@id":"https://northernmilemedia.com/#org"},"publisher":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"measurementTechnique":"Unweighted arithmetic mean of provincial means","variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre","value":"{{fuel.national_diesel}}"},"dateModified":"{{updated_iso}}"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How is the Northern Mile Diesel Index calculated?","acceptedAnswer":{"@type":"Answer","text":"It is the unweighted arithmetic mean of ten provincial diesel averages. Each provincial figure is itself the unweighted mean of the Natural Resources Canada survey cities in that province. Yukon and the Northwest Territories are surveyed but excluded from the index."}},
+{"@type":"Question","name":"How often do Canadian diesel prices change on this dashboard?","acceptedAnswer":{"@type":"Answer","text":"The diesel figure changes weekly, when Natural Resources Canada publishes a new retail survey. The page rebuilds every 30 minutes, but the diesel number holds steady between survey prints."}},
+{"@type":"Question","name":"Do these diesel prices include carbon tax?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every price shown is inclusive of federal and provincial fuel taxes, carbon pricing, and sales taxes, as published by Natural Resources Canada."}},
+{"@type":"Question","name":"Can I cite the Northern Mile Diesel Index?","acceptedAnswer":{"@type":"Answer","text":"Yes. The dashboard provides a formatted citation with the figure and the survey print date. The full method and a dated revision history of every published correction are on the methodology page."}}]}
 ]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
-</head><body>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
-<nav class="nav"><div class="wrap"><a href="/" class="on">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/">Incidents</a><a href="/cargo-theft/">Theft</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
+<header class="hd"><div class="wrap">
+  <a class="mark" href="/"><b>Northern Mile</b><span>Canadian trucking data</span></a>
+  <button class="themebtn" id="themebtn" type="button" aria-pressed="false"><span class="tl">Dark</span></button>
+</div></header>
 
-<main class="wrap">
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Canadian trucking</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
+<nav class="nav" aria-label="Sections"><div class="wrap">
+  <a href="/" class="on">Home</a>
+  <a href="/fuel-prices/">Diesel</a>
+  <a href="/border-wait-times/">Border</a>
+  <a href="/exchange-rate/">Exchange</a>
+  <a href="/road-incidents/">Incidents</a>
+  <a href="/fuel-cost-calculator/">Calculator</a>
+  <a href="/methodology/nmdi/">Methodology</a>
+</div></nav>
 
-  <section class="cockpit"><div class="gauges">
-    <div class="gauge hero-gauge" data-href="/fuel-prices/" role="link" tabindex="0" aria-label="Fuel prices"><div class="gl">NMDI (Northern Mile Diesel Index) · national</div><div class="odo" data-value="{{fuel.national_diesel}}" data-unit="c/L"></div><div class="gs">{{fuel.change_7d}} / 7d · NRCan weekly survey</div></div>
-  </div><div class="sub-gauges">
-    <div class="gauge {{border.gauge_class}}" data-href="/border-wait-times/" role="link" tabindex="0" aria-label="Border"><div class="gl">Border</div><div class="gv">{{border.heavy_count}} <small>heavy</small></div><div class="gs">{{border.moderate_count}} moderate · {{border.closed_count}} closed</div></div>
-    <div class="gauge" data-href="/exchange-rate/" role="link" tabindex="0" aria-label="Exchange rate"><div class="gl">USD/CAD</div><div class="gv">{{fx.usd_cad}}</div><div class="gs">{{fx.direction}} · {{fx.change}}</div></div>
-    <div class="gauge {{incidents.gauge_class}}" data-href="/road-incidents/" role="link" tabindex="0" aria-label="Road incidents"><div class="gl">Collisions</div><div class="gv">{{incidents.active_count}}</div><div class="gs">{{incidents.status_line}}</div></div>
-  </div></section>
+<main class="wrap" id="main">
+
+  <p class="eyebrow" style="margin-top:var(--v)">Northern Mile Diesel Index</p>
+  <h1>Canadian diesel prices today</h1>
+
+  <div class="figure">
+    <span class="n" data-count>{{fuel.national_diesel}}</span>
+    <span class="u">¢/L</span>
+    <span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span>
+  </div>
+  <div class="meta">
+    <span>Ten provinces</span>
+    <span>NRCan survey print {{fuel.print_date}}</span>
+    <span>Rebuilt {{updated_at}} UTC</span>
+  </div>
+
+  <div class="plot">
+    <div class="axis"><span>{{fuel.low}} ¢/L</span><span>{{fuel.high}} ¢/L</span></div>
+    <div class="rows">
+      <span class="mean" style="left:{{fuel.national_pct}}%" aria-hidden="true"></span>
+      <span class="meanlab" style="left:{{fuel.national_pct}}%">Index {{fuel.national_diesel}}</span>
+      <!--LOOP:provinces--><a class="row" href="/fuel-prices/"><span class="code">{{code}}</span><span class="track"><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
+    </div>
+    <div class="foot">
+      <span>Cheapest {{fuel.low_code}} {{fuel.low}}</span>
+      <span>Spread {{fuel.spread}}¢/L</span>
+      <span>Dearest {{fuel.high_code}} {{fuel.high}}</span>
+    </div>
+  </div>
+
+  <div class="cite">
+    <div class="cl">Citing this figure</div>
+    <q id="citation">Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L national average, ten provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
+    <div class="row">
+      <button class="btn" type="button" data-copy="citation"><span class="cp">Copy citation</span></button>
+      <a class="btn" href="/methodology/nmdi/">How it is calculated</a>
+    </div>
+  </div>
 
   <!--OPTIONAL:sponsor_page-->
-  <div class="sp"><span class="t">Dashboard presented by</span><div><div class="n">{{sponsor_page.name}}</div><div class="l">{{sponsor_page.line}}</div></div><a class="c" href="{{sponsor_page.url}}">Learn more →</a></div>
+  <div class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_page.name}}</span><span class="l">{{sponsor_page.line}}</span><a class="c" href="{{sponsor_page.url}}">Learn more</a></div>
   <!--/OPTIONAL:sponsor_page-->
 
-  <div class="sechead"><h2>Road incidents</h2><span class="sub">collisions &amp; closures on freight corridors</span><a class="more" href="/road-incidents/">Open map →</a></div>
-  <div class="panel">
-    <!--IF:incidents.none--><div class="empty" data-href="/road-incidents/" role="link" tabindex="0"><b>Corridors clear</b>No major closures or collisions on monitored corridors</div><!--/IF:incidents.none-->
-    <div class="news">
-    <!--LOOP:incidents.incidents--><a href="{{url}}">{{what}}</a><!--/LOOP:incidents.incidents-->
-    <a href="/road-incidents/" style="color:var(--ink-3);">View all incidents →</a>
+  <section class="sec">
+    <div class="lead"><h2>On the road</h2><p>What is in front of you right now.</p></div>
+    <div class="two">
+      <div>
+        <h3>Border crossings</h3>
+        <div class="rows">
+        <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{name}}<small>{{status_label}}</small></span><span class="v">{{wait}}</span></a><!--/LOOP:border_rows-->
+        </div>
+        <p class="note">Each wait carries CBSA's own capture time for that crossing, not our fetch time. <a href="/border-wait-times/">All crossings</a></p>
+      </div>
+      <div>
+        <h3>Road incidents</h3>
+        <!--IF:incidents.none--><div class="empty"><b>Corridors clear</b>No major closures or collisions on the corridors we monitor.</div><!--/IF:incidents.none-->
+        <div class="links-list">
+        <!--LOOP:incidents.incidents--><a href="{{url}}">{{what}}</a><!--/LOOP:incidents.incidents-->
+        </div>
+        <p class="note">{{incidents.status_line}} <a href="/road-incidents/">Open map</a></p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="sechead"><h2>Border crossings</h2><span class="sub">commercial wait</span><a class="more" href="/border-wait-times/">All crossings →</a></div>
-  <div class="panel"><table class="tbl bx" style="table-layout:fixed;width:100%">
-  <colgroup><col style="width:auto"><col style="width:80px"><col style="width:85px"></colgroup>
-  <!--LOOP:border_rows--><tr data-href="{{url}}" role="link" tabindex="0" style="height:36px;"><td style="padding:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{name}}</td><td class="r" style="padding:8px;vertical-align:middle;"><span class="px">{{wait}}</span></td><td class="r" style="padding:8px;vertical-align:middle;"><span class="pill {{status_class}}">{{status_label}}</span></td></tr><!--/LOOP:border_rows-->
-  </table></div>
-  <!--OPTIONAL:sponsor_border--><div class="sp"><span class="t">Border module by</span><div><div class="n">{{sponsor_border.name}}</div><div class="l">{{sponsor_border.line}}</div></div><a class="c" href="{{sponsor_border.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_border-->
-
-  <div class="sechead"><h2>Fuel &amp; exchange</h2><span class="sub">NMDI · USD/CAD</span><a class="more" href="/fuel-prices/">Full fuel →</a></div>
-  <div class="row">
-    <div class="panel"><div class="readout"><div class="rl">NMDI (Northern Mile Diesel Index) · national average</div><div class="big">{{fuel.national_diesel}}<small> c/L</small></div><div class="meta">{{fuel.low_code}} {{fuel.low}} low · {{fuel.high_code}} {{fuel.high}} high · spread {{fuel.spread}}c</div></div>
-      <table class="tbl">
-      <!--LOOP:fuel_top--><tr data-href="/fuel-prices/" role="link" tabindex="0"><td class="code">{{code}}</td><td>{{name}}</td><td class="r"><span class="px">{{price}}</span></td><td class="r mono {{change_class}}">{{change}}</td></tr><!--/LOOP:fuel_top-->
-      </table></div>
-    <div class="panel"><div class="readout"><div class="rl">USD / CAD</div><div class="big">{{fx.usd_cad}}</div><div class="meta">{{fx.direction}} · {{fx.change}} · Bank of Canada</div></div>
-      <div class="ind" data-href="/fuel-prices/" role="link" tabindex="0"><div class="nm">Fill before you cross<span>US border states run cheaper in CAD/L</span></div><div class="vv" style="font-size:.75rem;font-family:'IBM Plex Mono',monospace;color:var(--green)">See →</div></div>
-      <div class="ind" data-href="/fuel-prices/" role="link" tabindex="0"><div class="nm">IFTA reference<span>Per-jurisdiction tax portion</span></div><div class="vv" style="font-size:.75rem;font-family:'IBM Plex Mono',monospace;color:var(--green)">See →</div></div></div>
-  </div>
-
-  
-
-  <div class="sechead"><h2>Market pulse</h2><span class="sub">freight demand signals</span><a class="more" href="/market-pulse/">Full market →</a></div>
-  <div class="panel">
-  <!--LOOP:market--><div class="ind" data-href="/market-pulse/" role="link" tabindex="0"><div class="nm">{{name}}<span>{{note}}</span></div><div class="vv {{value_class}}">{{value}}</div></div><!--/LOOP:market-->
-  </div>
-
-  <div class="sechead sechead--ref"><h2>Cargo theft</h2><span class="sub">reference · last 12 months</span><a class="more" href="/cargo-theft/">All incidents →</a></div>
-  <div class="panel">
-  <!--LOOP:theft--><div class="tft" data-href="{{url}}" role="link" tabindex="0"><div class="h">{{title}} <span class="val">{{value}}</span></div><div class="m">{{meta}}</div></div><!--/LOOP:theft-->
-    <a href="/cargo-theft/" style="display:block;padding:8px 10px;color:var(--ink-3);font-size:0.75rem;border-top:1px solid var(--border);">More →</a>
-  </div>
-
-  <div class="sechead sechead--ref"><h2>Industry news</h2><span class="sub">curated headlines</span><a class="more" href="/industry-news/">All headlines →</a></div>
-  <div class="panel"><div class="news">
-  <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
-    <a href="/industry-news/"><span class="src">More</span>All industry headlines →</a>
-  </div></div>
-
-  <div class="sechead sechead--ref"><h2>Fuel cost calculator</h2></div>
-  <div class="panel"><div class="calc"><div class="txt">Trip fuel cost by distance, burn rate and current diesel — pre-loaded with today's national average.</div><a href="/fuel-cost-calculator/">Open calculator →</a></div></div>
-
+  <section class="sec">
+    <div class="lead"><h2>Planning a run</h2><p>What a trip costs, and where the market sits.</p></div>
+    <div class="two">
+      <div>
+        <h3>Exchange and market</h3>
+        <div class="rows">
+          <a class="r" href="/exchange-rate/"><span class="k">USD / CAD<small>Bank of Canada</small></span><span class="v">{{fx.usd_cad}} {{fx.change}}</span></a>
+          <!--LOOP:market--><a class="r" href="/market-pulse/"><span class="k">{{name}}<small>{{note}}</small></span><span class="v {{value_class}}">{{value}}</span></a><!--/LOOP:market-->
+        </div>
+      </div>
+      <div>
+        <h3>Industry news</h3>
+        <div class="links-list">
+        <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
+        </div>
+        <p class="note"><a href="/industry-news/">All headlines</a></p>
+      </div>
     </div>
+    <p class="note">Diesel prices include all federal and provincial fuel, carbon, and sales taxes. <a href="/fuel-cost-calculator/">Work out what a run costs</a></p>
+  </section>
 
-  <div class="share"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=One%20tab%20for%20Canadian%20trucking&url=https://dashboard.northernmilemedia.com/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/')">Copy link</button></div>
+  <section class="sub" aria-labelledby="brief">
+    <div class="e">The Northern Mile Brief</div>
+    <h2 id="brief">One email, Wednesday mornings</h2>
+    <p>What moved in Canadian diesel, at the border, and in freight demand, with every figure dated and linked back to this dashboard. Written for people who move freight, not for people who write about it.</p>
+    <a class="sub-btn" href="https://www.northernmilemedia.com/subscribe/">Subscribe free</a>
+    <div class="fine">One email a week. Unsubscribe any time.</div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Citing this data</h2><p>For reporters and analysts who need a figure they can stand behind.</p></div>
+    <div class="two">
+      <div>
+        <div class="rows">
+          <div class="r"><span class="k">Diesel<small>Natural Resources Canada weekly retail survey</small></span><span class="v">Weekly</span></div>
+          <div class="r"><span class="k">Exchange rate<small>Bank of Canada daily observation</small></span><span class="v">Daily</span></div>
+          <div class="r"><span class="k">Border waits<small>CBSA commercial lane feed</small></span><span class="v">30 min</span></div>
+        </div>
+      </div>
+      <div class="reading">
+        <p class="note" style="margin-top:0">The full method, the population, and every correction we have published are on the <a href="/methodology/nmdi/">methodology page</a>. Corrections are logged with dates and both values, never quietly substituted.</p>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<!-- subscribe partial — Ghost Portal GET form, works cross-origin -->
+<footer class="ft"><div class="wrap">
+  <div class="links">
+    <a href="/fuel-prices/">Diesel prices by province</a>
+    <a href="/border-wait-times/">Border wait times</a>
+    <a href="/exchange-rate/">USD/CAD exchange rate</a>
+    <a href="/road-incidents/">Road incidents</a>
+    <a href="/market-pulse/">Market pulse</a>
+    <a href="/industry-news/">Industry news</a>
+    <a href="/fuel-cost-calculator/">Fuel cost calculator</a>
+    <a href="/methodology/nmdi/">NMDI methodology</a>
+  </div>
+  <div class="fine">Northern Mile Media · Rebuilt {{updated_at}} UTC · NRCan survey print {{fuel.print_date}}</div>
+</div></footer>
 
-
-<!-- subscribe partial — link to Ghost Portal, cross-origin safe -->
-<div class="cta">
-  <div class="e">The Northern Mile Brief</div>
-  <div class="b">Fuel, border and market shifts. Every Wednesday, 6am.</div>
-  <a class="sub-btn" href="https://northernmilemedia.com/subscribe/">Subscribe</a>
-  <div class="s" style="margin-top:8px">Free. One email a week. Unsubscribe anytime.</div>
-</div>
-
-<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving · <a href="/methodology/nmdi/" style="color:var(--ink-3)">NMDI methodology</a><div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-<script src="/assets/app.js?v={{build_version}}"></script>
-
-<script>
-(function(){
-  var cities = {{calc_cities}};
-  var distances = {{calc_distances}};
-  var diesel = {{fuel.national_diesel}};
-  var fromEl = document.getElementById('home-from');
-  var toEl = document.getElementById('home-to');
-  var effEl = document.getElementById('home-eff');
-  var resultEl = document.getElementById('home-calc-result');
-  var detailEl = document.getElementById('home-calc-detail');
-  if (!fromEl || !toEl) return;
-
-  cities.forEach(function(c){var o=document.createElement('option');o.value=c.code;o.textContent=c.name;fromEl.appendChild(o.cloneNode(true));toEl.appendChild(o);});
-  fromEl.value='YVR';toEl.value='YYZ';
-
-  function calc(){
-    var from=fromEl.value,to=toEl.value,eff=parseFloat(effEl.value)||35;
-    var dist=distances[from+'-'+to]||distances[to+'-'+from];
-    if(!dist||from===to){resultEl.innerHTML='<div style="font-size:0.75rem;color:var(--ink-3);">Trip cost</div><div style="font-size:2rem;font-weight:600;color:var(--ink);">—</div>';detailEl.textContent='';return;}
-    var litres=dist*eff/100,cost=litres*diesel/100;
-    resultEl.innerHTML='<div style="font-size:0.75rem;color:var(--ink-3);">Trip cost</div><div style="font-size:2rem;font-weight:600;color:var(--ink);">$'+cost.toFixed(0)+'</div>';
-    detailEl.textContent=dist.toLocaleString()+' km · '+eff+' L/100km · '+diesel+'c/L';
-  }
-  fromEl.addEventListener('change',calc);toEl.addEventListener('change',calc);effEl.addEventListener('input',calc);
-  calc();
-})();
-</script>
-</body></html>
+<script src="/assets/nm.js?v={{build_version}}"></script>
+</body>
+</html>
