@@ -14,18 +14,18 @@
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-08-14T03:43:16+00:00">
+<meta name="build" content="2026-08-14T03:45:27+00:00">
 <script>
 (function(){try{var t=localStorage.getItem('nm-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/nm.css?v=1786678996">
+<link rel="stylesheet" href="/assets/nm.css?v=1786679127">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://northernmilemedia.com/#org","name":"Northern Mile Media","url":"https://northernmilemedia.com/","description":"Canadian trucking and fuel data publication."},
 {"@type":"WebSite","@id":"https://dashboard.northernmilemedia.com/#site","url":"https://dashboard.northernmilemedia.com/","name":"Northern Mile Dashboard","publisher":{"@id":"https://northernmilemedia.com/#org"},"inLanguage":"en-CA"},
-{"@type":"Dataset","@id":"https://dashboard.northernmilemedia.com/#nmdi","name":"Northern Mile Diesel Index (NMDI)","alternateName":"NMDI","description":"A national Canadian retail diesel average computed as the unweighted mean of ten provincial averages from the Natural Resources Canada weekly retail survey. Yukon and the Northwest Territories are excluded.","url":"https://dashboard.northernmilemedia.com/","creator":{"@id":"https://northernmilemedia.com/#org"},"publisher":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"measurementTechnique":"Unweighted arithmetic mean of provincial means","variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre","value":"222.2"},"dateModified":"2026-08-14T03:43:16+00:00"},
+{"@type":"Dataset","@id":"https://dashboard.northernmilemedia.com/#nmdi","name":"Northern Mile Diesel Index (NMDI)","alternateName":"NMDI","description":"A national Canadian retail diesel average computed as the unweighted mean of ten provincial averages from the Natural Resources Canada weekly retail survey. Yukon and the Northwest Territories are excluded.","url":"https://dashboard.northernmilemedia.com/","creator":{"@id":"https://northernmilemedia.com/#org"},"publisher":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"measurementTechnique":"Unweighted arithmetic mean of provincial means","variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre","value":"222.2"},"dateModified":"2026-08-14T03:45:27+00:00"},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"How is the Northern Mile Diesel Index calculated?","acceptedAnswer":{"@type":"Answer","text":"It is the unweighted arithmetic mean of ten provincial diesel averages. Each provincial figure is itself the unweighted mean of the Natural Resources Canada survey cities in that province. Yukon and the Northwest Territories are surveyed but excluded from the index."}},
 {"@type":"Question","name":"How often do Canadian diesel prices change on this dashboard?","acceptedAnswer":{"@type":"Answer","text":"The diesel figure changes weekly, when Natural Resources Canada publishes a new retail survey. The page rebuilds every 30 minutes, but the diesel number holds steady between survey prints."}},
@@ -275,13 +275,23 @@ main{max-width:1160px;margin:0 auto;padding:6px 20px 48px;position:relative;z-in
 </div></header>
 
 <nav class="nav" aria-label="Sections"><div class="wrap">
-  <a href="/" class="on">Home</a>
-  <a href="/fuel-prices/">Diesel</a>
-  <a href="/border-wait-times/">Border</a>
-  <a href="/exchange-rate/">Exchange</a>
-  <a href="/road-incidents/">Incidents</a>
-  <a href="/fuel-cost-calculator/">Calculator</a>
-  <a href="/methodology/nmdi/">Methodology</a>
+  <div class="bar">
+    <span class="here">Home</span>
+    <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="ml">Menu</span><span class="mi" aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="menu" id="menu">
+    <a href="/" class="on">Home<span class="d">Everything at a glance</span></a>
+    <a href="/fuel-prices/">Diesel<span class="d">Prices by province</span></a>
+    <a href="/fuel-cost-calculator/">Calculator<span class="d">What a run costs</span></a>
+    <a href="/border-wait-times/">Border<span class="d">Commercial waits</span></a>
+    <a href="/exchange-rate/">Exchange<span class="d">USD/CAD</span></a>
+    <a href="/road-incidents/">Incidents<span class="d">Corridor closures</span></a>
+    <a href="/market-pulse/">Market<span class="d">Freight demand</span></a>
+    <a href="/industry-news/">News<span class="d">Headlines</span></a>
+    <a href="/methodology/nmdi/">Methodology<span class="d">How the index works</span></a>
+  </div>
 </div></nav>
 
 <main class="wrap" id="main">
@@ -297,7 +307,7 @@ main{max-width:1160px;margin:0 auto;padding:6px 20px 48px;position:relative;z-in
   <div class="meta">
     <span>Ten provinces</span>
     <span>NRCan survey print Tue, 11 Aug 2026</span>
-    <span>Rebuilt 2026-08-14 03:43 UTC UTC</span>
+    <span>Rebuilt 2026-08-14 03:45 UTC UTC</span>
   </div>
 
   <div class="plot">
@@ -404,10 +414,10 @@ main{max-width:1160px;margin:0 auto;padding:6px 20px 48px;position:relative;z-in
     <a href="/fuel-cost-calculator/">Fuel cost calculator</a>
     <a href="/methodology/nmdi/">NMDI methodology</a>
   </div>
-  <div class="fine">Northern Mile Media · Rebuilt 2026-08-14 03:43 UTC UTC · NRCan survey print Tue, 11 Aug 2026</div>
+  <div class="fine">Northern Mile Media · Rebuilt 2026-08-14 03:45 UTC UTC · NRCan survey print Tue, 11 Aug 2026</div>
 </div></footer>
 
-<script src="/assets/nm.js?v=1786678996"></script>
+<script src="/assets/nm.js?v=1786679127"></script>
 <script>
 /* Northern Mile Dashboard — shared behaviour for every page. */
 (function () {
