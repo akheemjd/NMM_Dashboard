@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-288496",
+      "id": "ON-286573",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at HWY 405, Niagara-On-The-Lake. Left shoulder and left lane closed.",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.15132847,
-      "lng": -79.14987125,
-      "start": 1786687800,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 46.315646952,
+      "lng": -78.703113335,
+      "start": 1786410960,
       "end": null,
-      "updated": 1786687800
+      "updated": 1786690560
     },
     {
       "id": "ON-288494",
@@ -31,22 +31,6 @@
       "start": 1786685820,
       "end": null,
       "updated": 1786685820
-    },
-    {
-      "id": "ON-286573",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at PINE ST, Mattawa. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.315646952,
-      "lng": -78.703113335,
-      "start": 1786410960,
-      "end": null,
-      "updated": 1786677480
     },
     {
       "id": "ON-288474",
@@ -799,10 +783,26 @@
       "start": 1787097600,
       "end": 1788256800,
       "updated": 1786636320
+    },
+    {
+      "id": "ON-288163",
+      "province": "ON",
+      "highway": "HWY 7/12",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 7/12 Southbound  between HWY 7 NORTH JCT./BROCK TWP 8TH LINE, Sunderland and COLUMBUS ROAD, Whitby. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.28824,
+      "lng": -79.07316,
+      "start": 1787097600,
+      "end": 1788256800,
+      "updated": 1786635900
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T06:50:05.896861+00:00",
+  "updated": "2026-08-14T07:21:15.669828+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
