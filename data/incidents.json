@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-288502",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at HWY 10/HURONTARIO, Mississauga. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.56812948,
+      "lng": -79.59990965,
+      "start": 1786699320,
+      "end": null,
+      "updated": 1786699320
+    },
+    {
       "id": "ON-288501",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1787097600,
       "end": 1788256800,
       "updated": 1786636320
-    },
-    {
-      "id": "ON-288163",
-      "province": "ON",
-      "highway": "HWY 7/12",
-      "direction": "Southbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 7/12 Southbound  between HWY 7 NORTH JCT./BROCK TWP 8TH LINE, Sunderland and COLUMBUS ROAD, Whitby. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.28824,
-      "lng": -79.07316,
-      "start": 1787097600,
-      "end": 1788256800,
-      "updated": 1786635900
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T09:25:51.964065+00:00",
+  "updated": "2026-08-14T09:57:00.004602+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
