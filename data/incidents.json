@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-288679",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Police Investigation on QEW Toronto bound  at BRANT STREET, Burlington. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.3416727,
+      "lng": -79.82216982,
+      "start": 1786727280,
+      "end": null,
+      "updated": 1786727280
+    },
+    {
+      "id": "ON-288676",
+      "province": "ON",
+      "highway": "HWY 622",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 622 Both Directions  at SNAKE BAY RD (E) - SIDEROAD (W), Ignace. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 49.243487435,
+      "lng": -92.242286106,
+      "start": 1786727160,
+      "end": null,
+      "updated": 1786727160
+    },
+    {
       "id": "ON-288668",
       "province": "ON",
       "highway": "HWY 400",
@@ -15,22 +47,6 @@
       "start": 1786964400,
       "end": 1787000400,
       "updated": 1786725360
-    },
-    {
-      "id": "ON-288665",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound RAMP at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.52680276,
-      "lng": -79.64636214,
-      "start": 1786724220,
-      "end": null,
-      "updated": 1786724880
     },
     {
       "id": "ON-288565",
@@ -95,27 +111,6 @@
       "start": 1786964400,
       "end": 1787346000,
       "updated": 1786722960
-    },
-    {
-      "id": "drivebc.ca/RIDE-101363",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Highway 17 Onramp",
-        "direction": "W",
-        "state": "CLOSED"
-      },
-      "direction": "",
-      "description": "Vehicle incident at Highway 17 Onramp, In Delta. Entrance ramp closed. Last update: August 14th, 2026 at 8:51am PDT. Next update: August 14th, 2026 at 10:00am PDT. Westbound on ramp to Highway 99 northbound is blocked. Use alternate on ramp.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.09741247,
-      "lng": -123.02856773,
-      "start": "2026-08-14T07:53:06-07:00",
-      "end": "",
-      "updated": "2026-08-14T08:51:36-07:00"
     },
     {
       "id": "ON-288651",
@@ -244,22 +239,6 @@
       "start": 1786718340,
       "end": null,
       "updated": 1786718340
-    },
-    {
-      "id": "ON-288593",
-      "province": "ON",
-      "highway": "HWY 8",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 8 Both Directions  between Road 181 / Manley Line and Road 179, Dublin. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.515476119,
-      "lng": -81.306504783,
-      "start": 1786712880,
-      "end": null,
-      "updated": 1786712880
     },
     {
       "id": "ON-288599",
@@ -804,10 +783,26 @@
       "start": 1786921200,
       "end": 1786960800,
       "updated": 1786656540
+    },
+    {
+      "id": "ON-288595",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 401 Westbound  between SIMCOE ST and PARK ROAD, Oshawa. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 43.881462,
+      "lng": -78.856285,
+      "start": 1787191200,
+      "end": 1787216400,
+      "updated": 1786655700
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T16:42:02.553269+00:00",
+  "updated": "2026-08-14T17:13:10.148852+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
