@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-288860",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound ON-RAMP at FORD DRIVE, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.494487,
+      "lng": -79.673646,
+      "start": 1786751640,
+      "end": null,
+      "updated": 1786751640
+    },
+    {
+      "id": "ON-288858",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1786924800,
+      "end": 1787313600,
+      "updated": 1786750800
+    },
+    {
       "id": "ON-288747",
       "province": "ON",
       "highway": "HWY 35",
@@ -31,38 +63,6 @@
       "start": 1786749180,
       "end": null,
       "updated": 1786749180
-    },
-    {
-      "id": "ON-288850",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound HOV at LLOYDTOWN-AURORA RD, Kettleby. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.001379,
-      "lng": -79.586062,
-      "start": 1786749000,
-      "end": null,
-      "updated": 1786749000
-    },
-    {
-      "id": "ON-288842",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WESTON ROAD, Toronto. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.71325981,
-      "lng": -79.53596808,
-      "start": 1786747560,
-      "end": null,
-      "updated": 1786747560
     },
     {
       "id": "ON-288832",
@@ -822,7 +822,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-14T23:26:02.915020+00:00",
+  "updated": "2026-08-14T23:57:12.606568+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
