@@ -125,17 +125,6 @@ def build_page(name, data):
     with open(tmpl_path) as f:
         template = f.read()
 
-    # Inject shared CSS/JS inline
-    css_path = os.path.join(ASSETS, "styles.css")
-    if os.path.exists(css_path) and "styles.css" not in template:
-        with open(css_path) as f:
-            template = template.replace("</head>", "<style>\n" + f.read() + "\n</style>\n</head>")
-
-    js_path = os.path.join(ASSETS, "app.js")
-    if os.path.exists(js_path) and "app.js" not in template:
-        with open(js_path) as f:
-            template = template.replace("</body>", "<script>\n" + f.read() + "\n</script>\n</body>")
-
     html = fill(template, data)
 
     # Write output

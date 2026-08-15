@@ -1,149 +1,148 @@
-<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8"><meta name="google-site-verification" content="xdt2nZry-WK9v9FSFfb5Fi2VKCfrRfA4HJhKuIQJ9s8" />
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Canadian Road Incidents &amp; Closures for Trucks — Live Map | Northern Mile</title>
-<meta name="description" content="Live map of major road closures and collisions on Canadian freight corridors, updated every 30 minutes. Click any incident for road, severity, clearance and detour.">
-<meta name="robots" content="index,follow"><link rel="canonical" href="https://dashboard.northernmilemedia.com/road-incidents/">
-<meta property="og:type" content="website"><meta property="og:title" content="Canadian Road Incidents — Live Map | Northern Mile"><meta property="og:description" content="Live closures and collisions on Canadian freight corridors. Updated every 30 min."><meta name="twitter:card" content="summary_large_image">
+<title>Canadian Freight Road Incidents & Closures | Northern Mile</title>
+<meta name="description" content="Live closures and major collisions on Canadian freight corridors, on an interactive map. Click any incident for detail and the source report.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://dashboard.northernmilemedia.com/road-incidents/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Northern Mile Media">
+<meta property="og:title" content="Canadian Freight Road Incidents & Closures | Northern Mile">
+<meta property="og:description" content="Live closures and major collisions on Canadian freight corridors, on an interactive map. Click any incident for detail and the source report.">
+<meta property="og:url" content="https://dashboard.northernmilemedia.com/road-incidents/">
+<meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="build" content="{{updated_iso}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&family=Saira+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="/assets/styles.css?v={{build_version}}">
+<link rel="stylesheet" href="/assets/nm.css?v={{build_version}}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Road Incidents","item":"https://dashboard.northernmilemedia.com/road-incidents/"}]}
-]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Road incidents","item":"https://dashboard.northernmilemedia.com/road-incidents/"}]}]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
-</head><body>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header class="hd"><div class="wrap"><a href="https://northernmilemedia.com" style="display:flex;align-items:center;gap:10px;color:inherit"><img src="/logo.jpg" alt="Northern Mile Media"><b>Northern Mile</b></a></div></header>
-<nav class="nav"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Fuel</a><a href="/exchange-rate/">FX</a><a href="/border-wait-times/">Border</a><a href="/road-incidents/" class="on">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/fuel-cost-calculator/">Calc</a></div></nav>
+<header class="hd"><div class="wrap">
+  <a class="mark" href="/"><span class="dot" aria-hidden="true"></span><b>Northern Mile</b><span>Canadian trucking data</span></a>
+</div></header>
 
-<main class="wrap">
-  <div class="breadcrumb"><a href="/">Dashboard</a> › Road Incidents</div>
-  <div class="strip"><span><span class="dot"></span><b>Live</b></span><span>Closures + collisions · freight corridors</span><span>Updated {{updated_at}} · refresh 30 min</span></div>
+<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/" class="on" aria-current="page">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></div></nav>
 
-  <div class="sechead"><h2>Incident map</h2><span class="sub">click a pin or row for detail</span><span class="rule"></span></div>
-  <div id="map"></div>
+<main class="wrap" id="main">
 
-  <!--OPTIONAL:sponsor_incidents--><div class="sp"><span class="t">Presented by</span><div><div class="n">{{sponsor_incidents.name}}</div><div class="l">{{sponsor_incidents.line}}</div></div><a class="c" href="{{sponsor_incidents.url}}">Learn more →</a></div><!--/OPTIONAL:sponsor_incidents-->
+  <section class="hero">
+    <span class="eyebrow">Freight corridor closures</span>
+    <h1>Road incidents</h1>
+    <p class="stand">Closures and major collisions on the freight corridors we monitor. Click a pin or a row for detail.</p>
+    <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
 
-  <div class="sechead"><h2>Active incidents</h2><span class="rule"></span></div>
-  <div class="panel" id="incList" style="max-height:500px;overflow-y:auto;"></div>
+  <div id="map" class="incmap"></div>
+  <div class="two incgrid">
+    <div class="panel-list" id="incList"></div>
+    <div id="inc-detail" class="inc-detail" hidden></div>
+  </div>
 
-    <div class="sechead"><h2>Scheduled work</h2><span class="sub">coming closures &amp; construction</span><span class="rule"></span></div>
-  <div class="panel" style="max-height:500px;overflow-y:auto;"><table class="tbl">
-    <thead><tr><th>Highway</th><th>Work</th><th class="r">When</th><th class="r">Lanes</th></tr></thead>
-    <!--LOOP:coming_roadwork--><tr class="inc-row" data-road="{{road}}" data-what="{{what}}" data-clearance="{{when}}" data-lanes="{{lanes}}" data-severity="Roadwork" data-severity-class="mod" data-direction="" data-event="Scheduled roadwork" data-closed="" data-end-time="" style="cursor:pointer;" onclick="showIncDetail(this);"><td class="code">{{road}}</td><td>{{what}}</td><td class="r">{{when}}</td><td class="r mono">{{lanes}}</td></tr><!--/LOOP:coming_roadwork-->
-  </table></div>
+  <!--OPTIONAL:sponsor_incidents-->
+  <aside class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_incidents.name}}</span><span class="l">{{sponsor_incidents.line}}</span><a class="c" href="{{sponsor_incidents.url}}">Learn more →</a></aside>
+  <!--/OPTIONAL:sponsor_incidents-->
 
-  <div class="share" style="margin-top:24px"><a href="https://www.facebook.com/sharer/sharer.php?u=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/intent/tweet?text=Live%20Canadian%20road%20closures%20for%20trucks&url=https://dashboard.northernmilemedia.com/road-incidents/" target="_blank" rel="noopener">Share on X</a><button type="button" onclick="copyLink(this,'https://dashboard.northernmilemedia.com/road-incidents/')">Copy link</button></div>
+  <section class="sec">
+    <div class="lead"><h2>Scheduled roadwork</h2><p>Planned lane reductions on monitored corridors.</p></div>
+    <div class="rows">
+    <!--LOOP:coming_roadwork--><div class="r"><span class="k">{{road}}<small>{{what}}</small></span><span class="v">{{when}} · {{lanes}}</span></div><!--/LOOP:coming_roadwork-->
+    </div>
+  </section>
 
-  <div class="related"><a href="/border-wait-times/">Border waits →</a><a href="/fuel-prices/">Fuel prices →</a></div>
+  <section class="sub" aria-labelledby="brief">
+    <div class="e">The Northern Mile Brief</div>
+    <h2 id="brief">Corridors and costs</h2>
+    <p>Which corridors closed, where diesel moved, and what it did to the week. One email on Wednesday mornings.</p>
+    <a class="sub-btn" href="https://www.northernmilemedia.com/subscribe/">Subscribe free</a>
+    <div class="fine">One email a week. Unsubscribe any time.</div>
+  </section>
 
 </main>
 
-<!-- subscribe partial — Ghost Portal GET form, works cross-origin -->
+<footer class="ft"><div class="wrap">
+  <div class="links"><a href="/">Dashboard home</a><a href="/">Home</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></div>
+  <div class="fine">Northern Mile Media · Rebuilt {{updated_at}} UTC</div>
+</div></footer>
 
-
-<!-- subscribe partial — link to Ghost Portal, cross-origin safe -->
-<div class="cta">
-  <div class="e">The Northern Mile Brief</div>
-  <div class="b">Fuel, border and market shifts. Every Wednesday, 6am.</div>
-  <a class="sub-btn" href="https://northernmilemedia.com/subscribe/">Subscribe</a>
-  <div class="s" style="margin-top:8px">Free. One email a week. Unsubscribe anytime.</div>
-</div>
-
-<footer class="ft"><div class="wrap">Northern Mile Media · For the people who keep Canada moving<div class="note">Data from public sources · Sponsors never influence the data · Informational use only · © 2026 Northern Mile Media</div></div></footer>
-
-<!-- HERMES: write the incident array below. Each item:
-     {road,direction,severity,severity_label,severity_class,what,clearance,detour,source_url,lat,lng}
-     Leave [] for no incidents; the map + list show a clean "corridors clear" state. -->
-<script>window.INCIDENTS = {{incidents_json}};</script>
-
+<script src="/assets/nm.js?v={{build_version}}"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="/assets/app.js?v={{build_version}}"></script>
+<script>window.INCIDENTS = {{incidents_json}};</script>
 <script>
 (function(){
   var data = window.INCIDENTS || [];
+  var mapEl = document.getElementById('map');
+  var list = document.getElementById('incList');
+  var detail = document.getElementById('inc-detail');
+  if(!mapEl) return;
+
+  var CLOSED = '#B3261E';   // cost/danger red, matches nm.css --up
+  var ACTIVE = '#0B5D3B';   // forest green, matches nm.css --signal
+
   var map = L.map('map',{scrollWheelZoom:true}).setView([56.13,-106.35],4);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    attribution:'&copy; OpenStreetMap &copy; CARTO', subdomains:'abcd', maxZoom:19
+    attribution:'&copy; OpenStreetMap contributors', maxZoom:19
   }).addTo(map);
-  var list = document.getElementById('incList');
+
   if(!data.length){
-    list.innerHTML = '<div class="empty"><b>Corridors clear</b>No major closures or collisions on monitored corridors · checked {{updated_at}}</div>';
+    if(list) list.innerHTML = '<div class="empty"><b>Corridors clear</b>No major closures or collisions on monitored corridors.</div>';
     return;
   }
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+
   var markers = [];
-  data.forEach(function(it, idx){
-    var color = it.severity_class === 'closed' ? '#E5484D' : '#F5C518';
+  data.forEach(function(it){
+    var color = it.severity_class === 'closed' ? CLOSED : ACTIVE;
     var m = L.circleMarker([it.lat, it.lng], {radius:8,color:color,fillColor:color,fillOpacity:.85,weight:2}).addTo(map);
-    m.bindPopup(
-      '<b>'+it.road+' '+it.direction+'</b>'+
-      '<br>'+it.what+
-      (it.event_type?'<br><small>'+it.event_type+'</small>':'')+
-      (it.lanes?'<br><small>Lanes: '+it.lanes+'</small>':'')+
-      (it.closed?'<br><span style="color:#E5484D;font-weight:600;">CLOSED</span>':'')+
-      (it.clearance?'<br><small>Started: '+it.clearance+'</small>':'')+
-      (it.end_time?'<br><small>Until: '+it.end_time+'</small>':'')+
-      (it.source_url?'<br><a href="'+it.source_url+'" target="_blank" rel="noopener">Source →</a>':'')
-    );
+    m.bindPopup('<b>'+esc(it.road)+' '+esc(it.direction)+'</b><br>'+esc(it.what)+
+      (it.source_url?'<br><a href="'+esc(it.source_url)+'" target="_blank" rel="noopener">Source</a>':''));
     markers.push(m);
+
     var row = document.createElement('div');
     row.className = 'inc';
     row.setAttribute('tabindex','0');
     row.setAttribute('role','button');
-    row.setAttribute('data-road', it.road||'');
-    row.setAttribute('data-direction', it.direction||'');
-    row.setAttribute('data-what', it.what||'');
-    row.setAttribute('data-severity', it.severity_label||'');
-    row.setAttribute('data-severity-class', it.severity_class||'');
-    row.setAttribute('data-event', it.event_type||'');
-    row.setAttribute('data-lanes', it.lanes||'');
-    row.setAttribute('data-closed', it.closed||'');
-    row.setAttribute('data-clearance', it.clearance||'');
-    row.setAttribute('data-end-time', it.end_time||'');
-    row.setAttribute('data-lat', it.lat||'');
-    row.setAttribute('data-lng', it.lng||'');
-    row.innerHTML = '<div class="h">'+it.road+' · '+it.direction+' <span class="pill '+it.severity_class+'" style="float:right">'+it.severity_label+'</span></div><div class="m">'+it.what+(it.clearance?' · clears '+it.clearance:'')+'</div>';
-    row.addEventListener('click', function(){ showIncDetail(row); map.flyTo([it.lat, it.lng], 10, {duration:.6}); });
-    row.addEventListener('keydown', function(e){ if(e.key==='Enter') showIncDetail(row); });
-    list.appendChild(row);
+    row.innerHTML = '<div class="h">'+esc(it.road)+' · '+esc(it.direction)+
+      ' <span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></div>'+
+      '<div class="m">'+esc(it.what)+(it.clearance?' · clears '+esc(it.clearance):'')+'</div>';
+
+    function show(){
+      var p = [];
+      p.push('<div class="idh"><h3>'+esc(it.road)+' '+esc(it.direction)+'</h3><button class="idx" aria-label="Close">×</button></div>');
+      if(it.closed) p.push('<div class="idclosed">Road closed</div>');
+      p.push('<div class="idrow"><span>What</span><b>'+esc(it.what)+'</b></div>');
+      p.push('<div class="idrow"><span>Severity</span><b><span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></b></div>');
+      if(it.event_type) p.push('<div class="idrow"><span>Type</span><b>'+esc(it.event_type)+'</b></div>');
+      if(it.lanes) p.push('<div class="idrow"><span>Lanes</span><b>'+esc(it.lanes)+'</b></div>');
+      if(it.clearance) p.push('<div class="idrow"><span>Started</span><b>'+esc(it.clearance)+'</b></div>');
+      if(it.end_time) p.push('<div class="idrow"><span>Until</span><b>'+esc(it.end_time)+'</b></div>');
+      if(it.source_url) p.push('<div class="idrow"><span>Source</span><b><a href="'+esc(it.source_url)+'" target="_blank" rel="noopener">Report</a></b></div>');
+      detail.innerHTML = p.join('');
+      detail.hidden = false;
+      var x = detail.querySelector('.idx');
+      if(x) x.onclick = function(){ detail.hidden = true; };
+      map.flyTo([it.lat, it.lng], 9, {duration:.6});
+      detail.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+    row.addEventListener('click', show);
+    row.addEventListener('keydown', function(e){ if(e.key==='Enter') show(); });
+    if(list) list.appendChild(row);
   });
+
   var group = L.featureGroup(markers);
-  map.fitBounds(group.getBounds().pad(0.2));
-
-  // Detail panel
-  var incDetail = document.createElement('div');
-  incDetail.id = 'inc-detail';
-  incDetail.style.cssText = 'display:none;position:fixed;top:0;right:0;width:380px;max-width:100vw;height:100vh;background:var(--surface-1);border-left:1px solid var(--border);z-index:9999;overflow-y:auto;padding:24px;font-size:0.875rem;';
-  document.body.appendChild(incDetail);
-
-  window.showIncDetail = function(row) {
-    var closed = row.getAttribute('data-closed');
-    var parts = [];
-    parts.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;"><h2 style="margin:0;font-size:1rem;">Incident details</h2><button class="inc-close-btn" style="background:none;border:none;color:var(--ink-3);cursor:pointer;font-size:1.25rem;">&times;</button></div>');
-    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Highway</div><div style="font-weight:600;color:var(--ink);font-size:1rem;">'+row.getAttribute('data-road')+' '+row.getAttribute('data-direction')+'</div></div>');
-    if (closed) parts.push('<div style="margin-bottom:16px;background:rgba(229,72,77,.12);border-left:2px solid var(--red);padding:12px;"><div style="font-size:0.75rem;font-weight:700;color:var(--red);">ROAD CLOSED</div></div>');
-    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Description</div><div style="color:var(--ink-2);">'+row.getAttribute('data-what')+'</div></div>');
-    var sev = '<span class="pill '+row.getAttribute('data-severity-class')+'">'+row.getAttribute('data-severity')+'</span>';
-    parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Severity</div><div>'+sev+'</div></div>');
-    var eventType = row.getAttribute('data-event');
-    if (eventType) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Type</div><div>'+eventType+'</div></div>');
-    var lanes = row.getAttribute('data-lanes');
-    if (lanes) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Lanes</div><div>'+lanes+'</div></div>');
-    var clearance = row.getAttribute('data-clearance');
-    if (clearance) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Started</div><div>'+clearance+'</div></div>');
-    var endTime = row.getAttribute('data-end-time');
-    if (endTime) parts.push('<div style="margin-bottom:16px;"><div style="font-size:0.625rem;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px;">Until</div><div>'+endTime+'</div></div>');
-    incDetail.innerHTML = parts.join('');
-    incDetail.style.display = 'block';
-    var closeBtn = incDetail.querySelector('.inc-close-btn');
-    if (closeBtn) closeBtn.onclick = function() { incDetail.style.display = 'none'; };
-  };
+  try { map.fitBounds(group.getBounds().pad(0.2)); } catch(e){}
 })();
 </script>
-</body></html>
+</body>
+</html>

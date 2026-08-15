@@ -14,344 +14,82 @@
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-08-15T15:17:02+00:00">
+<meta name="build" content="2026-08-15T15:51:35+00:00">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/nm.css?v=1786807022">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nm.css?v=1786809095">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://northernmilemedia.com/#org","name":"Northern Mile Media","url":"https://northernmilemedia.com/","description":"Canadian trucking and fuel data publication."},{"@type":"WebSite","@id":"https://dashboard.northernmilemedia.com/#site","url":"https://dashboard.northernmilemedia.com/","name":"Northern Mile Dashboard","publisher":{"@id":"https://northernmilemedia.com/#org"},"inLanguage":"en-CA"},{"@type":"Dataset","@id":"https://dashboard.northernmilemedia.com/#nmdi","name":"Northern Mile Diesel Index (NMDI)","alternateName":"NMDI","description":"A national Canadian retail diesel average computed as the unweighted mean of ten provincial averages from the Natural Resources Canada weekly retail survey. Yukon and the Northwest Territories are excluded.","url":"https://dashboard.northernmilemedia.com/","creator":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"measurementTechnique":"Unweighted arithmetic mean of provincial means","variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre","value":"227.9"},"dateModified":"2026-08-15T15:17:02+00:00"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the Northern Mile Diesel Index calculated?","acceptedAnswer":{"@type":"Answer","text":"It is the unweighted arithmetic mean of ten provincial diesel averages. Each provincial figure is itself the unweighted mean of the Natural Resources Canada survey cities in that province. Yukon and the Northwest Territories are surveyed but excluded from the index."}},{"@type":"Question","name":"How often do Canadian diesel prices change on this dashboard?","acceptedAnswer":{"@type":"Answer","text":"The diesel figure changes weekly, when Natural Resources Canada publishes a new retail survey. The page rebuilds every 30 minutes, but the diesel number holds steady between survey prints."}},{"@type":"Question","name":"Do these diesel prices include carbon tax?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every price shown is inclusive of federal and provincial fuel taxes, carbon pricing, and sales taxes, as published by Natural Resources Canada."}},{"@type":"Question","name":"Can I cite the Northern Mile Diesel Index?","acceptedAnswer":{"@type":"Answer","text":"Yes. The dashboard provides a formatted citation with the figure and the survey print date. The full method and a dated revision history of every published correction are on the methodology page."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://northernmilemedia.com/#org","name":"Northern Mile Media","url":"https://northernmilemedia.com/","description":"Canadian trucking and fuel data publication."},{"@type":"WebSite","@id":"https://dashboard.northernmilemedia.com/#site","url":"https://dashboard.northernmilemedia.com/","name":"Northern Mile Dashboard","publisher":{"@id":"https://northernmilemedia.com/#org"},"inLanguage":"en-CA"},{"@type":"Dataset","@id":"https://dashboard.northernmilemedia.com/#nmdi","name":"Northern Mile Diesel Index (NMDI)","alternateName":"NMDI","description":"A national Canadian retail diesel average computed as the unweighted mean of ten provincial averages from the Natural Resources Canada weekly retail survey. Yukon and the Northwest Territories are excluded.","url":"https://dashboard.northernmilemedia.com/","creator":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"measurementTechnique":"Unweighted arithmetic mean of provincial means","variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre","value":"227.9"},"dateModified":"2026-08-15T15:51:35+00:00"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the Northern Mile Diesel Index calculated?","acceptedAnswer":{"@type":"Answer","text":"It is the unweighted arithmetic mean of ten provincial diesel averages. Each provincial figure is itself the unweighted mean of the Natural Resources Canada survey cities in that province. Yukon and the Northwest Territories are surveyed but excluded from the index."}},{"@type":"Question","name":"How often do Canadian diesel prices change on this dashboard?","acceptedAnswer":{"@type":"Answer","text":"The diesel figure changes weekly, when Natural Resources Canada publishes a new retail survey. The page rebuilds every 30 minutes, but the diesel number holds steady between survey prints."}},{"@type":"Question","name":"Do these diesel prices include carbon tax?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every price shown is inclusive of federal and provincial fuel taxes, carbon pricing, and sales taxes, as published by Natural Resources Canada."}},{"@type":"Question","name":"Can I cite the Northern Mile Diesel Index?","acceptedAnswer":{"@type":"Answer","text":"Yes. The dashboard provides a formatted citation with the figure and the survey print date. The full method and a dated revision history of every published correction are on the methodology page."}}]}]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
-<style>
-/* Northern Mile Dashboard — locked design system. Shared by every page. */
-:root{
---bg:#0B0D11;--surface-1:#111419;--surface-2:#161A21;--raise:#1B2028;
---border:#20262F;--hair:#191E26;
---ink:#FFFFFF;--ink-2:#E6E9F0;--ink-3:#C8CFD8;
-
-/* Brand. Amber is the only decorative accent. Never used to signal data. */
---brand:#F5C518;--brand-dim:#8A6E08;--brand-glow:rgba(245,197,24,.12);
-
-/* Directional. Cost series only: rising cost is bad, falling cost is good.
-   These four are never used for decoration. */
---up:#E5484D;--down:#1E9E66;--warn:#F5C518;--alert:#E5484D;
-
-/* Retained aliases so no rule silently loses its colour. */
---green:#1E9E66;--green-dim:#12613F;--yellow:#F5C518;--red:#E5484D;--amber:#F5C518;
---rc:6px}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-*{font-variant-numeric:tabular-nums}
-html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink-2);font-family:'Inter',-apple-system,sans-serif;font-size:.875rem;line-height:1.55;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(120% 70% at 50% -10%,rgba(245,197,24,.05),transparent 60%);z-index:0}
-a{color:var(--brand);text-decoration:none}
-::-webkit-scrollbar{height:8px;width:8px}::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
-
-/* header / nav */
-.hd{border-bottom:1px solid var(--hair);height:54px;display:flex;align-items:center}
-.hd .wrap{display:flex;align-items:center;gap:12px;width:100%}
-.hd img{height:28px;width:auto}
-.hd b{font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.14em;color:var(--ink);text-transform:uppercase}
-.nav{border-bottom:1px solid var(--hair);overflow-x:auto;white-space:nowrap}
-.nav .wrap{display:flex;gap:2px}
-.nav a{color:var(--ink-3);font-size:.8125rem;font-weight:600;font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;text-transform:uppercase;padding:12px 14px;border-bottom:2px solid transparent}
-.nav a:hover{color:var(--ink)}
-.nav a.on{color:var(--ink);border-color:var(--brand)}
-.breadcrumb{padding:10px 0 0;font-size:.8125rem;color:var(--ink-3);font-family:'IBM Plex Mono',monospace}
-.breadcrumb a{color:var(--ink-3)}
-
-/* status strip / live */
-.strip{display:flex;align-items:center;gap:16px;padding:16px 0 4px;font-family:'IBM Plex Mono',monospace;font-size:.8125rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);flex-wrap:wrap}
-.dot{width:6px;height:6px;background:var(--brand);box-shadow:0 0 0 3px var(--brand-glow);display:inline-block;margin-right:7px;vertical-align:middle}
-.strip b{color:var(--brand);font-weight:600}
-
-/* cockpit (home) */
-.cockpit{position:relative;background:linear-gradient(180deg,var(--surface-1),#0F1216);border:1px solid var(--border);border-radius:var(--rc);margin:14px 0 10px;padding:8px}
-.cockpit::before,.cockpit::after{content:"";position:absolute;width:12px;height:12px;border:1px solid var(--ink-3);opacity:.4;z-index:2}
-.cockpit::before{left:10px;top:10px;border-right:0;border-bottom:0}
-.cockpit::after{right:10px;bottom:10px;border-left:0;border-top:0}
-.gauges{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border-radius:4px 4px 0 0;overflow:hidden}
-.gauge{background:var(--surface-1);padding:20px 22px;min-height:118px;display:flex;flex-direction:column;justify-content:space-between}
-.gauge .gl{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
-.hero-gauge .odo{font-size:4.4rem}.hero-gauge{padding:28px 32px}.gauge .gv{font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:2.4rem;line-height:.9;color:var(--ink);margin-top:8px}
-.gauge .gv small{font-size:.9rem;color:var(--ink-3);font-weight:500}
-.gauge .gs{font-family:'IBM Plex Mono',monospace;font-size:.8125rem;color:var(--ink-3);margin-top:8px}
-.gauge.good .gv{color:var(--ink)}.gauge.warn .gv{color:var(--warn)}
-.sub-gauges{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:0 0 4px 4px;overflow:hidden;border-top:1px solid var(--border)}.sub-gauges .gauge{padding:14px 18px;min-height:auto}.sub-gauges .gauge .gv{font-size:1.5rem;margin-top:4px}.sub-gauges .gauge .gl{font-size:.75rem}.sub-gauges .gauge .gs{font-size:.75rem;margin-top:4px}@media(max-width:820px){.gauges{grid-template-columns:1fr}.sub-gauges{grid-template-columns:repeat(3,1fr)}}
-
-/* split-flap odometer (hero signature) */
-.odo{display:flex;align-items:flex-end;gap:2px;margin-top:6px}
-.odo .d{font-family:'Saira Condensed',sans-serif;font-weight:700;line-height:.82;color:var(--ink);background:#05070A;border:1px solid #262C36;border-radius:3px;padding:.04em .02em;min-width:.6em;text-align:center;box-shadow:inset 0 -4px 8px rgba(0,0,0,.5)}
-.odo .sep{font-family:'Saira Condensed',sans-serif;font-weight:700;line-height:.82;color:var(--ink)}
-.odo .u{font-family:'IBM Plex Mono',monospace;color:var(--ink-3);margin-left:6px;align-self:flex-end;padding-bottom:.6em}
-.odo{font-size:2.4rem}                 /* default size (cockpit) */
-.odo.hero-odo{font-size:5rem}          /* large (page hero) */
-.odo .d,.odo .sep{font-size:1em}
-.odo .u{font-size:.2em}
-@media(max-width:760px){.odo.hero-odo{font-size:3.2rem}}
-@media(max-width:420px){.odo{font-size:2rem}}
-
-/* instrument cluster (page hero) */
-.cluster{position:relative;background:linear-gradient(180deg,var(--surface-1),#0F1216);border:1px solid var(--border);border-radius:var(--rc);margin:14px 0 8px;padding:30px 34px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center}
-.cluster::before,.cluster::after{content:"";position:absolute;width:12px;height:12px;border:1px solid var(--ink-3);opacity:.4}
-.cluster::before{left:10px;top:10px;border-right:0;border-bottom:0}
-.cluster::after{right:10px;bottom:10px;border-left:0;border-top:0}
-.readlabel{font-family:'IBM Plex Mono',monospace;font-size:.8125rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px}
-.readlabel .tick{color:var(--brand)}
-.trend{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:.8125rem;color:var(--ink-2)}
-.trend .b{color:var(--ink-3)}
-.clus-gauges{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:5px;overflow:hidden}
-.clus-gauges .g{background:var(--surface-1);padding:16px 18px}
-.clus-gauges .gv{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.75rem;line-height:1;color:var(--ink)}
-.clus-gauges .g.lo .gv{color:var(--down)}.clus-gauges .g.hi .gv{color:var(--up)}
-.clus-gauges .gl{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-top:6px}
-@media(max-width:760px){.cluster{grid-template-columns:1fr;gap:24px;padding:24px 20px}}
-
-/* section headers — single component, two variants */
-.sechead{display:flex;align-items:baseline;gap:8px 14px;flex-wrap:wrap;justify-content:flex-start;margin:34px 0 12px}
-.sechead h2{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--ink);text-align:left;flex:0 1 auto;margin:0}
-.sechead .sub{font-size:.75rem;color:var(--ink-3);white-space:nowrap;flex-shrink:0}
-.sechead .more{font-size:.75rem;color:var(--brand);white-space:nowrap;margin-left:auto;flex-shrink:0}
-.sechead .more::before{content:'';display:inline-block;width:.75em}
-@media(min-width:720px){.sechead h2{flex:0 0 auto}}@media(max-width:719px){.sechead h2{flex:1 1 100%}}
-.sechead::before{content:'';width:14px;height:14px;background:var(--brand);border-radius:2px;flex-shrink:0;box-shadow:0 0 0 3px var(--brand-glow)}
-.sechead--ref::before{background:transparent;border:1px solid var(--hair);box-shadow:none}
-
-/* module header */
-.mod{display:flex;align-items:center;gap:12px;margin:34px 0 12px}
-.mod-live .tab,.mod .tab{width:22px;height:14px;background:var(--brand);border-radius:2px;flex-shrink:0;box-shadow:0 0 0 3px var(--brand-glow)}.mod-ref .tab{width:22px;height:14px;background:transparent;border:1px solid var(--hair);border-radius:2px;flex-shrink:0}
-.mod h2{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.0625rem;color:var(--ink)}
-
-
-
-p.intro{color:var(--ink-3);font-size:.8125rem;margin:-4px 0 14px}
-.note{font-family:'Inter',-apple-system,sans-serif;font-size:.8125rem;color:var(--ink-3);margin-top:8px}
-
-/* sponsor slot */
-.sp{display:flex;align-items:center;gap:14px;background:var(--surface-1);border:1px solid var(--border);border-left:2px solid var(--brand-dim);border-radius:var(--rc);padding:10px 16px;margin:10px 0 0}
-.sp .t{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
-.sp .n{color:var(--ink);font-weight:600;font-size:.8125rem}
-.sp .l{color:var(--ink-3);font-size:.75rem}
-.sp .c{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:.8125rem;font-weight:600;color:var(--brand)}
-@media(max-width:560px){.sp{flex-wrap:wrap;gap:6px 12px}.sp .c{margin-left:0}}
-
-/* panels + tables */
-.panel{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--rc);overflow:hidden}
-.scroll{overflow-x:auto;border:1px solid var(--border);border-radius:var(--rc);background:var(--surface-1);padding:4px 6px}
-.tbl{width:100%;border-collapse:collapse;font-size:.875rem}
-.tbl th{text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600;padding:10px 16px;border-bottom:1px solid var(--border)}
-.tbl td{padding:10px 16px;border-bottom:1px solid var(--hair)}
-.tbl tr:last-child td{border-bottom:0}
-.tbl tr:hover td{background:var(--surface-2)}
-.tbl .code{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--ink);width:1%}
-.tbl .r,.tbl th.r{text-align:right}
-.tbl .px{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.15rem;color:var(--ink)}
-.tbl tr.lo td{box-shadow:inset 2px 0 0 var(--down)}
-.tbl tr.hi td{box-shadow:inset 2px 0 0 var(--up)}
-.tbl td.lo{color:var(--down)}
-.tbl td.hi{color:var(--up)}
-.mono{font-family:'IBM Plex Mono',monospace;font-size:.75rem}
-.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--ink-3)}
-.bx td .sub{color:var(--ink-3);font-size:.8125rem;font-family:'IBM Plex Mono',monospace}
-
-/* status pills */
-.pill{font-family:'IBM Plex Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:3px;display:inline-block;margin-left:8px}
-.pill.ok{color:var(--down);background:rgba(30,158,102,.12)}
-.pill.mod{color:var(--warn);background:rgba(245,197,24,.12)}
-.pill.heavy{color:var(--up);background:rgba(229,72,77,.12)}
-.pill.closed{color:var(--up);background:rgba(229,72,77,.20)}
-
-/* readouts + indicators */
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:760px){.row{grid-template-columns:1fr}}
-.readout{padding:20px 22px}
-.readout .rl{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
-.readout .big{font-family:'Saira Condensed',sans-serif;font-weight:700;font-size:2.6rem;line-height:1;color:var(--ink);margin-top:8px}
-.readout .big small{font-size:1rem;color:var(--ink-3)}
-.readout .meta{font-family:'IBM Plex Mono',monospace;font-size:.8125rem;color:var(--ink-3);margin-top:10px}
-.ind{display:flex;justify-content:space-between;align-items:baseline;padding:11px 16px;border-bottom:1px solid var(--hair)}
-.ind:last-child{border-bottom:0}
-.ind .nm{color:var(--ink-2);font-size:.8125rem}.ind .nm span{display:block;color:var(--ink-3);font-size:.8125rem;font-family:'IBM Plex Mono',monospace}
-.ind .vv{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.15rem;color:var(--ink)}
-
-/* empty / theft / news / cross-border / calculator */
-.empty{padding:22px;text-align:center;color:var(--ink-3);font-family:'IBM Plex Mono',monospace;font-size:.75rem}
-.empty b{color:var(--brand);display:block;font-size:.9375rem;font-family:'Saira Condensed',sans-serif;margin-bottom:4px}
-.tft{padding:14px 16px;border-bottom:1px solid var(--hair)}.tft:last-child{border-bottom:0}
-.tft .h{color:var(--ink);font-weight:600;font-size:.8125rem}
-.tft .m{color:var(--ink-3);font-size:.8125rem;font-family:'IBM Plex Mono',monospace;margin-top:3px}
-.tft .p{color:var(--ink-2);font-size:.75rem;margin-top:6px}
-.tft .val{color:var(--brand);font-family:'Saira Condensed',sans-serif;font-weight:600}
-.news a{display:block;padding:11px 16px;border-bottom:1px solid var(--hair);color:var(--ink-2);font-size:.8125rem;line-height:1.4}
-.news a:last-child{border-bottom:0}
-.news a:hover{background:var(--surface-2);color:var(--ink)}
-.news .src{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
-.xb{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.xr{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--rc);padding:15px 18px}
-.xr .pair{font-family:'IBM Plex Mono',monospace;font-size:.8125rem;letter-spacing:.06em;color:var(--ink-2);font-weight:600}
-.xr .cols{display:flex;justify-content:space-between;margin-top:12px}
-.xr .side .l{font-family:'IBM Plex Mono',monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3)}
-.xr .side .p{font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:1.3rem;color:var(--ink)}
-.xr .side .g{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--ink-3)}
-.xr .v{margin-top:11px;font-family:'IBM Plex Mono',monospace;font-size:.8125rem;font-weight:600;color:var(--brand)}
-@media(max-width:640px){.xb{grid-template-columns:1fr}}
-.calc{display:flex;align-items:center;justify-content:space-between;padding:20px 22px}
-.calc .txt{color:var(--ink-2);font-size:.8125rem;max-width:70%}
-.calc a,.btn{font-family:'IBM Plex Mono',monospace;font-size:.8125rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;border:1px solid var(--brand-dim);color:var(--brand);padding:10px 16px;border-radius:4px;background:none;cursor:pointer}
-.field{background:var(--surface-2);border:1px solid var(--border);color:var(--ink);border-radius:var(--rc);padding:10px 12px;font-family:'IBM Plex Mono',monospace;font-size:.8125rem;width:100%}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
-label.fl{font-family:'IBM Plex Mono',monospace;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);display:block;margin-bottom:5px}
-
-/* map (incidents) */
-#map{height:420px;width:100%;border-radius:var(--rc);border:1px solid var(--border);background:var(--surface-1)}
-.leaflet-popup-content-wrapper{background:var(--surface-2);color:var(--ink);border-radius:6px}
-.leaflet-popup-tip{background:var(--surface-2)}
-.inc{padding:13px 16px;border-bottom:1px solid var(--hair)}.inc .h{color:var(--ink);font-weight:600;font-size:.8125rem;line-height:1.35;overflow-wrap:break-word}.inc:last-child{border-bottom:0}
-.inc .m{color:var(--ink-3);font-size:.8125rem;font-family:'Inter',-apple-system,sans-serif;margin-top:3px}
-
-/* faq / cta / share / footer */
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:640px){.g2{grid-template-columns:1fr}}
-.faq dt{font-family:'Saira Condensed',sans-serif;font-weight:600;color:var(--ink);margin-top:20px;padding-top:16px;border-top:1px solid var(--hair);font-size:.9375rem}
-.faq dd{margin-top:7px;color:var(--ink-2);font-size:.875rem;line-height:1.6}
-.cta{margin:26px 0;background:var(--surface-1);border:1px solid var(--border);border-top:2px solid var(--brand);border-radius:var(--rc);padding:22px 24px;text-align:center}
-.cta .e{font-family:IBM Plex Mono,monospace;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);font-weight:600}
-.cta .b{color:var(--ink);font-size:.9375rem;margin:6px 0 4px}
-.cta .s{color:var(--ink-3);font-size:.75rem}
-.share{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
-.share a,.share button{background:var(--surface-1);border:1px solid var(--border);border-radius:4px;color:var(--ink-2);font-family:'IBM Plex Mono',monospace;font-size:.8125rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:10px 15px;cursor:pointer}
-.share a:hover,.share button:hover{border-color:var(--brand);color:var(--ink)}
-.related{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin:16px 0 8px}
-.related a{background:var(--surface-1);border:1px solid var(--border);border-radius:var(--rc);padding:14px;color:var(--ink-2);font-size:.75rem;font-family:'IBM Plex Mono',monospace}
-.related a:hover{border-color:var(--brand);color:var(--ink)}
-.ft{border-top:1px solid var(--hair);margin-top:38px;padding:22px 0}
-.ft .wrap{font-family:'Inter',-apple-system,sans-serif;font-size:.8125rem;color:var(--ink-3);text-align:center}
-.ft .note{margin-top:6px}
-
-/* clickable rows */
-[data-href]{cursor:pointer}
-[data-href]:focus-visible{outline:2px solid var(--brand);outline-offset:-2px}
-.gauge[data-href]:hover,.tft[data-href]:hover,.ind[data-href]:hover,.inc[data-href]:hover{background:var(--surface-2)}
-
-main{max-width:1160px;margin:0 auto;padding:6px 20px 48px;position:relative;z-index:1}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-
-.bx td.r .pill{float:right;text-align:center;min-width:70px}
-.sub-btn{display:inline-block;margin-top:14px;padding:12px 32px;min-height:44px;background:var(--brand);color:#0B0D11;border:none;border-radius:6px;font-weight:600;font-size:0.875rem;text-decoration:none;cursor:pointer}.sub-btn:hover{opacity:.9}
-
-/* mobile table stacking */
-@media (max-width:640px){
-  .tbl thead{position:absolute;left:-9999px}
-  .tbl tr{display:block;border-bottom:1px solid var(--hair);padding:.75rem 0}
-  .tbl td{display:flex;justify-content:space-between;align-items:baseline;padding:.35rem .75rem;border:0}
-  .tbl td::before{content:attr(data-label);color:var(--ink-3);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
-  .tbl td.code{display:inline-flex;font-weight:600;color:var(--ink-2);padding-bottom:0}
-  .tbl td.code + td{display:inline-flex;color:var(--ink-2);padding-top:0;padding-left:.35rem}
-  .tbl td[data-label]{display:flex}
-  .scroll{overflow-x:visible}
-}
-</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hd"><div class="wrap">
-  <a class="mark" href="/"><b>Northern Mile</b><span>Canadian trucking data</span></a>
+  <a class="mark" href="/"><span class="dot" aria-hidden="true"></span><b>Northern Mile</b><span>Canadian trucking data</span></a>
 </div></header>
 
-<nav class="nav" aria-label="Sections"><div class="wrap">
-  <a href="/" class="on" aria-current="page">Home</a>
-  <a href="/fuel-prices/">Diesel</a>
-  <a href="/fuel-cost-calculator/">Calculator</a>
-  <a href="/border-wait-times/">Border</a>
-  <a href="/exchange-rate/">Exchange</a>
-  <a href="/road-incidents/">Incidents</a>
-  <a href="/market-pulse/">Market</a>
-  <a href="/industry-news/">News</a>
-  <a href="/methodology/nmdi/">Methodology</a>
-</div></nav>
+<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/" class="on" aria-current="page">Home</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></div></nav>
 
 <main class="wrap" id="main">
 
-  <p class="eyebrow" style="margin-top:var(--v)">Northern Mile Diesel Index</p>
-  <h1>Canadian diesel prices today</h1>
+  <section class="hero">
+    <span class="eyebrow">Northern Mile Diesel Index</span>
+    <h1>Canadian diesel prices today</h1>
+    <div class="figure"><span class="n">227.9</span><span class="u">¢/L</span><span class="d up">+5.7 · 7d</span></div>
+    <div class="meta"><span>Ten provinces</span><span>NRCan survey print <b>Tue, 11 Aug 2026</b></span><span>Rebuilt <b>2026-08-15 15:51 UTC</b> UTC</span></div>
 
-  <div class="figure">
-    <span class="n">227.9</span>
-    <span class="u">¢/L</span>
-    <span class="d up">+5.7 · 7d</span>
-  </div>
-  <div class="meta">
-    <span>Ten provinces</span>
-    <span>NRCan survey print Tue, 11 Aug 2026</span>
-    <span>Rebuilt 2026-08-15 15:17 UTC UTC</span>
-  </div>
-
-  <div class="plot">
-    <div class="axis"><span>205.6 ¢/L</span><span>249.6 ¢/L</span></div>
-    <div class="rows">
-      <span class="mean" style="left:50.7%" aria-hidden="true"></span>
-      <span class="meanlab" style="left:50.7%">Index 227.9</span>
-      <div class="row"><span class="code">AB</span><span class="track"><span class="dot" style="left:0.0%"></span></span><span class="val up">205.6</span></div><div class="row"><span class="code">SK</span><span class="track"><span class="dot" style="left:1.4%"></span></span><span class="val up">206.2</span></div><div class="row"><span class="code">MB</span><span class="track"><span class="dot" style="left:14.3%"></span></span><span class="val up">211.9</span></div><div class="row"><span class="code">ON</span><span class="track"><span class="dot" style="left:30.9%"></span></span><span class="val up">219.2</span></div><div class="row"><span class="code">NS</span><span class="track"><span class="dot" style="left:66.6%"></span></span><span class="val up">234.9</span></div><div class="row"><span class="code">BC</span><span class="track"><span class="dot" style="left:68.4%"></span></span><span class="val up">235.7</span></div><div class="row"><span class="code">PE</span><span class="track"><span class="dot" style="left:69.5%"></span></span><span class="val up">236.2</span></div><div class="row"><span class="code">NB</span><span class="track"><span class="dot" style="left:71.8%"></span></span><span class="val up">237.2</span></div><div class="row"><span class="code">NL</span><span class="track"><span class="dot" style="left:84.5%"></span></span><span class="val up">242.8</span></div><div class="row"><span class="code">QC</span><span class="track"><span class="dot" style="left:100.0%"></span></span><span class="val up">249.6</span></div>
+    <div class="rail">
+      <div class="cap"><h3>The spread</h3><span class="sp">AB <b>205.6</b> → QC <b>249.6</b> · 44.0¢/L</span></div>
+      <div class="mean-wrap"><span class="mean" style="left:50.7%"><span class="lab">Index 227.9</span></span></div>
+      <a class="row" href="/fuel-prices/"><span class="code">AB</span><span class="track"><span class="fill" style="width:0.0%"></span><span class="dot" style="left:0.0%"></span></span><span class="val up">205.6</span></a><a class="row" href="/fuel-prices/"><span class="code">SK</span><span class="track"><span class="fill" style="width:1.4%"></span><span class="dot" style="left:1.4%"></span></span><span class="val up">206.2</span></a><a class="row" href="/fuel-prices/"><span class="code">MB</span><span class="track"><span class="fill" style="width:14.3%"></span><span class="dot" style="left:14.3%"></span></span><span class="val up">211.9</span></a><a class="row" href="/fuel-prices/"><span class="code">ON</span><span class="track"><span class="fill" style="width:30.9%"></span><span class="dot" style="left:30.9%"></span></span><span class="val up">219.2</span></a><a class="row" href="/fuel-prices/"><span class="code">NS</span><span class="track"><span class="fill" style="width:66.6%"></span><span class="dot" style="left:66.6%"></span></span><span class="val up">234.9</span></a><a class="row" href="/fuel-prices/"><span class="code">BC</span><span class="track"><span class="fill" style="width:68.4%"></span><span class="dot" style="left:68.4%"></span></span><span class="val up">235.7</span></a><a class="row" href="/fuel-prices/"><span class="code">PE</span><span class="track"><span class="fill" style="width:69.5%"></span><span class="dot" style="left:69.5%"></span></span><span class="val up">236.2</span></a><a class="row" href="/fuel-prices/"><span class="code">NB</span><span class="track"><span class="fill" style="width:71.8%"></span><span class="dot" style="left:71.8%"></span></span><span class="val up">237.2</span></a><a class="row" href="/fuel-prices/"><span class="code">NL</span><span class="track"><span class="fill" style="width:84.5%"></span><span class="dot" style="left:84.5%"></span></span><span class="val up">242.8</span></a><a class="row" href="/fuel-prices/"><span class="code">QC</span><span class="track"><span class="fill" style="width:100.0%"></span><span class="dot" style="left:100.0%"></span></span><span class="val up">249.6</span></a>
     </div>
-    <div class="foot">
-      <span>Cheapest AB 205.6</span>
-      <span>Spread 44.0¢/L</span>
-      <span>Dearest QC 249.6</span>
-    </div>
-  </div>
 
   <div class="cite">
     <div class="cl">Citing this figure</div>
     <q id="citation">Northern Mile Diesel Index: 227.9¢/L national average, ten provinces, NRCan weekly survey print Tue, 11 Aug 2026. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
     <div class="row">
-      <button class="btn" type="button" data-copy="citation"><span class="cp">Copy citation</span></button>
+      <button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button>
       <a class="btn" href="/methodology/nmdi/">How it is calculated</a>
     </div>
   </div>
+
+    <div class="stats">
+      <a class="stat" href="/fuel-prices/"><div class="l">Cheapest</div><div class="v down">205.6</div><div class="s">AB · ¢/L</div></a>
+      <a class="stat" href="/fuel-prices/"><div class="l">Dearest</div><div class="v up">249.6</div><div class="s">QC · ¢/L</div></a>
+      <a class="stat" href="/fuel-prices/"><div class="l">Spread</div><div class="v">44.0</div><div class="s">AB to QC</div></a>
+      <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">1.3875</div><div class="s">stronger CAD -0.0063 · BoC</div></a>
+    </div>
+  </section>
 
   
 
   <section class="sec">
     <div class="lead"><h2>On the road</h2><p>What is in front of you right now.</p></div>
     <div class="two">
-      <div>
-        <h3>Border crossings</h3>
-        <div class="rows">
-        <a class="r" href="/border-wait-times/"><span class="k">Ambassador Bridge<small>Moderate</small></span><span class="v">5 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Blue Water Bridge<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Peace Bridge<small>Moderate</small></span><span class="v">10 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Queenston-Lewiston Bridge<small>Moderate</small></span><span class="v">7 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Lacolle Border Crossing<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Coutts-Sweetgrass<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Pacific Highway Crossing<small>Moderate</small></span><span class="v">10 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Emerson-Pembina<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Thousand Islands Bridge<small>Flowing</small></span><span class="v">No delay</span></a>
-        </div>
-        <p class="note">Each wait carries CBSA's own capture time for that crossing, not our fetch time. <a href="/border-wait-times/">All crossings</a></p>
-      </div>
-      <div>
-        <h3>Road incidents</h3>
-        
-        <div class="links-list">
-        <a href="/road-incidents/">Collision on HWY 7 Both Directions  between DRUMMOND CONCESSION RD 7, Drummond…</a>
-        </div>
-        <p class="note">HWY 7 <a href="/road-incidents/">Open map</a></p>
-      </div>
+      <div><h3>Border crossings</h3><div class="rows">
+      <a class="r" href="/border-wait-times/"><span class="k">Ambassador Bridge<small>Moderate</small></span><span class="v">5 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Blue Water Bridge<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Peace Bridge<small>Moderate</small></span><span class="v">6 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Queenston-Lewiston Bridge<small>Moderate</small></span><span class="v">10 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Lacolle Border Crossing<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Coutts-Sweetgrass<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Pacific Highway Crossing<small>Moderate</small></span><span class="v">15 min</span></a><a class="r" href="/border-wait-times/"><span class="k">Emerson-Pembina<small>Flowing</small></span><span class="v">No delay</span></a><a class="r" href="/border-wait-times/"><span class="k">Thousand Islands Bridge<small>Flowing</small></span><span class="v">No delay</span></a>
+      </div><p class="note">Each wait carries CBSA's own capture time, not our fetch time. <a href="/border-wait-times/">All crossings</a></p></div>
+      <div><h3>Road incidents</h3>
+      
+      <div class="links-list">
+      <a href="/road-incidents/">Collision on HWY 7 Both Directions  between DRUMMOND CONCESSION RD 7, Drummond…</a>
+      </div><p class="note">HWY 7 <a href="/road-incidents/">Open map</a></p></div>
     </div>
   </section>
 
   <section class="sec">
     <div class="lead"><h2>Planning a run</h2><p>What a trip costs, and where the market sits.</p></div>
     <div class="two">
-      <div>
-        <h3>Exchange and market</h3>
-        <div class="rows">
-          <a class="r" href="/exchange-rate/"><span class="k">USD / CAD<small>Bank of Canada</small></span><span class="v">1.3875 -0.0063</span></a>
-          <a class="r" href="/market-pulse/"><span class="k">Monthly GDP<small>$2362B (chained 2017)</small></span><span class="v flat">+0.3%</span></a><a class="r" href="/market-pulse/"><span class="k">Year-over-year<small>Longer-term freight demand trend.</small></span><span class="v flat">+1.7%</span></a><a class="r" href="/market-pulse/"><span class="k">Fuel cost per 1,000 km<small>At 227.9¢/L and 35 L/100km</small></span><span class="v flat">$798</span></a><a class="r" href="/market-pulse/"><span class="k">BC vs AB diesel spread<small>Wide gaps create arbitrage on cross-province lanes. BC…</small></span><span class="v flat">30.1¢/L</span></a>
-        </div>
-      </div>
-      <div>
-        <h3>Industry news</h3>
-        <div class="links-list">
+      <div><h3>Exchange and market</h3><div class="rows">
+        <a class="r" href="/exchange-rate/"><span class="k">USD / CAD<small>Bank of Canada</small></span><span class="v">1.3875 -0.0063</span></a>
+        <a class="r" href="/market-pulse/"><span class="k">Monthly GDP<small>$2362B (chained 2017)</small></span><span class="v flat">+0.3%</span></a><a class="r" href="/market-pulse/"><span class="k">Year-over-year<small>Longer-term freight demand trend.</small></span><span class="v flat">+1.7%</span></a><a class="r" href="/market-pulse/"><span class="k">Fuel cost per 1,000 km<small>At 227.9¢/L and 35 L/100km</small></span><span class="v flat">$798</span></a><a class="r" href="/market-pulse/"><span class="k">BC vs AB diesel spread<small>Wide gaps create arbitrage on cross-province lanes. BC…</small></span><span class="v flat">30.1¢/L</span></a>
+      </div></div>
+      <div><h3>Industry news</h3><div class="links-list">
         <a href="https://www.thetrucker.com/trucking-news/the-nation/2-injured-in-big-rig-rollover-crash-in-idaho" target="_blank" rel="noopener"><span class="src">The Trucker</span>2 injured in big rig rollover crash in Idaho</a><a href="https://www.thetrucker.com/trucking-news/the-nation/trucker-dead-in-train-crash-in-louisiana" target="_blank" rel="noopener"><span class="src">The Trucker</span>Trucker dead in train crash in Louisiana</a>
-        </div>
-        <p class="note"><a href="/industry-news/">All headlines</a></p>
-      </div>
+      </div><p class="note"><a href="/industry-news/">All headlines</a></p></div>
     </div>
     <p class="note">Diesel prices include all federal and provincial fuel, carbon, and sales taxes. <a href="/fuel-cost-calculator/">Work out what a run costs</a></p>
   </section>
@@ -367,70 +105,10 @@ main{max-width:1160px;margin:0 auto;padding:6px 20px 48px;position:relative;z-in
 </main>
 
 <footer class="ft"><div class="wrap">
-  <div class="links">
-    <a href="/">Dashboard home</a>
-    <a href="/fuel-prices/">Diesel</a>
-    <a href="/fuel-cost-calculator/">Calculator</a>
-    <a href="/border-wait-times/">Border</a>
-    <a href="/exchange-rate/">Exchange</a>
-    <a href="/road-incidents/">Incidents</a>
-    <a href="/market-pulse/">Market</a>
-    <a href="/industry-news/">News</a>
-    <a href="/methodology/nmdi/">Methodology</a>
-  </div>
-  <div class="fine">Northern Mile Media · Rebuilt 2026-08-15 15:17 UTC UTC</div>
+  <div class="links"><a href="/">Dashboard home</a><a href="/">Home</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></div>
+  <div class="fine">Northern Mile Media · Rebuilt 2026-08-15 15:51 UTC UTC</div>
 </div></footer>
 
-<script src="/assets/nm.js?v=1786807022"></script>
-<script>
-/* Northern Mile Dashboard — shared behaviour for every page. */
-(function () {
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-
-  /* Split-flap odometer: builds flap tiles from a single data-value, rolls on load.
-     Markup: <div class="odo" data-value="171.9" data-unit="c/L"></div>  */
-  document.querySelectorAll('.odo[data-value]').forEach(function (odo) {
-    var val = (odo.getAttribute('data-value') || '').trim();
-    var unit = odo.getAttribute('data-unit') || '';
-    odo.innerHTML = '';
-    val.split('').forEach(function (ch) {
-      var s = document.createElement('span');
-      if (ch === '.' || ch === ',') { s.className = 'sep'; s.textContent = ch; }
-      else { s.className = 'd'; s.textContent = ch; }
-      odo.appendChild(s);
-    });
-    if (unit) { var u = document.createElement('span'); u.className = 'u'; u.textContent = unit; odo.appendChild(u); }
-    if (!reduce) {
-      odo.querySelectorAll('.d').forEach(function (f) {
-        var target = f.textContent, ticks = 6 + Math.floor(Math.random() * 5), i = 0;
-        var iv = setInterval(function () {
-          if (i >= ticks) { f.textContent = target; clearInterval(iv); return; }
-          f.textContent = Math.floor(Math.random() * 10); i++;
-        }, 45);
-      });
-    }
-  });
-
-  /* Clickable rows/cards/gauges: any element with data-href navigates (mouse + Enter). */
-  document.addEventListener('click', function (e) {
-    if (e.target.closest('a')) return;
-    var el = e.target.closest('[data-href]');
-    if (el) window.location.href = el.getAttribute('data-href');
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter') return;
-    var el = e.target.closest('[data-href]');
-    if (el) window.location.href = el.getAttribute('data-href');
-  });
-})();
-
-function copyLink(btn, url) {
-  navigator.clipboard.writeText(url || location.href).then(function () {
-    var t = btn.textContent; btn.textContent = 'Copied';
-    setTimeout(function () { btn.textContent = t; }, 1500);
-  });
-}
-
-</script>
+<script src="/assets/nm.js?v=1786809095"></script>
 </body>
 </html>

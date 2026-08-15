@@ -1,0 +1,673 @@
+#!/usr/bin/env python3
+"""Generate every dashboard template from one shell.
+
+One header, one nav, one footer, written once. SEO scaffolding — canonical, OG,
+JSON-LD, a single h1 — is part of the shell, so no page can ship without it. One
+optional module sponsor slot per page, methodology excepted. Change this file,
+regenerate, and all eleven pages move together.
+
+Run: python3 scripts/gen_templates.py
+"""
+
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(HERE, "..", "templates")
+
+GA = "G-NDXR7ERL80"
+BASE = "https://dashboard.northernmilemedia.com"
+ORG_URL = "https://northernmilemedia.com"
+SUB = "https://www.northernmilemedia.com/subscribe/"
+
+FONTS = ("https://fonts.googleapis.com/css2?"
+         "family=Space+Grotesk:wght@500;600;700&"
+         "family=Inter:wght@400;500;600&"
+         "family=IBM+Plex+Mono:wght@400;500&display=swap")
+
+# href, label — the one nav, in order. Every page renders this identically.
+NAV = [
+    ("/", "Home"),
+    ("/fuel-prices/", "Diesel"),
+    ("/fuel-cost-calculator/", "Calculator"),
+    ("/border-wait-times/", "Border"),
+    ("/exchange-rate/", "Exchange"),
+    ("/road-incidents/", "Incidents"),
+    ("/market-pulse/", "Market"),
+    ("/industry-news/", "News"),
+    ("/methodology/nmdi/", "Methodology"),
+]
+
+ORG_LD = ('{"@type":"Organization","@id":"' + ORG_URL + '/#org","name":"Northern Mile Media",'
+          '"url":"' + ORG_URL + '/","description":"Canadian trucking and fuel data publication."}')
+
+
+def nav_html(active):
+    out = []
+    for href, lab in NAV:
+        on = ' class="on"' if href == active else ""
+        cur = ' aria-current="page"' if href == active else ""
+        out.append(f'<a href="{href}"{on}{cur}>{lab}</a>')
+    return "".join(out)
+
+
+def head(title, desc, canon, og_img, ld, og_type="website"):
+    ld_block = f'<script type="application/ld+json">\n{ld}\n</script>\n' if ld else ""
+    return f"""<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="{BASE}{canon}">
+<meta property="og:type" content="{og_type}">
+<meta property="og:site_name" content="Northern Mile Media">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{BASE}{canon}">
+<meta property="og:image" content="{BASE}/{og_img}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="build" content="{{{{updated_iso}}}}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{FONTS}" rel="stylesheet">
+<link rel="stylesheet" href="/assets/nm.css?v={{{{build_version}}}}">
+{ld_block}<script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA}');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hd"><div class="wrap">
+  <a class="mark" href="/"><span class="dot" aria-hidden="true"></span><b>Northern Mile</b><span>Canadian trucking data</span></a>
+</div></header>
+
+<nav class="nav" aria-label="Sections"><div class="wrap">{nav_html(canon)}</div></nav>
+
+<main class="wrap" id="main">
+"""
+
+
+def foot(extra_script=""):
+    links = "".join(f'<a href="{h}">{l}</a>' for h, l in NAV)
+    return f"""
+</main>
+
+<footer class="ft"><div class="wrap">
+  <div class="links"><a href="/">Dashboard home</a>{links}</div>
+  <div class="fine">Northern Mile Media · Rebuilt {{{{updated_at}}}} UTC</div>
+</div></footer>
+
+<script src="/assets/nm.js?v={{{{build_version}}}}"></script>
+{extra_script}</body>
+</html>
+"""
+
+
+def sponsor(key):
+    """One optional module sponsor. Rendered only when data supplies the block."""
+    return (f'\n  <!--OPTIONAL:{key}-->\n'
+            f'  <aside class="sp"><span class="t">Presented by</span>'
+            f'<span class="n">{{{{{key}.name}}}}</span>'
+            f'<span class="l">{{{{{key}.line}}}}</span>'
+            f'<a class="c" href="{{{{{key}.url}}}}">Learn more →</a></aside>\n'
+            f'  <!--/OPTIONAL:{key}-->\n')
+
+
+def cite():
+    return """
+  <div class="cite">
+    <div class="cl">Citing this figure</div>
+    <q id="citation">Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L national average, ten provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
+    <div class="row">
+      <button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button>
+      <a class="btn" href="/methodology/nmdi/">How it is calculated</a>
+    </div>
+  </div>
+"""
+
+
+def rail():
+    return """
+    <div class="rail">
+      <div class="cap"><h3>The spread</h3><span class="sp">{{fuel.low_code}} <b>{{fuel.low}}</b> → {{fuel.high_code}} <b>{{fuel.high}}</b> · {{fuel.spread}}¢/L</span></div>
+      <div class="mean-wrap"><span class="mean" style="left:{{fuel.national_pct}}%"><span class="lab">Index {{fuel.national_diesel}}</span></span></div>
+      <!--LOOP:provinces--><a class="row" href="/fuel-prices/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
+    </div>
+"""
+
+
+def subscribe(heading, body):
+    return (f'\n  <section class="sub" aria-labelledby="brief">\n'
+            f'    <div class="e">The Northern Mile Brief</div>\n'
+            f'    <h2 id="brief">{heading}</h2>\n'
+            f'    <p>{body}</p>\n'
+            f'    <a class="sub-btn" href="{SUB}">Subscribe free</a>\n'
+            f'    <div class="fine">One email a week. Unsubscribe any time.</div>\n'
+            f'  </section>\n')
+
+
+def write(name, body):
+    with open(os.path.join(OUT, f"{name}.template.html"), "w") as f:
+        f.write(body)
+    print(f"  {name:26} {len(body):6,} bytes")
+
+
+def crumb(name, slug):
+    return ('{"@type":"BreadcrumbList","itemListElement":['
+            '{"@type":"ListItem","position":1,"name":"Dashboard","item":"' + BASE + '/"},'
+            '{"@type":"ListItem","position":2,"name":"' + name + '","item":"' + BASE + slug + '"}]}')
+
+
+print("Generating templates")
+
+# ═══ Home ═════════════════════════════════════════════════════════════
+home_ld = ('{"@context":"https://schema.org","@graph":[' + ORG_LD + ','
+ '{"@type":"WebSite","@id":"' + BASE + '/#site","url":"' + BASE + '/","name":"Northern Mile Dashboard","publisher":{"@id":"' + ORG_URL + '/#org"},"inLanguage":"en-CA"},'
+ '{"@type":"Dataset","@id":"' + BASE + '/#nmdi","name":"Northern Mile Diesel Index (NMDI)","alternateName":"NMDI","description":"A national Canadian retail diesel average computed as the unweighted mean of ten provincial averages from the Natural Resources Canada weekly retail survey. Yukon and the Northwest Territories are excluded.","url":"' + BASE + '/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"measurementTechnique":"Unweighted arithmetic mean of provincial means","variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre","value":"{{fuel.national_diesel}}"},"dateModified":"{{updated_iso}}"},'
+ '{"@type":"FAQPage","mainEntity":['
+ '{"@type":"Question","name":"How is the Northern Mile Diesel Index calculated?","acceptedAnswer":{"@type":"Answer","text":"It is the unweighted arithmetic mean of ten provincial diesel averages. Each provincial figure is itself the unweighted mean of the Natural Resources Canada survey cities in that province. Yukon and the Northwest Territories are surveyed but excluded from the index."}},'
+ '{"@type":"Question","name":"How often do Canadian diesel prices change on this dashboard?","acceptedAnswer":{"@type":"Answer","text":"The diesel figure changes weekly, when Natural Resources Canada publishes a new retail survey. The page rebuilds every 30 minutes, but the diesel number holds steady between survey prints."}},'
+ '{"@type":"Question","name":"Do these diesel prices include carbon tax?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every price shown is inclusive of federal and provincial fuel taxes, carbon pricing, and sales taxes, as published by Natural Resources Canada."}},'
+ '{"@type":"Question","name":"Can I cite the Northern Mile Diesel Index?","acceptedAnswer":{"@type":"Answer","text":"Yes. The dashboard provides a formatted citation with the figure and the survey print date. The full method and a dated revision history of every published correction are on the methodology page."}}]}]}')
+
+write("index",
+ head("Canadian Diesel Prices Today — {{fuel.national_diesel}}¢/L National Average | Northern Mile",
+      "The Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L across ten Canadian provinces from the NRCan weekly survey, print {{fuel.print_date}}. Live commercial border wait times and the Bank of Canada exchange rate.",
+      "/", "og.jpg", home_ld)
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Northern Mile Diesel Index</span>
+    <h1>Canadian diesel prices today</h1>
+    <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
+    <div class="meta"><span>Ten provinces</span><span>NRCan survey print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+''' + rail() + cite() + '''
+    <div class="stats">
+      <a class="stat" href="/fuel-prices/"><div class="l">Cheapest</div><div class="v down">{{fuel.low}}</div><div class="s">{{fuel.low_code}} · ¢/L</div></a>
+      <a class="stat" href="/fuel-prices/"><div class="l">Dearest</div><div class="v up">{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></a>
+      <a class="stat" href="/fuel-prices/"><div class="l">Spread</div><div class="v">{{fuel.spread}}</div><div class="s">{{fuel.low_code}} to {{fuel.high_code}}</div></a>
+      <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · BoC</div></a>
+    </div>
+  </section>
+''' + sponsor("sponsor_page") + '''
+  <section class="sec">
+    <div class="lead"><h2>On the road</h2><p>What is in front of you right now.</p></div>
+    <div class="two">
+      <div><h3>Border crossings</h3><div class="rows">
+      <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{name}}<small>{{status_label}}</small></span><span class="v">{{wait}}</span></a><!--/LOOP:border_rows-->
+      </div><p class="note">Each wait carries CBSA's own capture time, not our fetch time. <a href="/border-wait-times/">All crossings</a></p></div>
+      <div><h3>Road incidents</h3>
+      <!--IF:incidents.none--><div class="empty"><b>Corridors clear</b>No major closures or collisions on the corridors we monitor.</div><!--/IF:incidents.none-->
+      <div class="links-list">
+      <!--LOOP:incidents.incidents--><a href="{{url}}">{{what}}</a><!--/LOOP:incidents.incidents-->
+      </div><p class="note">{{incidents.status_line}} <a href="/road-incidents/">Open map</a></p></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Planning a run</h2><p>What a trip costs, and where the market sits.</p></div>
+    <div class="two">
+      <div><h3>Exchange and market</h3><div class="rows">
+        <a class="r" href="/exchange-rate/"><span class="k">USD / CAD<small>Bank of Canada</small></span><span class="v">{{fx.usd_cad}} {{fx.change}}</span></a>
+        <!--LOOP:market--><a class="r" href="/market-pulse/"><span class="k">{{name}}<small>{{note}}</small></span><span class="v {{value_class}}">{{value}}</span></a><!--/LOOP:market-->
+      </div></div>
+      <div><h3>Industry news</h3><div class="links-list">
+        <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
+      </div><p class="note"><a href="/industry-news/">All headlines</a></p></div>
+    </div>
+    <p class="note">Diesel prices include all federal and provincial fuel, carbon, and sales taxes. <a href="/fuel-cost-calculator/">Work out what a run costs</a></p>
+  </section>
+''' + subscribe("One email, Wednesday mornings",
+   "What moved in Canadian diesel, at the border, and in freight demand, with every figure dated and linked back to this dashboard. Written for people who move freight, not for people who write about it.")
+ + foot())
+
+# ═══ Fuel prices ══════════════════════════════════════════════════════
+fuel_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Diesel prices by province","/fuel-prices/") + ','
+ '{"@type":"Dataset","name":"Canadian Diesel Prices by Province","description":"Retail diesel prices for all ten Canadian provinces, from the Natural Resources Canada weekly retail survey.","url":"' + BASE + '/fuel-prices/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"{{updated_iso}}"},'
+ '{"@type":"FAQPage","mainEntity":['
+ '{"@type":"Question","name":"Why do diesel prices differ between Canadian provinces?","acceptedAnswer":{"@type":"Answer","text":"Provincial fuel tax rates are set independently, carbon pricing differs by jurisdiction, and distance from refining and distribution capacity adds haul cost in northern and island markets. The current spread between the cheapest and dearest province is {{fuel.spread}} cents per litre."}},'
+ '{"@type":"Question","name":"Which Canadian province has the cheapest diesel right now?","acceptedAnswer":{"@type":"Answer","text":"In the NRCan survey print dated {{fuel.print_date}}, the lowest provincial average was {{fuel.low_code}} at {{fuel.low}} cents per litre and the highest was {{fuel.high_code}} at {{fuel.high}} cents per litre. These figures change weekly."}}]}]}')
+
+write("fuel-prices",
+ head("Diesel Prices by Province in Canada — {{fuel.national_diesel}}¢/L | Northern Mile",
+      "Diesel prices for all ten Canadian provinces from the NRCan weekly survey, print {{fuel.print_date}}. National average {{fuel.national_diesel}}¢/L, cheapest {{fuel.low_code}} at {{fuel.low}}, dearest {{fuel.high_code}} at {{fuel.high}}, spread {{fuel.spread}}¢/L.",
+      "/fuel-prices/", "og-fuel.jpg", fuel_ld, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Ten provinces · NRCan weekly survey</span>
+    <h1>Diesel prices by province</h1>
+    <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L national</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
+    <div class="meta"><span>Survey print <b>{{fuel.print_date}}</b></span><span>30-day <b>{{fuel.change_30d}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+''' + rail() + cite() + '''
+    <div class="stats">
+      <div class="stat"><div class="l">Cheapest</div><div class="v down">{{fuel.low}}</div><div class="s">{{fuel.low_code}} · ¢/L</div></div>
+      <div class="stat"><div class="l">Dearest</div><div class="v up">{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></div>
+      <div class="stat"><div class="l">Spread</div><div class="v">{{fuel.spread}}</div><div class="s">{{fuel.low_code}} to {{fuel.high_code}}</div></div>
+      <div class="stat"><div class="l">30-day move</div><div class="v">{{fuel.change_30d}}</div><div class="s">¢/L</div></div>
+    </div>
+  </section>
+''' + sponsor("sponsor_fuel") + '''
+  <section class="sec">
+    <div class="lead"><h2>Every province</h2><p>Price, weekly change, and distance from the national index.</p></div>
+    <div class="rows">
+    <!--LOOP:provinces--><div class="r"><span class="k">{{name}}<small>{{code}}</small></span><span class="v">{{price}} &nbsp; <span class="{{change_class}}">{{change}}</span> &nbsp; <span class="{{vs_class}}">{{vs_national}}</span></span></div><!--/LOOP:provinces-->
+    </div>
+    <p class="note">Prices include all federal and provincial fuel, carbon, and sales taxes. Yukon and the Northwest Territories are surveyed but excluded from the index; the reasoning is on the <a href="/methodology/nmdi/">methodology page</a>.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>By province, in depth</h2><p>Why each province prices the way it does.</p></div>
+    <div class="rows">
+      <a class="r" href="/diesel-prices/ontario/"><span class="k">Ontario<small>19 survey cities · widest spread</small></span><span class="v">→</span></a>
+      <a class="r" href="/diesel-prices/alberta/"><span class="k">Alberta<small>Consistently the cheapest province</small></span><span class="v">→</span></a>
+    </div>
+  </section>
+''' + subscribe("Diesel, dated and delivered",
+   "Where prices moved this week, what the border looked like, and what it means for cost per kilometre. One email on Wednesday mornings, every figure linked back to this page.") + '''
+  <section class="sec">
+    <div class="lead"><h2>What moves these numbers</h2><p>Three things account for most of the gap between provinces.</p></div>
+    <div class="two">
+      <div><div class="rows">
+        <div class="r"><span class="k">Provincial fuel tax<small>Set independently by each province</small></span><span class="v">Varies</span></div>
+        <div class="r"><span class="k">Carbon pricing<small>Included in every price shown</small></span><span class="v">Included</span></div>
+        <div class="r"><span class="k">Distance from supply<small>Northern and island markets carry haul cost</small></span><span class="v">Varies</span></div>
+      </div></div>
+      <div class="reading">
+        <p class="note" style="margin-top:0">Diesel moves once a week, when NRCan publishes a new retail survey. Between prints this figure holds steady. It is a retail survey average, not a rack price, and not what a fleet on a fuel card pays.</p>
+        <p class="note">The {{fuel.spread}}¢/L gap between {{fuel.low_code}} and {{fuel.high_code}} is a real difference on a 500 litre fill. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
+      </div>
+    </div>
+  </section>
+''' + foot())
+
+# ═══ Calculator ═══════════════════════════════════════════════════════
+calc_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Fuel cost calculator","/fuel-cost-calculator/") + ','
+ '{"@type":"WebApplication","name":"Truck Fuel Cost Calculator","url":"' + BASE + '/fuel-cost-calculator/","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@id":"' + ORG_URL + '/#org"},"description":"Calculates trip diesel cost from distance, fuel consumption, and current Canadian provincial diesel prices."},'
+ '{"@type":"FAQPage","mainEntity":['
+ '{"@type":"Question","name":"How do you calculate truck fuel cost per kilometre?","acceptedAnswer":{"@type":"Answer","text":"Multiply your fuel consumption in litres per 100 kilometres by the diesel price per litre, then divide by 100. At 35 litres per 100 kilometres and diesel at 2.00 dollars per litre, that is 70 cents per kilometre."}},'
+ '{"@type":"Question","name":"What fuel consumption should I use for a loaded tractor-trailer?","acceptedAnswer":{"@type":"Answer","text":"Use your own figure from your own fuel records. Consumption varies widely with load weight, terrain, season, speed, and equipment, so any single assumed number would be wrong for most operators. This calculator does not assume one."}}]}]}')
+
+CALCJS = '''<script>
+(function(){"use strict";var $=function(i){return document.getElementById(i);};
+var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap");
+function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
+var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value);
+if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice"].forEach(function(i){$(i).textContent="\\u2014";});return;}
+var litres=d/100*b,total=litres*(cents/100);
+$("rLitres").textContent=litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L";
+$("rTotal").textContent=money(total);$("rPerKm").textContent=money(total/d)+" /km";
+$("rPerMi").textContent=money(total/d*1.609344)+" /mi";
+var o=prov.options[prov.selectedIndex];
+$("rPrice").textContent=cents.toFixed(1)+"\\u00a2/L \\u00b7 "+(isC?"your price":o.getAttribute("data-name"));}
+[dist,burn,prov,custom].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
+calc();})();
+</script>
+'''
+
+write("fuel-cost-calculator",
+ head("Truck Fuel Cost Calculator (Canada) — Diesel at {{fuel.national_diesel}}¢/L | Northern Mile",
+      "Work out what a trip costs in diesel using current Canadian prices. Set your own fuel consumption, pick a province, and see cost per trip and per kilometre. Prices from the NRCan weekly survey, print {{fuel.print_date}}.",
+      "/fuel-cost-calculator/", "og.jpg", calc_ld)
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Prices from NRCan survey print {{fuel.print_date}}</span>
+    <h1>Truck fuel cost calculator</h1>
+    <p class="stand">What a run costs in diesel, using this week's Canadian prices and your own consumption figure. Change any field and the result updates.</p>
+  </section>
+
+  <div class="calc">
+    <div>
+      <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div></div>
+      <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
+      <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
+        <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
+        <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
+        <option value="custom" data-name="Custom">Enter my own price</option>
+      </select></div></div>
+      <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
+    </div>
+    <div class="out">
+      <div class="big"><div class="ol">Trip fuel cost</div><div class="ov" id="rTotal">—</div></div>
+      <div class="rows">
+        <div class="r"><span class="k">Litres burned</span><span class="v" id="rLitres">—</span></div>
+        <div class="r"><span class="k">Cost per kilometre</span><span class="v" id="rPerKm">—</span></div>
+        <div class="r"><span class="k">Cost per mile</span><span class="v" id="rPerMi">—</span></div>
+        <div class="r"><span class="k">Price used</span><span class="v" id="rPrice">—</span></div>
+      </div>
+      <p class="note">Diesel only. Excludes tolls, maintenance, driver pay, insurance, and equipment. <a href="/fuel-prices/">See prices by province</a></p>
+    </div>
+  </div>
+''' + sponsor("sponsor_calc") + subscribe("Know before you fill",
+   "Where diesel moved this week, which crossings backed up, and what it does to cost per kilometre. One email on Wednesday mornings.") + '''
+  <section class="sec">
+    <div class="lead"><h2>How this is worked out</h2><p>Plain arithmetic, no hidden assumptions.</p></div>
+    <div class="two">
+      <div><div class="rows">
+        <div class="r"><span class="k">Litres burned<small>distance ÷ 100 × consumption</small></span><span class="v">L</span></div>
+        <div class="r"><span class="k">Trip cost<small>litres × price per litre</small></span><span class="v">$</span></div>
+        <div class="r"><span class="k">Cost per kilometre<small>trip cost ÷ distance</small></span><span class="v">$/km</span></div>
+      </div></div>
+      <div class="reading">
+        <p class="note" style="margin-top:0">The prices offered are retail survey averages from NRCan, inclusive of all taxes. They are not rack prices and not what a fleet on a fuel card pays, which is usually lower. If you know your card price, enter it.</p>
+        <p class="note">Consumption is the field that changes the answer most, and it is the one we refuse to guess at. Pull the figure from your own records rather than accepting a number off a website.</p>
+      </div>
+    </div>
+  </section>
+''' + foot(CALCJS))
+
+# ═══ Border ═══════════════════════════════════════════════════════════
+write("border-wait-times",
+ head("Canada-US Commercial Border Wait Times | Northern Mile",
+      "Live commercial lane wait times at Canada-US border crossings, from the CBSA feed. Each figure carries CBSA's own capture time for that crossing.",
+      "/border-wait-times/", "og.jpg",
+      '{"@context":"https://schema.org","@graph":[' + crumb("Border wait times","/border-wait-times/") + ','
+      '{"@type":"Dataset","name":"Canada-US Commercial Border Wait Times","description":"Commercial lane wait times at Canada-United States border crossings, from the Canada Border Services Agency feed.","url":"' + BASE + '/border-wait-times/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">CBSA commercial lanes</span>
+    <h1>Border wait times</h1>
+    <p class="stand">Commercial lane waits at Canada-US crossings, polled every 30 minutes. Each time shown is CBSA's own capture time for that crossing, not our fetch time, so it reflects how current their data is.</p>
+    <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <div class="rows">
+  <!--LOOP:crossings--><div class="r"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></div><!--/LOOP:crossings-->
+  </div>
+  <p class="note">Source: Canada Border Services Agency commercial lane feed. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
+''' + sponsor("sponsor_border") + subscribe("Border and diesel, weekly",
+   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + '''
+  <section class="sec">
+    <div class="lead"><h2>Reading these numbers</h2></div>
+    <div class="reading">
+      <p class="note" style="margin-top:0">These are commercial lane figures, not passenger lanes. A crossing showing a short wait can still be slow for a specific load if secondary inspection is busy, and the feed carries no visibility into that.</p>
+      <p class="note">We publish CBSA's capture time rather than our own so you can judge staleness yourself. If a crossing has not reported recently, that shows in the timestamp.</p>
+    </div>
+  </section>
+''' + foot())
+
+# ═══ Exchange ═════════════════════════════════════════════════════════
+write("exchange-rate",
+ head("USD/CAD Exchange Rate for Carriers — {{fx.usd_cad}} | Northern Mile",
+      "The Bank of Canada daily USD/CAD observation at {{fx.usd_cad}}, published for Canadian carriers running cross-border freight and settling fuel in two currencies.",
+      "/exchange-rate/", "og.jpg",
+      '{"@context":"https://schema.org","@graph":[' + crumb("USD/CAD exchange rate","/exchange-rate/") + ','
+      '{"@type":"Dataset","name":"USD/CAD Exchange Rate for Canadian Carriers","description":"The Bank of Canada daily USD/CAD observation, published alongside Canadian diesel prices for carriers running cross-border freight.","url":"' + BASE + '/exchange-rate/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Bank of Canada daily observation</span>
+    <h1>USD / CAD</h1>
+    <div class="figure"><span class="n">{{fx.usd_cad}}</span><span class="u">CAD per USD</span><span class="d {{fx.direction}}">{{fx.change}}</span></div>
+    <div class="meta"><span>Bank of Canada</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+    <div class="cite"><div class="cl">What this is</div><q>The Bank of Canada publishes one USD/CAD observation per business day. It is not a continuous market rate and it is not the rate your bank will give you. It is the reference figure, and it is the one worth quoting.</q></div>
+  </section>
+''' + sponsor("sponsor_fx") + '''
+  <section class="sec">
+    <div class="lead"><h2>Why a diesel dashboard publishes a currency</h2></div>
+    <div class="reading">
+      <p class="note" style="margin-top:0">A Canadian carrier running into the United States buys fuel in two currencies and gets paid in one. A cent on the exchange rate moves the cost of a US fill as surely as a cent on the pump price does, and the two rarely move together.</p>
+      <p class="note">This page carries the Bank of Canada observation and its date. We publish the observation date rather than the fetch time because they are different things, and conflating them once put a six-week-old rate on this dashboard for thirty days. That correction is documented on the <a href="/methodology/nmdi/">methodology page</a>.</p>
+    </div>
+  </section>
+''' + subscribe("Diesel, the border, and the dollar",
+   "The three costs that move a Canadian carrier's week, dated and linked. One email on Wednesday mornings.") + foot())
+
+# ═══ Market ═══════════════════════════════════════════════════════════
+write("market-pulse",
+ head("Canadian Freight Market Pulse | Northern Mile",
+      "Freight demand and cost signals for Canadian carriers, alongside diesel at {{current_diesel}}¢/L and USD/CAD at {{usd_cad}}.",
+      "/market-pulse/", "og.jpg",
+      '{"@context":"https://schema.org","@graph":[' + crumb("Market pulse","/market-pulse/") + ']}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Freight demand signals</span>
+    <h1>Market pulse</h1>
+    <p class="stand">{{direction_summary}}</p>
+    <div class="meta"><span>Diesel <b>{{current_diesel}}</b>¢/L</span><span>USD/CAD <b>{{usd_cad}}</b></span><span>Fuel <b>{{fuel_pct_of_ops}}</b> of operating cost</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <div class="rows">
+  <!--LOOP:market--><div class="r"><span class="k">{{name}}<small>{{note}}</small></span><span class="v {{value_class}}">{{value}}</span></div><!--/LOOP:market-->
+  </div>
+  <p class="note">These indicators mix cost signals and demand signals, which move in opposite directions for a carrier. A rising number is not automatically good news and we do not colour them as though it were.</p>
+''' + sponsor("sponsor_market") + subscribe("What moved, and what it cost",
+   "Diesel, the border, freight demand, and one argument worth your time. Wednesday mornings.") + foot())
+
+# ═══ News ═════════════════════════════════════════════════════════════
+write("industry-news",
+ head("Canadian Trucking Industry News | Northern Mile",
+      "Headlines we are reading in Canadian trucking and freight, alongside live diesel prices and border wait times.",
+      "/industry-news/", "og.jpg",
+      '{"@context":"https://schema.org","@graph":[' + crumb("Industry news","/industry-news/") + ']}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Headlines we are reading</span>
+    <h1>Industry news</h1>
+    <p class="stand">Links out to the outlets doing the reporting. We do not rewrite their work, and every headline goes to the original.</p>
+    <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <div class="links-list">
+  <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
+  </div>
+  <p class="note">Collected from Canadian trucking and logistics trade feeds. An empty or short list means the feeds were quiet, not that nothing happened.</p>
+''' + sponsor("sponsor_news") + subscribe("The week in one email",
+   "The numbers that moved and the stories behind them, with every figure dated. Wednesday mornings.") + foot())
+
+print("standard pages done")
+
+# ═══ Road incidents ═══════════════════════════════════════════════════
+# The map keeps its inline init and Leaflet CDN, but marker colours, the detail
+# panel, and old classes are ported to nm.css tokens. Detail opens INLINE below
+# the map, not as a fixed overlay. incidents_json is inserted raw by the build.
+INCIDENTS_HEAD = ('<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">')
+
+INCIDENTS_MAP = '''
+  <section class="hero">
+    <span class="eyebrow">Freight corridor closures</span>
+    <h1>Road incidents</h1>
+    <p class="stand">Closures and major collisions on the freight corridors we monitor. Click a pin or a row for detail.</p>
+    <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <div id="map" class="incmap"></div>
+  <div class="two incgrid">
+    <div class="panel-list" id="incList"></div>
+    <div id="inc-detail" class="inc-detail" hidden></div>
+  </div>
+'''
+
+INCIDENTS_ROADWORK = '''
+  <section class="sec">
+    <div class="lead"><h2>Scheduled roadwork</h2><p>Planned lane reductions on monitored corridors.</p></div>
+    <div class="rows">
+    <!--LOOP:coming_roadwork--><div class="r"><span class="k">{{road}}<small>{{what}}</small></span><span class="v">{{when}} · {{lanes}}</span></div><!--/LOOP:coming_roadwork-->
+    </div>
+  </section>
+'''
+
+INCIDENTS_JS = '''<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>window.INCIDENTS = {{incidents_json}};</script>
+<script>
+(function(){
+  var data = window.INCIDENTS || [];
+  var mapEl = document.getElementById('map');
+  var list = document.getElementById('incList');
+  var detail = document.getElementById('inc-detail');
+  if(!mapEl) return;
+
+  var CLOSED = '#B3261E';   // cost/danger red, matches nm.css --up
+  var ACTIVE = '#0B5D3B';   // forest green, matches nm.css --signal
+
+  var map = L.map('map',{scrollWheelZoom:true}).setView([56.13,-106.35],4);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    attribution:'&copy; OpenStreetMap contributors', maxZoom:19
+  }).addTo(map);
+
+  if(!data.length){
+    if(list) list.innerHTML = '<div class="empty"><b>Corridors clear</b>No major closures or collisions on monitored corridors.</div>';
+    return;
+  }
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+
+  var markers = [];
+  data.forEach(function(it){
+    var color = it.severity_class === 'closed' ? CLOSED : ACTIVE;
+    var m = L.circleMarker([it.lat, it.lng], {radius:8,color:color,fillColor:color,fillOpacity:.85,weight:2}).addTo(map);
+    m.bindPopup('<b>'+esc(it.road)+' '+esc(it.direction)+'</b><br>'+esc(it.what)+
+      (it.source_url?'<br><a href="'+esc(it.source_url)+'" target="_blank" rel="noopener">Source</a>':''));
+    markers.push(m);
+
+    var row = document.createElement('div');
+    row.className = 'inc';
+    row.setAttribute('tabindex','0');
+    row.setAttribute('role','button');
+    row.innerHTML = '<div class="h">'+esc(it.road)+' · '+esc(it.direction)+
+      ' <span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></div>'+
+      '<div class="m">'+esc(it.what)+(it.clearance?' · clears '+esc(it.clearance):'')+'</div>';
+
+    function show(){
+      var p = [];
+      p.push('<div class="idh"><h3>'+esc(it.road)+' '+esc(it.direction)+'</h3><button class="idx" aria-label="Close">×</button></div>');
+      if(it.closed) p.push('<div class="idclosed">Road closed</div>');
+      p.push('<div class="idrow"><span>What</span><b>'+esc(it.what)+'</b></div>');
+      p.push('<div class="idrow"><span>Severity</span><b><span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></b></div>');
+      if(it.event_type) p.push('<div class="idrow"><span>Type</span><b>'+esc(it.event_type)+'</b></div>');
+      if(it.lanes) p.push('<div class="idrow"><span>Lanes</span><b>'+esc(it.lanes)+'</b></div>');
+      if(it.clearance) p.push('<div class="idrow"><span>Started</span><b>'+esc(it.clearance)+'</b></div>');
+      if(it.end_time) p.push('<div class="idrow"><span>Until</span><b>'+esc(it.end_time)+'</b></div>');
+      if(it.source_url) p.push('<div class="idrow"><span>Source</span><b><a href="'+esc(it.source_url)+'" target="_blank" rel="noopener">Report</a></b></div>');
+      detail.innerHTML = p.join('');
+      detail.hidden = false;
+      var x = detail.querySelector('.idx');
+      if(x) x.onclick = function(){ detail.hidden = true; };
+      map.flyTo([it.lat, it.lng], 9, {duration:.6});
+      detail.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+    row.addEventListener('click', show);
+    row.addEventListener('keydown', function(e){ if(e.key==='Enter') show(); });
+    if(list) list.appendChild(row);
+  });
+
+  var group = L.featureGroup(markers);
+  try { map.fitBounds(group.getBounds().pad(0.2)); } catch(e){}
+})();
+</script>
+'''
+
+# Build incidents head with the extra leaflet stylesheet folded in.
+_inc_head = head(
+    "Canadian Freight Road Incidents & Closures | Northern Mile",
+    "Live closures and major collisions on Canadian freight corridors, on an interactive map. Click any incident for detail and the source report.",
+    "/road-incidents/", "og.jpg",
+    '{"@context":"https://schema.org","@graph":[' + crumb("Road incidents","/road-incidents/") + ']}', "article")
+_inc_head = _inc_head.replace('<link rel="stylesheet" href="/assets/nm.css',
+    INCIDENTS_HEAD + '\n<link rel="stylesheet" href="/assets/nm.css')
+
+write("road-incidents",
+ _inc_head
+ + INCIDENTS_MAP
+ + sponsor("sponsor_incidents")
+ + INCIDENTS_ROADWORK
+ + subscribe("Corridors and costs",
+   "Which corridors closed, where diesel moved, and what it did to the week. One email on Wednesday mornings.")
+ + foot(INCIDENTS_JS))
+
+print("incidents done")
+
+# ═══ Methodology ══════════════════════════════════════════════════════
+# Prose ported verbatim from the live page. Sponsor slot deliberately omitted:
+# this is the page that certifies neutrality.
+METHOD_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("NMDI methodology","/methodology/nmdi/") + ','
+ '{"@type":"Dataset","@id":"' + BASE + '/#nmdi","name":"Northern Mile Diesel Index (NMDI)","description":"Methodology, population, source, cadence, and revision history for the Northern Mile Diesel Index.","url":"' + BASE + '/methodology/nmdi/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true}]}')
+
+write("methodology",
+ head("NMDI Methodology — How the Northern Mile Diesel Index Is Calculated | Northern Mile",
+      "Population, method, source, cadence, and the dated revision history of every correction published for the Northern Mile Diesel Index.",
+      "/methodology/nmdi/", "og.jpg", METHOD_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">NMDI · Version 1.1 · effective 2026-08-05</span>
+    <h1>How the index is calculated</h1>
+    <p class="stand">The Northern Mile Diesel Index is a ten-province national diesel average. This page documents exactly how it is built, and every correction ever published against it.</p>
+  </section>
+
+  <section class="reading" style="max-width:720px">
+    <h2>Population</h2>
+    <p class="note" style="margin-top:8px">The NMDI is computed from ten provinces: British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland and Labrador.</p>
+    <p class="note">Yukon and the Northwest Territories are collected from the same NRCan survey and displayed on the fuel page. They are excluded from the national index because they carry negligible national freight volume and equal-weighting them distorts the figure. Territorial diesel is supplied off Edmonton and typically prices near Alberta, below the national mean, so the exclusion is the more conservative choice.</p>
+
+    <h2 style="margin-top:32px">Method</h2>
+    <p class="note" style="margin-top:8px">Each provincial figure is the unweighted arithmetic mean of NRCan survey city prices within that province. The number of survey cities varies by province. The national index is the unweighted mean of the ten provincial figures. It is not population-weighted or freight-weighted; every province counts equally.</p>
+    <p class="note">An unweighted mean of provincial means is simpler to verify and harder to manipulate than a weighting scheme, and it changes only when diesel prices change, not when a weighting assumption changes.</p>
+
+    <h2 style="margin-top:32px">Source</h2>
+    <p class="note" style="margin-top:8px">Natural Resources Canada weekly diesel survey, RSS productID=5, collected by Kalibrate Technologies under contract to NRCan. All figures are inclusive of federal and provincial fuel taxes, carbon taxes, and sales taxes. The federal excise on diesel, normally 4 cents per litre, is suspended nationwide from 20 April to 7 September 2026 per Finance Canada and CBSA Customs Notice 26-11.</p>
+    <p class="note">This dashboard contains information licensed under the <a href="https://open.canada.ca/en/open-government-licence-canada" rel="license">Open Government Licence – Canada</a>. Diesel prices originate with Natural Resources Canada.</p>
+
+    <h2 style="margin-top:32px">Cadence</h2>
+    <p class="note" style="margin-top:8px">NRCan surveys weekly. The dashboard rebuilds every 30 minutes from the most recent survey, so the diesel figure holds steady between prints and deltas step once a week. The exchange rate reflects the most recent Bank of Canada observation, which is business-daily. Border wait times come from the live CBSA feed, polled every 30 minutes; the timestamp shown is CBSA's capture time for that crossing, not our fetch time, so it reflects how current CBSA's own data is.</p>
+
+    <h2 style="margin-top:32px">Revision history</h2>
+    <p class="note" style="margin-top:8px"><b>2026-08-15</b> — Historical backfill. Weekly diesel prints from 2016 through the first live-collection date were reconstructed from Natural Resources Canada's annual city price tables, using the identical ten-province roll-up applied to live data. Prints from the first live-collection date onward come from live weekly collection. Both paths use the same NRCan source and the same method. Where NRCan revised a price after its first print, the reconstructed (revised) value is shown. For the 2026-08-11 print the provincial figures were revised by 0.1–0.9¢/L; the national index was unchanged at 222.2¢/L.</p>
+    <p class="note"><b>2026-08-12</b> — Correction. The USD/CAD exchange rate published on this dashboard was incorrect from 2026-07-13, the site's first public deploy, through 2026-08-12. The Bank of Canada API returns observations newest first; the collector read them as oldest first and published the oldest observation as the current rate, with the day-over-day change inverted. At the time the error was found the dashboard displayed 1.4206, an observation dated 2026-06-29, when the correct current observation was 1.3927 dated 2026-08-11. The error affected the exchange rate module only. Diesel prices, the NMDI, and all provincial figures come from a separate source and were not affected. The collector now sorts observations by date, publishes the observation date alongside the rate, and fails loudly rather than falling back to a default when the fetch fails.</p>
+    <p class="note"><b>2026-08-05</b> — Index moved from a 12-unit basis (including YT and NT) to a 10-unit basis (excluding territories). The national figure shifted from 224.8 to 228.3¢/L as a function of this methodology change. Values before this date are not directly comparable with later ones.</p>
+    <p class="note"><b>2026-07-28</b> — Initial publication. 12-unit basis, unweighted mean of provincial means.</p>
+
+    <h2 style="margin-top:32px">Corrections policy</h2>
+    <p class="note" style="margin-top:8px">Errors in the underlying NRCan data are corrected when NRCan publishes a revision. Errors in computation are corrected immediately and logged above. A corrected figure is never retroactively substituted; the new value appears with the correction date and both values are recorded.</p>
+    <p class="note" style="margin-top:24px">Questions: <a href="mailto:northernmilemedia@gmail.com">northernmilemedia@gmail.com</a></p>
+  </section>
+''' + foot())
+
+print("methodology done")
+
+# ═══ Province page template ═══════════════════════════════════════════
+# One template, rendered per province by build_provinces.py. Uses the same shell.
+# {{prose}} is the hand-written section; {{cities}} loops the survey cities.
+PROV_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{name}} diesel prices","/diesel-prices/{{slug}}/") + ','
+ '{"@type":"Dataset","name":"{{name}} Diesel Prices","description":"Retail diesel prices across {{city_count}} {{name}} survey cities, from the NRCan weekly survey.","url":"' + BASE + '/diesel-prices/{{slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"{{name}}, Canada"},"dateModified":"{{updated_iso}}"}]}')
+
+prov_body = (
+ head("{{name}} Diesel Prices — {{price}}¢/L | Northern Mile",
+      "Diesel prices across {{city_count}} {{name}} survey cities, {{price}}¢/L provincial average, {{vs_national_abs}}¢ {{vs_national_word}} the national index. NRCan weekly survey, print {{print_date}}.",
+      "/diesel-prices/{{slug}}/", "og-fuel.jpg", PROV_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">{{name}} · {{city_count}} survey cities</span>
+    <h1>{{name}} diesel prices</h1>
+    <div class="figure"><span class="n">{{price}}</span><span class="u">¢/L</span><span class="d {{vs_national_class}}">{{vs_national}} vs national</span></div>
+    <div class="meta"><span>NRCan survey print <b>{{print_date}}</b></span><span>National index <b>{{national}}</b>¢/L</span></div>
+    <div class="cite">
+      <div class="cl">Citing this figure</div>
+      <q id="citation">{{name}} diesel: {{price}}¢/L provincial average across {{city_count}} survey cities, NRCan weekly survey print {{print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/diesel-prices/{{slug}}/</q>
+      <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Why {{name}} prices where it does</h2></div>
+    <div class="reading">
+{{prose}}
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>{{name}} survey cities</h2><p>c/L · distance from the provincial mean</p></div>
+    <div class="rows">
+    <!--LOOP:cities--><div class="r"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></div><!--/LOOP:cities-->
+    </div>
+    <p class="note">Every price is an NRCan survey observation from the print dated {{print_date}}. The provincial figure is the unweighted mean of these {{city_count}} cities, the same figure that enters the <a href="/methodology/nmdi/">Northern Mile Diesel Index</a>. Prices include all federal and provincial fuel, carbon, and sales taxes.</p>
+  </section>
+''' + subscribe("{{name}} diesel, every week",
+   "Where {{name}} diesel moved, what the border looked like, and what it means for cost per kilometre. One email on Wednesday mornings.")
+ + '''
+  <p class="note"><a href="/fuel-prices/">← All ten provinces</a></p>
+''' + foot())
+
+with open(os.path.join(OUT, "province.template.html"), "w") as f:
+    f.write(prov_body)
+print(f"  province                   {len(prov_body):6,} bytes")
+
+print("\\nAll templates generated.")

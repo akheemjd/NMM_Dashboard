@@ -16,10 +16,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="build" content="{{updated_iso}}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/nm.css?v={{build_version}}">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel cost calculator","item":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/"}]},{"@type":"WebApplication","name":"Truck Fuel Cost Calculator","url":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@type":"Organization","name":"Northern Mile Media","url":"https://northernmilemedia.com/"},"description":"Calculates trip diesel cost from distance, fuel consumption, and current Canadian provincial diesel prices."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate truck fuel cost per kilometre?","acceptedAnswer":{"@type":"Answer","text":"Multiply your fuel consumption in litres per 100 kilometres by the diesel price per litre, then divide by 100. At 35 litres per 100 kilometres and diesel at 2.00 dollars per litre, that is 70 cents per kilometre."}},{"@type":"Question","name":"What fuel consumption should I use for a loaded tractor-trailer?","acceptedAnswer":{"@type":"Answer","text":"Use your own figure from your own fuel records. Consumption varies widely with load weight, terrain, season, speed, and equipment, so any single assumed number would be wrong for most operators. This calculator does not assume one."}},{"@type":"Question","name":"Which diesel price does this calculator use?","acceptedAnswer":{"@type":"Answer","text":"Provincial retail averages from the Natural Resources Canada weekly survey, print {{fuel.print_date}}. These are retail survey averages inclusive of all taxes, not rack prices and not fuel card pricing."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel cost calculator","item":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/"}]},{"@type":"WebApplication","name":"Truck Fuel Cost Calculator","url":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@id":"https://northernmilemedia.com/#org"},"description":"Calculates trip diesel cost from distance, fuel consumption, and current Canadian provincial diesel prices."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate truck fuel cost per kilometre?","acceptedAnswer":{"@type":"Answer","text":"Multiply your fuel consumption in litres per 100 kilometres by the diesel price per litre, then divide by 100. At 35 litres per 100 kilometres and diesel at 2.00 dollars per litre, that is 70 cents per kilometre."}},{"@type":"Question","name":"What fuel consumption should I use for a loaded tractor-trailer?","acceptedAnswer":{"@type":"Answer","text":"Use your own figure from your own fuel records. Consumption varies widely with load weight, terrain, season, speed, and equipment, so any single assumed number would be wrong for most operators. This calculator does not assume one."}}]}]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
@@ -28,69 +28,45 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hd"><div class="wrap">
-  <a class="mark" href="/"><b>Northern Mile</b><span>Canadian trucking data</span></a>
+  <a class="mark" href="/"><span class="dot" aria-hidden="true"></span><b>Northern Mile</b><span>Canadian trucking data</span></a>
 </div></header>
 
-<nav class="nav" aria-label="Sections"><div class="wrap">
-  <a href="/">Home</a>
-  <a href="/fuel-prices/">Diesel</a>
-  <a href="/fuel-cost-calculator/" class="on" aria-current="page">Calculator</a>
-  <a href="/border-wait-times/">Border</a>
-  <a href="/exchange-rate/">Exchange</a>
-  <a href="/road-incidents/">Incidents</a>
-  <a href="/market-pulse/">Market</a>
-  <a href="/industry-news/">News</a>
-  <a href="/methodology/nmdi/">Methodology</a>
-</div></nav>
+<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/" class="on" aria-current="page">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></div></nav>
 
 <main class="wrap" id="main">
 
-  <p class="eyebrow" style="margin-top:var(--v)">Prices from NRCan survey print {{fuel.print_date}}</p>
-  <h1>Truck fuel cost calculator</h1>
-  <p class="stand">What a run costs in diesel, using this week’s Canadian prices and your own consumption figure. Change any field and the result updates.</p>
+  <section class="hero">
+    <span class="eyebrow">Prices from NRCan survey print {{fuel.print_date}}</span>
+    <h1>Truck fuel cost calculator</h1>
+    <p class="stand">What a run costs in diesel, using this week's Canadian prices and your own consumption figure. Change any field and the result updates.</p>
+  </section>
 
   <div class="calc">
     <div>
-      <div class="fld">
-        <label for="dist">Distance</label>
-        <div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div>
-      </div>
-      <div class="fld">
-        <label for="burn">Fuel consumption</label>
-        <div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div>
-        <p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p>
-      </div>
-      <div class="fld">
-        <label for="prov">Fuel price</label>
-        <div class="inp">
-          <select id="prov">
-            <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
-            <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
-            <option value="custom" data-name="Custom">Enter my own price</option>
-          </select>
-        </div>
-      </div>
-      <div class="fld" id="customwrap" hidden>
-        <label for="custom">Your price</label>
-        <div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div>
-        <p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p>
-      </div>
+      <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div></div>
+      <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
+      <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
+        <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
+        <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
+        <option value="custom" data-name="Custom">Enter my own price</option>
+      </select></div></div>
+      <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
     </div>
-
     <div class="out">
-      <div class="big">
-        <div class="ol">Trip fuel cost</div>
-        <div class="ov" id="rTotal">—</div>
-      </div>
+      <div class="big"><div class="ol">Trip fuel cost</div><div class="ov" id="rTotal">—</div></div>
       <div class="rows">
         <div class="r"><span class="k">Litres burned</span><span class="v" id="rLitres">—</span></div>
         <div class="r"><span class="k">Cost per kilometre</span><span class="v" id="rPerKm">—</span></div>
         <div class="r"><span class="k">Cost per mile</span><span class="v" id="rPerMi">—</span></div>
         <div class="r"><span class="k">Price used</span><span class="v" id="rPrice">—</span></div>
       </div>
-      <p class="note">Diesel only. This is not a full cost-per-mile figure — it excludes tolls, maintenance, driver pay, insurance, and equipment. <a href="/fuel-prices/">See prices by province</a></p>
+      <p class="note">Diesel only. Excludes tolls, maintenance, driver pay, insurance, and equipment. <a href="/fuel-prices/">See prices by province</a></p>
     </div>
   </div>
+
+  <!--OPTIONAL:sponsor_calc-->
+  <aside class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_calc.name}}</span><span class="l">{{sponsor_calc.line}}</span><a class="c" href="{{sponsor_calc.url}}">Learn more →</a></aside>
+  <!--/OPTIONAL:sponsor_calc-->
 
   <section class="sub" aria-labelledby="brief">
     <div class="e">The Northern Mile Brief</div>
@@ -103,16 +79,14 @@
   <section class="sec">
     <div class="lead"><h2>How this is worked out</h2><p>Plain arithmetic, no hidden assumptions.</p></div>
     <div class="two">
-      <div>
-        <div class="rows">
-          <div class="r"><span class="k">Litres burned<small>distance ÷ 100 × consumption</small></span><span class="v">L</span></div>
-          <div class="r"><span class="k">Trip cost<small>litres × price per litre</small></span><span class="v">$</span></div>
-          <div class="r"><span class="k">Cost per kilometre<small>trip cost ÷ distance</small></span><span class="v">$/km</span></div>
-        </div>
-      </div>
+      <div><div class="rows">
+        <div class="r"><span class="k">Litres burned<small>distance ÷ 100 × consumption</small></span><span class="v">L</span></div>
+        <div class="r"><span class="k">Trip cost<small>litres × price per litre</small></span><span class="v">$</span></div>
+        <div class="r"><span class="k">Cost per kilometre<small>trip cost ÷ distance</small></span><span class="v">$/km</span></div>
+      </div></div>
       <div class="reading">
-        <p class="note" style="margin-top:0">The prices offered here are retail survey averages from Natural Resources Canada, inclusive of federal and provincial fuel taxes, carbon pricing, and sales taxes. They are not rack prices and not what a fleet on a fuel card pays, which is usually lower. If you know your card price, enter it.</p>
-        <p class="note">Consumption is the field that changes the answer most, and it is the one we refuse to guess at. A loaded highway tractor and a light-load regional run can differ by a third or more. Pull the figure from your own records rather than accepting a number off a website.</p>
+        <p class="note" style="margin-top:0">The prices offered are retail survey averages from NRCan, inclusive of all taxes. They are not rack prices and not what a fleet on a fuel card pays, which is usually lower. If you know your card price, enter it.</p>
+        <p class="note">Consumption is the field that changes the answer most, and it is the one we refuse to guess at. Pull the figure from your own records rather than accepting a number off a website.</p>
       </div>
     </div>
   </section>
@@ -120,53 +94,26 @@
 </main>
 
 <footer class="ft"><div class="wrap">
-  <div class="links">
-    <a href="/">Dashboard home</a>
-    <a href="/fuel-prices/">Diesel</a>
-    <a href="/fuel-cost-calculator/">Calculator</a>
-    <a href="/border-wait-times/">Border</a>
-    <a href="/exchange-rate/">Exchange</a>
-    <a href="/road-incidents/">Incidents</a>
-    <a href="/market-pulse/">Market</a>
-    <a href="/industry-news/">News</a>
-    <a href="/methodology/nmdi/">Methodology</a>
-  </div>
+  <div class="links"><a href="/">Dashboard home</a><a href="/">Home</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></div>
   <div class="fine">Northern Mile Media · Rebuilt {{updated_at}} UTC</div>
 </div></footer>
 
 <script src="/assets/nm.js?v={{build_version}}"></script>
 <script>
-(function () {
-  "use strict";
-  var $ = function (id) { return document.getElementById(id); };
-  var dist = $("dist"), burn = $("burn"), prov = $("prov"),
-      custom = $("custom"), wrap = $("customwrap");
-  function money(v) {
-    return "$" + v.toLocaleString("en-CA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  }
-  function calc() {
-    var isCustom = prov.value === "custom";
-    wrap.hidden = !isCustom;
-    var cents = parseFloat(isCustom ? custom.value : prov.value);
-    var d = parseFloat(dist.value), b = parseFloat(burn.value);
-    if (!isFinite(cents) || !isFinite(d) || !isFinite(b) || d <= 0 || b <= 0 || cents <= 0) {
-      ["rTotal","rLitres","rPerKm","rPerMi","rPrice"].forEach(function (id) { $(id).textContent = "\u2014"; });
-      return;
-    }
-    var litres = d / 100 * b, total = litres * (cents / 100);
-    $("rLitres").textContent = litres.toLocaleString("en-CA", { maximumFractionDigits: 1 }) + " L";
-    $("rTotal").textContent = money(total);
-    $("rPerKm").textContent = money(total / d) + " /km";
-    $("rPerMi").textContent = money(total / d * 1.609344) + " /mi";
-    var opt = prov.options[prov.selectedIndex];
-    $("rPrice").textContent = cents.toFixed(1) + "\u00a2/L \u00b7 " + (isCustom ? "your price" : opt.getAttribute("data-name"));
-  }
-  [dist, burn, prov, custom].forEach(function (el) {
-    el.addEventListener("input", calc); el.addEventListener("change", calc);
-  });
-  calc();
-})();
-
+(function(){"use strict";var $=function(i){return document.getElementById(i);};
+var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap");
+function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
+var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value);
+if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice"].forEach(function(i){$(i).textContent="\u2014";});return;}
+var litres=d/100*b,total=litres*(cents/100);
+$("rLitres").textContent=litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L";
+$("rTotal").textContent=money(total);$("rPerKm").textContent=money(total/d)+" /km";
+$("rPerMi").textContent=money(total/d*1.609344)+" /mi";
+var o=prov.options[prov.selectedIndex];
+$("rPrice").textContent=cents.toFixed(1)+"\u00a2/L \u00b7 "+(isC?"your price":o.getAttribute("data-name"));}
+[dist,burn,prov,custom].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
+calc();})();
 </script>
 </body>
 </html>
