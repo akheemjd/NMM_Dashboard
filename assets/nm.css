@@ -20,6 +20,7 @@
 
   --up:      #B3261E;   /* cost rising */
   --up-wash: #FBECEA;
+  --amber-wash:#F7ECD6;
   --down:    #0B5D3B;   /* cost falling */
   --down-wash:#EDF3EF;
 
@@ -344,3 +345,80 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 /* Nothing horizontally overflows the page. */
 html, body { overflow-x: hidden; }
 main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%); }
+
+/* ── Road incidents page ─────────────────────────────────────────────
+   The incidents template ports markup that needs these styles. Without
+   them the map has no height, the list has no structure, and the detail
+   panel is unstyled. */
+
+/* Map container — needs an explicit height or Leaflet renders 0px tall. */
+.incmap {
+  height: 380px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 8px 0 20px;
+  overflow: hidden;
+  background: var(--sink);
+}
+
+/* The scrollable list of incidents. */
+.panel-list {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  max-height: 520px;
+  overflow-y: auto;
+  background: var(--raise);
+}
+
+/* Each incident row. */
+.inc {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line-2);
+  cursor: pointer;
+  transition: background .12s;
+}
+.inc:last-child { border-bottom: 0; }
+.inc:hover, .inc:focus-visible { background: var(--sink); outline: none; }
+.inc .h {
+  font-size: .9375rem; font-weight: 500; color: var(--ink);
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  margin-bottom: 3px;
+}
+.inc .m {
+  font-family: var(--data); font-size: .8125rem; color: var(--muted); line-height: 1.5;
+}
+
+/* Severity pill. */
+.pill {
+  flex-shrink: 0;
+  font-family: var(--data); font-size: .6875rem; letter-spacing: .02em;
+  text-transform: uppercase; padding: 2px 8px; border-radius: 100px;
+  background: var(--down-wash); color: var(--down);
+}
+.pill.closed { background: var(--up-wash); color: var(--up); }
+.pill.heavy { background: var(--amber-wash); color: var(--amber); }
+
+/* Active row highlight (synced with the open popup). */
+.inc.active { background: var(--wash); box-shadow: inset 3px 0 0 var(--signal); }
+
+/* Incident detail popup on the map marker. */
+.inc-popup .leaflet-popup-content-wrapper { border-radius: 10px; box-shadow: 0 6px 24px rgba(26,26,23,.16); }
+.inc-popup .leaflet-popup-content { margin: 14px 16px; font-family: var(--body); }
+.ipop-h { font-family: var(--display); font-weight: 600; font-size: 1rem; color: var(--ink); margin-bottom: 8px; letter-spacing: -.01em; }
+.ipop-closed { display: inline-block; font-family: var(--data); font-size: .7rem; font-weight: 600; color: var(--up); background: var(--up-wash); padding: 3px 9px; border-radius: 100px; margin-bottom: 8px; }
+.ipop-sev { margin-bottom: 10px; }
+.ipop-what { font-size: .875rem; line-height: 1.5; color: var(--ink-2); margin-bottom: 12px; overflow-wrap: anywhere; }
+.ipop-rows { border-top: 1px solid var(--line-2); padding-top: 10px; }
+.ipop-rows div { display: grid; grid-template-columns: 70px 1fr; gap: 10px; padding: 3px 0; font-size: .8125rem; color: var(--ink-2); }
+.ipop-rows span { font-family: var(--data); font-size: .6875rem; text-transform: uppercase; letter-spacing: .02em; color: var(--muted); }
+.ipop-src { display: inline-block; margin-top: 12px; font-family: var(--data); font-size: .8125rem; color: var(--signal); font-weight: 500; text-decoration: none; }
+.ipop-src:hover { text-decoration: underline; }
+
+/* Scheduled roadwork rows: road + dates on a header line, description below.
+   Reads cleanly on mobile instead of cramming everything into one flex row. */
+.rw { padding: 14px 0; border-bottom: 1px solid var(--line-2); }
+.rw:last-child { border-bottom: 0; }
+.rw-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.rw-road { font-family: var(--data); font-size: .8125rem; font-weight: 500; color: var(--ink); letter-spacing: .02em; }
+.rw-when { font-family: var(--data); font-size: .75rem; color: var(--muted); flex-shrink: 0; }
+.rw-what { font-size: .9375rem; color: var(--ink-2); line-height: 1.5; overflow-wrap: anywhere; }

@@ -44,10 +44,7 @@
   </section>
 
   <div id="map" class="incmap"></div>
-  <div class="two incgrid">
-    <div class="panel-list" id="incList"></div>
-    <div id="inc-detail" class="inc-detail" hidden></div>
-  </div>
+  <div class="panel-list" id="incList"></div>
 
   <!--OPTIONAL:sponsor_incidents-->
   <aside class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_incidents.name}}</span><span class="l">{{sponsor_incidents.line}}</span><a class="c" href="{{sponsor_incidents.url}}">Learn more →</a></aside>
@@ -56,7 +53,7 @@
   <section class="sec">
     <div class="lead"><h2>Scheduled roadwork</h2><p>Planned lane reductions on monitored corridors.</p></div>
     <div class="rows">
-    <!--LOOP:coming_roadwork--><div class="r"><span class="k">{{road}}<small>{{what}}</small></span><span class="v">{{when}} · {{lanes}}</span></div><!--/LOOP:coming_roadwork-->
+    <!--LOOP:coming_roadwork--><div class="rw"><div class="rw-head"><span class="rw-road">{{road}}</span><span class="rw-when">{{when}} · {{lanes}}</span></div><div class="rw-what">{{what}}</div></div><!--/LOOP:coming_roadwork-->
     </div>
   </section>
 
@@ -83,11 +80,11 @@
   var data = window.INCIDENTS || [];
   var mapEl = document.getElementById('map');
   var list = document.getElementById('incList');
-  var detail = document.getElementById('inc-detail');
   if(!mapEl) return;
 
-  var CLOSED = '#B3261E';   // cost/danger red, matches nm.css --up
-  var ACTIVE = '#0B5D3B';   // forest green, matches nm.css --signal
+  var CLOSED = '#B3261E';   // red — closed, matches nm.css --up
+  var HEAVY  = '#C8891A';   // amber — heavy, matches nm.css --amber
+  var ACTIVE = '#0B5D3B';   // green — moderate/minor, matches nm.css --signal
 
   var map = L.map('map',{scrollWheelZoom:true}).setView([56.13,-106.35],4);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
@@ -101,42 +98,59 @@
 
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
 
+  // The full detail lives in the marker popup, so clicking a list item and
+  // clicking a pin both open the same rich detail on the map itself.
+  function popupHtml(it){
+    var p = ['<div class="ipop">'];
+    p.push('<div class="ipop-h">'+esc(it.road)+(it.direction?' '+esc(it.direction):'')+'</div>');
+    if(it.closed) p.push('<div class="ipop-closed">Road closed</div>');
+    p.push('<div class="ipop-sev"><span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></div>');
+    p.push('<div class="ipop-what">'+esc(it.what)+'</div>');
+    var rows='';
+    if(it.event_type) rows+='<div><span>Type</span>'+esc(it.event_type)+'</div>';
+    if(it.lanes) rows+='<div><span>Lanes</span>'+esc(it.lanes)+'</div>';
+    if(it.clearance) rows+='<div><span>Started</span>'+esc(it.clearance)+'</div>';
+    if(it.end_time) rows+='<div><span>Until</span>'+esc(it.end_time)+'</div>';
+    if(it.detour) rows+='<div><span>Detour</span>'+esc(it.detour)+'</div>';
+    if(rows) p.push('<div class="ipop-rows">'+rows+'</div>');
+    if(it.source_url) p.push('<a class="ipop-src" href="'+esc(it.source_url)+'" target="_blank" rel="noopener">View source report →</a>');
+    p.push('</div>');
+    return p.join('');
+  }
+
   var markers = [];
   data.forEach(function(it){
-    var color = it.severity_class === 'closed' ? CLOSED : ACTIVE;
+    var color = it.severity_class === 'closed' ? CLOSED
+              : (it.severity_class === 'heavy' ? HEAVY : ACTIVE);
     var m = L.circleMarker([it.lat, it.lng], {radius:8,color:color,fillColor:color,fillOpacity:.85,weight:2}).addTo(map);
-    m.bindPopup('<b>'+esc(it.road)+' '+esc(it.direction)+'</b><br>'+esc(it.what)+
-      (it.source_url?'<br><a href="'+esc(it.source_url)+'" target="_blank" rel="noopener">Source</a>':''));
+    m.bindPopup(popupHtml(it), {maxWidth:280, className:'inc-popup'});
     markers.push(m);
 
     var row = document.createElement('div');
     row.className = 'inc';
     row.setAttribute('tabindex','0');
     row.setAttribute('role','button');
-    row.innerHTML = '<div class="h">'+esc(it.road)+' · '+esc(it.direction)+
+    row.innerHTML = '<div class="h">'+esc(it.road)+(it.direction?' · '+esc(it.direction):'')+
       ' <span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></div>'+
       '<div class="m">'+esc(it.what)+(it.clearance?' · clears '+esc(it.clearance):'')+'</div>';
 
-    function show(){
-      var p = [];
-      p.push('<div class="idh"><h3>'+esc(it.road)+' '+esc(it.direction)+'</h3><button class="idx" aria-label="Close">×</button></div>');
-      if(it.closed) p.push('<div class="idclosed">Road closed</div>');
-      p.push('<div class="idrow"><span>What</span><b>'+esc(it.what)+'</b></div>');
-      p.push('<div class="idrow"><span>Severity</span><b><span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></b></div>');
-      if(it.event_type) p.push('<div class="idrow"><span>Type</span><b>'+esc(it.event_type)+'</b></div>');
-      if(it.lanes) p.push('<div class="idrow"><span>Lanes</span><b>'+esc(it.lanes)+'</b></div>');
-      if(it.clearance) p.push('<div class="idrow"><span>Started</span><b>'+esc(it.clearance)+'</b></div>');
-      if(it.end_time) p.push('<div class="idrow"><span>Until</span><b>'+esc(it.end_time)+'</b></div>');
-      if(it.source_url) p.push('<div class="idrow"><span>Source</span><b><a href="'+esc(it.source_url)+'" target="_blank" rel="noopener">Report</a></b></div>');
-      detail.innerHTML = p.join('');
-      detail.hidden = false;
-      var x = detail.querySelector('.idx');
-      if(x) x.onclick = function(){ detail.hidden = true; };
+    function focus(){
       map.flyTo([it.lat, it.lng], 9, {duration:.6});
-      detail.scrollIntoView({behavior:'smooth', block:'nearest'});
+      map.once('moveend', function(){ m.openPopup(); });
+      var prev = list.querySelector('.inc.active');
+      if(prev) prev.classList.remove('active');
+      row.classList.add('active');
+      mapEl.scrollIntoView({behavior:'smooth', block:'nearest'});
     }
-    row.addEventListener('click', show);
-    row.addEventListener('keydown', function(e){ if(e.key==='Enter') show(); });
+    row.addEventListener('click', focus);
+    row.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); focus(); } });
+
+    m.on('popupopen', function(){
+      var prev = list.querySelector('.inc.active');
+      if(prev) prev.classList.remove('active');
+      row.classList.add('active');
+    });
+
     if(list) list.appendChild(row);
   });
 
