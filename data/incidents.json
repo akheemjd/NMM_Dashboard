@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-289079",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at MARKHAM ROAD, Toronto. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.78425745,
+      "lng": -79.23797238,
+      "start": 1786825140,
+      "end": null,
+      "updated": 1786825140
+    },
+    {
+      "id": "ON-289075",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at ETOBICOKE CREEK, Mississauga. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.6626515,
+      "lng": -79.6071509,
+      "start": 1786824660,
+      "end": null,
+      "updated": 1786824660
+    },
+    {
       "id": "ON-289071",
       "province": "ON",
       "highway": "HWY 401",
@@ -36,22 +68,6 @@
       "start": "2026-07-26T11:37:49-07:00",
       "end": "",
       "updated": "2026-08-15T11:55:53-07:00"
-    },
-    {
-      "id": "ON-289057",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at CENTENNIAL PKWY, Hamilton. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.24573725,
-      "lng": -79.75690966,
-      "start": 1786818540,
-      "end": null,
-      "updated": 1786818540
     },
     {
       "id": "ON-288891",
@@ -788,26 +804,10 @@
       "start": 1787140800,
       "end": 1787263200,
       "updated": 1786674420
-    },
-    {
-      "id": "ON-288459",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Continuous Engineering Investigation on HWY 11 Northbound  between HWY 654/LK NOSBONSING RD, Callander and HWY 654/LK NOSBONSING RD, Callander, Callander. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 46.196404,
-      "lng": -79.3554,
-      "start": 1787054400,
-      "end": 1787176800,
-      "updated": 1786673700
     }
   ],
   "total": 50,
-  "updated": "2026-08-15T19:56:25.078301+00:00",
+  "updated": "2026-08-15T20:27:32.916118+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
