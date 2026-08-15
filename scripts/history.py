@@ -48,7 +48,9 @@ def _write(rows):
 
 
 def snapshot(series, key, value, when=None):
-    """Record value for today. Re-running the same day overwrites, never appends."""
+    """Record value for a date. First write wins per (date, series, key):
+    a later build for the same date keeps the original value, never overwrites.
+    New keys still append as normal."""
     if value is None:
         return
     try:
@@ -60,8 +62,7 @@ def snapshot(series, key, value, when=None):
     rows = _load()
     for r in rows:
         if r["date"] == day and r["series"] == series and r["key"] == key:
-            r["value"] = f"{value:.4f}"
-            break
+            break  # already recorded — first write wins, keep existing value
     else:
         rows.append({"date": day, "series": series, "key": key,
                      "value": f"{value:.4f}"})

@@ -87,6 +87,7 @@ from datetime import datetime as _dt, timezone as _tz
 MAX_STALENESS_DAYS = {"fuel": 10}
 
 _print_date = raw_fuel.get("print_date")
+_pd = None
 if _print_date:
     try:
         _pd = _dt.strptime(_print_date, "%a, %d %b %Y").date()
@@ -492,10 +493,12 @@ write("news.norm", {"news": news, "updated_at": ts, "updated_iso": ts_iso, "buil
 
 write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 
-# Snapshots — idempotent, per calendar day
-snapshot("diesel", "national", fuel_nat)
+# Snapshots — idempotent, per calendar day.
+# Diesel is keyed to the NRCan print date (not the build date) so the
+# weekly survey figure lands on its own print date and holds there.
+snapshot("diesel", "national", fuel_nat, when=_pd)
 for code, p in provs.items():
-    snapshot("diesel", code, p.get("diesel"))
+    snapshot("diesel", code, p.get("diesel"), when=_pd)
 
 # FX: snapshot against the observation date, not today, so a stale
 # collector cannot backfill a weekend with Friday's rate.
