@@ -145,7 +145,7 @@ def build_all():
 
     # Copy static assets (docs/assets/ is what the /assets/*.css|js paths resolve to)
     os.makedirs(os.path.join(DOCS, "assets"), exist_ok=True)
-    for f in ["styles.css", "app.js", "leaflet.css", "leaflet.js", "nm.css", "nm.js"]:
+    for f in ["nm.css", "nm.js"]:
         src = os.path.join(ASSETS, f) if os.path.exists(os.path.join(ASSETS, f)) else os.path.join(DOCS, "assets", f)
         dst = os.path.join(DOCS, "assets", f)
         if os.path.exists(src) and src != dst:
