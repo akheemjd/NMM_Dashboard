@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-289110",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.72961984,
+      "lng": -79.4488332,
+      "start": 1786832580,
+      "end": null,
+      "updated": 1786832580
+    },
+    {
       "id": "ON-289098",
       "province": "ON",
       "highway": "HWY 400",
@@ -788,26 +804,10 @@
       "start": 1787054400,
       "end": 1787176800,
       "updated": 1786673700
-    },
-    {
-      "id": "ON-288456",
-      "province": "ON",
-      "highway": "HWY 3",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 3 Eastbound  between Outer Drive and Outer Drive, Windsor. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 42.23193,
-      "lng": -82.983536,
-      "start": 1786752000,
-      "end": 1786960800,
-      "updated": 1786673280
     }
   ],
   "total": 50,
-  "updated": "2026-08-15T21:59:59.326644+00:00",
+  "updated": "2026-08-15T22:31:11.223693+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

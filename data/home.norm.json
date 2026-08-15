@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-15 22:00 UTC",
-  "updated_iso": "2026-08-15T22:00:02+00:00",
-  "build_version": "1786831202",
+  "updated_at": "2026-08-15 22:31 UTC",
+  "updated_iso": "2026-08-15T22:31:14+00:00",
+  "build_version": "1786833074",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "10 min"
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -218,10 +218,17 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 1,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 400",
+    "status_line": "HWY 401, HWY 400",
     "incidents": [
+      {
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. Right\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
       {
         "road": "HWY 400",
         "what": "Collision on HWY 400 Southbound RAMP at 401 WEST COLL, Toronto. Right lane and\u2026",
@@ -235,11 +242,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:03 EDT"
+      "captured_at": "18:12 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -253,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "9 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -275,7 +282,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:36 EDT"
+      "captured_at": "18:09 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -284,7 +291,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:49 MDT"
+      "captured_at": "16:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -293,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT"
+      "captured_at": "15:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
