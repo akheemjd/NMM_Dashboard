@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-289029",
+      "id": "ON-289042",
       "province": "ON",
       "highway": "QEW",
       "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at NIKOLA TESLA, Hamilton. 2 left lanes closed.",
+      "description": "Disabled Vehicle on QEW Toronto bound RAMP at TRAFALGAR ROAD, Oakville. Centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.2548886,
-      "lng": -79.76536572,
-      "start": 1786813740,
+      "lanes": "centre lane closed",
+      "lat": 43.4593596,
+      "lng": -79.68543944,
+      "start": 1786816320,
       "end": null,
-      "updated": 1786813740
-    },
-    {
-      "id": "ON-289026",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at ALLEN ROAD, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.731859783,
-      "lng": -79.44086194,
-      "start": 1786813140,
-      "end": null,
-      "updated": 1786813140
+      "updated": 1786816320
     },
     {
       "id": "ON-288891",
@@ -819,10 +803,26 @@
       "start": 1787227200,
       "end": 1787349600,
       "updated": 1786676040
+    },
+    {
+      "id": "ON-288467",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Continuous Engineering Investigation on HWY 17 Eastbound  between BANK ST and SEC HWY 537-NICKEL CENTRE, Wahnapitae. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.487305,
+      "lng": -80.78766,
+      "start": 1787227200,
+      "end": 1787349600,
+      "updated": 1786675380
     }
   ],
   "total": 50,
-  "updated": "2026-08-15T17:51:46.608979+00:00",
+  "updated": "2026-08-15T18:22:55.516607+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

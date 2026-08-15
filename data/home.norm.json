@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-15 17:51 UTC",
-  "updated_iso": "2026-08-15T17:51:50+00:00",
-  "build_version": "1786816310",
+  "updated_at": "2026-08-15 18:22 UTC",
+  "updated_iso": "2026-08-15T18:22:58+00:00",
+  "build_version": "1786818178",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 1,
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "55 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "31 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -218,20 +218,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 1,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 401",
+    "status_line": "QEW",
     "incidents": [
       {
         "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at NIKOLA TESLA, Hamilton. 2 left lanes closed.",
-        "severity_label": "Collision",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at ALLEN ROAD, Toronto. Left lane closed.",
+        "what": "Disabled Vehicle on QEW Toronto bound RAMP at TRAFALGAR ROAD, Oakville. Centre\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +253,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "49 min",
+      "wait": "31 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -273,7 +266,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -296,11 +289,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "55 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -356,7 +349,7 @@
     },
     {
       "category": "The Trucker",
-      "headline": "Trucker dead in train crash in Louisiana",
+      "headline": "Trucker killed in crash with train in Louisiana",
       "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-dead-in-train-crash-in-louisiana"
     }
   ],
