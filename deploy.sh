@@ -83,7 +83,7 @@ print('Health recorded.')
 echo "[6/6] Deploying..."
 # Commit and push
 echo "=== Asset freshness ==="
-for f in nm.css nm.js; do
+for f in nm.css nm.js nmdi-chart.js; do
   if ! cmp -s "assets/$f" "docs/assets/$f"; then
     echo "FATAL: docs/assets/$f differs from assets/$f — asset copy did not run"
     exit 1
