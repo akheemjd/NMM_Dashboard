@@ -52,9 +52,8 @@
 
   <section class="sec">
     <div class="lead"><h2>Scheduled roadwork</h2><p>Planned lane reductions on monitored corridors.</p></div>
-    <div class="rows">
-    <!--LOOP:coming_roadwork--><div class="rw"><div class="rw-head"><span class="rw-road">{{road}}</span><span class="rw-when">{{when}} · {{lanes}}</span></div><div class="rw-what">{{what}}</div></div><!--/LOOP:coming_roadwork-->
-    </div>
+    <div id="rwmap" class="incmap"></div>
+    <div class="panel-list" id="rwList"></div>
   </section>
 
   <section class="sub" aria-labelledby="brief">
@@ -74,7 +73,7 @@
 
 <script src="/assets/nm.js?v={{build_version}}"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>window.INCIDENTS = {{incidents_json}};</script>
+<script>window.INCIDENTS = {{incidents_json}}; window.ROADWORK = {{roadwork_json}};</script>
 <script>
 (function(){
   var data = window.INCIDENTS || [];
@@ -156,6 +155,63 @@
 
   var group = L.featureGroup(markers);
   try { map.fitBounds(group.getBounds().pad(0.2)); } catch(e){}
+})();
+
+(function(){
+  var rw = window.ROADWORK || [];
+  var rwMapEl = document.getElementById('rwmap');
+  var rwList = document.getElementById('rwList');
+  if(!rwMapEl) return;
+
+  var RW_COLOR = '#1C6FE0';   // blue — planned roadwork, matches nm.css --focus
+
+  if(!rw.length){
+    if(rwList) rwList.innerHTML = '<div class="empty"><b>No scheduled roadwork</b>No planned lane reductions on monitored corridors.</div>';
+    return;
+  }
+
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+
+  var rwMap = L.map('rwmap',{scrollWheelZoom:true}).setView([56.13,-106.35],4);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    attribution:'&copy; OpenStreetMap contributors', maxZoom:19
+  }).addTo(rwMap);
+
+  var rwMarkers = [];
+  rw.forEach(function(it){
+    var m = L.circleMarker([it.lat, it.lng], {radius:7,color:RW_COLOR,fillColor:RW_COLOR,fillOpacity:.85,weight:2}).addTo(rwMap);
+    var rows = '';
+    if(it.when) rows += '<div><span>When</span>'+esc(it.when)+'</div>';
+    if(it.lanes) rows += '<div><span>Lanes</span>'+esc(it.lanes)+'</div>';
+    m.bindPopup('<div class="ipop"><div class="ipop-h">'+esc(it.road)+'</div><div class="ipop-what">'+esc(it.what)+'</div><div class="ipop-rows">'+rows+'</div></div>', {maxWidth:280, className:'inc-popup'});
+    rwMarkers.push(m);
+
+    var row = document.createElement('div');
+    row.className = 'rw';
+    row.setAttribute('tabindex','0');
+    row.setAttribute('role','button');
+    row.innerHTML = '<div class="rw-head"><span class="rw-road">'+esc(it.road)+'</span><span class="rw-when">'+esc(it.when)+(it.lanes?' · '+esc(it.lanes):'')+'</span></div><div class="rw-what">'+esc(it.what)+'</div>';
+
+    function focus(){
+      rwMap.flyTo([it.lat, it.lng], 9, {duration:.6});
+      rwMap.once('moveend', function(){ m.openPopup(); });
+      var prev = rwList.querySelector('.rw.active');
+      if(prev) prev.classList.remove('active');
+      row.classList.add('active');
+      rwMapEl.scrollIntoView({behavior:'smooth', block:'nearest'});
+    }
+    row.addEventListener('click', focus);
+    row.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); focus(); } });
+    m.on('popupopen', function(){
+      var prev = rwList.querySelector('.rw.active');
+      if(prev) prev.classList.remove('active');
+      row.classList.add('active');
+    });
+    if(rwList) rwList.appendChild(row);
+  });
+
+  var group = L.featureGroup(rwMarkers);
+  try { rwMap.fitBounds(group.getBounds().pad(0.2)); } catch(e){}
 })();
 </script>
 </body>

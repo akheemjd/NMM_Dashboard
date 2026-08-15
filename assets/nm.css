@@ -416,8 +416,10 @@ main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%);
 
 /* Scheduled roadwork rows: road + dates on a header line, description below.
    Reads cleanly on mobile instead of cramming everything into one flex row. */
-.rw { padding: 14px 0; border-bottom: 1px solid var(--line-2); }
+.rw { padding: 14px 16px; border-bottom: 1px solid var(--line-2); cursor: pointer; transition: background .12s; }
 .rw:last-child { border-bottom: 0; }
+.rw:hover, .rw:focus-visible { background: var(--sink); outline: none; }
+.rw.active { background: var(--wash); box-shadow: inset 3px 0 0 var(--signal); }
 .rw-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
 .rw-road { font-family: var(--data); font-size: .8125rem; font-weight: 500; color: var(--ink); letter-spacing: .02em; }
 .rw-when { font-family: var(--data); font-size: .75rem; color: var(--muted); flex-shrink: 0; }

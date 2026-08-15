@@ -464,12 +464,15 @@ for i in raw_sorted:
         "what": clip(i.get("description",""), 55),
         "when": start_str + (" - " + end_str if end_str else ""),
         "lanes": i.get("lanes",""),
+        "lat": i.get("lat"),
+        "lng": i.get("lng"),
     })
 
 write("incidents.norm", {
     "incidents": incidents,
     "incidents_json": json.dumps(inc_json),
     "coming_roadwork": coming_roadwork,
+    "roadwork_json": json.dumps(coming_roadwork),
     "updated_at": ts,
     "updated_iso": ts_iso,
     "build_version": build_version,
