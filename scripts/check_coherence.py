@@ -21,6 +21,12 @@ DOCS = os.path.join(ROOT, "docs")
 
 RETIRED = ["styles.css", "app.js"]
 
+# The chart library and its script may appear ONLY on these pages. Anywhere else
+# means the chart leaked onto a page that should stay lean — same class of drift
+# as an old-asset reference, caught the same way.
+CHART_ALLOWED = {"/index.html", "/fuel-prices/index.html"}
+CHART_MARKERS = ["d3.min.js", "nmdi-chart.js"]
+
 
 def chrome(html):
     """The header+nav+footer, with per-page active markers normalized out."""
@@ -50,6 +56,7 @@ def main():
 
     hashes = {}
     retired_hits = {}
+    chart_leaks = {}
     no_chrome = []
 
     for p in pages:
@@ -67,6 +74,12 @@ def main():
             if re.search(r'/assets/' + re.escape(asset) + r'\b', html) or \
                re.search(r'["\'/]' + re.escape(asset) + r'\?', html):
                 retired_hits.setdefault(rel, []).append(asset)
+
+        # Chart library must appear only on the allowed pages.
+        if rel not in CHART_ALLOWED:
+            for marker in CHART_MARKERS:
+                if marker in html:
+                    chart_leaks.setdefault(rel, []).append(marker)
 
     ok = True
 
@@ -93,6 +106,15 @@ def main():
             print(f"  {rel}: {', '.join(assets)}")
     else:
         print("GUARD OK: no page references " + " or ".join(RETIRED))
+
+    if chart_leaks:
+        ok = False
+        print("GUARD FATAL: chart library leaked onto pages that should stay lean:")
+        for rel, markers in chart_leaks.items():
+            print(f"  {rel}: {', '.join(markers)}")
+        print(f"  chart is allowed only on: {', '.join(sorted(CHART_ALLOWED))}")
+    else:
+        print(f"GUARD OK: chart library confined to {len(CHART_ALLOWED)} allowed pages")
 
     return 0 if ok else 1
 

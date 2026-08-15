@@ -47,6 +47,25 @@
       <!--LOOP:provinces--><a class="row" href="/fuel-prices/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
     </div>
 
+    <div class="chart-card" id="nmdi-chart-card">
+      <div class="chart-head">
+        <h3>National diesel &mdash; ten-year trend</h3>
+        <span class="sub" id="nmdi-readout">{{chart_range_label}}</span>
+      </div>
+      <div class="ranges" id="nmdi-ranges">
+        <button data-years="1" type="button">1Y</button>
+        <button data-years="5" type="button">5Y</button>
+        <button data-years="0" type="button" class="on">All</button>
+      </div>
+      <div style="position:relative">
+        <svg class="chart-svg" id="nmdi-chart"></svg>
+        <div class="tip" id="nmdi-tip"></div>
+      </div>
+      <div class="hint">Scroll or pinch to zoom &middot; drag to pan &middot; hover for the weekly print</div>
+      <div class="foot-note">Northern Mile Diesel Index, weekly. Source: NRCan.</div>
+    </div>
+    <script id="nmdi-data" type="application/json">{{chart_data_json}}</script>
+
   <div class="cite">
     <div class="cl">Citing this figure</div>
     <q id="citation">Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L national average, ten provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
@@ -115,5 +134,7 @@
 </div></footer>
 
 <script src="/assets/nm.js?v={{build_version}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="/assets/nmdi-chart.js?v={{build_version}}"></script>
 </body>
 </html>

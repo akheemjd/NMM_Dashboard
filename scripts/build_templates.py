@@ -145,7 +145,7 @@ def build_all():
 
     # Copy static assets (docs/assets/ is what the /assets/*.css|js paths resolve to)
     os.makedirs(os.path.join(DOCS, "assets"), exist_ok=True)
-    for f in ["nm.css", "nm.js"]:
+    for f in ["nm.css", "nm.js", "nmdi-chart.js"]:
         src = os.path.join(ASSETS, f) if os.path.exists(os.path.join(ASSETS, f)) else os.path.join(DOCS, "assets", f)
         dst = os.path.join(DOCS, "assets", f)
         if os.path.exists(src) and src != dst:
@@ -164,6 +164,25 @@ def build_all():
         "fuel-cost-calculator": {**load_json("fx.norm"), **load_json("fuel.norm")},
         "methodology": load_json("home.norm"),
     }
+
+    # Chart data for home + fuel. chart_data_json is a JSON string inserted raw
+    # (like incidents_json) into the <script type="application/json"> tag; the
+    # chart enhances the data, it is not the only copy.
+    chart = load_json("chart_data")
+    if chart:
+        chart_data_json = json.dumps(chart, separators=(",", ":"))
+        chart_meta = chart.get("meta", {})
+        if chart_meta.get("first") and chart_meta.get("last"):
+            chart_range_label = (f"{chart_meta['min']}\u2013{chart_meta['max']}\u00a2/L \u00b7 "
+                                 f"{chart_meta['first'][:4]}\u2013{chart_meta['last'][:4]}")
+        else:
+            chart_range_label = ""
+    else:
+        chart_data_json = '{"diesel_national":[]}'
+        chart_range_label = ""
+    chart_tokens = {"chart_data_json": chart_data_json, "chart_range_label": chart_range_label}
+    page_data["index"] = {**page_data["index"], **chart_tokens}
+    page_data["fuel-prices"] = {**page_data["fuel-prices"], **chart_tokens}
 
     built = []
     for name in page_data:

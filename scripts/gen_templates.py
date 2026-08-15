@@ -137,6 +137,39 @@ def rail():
 """
 
 
+def chart_block():
+    """Interactive diesel chart. Data embedded as JSON so the figures survive if
+    the script fails — the chart enhances the data, it is not the only copy.
+    Mounted after the rail. Only home and fuel include this (and the D3 loader);
+    the coherence guard enforces that D3 appears nowhere else."""
+    return """
+    <div class="chart-card" id="nmdi-chart-card">
+      <div class="chart-head">
+        <h3>National diesel &mdash; ten-year trend</h3>
+        <span class="sub" id="nmdi-readout">{{chart_range_label}}</span>
+      </div>
+      <div class="ranges" id="nmdi-ranges">
+        <button data-years="1" type="button">1Y</button>
+        <button data-years="5" type="button">5Y</button>
+        <button data-years="0" type="button" class="on">All</button>
+      </div>
+      <div style="position:relative">
+        <svg class="chart-svg" id="nmdi-chart"></svg>
+        <div class="tip" id="nmdi-tip"></div>
+      </div>
+      <div class="hint">Scroll or pinch to zoom &middot; drag to pan &middot; hover for the weekly print</div>
+      <div class="foot-note">Northern Mile Diesel Index, weekly. Source: NRCan.</div>
+    </div>
+    <script id="nmdi-data" type="application/json">{{chart_data_json}}</script>
+"""
+
+
+# D3 loader + chart init. Included ONLY on pages that call it (home, fuel), via
+# the extra_script slot in foot(). Loads D3 from CDN.
+CHART_SCRIPT = ('<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>\n'
+                '<script src="/assets/nmdi-chart.js?v={{build_version}}"></script>\n')
+
+
 def subscribe(heading, body):
     return (f'\n  <section class="sub" aria-labelledby="brief">\n'
             f'    <div class="e">The Northern Mile Brief</div>\n'
@@ -181,7 +214,7 @@ write("index",
     <h1>Canadian diesel prices today</h1>
     <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
     <div class="meta"><span>Ten provinces</span><span>NRCan survey print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
-''' + rail() + cite() + '''
+''' + rail() + chart_block() + cite() + '''
     <div class="stats">
       <a class="stat" href="/fuel-prices/"><div class="l">Cheapest</div><div class="v down">{{fuel.low}}</div><div class="s">{{fuel.low_code}} · ¢/L</div></a>
       <a class="stat" href="/fuel-prices/"><div class="l">Dearest</div><div class="v up">{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></a>
@@ -219,7 +252,7 @@ write("index",
   </section>
 ''' + subscribe("One email, Wednesday mornings",
    "What moved in Canadian diesel, at the border, and in freight demand, with every figure dated and linked back to this dashboard. Written for people who move freight, not for people who write about it.")
- + foot())
+ + foot(CHART_SCRIPT))
 
 # ═══ Fuel prices ══════════════════════════════════════════════════════
 fuel_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Diesel prices by province","/fuel-prices/") + ','
@@ -238,7 +271,7 @@ write("fuel-prices",
     <h1>Diesel prices by province</h1>
     <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L national</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
     <div class="meta"><span>Survey print <b>{{fuel.print_date}}</b></span><span>30-day <b>{{fuel.change_30d}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
-''' + rail() + cite() + '''
+''' + rail() + chart_block() + cite() + '''
     <div class="stats">
       <div class="stat"><div class="l">Cheapest</div><div class="v down">{{fuel.low}}</div><div class="s">{{fuel.low_code}} · ¢/L</div></div>
       <div class="stat"><div class="l">Dearest</div><div class="v up">{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></div>
@@ -278,7 +311,7 @@ write("fuel-prices",
       </div>
     </div>
   </section>
-''' + foot())
+''' + foot(CHART_SCRIPT))
 
 # ═══ Calculator ═══════════════════════════════════════════════════════
 calc_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Fuel cost calculator","/fuel-cost-calculator/") + ','
