@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-289075",
+      "id": "ON-289095",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at ETOBICOKE CREEK, Mississauga. 2 right lanes closed.",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 2 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "2 right lanes closed",
-      "lat": 43.6626515,
-      "lng": -79.6071509,
-      "start": 1786824660,
+      "lat": 43.73616852,
+      "lng": -79.5264349,
+      "start": 1786829040,
       "end": null,
-      "updated": 1786827180
+      "updated": 1786829040
+    },
+    {
+      "id": "ON-289092",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound ON-RAMP at STEELES AVE, Brampton. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.685502,
+      "lng": -79.711813,
+      "start": 1786828200,
+      "end": null,
+      "updated": 1786828200
     },
     {
       "id": "ON-289086",
@@ -788,26 +804,10 @@
       "start": 1787140800,
       "end": 1787263200,
       "updated": 1786674420
-    },
-    {
-      "id": "ON-288459",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Continuous Engineering Investigation on HWY 11 Northbound  between HWY 654/LK NOSBONSING RD, Callander and HWY 654/LK NOSBONSING RD, Callander, Callander. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 46.196404,
-      "lng": -79.3554,
-      "start": 1787054400,
-      "end": 1787176800,
-      "updated": 1786673700
     }
   ],
   "total": 50,
-  "updated": "2026-08-15T20:58:42.486686+00:00",
+  "updated": "2026-08-15T21:29:49.917541+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
