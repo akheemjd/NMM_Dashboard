@@ -43,8 +43,8 @@
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
-  <div id="map" class="incmap"></div>
-  <div class="panel-list" id="incList"></div>
+  <div id="map" class="incmap" hidden></div>
+  <div class="panel-list" id="incList" hidden></div>
 
   <!--OPTIONAL:sponsor_incidents-->
   <aside class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_incidents.name}}</span><span class="l">{{sponsor_incidents.line}}</span><a class="c" href="{{sponsor_incidents.url}}">Learn more →</a></aside>
@@ -52,8 +52,8 @@
 
   <section class="sec">
     <div class="lead"><h2>Scheduled roadwork</h2><p>Planned lane reductions on monitored corridors.</p></div>
-    <div id="rwmap" class="incmap"></div>
-    <div class="panel-list" id="rwList"></div>
+    <div id="rwmap" class="incmap" hidden></div>
+    <div class="panel-list" id="rwList" hidden></div>
   </section>
 
   <section class="sub" aria-labelledby="brief">
@@ -80,6 +80,8 @@
   var mapEl = document.getElementById('map');
   var list = document.getElementById('incList');
   if(!mapEl) return;
+  mapEl.hidden = false;
+  if(list) list.hidden = false;
 
   var CLOSED = '#B3261E';   // red — closed, matches nm.css --up
   var HEAVY  = '#C8891A';   // amber — heavy, matches nm.css --amber
@@ -162,6 +164,7 @@
   var rwMapEl = document.getElementById('rwmap');
   var rwList = document.getElementById('rwList');
   if(!rwMapEl) return;
+  if(rwList) rwList.hidden = false;
 
   var RW_COLOR = '#1C6FE0';   // blue — planned roadwork, matches nm.css --focus
 
@@ -172,6 +175,7 @@
 
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
 
+  rwMapEl.hidden = false;
   var rwMap = L.map('rwmap',{scrollWheelZoom:true}).setView([56.13,-106.35],4);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
     attribution:'&copy; OpenStreetMap contributors', maxZoom:19
