@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-289007",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at ISLINGTON AVE, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.70960085,
+      "lng": -79.55247824,
+      "start": 1786809660,
+      "end": null,
+      "updated": 1786809660
+    },
+    {
       "id": "drivebc.ca/RIDE-101393",
       "province": "BC",
       "highway": {
@@ -20,22 +36,6 @@
       "start": "2026-08-15T00:21:54-07:00",
       "end": "",
       "updated": "2026-08-15T05:38:14-07:00"
-    },
-    {
-      "id": "ON-288953",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 7 Both Directions  between DRUMMOND CONCESSION RD 7, Drummond Centre and FERGUSON FALLS RD, Boyds. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.99615,
-      "lng": -76.22882,
-      "start": 1786787460,
-      "end": null,
-      "updated": 1786793580
     },
     {
       "id": "ON-288891",
@@ -827,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-15T15:54:12.171129+00:00",
+  "updated": "2026-08-15T16:18:18.476365+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
