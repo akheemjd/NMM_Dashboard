@@ -52,16 +52,28 @@
         <h3>National diesel &mdash; ten-year trend</h3>
         <span class="sub" id="nmdi-readout">{{chart_range_label}}</span>
       </div>
+      <div class="chart-stats">
+        <div class="cstat"><span class="l">Today</span><b>{{chart_latest}}</b><span class="s">{{chart_latest_band}}</span></div>
+        <div class="cstat"><span class="l">10y average</span><b>{{chart_avg}}</b><span class="s"></span></div>
+        <div class="cstat"><span class="l">10y low</span><b>{{chart_low}}</b><span class="s">{{chart_low_date}}</span></div>
+        <div class="cstat"><span class="l">10y high</span><b>{{chart_high}}</b><span class="s">{{chart_high_date}}</span></div>
+      </div>
       <div class="ranges" id="nmdi-ranges">
         <button data-years="1" type="button">1Y</button>
         <button data-years="5" type="button">5Y</button>
         <button data-years="0" type="button" class="on">All</button>
       </div>
+      <div class="story" id="nmdi-story">
+        <span class="sl">Why the spikes?</span>
+        <button data-focus="low" type="button">2020 crash</button>
+        <button data-focus="high" type="button">2022 spike</button>
+        <button data-focus="today" type="button">Today</button>
+      </div>
       <div style="position:relative">
         <svg class="chart-svg" id="nmdi-chart"></svg>
         <div class="tip" id="nmdi-tip"></div>
       </div>
-      <div class="hint">Scroll or pinch to zoom &middot; drag to pan &middot; hover for the weekly print</div>
+      <div class="hint">Scroll or pinch to zoom &middot; hover for the weekly print</div>
       <div class="foot-note">Northern Mile Diesel Index, weekly. Source: NRCan.</div>
     </div>
     <script id="nmdi-data" type="application/json">{{chart_data_json}}</script>

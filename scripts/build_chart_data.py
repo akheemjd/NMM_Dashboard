@@ -45,6 +45,23 @@ def main():
 
     national.sort(key=lambda p: p["d"])
 
+    meta_extra = {}
+    if national:
+        from datetime import datetime as _dt
+        vals = [p["v"] for p in national]
+        lo = min(national, key=lambda p: p["v"])
+        hi = max(national, key=lambda p: p["v"])
+        latest = national[-1]
+        latest_pct = round(sum(1 for v in vals if v <= latest["v"]) / len(vals) * 100)
+        meta_extra = {
+            "avg": round(sum(vals) / len(vals), 1),
+            "low_date": _dt.strptime(lo["d"], "%Y-%m-%d").strftime("%b %Y"),
+            "high_date": _dt.strptime(hi["d"], "%Y-%m-%d").strftime("%b %Y"),
+            "latest": latest["v"],
+            "latest_pct": latest_pct,
+            "latest_band": ("near record high" if latest_pct >= 90 else "near record low" if latest_pct <= 10 else ""),
+        }
+
     payload = {
         "diesel_national": national,
         # metadata the chart caption can use without recomputing
@@ -54,6 +71,7 @@ def main():
             "last": national[-1]["d"] if national else None,
             "min": min((p["v"] for p in national), default=None),
             "max": max((p["v"] for p in national), default=None),
+            **meta_extra,
         },
     }
 

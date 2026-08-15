@@ -180,7 +180,22 @@ def build_all():
     else:
         chart_data_json = '{"diesel_national":[]}'
         chart_range_label = ""
-    chart_tokens = {"chart_data_json": chart_data_json, "chart_range_label": chart_range_label}
+        chart_meta = {}
+
+    def _cent(v):
+        return (f"{v}\u00a2" if isinstance(v, (int, float)) else "")
+
+    chart_tokens = {
+        "chart_data_json": chart_data_json,
+        "chart_range_label": chart_range_label,
+        "chart_latest": _cent(chart_meta.get("latest")),
+        "chart_latest_band": chart_meta.get("latest_band") or "",
+        "chart_avg": _cent(chart_meta.get("avg")),
+        "chart_low": _cent(chart_meta.get("min")),
+        "chart_low_date": chart_meta.get("low_date") or "",
+        "chart_high": _cent(chart_meta.get("max")),
+        "chart_high_date": chart_meta.get("high_date") or "",
+    }
     page_data["index"] = {**page_data["index"], **chart_tokens}
     page_data["fuel-prices"] = {**page_data["fuel-prices"], **chart_tokens}
 
