@@ -295,3 +295,52 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 .chart-card .hint { font-family: var(--data); font-size: .7rem; color: var(--muted); margin: 6px 2px 0; text-align: right; }
 .chart-card .foot-note { font-family: var(--data); font-size: .7rem; color: var(--muted); margin-top: 8px; }
 @media (prefers-reduced-motion: reduce) { .chart-svg .line { transition: none; } }
+
+/* ── Overflow & alignment safety ─────────────────────────────────────
+   Long unbreakable strings (URLs in citations, external links, incident
+   sources) must wrap inside their container rather than push past its
+   padding. And flex/grid children default to min-width:auto, which lets a
+   wide child stretch the parent past the viewport — reset it so tracks and
+   values stay inside their cells. */
+
+/* Long strings wrap instead of overflowing. */
+.cite q,
+.cite .cl,
+.links-list a,
+.rows .r .k,
+.rows .r .k small,
+.inc .h,
+.inc .m,
+.inc-detail,
+.foot-note,
+.meta,
+.mark span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* The citation URL specifically: keep it on the line but let it break. */
+.cite q { hyphens: none; }
+
+/* Flex/grid children can shrink below content width (min-width:auto trap). */
+.two > *,
+.rail .row,
+.rail .row .track,
+.rows .r,
+.stat,
+.calc > *,
+.chart-card {
+  min-width: 0;
+}
+
+/* Values in rows should never wrap awkwardly or overflow their cell; they
+   stay right-aligned and shrink the label instead. */
+.rows .r { gap: 12px; }
+.rows .r .v { flex-shrink: 0; }
+
+/* Rail value column holds its width; the track flexes. */
+.rail .row .val { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+
+/* Nothing horizontally overflows the page. */
+html, body { overflow-x: hidden; }
+main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%); }
