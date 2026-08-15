@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-15 21:29 UTC",
-  "updated_iso": "2026-08-15T21:29:47+00:00",
-  "build_version": "1786829387",
+  "updated_at": "2026-08-15 21:45 UTC",
+  "updated_iso": "2026-08-15T21:45:00+00:00",
+  "build_version": "1786830300",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "22 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
     "status_line": "HWY 400, HWY 410, QEW",
     "incidents": [
       {
         "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 2 right lanes\u2026",
+        "what": "Collision on HWY 400 Southbound RAMP at 401 WEST COLL, Toronto. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Northbound ON-RAMP at STEELES AVE, Brampton. Right\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 2 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "22 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "14 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "9 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -296,11 +296,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 PDT"
+      "captured_at": "14:20 PDT"
     },
     {
       "name": "Emerson-Pembina",

@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-289098",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound RAMP at 401 WEST COLL, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.7172215,
+      "lng": -79.52042989,
+      "start": 1786829700,
+      "end": null,
+      "updated": 1786829700
+    },
+    {
+      "id": "ON-289086",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at HWY 10/HURONTARIO, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.56955145,
+      "lng": -79.59864174,
+      "start": 1786826940,
+      "end": null,
+      "updated": 1786829520
+    },
+    {
       "id": "ON-289095",
       "province": "ON",
       "highway": "HWY 400",
@@ -31,22 +63,6 @@
       "start": 1786828200,
       "end": null,
       "updated": 1786828200
-    },
-    {
-      "id": "ON-289086",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at HWY 10/HURONTARIO, Mississauga. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.56955145,
-      "lng": -79.59864174,
-      "start": 1786826940,
-      "end": null,
-      "updated": 1786826940
     },
     {
       "id": "drivebc.ca/DBC-93781",
@@ -788,26 +804,10 @@
       "start": 1787227200,
       "end": 1787349600,
       "updated": 1786675380
-    },
-    {
-      "id": "ON-288463",
-      "province": "ON",
-      "highway": "HWY 64",
-      "direction": "Southbound",
-      "description": "Continuous Engineering Investigation on HWY 64 Southbound  between RACETTE ST(W) - GINGRAS AVE(E) and RACETTE ST(W) - GINGRAS AVE(E), Verner. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.40878,
-      "lng": -80.12305,
-      "start": 1787140800,
-      "end": 1787263200,
-      "updated": 1786674420
     }
   ],
   "total": 50,
-  "updated": "2026-08-15T21:29:49.917541+00:00",
+  "updated": "2026-08-15T21:44:56.985829+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
