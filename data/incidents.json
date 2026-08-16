@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-289211",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.59655811,
-      "lng": -79.56909452,
-      "start": 1786872780,
-      "end": null,
-      "updated": 1786872780
-    },
-    {
       "id": "drivebc.ca/DBC-93781",
       "province": "BC",
       "highway": {
@@ -804,10 +788,26 @@
       "start": 1786752000,
       "end": 1786960800,
       "updated": 1786673280
+    },
+    {
+      "id": "ON-288450",
+      "province": "ON",
+      "highway": "HWY 654",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 654 Northbound  between CHAPMAN'S LANDING RD(N) and CHAPMAN'S LANDING RD(N), Nipissing. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.097385,
+      "lng": -79.51499,
+      "start": 1786968000,
+      "end": 1787090400,
+      "updated": 1786671780
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T10:09:48.875086+00:00",
+  "updated": "2026-08-16T10:40:56.955599+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
