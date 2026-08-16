@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16 10:41 UTC",
-  "updated_iso": "2026-08-16T10:41:00+00:00",
-  "build_version": "1786876860",
+  "updated_at": "2026-08-16 11:12 UTC",
+  "updated_iso": "2026-08-16T11:12:09+00:00",
+  "build_version": "1786878729",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -217,11 +217,26 @@
     "low_52w": "\u2014"
   },
   "incidents": {
-    "none": true,
-    "active_count": 0,
-    "gauge_class": "good",
-    "status_line": "all corridors clear",
-    "incidents": []
+    "none": false,
+    "active_count": 2,
+    "gauge_class": "warn",
+    "status_line": "HWY 400, HWY 613",
+    "incidents": [
+      {
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. Left shoulder and\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 613",
+        "what": "Debris on HWY 613 Northbound  at COMMUNITY HALL RD (W) - DANCE TWP, Emo. Lane\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      }
+    ]
   },
   "border_rows": [
     {
@@ -245,11 +260,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -258,7 +273,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -285,7 +300,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:20 PDT"
+      "captured_at": "04:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
