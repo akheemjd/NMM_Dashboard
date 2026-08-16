@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16 00:04 UTC",
-  "updated_iso": "2026-08-16T00:04:46+00:00",
-  "build_version": "1786838686",
+  "updated_at": "2026-08-16 00:35 UTC",
+  "updated_iso": "2026-08-16T00:35:52+00:00",
+  "build_version": "1786840552",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -218,13 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 1,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 405",
+    "status_line": "HWY 401, HWY 7/8, HWY 427, HWY 405",
     "incidents": [
       {
-        "road": "HWY 405",
-        "what": "Disabled Vehicle on HWY 405 Eastbound  at STANLEY AVE, Niagara-On-The-Lake.\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto.\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 7/8",
+        "what": "Collision on HWY 7/8 Westbound  at Clinton Walker Road / County Road 4, New\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -253,20 +260,20 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "13 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -275,7 +282,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:39 EDT"
+      "captured_at": "20:11 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -284,16 +291,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 MDT"
+      "captured_at": "18:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT"
+      "captured_at": "17:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
