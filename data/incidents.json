@@ -1,38 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-289124",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound EXPRESS at HIGHWAY 7, Vaughan. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7915099,
-      "lng": -79.53927903,
-      "start": 1786835340,
-      "end": null,
-      "updated": 1786835340
-    },
-    {
-      "id": "ON-289123",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at ERIN MILLS PKWY, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.5541298,
-      "lng": -79.69624357,
-      "start": 1786835160,
-      "end": null,
-      "updated": 1786835160
-    },
-    {
       "id": "ON-289115",
       "province": "ON",
       "highway": "HWY 405",
@@ -804,10 +772,42 @@
       "start": 1787140800,
       "end": 1787263200,
       "updated": 1786674420
+    },
+    {
+      "id": "ON-288459",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Continuous Engineering Investigation on HWY 11 Northbound  between HWY 654/LK NOSBONSING RD, Callander and HWY 654/LK NOSBONSING RD, Callander, Callander. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 46.196404,
+      "lng": -79.3554,
+      "start": 1787054400,
+      "end": 1787176800,
+      "updated": 1786673700
+    },
+    {
+      "id": "ON-288456",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 3 Eastbound  between Outer Drive and Outer Drive, Windsor. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.23193,
+      "lng": -82.983536,
+      "start": 1786752000,
+      "end": 1786960800,
+      "updated": 1786673280
     }
   ],
   "total": 50,
-  "updated": "2026-08-15T23:33:30.056159+00:00",
+  "updated": "2026-08-16T00:04:42.913299+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
