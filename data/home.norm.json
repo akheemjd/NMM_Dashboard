@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16 05:29 UTC",
-  "updated_iso": "2026-08-16T05:29:30+00:00",
-  "build_version": "1786858170",
+  "updated_at": "2026-08-16 06:00 UTC",
+  "updated_iso": "2026-08-16T06:00:36+00:00",
+  "build_version": "1786860036",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -217,11 +217,19 @@
     "low_52w": "\u2014"
   },
   "incidents": {
-    "none": true,
-    "active_count": 0,
-    "gauge_class": "good",
-    "status_line": "all corridors clear",
-    "incidents": []
+    "none": false,
+    "active_count": 1,
+    "gauge_class": "warn",
+    "status_line": "QEW",
+    "incidents": [
+      {
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at BURLINGTON SKYWAY, Burlington. 1\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      }
+    ]
   },
   "border_rows": [
     {
@@ -245,11 +253,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "9 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:00 EDT"
+      "captured_at": "01:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -258,7 +266,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:00 EDT"
+      "captured_at": "01:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -281,11 +289,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 PDT"
+      "captured_at": "22:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
