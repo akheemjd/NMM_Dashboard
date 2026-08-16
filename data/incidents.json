@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-289205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound RAMP at Wallbridge Loyalist Rd (IC 538)/CR 1, Belleville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.1797622,
+      "lng": -77.4477632,
+      "start": 1786866420,
+      "end": null,
+      "updated": 1786866420
+    },
+    {
       "id": "ON-289203",
       "province": "ON",
       "highway": "HWY 401",
@@ -788,26 +804,10 @@
       "start": 1787140800,
       "end": 1787263200,
       "updated": 1786674420
-    },
-    {
-      "id": "ON-288459",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Continuous Engineering Investigation on HWY 11 Northbound  between HWY 654/LK NOSBONSING RD, Callander and HWY 654/LK NOSBONSING RD, Callander, Callander. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 46.196404,
-      "lng": -79.3554,
-      "start": 1787054400,
-      "end": 1787176800,
-      "updated": 1786673700
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T07:34:02.944756+00:00",
+  "updated": "2026-08-16T08:05:11.039793+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
