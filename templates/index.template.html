@@ -47,10 +47,9 @@
       <!--LOOP:provinces--><a class="row" href="/fuel-prices/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
     </div>
 
-    <div class="chart-card" id="nmdi-chart-card">
+    <div class="chart-card">
       <div class="chart-head">
-        <h3>National diesel &mdash; ten-year trend</h3>
-        <span class="sub" id="nmdi-readout">{{chart_range_label}}</span>
+        <h3>National diesel &mdash; where today sits</h3>
       </div>
       <div class="chart-stats">
         <div class="cstat"><span class="l">Today</span><b>{{chart_latest}}</b><span class="s">{{chart_latest_band}}</span></div>
@@ -58,21 +57,7 @@
         <div class="cstat"><span class="l">10y low</span><b>{{chart_low}}</b><span class="s">{{chart_low_date}}</span></div>
         <div class="cstat"><span class="l">10y high</span><b>{{chart_high}}</b><span class="s">{{chart_high_date}}</span></div>
       </div>
-      <div class="story" id="nmdi-story">
-        <span class="sl">Why the spikes?</span>
-        <button data-focus="low" type="button">2020 crash</button>
-        <button data-focus="high" type="button">2022 spike</button>
-        <button data-focus="today" type="button">Today</button>
-      </div>
-      <div style="position:relative">
-        <svg class="chart-svg" id="nmdi-chart"></svg>
-        <div class="tip" id="nmdi-tip"></div>
-      </div>
-      <div class="hint">Scroll or pinch to zoom &middot; hover for the weekly print</div>
-      <div class="foot-note">Northern Mile Diesel Index, weekly. Source: NRCan.</div>
     </div>
-    <script id="nmdi-data" type="application/json">{{chart_data_json}}</script>
-
   <div class="cite">
     <div class="cl">Citing this figure</div>
     <q id="citation">Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L national average, ten provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
@@ -138,7 +123,5 @@
 </div></footer>
 
 <script src="/assets/nm.js?v={{build_version}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="/assets/nmdi-chart.js?v={{build_version}}"></script>
 </body>
 </html>

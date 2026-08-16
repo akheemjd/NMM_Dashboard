@@ -24,7 +24,7 @@ RETIRED = ["styles.css", "app.js"]
 # The chart library and its script may appear ONLY on these pages. Anywhere else
 # means the chart leaked onto a page that should stay lean — same class of drift
 # as an old-asset reference, caught the same way.
-CHART_ALLOWED = {"/index.html", "/fuel-prices/index.html"}
+CHART_ALLOWED = {"/fuel-prices/index.html"}
 CHART_MARKERS = ["d3.min.js", "nmdi-chart.js"]
 
 

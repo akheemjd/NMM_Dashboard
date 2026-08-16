@@ -137,23 +137,40 @@ def rail():
 """
 
 
-def chart_block():
-    """Interactive diesel chart. Data embedded as JSON so the figures survive if
-    the script fails — the chart enhances the data, it is not the only copy.
-    Mounted after the rail. Only home and fuel include this (and the D3 loader);
-    the coherence guard enforces that D3 appears nowhere else."""
+def _chart_stats():
+    """Four-number summary strip. Server-rendered, no JS, shared byte-for-byte
+    by the homepage and the fuel page so the numbers always match."""
     return """
-    <div class="chart-card" id="nmdi-chart-card">
-      <div class="chart-head">
-        <h3>National diesel &mdash; ten-year trend</h3>
-        <span class="sub" id="nmdi-readout">{{chart_range_label}}</span>
-      </div>
       <div class="chart-stats">
         <div class="cstat"><span class="l">Today</span><b>{{chart_latest}}</b><span class="s">{{chart_latest_band}}</span></div>
         <div class="cstat"><span class="l">10y average</span><b>{{chart_avg}}</b><span class="s"></span></div>
         <div class="cstat"><span class="l">10y low</span><b>{{chart_low}}</b><span class="s">{{chart_low_date}}</span></div>
         <div class="cstat"><span class="l">10y high</span><b>{{chart_high}}</b><span class="s">{{chart_high_date}}</span></div>
-      </div>
+      </div>"""
+
+
+def chart_summary():
+    """Summary strip only — the homepage carries the ten-year context numbers
+    without the interactive chart."""
+    return """
+    <div class="chart-card">
+      <div class="chart-head">
+        <h3>National diesel &mdash; where today sits</h3>
+      </div>""" + _chart_stats() + """
+    </div>"""
+
+
+def chart_block():
+    """Interactive diesel chart. Data embedded as JSON so the figures survive if
+    the script fails — the chart enhances the data, it is not the only copy.
+    Mounted after the rail on the fuel page only; the coherence guard enforces
+    that the D3 loader appears nowhere else."""
+    return """
+    <div class="chart-card" id="nmdi-chart-card">
+      <div class="chart-head">
+        <h3>National diesel &mdash; ten-year trend</h3>
+        <span class="sub" id="nmdi-readout">{{chart_range_label}}</span>
+      </div>""" + _chart_stats() + """
       <div class="story" id="nmdi-story">
         <span class="sl">Why the spikes?</span>
         <button data-focus="low" type="button">2020 crash</button>
@@ -221,7 +238,7 @@ write("index",
     <h1>Canadian diesel prices today</h1>
     <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
     <div class="meta"><span>Ten provinces</span><span>NRCan survey print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
-''' + rail() + chart_block() + cite() + '''
+''' + rail() + chart_summary() + cite() + '''
     <div class="stats">
       <a class="stat" href="/fuel-prices/"><div class="l">Cheapest</div><div class="v down">{{fuel.low}}</div><div class="s">{{fuel.low_code}} · ¢/L</div></a>
       <a class="stat" href="/fuel-prices/"><div class="l">Dearest</div><div class="v up">{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></a>
@@ -259,7 +276,7 @@ write("index",
   </section>
 ''' + subscribe("One email, Wednesday mornings",
    "What moved in Canadian diesel, at the border, and in freight demand, with every figure dated and linked back to this dashboard. Written for people who move freight, not for people who write about it.")
- + foot(CHART_SCRIPT))
+ + foot())
 
 # ═══ Fuel prices ══════════════════════════════════════════════════════
 fuel_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Diesel prices by province","/fuel-prices/") + ','
