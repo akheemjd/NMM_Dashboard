@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-289208",
+      "id": "ON-289211",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Police Investigation on HWY 400 Southbound  at TESTON ROAD, Vaughan. Right lane and right shoulder closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.86515107,
-      "lng": -79.55302518,
-      "start": 1786870500,
+      "lanes": "right lane closed",
+      "lat": 43.59655811,
+      "lng": -79.56909452,
+      "start": 1786872780,
       "end": null,
-      "updated": 1786870500
-    },
-    {
-      "id": "ON-289205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound RAMP at Wallbridge Loyalist Rd (IC 538)/CR 1, Belleville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.1797622,
-      "lng": -77.4477632,
-      "start": 1786866420,
-      "end": null,
-      "updated": 1786866420
+      "updated": 1786872780
     },
     {
       "id": "drivebc.ca/DBC-93781",
@@ -804,10 +788,26 @@
       "start": 1787054400,
       "end": 1787176800,
       "updated": 1786673700
+    },
+    {
+      "id": "ON-288456",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 3 Eastbound  between Outer Drive and Outer Drive, Windsor. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.23193,
+      "lng": -82.983536,
+      "start": 1786752000,
+      "end": 1786960800,
+      "updated": 1786673280
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T09:07:29.119770+00:00",
+  "updated": "2026-08-16T09:38:39.230934+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
