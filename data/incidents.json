@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-289203",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at WARDEN AVE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.77043805,
+      "lng": -79.3042287,
+      "start": 1786865340,
+      "end": null,
+      "updated": 1786865340
+    },
+    {
       "id": "ON-289200",
       "province": "ON",
       "highway": "QEW",
@@ -15,22 +31,6 @@
       "start": 1786863300,
       "end": null,
       "updated": 1786863300
-    },
-    {
-      "id": "ON-289198",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at HWY 427, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.6683374,
-      "lng": -79.58963249,
-      "start": 1786862460,
-      "end": null,
-      "updated": 1786862460
     },
     {
       "id": "drivebc.ca/DBC-93781",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T07:02:52.876929+00:00",
+  "updated": "2026-08-16T07:34:02.944756+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
