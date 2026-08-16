@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-289208",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Police Investigation on HWY 400 Southbound  at TESTON ROAD, Vaughan. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.86515107,
+      "lng": -79.55302518,
+      "start": 1786870500,
+      "end": null,
+      "updated": 1786870500
+    },
+    {
       "id": "ON-289205",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +31,6 @@
       "start": 1786866420,
       "end": null,
       "updated": 1786866420
-    },
-    {
-      "id": "ON-289203",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at WARDEN AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.77043805,
-      "lng": -79.3042287,
-      "start": 1786865340,
-      "end": null,
-      "updated": 1786865340
     },
     {
       "id": "drivebc.ca/DBC-93781",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T08:36:20.898906+00:00",
+  "updated": "2026-08-16T09:07:29.119770+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
