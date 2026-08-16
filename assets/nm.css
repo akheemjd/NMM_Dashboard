@@ -275,6 +275,26 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 .ft .bottom a:hover { color: var(--signal); }
 .ft .bottom > * + *::before { content: "\00B7"; margin-right: 8px; color: var(--muted); }
 
+/* ── Data visuals (server-rendered SVG) ───────────────────────────── */
+.viz-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin: 18px 0; }
+.viz-card { background: var(--raise); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; }
+.viz-title { font-family: var(--display); font-weight: 600; font-size: 1rem; margin: 0 0 2px; color: var(--ink); }
+.viz-sub { font-family: var(--data); font-size: .75rem; color: var(--muted); margin: 0 0 14px; }
+.viz { width: 100%; height: auto; display: block; }
+.viz.viz-donut { max-width: 170px; margin: 0 auto; }
+.viz-bar.down { fill: var(--down); }
+.viz-bar.up { fill: var(--up); }
+.viz-col { fill: var(--amber); }
+.viz-ref { stroke: var(--amber); stroke-width: 1; stroke-dasharray: 4 3; }
+.viz-axis { stroke: var(--line); stroke-width: 1; }
+.viz-lab { fill: var(--muted); font-family: var(--data); font-size: 11px; }
+.viz-val { fill: var(--ink); font-family: var(--data); font-size: 12px; }
+.viz-reflab { fill: var(--amber); font-family: var(--data); font-size: 10px; }
+.viz-donut-a { stroke: var(--amber); }
+.viz-donut-b { stroke: var(--focus); }
+.viz-donut-num { fill: var(--ink); font-family: var(--display); font-weight: 600; font-size: 28px; }
+.viz-donut-lab { fill: var(--muted); font-family: var(--data); font-size: 11px; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }

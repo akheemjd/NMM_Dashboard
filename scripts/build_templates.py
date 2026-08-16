@@ -3,6 +3,8 @@
 import json, os, re, shutil
 from datetime import datetime
 
+import charts
+
 BASE = os.path.expanduser("~/northern-mile-dashboard")
 TMPL = os.path.join(BASE, "templates")
 DATA = os.path.join(BASE, "data")
@@ -198,6 +200,19 @@ def build_all():
     }
     page_data["index"] = {**page_data["index"], **chart_tokens}
     page_data["fuel-prices"] = {**page_data["fuel-prices"], **chart_tokens}
+
+    # Server-rendered SVG visuals (no JS). Colors come from CSS classes.
+    fuel_data = page_data["fuel-prices"]
+    provs = fuel_data.get("provinces", [])
+    national = (fuel_data.get("fuel") or {}).get("national_diesel")
+    fuel_data["diesel_spread_svg"] = charts.diesel_spread_svg(provs, national)
+    fuel_data["diesel_change_svg"] = charts.diesel_change_svg(provs)
+
+    inc_data = page_data["road-incidents"]
+    incidents = json.loads(inc_data.get("incidents_json") or "[]")
+    roadwork = json.loads(inc_data.get("roadwork_json") or "[]")
+    inc_data["corridor_svg"] = charts.corridor_svg(incidents)
+    inc_data["disruption_donut_svg"] = charts.disruption_donut_svg(len(incidents), len(roadwork))
 
     built = []
     for name in page_data:

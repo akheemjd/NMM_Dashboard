@@ -46,6 +46,22 @@
   <div id="map" class="incmap" hidden></div>
   <div class="panel-list" id="incList" hidden></div>
 
+  <section class="sec">
+    <div class="lead"><h2>Today on the corridors</h2><p>Where incidents sit, and how much of the disruption is planned versus unplanned.</p></div>
+    <div class="viz-grid">
+      <div class="viz-card">
+        <h3 class="viz-title">Active vs scheduled</h3>
+        <p class="viz-sub">Unplanned incidents (amber) vs planned roadwork (blue)</p>
+        {{disruption_donut_svg}}
+      </div>
+      <div class="viz-card">
+        <h3 class="viz-title">Incidents by corridor</h3>
+        <p class="viz-sub">Busiest highways right now</p>
+        {{corridor_svg}}
+      </div>
+    </div>
+  </section>
+
   <!--OPTIONAL:sponsor_incidents-->
   <aside class="sp"><span class="t">Presented by</span><span class="n">{{sponsor_incidents.name}}</span><span class="l">{{sponsor_incidents.line}}</span><a class="c" href="{{sponsor_incidents.url}}">Learn more →</a></aside>
   <!--/OPTIONAL:sponsor_incidents-->

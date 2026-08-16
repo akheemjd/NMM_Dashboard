@@ -309,6 +309,18 @@ write("fuel-prices",
 ''' + sponsor("sponsor_fuel") + '''
   <section class="sec">
     <div class="lead"><h2>Every province</h2><p>Price, weekly change, and distance from the national index.</p></div>
+    <div class="viz-grid">
+      <div class="viz-card">
+        <h3 class="viz-title">Price by province</h3>
+        <p class="viz-sub">Cents per litre &middot; dashed line is the national average</p>
+        {{diesel_spread_svg}}
+      </div>
+      <div class="viz-card">
+        <h3 class="viz-title">This week&rsquo;s moves</h3>
+        <p class="viz-sub">Weekly change in cents per litre &middot; red up, green down</p>
+        {{diesel_change_svg}}
+      </div>
+    </div>
     <div class="rows">
     <!--LOOP:provinces--><div class="r"><span class="k">{{name}}<small>{{code}}</small></span><span class="v">{{price}} &nbsp; <span class="{{change_class}}">{{change}}</span> &nbsp; <span class="{{vs_class}}">{{vs_national}}</span></span></div><!--/LOOP:provinces-->
     </div>
@@ -542,6 +554,24 @@ INCIDENTS_ROADWORK = '''
   </section>
 '''
 
+INCIDENTS_VIZ = '''
+  <section class="sec">
+    <div class="lead"><h2>Today on the corridors</h2><p>Where incidents sit, and how much of the disruption is planned versus unplanned.</p></div>
+    <div class="viz-grid">
+      <div class="viz-card">
+        <h3 class="viz-title">Active vs scheduled</h3>
+        <p class="viz-sub">Unplanned incidents (amber) vs planned roadwork (blue)</p>
+        {{disruption_donut_svg}}
+      </div>
+      <div class="viz-card">
+        <h3 class="viz-title">Incidents by corridor</h3>
+        <p class="viz-sub">Busiest highways right now</p>
+        {{corridor_svg}}
+      </div>
+    </div>
+  </section>
+'''
+
 INCIDENTS_JS = '''<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>window.INCIDENTS = {{incidents_json}}; window.ROADWORK = {{roadwork_json}};</script>
 <script>
@@ -702,6 +732,7 @@ _inc_head = _inc_head.replace('<link rel="stylesheet" href="/assets/nm.css',
 write("road-incidents",
  _inc_head
  + INCIDENTS_MAP
+ + INCIDENTS_VIZ
  + sponsor("sponsor_incidents")
  + INCIDENTS_ROADWORK
  + subscribe("Corridors and costs",
