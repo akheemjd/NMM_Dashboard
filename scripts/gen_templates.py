@@ -541,7 +541,9 @@ INCIDENTS_MAP = '''
     <p class="stand">Closures and major collisions on the freight corridors we monitor. Click a pin or a row for detail.</p>
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
+'''
 
+INCIDENTS_BODY = '''
   <div id="map" class="incmap" hidden></div>
   <div class="panel-list" id="incList" hidden></div>
 '''
@@ -733,6 +735,7 @@ write("road-incidents",
  _inc_head
  + INCIDENTS_MAP
  + INCIDENTS_VIZ
+ + INCIDENTS_BODY
  + sponsor("sponsor_incidents")
  + INCIDENTS_ROADWORK
  + subscribe("Corridors and costs",
