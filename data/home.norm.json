@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-08-16 14:16",
-  "updated_iso": "2026-08-16T14:16:01+00:00",
-  "build_version": "1786889761",
+  "updated_iso": "2026-08-16T14:16:42+00:00",
+  "build_version": "1786889802",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "10 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 527, HWY 811, HWY 61",
+    "status_line": "HWY 527, HWY 811, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at 407, Miss.-Halton. 1 right lane and\u2026",
+        "road": "HWY 527",
+        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "HWY 811",
+        "what": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and DOG\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -242,11 +242,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 EDT"
+      "captured_at": "09:48 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -255,25 +255,25 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:49 EDT"
+      "captured_at": "10:01 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "3 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -296,11 +296,11 @@
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 PDT"
+      "captured_at": "07:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -351,13 +351,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "Police: Car driver made illegal U-turn, crashed into commercial log truck",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/police-car-driver-made-illegal-u-turn-crashed-into-commercial-log-truck"
+      "headline": "Arizona troopers place big rig out of service after noticing load violations",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/arizona-troopers-place-big-rig-out-of-service-after-noticing-load-violations"
     },
     {
       "category": "The Trucker",
-      "headline": "NTDC 2026: Miguel Corral of UPS takes Grand Champion Title",
-      "url": "https://www.thetrucker.com/trucking-news/trucking-life/ntdc-2026-miguel-corral-of-ups-takes-grand-champion-title"
+      "headline": "Police: Car driver made illegal U-turn, crashed into commercial log truck",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/police-car-driver-made-illegal-u-turn-crashed-into-commercial-log-truck"
     }
   ],
   "theft_home_json": "[]",

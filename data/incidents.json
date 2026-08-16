@@ -1,20 +1,25 @@
 {
   "incidents": [
     {
-      "id": "ON-289222",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at 407, Miss.-Halton. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/RIDE-101406",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 7",
+        "from": "Lougheed Highway",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 7, In Pitt Meadows and At Harris Road. Reduced to one lane. Last update: August 16th, 2026 at 7:12am PDT. Next update: August 16th, 2026 at 8:30am PDT. Lights at this intersection are in a red flash. Use the all way stop procedure.",
+      "event_type": "incident",
+      "severity": "MINOR",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.58573038,
-      "lng": -79.81288886,
-      "start": 1786887660,
-      "end": null,
-      "updated": 1786887660
+      "lanes": "",
+      "lat": 49.23103449,
+      "lng": -122.68956603,
+      "start": "2026-08-16T07:12:40-07:00",
+      "end": "",
+      "updated": "2026-08-16T07:12:40-07:00"
     },
     {
       "id": "ON-277509",
@@ -807,7 +812,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T13:47:50.991570+00:00",
+  "updated": "2026-08-16T14:16:39.395911+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
