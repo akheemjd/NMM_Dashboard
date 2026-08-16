@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16 04:58 UTC",
-  "updated_iso": "2026-08-16T04:58:19+00:00",
-  "build_version": "1786856299",
+  "updated_at": "2026-08-16 05:29 UTC",
+  "updated_iso": "2026-08-16T05:29:30+00:00",
+  "build_version": "1786858170",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -217,19 +217,11 @@
     "low_52w": "\u2014"
   },
   "incidents": {
-    "none": false,
-    "active_count": 1,
-    "gauge_class": "warn",
-    "status_line": "QEW",
-    "incidents": [
-      {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at BRANT STREET, Burlington. Right lane\u2026",
-        "severity_label": "Collision",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      }
-    ]
+    "none": true,
+    "active_count": 0,
+    "gauge_class": "good",
+    "status_line": "all corridors clear",
+    "incidents": []
   },
   "border_rows": [
     {
@@ -248,7 +240,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT"
+      "captured_at": "01:15 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -257,7 +249,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:40 EDT"
+      "captured_at": "01:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -266,7 +258,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:40 EDT"
+      "captured_at": "01:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -293,7 +285,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT"
+      "captured_at": "22:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -311,7 +303,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT"
+      "captured_at": "01:15 EDT"
     }
   ],
   "market": [
