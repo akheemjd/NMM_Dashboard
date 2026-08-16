@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-289157",
+      "id": "ON-289185",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at AVENUE ROAD, Toronto. Left lane closed.",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at BRANT STREET, Burlington. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.74251055,
-      "lng": -79.42317394,
-      "start": 1786847580,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.3416727,
+      "lng": -79.82216982,
+      "start": 1786855920,
       "end": null,
-      "updated": 1786853760
-    },
-    {
-      "id": "ON-289177",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at HWY 10 / HURONTARIO STREET, Mississauga. Centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.633984,
-      "lng": -79.676346,
-      "start": 1786851720,
-      "end": null,
-      "updated": 1786851720
+      "updated": 1786855920
     },
     {
       "id": "drivebc.ca/DBC-93781",
@@ -804,10 +788,26 @@
       "start": 1787054400,
       "end": 1787176800,
       "updated": 1786673700
+    },
+    {
+      "id": "ON-288456",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 3 Eastbound  between Outer Drive and Outer Drive, Windsor. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.23193,
+      "lng": -82.983536,
+      "start": 1786752000,
+      "end": 1786960800,
+      "updated": 1786673280
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T04:27:07.058112+00:00",
+  "updated": "2026-08-16T04:58:15.263985+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
