@@ -294,9 +294,21 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 .viz-donut-b { stroke: var(--focus); }
 .viz-donut-num { fill: var(--ink); font-family: var(--display); font-weight: 600; font-size: 28px; }
 .viz-donut-lab { fill: var(--muted); font-family: var(--data); font-size: 11px; }
-.viz-line { stroke: var(--signal); stroke-width: 2; fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.viz-line { stroke: var(--muted); stroke-width: 1.2; fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.viz-ma { stroke: var(--signal); stroke-width: 2.5; fill: none; stroke-linejoin: round; stroke-linecap: round; }
 .viz-gridline { stroke: var(--line-2); stroke-width: 1; }
 .viz-dot { fill: var(--signal); }
+.viz-track { fill: var(--sink); }
+.viz-marker { stroke: var(--ink); stroke-width: 1.5; }
+.viz-marker-dot { fill: var(--signal); }
+.viz-marker-ring { fill: none; stroke: var(--ink); stroke-width: 2; }
+.viz-seg { stroke: var(--line); stroke-width: 1; }
+.viz-seg-noise { fill: var(--down); }
+.viz-seg-notable { fill: var(--amber); }
+.viz-seg-material { fill: #C07A1A; }
+.viz-seg-alert { fill: var(--up); }
+.viz-hist { fill: var(--sink); }
+.viz-hist.active { fill: var(--signal); }
 .fx-num { font-family: var(--data); font-size: 1.5rem; font-weight: 600; color: var(--ink); letter-spacing: -.02em; }
 
 @media (prefers-reduced-motion: reduce) {

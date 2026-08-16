@@ -140,22 +140,27 @@ def disruption_donut_svg(n_incidents, n_roadwork):
     return "".join(out)
 
 
-def fx_line_svg(history):
-    """Line chart: USD/CAD over the available history (business-day observations)."""
+def _fx_pairs(history):
+    """Parse (date, rate) pairs from exchange history, sorted ascending."""
     pairs = []
     for h in history:
         r = _num(h.get("rate"))
         d = h.get("date")
         if r is not None and d:
             pairs.append((d, r))
+    pairs.sort(key=lambda p: p[0])
+    return pairs
+
+
+def fx_line_svg(history):
+    """Line chart: USD/CAD over the available history, with a 30-day moving average."""
+    pairs = _fx_pairs(history)
     if len(pairs) < 2:
         return ""
-    pairs.sort(key=lambda p: p[0])
     vals = [r for _, r in pairs]
     lo = min(vals) - 0.004
     hi = max(vals) + 0.004
     span = hi - lo or 1.0
-
     W, H, PL, PR, PT, PB = 560, 250, 44, 14, 14, 30
     plot_w = W - PL - PR
     plot_h = H - PT - PB
@@ -169,12 +174,131 @@ def fx_line_svg(history):
         gy = _y(gv)
         out.append(f'<line class="viz-gridline" x1="{PL}" y1="{gy:.1f}" x2="{W - PR}" y2="{gy:.1f}"/>')
         out.append(f'<text class="viz-lab" x="{PL - 6}" y="{gy + 3}" text-anchor="end">{gv:.4f}</text>')
-    pts = " ".join(f"{_x(i):.1f},{_y(r):.1f}" for i, (_, r) in enumerate(pairs))
-    out.append(f'<polyline class="viz-line" points="{pts}"/>')
+    raw = " ".join(f"{_x(i):.1f},{_y(r):.1f}" for i, (_, r) in enumerate(pairs))
+    ma = []
+    for i in range(n):
+        w = vals[max(0, i - 20):i + 1]
+        ma.append(sum(w) / len(w))
+    ma_pts = " ".join(f"{_x(i):.1f},{_y(m):.1f}" for i, m in enumerate(ma))
+    out.append(f'<polyline class="viz-line" points="{raw}"/>')
+    out.append(f'<polyline class="viz-ma" points="{ma_pts}"/>')
     out.append(f'<text class="viz-lab" x="{PL}" y="{H - 10}" text-anchor="start">{pairs[0][0][:7]}</text>')
     out.append(f'<text class="viz-lab" x="{W - PR}" y="{H - 10}" text-anchor="end">{pairs[-1][0][:7]}</text>')
     lx, ly = _x(n - 1), _y(pairs[-1][1])
     out.append(f'<circle class="viz-dot" cx="{lx:.1f}" cy="{ly:.1f}" r="3.5"/>')
     out.append(f'<text class="viz-val" x="{W - PR}" y="{ly - 7:.1f}" text-anchor="end">{pairs[-1][1]:.4f}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def fx_range_gauge_svg(history):
+    """Range gauge: today's position within the 52-week high/low."""
+    pairs = _fx_pairs(history)
+    if len(pairs) < 2:
+        return ""
+    w = pairs[-260:] if len(pairs) >= 260 else pairs
+    low = min(r for _, r in w)
+    high = max(r for _, r in w)
+    current = pairs[-1][1]
+    if high <= low:
+        return ""
+    frac = (current - low) / (high - low)
+    W, H, M = 560, 84, 48
+    track_x, track_w = M, W - 2 * M
+    track_y, track_h = 40, 12
+    mx = track_x + frac * track_w
+    out = [f'<svg class="viz" viewBox="0 0 {W} {H}" role="img" aria-label="52-week range">']
+    out.append(f'<rect class="viz-track" x="{track_x}" y="{track_y}" width="{track_w}" height="{track_h}" rx="{track_h / 2}"/>')
+    out.append(f'<line class="viz-marker" x1="{mx:.1f}" y1="{track_y - 9}" x2="{mx:.1f}" y2="{track_y + track_h + 9}"/>')
+    out.append(f'<circle class="viz-marker-dot" cx="{mx:.1f}" cy="{track_y + track_h / 2}" r="6"/>')
+    out.append(f'<text class="viz-val" x="{mx:.1f}" y="{track_y - 15}" text-anchor="middle">{current:.4f} today</text>')
+    out.append(f'<text class="viz-lab" x="{track_x}" y="{track_y + track_h + 26}" text-anchor="start">{low:.4f} low</text>')
+    out.append(f'<text class="viz-lab" x="{track_x + track_w}" y="{track_y + track_h + 26}" text-anchor="end">{high:.4f} high</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def fx_change_bars_svg(history):
+    """Diverging bars: percent change over 1d/7d/30d/1y, green down / red up."""
+    pairs = _fx_pairs(history)
+    if len(pairs) < 2:
+        return ""
+    windows = [("1 day", 1), ("7 days", 5), ("30 days", 21), ("1 year", 260)]
+    changes = []
+    for label, n in windows:
+        if len(pairs) > n:
+            base = pairs[-1 - n][1]
+            changes.append((label, (pairs[-1][1] - base) / base * 100))
+        else:
+            changes.append((label, 0.0))
+    max_abs = max(abs(c) for _, c in changes) or 1.0
+    W, LH, RH, ROW, PAD = 560, 72, 62, 30, 12
+    half = (W - LH - RH) / 2
+    center = LH + half
+    H = PAD + len(changes) * ROW + PAD
+    out = [f'<svg class="viz" viewBox="0 0 {W} {H}" role="img" aria-label="Recent moves">']
+    out.append(f'<line class="viz-axis" x1="{center:.1f}" y1="{PAD - 4}" x2="{center:.1f}" y2="{H - PAD + 4}"/>')
+    y = PAD + ROW / 2
+    for label, pct in changes:
+        bw = abs(pct) / max_abs * half
+        out.append(f'<text class="viz-lab" x="{LH - 6}" y="{y + 3.5}" text-anchor="end">{label}</text>')
+        if pct < 0:
+            out.append(f'<rect class="viz-bar down" x="{center - bw:.1f}" y="{y - 8}" width="{bw:.1f}" height="16" rx="3"/>')
+            out.append(f'<text class="viz-val" x="{center - bw - 6:.1f}" y="{y + 3.5}" text-anchor="end">{pct:+.2f}%</text>')
+        else:
+            out.append(f'<rect class="viz-bar up" x="{center:.1f}" y="{y - 8}" width="{bw:.1f}" height="16" rx="3"/>')
+            out.append(f'<text class="viz-val" x="{center + bw + 6:.1f}" y="{y + 3.5}">{pct:+.2f}%</text>')
+        y += ROW
+    out.append("</svg>")
+    return "".join(out)
+
+
+def fx_band_scale_svg(band):
+    """Segmented scale: noise/notable/material/alert with today's band marked."""
+    segs = [("noise", "viz-seg-noise"), ("notable", "viz-seg-notable"),
+            ("material", "viz-seg-material"), ("alert", "viz-seg-alert")]
+    idx = next((i for i, (k, _) in enumerate(segs) if k == band), 1)
+    W, H, M = 560, 74, 40
+    sw = (W - 2 * M) / len(segs)
+    track_y = 32
+    out = [f'<svg class="viz" viewBox="0 0 {W} {H}" role="img" aria-label="Move band">']
+    for i, (label, cls) in enumerate(segs):
+        x = M + i * sw
+        out.append(f'<rect class="viz-seg {cls}" x="{x + 2}" y="{track_y}" width="{sw - 4}" height="12" rx="3"/>')
+        out.append(f'<text class="viz-lab" x="{x + sw / 2}" y="{track_y + 28}" text-anchor="middle">{label}</text>')
+    mx = M + idx * sw + sw / 2
+    out.append(f'<circle class="viz-marker-ring" cx="{mx:.1f}" cy="{track_y + 6}" r="8"/>')
+    out.append(f'<text class="viz-val" x="{mx:.1f}" y="{track_y - 12}" text-anchor="middle">today: {band}</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def fx_histogram_svg(history, bins=10):
+    """Histogram: distribution of daily rates, current bucket highlighted."""
+    pairs = _fx_pairs(history)
+    if len(pairs) < 2:
+        return ""
+    vals = [r for _, r in pairs]
+    lo, hi = min(vals), max(vals)
+    if hi <= lo:
+        return ""
+    bin_w = (hi - lo) / bins
+    counts = [0] * bins
+    for v in vals:
+        i = min(int((v - lo) / bin_w), bins - 1)
+        counts[i] += 1
+    cur_i = min(int((pairs[-1][1] - lo) / bin_w), bins - 1)
+    max_c = max(counts) or 1
+    W, H, PAD, BL = 560, 220, 20, 26
+    chart_h = H - PAD - BL
+    col_w = (W - 2 * PAD) / bins
+    out = [f'<svg class="viz" viewBox="0 0 {W} {H}" role="img" aria-label="Rate distribution">']
+    for i, c in enumerate(counts):
+        x = PAD + i * col_w
+        bh = c / max_c * chart_h
+        cls = "viz-hist active" if i == cur_i else "viz-hist"
+        out.append(f'<rect class="{cls}" x="{x + 1}" y="{PAD + chart_h - bh:.1f}" width="{col_w - 2:.1f}" height="{bh:.1f}" rx="2"/>')
+    out.append(f'<text class="viz-lab" x="{PAD}" y="{H - 8}" text-anchor="start">{lo:.4f}</text>')
+    out.append(f'<text class="viz-lab" x="{W - PAD}" y="{H - 8}" text-anchor="end">{hi:.4f}</text>')
     out.append("</svg>")
     return "".join(out)

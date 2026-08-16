@@ -327,6 +327,14 @@ else:
     fx["change_30d"] = fx["change_30d_pct"] = EMPTY
     fx["change_1y"] = fx["change_1y_pct"] = EMPTY
 
+# Position in the 52-week range (0 = low, 100 = high) for the gauge prose.
+try:
+    _rlo = float(fx.get("low_52w"))
+    _rhi = float(fx.get("high_52w"))
+    fx["range_pct"] = f"{(fx_rate - _rlo) / (_rhi - _rlo) * 100:.0f}%" if _rhi > _rlo else "—"
+except (TypeError, ValueError):
+    fx["range_pct"] = "—"
+
 # ===== INCIDENTS =====
 # Already sorted above
 import time

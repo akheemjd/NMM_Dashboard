@@ -475,41 +475,41 @@ write("exchange-rate",
   </section>
 ''' + sponsor("sponsor_fx") + '''
   <section class="sec">
-    <div class="lead"><h2>The past year</h2><p>Daily Bank of Canada observations, past 52 weeks.</p></div>
-    <div class="viz-card" style="margin-bottom:16px">
-      <h3 class="viz-title">USD / CAD</h3>
-      <p class="viz-sub">CAD per US dollar · {{fx.obs_date}} to today</p>
-      {{fx_line_svg}}
+    <div class="lead"><h2>Where today sits</h2><p>Today against the past 52 weeks.</p></div>
+    <div class="viz-card">
+      <h3 class="viz-title">52-week range</h3>
+      <p class="viz-sub">CAD per US dollar · today is {{fx.range_pct}} of the way from the low to the high</p>
+      {{fx_range_gauge_svg}}
     </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>The past year</h2><p>Daily observations, with a 30-day moving average.</p></div>
     <div class="viz-grid">
-      <div class="viz-card"><div class="viz-title">52-week high</div><div class="fx-num">{{fx.high_52w}}</div><div class="viz-sub">{{fx.high_52w_date}}</div></div>
-      <div class="viz-card"><div class="viz-title">52-week low</div><div class="fx-num">{{fx.low_52w}}</div><div class="viz-sub">{{fx.low_52w_date}}</div></div>
-      <div class="viz-card"><div class="viz-title">30-day average</div><div class="fx-num">{{fx.avg_30d}}</div><div class="viz-sub">today {{fx.vs_baseline}} from it</div></div>
-      <div class="viz-card"><div class="viz-title">30-day move</div><div class="fx-num">{{fx.change_30d}}</div><div class="viz-sub">{{fx.change_30d_pct}}</div></div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="lead"><h2>How it moved</h2><p>Change against the observation published N trading days earlier.</p></div>
-    <div class="rows">
-      <div class="r"><span class="k">Today<small>vs previous observation</small></span><span class="v">{{fx.change}}</span></div>
-      <div class="r"><span class="k">7 days<small>5 business days</small></span><span class="v">{{fx.change_7d}}</span></div>
-      <div class="r"><span class="k">30 days<small>21 business days</small></span><span class="v">{{fx.change_30d}} <small>{{fx.change_30d_pct}}</small></span></div>
-      <div class="r"><span class="k">1 year<small>260 business days</small></span><span class="v">{{fx.change_1y}} <small>{{fx.change_1y_pct}}</small></span></div>
-    </div>
-    <p class="note">A rising figure means a weaker Canadian dollar — it takes more CAD to buy a US dollar.</p>
-  </section>
-
-  <section class="sec">
-    <div class="lead"><h2>What today&rsquo;s move means</h2></div>
-    <div class="reading">
-      <p class="note" style="margin-top:0">Today&rsquo;s change is <b>{{fx.band_pct}}</b> — a <b>{{fx.band}}</b> move.</p>
-      <div class="rows">
-        <div class="r"><span class="k">Noise</span><span class="v">under 0.2%</span></div>
-        <div class="r"><span class="k">Notable</span><span class="v">0.2&ndash;0.49%</span></div>
-        <div class="r"><span class="k">Material</span><span class="v">0.5&ndash;0.99%</span></div>
-        <div class="r"><span class="k">Alert</span><span class="v">1.0% or more</span></div>
+      <div class="viz-card" style="grid-column: 1 / -1">
+        <h3 class="viz-title">USD / CAD</h3>
+        <p class="viz-sub">Thin line is the daily observation · bold line is the 30-day trend</p>
+        {{fx_line_svg}}
       </div>
+      <div class="viz-card">
+        <h3 class="viz-title">Where the year clustered</h3>
+        <p class="viz-sub">Trading days at each rate · green is today&rsquo;s bucket</p>
+        {{fx_histogram_svg}}
+      </div>
+      <div class="viz-card">
+        <h3 class="viz-title">Recent moves</h3>
+        <p class="viz-sub">Percent change · green stronger CAD, red weaker</p>
+        {{fx_change_bars_svg}}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>How big a deal</h2><p>Today&rsquo;s move on the noise-to-alert scale.</p></div>
+    <div class="viz-card">
+      <h3 class="viz-title">Move band</h3>
+      <p class="viz-sub">Today&rsquo;s change is {{fx.band_pct}} — a {{fx.band}} move</p>
+      {{fx_band_scale_svg}}
     </div>
   </section>
 

@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-16 15:23",
-  "updated_iso": "2026-08-16T15:23:55+00:00",
-  "build_version": "1786893835",
+  "updated_at": "2026-08-16 17:27",
+  "updated_iso": "2026-08-16T17:27:22+00:00",
+  "build_version": "1786901242",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -230,24 +230,25 @@
     "change_30d": "-0.0174",
     "change_30d_pct": "-1.24%",
     "change_1y": "+0.0104",
-    "change_1y_pct": "+0.76%"
+    "change_1y_pct": "+0.76%",
+    "range_pct": "50%"
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 527, HWY 811, HWY 61",
+    "status_line": "HWY 401, HWY 527, HWY 811, HWY 61",
     "incidents": [
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at BAYVIEW AVE, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 811",
-        "what": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and DOG\u2026",
+        "road": "HWY 527",
+        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -262,7 +263,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:48 EDT"
+      "captured_at": "11:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -271,16 +272,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:55 EDT"
+      "captured_at": "12:58 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:00 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -289,7 +290,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:00 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -298,7 +299,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:50 EDT"
+      "captured_at": "12:19 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -307,7 +308,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:47 MDT"
+      "captured_at": "10:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -316,7 +317,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -325,7 +326,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 CDT"
+      "captured_at": "11:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -334,7 +335,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT"
+      "captured_at": "11:15 EDT"
     }
   ],
   "market": [

@@ -215,7 +215,13 @@ def build_all():
     inc_data["disruption_donut_svg"] = charts.disruption_donut_svg(len(incidents), len(roadwork))
 
     fx_raw = load_json("exchange")
-    page_data["exchange-rate"]["fx_line_svg"] = charts.fx_line_svg(fx_raw.get("history", []))
+    fx_hist = fx_raw.get("history", [])
+    fx_page = page_data["exchange-rate"]
+    fx_page["fx_line_svg"] = charts.fx_line_svg(fx_hist)
+    fx_page["fx_range_gauge_svg"] = charts.fx_range_gauge_svg(fx_hist)
+    fx_page["fx_change_bars_svg"] = charts.fx_change_bars_svg(fx_hist)
+    fx_page["fx_histogram_svg"] = charts.fx_histogram_svg(fx_hist)
+    fx_page["fx_band_scale_svg"] = charts.fx_band_scale_svg((fx_page.get("fx") or {}).get("band", ""))
 
     built = []
     for name in page_data:
