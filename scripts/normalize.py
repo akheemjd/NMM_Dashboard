@@ -464,6 +464,23 @@ write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts,
 write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts,
     "updated_iso": ts_iso, "build_version": build_version, "captured_at": ts})
 write("fx.norm", {"fx": fx, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
+def fmt_ts(ts):
+    """Format a timestamp (unix int/float, digit string, or ISO string) as 'Mon DD HH:MM'."""
+    from datetime import datetime
+    if ts is None or ts == "" or ts == 0:
+        return ""
+    if isinstance(ts, (int, float)):
+        return datetime.utcfromtimestamp(ts).strftime("%b %d %H:%M") if ts > 1000000000 else ""
+    s = str(ts).strip()
+    if not s:
+        return ""
+    if s.isdigit() and int(s) > 1000000000:
+        return datetime.utcfromtimestamp(int(s)).strftime("%b %d %H:%M")
+    try:
+        return datetime.fromisoformat(s).strftime("%b %d %H:%M")
+    except ValueError:
+        return s
+
 # Build raw incidents JSON array for the map
 inc_json = []
 for i in raw_inc.get("incidents", [])[:50]:
@@ -471,16 +488,8 @@ for i in raw_inc.get("incidents", [])[:50]:
     if sev in ("closed", "closure"): sc = "closed"
     elif sev in ("heavy", "major", "high"): sc = "heavy"
     else: sc = "mod"
-    # Format timestamps
-    start_ts = i.get("start", 0)
-    end_ts = i.get("end", 0)
-    if start_ts and isinstance(start_ts, (int,float)) and start_ts > 1000000000:
-        from datetime import datetime
-        start_str = datetime.utcfromtimestamp(start_ts).strftime("%b %d %H:%M")
-        end_str = datetime.utcfromtimestamp(end_ts).strftime("%b %d %H:%M") if (end_ts and end_ts > 1000000000) else ""
-    else:
-        start_str = str(start_ts) if start_ts else ""
-        end_str = str(end_ts) if end_ts else ""
+    start_str = fmt_ts(i.get("start", 0))
+    end_str = fmt_ts(i.get("end", 0))
     
     inc_json.append({
         "lat": i.get("lat", 0),
