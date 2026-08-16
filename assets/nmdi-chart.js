@@ -128,22 +128,11 @@
     tip.style.top = (M.t + y(d.v) - 10) + "px";
   }
 
-  var ranges = document.getElementById("nmdi-ranges");
   var story = document.getElementById("nmdi-story");
-  function clearStory() { if (story) story.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); }); }
-  function clearRanges() { if (ranges) ranges.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); }); }
-  if (ranges) ranges.addEventListener("click", function (e) {
-    var b = e.target.closest("button"); if (!b) return;
-    clearRanges(); b.classList.add("on"); clearStory();
-    var yrs = +b.dataset.years; _baseX = null;
-    svg.call(d3.zoom().transform, d3.zoomIdentity);
-    if (yrs === 0) curDomain = null;
-    else { var end = all[all.length - 1].date; var start = new Date(end); start.setFullYear(start.getFullYear() - yrs); curDomain = [start, end]; }
-    render(curDomain);
-  });
   if (story) story.addEventListener("click", function (e) {
     var b = e.target.closest("button"); if (!b) return;
-    clearStory(); b.classList.add("on"); clearRanges();
+    story.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+    b.classList.add("on");
     var f = b.dataset.focus;
     var target = f === "low" ? loPoint : f === "high" ? hiPoint : todayPoint;
     var start = new Date(target.date), end = new Date(target.date);
