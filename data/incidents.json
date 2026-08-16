@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-289190",
+      "id": "ON-289200",
       "province": "ON",
       "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at BURLINGTON SKYWAY, Burlington. 1 right lane closed.",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound RAMP at RED HILL, Hamilton. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.29814811,
-      "lng": -79.7971592,
-      "start": 1786858440,
+      "lanes": "right lane closed",
+      "lat": 43.247281527,
+      "lng": -79.755334854,
+      "start": 1786863300,
       "end": null,
-      "updated": 1786858440
+      "updated": 1786863300
+    },
+    {
+      "id": "ON-289198",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at HWY 427, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.6683374,
+      "lng": -79.58963249,
+      "start": 1786862460,
+      "end": null,
+      "updated": 1786862460
     },
     {
       "id": "drivebc.ca/DBC-93781",
@@ -788,26 +804,10 @@
       "start": 1787054400,
       "end": 1787176800,
       "updated": 1786673700
-    },
-    {
-      "id": "ON-288456",
-      "province": "ON",
-      "highway": "HWY 3",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 3 Eastbound  between Outer Drive and Outer Drive, Windsor. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 42.23193,
-      "lng": -82.983536,
-      "start": 1786752000,
-      "end": 1786960800,
-      "updated": 1786673280
     }
   ],
   "total": 50,
-  "updated": "2026-08-16T06:31:42.922471+00:00",
+  "updated": "2026-08-16T07:02:52.876929+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
