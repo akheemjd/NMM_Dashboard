@@ -60,7 +60,7 @@ def write(name, data):
 from datetime import timezone
 
 def now_fmt():
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
 
 def now_iso():
     return datetime.now(timezone.utc).isoformat(timespec="seconds")

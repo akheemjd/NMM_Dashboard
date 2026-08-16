@@ -261,12 +261,19 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 
 /* ── Footer ─────────────────────────────────────────────────────────── */
 
-.ft { margin-top: var(--v); padding: 26px 0 44px; border-top: 1px solid var(--line); }
-.ft .wrap { display: grid; gap: 14px; }
-.ft .links { display: flex; gap: 8px 22px; flex-wrap: wrap; font-size: .9375rem; }
-.ft .links a { color: var(--ink-2); text-decoration: none; }
-.ft .links a:hover { color: var(--signal); }
-.ft .fine { font-family: var(--data); font-size: .75rem; color: var(--muted); }
+.ft { margin-top: var(--v); padding: 32px 0 40px; border-top: 1px solid var(--line); }
+.ft .wrap { display: grid; gap: 16px; }
+.ft .brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.ft .brand .name { font-family: var(--display); font-weight: 600; font-size: 1.0625rem; color: var(--ink); text-decoration: none; }
+.ft .brand .name:hover { color: var(--signal); }
+.ft .brand .tag { font-family: var(--data); font-size: .8125rem; color: var(--muted); }
+.ft .flinks { display: flex; gap: 8px 22px; flex-wrap: wrap; }
+.ft .flinks a { color: var(--ink-2); text-decoration: none; font-size: .9375rem; }
+.ft .flinks a:hover { color: var(--signal); }
+.ft .bottom { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-family: var(--data); font-size: .75rem; color: var(--muted); }
+.ft .bottom a { color: var(--muted); text-decoration: none; }
+.ft .bottom a:hover { color: var(--signal); }
+.ft .bottom > * + *::before { content: "\00B7"; margin-right: 8px; color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }

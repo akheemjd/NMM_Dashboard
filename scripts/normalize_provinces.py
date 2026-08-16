@@ -165,7 +165,7 @@ def main():
     # identical footer across all eleven pages. Fall back to a fresh stamp only
     # if home.norm is missing.
     home = load("home.norm.json")
-    updated_at = home.get("updated_at") or datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    updated_at = home.get("updated_at") or datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
     updated_iso = home.get("updated_iso") or datetime.now(timezone.utc).isoformat()
 
     out = {}

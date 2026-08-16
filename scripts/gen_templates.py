@@ -10,6 +10,7 @@ Run: python3 scripts/gen_templates.py
 """
 
 import os
+import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "templates")
@@ -89,13 +90,15 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 
 
 def foot(extra_script=""):
-    links = "".join(f'<a href="{h}">{l}</a>' for h, l in NAV)
+    flinks = "".join(f'<a href="{h}">{l}</a>' for h, l in NAV if l != "Home")
+    year = datetime.date.today().year
     return f"""
 </main>
 
 <footer class="ft"><div class="wrap">
-  <div class="links"><a href="/">Dashboard home</a>{links}</div>
-  <div class="fine">Northern Mile Media · Rebuilt {{{{updated_at}}}} UTC</div>
+  <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
+  <nav class="flinks" aria-label="Footer">{flinks}</nav>
+  <div class="bottom"><span>&copy; {year} Northern Mile Media</span><a href="{SUB}">Subscribe free</a><span>Updated {{{{updated_at}}}} UTC</span></div>
 </div></footer>
 
 <script src="/assets/nm.js?v={{{{build_version}}}}"></script>
