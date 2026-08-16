@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-16 03:56 UTC",
-  "updated_iso": "2026-08-16T03:56:53+00:00",
-  "build_version": "1786852613",
+  "updated_at": "2026-08-16 04:27 UTC",
+  "updated_iso": "2026-08-16T04:27:10+00:00",
+  "build_version": "1786854430",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -218,20 +218,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "ALLEN RO, HWY 401, HWY 409, HWY 140/",
+    "status_line": "HWY 401",
     "incidents": [
       {
-        "road": "ALLEN ROAD",
-        "what": "Collision on ALLEN ROAD Northbound  at YORKDALE ROAD, Toronto. 1 centre lane\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at HWY 10 / HURONTARIO\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at HWY 10 / HURONTARIO\u2026",
+        "what": "Collision on HWY 401 Westbound EXPRESS at AVENUE ROAD, Toronto. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -273,7 +273,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -291,16 +291,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 MDT"
+      "captured_at": "22:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -309,7 +309,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 CDT"
+      "captured_at": "23:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
