@@ -59,7 +59,7 @@ def save(name, data):
 def collect_exchange_rate():
     """USD/CAD from Bank of Canada (free, no key)."""
     try:
-        data = fetch_json("https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?recent=30")
+        data = fetch_json("https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?recent=365")
         obs = data["observations"]
         rates = []
         for o in obs:

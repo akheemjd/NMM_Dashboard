@@ -257,6 +257,8 @@ for c in crossings[:12]:
 fx_rate = raw_ex.get("current")
 if fx_rate is None:
     raise ValueError("exchange.json has no current rate — refusing to build")
+try: fx_rate = float(fx_rate)
+except: raise ValueError("exchange.json current rate is not numeric")
 fx_chg = raw_ex.get("change", 0)
 try: fx_chg = float(fx_chg)
 except: fx_chg = 0
@@ -268,21 +270,62 @@ fx = {
     "change": f"{'+' if fx_chg>0 else ''}{fx_chg:.4f}",
 }
 
-# FX context gauges — computed from exchange.json history where available.
-_fx_hist = raw_ex.get("history", [])
-if isinstance(_fx_hist, list) and _fx_hist:
-    _fx_rates = [h["rate"] for h in _fx_hist if isinstance(h, dict) and h.get("rate") is not None]
-    if len(_fx_rates) >= 2:
-        _avg30 = round(sum(_fx_rates) / len(_fx_rates), 4)
-        fx["vs_baseline"] = f"{fx_rate - _avg30:+.4f}"
-    else:
-        fx["vs_baseline"] = "—"
-else:
-    fx["vs_baseline"] = "—"
+# Quick conversions for the "what the rate means" table.
+fx["usd_100"] = f"{fx_rate * 100:,.2f}"
+fx["usd_500"] = f"{fx_rate * 500:,.2f}"
+fx["usd_1000"] = f"{fx_rate * 1000:,.2f}"
+fx["cad_1000"] = f"{1000 / fx_rate:,.2f}"
 
-# 52-week high/low need 52 weeks of history. exchange.json carries 30 days.
-fx["high_52w"] = "—"
-fx["low_52w"] = "—"
+# Daily-change band: noise <0.2% · notable 0.2–0.49% · material 0.5–0.99% · alert ≥1.0%
+_fx_pct = raw_ex.get("change_pct")
+try: _fx_pct = float(_fx_pct)
+except: _fx_pct = 0.0
+_apct = abs(_fx_pct)
+fx["band"] = "noise" if _apct < 0.2 else "notable" if _apct < 0.5 else "material" if _apct < 1.0 else "alert"
+fx["band_pct"] = f"{_fx_pct:+.2f}%"
+
+# FX context gauges — from exchange.json history. Windows are in business days.
+EMPTY = "—"
+_fx_hist = raw_ex.get("history", [])
+_pairs = [(h["date"], float(h["rate"])) for h in _fx_hist
+          if isinstance(h, dict) and h.get("date") and h.get("rate") is not None]
+_pairs.sort(key=lambda p: p[0])
+
+def _delta(n):
+    """Change vs n business days back (returns (abs, pct) or em-dash)."""
+    if len(_pairs) > n:
+        base = _pairs[-1 - n][1]
+        d = _pairs[-1][1] - base
+        return f"{d:+.4f}", f"{d / base * 100:+.2f}%"
+    return EMPTY, EMPTY
+
+if _pairs:
+    fx["obs_date"] = _pairs[-1][0]
+    # 30-day average (21 business days) and distance from it
+    _m = _pairs[-21:] if len(_pairs) >= 21 else _pairs
+    _avg30 = round(sum(r for _, r in _m) / len(_m), 4)
+    fx["avg_30d"] = f"{_avg30:.4f}"
+    fx["vs_baseline"] = f"{_pairs[-1][1] - _avg30:+.4f}"
+    # 52-week high/low (260 business days)
+    _w = _pairs[-260:] if len(_pairs) >= 260 else _pairs
+    _hi_date, _hi = max(_w, key=lambda p: p[1])
+    _lo_date, _lo = min(_w, key=lambda p: p[1])
+    fx["high_52w"] = f"{_hi:.4f}"
+    fx["high_52w_date"] = _hi_date
+    fx["low_52w"] = f"{_lo:.4f}"
+    fx["low_52w_date"] = _lo_date
+    fx["change_7d"], fx["change_7d_pct"] = _delta(5)
+    fx["change_30d"], fx["change_30d_pct"] = _delta(21)
+    fx["change_1y"], fx["change_1y_pct"] = _delta(260)
+else:
+    fx["obs_date"] = EMPTY
+    fx["avg_30d"] = EMPTY
+    fx["vs_baseline"] = EMPTY
+    fx["high_52w"] = EMPTY
+    fx["low_52w"] = EMPTY
+    fx["change_7d"] = fx["change_7d_pct"] = EMPTY
+    fx["change_30d"] = fx["change_30d_pct"] = EMPTY
+    fx["change_1y"] = fx["change_1y_pct"] = EMPTY
 
 # ===== INCIDENTS =====
 # Already sorted above

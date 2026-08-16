@@ -214,6 +214,9 @@ def build_all():
     inc_data["corridor_svg"] = charts.corridor_svg(incidents)
     inc_data["disruption_donut_svg"] = charts.disruption_donut_svg(len(incidents), len(roadwork))
 
+    fx_raw = load_json("exchange")
+    page_data["exchange-rate"]["fx_line_svg"] = charts.fx_line_svg(fx_raw.get("history", []))
+
     built = []
     for name in page_data:
         sz = build_page(name, page_data[name])

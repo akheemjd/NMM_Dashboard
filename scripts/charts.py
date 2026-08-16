@@ -138,3 +138,43 @@ def disruption_donut_svg(n_incidents, n_roadwork):
     out.append(f'<text class="viz-donut-lab" x="{cx}" y="{cy + 17}" text-anchor="middle">disruptions</text>')
     out.append("</svg>")
     return "".join(out)
+
+
+def fx_line_svg(history):
+    """Line chart: USD/CAD over the available history (business-day observations)."""
+    pairs = []
+    for h in history:
+        r = _num(h.get("rate"))
+        d = h.get("date")
+        if r is not None and d:
+            pairs.append((d, r))
+    if len(pairs) < 2:
+        return ""
+    pairs.sort(key=lambda p: p[0])
+    vals = [r for _, r in pairs]
+    lo = min(vals) - 0.004
+    hi = max(vals) + 0.004
+    span = hi - lo or 1.0
+
+    W, H, PL, PR, PT, PB = 560, 250, 44, 14, 14, 30
+    plot_w = W - PL - PR
+    plot_h = H - PT - PB
+    n = len(pairs)
+
+    def _x(i): return PL + i / (n - 1) * plot_w
+    def _y(r): return PT + (hi - r) / span * plot_h
+
+    out = [f'<svg class="viz" viewBox="0 0 {W} {H}" role="img" aria-label="USD/CAD past year">']
+    for gv in (lo, (lo + hi) / 2, hi):
+        gy = _y(gv)
+        out.append(f'<line class="viz-gridline" x1="{PL}" y1="{gy:.1f}" x2="{W - PR}" y2="{gy:.1f}"/>')
+        out.append(f'<text class="viz-lab" x="{PL - 6}" y="{gy + 3}" text-anchor="end">{gv:.4f}</text>')
+    pts = " ".join(f"{_x(i):.1f},{_y(r):.1f}" for i, (_, r) in enumerate(pairs))
+    out.append(f'<polyline class="viz-line" points="{pts}"/>')
+    out.append(f'<text class="viz-lab" x="{PL}" y="{H - 10}" text-anchor="start">{pairs[0][0][:7]}</text>')
+    out.append(f'<text class="viz-lab" x="{W - PR}" y="{H - 10}" text-anchor="end">{pairs[-1][0][:7]}</text>')
+    lx, ly = _x(n - 1), _y(pairs[-1][1])
+    out.append(f'<circle class="viz-dot" cx="{lx:.1f}" cy="{ly:.1f}" r="3.5"/>')
+    out.append(f'<text class="viz-val" x="{W - PR}" y="{ly - 7:.1f}" text-anchor="end">{pairs[-1][1]:.4f}</text>')
+    out.append("</svg>")
+    return "".join(out)
