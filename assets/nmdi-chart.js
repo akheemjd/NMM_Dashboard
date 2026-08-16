@@ -54,7 +54,7 @@
     root.append("rect").attr("width", iw).attr("height", ih).style("fill", "none").style("pointer-events", "all")
       .on("mousemove", move).on("mouseleave", function () { focus.style("display", "none"); tip.style.opacity = 0; })
       .on("touchmove", function (e) { e.preventDefault(); if (e.touches[0]) move(e.touches[0]); }, { passive: false });
-    svg.call(d3.zoom().scaleExtent([1, 40]).extent([[0, 0], [iw, ih]]).translateExtent([[0, 0], [iw, ih]]).on("zoom", zoomed));
+    svg.call(d3.zoom().scaleExtent([1, 40]).extent([[0, 0], [iw, ih]]).translateExtent([[0, 0], [iw, ih]]).on("start", function () { svgEl.classList.add("grabbing"); }).on("zoom", zoomed).on("end", function () { svgEl.classList.remove("grabbing"); }));
     render(curDomain);
   }
 

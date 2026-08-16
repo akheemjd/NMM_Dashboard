@@ -277,7 +277,8 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 .chart-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 4px; }
 .chart-head h3 { font-family: var(--display); font-weight: 600; font-size: 1.0625rem; letter-spacing: -.02em; margin: 0; }
 .chart-head .sub { font-family: var(--data); font-size: .8125rem; color: var(--muted); }
-.chart-svg { width: 100%; height: 320px; display: block; touch-action: pan-y; }
+.chart-svg { width: 100%; height: 320px; display: block; touch-action: pan-y; cursor: grab; }
+.chart-svg.grabbing { cursor: grabbing; }
 .chart-svg .axis text { font-family: var(--data); font-size: 11px; fill: var(--muted); }
 .chart-svg .axis path, .chart-svg .axis line { stroke: var(--line); }
 .chart-svg .grid line { stroke: var(--line-2); }
@@ -289,7 +290,7 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 .chart-card .tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--paper); font-family: var(--data); font-size: 12px; padding: 7px 10px; border-radius: 6px; opacity: 0; transition: opacity .1s; white-space: nowrap; z-index: 5; }
 .chart-card .tip .v { font-weight: 600; font-size: 13px; }
 .chart-card .tip .d { color: var(--line); font-size: 11px; }
-.chart-card .hint { font-family: var(--data); font-size: .7rem; color: var(--muted); margin: 6px 2px 0; text-align: right; }
+.chart-card .hint { font-family: var(--data); font-size: .75rem; color: var(--ink-2); margin: 10px 2px 0; text-align: center; }
 .chart-card .foot-note { font-family: var(--data); font-size: .7rem; color: var(--muted); margin-top: 8px; }
 .chart-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin: 14px 0 4px; }
 .cstat { background: var(--raise); padding: 10px 14px; }

@@ -172,7 +172,7 @@ def chart_block():
         <span class="sub" id="nmdi-readout">{{chart_range_label}}</span>
       </div>""" + _chart_stats() + """
       <div class="story" id="nmdi-story">
-        <span class="sl">Why the spikes?</span>
+        <span class="sl">Zoom to a moment:</span>
         <button data-focus="low" type="button">2020 crash</button>
         <button data-focus="high" type="button">2022 spike</button>
         <button data-focus="today" type="button">Today</button>
@@ -181,7 +181,7 @@ def chart_block():
         <svg class="chart-svg" id="nmdi-chart"></svg>
         <div class="tip" id="nmdi-tip"></div>
       </div>
-      <div class="hint">Scroll or pinch to zoom &middot; hover for the weekly print</div>
+      <div class="hint">How to use it: drag to pan &middot; scroll to zoom &middot; hover for the weekly figure</div>
       <div class="foot-note">Northern Mile Diesel Index, weekly. Source: NRCan.</div>
     </div>
     <script id="nmdi-data" type="application/json">{{chart_data_json}}</script>
