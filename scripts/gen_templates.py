@@ -685,9 +685,17 @@ INCIDENTS_JS = '''<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
     row.className = 'inc';
     row.setAttribute('tabindex','0');
     row.setAttribute('role','button');
+    var tline = '';
+    if(it.clearance || it.end_time){
+      tline = '<div class="inc-time">';
+      if(it.clearance) tline += '<span class="t-lab">Started</span> ' + esc(it.clearance);
+      if(it.end_time) tline += ' · <span class="t-lab">Until</span> ' + esc(it.end_time);
+      tline += '</div>';
+    }
     row.innerHTML = '<div class="h">'+esc(it.road)+(it.direction?' · '+esc(it.direction):'')+
       ' <span class="pill '+esc(it.severity_class)+'">'+esc(it.severity_label)+'</span></div>'+
-      '<div class="m">'+esc(it.what)+(it.clearance?' · clears '+esc(it.clearance):'')+'</div>';
+      tline+
+      '<div class="m">'+esc(it.what)+'</div>';
 
     function focus(){
       map.flyTo([it.lat, it.lng], 9, {duration:.6});

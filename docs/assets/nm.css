@@ -443,6 +443,13 @@ main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%);
 .inc .m {
   font-family: var(--data); font-size: .8125rem; color: var(--muted); line-height: 1.5;
 }
+.inc .inc-time {
+  font-family: var(--data); font-size: .8125rem; font-weight: 600; color: var(--ink);
+  letter-spacing: .01em; margin: 0 0 4px;
+}
+.inc .inc-time .t-lab {
+  font-weight: 400; font-size: .6875rem; text-transform: uppercase; letter-spacing: .03em; color: var(--muted);
+}
 
 /* Severity pill. */
 .pill {
@@ -478,5 +485,5 @@ main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%);
 .rw.active { background: var(--wash); box-shadow: inset 3px 0 0 var(--signal); }
 .rw-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
 .rw-road { font-family: var(--data); font-size: .8125rem; font-weight: 500; color: var(--ink); letter-spacing: .02em; }
-.rw-when { font-family: var(--data); font-size: .75rem; color: var(--muted); flex-shrink: 0; }
+.rw-when { font-family: var(--data); font-size: .8125rem; font-weight: 600; color: var(--ink); flex-shrink: 0; letter-spacing: .02em; }
 .rw-what { font-size: .9375rem; color: var(--ink-2); line-height: 1.5; overflow-wrap: anywhere; }
