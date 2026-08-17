@@ -115,6 +115,19 @@
   </section>
 
   <section class="sec">
+    <div class="lead"><h2>North American diesel</h2><p>The cross-border index, and the gap Canadian carriers watch.</p></div>
+    <div class="stats">
+      <div class="stat"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></div>
+      <div class="stat"><div class="l">US national</div><div class="v">{{eia.us_national_cpl}}</div><div class="s">¢/L · ${{eia.us_national_usd_gal}}/gal</div></div>
+      <div class="stat"><div class="l">Canada vs US</div><div class="v">{{eia.ca_us_gap}}</div><div class="s">¢/L · {{eia.gap_word}}</div></div>
+    </div>
+    <div class="rows">
+    <!--LOOP:eia.padds_list--><div class="r"><span class="k">{{label}}<small>US PADD region</small></span><span class="v">{{cpl}} ¢/L · ${{usd_gal}}/gal</span></div><!--/LOOP:eia.padds_list-->
+    </div>
+    <p class="note">US figures are the EIA weekly retail diesel survey (ultra-low sulfur, on-highway), converted from USD per gallon at the Bank of Canada rate ({{fx.usd_cad}}). The North American index is the mean of the Canadian NMDI and the US national average — each country counts once. <a href="/methodology/nmdi/">Methodology</a></p>
+  </section>
+
+  <section class="sec">
     <div class="lead"><h2>By province, in depth</h2><p>Why each province prices the way it does.</p></div>
     <div class="rows">
       <a class="r" href="/diesel-prices/ontario/"><span class="k">Ontario<small>19 survey cities · widest spread</small></span><span class="v">→</span></a>
