@@ -38,7 +38,7 @@ from datetime import date, datetime, timezone
 sys.path.insert(0, 'scripts')
 from health_tracker import record_success, record_failure
 
-CEILINGS = {'fuel': 10, 'exchange': 5, 'incidents': 1, 'news': 3}
+CEILINGS = {'fuel': 10, 'exchange': 5, 'incidents': 1, 'news': 3, 'eia_diesel': 10}
 
 def obs_date(d, src):
     if src == 'fuel':
@@ -49,12 +49,16 @@ def obs_date(d, src):
         od = d.get('observation_date')
         if od:
             return date.fromisoformat(od)
+    if src == 'eia_diesel':
+        od = d.get('date')
+        if od:
+            return date.fromisoformat(od)
     u = d.get('updated')
     if u:
         return date.fromisoformat(u[:10])
     return None
 
-for src, filename in {'fuel':'fuel.json','exchange':'exchange.json','incidents':'incidents.json','news':'news.json'}.items():
+for src, filename in {'fuel':'fuel.json','exchange':'exchange.json','incidents':'incidents.json','news':'news.json','eia_diesel':'eia_diesel.json'}.items():
     path = os.path.join('data', filename)
     try:
         if not os.path.exists(path):

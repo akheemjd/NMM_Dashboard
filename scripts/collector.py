@@ -20,6 +20,7 @@ from collect_nrcan_diesel import collect as collect_fuel
 from incidents import collect_incidents
 from collect_border import collect_border_live
 from theft_incidents import collect_theft_incidents
+from collect_eia_diesel import collect_eia_diesel
 from health_tracker import record_success, record_failure
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
@@ -272,6 +273,7 @@ if __name__ == "__main__":
         ("market", collect_market_pulse),
         ("incidents", collect_incidents),
         ("fuel", collect_fuel),
+        ("eia_diesel", collect_eia_diesel),
         ("news", collect_news),
         ("border", collect_border_live),
         ("theft", collect_theft_incidents),
@@ -302,6 +304,8 @@ if __name__ == "__main__":
                 return len(d.get("crossings", []))
             if path == "theft.json":
                 return len([i for i in d.get("incidents", []) if i.get("source_url")])
+            if path == "eia_diesel.json":
+                return 1 if d.get("us_national_usd_gal") else 0
             if path == "incidents.json":
                 return len(d.get("incidents", []))
         except Exception:

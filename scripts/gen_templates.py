@@ -247,6 +247,8 @@ write("index",
       <a class="stat" href="/fuel-prices/"><div class="l">Dearest</div><div class="v up">{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></a>
       <a class="stat" href="/fuel-prices/"><div class="l">Spread</div><div class="v">{{fuel.spread}}</div><div class="s">{{fuel.low_code}} to {{fuel.high_code}}</div></a>
       <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · BoC</div></a>
+      <a class="stat" href="/fuel-prices/"><div class="l">US diesel</div><div class="v">{{eia.us_national_cpl}}</div><div class="s">¢/L · ${{eia.us_national_usd_gal}}/gal</div></a>
+      <a class="stat" href="/methodology/nmdi/"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></a>
     </div>
   </section>
 ''' + sponsor("sponsor_page") + '''
@@ -325,6 +327,19 @@ write("fuel-prices",
     <!--LOOP:provinces--><div class="r"><span class="k">{{name}}<small>{{code}}</small></span><span class="v">{{price}} &nbsp; <span class="{{change_class}}">{{change}}</span> &nbsp; <span class="{{vs_class}}">{{vs_national}}</span></span></div><!--/LOOP:provinces-->
     </div>
     <p class="note">Prices include all federal and provincial fuel, carbon, and sales taxes. Yukon and the Northwest Territories are surveyed but excluded from the index; the reasoning is on the <a href="/methodology/nmdi/">methodology page</a>.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>North American diesel</h2><p>The cross-border index, and the gap Canadian carriers watch.</p></div>
+    <div class="stats">
+      <div class="stat"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></div>
+      <div class="stat"><div class="l">US national</div><div class="v">{{eia.us_national_cpl}}</div><div class="s">¢/L · ${{eia.us_national_usd_gal}}/gal</div></div>
+      <div class="stat"><div class="l">Canada vs US</div><div class="v">{{eia.ca_us_gap}}</div><div class="s">¢/L · {{eia.gap_word}}</div></div>
+    </div>
+    <div class="rows">
+    <!--LOOP:eia.padds_list--><div class="r"><span class="k">{{label}}<small>US PADD region</small></span><span class="v">{{cpl}} ¢/L · ${{usd_gal}}/gal</span></div><!--/LOOP:eia.padds_list-->
+    </div>
+    <p class="note">US figures are the EIA weekly retail diesel survey (ultra-low sulfur, on-highway), converted from USD per gallon at the Bank of Canada rate ({{fx.usd_cad}}). The North American index is the mean of the Canadian NMDI and the US national average — each country counts once. <a href="/methodology/nmdi/">Methodology</a></p>
   </section>
 
   <section class="sec">
@@ -829,6 +844,11 @@ write("methodology",
     <h2 style="margin-top:32px">Method</h2>
     <p class="note" style="margin-top:8px">Each provincial figure is the unweighted arithmetic mean of NRCan survey city prices within that province. The number of survey cities varies by province. The national index is the unweighted mean of the ten provincial figures. It is not population-weighted or freight-weighted; every province counts equally.</p>
     <p class="note">An unweighted mean of provincial means is simpler to verify and harder to manipulate than a weighting scheme, and it changes only when diesel prices change, not when a weighting assumption changes.</p>
+
+    <h2 style="margin-top:32px">North American Diesel Index</h2>
+    <p class="note" style="margin-top:8px">The North American Diesel Index (NADI) combines the Canadian NMDI with the United States national on-highway diesel average. It is the simple arithmetic mean of the two — each country counts once, and the index is not consumption-weighted or freight-weighted.</p>
+    <p class="note">The US figure is the U.S. Energy Information Administration weekly retail diesel survey (ultra-low sulfur, on-highway), published in US dollars per gallon. It is converted to Canadian cents per litre at the Bank of Canada USD/CAD rate published for the same day, using 1 US gallon = 3.785411784 litres.</p>
+    <p class="note">Equal-country weighting is the deliberate choice: it treats Canada and the United States as two markets rather than scaling by population or consumption, so the index does not collapse into a US price with a Canadian footnote. Canada is higher than the United States in every print since the index began, driven by carbon pricing and provincial fuel taxes.</p>
 
     <h2 style="margin-top:32px">Source</h2>
     <p class="note" style="margin-top:8px">Natural Resources Canada weekly diesel survey, RSS productID=5, collected by Kalibrate Technologies under contract to NRCan. All figures are inclusive of federal and provincial fuel taxes, carbon taxes, and sales taxes. The federal excise on diesel, normally 4 cents per litre, is suspended nationwide from 20 April to 7 September 2026 per Finance Canada and CBSA Customs Notice 26-11.</p>

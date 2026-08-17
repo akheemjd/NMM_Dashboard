@@ -72,6 +72,7 @@ raw_inc = load("incidents.json")
 raw_theft = load("theft.json")
 raw_market = load("market.json")
 raw_news = load("news.json")
+raw_eia = load("eia_diesel.json")
 raw_dist = load("distances.json")
 
 ts = now_fmt()
@@ -335,6 +336,60 @@ try:
 except (TypeError, ValueError):
     fx["range_pct"] = "—"
 
+# ===== EIA / North American Diesel Index =====
+# US on-highway diesel from EIA (USD/gal), converted to CAD c/L at the current
+# BoC rate, then combined with the NMDI. Equal-country methodology:
+# NADI = (NMDI + US national) / 2 — Canada and the US each count once.
+L_PER_GAL = 3.785411784
+eia = {}
+_eia_usd = raw_eia.get("us_national_usd_gal")
+if _eia_usd is not None and fx_rate:
+    _eia_usd = float(_eia_usd)
+    _eia_cpl = _eia_usd * fx_rate * 100 / L_PER_GAL
+    _nadi = (fuel_nat + _eia_cpl) / 2
+    _gap = fuel_nat - _eia_cpl
+    _padds = raw_eia.get("padds_usd_gal", {}) or {}
+    _padds_cpl = {k: round(float(v) * fx_rate * 100 / L_PER_GAL, 1) for k, v in _padds.items()}
+    _PADD_LABELS = {
+        "east_coast": "East Coast (PADD 1)",
+        "midwest": "Midwest (PADD 2)",
+        "gulf_coast": "Gulf Coast (PADD 3)",
+        "rocky_mountain": "Rocky Mountain (PADD 4)",
+        "west_coast": "West Coast (PADD 5)",
+    }
+    padds_list = [
+        {"label": _PADD_LABELS.get(k, k), "usd_gal": f"{v:.3f}", "cpl": f"{_padds_cpl.get(k, 0):.1f}"}
+        for k, v in _padds.items()
+    ]
+    eia = {
+        "us_national_usd_gal": f"{_eia_usd:.3f}",
+        "us_national_cpl": f"{_eia_cpl:.1f}",
+        "nadi": f"{_nadi:.1f}",
+        "ca_us_gap": f"{_gap:.1f}",
+        "ca_higher": _gap > 0,
+        "gap_word": "Canada higher" if _gap > 0 else ("US higher" if _gap < 0 else "level with"),
+        "date": raw_eia.get("date", ""),
+        "padds_usd_gal": _padds,
+        "padds_cpl": _padds_cpl,
+        "padds_list": padds_list,
+        "source": "U.S. Energy Information Administration weekly retail diesel survey",
+    }
+else:
+    # EIA unavailable — honest absence, never a fabricated number.
+    eia = {
+        "us_national_usd_gal": "n/a",
+        "us_national_cpl": "n/a",
+        "nadi": "n/a",
+        "ca_us_gap": "n/a",
+        "ca_higher": True,
+        "gap_word": "",
+        "date": "",
+        "padds_usd_gal": {},
+        "padds_cpl": {},
+        "padds_list": [],
+        "source": "",
+    }
+
 # ===== INCIDENTS =====
 # Already sorted above
 import time
@@ -459,7 +514,7 @@ home = {
     "sponsor_news": sponsor_news,
 }
 
-write("home.norm", home)
+write("home.norm", {**home, "eia": eia})
 write("fuel.norm", {"fuel": fuel, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 write("border.norm", {"border": border, "border_rows": border_rows, "crossings": crossings_for_page, "updated_at": ts,
     "updated_iso": ts_iso, "build_version": build_version, "captured_at": ts})
@@ -554,7 +609,7 @@ write("market.norm", {
 })
 write("news.norm", {"news": news, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 
-write("fuel.norm", {"fuel": fuel, "fx": fx, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
+write("fuel.norm", {"fuel": fuel, "fx": fx, "eia": eia, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 
 # Snapshots — idempotent, per calendar day.
 # Diesel is keyed to the NRCan print date (not the build date) so the

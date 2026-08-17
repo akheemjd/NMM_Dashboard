@@ -31,6 +31,7 @@ TRACKED = [
     "incidents.json",
     "market.json",
     "news.json",
+    "eia_diesel.json",
 ]
 
 
