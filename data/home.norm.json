@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-17 20:16",
-  "updated_iso": "2026-08-17T20:16:17+00:00",
-  "build_version": "1786997777",
+  "updated_at": "2026-08-17 21:11",
+  "updated_iso": "2026-08-17T21:11:08+00:00",
+  "build_version": "1787001068",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 5,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "7 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "228.4",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 17,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 427, HWY 124",
+    "status_line": "HWY 144, QEW, HWY 58",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at WARDEN AVE, Toronto. Left shoulder\u2026",
+        "road": "HWY 144",
+        "what": "Collision on HWY 144 Both Directions  between CARTIER E ENT, Cartier and SEC\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Northbound COLLECTOR at DUNDAS STREET, Toronto. Left lane\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at WEST MALL/EVANS AVE, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -258,15 +258,17 @@
   "border_rows": [
     {
       "name": "Ambassador Bridge",
+      "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:09 EDT"
+      "captured_at": "17:04 EDT"
     },
     {
       "name": "Blue Water Bridge",
+      "slug": "blue-water-bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
@@ -276,24 +278,27 @@
     },
     {
       "name": "Peace Bridge",
+      "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
+      "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "7 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
+      "slug": "lacolle-border-crossing",
       "sub": "Lacolle, QC \u2014 Champlain, NY \u00b7 A-15 / I-87 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
@@ -303,39 +308,43 @@
     },
     {
       "name": "Coutts-Sweetgrass",
+      "slug": "coutts-sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:03 MDT"
+      "captured_at": "15:00 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
+      "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
       "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 PDT"
+      "captured_at": "14:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
+      "slug": "emerson-pembina",
       "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
+      "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "16:15 EDT"
     }
   ],
   "market": [
@@ -367,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Truck News",
-      "headline": "NMFTA research links trailer cybersecurity vulnerabilities to tractor safety systems",
-      "url": "https://www.trucknews.com/security/nmfta-research-links-trailer-cybersecurity-vulnerabilities-to-tractor-safety-systems/1003220119/"
+      "category": "The Trucker",
+      "headline": "CDL training without geographic limits: FleetForce is bringing driver training directly to carriers where it\u2019s needed mo",
+      "url": "https://www.thetrucker.com/trucking-news/sponsored/cdl-training-without-geographic-limits-fleetforce-is-bringing-driver-training-directly-to-carriers-where-its-needed-most"
     },
     {
-      "category": "Truck News",
-      "headline": "ECONOMIC TRUCKING TRENDS: Mixed messages from spot market while shippers see some relief",
-      "url": "https://www.trucknews.com/business-management/economic-trucking-trends-mixed-messages-from-spot-market-while-shippers-see-some-relief/1003220111/"
+      "category": "The Trucker",
+      "headline": "Truckstop, FTR: Spot rates declined more than usual in latest week",
+      "url": "https://www.thetrucker.com/trucking-news/business/truckstop-ftr-spot-rates-declined-more-than-usual-in-latest-week"
     }
   ],
   "theft_home_json": "[]",
@@ -412,26 +421,31 @@
     },
     "padds_list": [
       {
+        "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "5.193",
         "cpl": "190.2"
       },
       {
+        "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "5.181",
         "cpl": "189.8"
       },
       {
+        "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "5.044",
         "cpl": "184.7"
       },
       {
+        "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "5.271",
         "cpl": "193.1"
       },
       {
+        "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "6.033",
         "cpl": "221.0"
