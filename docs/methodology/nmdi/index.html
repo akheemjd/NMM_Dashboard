@@ -14,10 +14,10 @@
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/methodology/nmdi/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-08-16T23:07:41+00:00">
+<meta name="build" content="2026-08-17T15:45:21+00:00">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/nm.css?v=1786921661">
+<link rel="stylesheet" href="/assets/nm.css?v=1786981521">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"NMDI methodology","item":"https://dashboard.northernmilemedia.com/methodology/nmdi/"}]},{"@type":"Dataset","@id":"https://dashboard.northernmilemedia.com/#nmdi","name":"Northern Mile Diesel Index (NMDI)","description":"Methodology, population, source, cadence, and revision history for the Northern Mile Diesel Index.","url":"https://dashboard.northernmilemedia.com/methodology/nmdi/","creator":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true}]}
 </script>
@@ -50,6 +50,11 @@
     <p class="note" style="margin-top:8px">Each provincial figure is the unweighted arithmetic mean of NRCan survey city prices within that province. The number of survey cities varies by province. The national index is the unweighted mean of the ten provincial figures. It is not population-weighted or freight-weighted; every province counts equally.</p>
     <p class="note">An unweighted mean of provincial means is simpler to verify and harder to manipulate than a weighting scheme, and it changes only when diesel prices change, not when a weighting assumption changes.</p>
 
+    <h2 style="margin-top:32px">North American Diesel Index</h2>
+    <p class="note" style="margin-top:8px">The North American Diesel Index (NADI) combines the Canadian NMDI with the United States national on-highway diesel average. It is the simple arithmetic mean of the two — each country counts once, and the index is not consumption-weighted or freight-weighted.</p>
+    <p class="note">The US figure is the U.S. Energy Information Administration weekly retail diesel survey (ultra-low sulfur, on-highway), published in US dollars per gallon. It is converted to Canadian cents per litre at the Bank of Canada USD/CAD rate published for the same day, using 1 US gallon = 3.785411784 litres.</p>
+    <p class="note">Equal-country weighting is the deliberate choice: it treats Canada and the United States as two markets rather than scaling by population or consumption, so the index does not collapse into a US price with a Canadian footnote. Canada is higher than the United States in every print since the index began, driven by carbon pricing and provincial fuel taxes.</p>
+
     <h2 style="margin-top:32px">Source</h2>
     <p class="note" style="margin-top:8px">Natural Resources Canada weekly diesel survey, RSS productID=5, collected by Kalibrate Technologies under contract to NRCan. All figures are inclusive of federal and provincial fuel taxes, carbon taxes, and sales taxes. The federal excise on diesel, normally 4 cents per litre, is suspended nationwide from 20 April to 7 September 2026 per Finance Canada and CBSA Customs Notice 26-11.</p>
     <p class="note">This dashboard contains information licensed under the <a href="https://open.canada.ca/en/open-government-licence-canada" rel="license">Open Government Licence – Canada</a>. Diesel prices originate with Natural Resources Canada.</p>
@@ -73,9 +78,9 @@
 <footer class="ft"><div class="wrap">
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
   <nav class="flinks" aria-label="Footer"><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></nav>
-  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/">Subscribe free</a><span>Updated 2026-08-16 23:07 UTC</span></div>
+  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/">Subscribe free</a><span>Updated 2026-08-17 15:45 UTC</span></div>
 </div></footer>
 
-<script src="/assets/nm.js?v=1786921661"></script>
+<script src="/assets/nm.js?v=1786981521"></script>
 </body>
 </html>
