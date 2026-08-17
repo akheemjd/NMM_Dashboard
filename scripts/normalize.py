@@ -342,8 +342,19 @@ except (TypeError, ValueError):
 # NADI = (NMDI + US national) / 2 — Canada and the US each count once.
 L_PER_GAL = 3.785411784
 eia = {}
+# EIA staleness guard — a stale US print must not silently feed the NADI.
+# Degrade to "n/a" (honest absence) rather than refuse the whole build: the
+# Canadian side is independent and still valid on its own.
+_eia_stale = True
+_eia_date_raw = raw_eia.get("date")
+if _eia_date_raw:
+    try:
+        _eia_age = (_dt.now(_tz.utc).date() - _dt.strptime(_eia_date_raw, "%Y-%m-%d").date()).days
+        _eia_stale = _eia_age > 10
+    except (ValueError, TypeError):
+        _eia_stale = True
 _eia_usd = raw_eia.get("us_national_usd_gal")
-if _eia_usd is not None and fx_rate:
+if _eia_usd is not None and fx_rate and not _eia_stale:
     _eia_usd = float(_eia_usd)
     _eia_cpl = _eia_usd * fx_rate * 100 / L_PER_GAL
     _nadi = (fuel_nat + _eia_cpl) / 2
