@@ -28,6 +28,8 @@ python3 scripts/collector.py && python3 scripts/normalize.py && python3 scripts/
 # deploy alongside the code that needs it (build_templates also copies
 # assets; running this first keeps both in agreement).
 mkdir -p docs/assets && cp -r assets/. docs/assets/
+# Favicon also at the site root for the browser's default /favicon.ico request.
+cp assets/favicon.ico docs/favicon.ico
 
 python3 scripts/gen_templates.py && python3 scripts/build_chart_data.py && python3 scripts/build_templates.py && python3 scripts/build_provinces.py && python3 scripts/build_city_pages.py && python3 scripts/build_us_pages.py && python3 scripts/build_border_pages.py && python3 scripts/build_og.py && python3 scripts/build_sitemap.py && python3 scripts/check_coherence.py 2>&1
 

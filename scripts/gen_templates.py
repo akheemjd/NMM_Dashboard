@@ -60,6 +60,9 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="robots" content="index,follow,max-image-preview:large">
