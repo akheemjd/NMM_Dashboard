@@ -37,6 +37,7 @@ NAV = [
     ("/market-pulse/", "Market"),
     ("/industry-news/", "News"),
     ("/methodology/nmdi/", "Methodology"),
+    ("/press/", "Press"),
 ]
 
 ORG_LD = ('{"@type":"Organization","@id":"' + ORG_URL + '/#org","name":"Northern Mile Media",'
@@ -378,25 +379,27 @@ calc_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Fuel cost calc
 
 CALCJS = '''<script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
-var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap");
+var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost");
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
-var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value);
-if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice"].forEach(function(i){$(i).textContent="\\u2014";});return;}
-var litres=d/100*b,total=litres*(cents/100);
+var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
+if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice","rOpMi","rFloor"].forEach(function(i){$(i).textContent="\\u2014";});return;}
+var litres=d/100*b,total=litres*(cents/100),perMi=total/d*1.609344,floor=perMi+op;
 $("rLitres").textContent=litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L";
 $("rTotal").textContent=money(total);$("rPerKm").textContent=money(total/d)+" /km";
-$("rPerMi").textContent=money(total/d*1.609344)+" /mi";
+$("rPerMi").textContent=money(perMi)+" /mi";
+$("rOpMi").textContent=money(op)+" /mi";
+$("rFloor").textContent=money(floor)+" /mi";
 var o=prov.options[prov.selectedIndex];
 $("rPrice").textContent=cents.toFixed(1)+"\\u00a2/L \\u00b7 "+(isC?"your price":o.getAttribute("data-name"));}
-[dist,burn,prov,custom].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
+[dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
 calc();})();
 </script>
 '''
 
 write("fuel-cost-calculator",
- head("Truck Fuel Cost Calculator (Canada) — Diesel at {{fuel.national_diesel}}¢/L | Northern Mile",
-      "Work out what a trip costs in diesel using current Canadian prices. Set your own fuel consumption, pick a province, and see cost per trip and per kilometre. Prices from the NRCan weekly survey, print {{fuel.print_date}}.",
+ head("Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile",
+      "Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print {{fuel.print_date}}.",
       "/fuel-cost-calculator/", "og.jpg", calc_ld)
  + '''
   <section class="hero">
@@ -415,16 +418,19 @@ write("fuel-cost-calculator",
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
       <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
+      <div class="fld"><label for="opcost">Fixed operating cost</label><div class="inp"><input id="opcost" type="number" inputmode="decimal" min="0" step="0.01" value="1.85"><span class="unit">$/mi</span></div><p class="hint">Truck payment, insurance, driver pay, maintenance — your all-in cost per mile before fuel. Pull it from your own books.</p></div>
     </div>
     <div class="out">
-      <div class="big"><div class="ol">Trip fuel cost</div><div class="ov" id="rTotal">—</div></div>
+      <div class="big"><div class="ol">Rate floor</div><div class="ov" id="rFloor">—</div></div>
       <div class="rows">
+        <div class="r"><span class="k">Fuel per mile</span><span class="v" id="rPerMi">—</span></div>
+        <div class="r"><span class="k">Operating per mile</span><span class="v" id="rOpMi">—</span></div>
+        <div class="r"><span class="k">Trip fuel cost</span><span class="v" id="rTotal">—</span></div>
         <div class="r"><span class="k">Litres burned</span><span class="v" id="rLitres">—</span></div>
         <div class="r"><span class="k">Cost per kilometre</span><span class="v" id="rPerKm">—</span></div>
-        <div class="r"><span class="k">Cost per mile</span><span class="v" id="rPerMi">—</span></div>
         <div class="r"><span class="k">Price used</span><span class="v" id="rPrice">—</span></div>
       </div>
-      <p class="note">Diesel only. Excludes tolls, maintenance, driver pay, insurance, and equipment. <a href="/fuel-prices/">See prices by province</a></p>
+      <p class="note">Rate floor = fuel per mile + your fixed operating cost per mile. Below this number, the load loses money. Excludes tolls and deadhead. <a href="/fuel-prices/">See prices by province</a></p>
     </div>
   </div>
 ''' + sponsor("sponsor_calc") + subscribe("Know before you fill",
@@ -436,6 +442,7 @@ write("fuel-cost-calculator",
         <div class="r"><span class="k">Litres burned<small>distance ÷ 100 × consumption</small></span><span class="v">L</span></div>
         <div class="r"><span class="k">Trip cost<small>litres × price per litre</small></span><span class="v">$</span></div>
         <div class="r"><span class="k">Cost per kilometre<small>trip cost ÷ distance</small></span><span class="v">$/km</span></div>
+        <div class="r"><span class="k">Rate floor<small>fuel per mile + operating per mile</small></span><span class="v">$/mi</span></div>
       </div></div>
       <div class="reading">
         <p class="note" style="margin-top:0">The prices offered are retail survey averages from NRCan, inclusive of all taxes. They are not rack prices and not what a fleet on a fuel card pays, which is usually lower. If you know your card price, enter it.</p>
@@ -872,6 +879,51 @@ write("methodology",
 ''' + foot())
 
 print("methodology done")
+
+# ═══ Press ═════════════════════════════════════════════════════════════
+write("press",
+ head("Press & Data — Citable Canadian Trucking Figures | Northern Mile",
+      "For journalists: citable Canadian fuel, exchange-rate, and border-wait figures with sources and dates attached. Story angles, how to cite us, and press contact.",
+      "/press/", "og.jpg",
+      '{"@context":"https://***@graph":[' + crumb("Press & data", "/press/") + ',' +
+      '{"@type":"WebPage","name":"Press & Data","description":"Citable Canadian trucking data for journalists, from Northern Mile Media.","url":"' + BASE + '/press/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">For journalists</span>
+    <h1>Press &amp; data</h1>
+    <p class="stand">Every figure we publish carries its source, its date, and a copy-paste citation. Use the numbers. Link the methodology. That is the whole arrangement.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Story angles</h2><p>Numbers worth a headline, updated weekly.</p></div>
+    <div class="rows">
+      <div class="r"><span class="k">The Canada–US diesel gap<small>Canada vs the US national average, in cents per litre</small></span><span class="v">{{eia.ca_us_gap}}¢/L · {{eia.gap_word}}</span></div>
+      <div class="r"><span class="k">North American Diesel Index<small>the mean of both countries — each counts once</small></span><span class="v">{{eia.nadi}}¢/L</span></div>
+      <div class="r"><span class="k">National diesel, weekly move<small>NRCan weekly survey, ten provinces</small></span><span class="v">{{fuel.national_diesel}}¢/L · {{fuel.change_7d}} 7d</span></div>
+      <div class="r"><span class="k">USD/CAD<small>Bank of Canada daily observation</small></span><span class="v">{{fx.usd_cad}}</span></div>
+      <div class="r"><span class="k">Rate floor<small>fuel + fixed operating cost, per mile</small></span><span class="v"><a href="/fuel-cost-calculator/">Calculator</a></span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>How to cite us</h2></div>
+    <div class="cite">
+      <div class="cl">Standard citation</div>
+      <q id="citation">Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L national average, ten provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
+      <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">Methodology</a></div>
+    </div>
+    <p class="note">Every figure on the dashboard carries its own citation in the same format. We name the primary source (Natural Resources Canada, Bank of Canada, CBSA, EIA) and the observation date — never an un-dated number.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Contact</h2></div>
+    <div class="reading">
+      <p class="note" style="margin-top:0">For data questions, chart embeds with attribution, or an advance look at the weekly figures:</p>
+      <p class="note"><a href="mailto:northernmilemedia@gmail.com">northernmilemedia@gmail.com</a></p>
+    </div>
+  </section>
+''' + subscribe("The weekly numbers, before they're news",
+   "Where diesel moved, what the border looked like, and what the dollar did — every Wednesday morning. One email.") + foot())
 
 # ═══ Province page template ═══════════════════════════════════════════
 # One template, rendered per province by build_provinces.py. Uses the same shell.

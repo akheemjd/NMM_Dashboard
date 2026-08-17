@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Truck Fuel Cost Calculator (Canada) — Diesel at 228.4¢/L | Northern Mile</title>
-<meta name="description" content="Work out what a trip costs in diesel using current Canadian prices. Set your own fuel consumption, pick a province, and see cost per trip and per kilometre. Prices from the NRCan weekly survey, print Tue, 11 Aug 2026.">
+<title>Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile</title>
+<meta name="description" content="Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print Tue, 11 Aug 2026.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Northern Mile Media">
-<meta property="og:title" content="Truck Fuel Cost Calculator (Canada) — Diesel at 228.4¢/L | Northern Mile">
-<meta property="og:description" content="Work out what a trip costs in diesel using current Canadian prices. Set your own fuel consumption, pick a province, and see cost per trip and per kilometre. Prices from the NRCan weekly survey, print Tue, 11 Aug 2026.">
+<meta property="og:title" content="Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile">
+<meta property="og:description" content="Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print Tue, 11 Aug 2026.">
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -32,7 +32,7 @@
   <a class="mark" href="/"><span class="dot" aria-hidden="true"></span><b>Northern Mile</b><span>Canadian trucking data</span></a>
 </div></header>
 
-<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Diesel</a><a href="/us-diesel/">US diesel</a><a href="/fuel-cost-calculator/" class="on" aria-current="page">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></div></nav>
+<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/">Home</a><a href="/fuel-prices/">Diesel</a><a href="/us-diesel/">US diesel</a><a href="/fuel-cost-calculator/" class="on" aria-current="page">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a></div></nav>
 
 <main class="wrap" id="main">
 
@@ -52,16 +52,19 @@
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
       <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="228.4"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
+      <div class="fld"><label for="opcost">Fixed operating cost</label><div class="inp"><input id="opcost" type="number" inputmode="decimal" min="0" step="0.01" value="1.85"><span class="unit">$/mi</span></div><p class="hint">Truck payment, insurance, driver pay, maintenance — your all-in cost per mile before fuel. Pull it from your own books.</p></div>
     </div>
     <div class="out">
-      <div class="big"><div class="ol">Trip fuel cost</div><div class="ov" id="rTotal">—</div></div>
+      <div class="big"><div class="ol">Rate floor</div><div class="ov" id="rFloor">—</div></div>
       <div class="rows">
+        <div class="r"><span class="k">Fuel per mile</span><span class="v" id="rPerMi">—</span></div>
+        <div class="r"><span class="k">Operating per mile</span><span class="v" id="rOpMi">—</span></div>
+        <div class="r"><span class="k">Trip fuel cost</span><span class="v" id="rTotal">—</span></div>
         <div class="r"><span class="k">Litres burned</span><span class="v" id="rLitres">—</span></div>
         <div class="r"><span class="k">Cost per kilometre</span><span class="v" id="rPerKm">—</span></div>
-        <div class="r"><span class="k">Cost per mile</span><span class="v" id="rPerMi">—</span></div>
         <div class="r"><span class="k">Price used</span><span class="v" id="rPrice">—</span></div>
       </div>
-      <p class="note">Diesel only. Excludes tolls, maintenance, driver pay, insurance, and equipment. <a href="/fuel-prices/">See prices by province</a></p>
+      <p class="note">Rate floor = fuel per mile + your fixed operating cost per mile. Below this number, the load loses money. Excludes tolls and deadhead. <a href="/fuel-prices/">See prices by province</a></p>
     </div>
   </div>
 
@@ -82,6 +85,7 @@
         <div class="r"><span class="k">Litres burned<small>distance ÷ 100 × consumption</small></span><span class="v">L</span></div>
         <div class="r"><span class="k">Trip cost<small>litres × price per litre</small></span><span class="v">$</span></div>
         <div class="r"><span class="k">Cost per kilometre<small>trip cost ÷ distance</small></span><span class="v">$/km</span></div>
+        <div class="r"><span class="k">Rate floor<small>fuel per mile + operating per mile</small></span><span class="v">$/mi</span></div>
       </div></div>
       <div class="reading">
         <p class="note" style="margin-top:0">The prices offered are retail survey averages from NRCan, inclusive of all taxes. They are not rack prices and not what a fleet on a fuel card pays, which is usually lower. If you know your card price, enter it.</p>
@@ -94,25 +98,27 @@
 
 <footer class="ft"><div class="wrap">
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
-  <nav class="flinks" aria-label="Footer"><a href="/fuel-prices/">Diesel</a><a href="/us-diesel/">US diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a></nav>
+  <nav class="flinks" aria-label="Footer"><a href="/fuel-prices/">Diesel</a><a href="/us-diesel/">US diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a></nav>
   <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-08-17 20:49 UTC</span></div>
 </div></footer>
 
 <script src="/assets/nm.js?v=1786999783"></script>
 <script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
-var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap");
+var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost");
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
-var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value);
-if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice"].forEach(function(i){$(i).textContent="\u2014";});return;}
-var litres=d/100*b,total=litres*(cents/100);
+var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
+if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice","rOpMi","rFloor"].forEach(function(i){$(i).textContent="\u2014";});return;}
+var litres=d/100*b,total=litres*(cents/100),perMi=total/d*1.609344,floor=perMi+op;
 $("rLitres").textContent=litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L";
 $("rTotal").textContent=money(total);$("rPerKm").textContent=money(total/d)+" /km";
-$("rPerMi").textContent=money(total/d*1.609344)+" /mi";
+$("rPerMi").textContent=money(perMi)+" /mi";
+$("rOpMi").textContent=money(op)+" /mi";
+$("rFloor").textContent=money(floor)+" /mi";
 var o=prov.options[prov.selectedIndex];
 $("rPrice").textContent=cents.toFixed(1)+"\u00a2/L \u00b7 "+(isC?"your price":o.getAttribute("data-name"));}
-[dist,burn,prov,custom].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
+[dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
 calc();})();
 </script>
 </body>

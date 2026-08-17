@@ -165,6 +165,7 @@ def build_all():
         "industry-news": load_json("news.norm"),
         "fuel-cost-calculator": {**load_json("fx.norm"), **load_json("fuel.norm")},
         "methodology": load_json("home.norm"),
+        "press": {**load_json("fx.norm"), **load_json("fuel.norm")},
     }
 
     # Chart data for home + fuel. chart_data_json is a JSON string inserted raw
