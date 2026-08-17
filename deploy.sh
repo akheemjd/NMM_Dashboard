@@ -29,7 +29,7 @@ python3 scripts/collector.py && python3 scripts/normalize.py && python3 scripts/
 # assets; running this first keeps both in agreement).
 mkdir -p docs/assets && cp -r assets/. docs/assets/
 
-python3 scripts/build_chart_data.py && python3 scripts/build_templates.py && python3 scripts/build_provinces.py && python3 scripts/build_og.py && python3 scripts/build_sitemap.py && python3 scripts/check_coherence.py 2>&1
+python3 scripts/build_chart_data.py && python3 scripts/build_templates.py && python3 scripts/build_provinces.py && python3 scripts/build_city_pages.py && python3 scripts/build_og.py && python3 scripts/build_sitemap.py && python3 scripts/check_coherence.py 2>&1
 
 # 2. Health check — freshness-based for the four sources with an honest date signal
 python3 -c "

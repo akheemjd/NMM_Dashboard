@@ -938,7 +938,7 @@ city_body = (
 ''' + subscribe("{{name}} diesel, every week",
    "Where {{name}} and the rest of {{prov_name}} moved, and what it means for cost per kilometre. One email on Wednesday mornings.")
  + '''
-  <p class="note"><a href="/diesel-prices/{{prov_slug}}/">← {{prov_name}} overview</a> · <a href="/fuel-prices/">All ten provinces</a></p>
+  <p class="note"><!--IF:has_province_page--><a href="/diesel-prices/{{prov_slug}}/">← {{prov_name}} overview</a> · <!--/IF:has_province_page--><a href="/fuel-prices/">All ten provinces</a></p>
 ''' + foot())
 
 with open(os.path.join(OUT, "city.template.html"), "w") as f:

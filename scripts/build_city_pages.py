@@ -1,17 +1,24 @@
 #!/usr/bin/env python3
 """City page builder — programmatic SEO layer.
 
-Renders templates/city.template.html once per NRCan survey city, writing
+Renders templates/city.template.html once per NRCan survey city that maps to
+one of the ten index provinces, writing
 docs/diesel-prices/<province-slug>/<city-slug>/index.html.
 
+Province metadata is derived from the ten-province maps (PROVINCE_NAMES /
+SLUGS) and the NRCan sidecar, NOT from provinces.norm.json — which is
+deliberately limited to the provinces that carry a dedicated in-depth page
+(ON, AB). City pages span all ten provinces regardless.
+
 Each city page must carry a writer-generated context paragraph
-(content/cities/<slug>.md) so the page is not thin. Like the province pages,
-a missing or too-short prose block is a build failure, not a warning.
+(content/cities/<slug>.md). A missing or too-short prose block is a build
+failure, not a warning.
 """
 import json
 import os
 import re
 import sys
+from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -22,13 +29,22 @@ CONTENT = os.path.join(ROOT, "content", "cities")
 
 sys.path.insert(0, HERE)
 from build_templates import fill  # noqa: E402 — reuse the one template engine
-from collect_nrcan_diesel import CITY_PROVINCE  # noqa: E402
+from collect_nrcan_diesel import CITY_PROVINCE, CITY_PROVINCE_NORM, _norm  # noqa: E402
+from normalize_provinces import PROVINCE_NAMES, SLUGS  # noqa: E402
 
 MIN_PROSE_CHARS = 400  # ~60 words; below this the page is thin
+
+# Only these provinces have a dedicated in-depth page to link back to.
+DEDICATED_PAGE_PROVINCES = {"AB", "ON"}
 
 
 def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def load_json(name):
+    with open(os.path.join(DATA, name)) as f:
+        return json.load(f)
 
 
 def load_prose(slug):
@@ -49,69 +65,68 @@ def load_prose(slug):
 
 
 def main():
-    nrcan = json.load(open(os.path.join(DATA, "nrcan_diesel.json")))
+    nrcan = load_json("nrcan_diesel.json")
     prices = nrcan.get("prices", {})
 
-    pn = json.load(open(os.path.join(DATA, "provinces.norm.json")))
-    provinces = pn.get("provinces", {})
-    national = float(pn.get("national", 0) or 0)
+    fuel = load_json("fuel.json")
+    national = float(fuel.get("diesel_national_avg", 0) or 0)
+    print_date = fuel.get("print_date", "")
+    build_version = fuel.get("build_version", "")
 
-    tmpl_path = os.path.join(TMPL, "city.template.html")
-    with open(tmpl_path) as f:
+    home = load_json("home.norm.json")
+    updated_at = home.get("updated_at", "")
+    updated_iso = home.get("updated_iso", "")
+
+    with open(os.path.join(TMPL, "city.template.html")) as f:
         template = f.read()
 
-    # Group cities by province, compute vs_prov / vs_national / position.
-    by_prov = {}
+    # Group by province; keep only cities that map to a real index province.
+    by_prov = defaultdict(list)
     for city, price in prices.items():
-        code = CITY_PROVINCE.get(city)
-        if code is None or code not in provinces:
+        code = CITY_PROVINCE_NORM.get(_norm(city))
+        if code is None or code not in PROVINCE_NAMES:
             continue
-        by_prov.setdefault(code, []).append((city, float(price)))
+        by_prov[code].append((city, float(price)))
 
     seen_slugs = {}
     built = []
 
-    for code, cities in sorted(by_prov.items()):
-        prov = provinces[code]
-        prov_price = float(prov.get("price", 0))
-        prov_name = prov.get("name", code)
-        prov_slug = prov.get("slug", slugify(prov_name))
+    for code in sorted(by_prov):
+        cities = sorted(by_prov[code], key=lambda cv: cv[1])  # cheapest first
+        prov_price = round(sum(p for _, p in cities) / len(cities), 1)
+        prov_name = PROVINCE_NAMES[code]
+        prov_slug = SLUGS[code]
+        has_prov_page = code in DEDICATED_PAGE_PROVINCES
+        n = len(cities)
 
-        ordered = sorted(cities, key=lambda cv: cv[1])  # cheapest first
-        n = len(ordered)
         siblings = []
-        for i, (city, price) in enumerate(ordered):
+        for city, price in cities:
             vs_prov = round(price - prov_price, 1)
             siblings.append({
                 "city": city,
                 "price": f"{price:.1f}",
                 "vs_prov": (f"+{vs_prov:.1f}" if vs_prov >= 0 else f"{vs_prov:.1f}"),
                 "vs_class": "lo" if vs_prov < 0 else "hi",
-                "pos": i,  # 0 = cheapest
             })
 
         for sib in siblings:
             city = sib["city"]
-            price = float(sib["price"])
-            slug = slugify(city)
+            slug = slugify(_norm(city))
             if slug in seen_slugs and seen_slugs[slug] != code:
                 raise ValueError(
                     f"city slug collision: '{slug}' maps to both "
-                    f"{seen_slugs[slug]} and {code} — use a disambiguated filename"
+                    f"{seen_slugs[slug]} and {code}"
                 )
             seen_slugs[slug] = code
 
-            vs_national = round(price - national, 1)
-            pos_word = ("cheapest" if sib["pos"] == 0
-                        else "dearest" if sib["pos"] == n - 1
-                        else f"{sib['pos'] + 1} of {n}")
-
+            vs_national = round(float(sib["price"]) - national, 1)
             data = {
                 "name": city,
                 "slug": slug,
                 "prov_name": prov_name,
                 "prov_slug": prov_slug,
-                "price": f"{price:.1f}",
+                "has_province_page": has_prov_page,
+                "price": sib["price"],
                 "prov_price": f"{prov_price:.1f}",
                 "national": f"{national:.1f}",
                 "vs_prov": sib["vs_prov"],
@@ -119,12 +134,11 @@ def main():
                 "vs_national_abs": f"{abs(vs_national):.1f}",
                 "vs_national_word": "below" if vs_national < 0 else "above",
                 "vs_national_class": "lo" if vs_national < 0 else "hi",
-                "position": pos_word,
                 "city_count": n,
-                "print_date": prov.get("print_date", ""),
-                "updated_at": pn.get("updated_at", ""),
-                "updated_iso": pn.get("updated_iso", ""),
-                "build_version": pn.get("build_version", ""),
+                "print_date": print_date,
+                "updated_at": updated_at,
+                "updated_iso": updated_iso,
+                "build_version": build_version,
                 "prose": load_prose(slug),
                 "siblings": siblings,
             }
@@ -140,11 +154,11 @@ def main():
                 f.write(html)
             built.append((prov_slug, slug))
 
-    print(f"Built {len(built)} city pages")
-    for prov_slug, slug in built[:8]:
+    print(f"Built {len(built)} city pages across {len(by_prov)} provinces")
+    for prov_slug, slug in built[:10]:
         print(f"  /diesel-prices/{prov_slug}/{slug}/")
-    if len(built) > 8:
-        print(f"  ... and {len(built) - 8} more")
+    if len(built) > 10:
+        print(f"  ... and {len(built) - 10} more")
 
 
 if __name__ == "__main__":
