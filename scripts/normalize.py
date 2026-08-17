@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Normalize collector data into exact template-fillable format (v3 — matches kit data shapes)."""
-import json, os, time
+import json, os, re, time
 from datetime import datetime
 from history import snapshot, delta, average, span_days
 
@@ -244,6 +244,7 @@ for c in crossings[:12]:
     
     item = {
         "name": c.get("name",""),
+        "slug": re.sub(r"[^a-z0-9]+", "-", c.get("name","").lower()).strip("-"),
         "sub": f"{c.get('route','')} · {c.get('highway','')}" + (" · FAST" if c.get("fast_lanes") else ""),
         "wait": wait,
         "status_label": "Heavy" if d>15 else "Moderate" if d>0 else "Flowing",
@@ -369,7 +370,7 @@ if _eia_usd is not None and fx_rate and not _eia_stale:
         "west_coast": "West Coast (PADD 5)",
     }
     padds_list = [
-        {"label": _PADD_LABELS.get(k, k), "usd_gal": f"{v:.3f}", "cpl": f"{_padds_cpl.get(k, 0):.1f}"}
+        {"key": k, "label": _PADD_LABELS.get(k, k), "usd_gal": f"{v:.3f}", "cpl": f"{_padds_cpl.get(k, 0):.1f}"}
         for k, v in _padds.items()
     ]
     eia = {

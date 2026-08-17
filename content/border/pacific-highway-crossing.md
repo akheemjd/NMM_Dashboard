@@ -1,0 +1,1 @@
+The Pacific Highway crossing between Surrey and Blaine is the dedicated truck route for the Vancouver–Seattle corridor, tying BC-15 into SR-543. It moves the Lower Mainland's commercial freight while the Peace Arch handles passenger traffic.

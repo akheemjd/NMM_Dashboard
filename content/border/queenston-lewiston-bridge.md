@@ -1,0 +1,1 @@
+The Queenston–Lewiston Bridge runs the ON-405 to I-190 across the Niagara River. It is the designated truck crossing for the Niagara region and carries the heavy commercial traffic that the area's other bridges cannot.

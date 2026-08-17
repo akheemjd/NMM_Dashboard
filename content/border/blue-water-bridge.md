@@ -1,0 +1,1 @@
+The Blue Water Bridge links Sarnia to Port Huron on the I-69/I-94 corridor, the main route between Ontario and the US Midwest. It carries a steady share of Ontario–Michigan truck freight and is the natural alternative when the Ambassador Bridge backs up.

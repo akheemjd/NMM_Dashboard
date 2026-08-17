@@ -1,0 +1,1 @@
+Lacolle is the principal Quebec–New York crossing, tying the A-15 from Montreal into the I-87 corridor toward Albany and New York City. It is the main door for Quebec freight moving into the US Northeast.

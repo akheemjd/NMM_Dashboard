@@ -29,6 +29,7 @@ FONTS = ("https://fonts.googleapis.com/css2?"
 NAV = [
     ("/", "Home"),
     ("/fuel-prices/", "Diesel"),
+    ("/us-diesel/", "US diesel"),
     ("/fuel-cost-calculator/", "Calculator"),
     ("/border-wait-times/", "Border"),
     ("/exchange-rate/", "Exchange"),
@@ -460,7 +461,7 @@ write("border-wait-times",
   </section>
 
   <div class="rows">
-  <!--LOOP:crossings--><div class="r"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></div><!--/LOOP:crossings-->
+  <!--LOOP:crossings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></a><!--/LOOP:crossings-->
   </div>
   <p class="note">Source: Canada Border Services Agency commercial lane feed. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
 ''' + sponsor("sponsor_border") + subscribe("Border and diesel, weekly",
@@ -965,5 +966,128 @@ city_body = (
 with open(os.path.join(OUT, "city.template.html"), "w") as f:
     f.write(city_body)
 print(f"  city                      {len(city_body):6,} bytes")
+
+# ═══ US diesel pages ════════════════════════════════════════════════════
+# One overview template + one per-PADD template, rendered by build_us_pages.py.
+US_LD = ('{"@context":"https://***@graph":[' + crumb("US diesel prices", "/us-diesel/") + ','
+ '{"@type":"Dataset","name":"US Retail Diesel Prices","description":"US on-highway diesel, national average plus five PADD regions, from the U.S. Energy Information Administration weekly retail diesel survey, converted to Canadian cents per litre at the latest Bank of Canada rate.","url":"' + BASE + '/us-diesel/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+
+us_body = (
+ head("US Diesel Prices — ${{eia.us_national_usd_gal}}/gal | Northern Mile",
+      "US on-highway diesel, national average ${{eia.us_national_usd_gal}}/gal ({{eia.us_national_cpl}}¢/L CAD) plus five regional prices. EIA weekly retail diesel survey, converted at the latest Bank of Canada rate.",
+      "/us-diesel/", "og.jpg", US_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">EIA weekly retail diesel survey · week {{eia.date}}</span>
+    <h1>US diesel prices</h1>
+    <div class="figure"><span class="n">{{eia.us_national_cpl}}</span><span class="u">¢/L CAD</span><span class="d flat">${{eia.us_national_usd_gal}}/gal</span></div>
+    <div class="meta"><span>US national average</span><span>Converted at the latest Bank of Canada rate</span></div>
+    <div class="cite">
+      <div class="cl">Citing this figure</div>
+      <q id="citation">US on-highway diesel: ${{eia.us_national_usd_gal}}/gal national average ({{eia.us_national_cpl}}¢/L CAD), EIA weekly retail diesel survey, week ending {{eia.date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/</q>
+      <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Five regions</h2><p>Petroleum Administration for Defense Districts · ¢/L CAD and $/gal</p></div>
+    <div class="rows">
+    <!--LOOP:padds--><a class="r" href="/us-diesel/{{key}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:padds-->
+    </div>
+    <p class="note">Each region is an EIA PADD — Petroleum Administration for Defense District. The price is that region&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>The North American index</h2></div>
+    <div class="reading">
+      <p class="note" style="margin-top:0">The North American Diesel Index (NADI) is the mean of the Canadian national average and the US national average — each country counts once, not consumption-weighted. This week the NADI is <b>{{eia.nadi}}¢/L</b>, with Canada {{eia.gap_word}} by <b>{{eia.ca_us_gap}}¢/L</b>.</p>
+      <p class="note">Methodology: <a href="/methodology/nmdi/">/methodology/nmdi/</a>. The Canadian half is the NRCan weekly survey (ten provinces); the US half is the EIA national average above.</p>
+    </div>
+  </section>
+''' + subscribe("US and Canadian diesel, every week",
+   "Where both sides of the border moved, and what it means for a cross-border carrier's week. One email on Wednesday mornings.") + foot())
+
+with open(os.path.join(OUT, "us-diesel.template.html"), "w") as f:
+    f.write(us_body)
+print(f"  us-diesel                 {len(us_body):6,} bytes")
+
+# One template, rendered per PADD by build_us_pages.py.
+USPADD_LD = ('{"@context":"https://***@graph":[' + crumb("{{label}} diesel prices", "/us-diesel/{{key}}/") + ','
+ '{"@type":"Dataset","name":"{{label}} Diesel Prices","description":"US on-highway diesel price in {{label}}, from the EIA weekly retail diesel survey, converted to Canadian cents per litre.","url":"' + BASE + '/us-diesel/{{key}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+
+uspadd_body = (
+ head("{{label}} Diesel Price — ${{usd_gal}}/gal | Northern Mile",
+      "{{label}} diesel is ${{usd_gal}}/gal ({{cpl}}¢/L CAD), {{vs_national_abs}}¢ {{vs_national_word}} the US national average. EIA weekly retail diesel survey, week ending {{date}}.",
+      "/us-diesel/{{key}}/", "og.jpg", USPADD_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">{{label}} · EIA week {{date}}</span>
+    <h1>{{label}} diesel</h1>
+    <div class="figure"><span class="n">{{cpl}}</span><span class="u">¢/L CAD</span><span class="d {{vs_national_class}}">{{vs_national}} vs US national</span></div>
+    <div class="meta"><span>US national <b>{{national}}</b>¢/L</span><span>Converted at the latest Bank of Canada rate</span></div>
+    <div class="cite">
+      <div class="cl">Citing this figure</div>
+      <q id="citation">{{label}} diesel: ${{usd_gal}}/gal ({{cpl}}¢/L CAD), EIA weekly retail diesel survey, week ending {{date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/{{key}}/</q>
+      <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>What {{label}} covers</h2></div>
+    <div class="reading">
+      <p class="note" style="margin-top:0">{{states}}</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>The five regions</h2><p>¢/L CAD · $/gal</p></div>
+    <div class="rows">
+    <!--LOOP:siblings--><a class="r" href="/us-diesel/{{key}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:siblings-->
+    </div>
+    <p class="note"><a href="/us-diesel/">← US national and all regions</a></p>
+  </section>
+''' + subscribe("{{label}} diesel, every week",
+   "Where {{label}} and the rest of North America moved, and what it means for a cross-border carrier's week. One email on Wednesday mornings.") + foot())
+
+with open(os.path.join(OUT, "us-padd.template.html"), "w") as f:
+    f.write(uspadd_body)
+print(f"  us-padd                  {len(uspadd_body):6,} bytes")
+
+# One template, rendered per crossing by build_border_pages.py.
+BORDER_LD = ('{"@context":"https://***@graph":[' + crumb("{{name}} border wait", "/border-wait-times/{{slug}}/") + ','
+ '{"@type":"Dataset","name":"{{name}} Commercial Border Wait","description":"Commercial lane wait time at {{name}}, from the Canada Border Services Agency feed.","url":"' + BASE + '/border-wait-times/{{slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+
+border_body = (
+ head("{{name}} Border Wait — {{wait}} | Northern Mile",
+      "{{name}} commercial lane wait is {{wait}} ({{status_label}}) right now, from the CBSA feed. {{sub}}",
+      "/border-wait-times/{{slug}}/", "og.jpg", BORDER_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">CBSA commercial lanes</span>
+    <h1>{{name}}</h1>
+    <div class="figure"><span class="n">{{wait}}</span><span class="u">wait</span><span class="d {{status_class}}">{{status_label}}</span></div>
+    <div class="meta"><span>{{sub}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>About this crossing</h2></div>
+    <div class="reading">
+{{prose}}
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>All crossings</h2><p>commercial lane wait · CBSA</p></div>
+    <div class="rows">
+    <!--LOOP:siblings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}</span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></a><!--/LOOP:siblings-->
+    </div>
+    <p class="note"><a href="/border-wait-times/">← All border wait times</a></p>
+  </section>
+''' + subscribe("Border and diesel, weekly",
+   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + foot())
+
+with open(os.path.join(OUT, "border-crossing.template.html"), "w") as f:
+    f.write(border_body)
+print(f"  border-crossing           {len(border_body):6,} bytes")
 
 print("\\nAll templates generated.")

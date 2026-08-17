@@ -1,0 +1,1 @@
+Emerson–Pembina connects Manitoba to North Dakota on the MB-75 to I-29 corridor, the main freight route between Winnipeg and the US Midwest. It is the principal crossing for Prairie freight moving into the central United States.

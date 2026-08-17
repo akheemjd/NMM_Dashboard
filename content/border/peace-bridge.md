@@ -1,0 +1,1 @@
+The Peace Bridge connects Fort Erie to Buffalo on the QEW-to-I-190 corridor, the main freight route between the Niagara region and western New York. It is one of the shorter crossings for Ontario carriers heading into the US Northeast.

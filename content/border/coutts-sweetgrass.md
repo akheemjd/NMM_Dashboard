@@ -1,0 +1,1 @@
+Coutts–Sweetgrass is the main Alberta–Montana crossing, carrying the AB-4 to I-15 corridor. It is the key route for Alberta freight moving south into the western United States and a major point on the CANAMEX corridor.
