@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-16 23:07",
-  "updated_iso": "2026-08-16T23:07:41+00:00",
-  "build_version": "1786921661",
+  "updated_at": "2026-08-17 17:09",
+  "updated_iso": "2026-08-17T17:09:16+00:00",
+  "build_version": "1786986556",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "51 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "227.9",
@@ -21,7 +21,7 @@
     "change_7d": "+5.7",
     "change_7d_band": "material",
     "change_7d_class": "up",
-    "change_30d": "+28.7",
+    "change_30d": "+13.6",
     "low_code": "AB",
     "low": "205.6",
     "high_code": "QC",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "HWY 7, HWY 62, HWY 427, HWY 527",
+    "status_line": "HWY 401, HWY 427, QEW",
     "incidents": [
       {
-        "road": "HWY 7",
-        "what": "Collision on HWY 7 Both Directions  at Lansdowne St / Maple Grove Rd / CR 5,\u2026",
+        "road": "HWY 401",
+        "what": "Spill on HWY 401 Westbound TRANSFER at Jane Express to Collector, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 62",
-        "what": "Collision on HWY 62 Both Directions  at LOWER TURRIFF RD, Turriff. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Debris on HWY 401 Westbound COLLECTOR at BASKET WEAVE/JANE ST, Toronto. 2 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -259,11 +259,11 @@
     {
       "name": "Ambassador Bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 EDT"
+      "captured_at": "12:08 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -272,16 +272,16 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:51 EDT"
+      "captured_at": "11:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "51 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -290,7 +290,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -299,7 +299,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:49 EDT"
+      "captured_at": "09:09 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -308,7 +308,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 MDT"
+      "captured_at": "09:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 PDT"
+      "captured_at": "09:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -326,7 +326,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 CDT"
+      "captured_at": "11:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -367,14 +367,14 @@
   "theft": [],
   "news": [
     {
-      "category": "The Trucker",
-      "headline": "Federal grand jury indicts Georgia woman for allegedly defrauding self-employed truckers in tax scheme",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/federal-grand-jury-indicts-georgia-woman-for-allegedly-defrauding-self-employed-truckers-in-tax-scheme"
+      "category": "Truck News",
+      "headline": "Truck, engine makers see higher orders, prep for 2027 NOx rule rollout",
+      "url": "https://www.trucknews.com/transportation/truck-engine-makers-see-higher-orders-prep-for-2027-nox-rule-rollout/1003220048/"
     },
     {
-      "category": "The Trucker",
-      "headline": "Arizona troopers place big rig out of service for load securement violations",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/arizona-troopers-place-big-rig-out-of-service-after-noticing-load-violations"
+      "category": "Truck News",
+      "headline": "Rains earns top honors at North American Inspectors Championship",
+      "url": "https://www.trucknews.com/human-resources/rains-earns-top-honors-at-north-american-inspectors-championship/1003220080/"
     }
   ],
   "theft_home_json": "[]",
@@ -387,5 +387,62 @@
   "sponsor_incidents": null,
   "sponsor_theft": null,
   "sponsor_market": null,
-  "sponsor_news": null
+  "sponsor_news": null,
+  "eia": {
+    "us_national_usd_gal": "5.257",
+    "us_national_cpl": "192.7",
+    "nadi": "210.3",
+    "ca_us_gap": "35.2",
+    "ca_higher": true,
+    "gap_word": "Canada higher",
+    "date": "2026-08-10",
+    "padds_usd_gal": {
+      "east_coast": 5.193,
+      "midwest": 5.181,
+      "gulf_coast": 5.044,
+      "rocky_mountain": 5.271,
+      "west_coast": 6.033
+    },
+    "padds_cpl": {
+      "east_coast": 190.3,
+      "midwest": 189.9,
+      "gulf_coast": 184.9,
+      "rocky_mountain": 193.2,
+      "west_coast": 221.1
+    },
+    "padds_list": [
+      {
+        "label": "East Coast (PADD 1)",
+        "usd_gal": "5.193",
+        "cpl": "190.3"
+      },
+      {
+        "label": "Midwest (PADD 2)",
+        "usd_gal": "5.181",
+        "cpl": "189.9"
+      },
+      {
+        "label": "Gulf Coast (PADD 3)",
+        "usd_gal": "5.044",
+        "cpl": "184.9"
+      },
+      {
+        "label": "Rocky Mountain (PADD 4)",
+        "usd_gal": "5.271",
+        "cpl": "193.2"
+      },
+      {
+        "label": "West Coast (PADD 5)",
+        "usd_gal": "6.033",
+        "cpl": "221.1"
+      }
+    ],
+    "source": "U.S. Energy Information Administration weekly retail diesel survey",
+    "us_change_7d": "n/a",
+    "us_change_7d_class": "flat",
+    "us_change_30d": "n/a",
+    "nadi_change_7d": "n/a",
+    "nadi_change_7d_class": "flat",
+    "nadi_change_30d": "n/a"
+  }
 }

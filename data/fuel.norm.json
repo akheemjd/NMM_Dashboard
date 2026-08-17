@@ -8,7 +8,7 @@
     "change_7d": "+5.7",
     "change_7d_band": "material",
     "change_7d_class": "up",
-    "change_30d": "+28.7",
+    "change_30d": "+13.6",
     "low_code": "AB",
     "low": "205.6",
     "high_code": "QC",
@@ -107,6 +107,63 @@
     "change_1y": "+0.0104",
     "change_1y_pct": "+0.76%",
     "range_pct": "50%"
+  },
+  "eia": {
+    "us_national_usd_gal": "5.257",
+    "us_national_cpl": "192.7",
+    "nadi": "210.3",
+    "ca_us_gap": "35.2",
+    "ca_higher": true,
+    "gap_word": "Canada higher",
+    "date": "2026-08-10",
+    "padds_usd_gal": {
+      "east_coast": 5.193,
+      "midwest": 5.181,
+      "gulf_coast": 5.044,
+      "rocky_mountain": 5.271,
+      "west_coast": 6.033
+    },
+    "padds_cpl": {
+      "east_coast": 190.3,
+      "midwest": 189.9,
+      "gulf_coast": 184.9,
+      "rocky_mountain": 193.2,
+      "west_coast": 221.1
+    },
+    "padds_list": [
+      {
+        "label": "East Coast (PADD 1)",
+        "usd_gal": "5.193",
+        "cpl": "190.3"
+      },
+      {
+        "label": "Midwest (PADD 2)",
+        "usd_gal": "5.181",
+        "cpl": "189.9"
+      },
+      {
+        "label": "Gulf Coast (PADD 3)",
+        "usd_gal": "5.044",
+        "cpl": "184.9"
+      },
+      {
+        "label": "Rocky Mountain (PADD 4)",
+        "usd_gal": "5.271",
+        "cpl": "193.2"
+      },
+      {
+        "label": "West Coast (PADD 5)",
+        "usd_gal": "6.033",
+        "cpl": "221.1"
+      }
+    ],
+    "source": "U.S. Energy Information Administration weekly retail diesel survey",
+    "us_change_7d": "n/a",
+    "us_change_7d_class": "flat",
+    "us_change_30d": "n/a",
+    "nadi_change_7d": "n/a",
+    "nadi_change_7d_class": "flat",
+    "nadi_change_30d": "n/a"
   },
   "provinces": [
     {
@@ -220,7 +277,7 @@
       "rowclass": "hi"
     }
   ],
-  "updated_at": "2026-08-16 23:07",
-  "updated_iso": "2026-08-16T23:07:41+00:00",
-  "build_version": "1786921661"
+  "updated_at": "2026-08-17 17:09",
+  "updated_iso": "2026-08-17T17:09:16+00:00",
+  "build_version": "1786986556"
 }
