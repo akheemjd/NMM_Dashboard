@@ -86,7 +86,7 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hd"><div class="wrap">
-  <a class="mark" href="/"><span class="dot" aria-hidden="true"></span><b>Northern Mile</b><span>Canadian trucking data</span></a>
+  <a class="mark" href="/"><img class="logo" src="/assets/logo.png" width="32" height="32" alt=""><b>Northern Mile</b><span>Canadian trucking data</span></a>
 </div></header>
 
 <nav class="nav" aria-label="Sections"><div class="wrap">{nav_html(canon)}</div></nav>

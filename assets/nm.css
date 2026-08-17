@@ -64,6 +64,7 @@ a { color: inherit; }
 .hd { border-bottom: 1px solid var(--line); background: var(--paper); }
 .hd .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
 .mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.mark .logo { width: 32px; height: 32px; display: block; flex: none; }
 .mark .dot {
   width: 10px; height: 10px; border-radius: 50%; background: var(--signal);
   position: relative;
