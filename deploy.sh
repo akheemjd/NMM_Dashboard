@@ -120,3 +120,9 @@ else
   fi
 fi
 echo "Done."
+if [ "$DRY_RUN" != "1" ]; then
+  # Watchdog heartbeat — only a real (non-DRY_RUN) deploy reaching this line
+  # counts as success. A failure anywhere above exits via set -e and leaves
+  # the marker stale, which the watchdog cron flags.
+  date -u +%s > "$HOME/.hermes/.nmm_deploy_ok"
+fi
