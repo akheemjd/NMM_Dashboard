@@ -898,4 +898,51 @@ with open(os.path.join(OUT, "province.template.html"), "w") as f:
     f.write(prov_body)
 print(f"  province                   {len(prov_body):6,} bytes")
 
+# One template, rendered per city by build_city_pages.py. Same shell.
+# {{prose}} is the writer-generated context section; {{siblings}} loops the
+# other survey cities in the same province.
+CITY_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{name}} diesel prices", "/diesel-prices/{{prov_slug}}/{{slug}}/") + ','
+ '{"@type":"Dataset","name":"{{name}} Diesel Prices","description":"Retail diesel price in {{name}}, {{prov_name}}, from the NRCan weekly survey.","url":"' + BASE + '/diesel-prices/{{prov_slug}}/{{slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"{{name}}, {{prov_name}}, Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"{{updated_iso}}"}]}')
+
+city_body = (
+ head("{{name}} Diesel Price — {{price}}¢/L | Northern Mile",
+      "{{name}} diesel is {{price}}¢/L this week, {{vs_national_abs}}¢ {{vs_national_word}} the national index. NRCan weekly survey, print {{print_date}}.",
+      "/diesel-prices/{{prov_slug}}/{{slug}}/", "og-fuel.jpg", CITY_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">{{name}} · {{prov_name}}</span>
+    <h1>{{name}} diesel prices</h1>
+    <div class="figure"><span class="n">{{price}}</span><span class="u">¢/L</span><span class="d {{vs_national_class}}">{{vs_national}} vs national</span></div>
+    <div class="meta"><span>NRCan survey print <b>{{print_date}}</b></span><span>{{prov_name}} average <b>{{prov_price}}</b>¢/L</span></div>
+    <div class="cite">
+      <div class="cl">Citing this figure</div>
+      <q id="citation">{{name}} diesel: {{price}}¢/L, NRCan weekly survey print {{print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/diesel-prices/{{prov_slug}}/{{slug}}/</q>
+      <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Why {{name}} prices where it does</h2></div>
+    <div class="reading">
+{{prose}}
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>{{prov_name}} survey cities</h2><p>¢/L · distance from the provincial mean</p></div>
+    <div class="rows">
+    <!--LOOP:siblings--><div class="r"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></div><!--/LOOP:siblings-->
+    </div>
+    <p class="note">Every price is an NRCan survey observation from the print dated {{print_date}}. The provincial figure is the unweighted mean of its survey cities, the same figure that enters the <a href="/methodology/nmdi/">Northern Mile Diesel Index</a>.</p>
+  </section>
+''' + subscribe("{{name}} diesel, every week",
+   "Where {{name}} and the rest of {{prov_name}} moved, and what it means for cost per kilometre. One email on Wednesday mornings.")
+ + '''
+  <p class="note"><a href="/diesel-prices/{{prov_slug}}/">← {{prov_name}} overview</a> · <a href="/fuel-prices/">All ten provinces</a></p>
+''' + foot())
+
+with open(os.path.join(OUT, "city.template.html"), "w") as f:
+    f.write(city_body)
+print(f"  city                      {len(city_body):6,} bytes")
+
 print("\\nAll templates generated.")
