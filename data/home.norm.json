@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-17 18:11",
-  "updated_iso": "2026-08-17T18:11:38+00:00",
-  "build_version": "1786990298",
+  "updated_at": "2026-08-17 18:42",
+  "updated_iso": "2026-08-17T18:42:46+00:00",
+  "build_version": "1786992166",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 404, HWY 527, HWY 11",
+    "status_line": "HWY 401, HWY 124, HWY 531",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at HWY 407, Mississauga. 1 centre\u2026",
+        "road": "HWY 401",
+        "what": "Spill on HWY 401 Westbound TRANSFER at Jane Express to Collector, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Northbound RAMP at STEELES AVE, Toronto-Markham. 1\u2026",
+        "road": "HWY 124",
+        "what": "Highway Maintenance on HWY 124 Eastbound  at HODDYS SDRD(N)MCDOUGALL TWP, Parry\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,11 +277,11 @@
     {
       "name": "Peace Bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -290,7 +290,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -299,7 +299,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:46 EDT"
+      "captured_at": "14:27 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,7 +317,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -326,7 +326,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 CDT"
+      "captured_at": "13:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -335,7 +335,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 EDT"
+      "captured_at": "14:15 EDT"
     }
   ],
   "market": [
