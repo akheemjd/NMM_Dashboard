@@ -332,8 +332,8 @@ write("fuel-prices",
   <section class="sec">
     <div class="lead"><h2>North American diesel</h2><p>The cross-border index, and the gap Canadian carriers watch.</p></div>
     <div class="stats">
-      <div class="stat"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></div>
-      <div class="stat"><div class="l">US national</div><div class="v">{{eia.us_national_cpl}}</div><div class="s">¢/L · ${{eia.us_national_usd_gal}}/gal</div></div>
+      <div class="stat"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · <span class="{{eia.nadi_change_7d_class}}">{{eia.nadi_change_7d}} 7d</span></div></div>
+      <div class="stat"><div class="l">US national</div><div class="v">{{eia.us_national_cpl}}</div><div class="s">¢/L · <span class="{{eia.us_change_7d_class}}">{{eia.us_change_7d}} 7d</span> · ${{eia.us_national_usd_gal}}/gal</div></div>
       <div class="stat"><div class="l">Canada vs US</div><div class="v">{{eia.ca_us_gap}}</div><div class="s">¢/L · {{eia.gap_word}}</div></div>
     </div>
     <div class="rows">
@@ -847,7 +847,7 @@ write("methodology",
 
     <h2 style="margin-top:32px">North American Diesel Index</h2>
     <p class="note" style="margin-top:8px">The North American Diesel Index (NADI) combines the Canadian NMDI with the United States national on-highway diesel average. It is the simple arithmetic mean of the two — each country counts once, and the index is not consumption-weighted or freight-weighted.</p>
-    <p class="note">The US figure is the U.S. Energy Information Administration weekly retail diesel survey (ultra-low sulfur, on-highway), published in US dollars per gallon. It is converted to Canadian cents per litre at the Bank of Canada USD/CAD rate published for the same day, using 1 US gallon = 3.785411784 litres.</p>
+    <p class="note">The US figure is the U.S. Energy Information Administration weekly retail diesel survey (ultra-low sulfur, on-highway), published in US dollars per gallon. It is converted to Canadian cents per litre at the latest Bank of Canada USD/CAD rate, using 1 US gallon = 3.785411784 litres.</p>
     <p class="note">Equal-country weighting is the deliberate choice: it treats Canada and the United States as two markets rather than scaling by population or consumption, so the index does not collapse into a US price with a Canadian footnote. Canada is higher than the United States in every print since the index began, driven by carbon pricing and provincial fuel taxes.</p>
 
     <h2 style="margin-top:32px">Source</h2>

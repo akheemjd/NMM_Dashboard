@@ -390,6 +390,25 @@ else:
         "source": "",
     }
 
+# US + NADI weekly deltas — "n/a" until 2+ weekly points exist (never a
+# fabricated zero; span_days < 7 means the series hasn't accrued a week yet).
+_eia_span = span_days("eia", "national")
+_us_d7 = delta("eia", "national", 7) if _eia_span >= 7 else None
+_us_d30 = delta("eia", "national", 30) if _eia_span >= 30 else None
+_nadi_span = span_days("nadi", "national")
+_nadi_d7 = delta("nadi", "national", 7) if _nadi_span >= 7 else None
+_nadi_d30 = delta("nadi", "national", 30) if _nadi_span >= 30 else None
+
+def _cl(d):
+    return "flat" if d is None else ("up" if d > 0 else ("down" if d < 0 else "flat"))
+
+eia["us_change_7d"] = _fmt_delta(_us_d7)
+eia["us_change_7d_class"] = _cl(_us_d7)
+eia["us_change_30d"] = _fmt_delta(_us_d30)
+eia["nadi_change_7d"] = _fmt_delta(_nadi_d7)
+eia["nadi_change_7d_class"] = _cl(_nadi_d7)
+eia["nadi_change_30d"] = _fmt_delta(_nadi_d30)
+
 # ===== INCIDENTS =====
 # Already sorted above
 import time
@@ -624,6 +643,18 @@ _fx_obs = raw_ex.get("observation_date")
 if _fx_obs and fx_rate is not None:
     from datetime import date as _date
     snapshot("fx", "usd_cad", fx_rate, when=_date.fromisoformat(_fx_obs))
+
+# EIA: snapshot US national + PADD prices + the NADI against the EIA
+# week-ending date, so the US side accrues a weekly series for deltas/bands.
+_eia_date_s = eia.get("date")
+if _eia_date_s and eia.get("us_national_cpl") not in (None, "n/a", ""):
+    from datetime import date as _eia_d
+    _eia_when = _eia_d.fromisoformat(_eia_date_s)
+    snapshot("eia", "national", float(eia["us_national_cpl"]), when=_eia_when)
+    for _pk, _pv in eia.get("padds_cpl", {}).items():
+        snapshot("eia", _pk, float(_pv), when=_eia_when)
+    if eia.get("nadi") not in (None, "n/a", ""):
+        snapshot("nadi", "national", float(eia["nadi"]), when=_eia_when)
 
 # Border and theft are deliberately not snapshotted. Border carries no
 # dated observation time, and theft has no live collector. Snapshotting
