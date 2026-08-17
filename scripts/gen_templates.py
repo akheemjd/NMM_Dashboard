@@ -75,6 +75,7 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 <link rel="stylesheet" href="/assets/nm.css?v={{{{build_version}}}}">
 {ld_block}<script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA}');</script>
+<script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-i18n="true" data-ghost="https://www.northernmilemedia.com/" data-key="995d6f9b3eeb1574dbebd63ce5" data-api="https://northern-mile-media.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -98,7 +99,7 @@ def foot(extra_script=""):
 <footer class="ft"><div class="wrap">
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
   <nav class="flinks" aria-label="Footer">{flinks}</nav>
-  <div class="bottom"><span>&copy; {year} Northern Mile Media</span><a href="{SUB}">Subscribe free</a><span>Updated {{{{updated_at}}}} UTC</span></div>
+  <div class="bottom"><span>&copy; {year} Northern Mile Media</span><a href="{SUB}" data-portal="signup">Subscribe free</a><span>Updated {{{{updated_at}}}} UTC</span></div>
 </div></footer>
 
 <script src="/assets/nm.js?v={{{{build_version}}}}"></script>
@@ -202,7 +203,7 @@ def subscribe(heading, body):
             f'    <div class="e">The Northern Mile Brief</div>\n'
             f'    <h2 id="brief">{heading}</h2>\n'
             f'    <p>{body}</p>\n'
-            f'    <a class="sub-btn" href="{SUB}">Subscribe free</a>\n'
+            f'    <a class="sub-btn" href="{SUB}" data-portal="signup">Subscribe free</a>\n'
             f'    <div class="fine">One email a week. Unsubscribe any time.</div>\n'
             f'  </section>\n')
 
