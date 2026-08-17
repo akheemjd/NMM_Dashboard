@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-17 22:20",
-  "updated_iso": "2026-08-17T22:20:56+00:00",
-  "build_version": "1787005256",
+  "updated_at": "2026-08-17 22:52",
+  "updated_iso": "2026-08-17T22:52:07+00:00",
+  "build_version": "1787007127",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 15,
+    "active_count": 17,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401",
+    "status_line": "HWY 401, HWY 404",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Southbound RAMP at 16TH AVE, Markham-Richmondhill .\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS HOV at EAST OF WINSTON CHURCHILL BLVD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Westbound  at CARMAN RD (IC 738)/SD&G CR 1 - Iroquois,\u2026",
+        "what": "Collision on HWY 401 Eastbound  at WINSTON CHURCHILL BLVD, Mississauga. 2 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "10 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:48 EDT"
+      "captured_at": "18:31 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 CDT"
+      "captured_at": "17:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "18:15 EDT"
     }
   ],
   "market": [
