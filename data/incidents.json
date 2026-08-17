@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-289691",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.83731548,
+      "lng": -79.07273129,
+      "start": 1786993620,
+      "end": null,
+      "updated": 1786993620
+    },
+    {
+      "id": "ON-289684",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 410 Southbound EXPRESS at DERRY ROAD, Mississauga. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.6611465,
+      "lng": -79.69023567,
+      "start": 1786993080,
+      "end": null,
+      "updated": 1786993080
+    },
+    {
+      "id": "ON-289679",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at GUELPH LINE, Milton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.49118566,
+      "lng": -79.98777262,
+      "start": 1786992780,
+      "end": null,
+      "updated": 1786992780
+    },
+    {
       "id": "ON-289660",
       "province": "ON",
       "highway": "HWY 401",
@@ -95,22 +143,6 @@
       "start": 1786991100,
       "end": null,
       "updated": 1786991100
-    },
-    {
-      "id": "ON-289642",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 404 Northbound RAMP at STEELES AVE, Toronto-Markham. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.81115758,
-      "lng": -79.34724051,
-      "start": 1786989120,
-      "end": null,
-      "updated": 1786991040
     },
     {
       "id": "ON-289661",
@@ -209,22 +241,6 @@
       "updated": 1786990440
     },
     {
-      "id": "ON-289651",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.74265249,
-      "lng": -79.4233205,
-      "start": 1786990380,
-      "end": null,
-      "updated": 1786990380
-    },
-    {
       "id": "ON-289652",
       "province": "ON",
       "highway": "QEW",
@@ -289,22 +305,6 @@
       "updated": 1786990320
     },
     {
-      "id": "ON-289647",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at HWY 407, Mississauga. 3 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 left lanes closed",
-      "lat": 43.52757993,
-      "lng": -79.72183943,
-      "start": 1786989840,
-      "end": null,
-      "updated": 1786990260
-    },
-    {
       "id": "ON-289657",
       "province": "ON",
       "highway": "HWY 427",
@@ -351,22 +351,6 @@
       "start": 1787180400,
       "end": 1787310000,
       "updated": 1786989420
-    },
-    {
-      "id": "ON-289641",
-      "province": "ON",
-      "highway": "HWY 527",
-      "direction": "Both Directions",
-      "description": "Highway Maintenance on HWY 527 Both Directions  at TCPL COMP STA 68 RD (W) - MACGREGOR TWP, Thunder Bay. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 48.548352827,
-      "lng": -89.141021062,
-      "start": 1786988940,
-      "end": null,
-      "updated": 1786988940
     },
     {
       "id": "ON-289643",
@@ -799,10 +783,26 @@
       "start": 1788872400,
       "end": 1789153200,
       "updated": 1786981980
+    },
+    {
+      "id": "ON-289590",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Southbound",
+      "description": "Daily Moving Maintenance Closure on HWY 12 Southbound  between ATHERLEY RD, Orillia and DURHAM RD 50, Ramara. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.60623,
+      "lng": -79.38732,
+      "start": 1788872400,
+      "end": 1789066800,
+      "updated": 1786981920
     }
   ],
   "total": 50,
-  "updated": "2026-08-17T18:42:42.940386+00:00",
+  "updated": "2026-08-17T19:13:55.065050+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
