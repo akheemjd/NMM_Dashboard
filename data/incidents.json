@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-290083",
+      "id": "ON-290089",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at NORTH OF 401 BEFORE SHEPPARD, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.77496258,
-      "lng": -79.28476557,
-      "start": 1787068260,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.72174659,
+      "lng": -79.52240528,
+      "start": 1787070120,
       "end": null,
-      "updated": 1787068260
+      "updated": 1787070120
     },
     {
       "id": "drivebc.ca/RIDE-101440",
@@ -153,22 +153,6 @@
       "start": 1787064180,
       "end": null,
       "updated": 1787064180
-    },
-    {
-      "id": "ON-290061",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 11 Northbound  at SEC HWY 582 (N JCT) (E)-HURKETT RD, Nipigon. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.8786708,
-      "lng": -88.4777915,
-      "start": 1787064000,
-      "end": null,
-      "updated": 1787064000
     },
     {
       "id": "ON-290068",
@@ -809,10 +793,26 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990500
+    },
+    {
+      "id": "ON-289663",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 427 Southbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.68615,
+      "lng": -79.6001,
+      "start": 1787536800,
+      "end": 1787994000,
+      "updated": 1786990500
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T16:00:05.666784+00:00",
+  "updated": "2026-08-18T16:31:14.836511+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
