@@ -8,6 +8,7 @@ turns this into copy; it never computes a figure that isn't here.
 """
 import json
 import os
+import re
 from datetime import datetime, date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -31,6 +32,26 @@ def excise_status(print_date_str):
     if suspend_start <= pd <= suspend_end:
         return "suspended (4c/L federal excise - resumes Sep 8, 2026)"
     return "active (4c/L federal excise applied)"
+
+
+def pending_corrections():
+    """Read content/corrections.md; return pending entries as field dicts."""
+    path = os.path.join(ROOT, "content", "corrections.md")
+    if not os.path.exists(path):
+        return []
+    text = open(path, encoding="utf-8").read()
+    blocks = re.split(r"\n## ", text)[1:]
+    out = []
+    for b in blocks:
+        if "status: pending" not in b.lower():
+            continue
+        f = {}
+        for line in b.splitlines():
+            m = re.match(r"(what|before|after|scope):\s*(.*)", line.strip(), re.I)
+            if m:
+                f[m.group(1).lower()] = m.group(2).strip()
+        out.append(f)
+    return out
 
 
 def main():
@@ -66,6 +87,13 @@ def main():
     a("The writer quotes exactly these figures - never computes or invents others.")
     a("Every figure carries its source label.")
     a("")
+    corr = pending_corrections()
+    if corr:
+        a("## Pending corrections - correct these in the next issue")
+        for c in corr:
+            a(f"- We published '{c.get('before', '?')}'; correct is '{c.get('after', '?')}'. {c.get('what', '')} [{c.get('scope', '')}]")
+        a("Include a short dated 'Correction:' note in the next issue for each. Do not silently drop them.")
+        a("")
     a("## Diesel - Natural Resources Canada weekly diesel survey")
     a(f"- Print date: {fuel.get('print_date', 'n/a')}")
     a(f"- National average (NMDI): {fuel.get('national_diesel', 'n/a')} c/L")
