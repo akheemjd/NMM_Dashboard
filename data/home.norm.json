@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-18 20:09",
-  "updated_iso": "2026-08-18T20:09:23+00:00",
-  "build_version": "1787083763",
+  "updated_at": "2026-08-18 20:40",
+  "updated_iso": "2026-08-18T20:40:33+00:00",
+  "build_version": "1787085633",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "10 min"
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -209,46 +209,46 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.3865",
-    "direction": "stronger CAD",
-    "change": "-0.0010",
-    "usd_100": "138.65",
-    "usd_500": "693.25",
-    "usd_1000": "1,386.50",
-    "cad_1000": "721.24",
+    "usd_cad": "1.3889",
+    "direction": "weaker CAD",
+    "change": "+0.0024",
+    "usd_100": "138.89",
+    "usd_500": "694.45",
+    "usd_1000": "1,388.90",
+    "cad_1000": "719.99",
     "band": "noise",
-    "band_pct": "-0.07%",
-    "obs_date": "2026-08-17",
-    "avg_30d": "1.4014",
-    "vs_baseline": "-0.0149",
+    "band_pct": "+0.17%",
+    "obs_date": "2026-08-18",
+    "avg_30d": "1.4008",
+    "vs_baseline": "-0.0119",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "-0.0077",
-    "change_7d_pct": "-0.55%",
-    "change_30d": "-0.0173",
-    "change_30d_pct": "-1.23%",
-    "change_1y": "+0.0054",
-    "change_1y_pct": "+0.39%",
-    "range_pct": "49%"
+    "change_7d": "-0.0038",
+    "change_7d_pct": "-0.27%",
+    "change_30d": "-0.0125",
+    "change_30d_pct": "-0.89%",
+    "change_1y": "+0.0045",
+    "change_1y_pct": "+0.33%",
+    "range_pct": "52%"
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 89, HWY 401",
+    "status_line": "HWY 401, HWY 11, HWY 17",
     "incidents": [
       {
-        "road": "HWY 89",
-        "what": "Collision on HWY 89 Eastbound  at 5 SIDE ROAD, Essa. Left shoulder and left\u2026",
+        "road": "HWY 401",
+        "what": "Vehicle Fire on HWY 401 Westbound TRANSFER at Allen Road Collector to Express,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 89",
-        "what": "Collision on HWY 89 Westbound  at 5 SIDE ROAD, Essa. Left shoulder and left\u2026",
+        "road": "HWY 401",
+        "what": "Vehicle Fire on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. 2 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "15:10 EDT"
+      "captured_at": "16:05 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -314,7 +314,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 MDT"
+      "captured_at": "14:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "The Trucker",
-      "headline": "New instructor steps into Patterson High\u2019s acclaimed trucking program",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/new-instructor-steps-into-patterson-highs-acclaimed-trucking-program"
+      "category": "Truck News",
+      "headline": "Truckstop, Bloomberg surveys point to improving freight market, but carrier pressures persist",
+      "url": "https://www.trucknews.com/business-management/truckstop-bloomberg-surveys-point-to-improving-freight-market-but-carrier-pressures-persist/1003220159/"
     },
     {
-      "category": "The Trucker",
-      "headline": "CVTA: FMCSA moves to strengthen enforcement of ELP \u2014  and safety",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/cvta-fmcsa-moves-to-strengthen-enforcement-of-elp-and-safety"
+      "category": "Truck News",
+      "headline": "FTR names keynote speakers for 2026 transportation conference",
+      "url": "https://www.trucknews.com/business-management/ftr-names-keynote-speakers-for-2026-transportation-conference/1003220154/"
     }
   ],
   "theft_home_json": "[]",
@@ -399,9 +399,9 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "5.454",
-    "us_national_cpl": "199.8",
-    "nadi": "214.3",
-    "ca_us_gap": "29.1",
+    "us_national_cpl": "200.1",
+    "nadi": "214.5",
+    "ca_us_gap": "28.8",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-08-17",
@@ -413,42 +413,42 @@
       "west_coast": 6.203
     },
     "padds_cpl": {
-      "east_coast": 195.6,
-      "midwest": 199.1,
-      "gulf_coast": 191.8,
-      "rocky_mountain": 198.8,
-      "west_coast": 227.2
+      "east_coast": 195.9,
+      "midwest": 199.4,
+      "gulf_coast": 192.2,
+      "rocky_mountain": 199.1,
+      "west_coast": 227.6
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "5.340",
-        "cpl": "195.6"
+        "cpl": "195.9"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "5.435",
-        "cpl": "199.1"
+        "cpl": "199.4"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "5.237",
-        "cpl": "191.8"
+        "cpl": "192.2"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "5.427",
-        "cpl": "198.8"
+        "cpl": "199.1"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "6.203",
-        "cpl": "227.2"
+        "cpl": "227.6"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
