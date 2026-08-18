@@ -379,7 +379,7 @@ write("fuel-prices",
       </div></div>
       <div class="reading">
         <p class="note" style="margin-top:0">Diesel moves once a week, when NRCan publishes a new retail survey. Between prints this figure holds steady. It is a retail survey average, not a rack price, and not what a fleet on a fuel card pays.</p>
-        <p class="note">The {{fuel.spread}}¢/L gap between {{fuel.low_code}} and {{fuel.high_code}} is a real difference on a 500 litre fill. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
+        <p class="note">The {{fuel.spread}}¢/L gap between {{fuel.low_code}} and {{fuel.high_code}} is a real difference on a 500-litre fill. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
       </div>
     </div>
   </section>
@@ -537,7 +537,7 @@ write("exchange-rate",
       </div>
       <div class="viz-card">
         <h3 class="viz-title">Recent moves</h3>
-        <p class="viz-sub">Percent change · green stronger CAD, red weaker</p>
+        <p class="viz-sub">Per cent change · green stronger CAD, red weaker</p>
         {{fx_change_bars_svg}}
       </div>
     </div>
@@ -971,7 +971,7 @@ prov_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>{{name}} survey cities</h2><p>c/L · distance from the provincial mean</p></div>
+    <div class="lead"><h2>{{name}} survey cities</h2><p>¢/L · distance from the provincial mean</p></div>
     <div class="rows">
     <!--LOOP:cities--><div class="r"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></div><!--/LOOP:cities-->
     </div>

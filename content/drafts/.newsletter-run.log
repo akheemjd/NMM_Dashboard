@@ -1,0 +1,107 @@
+Query: Write this week's Northern Mile newsletter from the data brief.
+
+Read data/brief-2026-08-17.md, load the northern-mile-newsletter skill and the 
+northern-mile-voice skill, and follow them exactly. Write the newsletter to 
+content/drafts/newsletter-2026-08-17.md.
+
+Rules (your SOUL.md): quote every number from the brief, never compute or invent
+one; use the brief's band labels; write with authority (no "according to" 
+hedging in the body) and end with a short Sources footer naming Natural 
+Resources Canada, Bank of Canada, and CBSA. Run voice_lint.py on the draft and 
+fix every FAIL before finishing.
+Initializing agent...
+────────────────────────────────────────
+
+  ┊ 📖 preparing read_file…
+  ┊ 📚 preparing skill_view…
+  ┊ 📚 preparing skill_view…
+  ┊ 📖 read      brief-2026-08-17.md  0.5s
+  ┊ 📚 skill     northern-mile-newsletter  1.0s
+  ┊ 📚 skill     northern-mile-voice  0.8s
+  ┊ 💻 preparing terminal…
+  ┊ 🔎 preparing search_files…
+  ┊ 💻 $         date + 2 commands  0.6s
+  ┊ 🔎 find      *.md  0.3s
+  ┊ 📖 preparing read_file…
+  ┊ 📖 preparing read_file…
+  ┊ 📖 read      newsletter-2026-08-16.md  0.2s
+  ┊ 📖 read      voice_lint.py  0.2s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Both skills loaded, brief read, previous draft and lint script reviewed.
+    Now writing the draft.
+╰──────────────────────────────────────────────────────────────────────────────╯
+  ┊ ✍️ preparing write_file…
+  ┊ ✍️  write     /home/hermes/northern-mile-dashboard/content/drafts/newsletter-2026-08-17.md  0.7s
+  ┊ review diff
+a/content/drafts/newsletter-2026-08-17.md → b/content/drafts/newsletter-2026-08-17.md
+@@ -0,0 +1,27 @@
++Subject: Diesel up 5.7 cents. Excise returns Sep 8.
++
++THE WEDNESDAY SNAPSHOT
++August 17, 2026
++
++Diesel jumped 5.7 cents in seven days. That is material, not noise.
++
++## Diesel up 5.7 cents
++
++National average hit 227.9 cents a litre. Up 5.7 cents in a week and 13.6 cents over thirty days. Newfoundland led the climb, up 14.6 on the week. At 35 litres per 100 km, that is $798 in fuel for every thousand kilometres.
++
++## Loonie keeps firming
++
++USD/CAD sits at 1.3875, down 0.45% on the day. A stronger loonie means a thousand US dollars now converts to C$1,387.50. Notable, not a rout.
++
++## 44 cent spread
++
++Alberta 205.6. Quebec 249.6. A 44.0 cent gap from the cheapest pump to the dearest. BC runs 30.1 cents above Alberta. Fill in Alberta. Every time.
++
++## One thing to do
++
++Top up before September 8. The federal excise, 4 cents a litre, returns that day.
++
++We send this every Wednesday. Get it in your inbox. Free.
++https://dashboard.northernmilemedia.com
++
++Sources: Natural Resources Canada weekly diesel survey. Bank of Canada Valet API. CBSA (Canada Border Services Agency). Methodology: https://dashboard.northernmilemedia.com/methodology/nmdi/
+  ┊ 💻 preparing terminal…
+  ┊ 💻 $         python3 scripts/voice_lint.py content/drafts/newsletter-2026-08-17.md  0.7s
+
+╭─ ⚕ Hermes ───────────────────────────────────────────────────────────────────╮
+    Done. Draft written and lint-clean.
+    
+    Path:
+    /home/hermes/northern-mile-dashboard/content/drafts/newsletter-2026-08-17.
+    md
+    
+    voice_lint.py result: PASS (38 sentences, no fails).
+    
+    What's in it, all numbers quoted straight from the brief:
+    - Lead: diesel +5.7 c/L in seven days, band material
+    - Biggest story: national average 227.9 c/L, +13.6 c/L over thirty days,
+    NL led at +14.6, $798 fuel per 1,000 km
+    - Second angle: USD/CAD 1.3875, down 0.45%, band notable, US$1,000 to
+    C$1,387.50
+    - Third angle: 44.0 cent AB-QC spread, BC 30.1 cents above Alberta
+    - One thing to do: top up before the 4 c/L federal excise returns Sep 8
+    
+    Sources footer names Natural Resources Canada, Bank of Canada Valet API,
+    and CBSA, plus the methodology link.
+    
+    Two things worth flagging for your review, not fixing unilaterally:
+    - The prior draft (newsletter-2026-08-16.md) carried "28.7 cents in
+    thirty days" and "Peace Bridge 51 minutes." Neither is in the current
+    brief, which states +13.6 c/L thirty-day and Ambassador Bridge 5 min as
+    the longest wait. I wrote from the current brief as instructed, so those
+    old figures are gone. If that Aug 16 draft already shipped, it may have
+    had a stale/incorrect number in it.
+    - The masthead is dated August 17, 2026 (today, matching the brief
+    filename and the prior draft's own-date convention), even though it reads
+    "THE WEDNESDAY SNAPSHOT." Left as-is to match the existing pattern.
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Resume this session with:
+  hermes --resume 20260817_132613_419732 -p writer
+
+Session:        20260817_132613_419732
+Duration:       2m 8s
+Messages:       16 (1 user, 14 tool calls)
