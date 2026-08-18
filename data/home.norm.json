@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18 00:25",
-  "updated_iso": "2026-08-18T00:25:33+00:00",
-  "build_version": "1787012733",
+  "updated_at": "2026-08-18 00:56",
+  "updated_iso": "2026-08-18T00:56:44+00:00",
+  "build_version": "1787014604",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "8 min"
+    "max_wait": "6 min"
   },
   "fuel": {
     "national_diesel": "228.4",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 14,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401",
+    "status_line": "HWY 401, HWY 144, HWY 527, HWY 811",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS HOV at EAST OF WINSTON CHURCHILL BLVD,\u2026",
+        "what": "Vehicle Fire on HWY 401 Eastbound  at CARMAN RD (IC 738)/SD&G CR 1 - Iroquois,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at WINSTON CHURCHILL BLVD, Mississauga. 2 left\u2026",
+        "road": "HWY 144",
+        "what": "Collision on HWY 144 Both Directions  between CARTIER E ENT, Cartier and SEC\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -284,17 +284,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "8 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 PDT"
+      "captured_at": "17:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Trucking Info",
-      "headline": "Driver Trust Can Make or Break the Success of Fleet Safety Technology",
-      "url": "https://www.truckinginfo.com/news/driver-trust-can-make-or-break-the-success-of-fleet-safety-technology"
+      "category": "Truck News",
+      "headline": "NMFTA research links trailer cybersecurity vulnerabilities to tractor safety systems",
+      "url": "https://www.trucknews.com/security/nmfta-research-links-trailer-cybersecurity-vulnerabilities-to-tractor-safety-systems/1003220119/"
     },
     {
-      "category": "The Trucker",
-      "headline": "CDL training without geographic limits: FleetForce is bringing driver training directly to carriers where it\u2019s needed mo",
-      "url": "https://www.thetrucker.com/trucking-news/sponsored/cdl-training-without-geographic-limits-fleetforce-is-bringing-driver-training-directly-to-carriers-where-its-needed-most"
+      "category": "Truck News",
+      "headline": "ECONOMIC TRUCKING TRENDS: Mixed messages from spot market while shippers see some relief",
+      "url": "https://www.trucknews.com/business-management/economic-trucking-trends-mixed-messages-from-spot-market-while-shippers-see-some-relief/1003220111/"
     }
   ],
   "theft_home_json": "[]",
