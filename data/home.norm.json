@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-18 19:38",
-  "updated_iso": "2026-08-18T19:38:15+00:00",
-  "build_version": "1787081895",
+  "updated_at": "2026-08-18 20:09",
+  "updated_iso": "2026-08-18T20:09:23+00:00",
+  "build_version": "1787083763",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 17,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 89",
+    "status_line": "HWY 89, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at YONGE ST, Toronto. Left lane\u2026",
+        "road": "HWY 89",
+        "what": "Collision on HWY 89 Eastbound  at 5 SIDE ROAD, Essa. Left shoulder and left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound HOV at BURLOAK DRIVE, Burlington. All\u2026",
+        "road": "HWY 89",
+        "what": "Collision on HWY 89 Westbound  at 5 SIDE ROAD, Essa. Left shoulder and left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:53 EDT"
+      "captured_at": "15:38 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -377,13 +377,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "CVTA: FMCSA moves to strengthen enforcement of ELP \u2014  and safety",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/cvta-fmcsa-moves-to-strengthen-enforcement-of-elp-and-safety"
+      "headline": "New instructor steps into Patterson High\u2019s acclaimed trucking program",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/new-instructor-steps-into-patterson-highs-acclaimed-trucking-program"
     },
     {
       "category": "The Trucker",
-      "headline": "Group of Attorneys General sues Trump administration over personal CDL information",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/group-of-attorneys-general-sues-trump-administration-over-personal-cdl-information"
+      "headline": "CVTA: FMCSA moves to strengthen enforcement of ELP \u2014  and safety",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/cvta-fmcsa-moves-to-strengthen-enforcement-of-elp-and-safety"
     }
   ],
   "theft_home_json": "[]",
