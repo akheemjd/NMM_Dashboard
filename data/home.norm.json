@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18 07:10",
-  "updated_iso": "2026-08-18T07:10:33+00:00",
-  "build_version": "1787037033",
+  "updated_at": "2026-08-18 07:41",
+  "updated_iso": "2026-08-18T07:41:42+00:00",
+  "build_version": "1787038902",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 406",
+    "status_line": "HWY 401, HWY 404",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound ON-RAMP at 16TH AVE, Markham-Richmondhill . All\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound TRANSFER at Meadowvale Express to Collector,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound ON-RAMP at 16TH AVE, Markham-Richmondhill . All\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at HWY 10 / HURONTARIO STREET,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -284,17 +284,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 EDT"
+      "captured_at": "03:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 EDT"
+      "captured_at": "03:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 PDT"
+      "captured_at": "00:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     }
   ],
   "market": [

@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-289863",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound TRANSFER at Meadowvale Express to Collector, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.79977932,
+      "lng": -79.17031962,
+      "start": 1787038560,
+      "end": null,
+      "updated": 1787038560
+    },
+    {
+      "id": "ON-289862",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at HWY 10 / HURONTARIO STREET, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.630174,
+      "lng": -79.684428,
+      "start": 1787038500,
+      "end": null,
+      "updated": 1787038500
+    },
+    {
       "id": "ON-289861",
       "province": "ON",
       "highway": "HWY 404",
@@ -767,42 +799,10 @@
       "start": 1788872400,
       "end": 1789153200,
       "updated": 1786982040
-    },
-    {
-      "id": "ON-289591",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Northbound",
-      "description": "Daily Moving Maintenance Closure on HWY 12 Northbound  between HARVEY SETTLEMENT ROAD/FAIRGROUNDS ROAD, Oro Medonte and HWY 93/SIMCOE ROAD 93, Midland. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.612568,
-      "lng": -79.46308,
-      "start": 1788872400,
-      "end": 1789153200,
-      "updated": 1786981980
-    },
-    {
-      "id": "ON-289590",
-      "province": "ON",
-      "highway": "HWY 12",
-      "direction": "Southbound",
-      "description": "Daily Moving Maintenance Closure on HWY 12 Southbound  between ATHERLEY RD, Orillia and DURHAM RD 50, Ramara. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.60623,
-      "lng": -79.38732,
-      "start": 1788872400,
-      "end": 1789066800,
-      "updated": 1786981920
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T07:10:30.023626+00:00",
+  "updated": "2026-08-18T07:41:39.556762+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
