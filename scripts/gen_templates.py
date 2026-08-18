@@ -29,7 +29,6 @@ FONTS = ("https://fonts.googleapis.com/css2?"
 NAV = [
     ("/", "Home"),
     ("/fuel-prices/", "Diesel"),
-    ("/us-diesel/", "US diesel"),
     ("/fuel-cost-calculator/", "Calculator"),
     ("/border-wait-times/", "Border"),
     ("/exchange-rate/", "Exchange"),
@@ -47,10 +46,22 @@ ORG_LD = ('{"@type":"Organization","@id":"' + ORG_URL + '/#org","name":"Northern
 def nav_html(active):
     out = []
     for href, lab in NAV:
-        on = ' class="on"' if href == active else ""
-        cur = ' aria-current="page"' if href == active else ""
+        is_active = href == active or (href == "/fuel-prices/" and active.startswith("/us-diesel/"))
+        on = ' class="on"' if is_active else ""
+        cur = ' aria-current="page"' if is_active else ""
         out.append(f'<a href="{href}"{on}{cur}>{lab}</a>')
     return "".join(out)
+
+
+def country_switch(active):
+    def opt(href, label, on):
+        cls = 'class="seg-opt is-on"' if on else 'class="seg-opt"'
+        cur = ' aria-current="true"' if on else ''
+        return f'<a {cls}{cur} href="{href}">{label}</a>'
+    return ('<div class="seg" role="group" aria-label="Country">'
+            + opt("/fuel-prices/", "Canada", active == "ca")
+            + opt("/us-diesel/", "US", active == "us")
+            + '</div>')
 
 
 def head(title, desc, canon, og_img, ld, og_type="website"):
@@ -302,6 +313,7 @@ write("fuel-prices",
       "/fuel-prices/", "og-fuel.jpg", fuel_ld, "article")
  + '''
   <section class="hero">
+''' + country_switch("ca") + '''
     <span class="eyebrow">Ten provinces · NRCan weekly survey</span>
     <h1>Diesel prices by province</h1>
     <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L national</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
@@ -1033,6 +1045,7 @@ us_body = (
       "/us-diesel/", "og.jpg", US_LD, "article")
  + '''
   <section class="hero">
+''' + country_switch("us") + '''
     <span class="eyebrow">EIA weekly retail diesel survey · week {{eia.date}}</span>
     <h1>US diesel prices</h1>
     <div class="figure"><span class="n">{{eia.us_national_cpl}}</span><span class="u">¢/L CAD</span><span class="d flat">${{eia.us_national_usd_gal}}/gal</span></div>
@@ -1076,6 +1089,7 @@ uspadd_body = (
       "/us-diesel/{{key}}/", "og.jpg", USPADD_LD, "article")
  + '''
   <section class="hero">
+''' + country_switch("us") + '''
     <span class="eyebrow">{{label}} · EIA week {{date}}</span>
     <h1>{{label}} diesel</h1>
     <div class="figure"><span class="n">{{cpl}}</span><span class="u">¢/L CAD</span><span class="d {{vs_national_class}}">{{vs_national}} vs US national</span></div>

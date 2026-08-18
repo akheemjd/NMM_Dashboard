@@ -65,6 +65,10 @@ a { color: inherit; }
 .hd .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
 .mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .mark .logo { width: 32px; height: 32px; display: block; flex: none; }
+.seg { display: inline-flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--sink); }
+.seg-opt { padding: 5px 15px; border-radius: 999px; font-family: var(--body); font-size: .8125rem; font-weight: 600; line-height: 1.4; color: var(--muted); text-decoration: none; }
+.seg-opt.is-on { background: var(--signal); color: #fff; }
+.seg-opt:not(.is-on):hover { color: var(--ink); background: var(--line-2); }
 .mark .dot {
   width: 10px; height: 10px; border-radius: 50%; background: var(--signal);
   position: relative;
