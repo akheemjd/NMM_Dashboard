@@ -1,36 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-290252",
+      "id": "ON-290259",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.7977031,
+      "lng": -79.1875649,
+      "start": 1787095980,
+      "end": null,
+      "updated": 1787095980
+    },
+    {
+      "id": "ON-290255",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound RAMP at JAMES SNOW PKWY, Milton. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.74251055,
-      "lng": -79.42317394,
-      "start": 1787094300,
+      "lat": 43.5402877,
+      "lng": -79.8655004,
+      "start": 1787095260,
       "end": null,
-      "updated": 1787094300
+      "updated": 1787095260
     },
     {
-      "id": "ON-290239",
+      "id": "ON-290254",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 centre lane closed.",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 427 Southbound EXPRESS at DUNDAS STREET, Toronto. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.7535367,
-      "lng": -79.40848595,
-      "start": 1787093100,
+      "lanes": "left lane closed",
+      "lat": 43.62833109,
+      "lng": -79.55690389,
+      "start": 1787095140,
       "end": null,
-      "updated": 1787093100
+      "updated": 1787095140
     },
     {
       "id": "ON-290222",
@@ -798,26 +814,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990500
-    },
-    {
-      "id": "ON-289658",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 427 Northbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990440
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T23:16:13.853037+00:00",
+  "updated": "2026-08-18T23:47:23.907735+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
