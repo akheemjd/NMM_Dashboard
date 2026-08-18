@@ -1,20 +1,41 @@
 {
   "incidents": [
     {
-      "id": "ON-290119",
+      "id": "drivebc.ca/RIDE-101000",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 6",
+        "from": "Needles Ferry",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Possible ferry delays at Highway 6. Last update: August 18th, 2026 at 11:32am PDT. Next update: August 25th, 2026 at 9:00am PDT. Priority boarding for emergency crews responding to wildfire.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.87298463,
+      "lng": -118.08966986,
+      "start": "2026-07-31T14:01:55-07:00",
+      "end": "",
+      "updated": "2026-08-18T11:32:34-07:00"
+    },
+    {
+      "id": "ON-290125",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at NIAGARA STREET, St. Catharines. Both shoulders and 2 lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 401 Eastbound COLLECTOR RAMP at 401 EAST COLL TO DUFFERIN/YORKDALE, Toronto. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "both shoulders and 2 lanes closed",
-      "lat": 43.1733906,
-      "lng": -79.23159883,
-      "start": 1787075580,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.72674247,
+      "lng": -79.46139539,
+      "start": 1787076360,
       "end": null,
-      "updated": 1787075700
+      "updated": 1787076360
     },
     {
       "id": "ON-290114",
@@ -31,22 +52,6 @@
       "start": 1787075040,
       "end": null,
       "updated": 1787075040
-    },
-    {
-      "id": "ON-290112",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound EXPRESS at RATHBURN ROAD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.654395,
-      "lng": -79.5674374,
-      "start": 1787074860,
-      "end": null,
-      "updated": 1787074860
     },
     {
       "id": "ON-290116",
@@ -95,6 +100,38 @@
       "start": 1787074260,
       "end": null,
       "updated": 1787074500
+    },
+    {
+      "id": "ON-290128",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 401 Eastbound Collector Off-ramp at ALLEN ROAD, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.729862,
+      "lng": -79.44891,
+      "start": 1787803140,
+      "end": 1787907600,
+      "updated": 1787074140
+    },
+    {
+      "id": "ON-290127",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 401 Eastbound Collector between ALLEN ROAD and ALLEN ROAD, Toronto. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.729862,
+      "lng": -79.44891,
+      "start": 1787716740,
+      "end": 1787821200,
+      "updated": 1787073960
     },
     {
       "id": "ON-290121",
@@ -265,22 +302,6 @@
       "start": 1787104800,
       "end": 1787389200,
       "updated": 1787064000
-    },
-    {
-      "id": "ON-290041",
-      "province": "ON",
-      "highway": "HWY 588",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 588 Northbound  at DAVES RD - GILLIES TWP (N), Hymers. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.287049403,
-      "lng": -89.740544438,
-      "start": 1787060640,
-      "end": null,
-      "updated": 1787063340
     },
     {
       "id": "ON-290020",
@@ -793,26 +814,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990560
-    },
-    {
-      "id": "ON-289664",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 427 Southbound Collector between DUNDAS STREET and EVANS AVE, Toronto. 2 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Left Lane(s)",
-      "lat": 43.628445,
-      "lng": -79.5568,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990560
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T18:04:42.607859+00:00",
+  "updated": "2026-08-18T18:35:51.751693+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

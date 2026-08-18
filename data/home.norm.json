@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-18 18:04",
-  "updated_iso": "2026-08-18T18:04:45+00:00",
-  "build_version": "1787076285",
+  "updated_at": "2026-08-18 18:35",
+  "updated_iso": "2026-08-18T18:35:55+00:00",
+  "build_version": "1787078155",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,13 +235,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 17,
+    "active_count": 15,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 17, HWY 427, HWY 401",
+    "status_line": "HWY 401, HWY 17",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at NIAGARA STREET, St. Catharines. Both\u2026",
+        "road": "HWY 401",
+        "what": "Highway Maintenance on HWY 401 Eastbound COLLECTOR RAMP at 401 EAST COLL TO\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,11 +280,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "13 min",
+      "wait": "11 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 CDT"
+      "captured_at": "13:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -377,8 +377,8 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "US and Canada hold last-minute talks to stop Trump\u2019s 50% tariffs",
-      "url": "https://www.thetrucker.com/trucking-news/business/us-and-canada-hold-last-minute-talks-to-stop-trumps-50-tariffs"
+      "headline": "CVTA: FMCSA moves to strengthen enforcement of ELP \u2014  and safety",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/cvta-fmcsa-moves-to-strengthen-enforcement-of-elp-and-safety"
     },
     {
       "category": "The Trucker",
