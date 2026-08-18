@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18 17:02",
-  "updated_iso": "2026-08-18T17:02:26+00:00",
-  "build_version": "1787072546",
+  "updated_at": "2026-08-18 17:33",
+  "updated_iso": "2026-08-18T17:33:36+00:00",
+  "build_version": "1787074416",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,87 +10,87 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "19 min"
+    "max_wait": "27 min"
   },
   "fuel": {
-    "national_diesel": "228.4",
+    "national_diesel": "228.9",
     "series": "NMDI",
-    "national_nmdi": "228.4",
+    "national_nmdi": "228.9",
     "print_date": "Tue, 18 Aug 2026",
-    "national_pct": 51.8,
+    "national_pct": 52.4,
     "change_7d": "+5.7",
     "change_7d_band": "material",
     "change_7d_class": "up",
     "change_30d": "+13.6",
     "low_code": "AB",
-    "low": "205.8",
+    "low": "206.2",
     "high_code": "QC",
-    "high": "249.4",
-    "spread": "43.6",
+    "high": "249.5",
+    "spread": "43.3",
     "fuel_top": [
       {
         "code": "AB",
         "name": "Alberta",
-        "price": "205.8",
+        "price": "206.2",
         "pct": 0.0,
         "change": "+4.6",
         "change_class": "up",
-        "vs_national": "-22.6",
+        "vs_national": "-22.7",
         "vs_class": "lo",
         "rowclass": "lo"
       },
       {
         "code": "SK",
         "name": "Saskatchewan",
-        "price": "206.6",
+        "price": "207.0",
         "pct": 1.8,
         "change": "+5.1",
         "change_class": "up",
-        "vs_national": "-21.8",
+        "vs_national": "-21.9",
         "vs_class": "lo",
         "rowclass": ""
       },
       {
         "code": "MB",
         "name": "Manitoba",
-        "price": "212.5",
-        "pct": 15.4,
+        "price": "212.8",
+        "pct": 15.2,
         "change": "+3.1",
         "change_class": "up",
-        "vs_national": "-15.9",
+        "vs_national": "-16.1",
         "vs_class": "lo",
         "rowclass": ""
       },
       {
         "code": "ON",
         "name": "Ontario",
-        "price": "219.5",
-        "pct": 31.4,
+        "price": "219.9",
+        "pct": 31.6,
         "change": "+7.0",
         "change_class": "up",
-        "vs_national": "-8.9",
+        "vs_national": "-9.0",
         "vs_class": "lo",
+        "rowclass": ""
+      },
+      {
+        "code": "NB",
+        "name": "New Brunswick",
+        "price": "236.9",
+        "pct": 70.9,
+        "change": "+3.7",
+        "change_class": "up",
+        "vs_national": "+8.0",
+        "vs_class": "hi",
         "rowclass": ""
       },
       {
         "code": "BC",
         "name": "British Columbia",
-        "price": "236.2",
-        "pct": 69.7,
+        "price": "237.0",
+        "pct": 71.1,
         "change": "+6.3",
         "change_class": "up",
-        "vs_national": "+7.8",
-        "vs_class": "hi",
-        "rowclass": ""
-      },
-      {
-        "code": "NS",
-        "name": "Nova Scotia",
-        "price": "236.4",
-        "pct": 70.2,
-        "change": "+8.4",
-        "change_class": "up",
-        "vs_national": "+8.0",
+        "vs_national": "+8.1",
         "vs_class": "hi",
         "rowclass": ""
       }
@@ -100,110 +100,110 @@
     {
       "code": "AB",
       "name": "Alberta",
-      "price": "205.8",
+      "price": "206.2",
       "pct": 0.0,
       "change": "+4.6",
       "change_class": "up",
-      "vs_national": "-22.6",
+      "vs_national": "-22.7",
       "vs_class": "lo",
       "rowclass": "lo"
     },
     {
       "code": "SK",
       "name": "Saskatchewan",
-      "price": "206.6",
+      "price": "207.0",
       "pct": 1.8,
       "change": "+5.1",
       "change_class": "up",
-      "vs_national": "-21.8",
+      "vs_national": "-21.9",
       "vs_class": "lo",
       "rowclass": ""
     },
     {
       "code": "MB",
       "name": "Manitoba",
-      "price": "212.5",
-      "pct": 15.4,
+      "price": "212.8",
+      "pct": 15.2,
       "change": "+3.1",
       "change_class": "up",
-      "vs_national": "-15.9",
+      "vs_national": "-16.1",
       "vs_class": "lo",
       "rowclass": ""
     },
     {
       "code": "ON",
       "name": "Ontario",
-      "price": "219.5",
-      "pct": 31.4,
+      "price": "219.9",
+      "pct": 31.6,
       "change": "+7.0",
       "change_class": "up",
-      "vs_national": "-8.9",
+      "vs_national": "-9.0",
       "vs_class": "lo",
       "rowclass": ""
     },
     {
-      "code": "BC",
-      "name": "British Columbia",
-      "price": "236.2",
-      "pct": 69.7,
-      "change": "+6.3",
-      "change_class": "up",
-      "vs_national": "+7.8",
-      "vs_class": "hi",
-      "rowclass": ""
-    },
-    {
-      "code": "NS",
-      "name": "Nova Scotia",
-      "price": "236.4",
-      "pct": 70.2,
-      "change": "+8.4",
+      "code": "NB",
+      "name": "New Brunswick",
+      "price": "236.9",
+      "pct": 70.9,
+      "change": "+3.7",
       "change_class": "up",
       "vs_national": "+8.0",
       "vs_class": "hi",
       "rowclass": ""
     },
     {
-      "code": "NB",
-      "name": "New Brunswick",
-      "price": "237.1",
-      "pct": 71.8,
-      "change": "+3.7",
+      "code": "BC",
+      "name": "British Columbia",
+      "price": "237.0",
+      "pct": 71.1,
+      "change": "+6.3",
       "change_class": "up",
-      "vs_national": "+8.7",
+      "vs_national": "+8.1",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "NS",
+      "name": "Nova Scotia",
+      "price": "237.3",
+      "pct": 71.8,
+      "change": "+8.4",
+      "change_class": "up",
+      "vs_national": "+8.4",
       "vs_class": "hi",
       "rowclass": ""
     },
     {
       "code": "PE",
       "name": "PEI",
-      "price": "238.1",
-      "pct": 74.1,
+      "price": "239.2",
+      "pct": 76.2,
       "change": "+4.0",
       "change_class": "up",
-      "vs_national": "+9.7",
+      "vs_national": "+10.3",
       "vs_class": "hi",
       "rowclass": ""
     },
     {
       "code": "NL",
       "name": "Newfoundland",
-      "price": "242.7",
-      "pct": 84.6,
+      "price": "242.8",
+      "pct": 84.5,
       "change": "+14.6",
       "change_class": "up",
-      "vs_national": "+14.3",
+      "vs_national": "+13.9",
       "vs_class": "hi",
       "rowclass": ""
     },
     {
       "code": "QC",
       "name": "Quebec",
-      "price": "249.4",
+      "price": "249.5",
       "pct": 100.0,
       "change": "+0.2",
       "change_class": "up",
-      "vs_national": "+21.0",
+      "vs_national": "+20.6",
       "vs_class": "hi",
       "rowclass": "hi"
     }
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 14,
+    "active_count": 16,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 11, HWY 401, HWY 400",
+    "status_line": "HWY 401, HWY 404, HWY 11",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound HOV at DORVAL DRIVE, Oakville. All\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Northbound  at ROBINS RD (E) BLACK CREEK RD (W),\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 400, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -274,27 +274,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT"
+      "captured_at": "13:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "19 min",
+      "wait": "27 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:47 EDT"
+      "captured_at": "13:12 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -314,7 +314,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 MDT"
+      "captured_at": "11:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT"
+      "captured_at": "10:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT"
+      "captured_at": "13:15 EDT"
     }
   ],
   "market": [
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Truck News",
-      "headline": "Radioactive waste hauler Cash earns CVSA\u2019s top driver honor",
-      "url": "https://www.trucknews.com/human-resources/radioactive-waste-hauler-cash-earns-cvsas-top-driver-honor/1003220150/"
+      "category": "The Trucker",
+      "headline": "US and Canada hold last-minute talks to stop Trump\u2019s 50% tariffs",
+      "url": "https://www.thetrucker.com/trucking-news/business/us-and-canada-hold-last-minute-talks-to-stop-trumps-50-tariffs"
     },
     {
-      "category": "Truck News",
-      "headline": "Auto transport truck impounded after speeding through B.C. construction zone",
-      "url": "https://www.trucknews.com/regulations/auto-transport-truck-impounded-after-speeding-through-b-c-construction-zone/1003220143/"
+      "category": "The Trucker",
+      "headline": "CBP reports San Diego field office seized over $67 million in narcotics in July",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/cbp-reports-san-diego-field-office-seized-over-67-million-in-narcotics-in-july"
     }
   ],
   "theft_home_json": "[]",
@@ -400,8 +400,8 @@
   "eia": {
     "us_national_usd_gal": "5.454",
     "us_national_cpl": "199.8",
-    "nadi": "214.1",
-    "ca_us_gap": "28.6",
+    "nadi": "214.3",
+    "ca_us_gap": "29.1",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-08-17",
