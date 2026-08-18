@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-18 21:11",
-  "updated_iso": "2026-08-18T21:11:41+00:00",
-  "build_version": "1787087501",
+  "updated_at": "2026-08-18 21:42",
+  "updated_iso": "2026-08-18T21:42:51+00:00",
+  "build_version": "1787089371",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "20 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 17",
+    "status_line": "HWY 403 , HWY 427, HWY 410, HWY 11",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Westbound TRANSFER at Allen Road Collector to Express,\u2026",
+        "road": "HWY 403 HAMILTON",
+        "what": "Disabled Vehicle on HWY 403 HAMILTON Eastbound  at HWY 6 NORTH, Burlington.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. Right lane\u2026",
+        "road": "HWY 427",
+        "what": "Collision on HWY 427 Southbound  at FINCH AVENUE, Toronto. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:05 EDT"
+      "captured_at": "17:18 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -274,27 +274,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 EDT"
+      "captured_at": "17:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 PDT"
+      "captured_at": "14:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 EDT"
+      "captured_at": "17:15 EDT"
     }
   ],
   "market": [
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Truck News",
-      "headline": "Truckstop, Bloomberg surveys point to improving freight market, but carrier pressures persist",
-      "url": "https://www.trucknews.com/business-management/truckstop-bloomberg-surveys-point-to-improving-freight-market-but-carrier-pressures-persist/1003220159/"
+      "category": "The Trucker",
+      "headline": "TCA\u2019s 2026 Elevate class launches driver appreciation project",
+      "url": "https://www.thetrucker.com/trucking-news/business/tcas-2026-elevate-class-launches-driver-appreciation-project"
     },
     {
-      "category": "Truck News",
-      "headline": "FTR names keynote speakers for 2026 transportation conference",
-      "url": "https://www.trucknews.com/business-management/ftr-names-keynote-speakers-for-2026-transportation-conference/1003220154/"
+      "category": "The Trucker",
+      "headline": "New instructor steps into Patterson High\u2019s acclaimed trucking program",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/new-instructor-steps-into-patterson-highs-acclaimed-trucking-program"
     }
   ],
   "theft_home_json": "[]",
