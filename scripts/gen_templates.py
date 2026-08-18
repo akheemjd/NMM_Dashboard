@@ -964,7 +964,7 @@ prov_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>Why {{name}} prices where it does</h2></div>
+    <div class="lead"><h2>Why {{name}} prices the way it does</h2></div>
     <div class="reading">
 {{prose}}
     </div>
@@ -1011,7 +1011,7 @@ city_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>Why {{name}} prices where it does</h2></div>
+    <div class="lead"><h2>Why {{name}} prices the way it does</h2></div>
     <div class="reading">
 {{prose}}
     </div>
