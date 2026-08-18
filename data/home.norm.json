@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-08-18 13:55",
-  "updated_iso": "2026-08-18T13:55:31+00:00",
-  "build_version": "1787061331",
+  "updated_at": "2026-08-18 14:26",
+  "updated_iso": "2026-08-18T14:26:41+00:00",
+  "build_version": "1787063201",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
+    "max_name": "Pacific Highway Crossing",
     "max_wait": "10 min"
   },
   "fuel": {
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 17,
+    "active_count": 16,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 588, HWY 17, HWY 401",
+    "status_line": "HWY 17, HWY 400, HWY 588",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Highway Maintenance on HWY 400 Southbound  at PAYNE LK TRAIL UP, Mactier. NORTH\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Both Directions  at SEC HWY 535-HAGAR, Hagar. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 588",
-        "what": "Highway Maintenance on HWY 588 Both Directions  at DAVES RD - GILLIES TWP (N),\u2026",
+        "road": "HWY 400",
+        "what": "Highway Maintenance on HWY 400 Southbound  at PAYNE LK TRAIL UP, Mactier. NORTH\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:09 EDT"
+      "captured_at": "10:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:29 CDT"
+      "captured_at": "09:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -398,57 +398,57 @@
   "sponsor_market": null,
   "sponsor_news": null,
   "eia": {
-    "us_national_usd_gal": "5.257",
-    "us_national_cpl": "192.6",
-    "nadi": "210.5",
-    "ca_us_gap": "35.8",
+    "us_national_usd_gal": "5.454",
+    "us_national_cpl": "199.8",
+    "nadi": "214.1",
+    "ca_us_gap": "28.6",
     "ca_higher": true,
     "gap_word": "Canada higher",
-    "date": "2026-08-10",
+    "date": "2026-08-17",
     "padds_usd_gal": {
-      "east_coast": 5.193,
-      "midwest": 5.181,
-      "gulf_coast": 5.044,
-      "rocky_mountain": 5.271,
-      "west_coast": 6.033
+      "east_coast": 5.34,
+      "midwest": 5.435,
+      "gulf_coast": 5.237,
+      "rocky_mountain": 5.427,
+      "west_coast": 6.203
     },
     "padds_cpl": {
-      "east_coast": 190.2,
-      "midwest": 189.8,
-      "gulf_coast": 184.7,
-      "rocky_mountain": 193.1,
-      "west_coast": 221.0
+      "east_coast": 195.6,
+      "midwest": 199.1,
+      "gulf_coast": 191.8,
+      "rocky_mountain": 198.8,
+      "west_coast": 227.2
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
-        "usd_gal": "5.193",
-        "cpl": "190.2"
+        "usd_gal": "5.340",
+        "cpl": "195.6"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
-        "usd_gal": "5.181",
-        "cpl": "189.8"
+        "usd_gal": "5.435",
+        "cpl": "199.1"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
-        "usd_gal": "5.044",
-        "cpl": "184.7"
+        "usd_gal": "5.237",
+        "cpl": "191.8"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
-        "usd_gal": "5.271",
-        "cpl": "193.1"
+        "usd_gal": "5.427",
+        "cpl": "198.8"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
-        "usd_gal": "6.033",
-        "cpl": "221.0"
+        "usd_gal": "6.203",
+        "cpl": "227.2"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
