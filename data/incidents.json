@@ -1,25 +1,62 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-101438",
+      "id": "ON-290083",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.77496258,
+      "lng": -79.28476557,
+      "start": 1787068260,
+      "end": null,
+      "updated": 1787068260
+    },
+    {
+      "id": "drivebc.ca/RIDE-101440",
       "province": "BC",
       "highway": {
-        "name": "Highway 99",
-        "from": "George Massey Tunnel",
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
         "direction": "BOTH",
         "state": "ALL_LANES_OPEN"
       },
       "direction": "",
-      "description": "Vehicle incident at Highway 99, In Richmond. Expect delays. Watch for traffic control. Last update: August 18th, 2026 at 8:24am PDT. Next update: August 18th, 2026 at 9:21am PDT. The stall is in the northbound counterflow lane.",
-      "event_type": "incident",
-      "severity": "MAJOR",
+      "description": "Patching at Highway 1. Starting Tue Aug 18. All day, Tuesday. Expect minor delays. Last update: August 18th, 2026 at 8:31am PDT. Overlay Patching on Des Fosses Rd at HWY 1.",
+      "event_type": "construction",
+      "severity": "MINOR",
       "closure": false,
       "lanes": "",
-      "lat": 49.12353448,
-      "lng": -123.07782643,
-      "start": "2026-08-18T08:21:48-07:00",
+      "lat": 50.89158661,
+      "lng": -119.5158888,
+      "start": "2026-08-18T08:31:41-07:00",
       "end": "",
-      "updated": "2026-08-18T08:24:04-07:00"
+      "updated": "2026-08-18T08:31:41-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101439",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Cayoosh Creek Number 3 Bridge",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Bridge maintenance at Highway 99, At Cayoosh Creek #3 Bridge (Wood). Starting Tue Aug 18 until Tue Aug 18. Single lane alternating traffic. Last update: August 18th, 2026 at 8:31am PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.38499648,
+      "lng": -122.36582506,
+      "start": "2026-08-18T08:31:19-07:00",
+      "end": "",
+      "updated": "2026-08-18T08:31:19-07:00"
     },
     {
       "id": "ON-290078",
@@ -196,22 +233,6 @@
       "start": 1787060100,
       "end": null,
       "updated": 1787063280
-    },
-    {
-      "id": "ON-290055",
-      "province": "ON",
-      "highway": "HWY 557",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 557 Southbound  at STEEL RD (E), Blind River. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 46.271183178,
-      "lng": -82.94744541,
-      "start": 1787063160,
-      "end": null,
-      "updated": 1787063160
     },
     {
       "id": "ON-290050",
@@ -788,26 +809,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990500
-    },
-    {
-      "id": "ON-289663",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 427 Southbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990500
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T15:28:56.459402+00:00",
+  "updated": "2026-08-18T16:00:05.666784+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
