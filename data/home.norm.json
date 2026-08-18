@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18 05:05",
-  "updated_iso": "2026-08-18T05:05:55+00:00",
-  "build_version": "1787029555",
+  "updated_at": "2026-08-18 05:37",
+  "updated_iso": "2026-08-18T05:37:05+00:00",
+  "build_version": "1787031425",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "12 min"
+    "max_wait": "6 min"
   },
   "fuel": {
     "national_diesel": "228.4",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 406, HWY 404",
+    "status_line": "HWY 404, HWY 406, HWY 527",
     "incidents": [
       {
-        "road": "HWY 406",
-        "what": "Other on HWY 406 Northbound ON-RAMP at MCGUIRE STREET / RACE STREET, St.\u2026",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Southbound ON-RAMP at 16TH AVE, Markham-Richmondhill . All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound ON-RAMP at 16TH AVE, Markham-Richmondhill . All\u2026",
+        "what": "Collision on HWY 404 Southbound  at 16TH AVE, Markham-Richmondhill . 3 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "12 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:40 EDT"
+      "captured_at": "01:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:40 EDT"
+      "captured_at": "01:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT"
+      "captured_at": "22:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT"
+      "captured_at": "01:15 EDT"
     }
   ],
   "market": [

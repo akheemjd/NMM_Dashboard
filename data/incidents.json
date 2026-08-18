@@ -17,22 +17,6 @@
       "updated": 1787028600
     },
     {
-      "id": "ON-289852",
-      "province": "ON",
-      "highway": "HWY 406",
-      "direction": "Northbound",
-      "description": "Other on HWY 406 Northbound ON-RAMP at MCGUIRE STREET / RACE STREET, St. Catharines. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.153622,
-      "lng": -79.244316,
-      "start": 1787027220,
-      "end": null,
-      "updated": 1787027220
-    },
-    {
       "id": "ON-289850",
       "province": "ON",
       "highway": "HWY 404",
@@ -47,22 +31,6 @@
       "start": 1787026800,
       "end": null,
       "updated": 1787026800
-    },
-    {
-      "id": "ON-289771",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 401 Eastbound  at CARMAN RD (IC 738)/SD&G CR 1 - Iroquois, Iroquois. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.85721,
-      "lng": -75.33046,
-      "start": 1787002920,
-      "end": null,
-      "updated": 1787026620
     },
     {
       "id": "ON-289846",
@@ -799,10 +767,42 @@
       "start": 1788872400,
       "end": 1789153200,
       "updated": 1786981980
+    },
+    {
+      "id": "ON-289590",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Southbound",
+      "description": "Daily Moving Maintenance Closure on HWY 12 Southbound  between ATHERLEY RD, Orillia and DURHAM RD 50, Ramara. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.60623,
+      "lng": -79.38732,
+      "start": 1788872400,
+      "end": 1789066800,
+      "updated": 1786981920
+    },
+    {
+      "id": "ON-289595",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Moving Maintenance Closure on HWY 12 Northbound  between DURHAM RD 50, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.496002,
+      "lng": -79.156,
+      "start": 1788872400,
+      "end": 1789066800,
+      "updated": 1786981860
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T05:05:52.287345+00:00",
+  "updated": "2026-08-18T05:37:02.497085+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
