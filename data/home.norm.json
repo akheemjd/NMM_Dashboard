@@ -1,22 +1,22 @@
 {
-  "updated_at": "2026-08-18 03:32",
-  "updated_iso": "2026-08-18T03:32:28+00:00",
-  "build_version": "1787023948",
+  "updated_at": "2026-08-18 04:03",
+  "updated_iso": "2026-08-18T04:03:38+00:00",
+  "build_version": "1787025818",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 0,
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "32 min"
+    "max_wait": "22 min"
   },
   "fuel": {
     "national_diesel": "228.4",
     "series": "NMDI",
     "national_nmdi": "228.4",
-    "print_date": "Tue, 11 Aug 2026",
+    "print_date": "Tue, 18 Aug 2026",
     "national_pct": 51.8,
     "change_7d": "+5.7",
     "change_7d_band": "material",
@@ -237,18 +237,18 @@
     "none": false,
     "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 409, HWY 401, HWY 410",
+    "status_line": "HWY 401, HWY 406, HWY 409",
     "incidents": [
       {
-        "road": "HWY 409",
-        "what": "Disabled Vehicle on HWY 409 Eastbound RAMP at 401, Toronto. Right lane and\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  at LAKE RD, Brighton. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at VICTORIA PARK AVE,\u2026",
+        "road": "HWY 406",
+        "what": "Emergency Roadwork on HWY 406 Northbound  at GLENDALE AVE, St. Catharines.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "23:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "32 min",
+      "wait": "22 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "23:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:11 EDT"
+      "captured_at": "23:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:20 PDT"
+      "captured_at": "20:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Truck News",
-      "headline": "Judge pauses Trump administration effort to access millions of CDL records",
-      "url": "https://www.trucknews.com/transportation/judge-pauses-trump-administration-effort-to-access-millions-of-cdl-records/1003220124/"
+      "category": "Trucking Info",
+      "headline": "Driver Trust Can Make or Break the Success of Fleet Safety Technology",
+      "url": "https://www.truckinginfo.com/news/driver-trust-can-make-or-break-the-success-of-fleet-safety-technology"
     },
     {
-      "category": "Truck News",
-      "headline": "NMFTA research links trailer cybersecurity vulnerabilities to tractor safety systems",
-      "url": "https://www.trucknews.com/security/nmfta-research-links-trailer-cybersecurity-vulnerabilities-to-tractor-safety-systems/1003220119/"
+      "category": "The Trucker",
+      "headline": "CDL training without geographic limits: FleetForce is bringing driver training directly to carriers where it\u2019s needed mo",
+      "url": "https://www.thetrucker.com/trucking-news/sponsored/cdl-training-without-geographic-limits-fleetforce-is-bringing-driver-training-directly-to-carriers-where-its-needed-most"
     }
   ],
   "theft_home_json": "[]",
