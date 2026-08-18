@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-289846",
-      "province": "ON",
-      "highway": "HWY 406",
-      "direction": "Northbound",
-      "description": "Emergency Roadwork on HWY 406 Northbound  at GLENDALE AVE, St. Catharines. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.13463027,
-      "lng": -79.22077563,
-      "start": 1787023920,
-      "end": null,
-      "updated": 1787023920
-    },
-    {
       "id": "ON-277509",
       "province": "ON",
       "highway": "HWY 811",
@@ -799,10 +783,26 @@
       "start": 1788872400,
       "end": 1789070400,
       "updated": 1786981740
+    },
+    {
+      "id": "ON-289598",
+      "province": "ON",
+      "highway": "HWY 93",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 93 Southbound  between HWY 12/ANGELA SCHMIDT FOSTER ROAD, Tay and HWY 400, Springwater. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.718716,
+      "lng": -79.89774,
+      "start": 1788912000,
+      "end": 1789210800,
+      "updated": 1786981680
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T09:15:06.989653+00:00",
+  "updated": "2026-08-18T09:46:16.239608+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
