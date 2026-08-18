@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18 02:30",
-  "updated_iso": "2026-08-18T02:30:12+00:00",
-  "build_version": "1787020212",
+  "updated_at": "2026-08-18 03:01",
+  "updated_iso": "2026-08-18T03:01:20+00:00",
+  "build_version": "1787022080",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "31 min"
+    "max_wait": "35 min"
   },
   "fuel": {
     "national_diesel": "228.4",
@@ -235,9 +235,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 69, HWY 144",
+    "status_line": "HWY 401, HWY 144, HWY 527",
     "incidents": [
       {
         "road": "HWY 401",
@@ -247,8 +247,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 69",
-        "what": "Disabled Vehicle on HWY 69 Southbound  at SOUTH SHORE RD, POINTE AU BARIL,\u2026",
+        "road": "HWY 401",
+        "what": "Vehicle Fire on HWY 401 Eastbound  at CARMAN RD (IC 738)/SD&G CR 1 - Iroquois,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "31 min",
+      "wait": "35 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 PDT"
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Trucking Info",
-      "headline": "Driver Trust Can Make or Break the Success of Fleet Safety Technology",
-      "url": "https://www.truckinginfo.com/news/driver-trust-can-make-or-break-the-success-of-fleet-safety-technology"
+      "category": "Truck News",
+      "headline": "Judge pauses Trump administration effort to access millions of CDL records",
+      "url": "https://www.trucknews.com/transportation/judge-pauses-trump-administration-effort-to-access-millions-of-cdl-records/1003220124/"
     },
     {
-      "category": "The Trucker",
-      "headline": "CDL training without geographic limits: FleetForce is bringing driver training directly to carriers where it\u2019s needed mo",
-      "url": "https://www.thetrucker.com/trucking-news/sponsored/cdl-training-without-geographic-limits-fleetforce-is-bringing-driver-training-directly-to-carriers-where-its-needed-most"
+      "category": "Truck News",
+      "headline": "NMFTA research links trailer cybersecurity vulnerabilities to tractor safety systems",
+      "url": "https://www.trucknews.com/security/nmfta-research-links-trailer-cybersecurity-vulnerabilities-to-tractor-safety-systems/1003220119/"
     }
   ],
   "theft_home_json": "[]",
