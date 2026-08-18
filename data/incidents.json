@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-290252",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.74251055,
+      "lng": -79.42317394,
+      "start": 1787094300,
+      "end": null,
+      "updated": 1787094300
+    },
+    {
+      "id": "ON-290239",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.7535367,
+      "lng": -79.40848595,
+      "start": 1787093100,
+      "end": null,
+      "updated": 1787093100
+    },
+    {
       "id": "ON-290222",
       "province": "ON",
       "highway": "HWY 17",
@@ -17,38 +49,6 @@
       "updated": 1787090040
     },
     {
-      "id": "ON-290064",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 11 Northbound  at ROBINS RD (E) BLACK CREEK RD (W), Burk'S Falls. 1 lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane closed",
-      "lat": 45.708198245,
-      "lng": -79.441505941,
-      "start": 1787064360,
-      "end": null,
-      "updated": 1787089020
-    },
-    {
-      "id": "ON-290215",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 HAMILTON Eastbound  at HWY 6 NORTH, Burlington. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.29308284,
-      "lng": -79.8919664,
-      "start": 1787088960,
-      "end": null,
-      "updated": 1787088960
-    },
-    {
       "id": "ON-290190",
       "province": "ON",
       "highway": "HWY 416",
@@ -63,6 +63,27 @@
       "start": 1787223600,
       "end": 1787266800,
       "updated": 1787086260
+    },
+    {
+      "id": "drivebc.ca/DBC-93947",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Trout Creek Main 45 km north of Princeton",
+        "to": "Summerland 45 km north of Princeton",
+        "direction": "NONE"
+      },
+      "direction": "",
+      "description": "Princeton Summerland Rd. There is a wildfire between Trout Creek Main and Summerland 45 km north of Princeton. Road closed. Watch for traffic control. Alternate Routes - HWY 5A & HWY 3. Next update time Thu Aug 20 at 12:00 PM PDT. Last updated Tue Aug 18 at 1:09 PM PDT. (DBC-93947)",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.718144,
+      "lng": -120.174946,
+      "start": "2026-08-12T10:50:32-07:00",
+      "end": "",
+      "updated": "2026-08-18T13:09:04-07:00"
     },
     {
       "id": "ON-290172",
@@ -196,22 +217,6 @@
       "start": 1787274000,
       "end": 1787914800,
       "updated": 1787071680
-    },
-    {
-      "id": "ON-289954",
-      "province": "ON",
-      "highway": "HWY 531",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 531 Southbound  at BONFIELD TWP RD C 8-9-BONFIELD, Bonfield. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 46.2394196,
-      "lng": -79.151422,
-      "start": 1787054940,
-      "end": null,
-      "updated": 1787071380
     },
     {
       "id": "drivebc.ca/RIDE-101440",
@@ -812,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T22:45:04.261023+00:00",
+  "updated": "2026-08-18T23:16:13.853037+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
