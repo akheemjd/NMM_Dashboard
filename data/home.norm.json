@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-18 09:46",
-  "updated_iso": "2026-08-18T09:46:19+00:00",
-  "build_version": "1787046379",
+  "updated_at": "2026-08-18 10:17",
+  "updated_iso": "2026-08-18T10:17:29+00:00",
+  "build_version": "1787048249",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 527, HWY 811, HWY 61",
+    "status_line": "HWY 401, HWY 400, HWY 403 , HWY 527",
     "incidents": [
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at ISLINGTON AVE, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 811",
-        "what": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and DOG\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:20 PDT"
+      "captured_at": "03:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
