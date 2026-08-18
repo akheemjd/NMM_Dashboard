@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-18 04:03",
-  "updated_iso": "2026-08-18T04:03:38+00:00",
-  "build_version": "1787025818",
+  "updated_at": "2026-08-18 04:34",
+  "updated_iso": "2026-08-18T04:34:46+00:00",
+  "build_version": "1787027686",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "22 min"
+    "max_wait": "11 min"
   },
   "fuel": {
     "national_diesel": "228.4",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 406, HWY 409",
+    "status_line": "HWY 406, HWY 404",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at LAKE RD, Brighton. All lanes closed.",
+        "road": "HWY 406",
+        "what": "Other on HWY 406 Northbound ON-RAMP at MCGUIRE STREET / RACE STREET, St.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 406",
-        "what": "Emergency Roadwork on HWY 406 Northbound  at GLENDALE AVE, St. Catharines.\u2026",
+        "road": "HWY 404",
+        "what": "Disabled Vehicle on HWY 404 Northbound  at 19TH AVE, Stouffville-Richmondhill.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "22 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "11 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:45 EDT"
+      "captured_at": "00:06 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 CDT"
+      "captured_at": "23:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
