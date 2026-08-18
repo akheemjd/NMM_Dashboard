@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-18 19:07",
-  "updated_iso": "2026-08-18T19:07:05+00:00",
-  "build_version": "1787080025",
+  "updated_at": "2026-08-18 19:38",
+  "updated_iso": "2026-08-18T19:38:15+00:00",
+  "build_version": "1787081895",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 16,
+    "active_count": 17,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 410, HWY 17",
+    "status_line": "HWY 401, QEW, HWY 89",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Left shoulder\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at YONGE ST, Toronto. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Southbound  at KING ROAD, King. Right lane closed.",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound HOV at BURLOAK DRIVE, Burlington. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:10 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -274,7 +274,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -284,7 +284,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -314,7 +314,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 MDT"
+      "captured_at": "13:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT"
+      "captured_at": "12:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     }
   ],
   "market": [
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Truck News",
-      "headline": "FTR names keynote speakers for 2026 transportation conference",
-      "url": "https://www.trucknews.com/business-management/ftr-names-keynote-speakers-for-2026-transportation-conference/1003220154/"
+      "category": "The Trucker",
+      "headline": "CVTA: FMCSA moves to strengthen enforcement of ELP \u2014  and safety",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/cvta-fmcsa-moves-to-strengthen-enforcement-of-elp-and-safety"
     },
     {
-      "category": "Truck News",
-      "headline": "Radioactive waste hauler Cash earns CVSA\u2019s top driver honor",
-      "url": "https://www.trucknews.com/human-resources/radioactive-waste-hauler-cash-earns-cvsas-top-driver-honor/1003220150/"
+      "category": "The Trucker",
+      "headline": "Group of Attorneys General sues Trump administration over personal CDL information",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/group-of-attorneys-general-sues-trump-administration-over-personal-cdl-information"
     }
   ],
   "theft_home_json": "[]",
