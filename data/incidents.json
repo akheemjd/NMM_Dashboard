@@ -1,6 +1,43 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101438",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "George Massey Tunnel",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 99, In Richmond. Expect delays. Watch for traffic control. Last update: August 18th, 2026 at 8:24am PDT. Next update: August 18th, 2026 at 9:21am PDT. The stall is in the northbound counterflow lane.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.12353448,
+      "lng": -123.07782643,
+      "start": "2026-08-18T08:21:48-07:00",
+      "end": "",
+      "updated": "2026-08-18T08:24:04-07:00"
+    },
+    {
+      "id": "ON-290078",
+      "province": "ON",
+      "highway": "HWY 409",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 409 Eastbound  between KIPLING AVE/BELFIELD ROAD and 401, Toronto. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.704285,
+      "lng": -79.56329,
+      "start": 1787619600,
+      "end": 1788012000,
+      "updated": 1787065200
+    },
+    {
       "id": "ON-290066",
       "province": "ON",
       "highway": "QEW",
@@ -17,22 +54,6 @@
       "updated": 1787064540
     },
     {
-      "id": "ON-290065",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.83731548,
-      "lng": -79.07273129,
-      "start": 1787064420,
-      "end": null,
-      "updated": 1787064420
-    },
-    {
       "id": "ON-290070",
       "province": "ON",
       "highway": "HWY 401",
@@ -46,6 +67,22 @@
       "lng": -79.387115,
       "start": 1787616000,
       "end": 1788001200,
+      "updated": 1787064420
+    },
+    {
+      "id": "ON-290072",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Collector between ISLINGTON AVE and WESTON ROAD, Toronto. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.709366,
+      "lng": -79.55228,
+      "start": 1787626800,
+      "end": 1788008400,
       "updated": 1787064420
     },
     {
@@ -239,22 +276,6 @@
       "start": 1787536800,
       "end": 1787997600,
       "updated": 1787060160
-    },
-    {
-      "id": "ON-290022",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH DR, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.66666,
-      "lng": -79.59792,
-      "start": 1787059920,
-      "end": null,
-      "updated": 1787059920
     },
     {
       "id": "ON-261152",
@@ -783,26 +804,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990500
-    },
-    {
-      "id": "ON-289658",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 427 Northbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990440
     }
   ],
   "total": 50,
-  "updated": "2026-08-18T14:57:47.428004+00:00",
+  "updated": "2026-08-18T15:28:56.459402+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
