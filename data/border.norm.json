@@ -1,13 +1,13 @@
 {
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "heavy_count": 2,
+    "moderate_count": 0,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "35 min"
+    "max_wait": "32 min"
   },
   "border_rows": [
     {
@@ -34,21 +34,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "35 min",
+      "wait": "32 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -68,17 +68,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 MDT"
+      "captured_at": "21:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 PDT"
+      "captured_at": "20:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -98,7 +98,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:21 EDT"
+      "captured_at": "23:15 EDT"
     }
   ],
   "crossings": [
@@ -126,21 +126,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "35 min",
+      "wait": "32 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -160,17 +160,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 MDT"
+      "captured_at": "21:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 PDT"
+      "captured_at": "20:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -190,11 +190,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:21 EDT"
+      "captured_at": "23:15 EDT"
     }
   ],
-  "updated_at": "2026-08-18 03:01",
-  "updated_iso": "2026-08-18T03:01:20+00:00",
-  "build_version": "1787022080",
-  "captured_at": "2026-08-18 03:01"
+  "updated_at": "2026-08-18 03:32",
+  "updated_iso": "2026-08-18T03:32:28+00:00",
+  "build_version": "1787023948",
+  "captured_at": "2026-08-18 03:32"
 }
