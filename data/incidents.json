@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-290283",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound RAMP at SALEM ROAD, Ajax. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.85678531,
+      "lng": -79.01083735,
+      "start": 1787103000,
+      "end": null,
+      "updated": 1787103000
+    },
+    {
       "id": "ON-290278",
       "province": "ON",
       "highway": "HWY 144",
@@ -15,22 +31,6 @@
       "start": 1787101140,
       "end": null,
       "updated": 1787101140
-    },
-    {
-      "id": "ON-290274",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound COLLECTOR RAMP at COURTNEY PARK DRIVE, Mississauga. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.6505671,
-      "lng": -79.6745346,
-      "start": 1787099100,
-      "end": null,
-      "updated": 1787099100
     },
     {
       "id": "ON-261152",
@@ -817,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T01:20:52.142547+00:00",
+  "updated": "2026-08-19T01:52:01.961860+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

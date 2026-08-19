@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-08-19 01:20",
-  "updated_iso": "2026-08-19T01:20:55+00:00",
-  "build_version": "1787102455",
+  "updated_at": "2026-08-19 01:52",
+  "updated_iso": "2026-08-19T01:52:05+00:00",
+  "build_version": "1787104325",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
-    "min_name": "Emerson-Pembina",
+    "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Thousand Islands Bridge",
+    "max_name": "Pacific Highway Crossing",
     "max_wait": "10 min"
   },
   "fuel": {
@@ -237,18 +237,18 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 144, HWY 410, HWY 527, HWY 811",
+    "status_line": "HWY 401, HWY 144, HWY 527, HWY 811",
     "incidents": [
       {
-        "road": "HWY 144",
-        "what": "Collision on HWY 144 Southbound  at KENOGAMISSI FALLS RD, MATTAGAMI, Mattagami.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound RAMP at SALEM ROAD, Ajax. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Northbound COLLECTOR RAMP at COURTNEY PARK DRIVE,\u2026",
+        "road": "HWY 144",
+        "what": "Collision on HWY 144 Southbound  at KENOGAMISSI FALLS RD, MATTAGAMI, Mattagami.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -274,27 +274,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:29 EDT"
+      "captured_at": "21:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 PDT"
+      "captured_at": "18:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -340,11 +340,11 @@
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:32 EDT"
+      "captured_at": "21:19 EDT"
     }
   ],
   "market": [
