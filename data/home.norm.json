@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 04:59",
-  "updated_iso": "2026-08-19T04:59:02+00:00",
-  "build_version": "1787115542",
+  "updated_at": "2026-08-19 05:30",
+  "updated_iso": "2026-08-19T05:30:09+00:00",
+  "build_version": "1787117409",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "5 min"
+    "max_wait": "9 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 403 , HWY 401, HWY 527",
+    "status_line": "HWY 401, HWY 527, HWY 811",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at WALKERS LINE, Burlington. Right lane and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KENNEDY RD -SCARBOROUGH,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Collision on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. Right\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound RAMP at SALEM ROAD, Ajax. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -274,27 +274,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT"
+      "captured_at": "01:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "9 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:40 EDT"
+      "captured_at": "01:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:40 EDT"
+      "captured_at": "01:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT"
+      "captured_at": "22:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:31 CDT"
+      "captured_at": "00:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT"
+      "captured_at": "01:15 EDT"
     }
   ],
   "market": [
