@@ -497,12 +497,25 @@ for t in raw_theft.get("incidents", [])[:8]:
 theft_home = theft[:3]
 
 # ===== NEWS =====
+WHY_IT_MATTERS = {
+    "regulations": "Rules change compliance cost and driver hours.",
+    "markets": "Rate direction is the difference between profit and loss on a lane.",
+    "equipment": "Equipment cost and availability shape fleet economics.",
+    "business": "Carrier and shipper moves shift capacity in the market.",
+    "technology": "Tech spend changes back-office and dispatch efficiency.",
+    "drivers": "Driver supply and pay shape capacity and rates.",
+    "safety": "Safety rules and blitzes hit the road on specific dates.",
+    "industry": "Industry movement worth tracking.",
+}
 news = []
 for n in raw_news.get("headlines", [])[:10]:
+    topic = (n.get("categories") or ["industry"])[0]
     news.append({
-        "category": n.get("source","Industry"),
-        "headline": n.get("title","")[:120],
-        "url": n.get("link", n.get("url","#")),
+        "category": topic,
+        "source": n.get("source", "Industry"),
+        "headline": n.get("title", "")[:120],
+        "url": n.get("link", n.get("url", "#")),
+        "why": WHY_IT_MATTERS.get(topic, WHY_IT_MATTERS["industry"]),
     })
 
 news_home = news[:2]  # home shows 2, news page shows all

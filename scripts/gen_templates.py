@@ -641,6 +641,11 @@ write("market-pulse",
     <p class="stand">{{weekly_read}}</p>
   </section>
 
+  <section class="sec">
+    <div class="lead"><h2>What's ahead</h2></div>
+    <p class="note">The federal diesel excise (4¢/L, suspended since 20 April) returns on <b>8 September 2026</b> — expect the national average to step up that week. Diesel prices update every Tuesday when NRCan publishes a new survey print.</p>
+  </section>
+
   <div class="rows">
   <!--LOOP:market--><div class="r"><span class="k">{{name}}<small>{{what_it_means}} · {{source}}</small></span><span class="v {{value_class}}">{{value}}</span></div><!--/LOOP:market-->
   </div>
@@ -663,9 +668,9 @@ write("industry-news",
   </section>
 
   <div class="links-list">
-  <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
+  <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}<small class="why">{{why}} · via {{source}}</small></a><!--/LOOP:news-->
   </div>
-  <p class="note">Collected from Canadian trucking and logistics trade feeds. An empty or short list means the feeds were quiet, not that nothing happened.</p>
+  <p class="note">Each headline links to the outlet that reported it — we do not rewrite their work. The "why it matters" line is our read on what it means for a Canadian carrier. An empty or short list means the feeds were quiet, not that nothing happened.</p>
 ''' + sponsor("sponsor_news") + subscribe("The week in one email",
    "The numbers that moved and the stories behind them, with every figure dated. Wednesday mornings.") + foot())
 

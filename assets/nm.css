@@ -71,6 +71,7 @@ a { color: inherit; }
 .seg-opt:not(.is-on):hover { color: var(--ink); background: var(--line-2); }
 .lane { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .lane select { width: 100%; }
+.links-list .why { display: block; font-size: .8125rem; color: var(--muted); margin-top: 3px; font-weight: 400; }
 .mark .dot {
   width: 10px; height: 10px; border-radius: 50%; background: var(--signal);
   position: relative;
