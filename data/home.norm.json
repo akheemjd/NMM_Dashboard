@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-19 17:26",
-  "updated_iso": "2026-08-19T17:26:45+00:00",
-  "build_version": "1787160405",
+  "updated_at": "2026-08-19 17:57",
+  "updated_iso": "2026-08-19T17:57:59+00:00",
+  "build_version": "1787162279",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 14,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 62, HWY 17",
+    "status_line": "HWY 400, HWY 11, HWY 62, HWY 17",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Northbound  at LYDIA LAKE SIGN, Longlac. Lane and NORTH\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound  at INNISFIL BEACH RD - SIMCOE ROAD 21,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 62",
-        "what": "Disabled Vehicle on HWY 62 Northbound  at Marble Ln, Bancroft. Lane closed.",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Northbound  at LYDIA LAKE SIGN, Longlac. Lane and NORTH\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "13:20 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "13:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "4 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "13:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:19 EDT"
+      "captured_at": "13:35 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 PDT"
+      "captured_at": "10:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:47 EDT"
+      "captured_at": "13:42 EDT"
     }
   ],
   "market": [
@@ -362,14 +362,14 @@
     },
     {
       "name": "Fuel cost per 1,000 km",
-      "note": "At 228.9\u00a2/L and 35 L/100km",
-      "value": "$801",
+      "note": "At 232.8\u00a2/L and 35 L/100km",
+      "value": "$815",
       "value_class": "flat"
     },
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "30.8\u00a2/L",
+      "value": "31.1\u00a2/L",
       "value_class": "flat"
     }
   ],
