@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 14:50",
-  "updated_iso": "2026-08-19T14:50:57+00:00",
-  "build_version": "1787151057",
+  "updated_at": "2026-08-19 15:22",
+  "updated_iso": "2026-08-19T15:22:05+00:00",
+  "build_version": "1787152925",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "30 min"
+    "max_wait": "45 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 15,
+    "active_count": 14,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 17, HWY 11, HWY 401",
+    "status_line": "HWY 11, HWY 8, HWY 427, HWY 17",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Southbound  at QUETICO PROV PK ENT(S), Atikokan.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Eastbound  at CPR OH-SHEBA, Upsala. Lane and EAST\u2026",
+        "road": "HWY 8",
+        "what": "Highway Maintenance on HWY 8 Westbound  at WESTOVER ROAD, Hamilton. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "30 min",
+      "wait": "45 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:09 EDT"
+      "captured_at": "11:14 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT"
+      "captured_at": "08:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -376,14 +376,14 @@
   "theft": [],
   "news": [
     {
-      "category": "Truck News",
-      "headline": "Grote appoints Smith VP of North American operations",
-      "url": "https://www.trucknews.com/human-resources/grote-appoints-smith-vp-of-north-american-operations/1003220195/"
+      "category": "The Trucker",
+      "headline": "Trump says US and Canada have reached last-minute deal to delay 50% US tariffs on Canadian imports",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-us-and-canada-have-reached-last-minute-deal-to-delay-50-us-tariffs-on-canadian-imports"
     },
     {
-      "category": "Truck News",
-      "headline": "Canada\u2019s trucking employment rises 4% as pool of job seekers shrinks",
-      "url": "https://www.trucknews.com/transportation/canadas-trucking-employment-rises-4-as-pool-of-job-seekers-shrinks/1003220199/"
+      "category": "The Trucker",
+      "headline": "ATA Truck Tonnage Index drops 1% in July",
+      "url": "https://www.thetrucker.com/trucking-news/business/ata-truck-tonnage-index-drops-1-in-july"
     }
   ],
   "theft_home_json": "[]",
