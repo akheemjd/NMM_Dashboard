@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-19 15:53",
-  "updated_iso": "2026-08-19T15:53:14+00:00",
-  "build_version": "1787154794",
+  "updated_at": "2026-08-19 16:24",
+  "updated_iso": "2026-08-19T16:24:24+00:00",
+  "build_version": "1787156664",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 15,
+    "active_count": 18,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 533, HWY 11, HWY 427",
+    "status_line": "HWY 417, HWY 400, HWY 17, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Westbound RAMP at Dougall Ave/Walkers Rd / Route to\u2026",
+        "road": "HWY 417",
+        "what": "Disabled Vehicle on HWY 417 Westbound  at NICHOLAS ST (IC 118)/MANN AVE,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 533",
-        "what": "Highway Maintenance on HWY 533 Northbound  at MAIN ST(W), Mattawa. Lane closed.",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound  at ESSA RD / SIMCOE RD 27, Barrie. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "11 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "18 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:43 EDT"
+      "captured_at": "12:09 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT"
+      "captured_at": "09:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
