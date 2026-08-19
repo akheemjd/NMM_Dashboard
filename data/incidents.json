@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-290550",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at EASTGATE/CAWTHRA, Mississauga. 2 lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 lanes closed",
+      "lat": 43.61363858,
+      "lng": -79.63182068,
+      "start": 1787170800,
+      "end": null,
+      "updated": 1787170800
+    },
+    {
       "id": "ON-290535",
       "province": "ON",
       "highway": "QEW",
@@ -31,22 +47,6 @@
       "start": 1787569200,
       "end": 1787610600,
       "updated": 1787169480
-    },
-    {
-      "id": "ON-290521",
-      "province": "ON",
-      "highway": "HWY 69",
-      "direction": "Southbound",
-      "description": "Collision on HWY 69 Southbound  at PROV GOV'T OFFICES RD(W) PIONEER RD(E), Sudbury. 2 lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 lanes closed",
-      "lat": 46.434021145,
-      "lng": -80.951233983,
-      "start": 1787167920,
-      "end": null,
-      "updated": 1787167920
     },
     {
       "id": "ON-290519",
@@ -305,17 +305,17 @@
       "updated": 1787160000
     },
     {
-      "id": "ON-290473",
+      "id": "ON-290545",
       "province": "ON",
       "highway": "HWY 48",
       "direction": "Southbound",
-      "description": "Daily Maintenance on HWY 48 Southbound  between OLD HOMESTEAD ROAD and OLD HOMESTEAD ROAD, Baldwin. 1 Right Lane(s).",
+      "description": "Daily Maintenance on HWY 48 Southbound  between LATIMER ROAD and RIDGEVIEW ROAD, Georgina. 1 Right Lane(s).",
       "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
       "lanes": "1 Right Lane(s)",
-      "lat": 44.273857,
-      "lng": -79.3474,
+      "lat": 44.28636,
+      "lng": -79.348145,
       "start": 1787572800,
       "end": 1787684400,
       "updated": 1787159940
@@ -385,6 +385,22 @@
       "updated": 1787159160
     },
     {
+      "id": "ON-290546",
+      "province": "ON",
+      "highway": "HWY 7A",
+      "direction": "Westbound",
+      "description": "Daily Construction on HWY 7A Westbound  between NESBITT LINE ROAD and REGIONAL ROAD 57 SOUTH, Port Perry. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.15459,
+      "lng": -78.73721,
+      "start": 1787565600,
+      "end": 1787947200,
+      "updated": 1787158980
+    },
+    {
       "id": "ON-290460",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -417,17 +433,17 @@
       "updated": 1787158500
     },
     {
-      "id": "ON-290459",
+      "id": "ON-290544",
       "province": "ON",
       "highway": "HWY 48",
       "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 48 Northbound  between OLD HOMESTEAD ROAD and OLD HOMESTEAD ROAD, Baldwin. 1 Right Lane(s).",
+      "description": "Daily Maintenance on HWY 48 Northbound  between RIDGEVIEW ROAD and LATIMER ROAD, Georgina. 1 Right Lane(s).",
       "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
       "lanes": "1 Right Lane(s)",
-      "lat": 44.273857,
-      "lng": -79.3474,
+      "lat": 44.2684,
+      "lng": -79.347015,
       "start": 1787572800,
       "end": 1787684400,
       "updated": 1787158080
@@ -689,6 +705,22 @@
       "updated": 1787147400
     },
     {
+      "id": "ON-290542",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Construction on QEW Fort Erie Bound  between CASABLANCA BLVD., Grimsby and VICTORIA AVENUE, Lincoln. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.206974,
+      "lng": -79.59536,
+      "start": 1787450400,
+      "end": 1787479200,
+      "updated": 1787147340
+    },
+    {
       "id": "ON-290376",
       "province": "ON",
       "highway": "HWY 401",
@@ -767,42 +799,10 @@
       "start": 1787540400,
       "end": 1787650200,
       "updated": 1787145120
-    },
-    {
-      "id": "ON-290420",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Off-ramp at 401, Toronto. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.714108,
-      "lng": -79.515656,
-      "start": 1787626800,
-      "end": 1787907600,
-      "updated": 1787145000
-    },
-    {
-      "id": "ON-290419",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Engineering Investigation on HWY 400 Southbound Express Off-ramp at 401, Toronto. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.714108,
-      "lng": -79.515656,
-      "start": 1787630340,
-      "end": 1787907600,
-      "updated": 1787144760
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T20:02:33.896609+00:00",
+  "updated": "2026-08-19T20:33:42.820994+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
