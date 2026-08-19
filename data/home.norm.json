@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 20:33",
-  "updated_iso": "2026-08-19T20:33:46+00:00",
-  "build_version": "1787171626",
+  "updated_at": "2026-08-19 21:04",
+  "updated_iso": "2026-08-19T21:04:55+00:00",
+  "build_version": "1787173495",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
+    "max_name": "Peace Bridge",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -237,18 +237,18 @@
     "none": false,
     "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , QEW, HWY 401, HWY 7089",
+    "status_line": "HWY 401, HWY 417, HWY 404, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at EASTGATE/CAWTHRA, Mississauga. 2\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at MAVIS ROAD, Mississauga. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at GUELPH LINE, Burlington. Right lane closed.",
+        "road": "HWY 417",
+        "what": "Disabled Vehicle on HWY 417 Westbound ON-RAMP at ROCHESTER ST  (IC 121B),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:20 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
