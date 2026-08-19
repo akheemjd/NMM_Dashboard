@@ -1,52 +1,56 @@
 {
   "incidents": [
     {
-      "id": "ON-290332",
+      "id": "ON-290338",
       "province": "ON",
-      "highway": "HWY 401",
+      "highway": "HWY 403 HAMILTON",
       "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at MAVIS ROAD, Mississauga. Left shoulder and left lane closed.",
+      "description": "Collision on HWY 403 HAMILTON Westbound ON-RAMP at ABERDEEN AVE, Hamilton. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.62197549,
-      "lng": -79.70633283,
-      "start": 1787139600,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.25535,
+      "lng": -79.90704,
+      "start": 1787141280,
       "end": null,
-      "updated": 1787139600
+      "updated": 1787141280
     },
     {
-      "id": "ON-290324",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at SIMCOE ST, Oshawa. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/DBC-93997",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 5",
+        "from": "at Clough Rd",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Highway 5, in both directions. Rest area closed at Clough Rd (7 km south of Barriere). Badger Creek Rest Area bathrooms temporarily closed. Detour to Fish Trap Rest Area. Last updated Wed Aug 19 at 5:07 AM PDT. (DBC-93997)",
+      "event_type": "incident",
+      "severity": "MINOR",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.88154924,
-      "lng": -78.85639931,
-      "start": 1787135880,
-      "end": null,
-      "updated": 1787135880
+      "lanes": "",
+      "lat": 51.088993,
+      "lng": -120.17478,
+      "start": "2026-08-18T11:56:40-07:00",
+      "end": "",
+      "updated": "2026-08-19T05:07:06-07:00"
     },
     {
-      "id": "ON-261152",
+      "id": "ON-290334",
       "province": "ON",
-      "highway": "HWY 61",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 132",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 132 Eastbound  between Stone Rd / CR 5 and Stone Rd / CR 5, Renfrew. 1 Right Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.055068306,
-      "lng": -89.540597444,
-      "start": 1781491500,
-      "end": null,
-      "updated": 1787096760
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.45251,
+      "lng": -76.74952,
+      "start": 1787313600,
+      "end": 1787349600,
+      "updated": 1787140200
     },
     {
       "id": "ON-277509",
@@ -62,7 +66,7 @@
       "lng": -89.929768235,
       "start": 1784639280,
       "end": null,
-      "updated": 1787096760
+      "updated": 1787139840
     },
     {
       "id": "ON-284424",
@@ -78,7 +82,23 @@
       "lng": -89.111322082,
       "start": 1786075200,
       "end": null,
-      "updated": 1787096760
+      "updated": 1787139840
+    },
+    {
+      "id": "ON-261152",
+      "province": "ON",
+      "highway": "HWY 61",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1781491500,
+      "end": null,
+      "updated": 1787139780
     },
     {
       "id": "ON-290222",
@@ -111,27 +131,6 @@
       "start": 1787223600,
       "end": 1787266800,
       "updated": 1787086260
-    },
-    {
-      "id": "drivebc.ca/DBC-93947",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Trout Creek Main 45 km north of Princeton",
-        "to": "Summerland 45 km north of Princeton",
-        "direction": "NONE"
-      },
-      "direction": "",
-      "description": "Princeton Summerland Rd. There is a wildfire between Trout Creek Main and Summerland 45 km north of Princeton. Road closed. Watch for traffic control. Alternate Routes - HWY 5A & HWY 3. Next update time Thu Aug 20 at 12:00 PM PDT. Last updated Tue Aug 18 at 1:09 PM PDT. (DBC-93947)",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.718144,
-      "lng": -120.174946,
-      "start": "2026-08-12T10:50:32-07:00",
-      "end": "",
-      "updated": "2026-08-18T13:09:04-07:00"
     },
     {
       "id": "ON-290172",
@@ -817,7 +816,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T11:43:55.977054+00:00",
+  "updated": "2026-08-19T12:15:06.172502+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
