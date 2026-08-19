@@ -452,7 +452,7 @@ incidents = {
 market = []
 mk_indicators = raw_market.get("indicators", [])
 dir_summary = raw_market.get("direction_summary", "")
-for ind in mk_indicators[:6]:
+for ind in mk_indicators[:8]:
     direction = ind.get("direction", "flat")
     # Market indicators mix cost and growth series, where "up" means the
     # opposite thing in each. Neutral until sentiment is modelled properly.
@@ -465,6 +465,21 @@ for ind in mk_indicators[:6]:
         "note": note,
         "value": str(ind.get("value", "—")),
         "value_class": cls,
+        "source": ind.get("source", ""),
+        "what_it_means": ind.get("what_it_means", ""),
+    })
+
+# Border congestion — a live supply-chain friction signal from CBSA.
+_bc = border.get("heavy_count", 0) + border.get("moderate_count", 0)
+_tot = len(border_rows)
+if _tot:
+    market.append({
+        "name": "Border congestion",
+        "note": f"{_bc} of {_tot} crossings slow",
+        "value": f"{_bc}/{_tot}",
+        "value_class": "flat",
+        "source": "CBSA commercial lane feed",
+        "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes.",
     })
 
 # ===== THEFT =====
@@ -628,9 +643,21 @@ write("theft.norm", {"theft": theft_home, "theft_none": len(theft) == 0, "theft_
 dir_summary = raw_market.get("direction_summary", "")
 rates = raw_market.get("rates_snapshot", {})
 
+# Weekly read — a short deterministic summary of the current signals.
+_wr = []
+if rates.get("current_diesel"):
+    _wr.append(f"diesel at {rates.get('current_diesel')}¢/L")
+if rates.get("usd_cad"):
+    _wr.append(f"the loonie at {rates.get('usd_cad')}")
+_gdp = next((m["value"] for m in market if m["name"] == "Monthly GDP"), None)
+if _gdp:
+    _wr.append(f"GDP moving {_gdp} last month")
+weekly_read = ("The week in one line: " + ", ".join(_wr) + ".") if _wr else ""
+
 write("market.norm", {
     "market": market,
     "direction_summary": dir_summary,
+    "weekly_read": weekly_read,
     "fuel_pct_of_ops": rates.get("fuel_pct_of_ops", "25-35%"),
     "current_diesel": rates.get("current_diesel", "—"),
     "usd_cad": rates.get("usd_cad", "—"),

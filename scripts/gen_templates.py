@@ -636,10 +636,15 @@ write("market-pulse",
     <div class="meta"><span>Diesel <b>{{current_diesel}}</b>¢/L</span><span>USD/CAD <b>{{usd_cad}}</b></span><span>Fuel <b>{{fuel_pct_of_ops}}</b> of operating cost</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
+  <section class="sec">
+    <div class="lead"><h2>The week in one line</h2></div>
+    <p class="stand">{{weekly_read}}</p>
+  </section>
+
   <div class="rows">
-  <!--LOOP:market--><div class="r"><span class="k">{{name}}<small>{{note}}</small></span><span class="v {{value_class}}">{{value}}</span></div><!--/LOOP:market-->
+  <!--LOOP:market--><div class="r"><span class="k">{{name}}<small>{{what_it_means}} · {{source}}</small></span><span class="v {{value_class}}">{{value}}</span></div><!--/LOOP:market-->
   </div>
-  <p class="note">These indicators mix cost signals and demand signals, which move in opposite directions for a carrier. A rising number is not automatically good news and we do not colour them as though it were.</p>
+  <p class="note">These indicators mix cost signals and demand signals, which move in opposite directions for a carrier. A rising number is not automatically good news and we do not colour them as though it were. <a href="/methodology/nmdi/">How the numbers are sourced</a></p>
 ''' + sponsor("sponsor_market") + subscribe("What moved, and what it cost",
    "Diesel, the border, freight demand, and one argument worth your time. Wednesday mornings.") + foot())
 
