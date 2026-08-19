@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-19 21:36",
-  "updated_iso": "2026-08-19T21:36:04+00:00",
-  "build_version": "1787175364",
+  "updated_at": "2026-08-19 22:07",
+  "updated_iso": "2026-08-19T22:07:13+00:00",
+  "build_version": "1787177233",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "22 min"
   },
   "fuel": {
     "national_diesel": "232.8",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 401, HWY 417",
+    "status_line": "HWY 401, HWY 403 ",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at MARKHAM ROAD, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at MAVIS ROAD, Mississauga. Right lane\u2026",
+        "what": "Other on HWY 401 Eastbound COLLECTOR at KEELE ST, Toronto. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,11 +280,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "22 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "17:20 EDT"
+      "captured_at": "17:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:20 EDT"
+      "captured_at": "17:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 PDT"
+      "captured_at": "14:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
