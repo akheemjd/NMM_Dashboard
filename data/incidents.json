@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-290289",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MARKHAM ROAD, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.78533038,
+      "lng": -79.23509759,
+      "start": 1787105820,
+      "end": null,
+      "updated": 1787105820
+    },
+    {
       "id": "ON-290283",
       "province": "ON",
       "highway": "HWY 401",
@@ -798,26 +814,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990500
-    },
-    {
-      "id": "ON-289658",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 427 Northbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990440
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T01:52:01.961860+00:00",
+  "updated": "2026-08-19T02:23:10.080943+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

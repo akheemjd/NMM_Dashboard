@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 01:52",
-  "updated_iso": "2026-08-19T01:52:05+00:00",
-  "build_version": "1787104325",
+  "updated_at": "2026-08-19 02:23",
+  "updated_iso": "2026-08-19T02:23:13+00:00",
+  "build_version": "1787106193",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 144, HWY 527, HWY 811",
+    "status_line": "HWY 401, HWY 144, HWY 527",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound RAMP at SALEM ROAD, Ajax. All lanes closed.",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MARKHAM ROAD, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 144",
-        "what": "Collision on HWY 144 Southbound  at KENOGAMISSI FALLS RD, MATTAGAMI, Mattagami.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound RAMP at SALEM ROAD, Ajax. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -284,17 +284,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:35 EDT"
+      "captured_at": "22:12 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
