@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-290321",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound RAMP at BROCK ROAD, Pickering. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.840532077,
+      "lng": -79.068260193,
+      "start": 1787122860,
+      "end": null,
+      "updated": 1787122860
+    },
+    {
       "id": "ON-261152",
       "province": "ON",
       "highway": "HWY 61",
@@ -798,26 +814,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990380
-    },
-    {
-      "id": "ON-289656",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Maintenance on QEW Fort Erie Bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.583523,
-      "lng": -79.58313,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990380
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T07:03:34.182668+00:00",
+  "updated": "2026-08-19T07:34:43.851426+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

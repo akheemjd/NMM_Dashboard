@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 07:03",
-  "updated_iso": "2026-08-19T07:03:37+00:00",
-  "build_version": "1787123017",
+  "updated_at": "2026-08-19 07:34",
+  "updated_iso": "2026-08-19T07:34:47+00:00",
+  "build_version": "1787124887",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "7 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 527, HWY 811, HWY 61",
+    "status_line": "HWY 401, HWY 527, HWY 811, HWY 61",
     "incidents": [
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound RAMP at BROCK ROAD, Pickering. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 811",
-        "what": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and DOG\u2026",
+        "road": "HWY 527",
+        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -274,27 +274,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "7 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 EDT"
+      "captured_at": "03:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 PDT"
+      "captured_at": "00:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 CDT"
+      "captured_at": "02:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     }
   ],
   "market": [
