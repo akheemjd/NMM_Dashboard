@@ -17,22 +17,6 @@
       "updated": 1787117160
     },
     {
-      "id": "ON-290283",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound RAMP at SALEM ROAD, Ajax. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.85678531,
-      "lng": -79.01083735,
-      "start": 1787103000,
-      "end": null,
-      "updated": 1787103000
-    },
-    {
       "id": "ON-261152",
       "province": "ON",
       "highway": "HWY 61",
@@ -814,10 +798,26 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990440
+    },
+    {
+      "id": "ON-289652",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Nightly Maintenance on QEW Toronto bound  between CAWTHRA ROAD and CAWTHRA ROAD, Mississauga. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.583523,
+      "lng": -79.58313,
+      "start": 1787536800,
+      "end": 1787994000,
+      "updated": 1786990380
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T06:01:18.310555+00:00",
+  "updated": "2026-08-19T06:32:25.679838+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
