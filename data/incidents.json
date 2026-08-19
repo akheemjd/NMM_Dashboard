@@ -1,52 +1,68 @@
 {
   "incidents": [
     {
-      "id": "ON-290513",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound  at HWY 7, Vaughan. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.765541,
-      "lng": -79.633479,
-      "start": 1787165760,
-      "end": null,
-      "updated": 1787167200
-    },
-    {
-      "id": "ON-290508",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at FRENCH RIVER BR, Atikokan. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 48.668461625,
-      "lng": -91.096711462,
-      "start": 1787165340,
-      "end": null,
-      "updated": 1787165340
-    },
-    {
-      "id": "ON-290507",
+      "id": "ON-290535",
       "province": "ON",
       "highway": "QEW",
       "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at HWY 403 HAMILTON, Burlington. Right lane closed.",
+      "description": "Collision on QEW Fort Erie bound  at GUELPH LINE, Burlington. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane closed",
-      "lat": 43.340489,
-      "lng": -79.825759,
-      "start": 1787165280,
+      "lat": 43.35206796,
+      "lng": -79.80403875,
+      "start": 1787169480,
       "end": null,
-      "updated": 1787165280
+      "updated": 1787169480
+    },
+    {
+      "id": "ON-290536",
+      "province": "ON",
+      "highway": "HWY 112",
+      "direction": "Northbound",
+      "description": "Continuous Engineering Investigation on HWY 112 Northbound  between HWY 66-KIRKLAND LAKE and HWY 66-KIRKLAND LAKE, . 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 48.120388,
+      "lng": -80.08576,
+      "start": 1787569200,
+      "end": 1787610600,
+      "updated": 1787169480
+    },
+    {
+      "id": "ON-290521",
+      "province": "ON",
+      "highway": "HWY 69",
+      "direction": "Southbound",
+      "description": "Collision on HWY 69 Southbound  at PROV GOV'T OFFICES RD(W) PIONEER RD(E), Sudbury. 2 lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 lanes closed",
+      "lat": 46.434021145,
+      "lng": -80.951233983,
+      "start": 1787167920,
+      "end": null,
+      "updated": 1787167920
+    },
+    {
+      "id": "ON-290519",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 12 Northbound  between SANDHILL ROAD and TANNER'S ROAD, Tay. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.747547,
+      "lng": -79.71314,
+      "start": 1787662800,
+      "end": 1787686200,
+      "updated": 1787166720
     },
     {
       "id": "ON-277509",
@@ -191,6 +207,22 @@
       "start": 1787630340,
       "end": 1787734800,
       "updated": 1787161260
+    },
+    {
+      "id": "ON-290526",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 403 MISSISSAUGA Eastbound  between MISSISSAUGA ROAD and HWY 10 / HURONTARIO STREET, Mississauga. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.559658,
+      "lng": -79.68503,
+      "start": 1787533200,
+      "end": 1787994000,
+      "updated": 1787160600
     },
     {
       "id": "ON-290518",
@@ -529,6 +561,22 @@
       "updated": 1787151600
     },
     {
+      "id": "ON-290532",
+      "province": "ON",
+      "highway": "EAST MAIN ST WELLAND",
+      "direction": "Eastbound",
+      "description": "Daily Construction on EAST MAIN ST WELLAND Eastbound  between WELLINGTON ST and HWY 140/FARR RD, Welland. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 42.99352,
+      "lng": -79.226105,
+      "start": 1787490000,
+      "end": 1788548400,
+      "updated": 1787151420
+    },
+    {
       "id": "ON-290464",
       "province": "ON",
       "highway": "HWY 140",
@@ -641,26 +689,6 @@
       "updated": 1787147400
     },
     {
-      "id": "drivebc.ca/DBC-93998",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 5",
-        "from": "Exit 276: Comstock Rd",
-        "direction": "N"
-      },
-      "direction": "",
-      "description": "Highway 5 (Coquihalla South), northbound. Mowing between Exit 276: Comstock Rd and Exit 286: Merritt - 97C (5 km south of Merritt). Until Wed Aug 19 at 1:00 PM PDT. Median mowing. Please watch for crew and slow moving vehicles in left lane. Slow down and move over when flashing lights. Last updated Tue Aug 18 at 3:04 PM PDT. (DBC-93998)",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.05098,
-      "lng": -120.798635,
-      "start": "2026-08-18T15:04:02-07:00",
-      "end": "",
-      "updated": "2026-08-19T06:30:00-07:00"
-    },
-    {
       "id": "ON-290376",
       "province": "ON",
       "highway": "HWY 401",
@@ -771,46 +799,10 @@
       "start": 1787630340,
       "end": 1787907600,
       "updated": 1787144760
-    },
-    {
-      "id": "ON-290387",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Nightly Engineering Investigation on HWY 401 Eastbound Express between KIPLING AVE and KIPLING AVE, Toronto. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.70076,
-      "lng": -79.56149,
-      "start": 1787623200,
-      "end": 1787911200,
-      "updated": 1787144700
-    },
-    {
-      "id": "drivebc.ca/DBC-93997",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 5",
-        "from": "at Clough Rd",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Highway 5, in both directions. Rest area closed at Clough Rd (7 km south of Barriere). Badger Creek Rest Area bathrooms temporarily closed. Detour to Fish Trap Rest Area. Last updated Wed Aug 19 at 5:07 AM PDT. (DBC-93997)",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.088993,
-      "lng": -120.17478,
-      "start": "2026-08-18T11:56:40-07:00",
-      "end": "",
-      "updated": "2026-08-19T05:07:06-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T19:31:25.181548+00:00",
+  "updated": "2026-08-19T20:02:33.896609+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

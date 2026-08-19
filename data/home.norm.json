@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 19:31",
-  "updated_iso": "2026-08-19T19:31:28+00:00",
-  "build_version": "1787167888",
+  "updated_at": "2026-08-19 20:02",
+  "updated_iso": "2026-08-19T20:02:37+00:00",
+  "build_version": "1787169757",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "232.8",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 13,
+    "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 11, QEW, HWY 401",
+    "status_line": "QEW, HWY 69, HWY 401, HWY 7089",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound  at HWY 7, Vaughan. 2 right lanes and right\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Fort Erie bound  at GUELPH LINE, Burlington. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at FRENCH RIVER BR, Atikokan. Lane\u2026",
+        "road": "HWY 69",
+        "what": "Collision on HWY 69 Southbound  at PROV GOV'T OFFICES RD(W) PIONEER RD(E),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "5 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:08 EDT"
+      "captured_at": "15:43 EDT"
     }
   ],
   "market": [
