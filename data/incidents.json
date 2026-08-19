@@ -5,16 +5,16 @@
       "province": "ON",
       "highway": "HWY 427",
       "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound  at HWY 7, Vaughan. 1 right lane and right shoulder closed.",
+      "description": "Collision on HWY 427 Southbound  at HWY 7, Vaughan. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
+      "lanes": "2 right lanes and right shoulder closed",
       "lat": 43.765541,
       "lng": -79.633479,
       "start": 1787165760,
       "end": null,
-      "updated": 1787165760
+      "updated": 1787167200
     },
     {
       "id": "ON-290508",
@@ -47,22 +47,6 @@
       "start": 1787165280,
       "end": null,
       "updated": 1787165280
-    },
-    {
-      "id": "ON-290506",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 427 Southbound  at HWY 409, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.697205899,
-      "lng": -79.607491493,
-      "start": 1787165160,
-      "end": null,
-      "updated": 1787165160
     },
     {
       "id": "ON-277509",
@@ -207,6 +191,22 @@
       "start": 1787630340,
       "end": 1787734800,
       "updated": 1787161260
+    },
+    {
+      "id": "ON-290518",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Express between NEILSON ROAD and MORNINGSIDE AVE, Toronto. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.794125,
+      "lng": -79.21104,
+      "start": 1787533200,
+      "end": 1787652000,
+      "updated": 1787160540
     },
     {
       "id": "ON-290349",
@@ -810,7 +810,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T19:00:16.256462+00:00",
+  "updated": "2026-08-19T19:31:25.181548+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
