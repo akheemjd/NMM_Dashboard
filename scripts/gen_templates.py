@@ -9,6 +9,7 @@ regenerate, and all eleven pages move together.
 Run: python3 scripts/gen_templates.py
 """
 
+import json
 import os
 import datetime
 
@@ -392,9 +393,52 @@ calc_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Fuel cost calc
  '{"@type":"Question","name":"How do you calculate truck fuel cost per kilometre?","acceptedAnswer":{"@type":"Answer","text":"Multiply your fuel consumption in litres per 100 kilometres by the diesel price per litre, then divide by 100. At 35 litres per 100 kilometres and diesel at 2.00 dollars per litre, that is 70 cents per kilometre."}},'
  '{"@type":"Question","name":"What fuel consumption should I use for a loaded tractor-trailer?","acceptedAnswer":{"@type":"Answer","text":"Use your own figure from your own fuel records. Consumption varies widely with load weight, terrain, season, speed, and equipment, so any single assumed number would be wrong for most operators. This calculator does not assume one."}}]}]}')
 
+CITY_COORDS = {
+ "Abbotsford": ("BC", 49.05, -122.33), "Barrie": ("ON", 44.39, -79.69),
+ "Bathurst": ("NB", 47.62, -65.65), "Brandon": ("MB", 49.85, -99.96),
+ "Brantford": ("ON", 43.14, -80.26), "Calgary": ("AB", 51.04, -114.07),
+ "Campbellton": ("NB", 48.01, -66.67), "Charlottetown": ("PE", 46.24, -63.13),
+ "Chicoutimi": ("QC", 48.43, -71.07), "Corner Brook": ("NL", 48.95, -57.95),
+ "Drummondville": ("QC", 45.88, -72.48), "Edmonton": ("AB", 53.55, -113.49),
+ "Edmundston": ("NB", 47.37, -68.33), "Fort St. John": ("BC", 56.25, -120.85),
+ "Fredericton": ("NB", 45.96, -66.65), "Gander": ("NL", 48.95, -54.61),
+ "Gaspé": ("QC", 48.83, -64.48), "Gatineau": ("QC", 45.48, -75.70),
+ "Grand Falls": ("NB", 47.05, -67.74), "Grande Prairie": ("AB", 55.17, -118.80),
+ "Guelph": ("ON", 43.54, -80.25), "Halifax": ("NS", 44.65, -63.58),
+ "Hamilton": ("ON", 43.26, -79.87), "Kamloops": ("BC", 50.67, -120.34),
+ "Kelowna": ("BC", 49.89, -119.50), "Kentville": ("NS", 45.08, -64.50),
+ "Kingston": ("ON", 44.23, -76.49), "Kitchener": ("ON", 43.45, -80.49),
+ "Labrador City": ("NL", 52.95, -66.91), "Lethbridge": ("AB", 49.69, -112.84),
+ "Lloydminster": ("AB", 53.28, -110.01), "London": ("ON", 42.98, -81.24),
+ "Miramichi": ("NB", 47.03, -65.47), "Moncton": ("NB", 46.09, -64.77),
+ "Montreal": ("QC", 45.50, -73.57), "Moose Jaw": ("SK", 50.39, -105.53),
+ "New Glasgow": ("NS", 45.59, -62.64), "North Bay": ("ON", 46.31, -79.46),
+ "Oshawa": ("ON", 43.90, -78.87), "Ottawa": ("ON", 45.42, -75.70),
+ "Peterborough": ("ON", 44.31, -78.32), "Prince Albert": ("SK", 53.20, -105.75),
+ "Prince George": ("BC", 53.92, -122.75), "Quebec City": ("QC", 46.81, -71.21),
+ "Red Deer": ("AB", 52.27, -113.81), "Regina": ("SK", 50.45, -104.62),
+ "Rimouski": ("QC", 48.45, -68.53), "Saint John": ("NB", 45.27, -66.06),
+ "Sarnia": ("ON", 42.97, -82.38), "Saskatoon": ("SK", 52.13, -106.67),
+ "Sault Ste. Marie": ("ON", 46.52, -84.35), "Sherbrooke": ("QC", 45.40, -71.89),
+ "St. Catharines": ("ON", 43.16, -79.24), "St. John's": ("NL", 47.56, -52.71),
+ "Sudbury": ("ON", 46.49, -80.99), "Sussex": ("NB", 45.72, -65.51),
+ "Sydney": ("NS", 46.14, -60.19), "Thunder Bay": ("ON", 48.38, -89.25),
+ "Timmins": ("ON", 48.48, -81.33), "Toronto": ("ON", 43.65, -79.38),
+ "Trois-Rivières": ("QC", 46.34, -72.58), "Truro": ("NS", 45.37, -63.28),
+ "Val-d'Or": ("QC", 48.10, -77.78), "Vancouver": ("BC", 49.28, -123.12),
+ "Victoria": ("BC", 48.43, -123.37), "Windsor": ("ON", 42.32, -83.04),
+ "Winnipeg": ("MB", 49.90, -97.14), "Woodstock": ("NB", 46.15, -67.57),
+ "Yarmouth": ("NS", 43.84, -66.12),
+}
+_cities_js = json.dumps({n: {"p": p, "la": la, "ln": ln} for n, (p, la, ln) in CITY_COORDS.items()})
+
 CALCJS = '''<script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
-var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost");
+var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost"),origin=$("origin"),dest=$("dest");
+var CITIES=__CITIES__;
+function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n].p]=g[CITIES[n].p]||[]).push(n);});Object.keys(g).sort().forEach(function(p){var og=document.createElement("optgroup");og.label=p;g[p].sort().forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;og.appendChild(o);});sel.appendChild(og);});}
+function hav(a,b){var R=6371,dLa=(b.la-a.la)*Math.PI/180,dLn=(b.ln-a.ln)*Math.PI/180,la1=a.la*Math.PI/180,la2=b.la*Math.PI/180;var h=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLn/2)*Math.sin(dLn/2);return 2*R*Math.asin(Math.sqrt(h));}
+function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){dist.value=Math.round(hav(o,d)*1.25);for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===o.p){prov.value=prov.options[i].value;break;}}}calc();}
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
 var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
@@ -408,9 +452,11 @@ $("rFloor").textContent=money(floor)+" /mi";
 var o=prov.options[prov.selectedIndex];
 $("rPrice").textContent=cents.toFixed(1)+"\\u00a2/L \\u00b7 "+(isC?"your price":o.getAttribute("data-name"));}
 [dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
+origin.addEventListener("change",lane);dest.addEventListener("change",lane);
+fill(origin);fill(dest);
 calc();})();
 </script>
-'''
+'''.replace("__CITIES__", _cities_js)
 
 write("fuel-cost-calculator",
  head("Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile",
@@ -425,11 +471,12 @@ write("fuel-cost-calculator",
 
   <div class="calc">
     <div>
+      <div class="fld"><label for="origin">Lane</label><div class="lane"><div class="inp"><select id="origin"><option value="">From — pick a city</option></select></div><div class="inp"><select id="dest"><option value="">To — pick a city</option></select></div></div><p class="hint">Pick your lane and the distance and fuel price fill in (straight-line × 1.25 for road detour). Override the distance if you know the real number.</p></div>
       <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div></div>
       <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
         <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
-        <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
+        <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}" data-code="{{code}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
       <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>

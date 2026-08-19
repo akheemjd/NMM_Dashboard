@@ -69,6 +69,8 @@ a { color: inherit; }
 .seg-opt { padding: 5px 15px; border-radius: 999px; font-family: var(--body); font-size: .8125rem; font-weight: 600; line-height: 1.4; color: var(--muted); text-decoration: none; }
 .seg-opt.is-on { background: var(--signal); color: #fff; }
 .seg-opt:not(.is-on):hover { color: var(--ink); background: var(--line-2); }
+.lane { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.lane select { width: 100%; }
 .mark .dot {
   width: 10px; height: 10px; border-radius: 50%; background: var(--signal);
   position: relative;
