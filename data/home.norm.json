@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 10:10",
-  "updated_iso": "2026-08-19T10:10:32+00:00",
-  "build_version": "1787134232",
+  "updated_at": "2026-08-19 10:41",
+  "updated_iso": "2026-08-19T10:41:42+00:00",
+  "build_version": "1787136102",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Queenston-Lewiston Bridge",
+    "max_wait": "8 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 527, HWY 811, HWY 61",
+    "status_line": "HWY 401, HWY 527, HWY 811, HWY 61",
     "incidents": [
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound  at SIMCOE ST, Oshawa. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 811",
-        "what": "Forest Fire on HWY 811 Both Directions  between WEAVER R BR(TEMP BR) and DOG\u2026",
+        "road": "HWY 527",
+        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 PDT"
+      "captured_at": "03:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:03 EDT"
+      "captured_at": "06:15 EDT"
     }
   ],
   "market": [
@@ -377,13 +377,13 @@
   "news": [
     {
       "category": "The Trucker",
-      "headline": "Indiana police issue warnings about continuing road closures due to flooding",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/indiana-police-issue-warnings-about-continuing-road-closures-due-to-flooding"
+      "headline": "Trump says US and Canada have reached last-minute deal to delay 50% US tariffs on Canadian imports",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-us-and-canada-have-reached-last-minute-deal-to-delay-50-us-tariffs-on-canadian-imports"
     },
     {
       "category": "The Trucker",
-      "headline": "TCA\u2019s 2026 Elevate class launches driver appreciation project",
-      "url": "https://www.thetrucker.com/trucking-news/business/tcas-2026-elevate-class-launches-driver-appreciation-project"
+      "headline": "Inattention suspected in deadly crash in Wyoming",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/inattention-suspected-in-deadly-crash-in-wyoming"
     }
   ],
   "theft_home_json": "[]",
