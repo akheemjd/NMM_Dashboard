@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-290316",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at WALKERS LINE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.36644963,
+      "lng": -79.78811842,
+      "start": 1787115180,
+      "end": null,
+      "updated": 1787115180
+    },
+    {
       "id": "ON-290313",
       "province": "ON",
       "highway": "HWY 403 HAMILTON",
@@ -798,26 +814,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990500
-    },
-    {
-      "id": "ON-289658",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 427 Northbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990440
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T04:27:48.493953+00:00",
+  "updated": "2026-08-19T04:58:57.858546+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
