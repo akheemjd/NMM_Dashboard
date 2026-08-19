@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-290436",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Vehicle Fire on HWY 401 Westbound RAMP at Dougall Ave/Walkers Rd / Route to Tunnel, Windsor. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 42.245324,
+      "lng": -82.971572,
+      "start": 1787154240,
+      "end": null,
+      "updated": 1787154240
+    },
+    {
+      "id": "ON-290395",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. Both shoulders and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "both shoulders and 2 left lanes closed",
+      "lat": 43.84906194,
+      "lng": -79.04025259,
+      "start": 1787149680,
+      "end": null,
+      "updated": 1787154000
+    },
+    {
+      "id": "ON-290427",
+      "province": "ON",
+      "highway": "HWY 533",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 533 Northbound  at MAIN ST(W), Mattawa. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 46.318949163,
+      "lng": -78.709219826,
+      "start": 1787153040,
+      "end": null,
+      "updated": 1787153040
+    },
+    {
       "id": "ON-290422",
       "province": "ON",
       "highway": "HWY 11",
@@ -15,22 +63,6 @@
       "start": 1787152140,
       "end": null,
       "updated": 1787152140
-    },
-    {
-      "id": "ON-290416",
-      "province": "ON",
-      "highway": "HWY 8",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 8 Westbound  at WESTOVER ROAD, Hamilton. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.281246,
-      "lng": -80.067888,
-      "start": 1787151840,
-      "end": null,
-      "updated": 1787151840
     },
     {
       "id": "ON-290418",
@@ -143,22 +175,6 @@
       "start": 1787149800,
       "end": null,
       "updated": 1787149800
-    },
-    {
-      "id": "ON-290395",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. Both shoulders and 4 lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "both shoulders and 4 lanes closed",
-      "lat": 43.84906194,
-      "lng": -79.04025259,
-      "start": 1787149680,
-      "end": null,
-      "updated": 1787149680
     },
     {
       "id": "ON-290403",
@@ -796,26 +812,10 @@
       "start": 1787198400,
       "end": 1787216400,
       "updated": 1787072340
-    },
-    {
-      "id": "ON-290121",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound  between NORTHSHORE BLVD and BURLINGTON SKYWAY, Burlington. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.315086,
-      "lng": -79.80735,
-      "start": 1787274000,
-      "end": 1787914800,
-      "updated": 1787071680
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T15:22:02.011679+00:00",
+  "updated": "2026-08-19T15:53:11.356612+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
