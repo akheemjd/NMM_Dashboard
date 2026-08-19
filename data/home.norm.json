@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 10:41",
-  "updated_iso": "2026-08-19T10:41:42+00:00",
-  "build_version": "1787136102",
+  "updated_at": "2026-08-19 11:12",
+  "updated_iso": "2026-08-19T11:12:51+00:00",
+  "build_version": "1787137971",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "8 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 527, HWY 811, HWY 61",
+    "status_line": "HWY 406, HWY 401, HWY 527, HWY 811",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound  at SIMCOE ST, Oshawa. Right lane closed.",
+        "road": "HWY 406",
+        "what": "Collision on HWY 406 Northbound  at GLENDALE AVE, St. Catharines. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 527",
-        "what": "Forest Fire on HWY 527 Both Directions  between KOPKA R BR and 1ST AVE -\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound  at SIMCOE ST, Oshawa. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "8 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:20 PDT"
+      "captured_at": "04:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -382,8 +382,8 @@
     },
     {
       "category": "The Trucker",
-      "headline": "Inattention suspected in deadly crash in Wyoming",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/inattention-suspected-in-deadly-crash-in-wyoming"
+      "headline": "Biker dies after crash with 18-wheeler",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/biker-dies-after-crash-with-18-wheeler"
     }
   ],
   "theft_home_json": "[]",
