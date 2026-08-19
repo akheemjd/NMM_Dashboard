@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-19 16:24",
-  "updated_iso": "2026-08-19T16:24:24+00:00",
-  "build_version": "1787156664",
+  "updated_at": "2026-08-19 16:55",
+  "updated_iso": "2026-08-19T16:55:34+00:00",
+  "build_version": "1787158534",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "45 min"
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 18,
+    "active_count": 16,
     "gauge_class": "warn",
-    "status_line": "HWY 417, HWY 400, HWY 17, HWY 401",
+    "status_line": "HWY 17, HWY 401, HWY 533, HWY 11",
     "incidents": [
       {
-        "road": "HWY 417",
-        "what": "Disabled Vehicle on HWY 417 Westbound  at NICHOLAS ST (IC 118)/MANN AVE,\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Westbound  at DORION LOOP RD (N JCT) (W),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at ESSA RD / SIMCOE RD 27, Barrie. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Vehicle Fire on HWY 401 Westbound RAMP at Dougall Ave/Walkers Rd / Route to\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "45 min",
+      "wait": "30 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:14 EDT"
+      "captured_at": "12:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,11 +280,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "18 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -314,7 +314,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 MDT"
+      "captured_at": "10:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 PDT"
+      "captured_at": "09:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 CDT"
+      "captured_at": "11:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "12:47 EDT"
     }
   ],
   "market": [

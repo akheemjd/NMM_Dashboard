@@ -1,20 +1,40 @@
 {
   "incidents": [
     {
-      "id": "ON-290449",
+      "id": "drivebc.ca/DBC-94008",
+      "province": "BC",
+      "highway": {
+        "name": "Kootenay Lake Ferry",
+        "from": "at Kootenay Lake Ferry",
+        "direction": "NONE"
+      },
+      "direction": "",
+      "description": "Kootenay Lake Ferry. Ferry will be out of service at Kootenay Lake Ferry. Starting Thu Aug 20 at 9:30 PM PDT until Fri Aug 21 at 6:00 AM PDT. Due to required maintenance. The 9:40 PM sailing from Balfour to Kootenay Bay & the 10:20 PM sailing from Kootenay Bay to Balfour on Thursday August 20 will be cancelled. Last updated Wed Aug 19 at 9:51 AM PDT. (DBC-94008)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.649666,
+      "lng": -116.915352,
+      "start": "2026-08-19T09:51:51-07:00",
+      "end": "",
+      "updated": "2026-08-19T09:51:51-07:00"
+    },
+    {
+      "id": "ON-290456",
       "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 417 Westbound  at NICHOLAS ST (IC 118)/MANN AVE, Ottawa. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 148",
+      "direction": "Eastbound",
+      "description": "Daily Construction on HWY 148 Eastbound  between ANGUS CAMPBELL DR and RENFREW CR 40/GREENWOOD RD, Pembroke. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 45.41639,
-      "lng": -75.6738,
-      "start": 1787155980,
-      "end": null,
-      "updated": 1787155980
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.82348,
+      "lng": -77.0844,
+      "start": 1787482800,
+      "end": 1788044400,
+      "updated": 1787157600
     },
     {
       "id": "ON-290445",
@@ -31,22 +51,6 @@
       "start": 1787799600,
       "end": 1787907600,
       "updated": 1787155260
-    },
-    {
-      "id": "ON-290442",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at ESSA RD / SIMCOE RD 27, Barrie. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.36226379,
-      "lng": -79.69747696,
-      "start": 1787155080,
-      "end": null,
-      "updated": 1787155080
     },
     {
       "id": "ON-290395",
@@ -815,7 +819,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T16:24:20.202490+00:00",
+  "updated": "2026-08-19T16:55:30.901494+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
