@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-290573",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.5242815,
+      "lng": -79.64777288,
+      "start": 1787174640,
+      "end": null,
+      "updated": 1787174640
+    },
+    {
       "id": "ON-290557",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,38 +47,6 @@
       "start": 1787171700,
       "end": null,
       "updated": 1787171700
-    },
-    {
-      "id": "ON-290553",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound  at MAJOR MACKENZIE DRIVE, Markham-Richmondhill . Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.88309846,
-      "lng": -79.38001372,
-      "start": 1787171400,
-      "end": null,
-      "updated": 1787171400
-    },
-    {
-      "id": "ON-290550",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at EASTGATE/CAWTHRA, Mississauga. 2 lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 lanes closed",
-      "lat": 43.61363858,
-      "lng": -79.63182068,
-      "start": 1787170800,
-      "end": null,
-      "updated": 1787170800
     },
     {
       "id": "ON-290536",
@@ -193,22 +177,6 @@
       "updated": 1787163660
     },
     {
-      "id": "ON-290482",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound  at INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.28487595,
-      "lng": -79.67969923,
-      "start": 1787161860,
-      "end": null,
-      "updated": 1787161860
-    },
-    {
       "id": "ON-290481",
       "province": "ON",
       "highway": "HWY 401",
@@ -269,22 +237,6 @@
       "lat": 45.653428201,
       "lng": -79.583881314,
       "start": 1787142360,
-      "end": null,
-      "updated": 1787160240
-    },
-    {
-      "id": "ON-290355",
-      "province": "ON",
-      "highway": "HWY 141",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 141 Westbound  between HWY 11 UP and MUSKOKA RD 35, Huntsville. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 45.213796212,
-      "lng": -79.314041796,
-      "start": 1787142840,
       "end": null,
       "updated": 1787160240
     },
@@ -799,10 +751,58 @@
       "start": 1787540400,
       "end": 1787650200,
       "updated": 1787145240
+    },
+    {
+      "id": "ON-290392",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound On-ramp at PORT UNION ROAD, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.797802,
+      "lng": -79.144936,
+      "start": 1787540400,
+      "end": 1787650200,
+      "updated": 1787145120
+    },
+    {
+      "id": "ON-290420",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Off-ramp at 401, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.714108,
+      "lng": -79.515656,
+      "start": 1787626800,
+      "end": 1787907600,
+      "updated": 1787145000
+    },
+    {
+      "id": "ON-290419",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Engineering Investigation on HWY 400 Southbound Express Off-ramp at 401, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.714108,
+      "lng": -79.515656,
+      "start": 1787630340,
+      "end": 1787907600,
+      "updated": 1787144760
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T21:04:51.819397+00:00",
+  "updated": "2026-08-19T21:36:00.692497+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
