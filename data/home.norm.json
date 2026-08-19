@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-19 00:18",
-  "updated_iso": "2026-08-19T00:18:36+00:00",
-  "build_version": "1787098716",
+  "updated_at": "2026-08-19 00:49",
+  "updated_iso": "2026-08-19T00:49:46+00:00",
+  "build_version": "1787100586",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "228.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 409, HWY 401, HWY 527, HWY 811",
+    "status_line": "HWY 410, HWY 401, HWY 409, HWY 527",
     "incidents": [
       {
-        "road": "HWY 409",
-        "what": "Collision on HWY 409 Eastbound  at KIPLING AVE/BELFIELD ROAD, Toronto. Left\u2026",
+        "road": "HWY 410",
+        "what": "Disabled Vehicle on HWY 410 Northbound COLLECTOR RAMP at COURTNEY PARK DRIVE,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto. 1\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound RAMP at WESTNEY ROAD, Ajax. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "13 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:39 EDT"
+      "captured_at": "20:35 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -314,7 +314,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 MDT"
+      "captured_at": "18:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 PDT"
+      "captured_at": "17:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 CDT"
+      "captured_at": "19:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

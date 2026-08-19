@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-290274",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound COLLECTOR RAMP at COURTNEY PARK DRIVE, Mississauga. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.6505671,
+      "lng": -79.6745346,
+      "start": 1787099100,
+      "end": null,
+      "updated": 1787099100
+    },
+    {
+      "id": "ON-290271",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound RAMP at WESTNEY ROAD, Ajax. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.84819685,
+      "lng": -79.04333274,
+      "start": 1787098620,
+      "end": null,
+      "updated": 1787098620
+    },
+    {
       "id": "ON-290267",
       "province": "ON",
       "highway": "HWY 409",
@@ -63,22 +95,6 @@
       "start": 1786075200,
       "end": null,
       "updated": 1787096760
-    },
-    {
-      "id": "ON-290259",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.7977031,
-      "lng": -79.1875649,
-      "start": 1787095980,
-      "end": null,
-      "updated": 1787095980
     },
     {
       "id": "ON-290222",
@@ -798,26 +814,10 @@
       "start": 1787536800,
       "end": 1787994000,
       "updated": 1786990500
-    },
-    {
-      "id": "ON-289658",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 427 Northbound  between DIXON ROAD/AIRPORT ROAD and DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1787536800,
-      "end": 1787994000,
-      "updated": 1786990440
     }
   ],
   "total": 50,
-  "updated": "2026-08-19T00:18:33.462150+00:00",
+  "updated": "2026-08-19T00:49:41.960839+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
