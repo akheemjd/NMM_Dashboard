@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-21 19:56",
-  "updated_iso": "2026-08-21T19:56:31+00:00",
-  "build_version": "1787342191",
+  "updated_at": "2026-08-21 20:27",
+  "updated_iso": "2026-08-21T20:27:41+00:00",
+  "build_version": "1787344061",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 4,
     "closed_count": 0,
-    "min_name": "Thousand Islands Bridge",
+    "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
-    "max_name": "Blue Water Bridge",
-    "max_wait": "10 min"
+    "max_name": "Thousand Islands Bridge",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -209,46 +209,46 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.3785",
+    "usd_cad": "1.3760",
     "direction": "stronger CAD",
-    "change": "-0.0039",
-    "usd_100": "137.85",
-    "usd_500": "689.25",
-    "usd_1000": "1,378.50",
-    "cad_1000": "725.43",
-    "band": "notable",
-    "band_pct": "-0.28%",
-    "obs_date": "2026-08-20",
-    "avg_30d": "1.3983",
-    "vs_baseline": "-0.0198",
+    "change": "-0.0025",
+    "usd_100": "137.60",
+    "usd_500": "688.00",
+    "usd_1000": "1,376.00",
+    "cad_1000": "726.74",
+    "band": "noise",
+    "band_pct": "-0.18%",
+    "obs_date": "2026-08-21",
+    "avg_30d": "1.3967",
+    "vs_baseline": "-0.0207",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "-0.0153",
-    "change_7d_pct": "-1.10%",
-    "change_30d": "-0.0310",
-    "change_30d_pct": "-2.20%",
-    "change_1y": "+0.0000",
-    "change_1y_pct": "+0.00%",
-    "range_pct": "38%"
+    "change_7d": "-0.0115",
+    "change_7d_pct": "-0.83%",
+    "change_30d": "-0.0328",
+    "change_30d_pct": "-2.33%",
+    "change_1y": "+0.0014",
+    "change_1y_pct": "+0.10%",
+    "range_pct": "34%"
   },
   "incidents": {
     "none": false,
     "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 404, HWY 401",
+    "status_line": "HWY 417, HWY 404",
     "incidents": [
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Disabled Vehicle on HWY 403 HAMILTON Eastbound RAMP at QEW TORONTO, Burlington.\u2026",
+        "road": "HWY 417",
+        "what": "Disabled Vehicle on HWY 417 Eastbound  at ROCHESTER ST  (IC 121B), Ottawa. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Northbound ON-RAMP at BLOOMINGTON ROAD, Aurora. All lanes\u2026",
+        "road": "HWY 417",
+        "what": "Collision on HWY 417 Westbound  at ROCHESTER ST  (IC 121B), Ottawa. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:22 EDT"
+      "captured_at": "16:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,17 +334,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:10 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "15:06 EDT"
+      "captured_at": "15:58 EDT"
     }
   ],
   "market": [
@@ -382,8 +382,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "5 of 9 crossings slow",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -419,9 +419,9 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "5.454",
-    "us_national_cpl": "198.6",
-    "nadi": "216.3",
-    "ca_us_gap": "35.3",
+    "us_national_cpl": "198.3",
+    "nadi": "216.1",
+    "ca_us_gap": "35.6",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-08-17",
@@ -433,42 +433,42 @@
       "west_coast": 6.203
     },
     "padds_cpl": {
-      "east_coast": 194.5,
-      "midwest": 197.9,
-      "gulf_coast": 190.7,
-      "rocky_mountain": 197.6,
-      "west_coast": 225.9
+      "east_coast": 194.1,
+      "midwest": 197.6,
+      "gulf_coast": 190.4,
+      "rocky_mountain": 197.3,
+      "west_coast": 225.5
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "5.340",
-        "cpl": "194.5"
+        "cpl": "194.1"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "5.435",
-        "cpl": "197.9"
+        "cpl": "197.6"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "5.237",
-        "cpl": "190.7"
+        "cpl": "190.4"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "5.427",
-        "cpl": "197.6"
+        "cpl": "197.3"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "6.203",
-        "cpl": "225.9"
+        "cpl": "225.5"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
