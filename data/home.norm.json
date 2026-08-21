@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-21 20:58",
-  "updated_iso": "2026-08-21T20:58:50+00:00",
-  "build_version": "1787345930",
+  "updated_at": "2026-08-21 21:30",
+  "updated_iso": "2026-08-21T21:30:01+00:00",
+  "build_version": "1787347801",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
     "max_name": "Thousand Islands Bridge",
-    "max_wait": "20 min"
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 417, QEW, HWY 407",
+    "status_line": "HWY 409, HWY 417, QEW, HWY 407",
     "incidents": [
       {
-        "road": "HWY 417",
-        "what": "Collision on HWY 417 Eastbound  at BRONSON AVE (IC 121A), Ottawa. 3 left lanes\u2026",
+        "road": "HWY 409",
+        "what": "Disabled Vehicle on HWY 409 Westbound  at HWY 427, Toronto. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at FRUITLAND ROAD, Hamilton. Left lane closed.",
+        "road": "HWY 417",
+        "what": "Collision on HWY 417 Eastbound  at BRONSON AVE (IC 121A), Ottawa. 1 left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,11 +280,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "12 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:31 EDT"
+      "captured_at": "17:18 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -314,17 +314,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 MDT"
+      "captured_at": "15:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,17 +334,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:25 CDT"
+      "captured_at": "16:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "20 min",
+      "wait": "30 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "15:58 EDT"
+      "captured_at": "16:58 EDT"
     }
   ],
   "market": [
