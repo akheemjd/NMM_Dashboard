@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-21 17:51",
-  "updated_iso": "2026-08-21T17:51:51+00:00",
-  "build_version": "1787334711",
+  "updated_at": "2026-08-21 18:22",
+  "updated_iso": "2026-08-21T18:22:59+00:00",
+  "build_version": "1787336579",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 13,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401",
+    "status_line": "HWY 401",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Highway Maintenance on HWY 404 Southbound ON-RAMP at STOUFFVILLE ROAD,\u2026",
+        "road": "HWY 401",
+        "what": "Vehicle Fire on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at ALLEN ROAD, Toronto. Right lane and\u2026",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at KEELE ST, Toronto. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "14:01 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -284,17 +284,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "14:04 EDT"
     }
   ],
   "market": [
@@ -366,8 +366,8 @@
     },
     {
       "name": "Fuel cost per 1,000 km",
-      "note": "At 232.8\u00a2/L and 35 L/100km",
-      "value": "$815",
+      "note": "At 233.9\u00a2/L and 35 L/100km",
+      "value": "$819",
       "value_class": "flat",
       "source": "NRCan weekly diesel survey",
       "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
@@ -375,7 +375,7 @@
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "31.1\u00a2/L",
+      "value": "30.4\u00a2/L",
       "value_class": "flat",
       "source": "Industry surveys",
       "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
