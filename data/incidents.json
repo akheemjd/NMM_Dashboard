@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-291468",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound  at MULOCK DRIVE, Newmarket. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.05003624,
+      "lng": -79.4163862,
+      "start": 1787350800,
+      "end": null,
+      "updated": 1787350800
+    },
+    {
       "id": "ON-291457",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +31,6 @@
       "start": 1787349060,
       "end": null,
       "updated": 1787349060
-    },
-    {
-      "id": "ON-291456",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.72961984,
-      "lng": -79.4488332,
-      "start": 1787348640,
-      "end": null,
-      "updated": 1787348640
     },
     {
       "id": "ON-291194",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-21T22:01:07.570927+00:00",
+  "updated": "2026-08-21T22:32:19.112761+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

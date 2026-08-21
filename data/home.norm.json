@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-21 22:01",
-  "updated_iso": "2026-08-21T22:01:11+00:00",
-  "build_version": "1787349671",
+  "updated_at": "2026-08-21 22:32",
+  "updated_iso": "2026-08-21T22:32:22+00:00",
+  "build_version": "1787351542",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
     "max_name": "Thousand Islands Bridge",
-    "max_wait": "30 min"
+    "max_wait": "25 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -237,18 +237,18 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 409, HWY 407",
+    "status_line": "HWY 404, HWY 401, HWY 409, HWY 407",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at AVENUE ROAD, Toronto. Right\u2026",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Northbound  at MULOCK DRIVE, Newmarket. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. Left\u2026",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at AVENUE ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "18:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "21 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "5 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT"
+      "captured_at": "15:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,17 +334,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 CDT"
+      "captured_at": "17:17 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "30 min",
+      "wait": "25 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:58 EDT"
+      "captured_at": "18:05 EDT"
     }
   ],
   "market": [
