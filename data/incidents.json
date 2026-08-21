@@ -1,36 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-291392",
+      "id": "ON-291403",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MEADOWVALE ROAD, Toronto. Left shoulder and left lane closed.",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 HAMILTON Eastbound RAMP at QEW TORONTO, Burlington. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.7996109,
-      "lng": -79.16626765,
-      "start": 1787339700,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.33588702,
+      "lng": -79.83009382,
+      "start": 1787341860,
       "end": null,
-      "updated": 1787339700
+      "updated": 1787341860
     },
     {
-      "id": "ON-291381",
+      "id": "ON-291397",
       "province": "ON",
-      "highway": "HWY 48",
-      "direction": "Southbound",
-      "description": "Collision on HWY 48 Southbound  at THOMAS DRIVE, Baldwin. Right lane closed.",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound ON-RAMP at BLOOMINGTON ROAD, Aurora. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.977501,
+      "lng": -79.393079,
+      "start": 1787340240,
+      "end": null,
+      "updated": 1787340240
+    },
+    {
+      "id": "ON-291396",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound  at BLOOMINGTON ROAD, Aurora. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane closed",
-      "lat": 44.248787,
-      "lng": -79.338886,
-      "start": 1787338800,
+      "lat": 43.97792579,
+      "lng": -79.39267765,
+      "start": 1787340180,
       "end": null,
-      "updated": 1787338800
+      "updated": 1787340180
     },
     {
       "id": "ON-291373",
@@ -63,22 +79,6 @@
       "start": 1787713200,
       "end": 1787734800,
       "updated": 1787338140
-    },
-    {
-      "id": "ON-291349",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at KEELE ST, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.72258588,
-      "lng": -79.48110636,
-      "start": 1787336100,
-      "end": null,
-      "updated": 1787337840
     },
     {
       "id": "ON-291359",
@@ -239,22 +239,6 @@
       "start": 1787544000,
       "end": 1788148740,
       "updated": 1787332500
-    },
-    {
-      "id": "ON-291312",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at PRECAMBIAN SHIELD HISTORIC SITE & REST, Rossport. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 48.903296908,
-      "lng": -87.669990502,
-      "start": 1787331300,
-      "end": null,
-      "updated": 1787331300
     },
     {
       "id": "ON-291300",
@@ -822,10 +806,26 @@
       "start": "2026-08-20T17:08:48-07:00",
       "end": "",
       "updated": "2026-08-20T17:08:48-07:00"
+    },
+    {
+      "id": "ON-291196",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at LAKE RIDGE RD, Whitby. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.949413,
+      "lng": -79.02108,
+      "start": 1787713200,
+      "end": 1787994000,
+      "updated": 1787262720
     }
   ],
   "total": 50,
-  "updated": "2026-08-21T19:25:17.133251+00:00",
+  "updated": "2026-08-21T19:56:27.346806+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

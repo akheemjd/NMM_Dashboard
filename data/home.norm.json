@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-21 19:25",
-  "updated_iso": "2026-08-21T19:25:20+00:00",
-  "build_version": "1787340320",
+  "updated_at": "2026-08-21 19:56",
+  "updated_iso": "2026-08-21T19:56:31+00:00",
+  "build_version": "1787342191",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_name": "Blue Water Bridge",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 48",
+    "status_line": "HWY 403 , HWY 404, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MEADOWVALE ROAD, Toronto. Left\u2026",
+        "road": "HWY 403 HAMILTON",
+        "what": "Disabled Vehicle on HWY 403 HAMILTON Eastbound RAMP at QEW TORONTO, Burlington.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 48",
-        "what": "Collision on HWY 48 Southbound  at THOMAS DRIVE, Baldwin. Right lane closed.",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Northbound ON-RAMP at BLOOMINGTON ROAD, Aurora. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:01 EDT"
+      "captured_at": "15:22 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 EDT"
+      "captured_at": "15:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:44 EDT"
+      "captured_at": "15:20 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -382,8 +382,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "5 of 9 crossings slow",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -393,17 +393,17 @@
   "news": [
     {
       "category": "industry",
-      "source": "Truck News",
-      "headline": "CBP seizes more than 1,000 lb. of meth hidden in detergent shipment",
-      "url": "https://www.trucknews.com/security/cbp-seizes-more-than-1000-lb-of-meth-hidden-in-detergent-shipment/1003220315/",
+      "source": "The Trucker",
+      "headline": "Cox Automotive showcases top technical talent at the 2026 Top Tech Finals",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/cox-automotive-showcases-top-technical-talent-at-the-2026-top-tech-finals",
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "business",
-      "source": "Truck News",
-      "headline": "BREAKING: Spear out as ATA president and CEO",
-      "url": "https://www.trucknews.com/transportation/breaking-spear-out-as-ata-president-and-ceo/1003220301/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Chris Spear exits ATA effective immediately",
+      "url": "https://www.thetrucker.com/trucking-news/business/chris-spear-exits-ata-effective-immediately",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
