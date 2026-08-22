@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-22 08:24",
-  "updated_iso": "2026-08-22T08:24:46+00:00",
-  "build_version": "1787387086",
+  "updated_at": "2026-08-22 08:55",
+  "updated_iso": "2026-08-22T08:55:59+00:00",
+  "build_version": "1787388959",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 4, HWY 61",
+    "status_line": "HWY 403 , HWY 61",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at GARDEN CITY SKYWAY, St. Catharines.\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Westbound  at HWY 407, Mississauga. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 4",
-        "what": "Collision on HWY 4 Both Directions  between Vanastra Road, Vanastra and\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:00 EDT"
+      "captured_at": "04:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:00 EDT"
+      "captured_at": "04:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:00 PDT"
+      "captured_at": "01:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 CDT"
+      "captured_at": "03:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 EDT"
+      "captured_at": "04:15 EDT"
     }
   ],
   "market": [
@@ -382,8 +382,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
