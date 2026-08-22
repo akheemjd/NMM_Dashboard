@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-22 11:00",
-  "updated_iso": "2026-08-22T11:00:38+00:00",
-  "build_version": "1787396438",
+  "updated_at": "2026-08-22 11:30",
+  "updated_iso": "2026-08-22T11:30:58+00:00",
+  "build_version": "1787398258",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,9 +235,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 401, HWY 400",
+    "status_line": "HWY 403 , HWY 61",
     "incidents": [
       {
         "road": "HWY 403 HAMILTON",
@@ -247,8 +247,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at KEELE ST, Toronto. All lanes\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 EDT"
+      "captured_at": "07:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT"
+      "captured_at": "04:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
