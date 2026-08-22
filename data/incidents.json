@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-291657",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at HWY 427, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.669641035,
+      "lng": -79.588319063,
+      "start": 1787418600,
+      "end": null,
+      "updated": 1787418600
+    },
+    {
       "id": "ON-291645",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +31,6 @@
       "start": 1787416740,
       "end": null,
       "updated": 1787416740
-    },
-    {
-      "id": "ON-291642",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Debris on HWY 400 Southbound  at SOUTH OF SHEPPARD, Toronto. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.73163807,
-      "lng": -79.52539007,
-      "start": 1787416320,
-      "end": null,
-      "updated": 1787416680
     },
     {
       "id": "ON-291639",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T16:42:43.020982+00:00",
+  "updated": "2026-08-22T17:13:53.398597+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

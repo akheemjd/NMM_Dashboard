@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-22 16:42",
-  "updated_iso": "2026-08-22T16:42:46+00:00",
-  "build_version": "1787416966",
+  "updated_at": "2026-08-22 17:13",
+  "updated_iso": "2026-08-22T17:13:56+00:00",
+  "build_version": "1787418836",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 5,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -237,18 +237,18 @@
     "none": false,
     "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 61",
+    "status_line": "HWY 401, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at WESTNEY ROAD, Ajax. All lanes closed.",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at HWY 427, Toronto. 1 right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Debris on HWY 400 Southbound  at SOUTH OF SHEPPARD, Toronto. 1 right lane\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound ON-RAMP at WESTNEY ROAD, Ajax. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -270,31 +270,31 @@
       "name": "Blue Water Bridge",
       "slug": "blue-water-bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:27 EDT"
+      "captured_at": "12:58 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:48 EDT"
+      "captured_at": "12:35 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -382,8 +382,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "5 of 9 crossings slow",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
