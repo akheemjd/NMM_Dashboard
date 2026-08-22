@@ -1,52 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-291754",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MAVIS ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.621261,
-      "lng": -79.706472,
-      "start": 1787436900,
-      "end": null,
-      "updated": 1787436900
-    },
-    {
       "id": "ON-291748",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at HWY 10 / HURONTARIO STREET, Mississauga. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.629715398,
-      "lng": -79.683977365,
-      "start": 1787436360,
-      "end": null,
-      "updated": 1787436360
-    },
-    {
-      "id": "ON-291740",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at GUELPH LINE, Burlington. 1 right lane and right shoulder closed.",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at HWY 10 / HURONTARIO STREET, Mississauga. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.35380874,
-      "lng": -79.80243726,
-      "start": 1787435220,
+      "lat": 43.629715398,
+      "lng": -79.683977365,
+      "start": 1787436360,
       "end": null,
-      "updated": 1787435220
+      "updated": 1787438700
     },
     {
       "id": "ON-291693",
@@ -812,10 +780,42 @@
       "start": 1787653800,
       "end": 1787952600,
       "updated": 1787317320
+    },
+    {
+      "id": "ON-291207",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at BOWEN ROAD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.933674,
+      "lng": -78.983406,
+      "start": 1787653800,
+      "end": 1787952600,
+      "updated": 1787316780
+    },
+    {
+      "id": "ON-291208",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Nightly Construction on QEW Toronto bound  between CENTENNIAL PKWY, Hamilton and BURLINGTON SKYWAY, Burlington. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.24609,
+      "lng": -79.75694,
+      "start": 1787612400,
+      "end": 1787734800,
+      "updated": 1787304960
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T22:25:43.113506+00:00",
+  "updated": "2026-08-22T22:56:53.018694+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
