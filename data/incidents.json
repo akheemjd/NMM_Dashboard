@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-291706",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at ALLEN ROAD, Toronto. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.73016868,
-      "lng": -79.44904569,
-      "start": 1787428200,
-      "end": null,
-      "updated": 1787428200
-    },
-    {
       "id": "ON-291705",
       "province": "ON",
       "highway": "QEW",
@@ -812,10 +796,26 @@
       "start": 1787702400,
       "end": 1787907600,
       "updated": 1787319720
+    },
+    {
+      "id": "ON-291210",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Daily Construction on QEW Fort Erie Bound Off-ramp at BOWEN ROAD, Fort Erie. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.933674,
+      "lng": -78.983406,
+      "start": 1787653800,
+      "end": 1787952600,
+      "updated": 1787317320
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T20:20:59.285922+00:00",
+  "updated": "2026-08-22T20:52:09.512138+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
