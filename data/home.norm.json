@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-22 18:07",
-  "updated_iso": "2026-08-22T18:07:15+00:00",
-  "build_version": "1787422035",
+  "updated_at": "2026-08-22 18:16",
+  "updated_iso": "2026-08-22T18:16:19+00:00",
+  "build_version": "1787422579",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "14 min"
+    "max_wait": "16 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -237,18 +237,18 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401",
+    "status_line": "HWY 400, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BRIMLEY ROAD, Toronto. Left\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Northbound HOV at TESTON ROAD, Vaughan. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. 2 left lanes\u2026",
+        "what": "Collision on HWY 401 Westbound  between Highway 24 / Hespeler Rd, Cambridge and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "14 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "16 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "13:20 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:20 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 PDT"
+      "captured_at": "11:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
