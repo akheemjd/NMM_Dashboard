@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-291533",
+      "province": "ON",
+      "highway": "HWY 4",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 4 Both Directions  between Vanastra Road, Vanastra and VICTORIA TERRACE (CLINTON SOUTH LIMITS), Clinton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.580036386,
+      "lng": -81.528934341,
+      "start": 1787362380,
+      "end": null,
+      "updated": 1787382540
+    },
+    {
       "id": "ON-291569",
       "province": "ON",
       "highway": "HWY 58A",
@@ -31,22 +47,6 @@
       "start": 1787378580,
       "end": null,
       "updated": 1787378580
-    },
-    {
-      "id": "ON-291533",
-      "province": "ON",
-      "highway": "HWY 4",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 4 Both Directions  between Vanastra Road, Vanastra and VICTORIA TERRACE (CLINTON SOUTH LIMITS), Clinton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.580036386,
-      "lng": -81.528934341,
-      "start": 1787362380,
-      "end": null,
-      "updated": 1787365080
     },
     {
       "id": "ON-291512",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T06:51:11.145579+00:00",
+  "updated": "2026-08-22T07:22:21.704346+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
