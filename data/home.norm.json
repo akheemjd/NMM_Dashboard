@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-22 17:13",
-  "updated_iso": "2026-08-22T17:13:56+00:00",
-  "build_version": "1787418836",
+  "updated_at": "2026-08-22 17:45",
+  "updated_iso": "2026-08-22T17:45:08+00:00",
+  "build_version": "1787420708",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "14 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 61",
+    "status_line": "HWY 401",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at HWY 427, Toronto. 1 right lane and\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BRIMLEY ROAD, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at WESTNEY ROAD, Ajax. All lanes closed.",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. 2 left lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -260,11 +260,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:29 EDT"
+      "captured_at": "13:31 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,11 +280,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "13:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "13:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 PDT"
+      "captured_at": "10:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 CDT"
+      "captured_at": "12:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

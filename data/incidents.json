@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-291657",
+      "id": "ON-291667",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at HWY 427, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BRIMLEY ROAD, Toronto. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.669641035,
-      "lng": -79.588319063,
-      "start": 1787418600,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.7790704,
+      "lng": -79.265231,
+      "start": 1787420460,
       "end": null,
-      "updated": 1787418600
+      "updated": 1787420460
+    },
+    {
+      "id": "ON-291663",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.74265249,
+      "lng": -79.4233205,
+      "start": 1787420100,
+      "end": null,
+      "updated": 1787420100
     },
     {
       "id": "ON-291645",
@@ -796,26 +812,10 @@
       "start": 1787653800,
       "end": 1787952600,
       "updated": 1787317320
-    },
-    {
-      "id": "ON-291207",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Daily Construction on QEW Fort Erie Bound On-ramp at BOWEN ROAD, Fort Erie. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 42.933674,
-      "lng": -78.983406,
-      "start": 1787653800,
-      "end": 1787952600,
-      "updated": 1787316780
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T17:13:53.398597+00:00",
+  "updated": "2026-08-22T17:45:05.653796+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
