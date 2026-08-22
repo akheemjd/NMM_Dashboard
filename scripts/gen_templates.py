@@ -29,6 +29,7 @@ FONTS = ("https://fonts.googleapis.com/css2?"
 # href, label — the one nav, in order. Every page renders this identically.
 NAV = [
     ("/", "Home"),
+    ("/freight-barometer/", "Barometer"),
     ("/fuel-prices/", "Diesel"),
     ("/fuel-cost-calculator/", "Calculator"),
     ("/border-wait-times/", "Border"),
@@ -385,6 +386,39 @@ write("fuel-prices",
     </div>
   </section>
 ''' + foot(CHART_SCRIPT))
+
+# ═══ Freight Barometer ═══════════════════════════════════════════════════
+write("freight-barometer",
+ head("Freight Barometer — This Week's Cross-Border Numbers | Northern Mile",
+      "The weekly cross-border snapshot: Canadian diesel {{fuel.national_diesel}}¢/L, the North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}, and the busiest border crossing. Every figure dated and sourced.",
+      "/freight-barometer/", "og.jpg",
+      '{"@context":"https://schema.org","@graph":[' + crumb("Freight barometer","/freight-barometer/") + ']}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Weekly snapshot · NRCan print {{fuel.print_date}}</span>
+    <h1>Freight barometer</h1>
+    <p class="stand">One screen of the numbers a cross-border carrier tracks every week — diesel, the North American index, the dollar, and the border — each dated and sourced.</p>
+    <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <div class="stats">
+    <a class="stat" href="/methodology/nmdi/"><div class="l">Canadian diesel</div><div class="v">{{fuel.national_diesel}}</div><div class="s">¢/L · ten provinces · NRCan print {{fuel.print_date}}</div></a>
+    <a class="stat" href="/fuel-prices/"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></a>
+    <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · Bank of Canada</div></a>
+    <a class="stat" href="/border-wait-times/"><div class="l">Busiest crossing</div><div class="v">{{border.max_wait}}</div><div class="s">{{border.max_name}} · CBSA</div></a>
+  </div>
+
+  <section class="sec">
+    <div class="lead"><h2>The week in one line</h2></div>
+    <p class="stand">{{weekly_read}}</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Cite this</h2></div>
+    <p class="note"><q>Northern Mile freight barometer, {{updated_at}} UTC — Canadian diesel {{fuel.national_diesel}}¢/L, North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}.</q> <a href="/methodology/nmdi/">Methodology</a> · <a href="/fuel-prices/">Prices by province</a></p>
+  </section>
+''' + sponsor("sponsor_market") + subscribe("The week in one email",
+   "Diesel, the border, and one argument worth your time. Wednesday mornings.") + foot())
 
 # ═══ Calculator ═══════════════════════════════════════════════════════
 calc_ld = ('{"@context":"https://schema.org","@graph":[' + crumb("Fuel cost calculator","/fuel-cost-calculator/") + ','
