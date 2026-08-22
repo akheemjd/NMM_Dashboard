@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-22 13:04",
-  "updated_iso": "2026-08-22T13:04:30+00:00",
-  "build_version": "1787403870",
+  "updated_at": "2026-08-22 13:35",
+  "updated_iso": "2026-08-22T13:35:40+00:00",
+  "build_version": "1787405740",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "14 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
     "status_line": "HWY 401, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at DIXON ROAD, Toronto. 1 right lane closed.",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at WARDEN AVE, Toronto. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at MARTIN GROVE ROAD, Toronto. All lanes\u2026",
+        "what": "Collision on HWY 401 Westbound  at DIXON ROAD, Toronto. 1 right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,11 +280,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:59 CDT"
+      "captured_at": "08:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -392,18 +392,18 @@
   "theft": [],
   "news": [
     {
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "US imposes 50% tariffs on $20 billion worth of Canadian products. Canada says it will retaliate",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/us-imposes-50-tariffs-on-20-billion-worth-of-canadian-products-canada-says-it-will-retaliate",
+      "why": "Industry movement worth tracking."
+    },
+    {
       "category": "equipment",
       "source": "The Trucker",
       "headline": "Truckers may soon share highways with 100 driverless rigs",
       "url": "https://www.thetrucker.com/trucking-news/equipment-tech/truckers-may-soon-share-highways-with-100-driverless-rigs",
       "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "Cox Automotive showcases top technical talent at the 2026 Top Tech Finals",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/cox-automotive-showcases-top-technical-talent-at-the-2026-top-tech-finals",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
