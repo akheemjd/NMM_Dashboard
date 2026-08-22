@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-22 00:05",
-  "updated_iso": "2026-08-22T00:05:53+00:00",
-  "build_version": "1787357153",
+  "updated_at": "2026-08-22 00:37",
+  "updated_iso": "2026-08-22T00:37:02+00:00",
+  "build_version": "1787359022",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
-    "max_name": "Thousand Islands Bridge",
-    "max_wait": "25 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "23 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 410, QEW, HWY 401, HWY 17",
+    "status_line": "HWY 401, QEW, HWY 17",
     "incidents": [
       {
-        "road": "HWY 410",
-        "what": "Collision on HWY 410 Northbound  at STEELES AVE, Brampton. 2 centre lanes\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at AVENUE ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound HOV at BURLOAK DRIVE, Burlington. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  at Putnam Rd / Middlesex Rd 30, Putnam. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 EDT"
+      "captured_at": "20:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -284,17 +284,17 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT"
+      "captured_at": "17:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -340,11 +340,11 @@
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:05 EDT"
+      "captured_at": "20:03 EDT"
     }
   ],
   "market": [
