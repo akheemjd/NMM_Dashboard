@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-291754",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MAVIS ROAD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.621261,
+      "lng": -79.706472,
+      "start": 1787436900,
+      "end": null,
+      "updated": 1787436900
+    },
+    {
+      "id": "ON-291748",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at HWY 10 / HURONTARIO STREET, Mississauga. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.629715398,
+      "lng": -79.683977365,
+      "start": 1787436360,
+      "end": null,
+      "updated": 1787436360
+    },
+    {
       "id": "ON-291740",
       "province": "ON",
       "highway": "QEW",
@@ -17,22 +49,6 @@
       "updated": 1787435220
     },
     {
-      "id": "ON-291719",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Police Investigation on HWY 403 MISSISSAUGA Eastbound  at UPPER MIDDLE ROAD, Oakville. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.50051357,
-      "lng": -79.67455714,
-      "start": 1787431800,
-      "end": null,
-      "updated": 1787432100
-    },
-    {
       "id": "ON-291693",
       "province": "ON",
       "highway": "HWY 401",
@@ -47,22 +63,6 @@
       "start": 1787424780,
       "end": null,
       "updated": 1787424780
-    },
-    {
-      "id": "ON-291687",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 17 Eastbound  at KATHERINE COVE RD-GILES TWP, Algoma. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 47.443972202,
-      "lng": -84.749541487,
-      "start": 1787423940,
-      "end": null,
-      "updated": 1787423940
     },
     {
       "id": "ON-291622",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T21:54:31.739927+00:00",
+  "updated": "2026-08-22T22:25:43.113506+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
