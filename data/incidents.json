@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-291560",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound  at SHEPPARD AVE, Toronto. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.78176629,
+      "lng": -79.34052528,
+      "start": 1787373300,
+      "end": null,
+      "updated": 1787373300
+    },
+    {
       "id": "ON-291533",
       "province": "ON",
       "highway": "HWY 4",
@@ -796,26 +812,10 @@
       "start": 1787918400,
       "end": 1787954400,
       "updated": 1787287920
-    },
-    {
-      "id": "ON-291124",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Daily Maintenance on HWY 11 Southbound  between Burk's Falls and Burk's Falls, Burk'S Falls. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.606697,
-      "lng": -79.403145,
-      "start": 1787832000,
-      "end": 1787954400,
-      "updated": 1787287560
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T04:15:17.220771+00:00",
+  "updated": "2026-08-22T04:46:27.817609+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
