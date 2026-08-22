@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-291571",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at GARDEN CITY SKYWAY, St. Catharines. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.16733885,
+      "lng": -79.19370257,
+      "start": 1787385660,
+      "end": null,
+      "updated": 1787385660
+    },
+    {
       "id": "ON-291533",
       "province": "ON",
       "highway": "HWY 4",
@@ -796,26 +812,10 @@
       "start": 1787918400,
       "end": 1787954400,
       "updated": 1787287920
-    },
-    {
-      "id": "ON-291124",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Daily Maintenance on HWY 11 Southbound  between Burk's Falls and Burk's Falls, Burk'S Falls. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.606697,
-      "lng": -79.403145,
-      "start": 1787832000,
-      "end": 1787954400,
-      "updated": 1787287560
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T07:53:33.766385+00:00",
+  "updated": "2026-08-22T08:24:43.316319+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
