@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-22 18:47",
-  "updated_iso": "2026-08-22T18:47:30+00:00",
-  "build_version": "1787424450",
+  "updated_at": "2026-08-22 19:18",
+  "updated_iso": "2026-08-22T19:18:40+00:00",
+  "build_version": "1787426320",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "10 min"
+    "max_name": "Queenston-Lewiston Bridge",
+    "max_wait": "22 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -237,18 +237,18 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 401",
+    "status_line": "HWY 401, HWY 17",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Disabled Vehicle on HWY 17 Eastbound  at KATHERINE COVE RD-GILES TWP, Algoma.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound RAMP at BENNETT ROAD, Clarington. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at WESTON ROAD, Toronto. 2 right lanes\u2026",
+        "road": "HWY 17",
+        "what": "Disabled Vehicle on HWY 17 Eastbound  at KATHERINE COVE RD-GILES TWP, Algoma.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "22 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:21 EDT"
+      "captured_at": "14:56 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 PDT"
+      "captured_at": "12:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -334,7 +334,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 CDT"
+      "captured_at": "13:43 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -382,8 +382,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
