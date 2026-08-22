@@ -17,38 +17,6 @@
       "updated": 1787406900
     },
     {
-      "id": "ON-291604",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BURLOAK DRIVE, Burlington. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.39799018,
-      "lng": -79.7541197,
-      "start": 1787406480,
-      "end": null,
-      "updated": 1787406480
-    },
-    {
-      "id": "ON-291603",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at KEELE ST, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.72206,
-      "lng": -79.481942,
-      "start": 1787406300,
-      "end": null,
-      "updated": 1787406300
-    },
-    {
       "id": "ON-291512",
       "province": "ON",
       "highway": "HWY 403 HAMILTON",
@@ -812,10 +780,42 @@
       "start": 1787918400,
       "end": 1787954400,
       "updated": 1787288280
+    },
+    {
+      "id": "ON-291125",
+      "province": "ON",
+      "highway": "HWY 35",
+      "direction": "Northbound",
+      "description": "Continuous Maintenance on HWY 35 Northbound  between FOX POINT RD-FRANKLIN TWP RD C 6 and FOX POINT RD-FRANKLIN TWP RD C 6, Dwight. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.307854,
+      "lng": -78.98805,
+      "start": 1787918400,
+      "end": 1787954400,
+      "updated": 1787287920
+    },
+    {
+      "id": "ON-291124",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Daily Maintenance on HWY 11 Southbound  between Burk's Falls and Burk's Falls, Burk'S Falls. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.606697,
+      "lng": -79.403145,
+      "start": 1787832000,
+      "end": 1787954400,
+      "updated": 1787287560
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T14:06:47.647343+00:00",
+  "updated": "2026-08-22T14:37:59.030793+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

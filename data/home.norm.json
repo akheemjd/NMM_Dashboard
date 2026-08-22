@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-22 14:06",
-  "updated_iso": "2026-08-22T14:06:51+00:00",
-  "build_version": "1787407611",
+  "updated_at": "2026-08-22 14:38",
+  "updated_iso": "2026-08-22T14:38:02+00:00",
+  "build_version": "1787409482",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "11 min"
+    "max_wait": "24 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,9 +235,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 61",
+    "status_line": "HWY 401, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
@@ -247,8 +247,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at BURLOAK DRIVE, Burlington.\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,11 +280,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "11 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "24 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +294,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:18 EDT"
+      "captured_at": "10:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -314,7 +314,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:51 MDT"
+      "captured_at": "08:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -324,7 +324,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -344,7 +344,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:28 EDT"
     }
   ],
   "market": [
@@ -401,8 +401,8 @@
     {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Truckers may soon share highways with 100 driverless rigs",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/truckers-may-soon-share-highways-with-100-driverless-rigs",
+      "headline": "Trucker injured in rollover in Missouri",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-injured-in-rollover-in-missouri",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
