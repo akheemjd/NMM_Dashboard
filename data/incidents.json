@@ -1,41 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-291578",
+      "id": "ON-291583",
       "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 HAMILTON Westbound  at YORK BLVD, Hamilton. 2 right lanes closed.",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound ON-RAMP at KING ROAD, King. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.28407869,
-      "lng": -79.89515305,
-      "start": 1787396160,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.922819,
+      "lng": -79.565713,
+      "start": 1787399640,
       "end": null,
-      "updated": 1787396160
-    },
-    {
-      "id": "drivebc.ca/RIDE-101572",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 99",
-        "from": "Highway 99",
-        "direction": "S",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Wildfire at Highway 99, At Conroy Forest Road. Right lane closed. Watch for traffic control. Last update: August 22nd, 2026 at 2:31am PDT. Next update: August 22nd, 2026 at 4:30am PDT.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.90638407,
-      "lng": -123.16260987,
-      "start": "2026-08-22T02:31:54-07:00",
-      "end": "",
-      "updated": "2026-08-22T02:31:54-07:00"
+      "updated": 1787399640
     },
     {
       "id": "ON-291512",
@@ -817,10 +796,26 @@
       "start": 1787918400,
       "end": 1787954400,
       "updated": 1787287920
+    },
+    {
+      "id": "ON-291124",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Daily Maintenance on HWY 11 Southbound  between Burk's Falls and Burk's Falls, Burk'S Falls. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.606697,
+      "lng": -79.403145,
+      "start": 1787832000,
+      "end": 1787954400,
+      "updated": 1787287560
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T11:30:53.059336+00:00",
+  "updated": "2026-08-22T12:02:05.686238+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
