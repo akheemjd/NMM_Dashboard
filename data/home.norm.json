@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-22 03:12",
-  "updated_iso": "2026-08-22T03:12:59+00:00",
-  "build_version": "1787368379",
+  "updated_at": "2026-08-22 03:44",
+  "updated_iso": "2026-08-22T03:44:10+00:00",
+  "build_version": "1787370250",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "25 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
     "status_line": "HWY 401, HWY 4, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Right lane\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS HOV at MAVIS ROAD, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 4",
-        "what": "Collision on HWY 4 Both Directions  between Vanastra Road, Vanastra and\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at YONGE STREET, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:49 EDT"
+      "captured_at": "23:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:00 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "13 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:00 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -304,7 +304,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:47 EDT"
+      "captured_at": "23:17 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -314,17 +314,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 MDT"
+      "captured_at": "21:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "30 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 PDT"
+      "captured_at": "20:20 PDT"
     },
     {
       "name": "Emerson-Pembina",

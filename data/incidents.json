@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-291551",
+      "id": "ON-291555",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS HOV at MAVIS ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.620838,
+      "lng": -79.707533,
+      "start": 1787369700,
+      "end": null,
+      "updated": 1787369700
+    },
+    {
+      "id": "ON-291556",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at YONGE STREET, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.74265249,
-      "lng": -79.4233205,
-      "start": 1787367960,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.74614005,
+      "lng": -79.4180828,
+      "start": 1787369700,
       "end": null,
-      "updated": 1787367960
+      "updated": 1787369700
     },
     {
       "id": "ON-291533",
@@ -796,26 +812,10 @@
       "start": 1787918400,
       "end": 1787954400,
       "updated": 1787288280
-    },
-    {
-      "id": "ON-291125",
-      "province": "ON",
-      "highway": "HWY 35",
-      "direction": "Northbound",
-      "description": "Continuous Maintenance on HWY 35 Northbound  between FOX POINT RD-FRANKLIN TWP RD C 6 and FOX POINT RD-FRANKLIN TWP RD C 6, Dwight. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.307854,
-      "lng": -78.98805,
-      "start": 1787918400,
-      "end": 1787954400,
-      "updated": 1787287920
     }
   ],
   "total": 50,
-  "updated": "2026-08-22T03:12:55.513566+00:00",
+  "updated": "2026-08-22T03:44:07.022102+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
