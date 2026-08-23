@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-292022",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Collision on HWY 417 Westbound  at BRONSON AVE (IC 121A), Ottawa. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 45.40489,
+      "lng": -75.70192,
+      "start": 1787493360,
+      "end": null,
+      "updated": 1787493360
+    },
+    {
+      "id": "ON-292019",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.69200023,
+      "lng": -79.56896285,
+      "start": 1787492400,
+      "end": null,
+      "updated": 1787492400
+    },
+    {
       "id": "ON-292015",
       "province": "ON",
       "highway": "HWY 400",
@@ -15,22 +47,6 @@
       "start": 1787491260,
       "end": null,
       "updated": 1787491260
-    },
-    {
-      "id": "ON-292010",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.7535367,
-      "lng": -79.40848595,
-      "start": 1787489100,
-      "end": null,
-      "updated": 1787490360
     },
     {
       "id": "ON-261152",
@@ -796,26 +812,10 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787322780
-    },
-    {
-      "id": "ON-291237",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1788840000,
-      "end": 1789185540,
-      "updated": 1787322540
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T13:28:53.314642+00:00",
+  "updated": "2026-08-23T14:00:03.008906+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
