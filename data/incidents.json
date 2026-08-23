@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-291973",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Eastbound COLLECTOR RAMP at 401 WEST COLL, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.636305,
+      "lng": -79.653825,
+      "start": 1787468820,
+      "end": null,
+      "updated": 1787468820
+    },
+    {
+      "id": "ON-291970",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at LIVERPOOL ROAD, Pickering. 3 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 right lanes and right shoulder closed",
+      "lat": 43.83069718,
+      "lng": -79.08896887,
+      "start": 1787467680,
+      "end": null,
+      "updated": 1787467680
+    },
+    {
       "id": "ON-291968",
       "province": "ON",
       "highway": "HWY 401",
@@ -17,38 +49,6 @@
       "updated": 1787467080
     },
     {
-      "id": "ON-291967",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound HOV at BRONTE ROAD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.4090109,
-      "lng": -79.7416423,
-      "start": 1787466840,
-      "end": null,
-      "updated": 1787466840
-    },
-    {
-      "id": "ON-291953",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound EXPRESS at HIGHWAY 7, Vaughan. Both shoulders and 3 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "both shoulders and 3 left lanes closed",
-      "lat": 43.79122614,
-      "lng": -79.53948054,
-      "start": 1787461080,
-      "end": null,
-      "updated": 1787461680
-    },
-    {
       "id": "ON-291891",
       "province": "ON",
       "highway": "HWY 6",
@@ -63,22 +63,6 @@
       "start": 1787445420,
       "end": null,
       "updated": 1787459580
-    },
-    {
-      "id": "ON-291942",
-      "province": "ON",
-      "highway": "HWY 7/8",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 7/8 Both Directions  between Road 106, Shakespeare and Road 102, New Hamburg. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.369267008,
-      "lng": -80.811945862,
-      "start": 1787457780,
-      "end": null,
-      "updated": 1787457780
     },
     {
       "id": "ON-291828",
@@ -812,10 +796,26 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787322780
+    },
+    {
+      "id": "ON-291237",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1788840000,
+      "end": 1789185540,
+      "updated": 1787322540
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T06:43:35.225333+00:00",
+  "updated": "2026-08-23T07:14:45.316136+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
