@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-292292",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WARDEN AVE, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.77032828,
-      "lng": -79.30391096,
-      "start": 1787526960,
-      "end": null,
-      "updated": 1787526960
-    },
-    {
       "id": "drivebc.ca/RIDE-101572",
       "province": "BC",
       "highway": {
@@ -38,22 +22,6 @@
       "updated": "2026-08-23T16:11:52-07:00"
     },
     {
-      "id": "ON-292289",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Emergency Roadwork on HWY 401 Eastbound COLLECTOR at PROGRESS AVE, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.78610172,
-      "lng": -79.23243793,
-      "start": 1787526600,
-      "end": null,
-      "updated": 1787526600
-    },
-    {
       "id": "drivebc.ca/RIDE-101585",
       "province": "BC",
       "highway": {
@@ -73,22 +41,6 @@
       "start": "2026-08-23T13:36:55-07:00",
       "end": "",
       "updated": "2026-08-23T16:05:49-07:00"
-    },
-    {
-      "id": "ON-292287",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at DUNLOP STREET / SIMCOE ROAD 90, Barrie. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.38015398,
-      "lng": -79.71086049,
-      "start": 1787526180,
-      "end": null,
-      "updated": 1787526180
     },
     {
       "id": "ON-291891",
@@ -822,10 +774,58 @@
       "start": 1787745600,
       "end": 1787778000,
       "updated": 1787323320
+    },
+    {
+      "id": "ON-291341",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between HARMONY RD N and HARMONY RD N, Oshawa. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.98243,
+      "lng": -78.86877,
+      "start": 1787706000,
+      "end": 1787994000,
+      "updated": 1787323320
+    },
+    {
+      "id": "ON-291249",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between WESTNEY RD N and SALEM RD, Ajax. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.93769,
+      "lng": -79.07017,
+      "start": 1787706000,
+      "end": 1787994000,
+      "updated": 1787322780
+    },
+    {
+      "id": "ON-291237",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1788840000,
+      "end": 1789185540,
+      "updated": 1787322540
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T23:21:15.158105+00:00",
+  "updated": "2026-08-23T23:52:25.480991+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

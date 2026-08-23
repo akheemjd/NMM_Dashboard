@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-23 23:21",
-  "updated_iso": "2026-08-23T23:21:18+00:00",
-  "build_version": "1787527278",
+  "updated_at": "2026-08-23 23:52",
+  "updated_iso": "2026-08-23T23:52:29+00:00",
+  "build_version": "1787529149",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
+    "max_name": "Peace Bridge",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 89",
+    "status_line": "HWY 89, HWY 6, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at WARDEN AVE, Toronto. Left\u2026",
+        "road": "HWY 89",
+        "what": "Collision on HWY 89 Both Directions  between 5th Line / County Road 12 and 4th\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Emergency Roadwork on HWY 401 Eastbound COLLECTOR at PROGRESS AVE, Toronto.\u2026",
+        "road": "HWY 6",
+        "what": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 EDT"
+      "captured_at": "19:34 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 PDT"
+      "captured_at": "16:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
