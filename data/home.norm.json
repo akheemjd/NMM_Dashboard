@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-23 12:26",
-  "updated_iso": "2026-08-23T12:26:34+00:00",
-  "build_version": "1787487994",
+  "updated_at": "2026-08-23 12:57",
+  "updated_iso": "2026-08-23T12:57:44+00:00",
+  "build_version": "1787489864",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 401, HWY 6, HWY 61",
+    "status_line": "HWY 401, HWY 427, HWY 6",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound RAMP at HWY 401, Toronto. All lanes closed.",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at LIVERPOOL ROAD, Pickering. 2 right\u2026",
+        "road": "HWY 427",
+        "what": "Collision on HWY 427 Southbound RAMP at HWY 401, Toronto. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "13 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:10 EDT"
+      "captured_at": "08:49 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 PDT"
+      "captured_at": "05:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:59 CDT"
+      "captured_at": "07:32 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."

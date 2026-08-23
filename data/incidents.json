@@ -1,20 +1,73 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101581",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 1, In Vancouver and 203m South of Exit 27 to 1st Avenue. Left lane blocked. Centre lane blocked. Emergency vehicles on scene. Last update: August 23rd, 2026 at 5:55am PDT. Next update: August 23rd, 2026 at 6:30am PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.26536788,
+      "lng": -123.02596869,
+      "start": "2026-08-23T05:37:08-07:00",
+      "end": "",
+      "updated": "2026-08-23T05:55:14-07:00"
+    },
+    {
+      "id": "ON-261152",
+      "province": "ON",
+      "highway": "HWY 61",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1781491500,
+      "end": null,
+      "updated": 1787489520
+    },
+    {
+      "id": "ON-292010",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.7535367,
+      "lng": -79.40848595,
+      "start": 1787489100,
+      "end": null,
+      "updated": 1787489100
+    },
+    {
       "id": "ON-292007",
       "province": "ON",
       "highway": "HWY 427",
       "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound RAMP at HWY 401, Toronto. All lanes closed.",
+      "description": "Collision on HWY 427 Southbound RAMP at HWY 401, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
       "lat": 43.67098597,
       "lng": -79.58987494,
       "start": 1787486160,
       "end": null,
-      "updated": 1787487420
+      "updated": 1787487780
     },
     {
       "id": "ON-291891",
@@ -175,22 +228,6 @@
       "start": 1787569200,
       "end": 1787958000,
       "updated": 1787358000
-    },
-    {
-      "id": "ON-261152",
-      "province": "ON",
-      "highway": "HWY 61",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.055068306,
-      "lng": -89.540597444,
-      "start": 1781491500,
-      "end": null,
-      "updated": 1787357940
     },
     {
       "id": "ON-291513",
@@ -780,42 +817,10 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787322780
-    },
-    {
-      "id": "ON-291237",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1788840000,
-      "end": 1789185540,
-      "updated": 1787322540
-    },
-    {
-      "id": "ON-291228",
-      "province": "ON",
-      "highway": "HWY 3",
-      "direction": "Westbound",
-      "description": "Daily Construction on HWY 3 Westbound  between Gosfield Townline West / Arner Townline and Maidstone Avenue / Regional Road 8, Essex. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 42.155132,
-      "lng": -82.8146,
-      "start": 1787569200,
-      "end": 1788555600,
-      "updated": 1787321160
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T12:26:31.260252+00:00",
+  "updated": "2026-08-23T12:57:41.615429+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
