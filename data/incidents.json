@@ -1,36 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-291965",
+      "id": "ON-291968",
       "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Collision on HWY 404 Northbound HOV at 16TH AVE, Markham-Richmondhill . All lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Vehicle Fire on HWY 401 Westbound COLLECTOR RAMP at WHITES ROAD, Pickering. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.82124,
+      "lng": -79.10945,
+      "start": 1787466840,
+      "end": null,
+      "updated": 1787467080
+    },
+    {
+      "id": "ON-291967",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound HOV at BRONTE ROAD, Oakville. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 43.865345,
-      "lng": -79.375166,
-      "start": 1787464440,
+      "lat": 43.4090109,
+      "lng": -79.7416423,
+      "start": 1787466840,
       "end": null,
-      "updated": 1787464440
-    },
-    {
-      "id": "ON-291961",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.74247141,
-      "lng": -79.42291341,
-      "start": 1787463480,
-      "end": null,
-      "updated": 1787463480
+      "updated": 1787466840
     },
     {
       "id": "ON-291953",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T06:12:26.985865+00:00",
+  "updated": "2026-08-23T06:43:35.225333+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
