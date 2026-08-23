@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-23 12:57",
-  "updated_iso": "2026-08-23T12:57:44+00:00",
-  "build_version": "1787489864",
+  "updated_at": "2026-08-23 13:28",
+  "updated_iso": "2026-08-23T13:28:56+00:00",
+  "build_version": "1787491736",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "17 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -240,18 +240,18 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 427, HWY 6",
+    "status_line": "HWY 400, HWY 401, HWY 6",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. Left shoulder and\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound  at HWY 9/DAVIS DR, Kettleby. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound RAMP at HWY 401, Toronto. Right lane and right\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "17 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "2 of 9 crossings slow",
-      "value": "2/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -397,16 +397,16 @@
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "US imposes 50% tariffs on $20 billion worth of Canadian products. Canada says it will retaliate",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/us-imposes-50-tariffs-on-20-billion-worth-of-canadian-products-canada-says-it-will-retaliate",
+      "headline": "What to know about Trump\u2019s 50% tariffs on Canadian goods that just went into effect",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/what-to-know-about-trumps-50-tariffs-on-canadian-goods-that-just-went-into-effect",
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "equipment",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "Regular exercise, diet planning help keep trucker Brad Verost healthy on and off the road",
-      "url": "https://www.thetrucker.com/trucking-news/perspective/the-trucker-trainer-by-bob-perry/regular-exercise-diet-planning-help-keep-trucker-brad-verost-healthy-on-and-off-the-road",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "US imposes 50% tariffs on $20 billion worth of Canadian products. Canada says it will retaliate",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/us-imposes-50-tariffs-on-20-billion-worth-of-canadian-products-canada-says-it-will-retaliate",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
