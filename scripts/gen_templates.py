@@ -521,7 +521,7 @@ var CITIES=__CITIES__;
 var DISTANCES=__DIST__,US_PADD=__PADD__,CODES=__CODES__;
 function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n].p]=g[CITIES[n].p]||[]).push(n);});Object.keys(g).sort().forEach(function(p){var og=document.createElement("optgroup");og.label=(p==="US"?"United States":p);g[p].sort().forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;og.appendChild(o);});sel.appendChild(og);});}
 function hav(a,b){var R=6371,dLa=(b.la-a.la)*Math.PI/180,dLn=(b.ln-a.ln)*Math.PI/180,la1=a.la*Math.PI/180,la2=b.la*Math.PI/180;var h=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLn/2)*Math.sin(dLn/2);return 2*R*Math.asin(Math.sqrt(h));}
-function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){var ca=CODES[origin.value],cb=CODES[dest.value],km=(ca&&cb)?(DISTANCES[ca+"-"+cb]||DISTANCES[cb+"-"+ca]||0):0;dist.value=km?km:Math.round(hav(o,d)*1.25);var t=(o.p==="US")?(US_PADD[origin.value]||"US"):o.p;for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===t){prov.value=prov.options[i].value;break;}}}calc();}
+function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){var ca=CODES[origin.value],cb=CODES[dest.value],km=(ca&&cb)?(DISTANCES[ca+"-"+cb]||DISTANCES[cb+"-"+ca]||0):0;dist.value=km?km:Math.round(hav(o,d)*1.25);$("distHint").textContent="Auto: "+origin.value+" → "+dest.value+" = "+dist.value+" km";var t=(o.p==="US")?(US_PADD[origin.value]||"US"):o.p;for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===t){prov.value=prov.options[i].value;break;}}}calc();}
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
 var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
@@ -535,7 +535,7 @@ $("rFloor").textContent=money(floor)+" /mi";
 var o=prov.options[prov.selectedIndex];
 $("rPrice").textContent=cents.toFixed(1)+"\\u00a2/L \\u00b7 "+(isC?"your price":o.getAttribute("data-name"));}
 [dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
-origin.addEventListener("change",lane);dest.addEventListener("change",lane);
+origin.addEventListener("change",lane);dest.addEventListener("change",lane);dist.addEventListener("input",function(){if(origin.value&&dest.value)$("distHint").textContent="Manual distance — overrides the lane estimate.";});
 fill(origin);fill(dest);
 try{var sb=localStorage.getItem("nm_burn"),so=localStorage.getItem("nm_opcost");if(sb)burn.value=sb;if(so)opcost.value=so;}catch(e){}
 [burn,opcost].forEach(function(el){el.addEventListener("input",function(){try{localStorage.setItem("nm_burn",burn.value);localStorage.setItem("nm_opcost",opcost.value);}catch(e){}});});
@@ -556,8 +556,8 @@ write("fuel-cost-calculator",
 
   <div class="calc">
     <div>
-      <div class="fld"><label for="origin">Lane</label><div class="lane"><div class="inp"><select id="origin"><option value="">From — pick a city</option></select></div><div class="inp"><select id="dest"><option value="">To — pick a city</option></select></div></div><p class="hint">Pick a Canadian or US lane and the distance and fuel price fill in (straight-line × 1.25 for road detour). US lanes use the US national average, which excludes Canadian carbon tax. Override the distance if you know the real number.</p></div>
-      <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div></div>
+      <div class="fld"><label for="origin">Lane</label><div class="lane"><div class="inp"><select id="origin"><option value="">From — pick a city</option></select></div><div class="inp"><select id="dest"><option value="">To — pick a city</option></select></div></div><p class="hint">Pick a Canadian or US lane and the distance and fuel price fill in automatically — real road distance where we have it, an estimate otherwise. US lanes use their EIA region price (excludes Canadian carbon tax).</p></div>
+      <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div><p class="hint" id="distHint">Pick a lane above and this fills in automatically — or type the distance you know.</p></div>
       <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
         <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
