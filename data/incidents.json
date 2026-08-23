@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-292084",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.64848042,
+      "lng": -79.63784681,
+      "start": 1787503860,
+      "end": null,
+      "updated": 1787503860
+    },
+    {
+      "id": "ON-292077",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at LESLIE STREET, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.76600201,
+      "lng": -79.3627448,
+      "start": 1787502840,
+      "end": null,
+      "updated": 1787502840
+    },
+    {
       "id": "ON-292073",
       "province": "ON",
       "highway": "HWY 404",
@@ -785,42 +817,10 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787323320
-    },
-    {
-      "id": "ON-291249",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between WESTNEY RD N and SALEM RD, Ajax. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.93769,
-      "lng": -79.07017,
-      "start": 1787706000,
-      "end": 1787994000,
-      "updated": 1787322780
-    },
-    {
-      "id": "ON-291237",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1788840000,
-      "end": 1789185540,
-      "updated": 1787322540
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T16:35:55.172190+00:00",
+  "updated": "2026-08-23T17:07:05.558092+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
