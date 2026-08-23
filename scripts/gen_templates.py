@@ -485,13 +485,43 @@ CITY_COORDS = {
 }
 _cities_js = json.dumps({n: {"p": p, "la": la, "ln": ln} for n, (p, la, ln) in CITY_COORDS.items()})
 
+# US city → EIA PADD region, for precise fuel pricing.
+US_PADD = {
+    "Atlanta": "east_coast", "Boston": "east_coast", "Buffalo": "east_coast",
+    "Charlotte": "east_coast", "New York": "east_coast", "Pittsburgh": "east_coast",
+    "Chicago": "midwest", "Cincinnati": "midwest", "Cleveland": "midwest",
+    "Columbus": "midwest", "Detroit": "midwest", "Fargo": "midwest",
+    "Grand Rapids": "midwest", "Indianapolis": "midwest", "Kansas City": "midwest",
+    "Louisville": "midwest", "Memphis": "midwest", "Milwaukee": "midwest",
+    "Minneapolis": "midwest", "Nashville": "midwest", "Oklahoma City": "midwest",
+    "Omaha": "midwest", "St. Louis": "midwest", "Toledo": "midwest",
+    "Dallas": "gulf_coast", "Houston": "gulf_coast",
+    "Denver": "rocky_mountain", "Salt Lake City": "rocky_mountain",
+    "Los Angeles": "west_coast", "Phoenix": "west_coast", "Portland": "west_coast",
+    "Seattle": "west_coast", "Spokane": "west_coast",
+}
+# City name → airport code, for the precomputed road-distance matrix.
+CITY_CODES = {
+    "Vancouver": "YVR", "Calgary": "YYC", "Edmonton": "YEG", "Saskatoon": "YXE",
+    "Regina": "YQR", "Winnipeg": "YWG", "Toronto": "YYZ", "Ottawa": "YOW",
+    "Montreal": "YUL", "Quebec City": "YQB", "Moncton": "YQM", "Halifax": "YHZ",
+    "St. John's": "YYT", "Seattle": "SEA", "Portland": "PDX", "Los Angeles": "LAX",
+    "Dallas": "DFW", "Minneapolis": "MSP", "Chicago": "ORD", "Detroit": "DTW",
+    "Buffalo": "BUF", "New York": "EWR", "Atlanta": "ATL",
+}
+_padd_js = json.dumps(US_PADD)
+_codes_js = json.dumps(CITY_CODES)
+with open(os.path.join(HERE, "..", "data", "distances.json")) as _df:
+    _dist_js = json.dumps(json.load(_df).get("distances", {}))
+
 CALCJS = '''<script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
 var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost"),origin=$("origin"),dest=$("dest");
 var CITIES=__CITIES__;
+var DISTANCES=__DIST__,US_PADD=__PADD__,CODES=__CODES__;
 function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n].p]=g[CITIES[n].p]||[]).push(n);});Object.keys(g).sort().forEach(function(p){var og=document.createElement("optgroup");og.label=(p==="US"?"United States":p);g[p].sort().forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;og.appendChild(o);});sel.appendChild(og);});}
 function hav(a,b){var R=6371,dLa=(b.la-a.la)*Math.PI/180,dLn=(b.ln-a.ln)*Math.PI/180,la1=a.la*Math.PI/180,la2=b.la*Math.PI/180;var h=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLn/2)*Math.sin(dLn/2);return 2*R*Math.asin(Math.sqrt(h));}
-function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){dist.value=Math.round(hav(o,d)*1.25);for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===o.p){prov.value=prov.options[i].value;break;}}}calc();}
+function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){var ca=CODES[origin.value],cb=CODES[dest.value],km=(ca&&cb)?(DISTANCES[ca+"-"+cb]||DISTANCES[cb+"-"+ca]||0):0;dist.value=km?km:Math.round(hav(o,d)*1.25);var t=(o.p==="US")?(US_PADD[origin.value]||"US"):o.p;for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===t){prov.value=prov.options[i].value;break;}}}calc();}
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
 var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
@@ -511,7 +541,7 @@ try{var sb=localStorage.getItem("nm_burn"),so=localStorage.getItem("nm_opcost");
 [burn,opcost].forEach(function(el){el.addEventListener("input",function(){try{localStorage.setItem("nm_burn",burn.value);localStorage.setItem("nm_opcost",opcost.value);}catch(e){}});});
 calc();})();
 </script>
-'''.replace("__CITIES__", _cities_js)
+'''.replace("__CITIES__", _cities_js).replace("__DIST__", _dist_js).replace("__PADD__", _padd_js).replace("__CODES__", _codes_js)
 
 write("fuel-cost-calculator",
  head("Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile",
@@ -533,6 +563,7 @@ write("fuel-cost-calculator",
         <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
         <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}" data-code="{{code}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
         <option value="{{eia.us_national_cpl}}" data-name="US national average" data-code="US">US national average — {{eia.us_national_cpl}}¢/L</option>
+        <!--LOOP:eia.padds_list--><option value="{{cpl}}" data-name="{{label}}" data-code="{{key}}">{{label}} — {{cpl}}¢/L</option><!--/LOOP:eia.padds_list-->
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
       <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>

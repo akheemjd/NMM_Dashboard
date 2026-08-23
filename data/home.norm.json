@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-23 04:32",
-  "updated_iso": "2026-08-23T04:32:48+00:00",
-  "build_version": "1787459568",
+  "updated_at": "2026-08-23 04:38",
+  "updated_iso": "2026-08-23T04:38:56+00:00",
+  "build_version": "1787459936",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_wait": "17 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -240,18 +240,18 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 7/8, HWY 401, HWY 404, HWY 6",
+    "status_line": "HWY 406, HWY 7/8, HWY 404, HWY 6",
     "incidents": [
       {
-        "road": "HWY 7/8",
-        "what": "Collision on HWY 7/8 Both Directions  between Road 106, Shakespeare and Road\u2026",
+        "road": "HWY 406",
+        "what": "Flooding on HWY 406 Southbound  at WESTCHESTER AVE, St. Catharines. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. 1 right\u2026",
+        "road": "HWY 7/8",
+        "what": "Collision on HWY 7/8 Both Directions  between Road 106, Shakespeare and Road\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "17 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:19 EDT"
+      "captured_at": "00:10 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 CDT"
+      "captured_at": "23:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:30 EDT"
+      "captured_at": "00:15 EDT"
     }
   ],
   "market": [
