@@ -464,6 +464,24 @@ CITY_COORDS = {
  "Victoria": ("BC", 48.43, -123.37), "Windsor": ("ON", 42.32, -83.04),
  "Winnipeg": ("MB", 49.90, -97.14), "Woodstock": ("NB", 46.15, -67.57),
  "Yarmouth": ("NS", 43.84, -66.12),
+ # — US lanes (all keyed "US"; origin routes to the US national price) —
+ "Atlanta": ("US", 33.75, -84.39), "Boston": ("US", 42.36, -71.06),
+ "Buffalo": ("US", 42.89, -78.88), "Charlotte": ("US", 35.23, -80.84),
+ "Chicago": ("US", 41.88, -87.63), "Cincinnati": ("US", 39.10, -84.51),
+ "Cleveland": ("US", 41.50, -81.69), "Columbus": ("US", 39.96, -83.00),
+ "Dallas": ("US", 32.78, -96.80), "Denver": ("US", 39.74, -104.99),
+ "Detroit": ("US", 42.33, -83.05), "Fargo": ("US", 46.88, -96.79),
+ "Grand Rapids": ("US", 42.96, -85.66), "Houston": ("US", 29.76, -95.37),
+ "Indianapolis": ("US", 39.77, -86.16), "Kansas City": ("US", 39.10, -94.58),
+ "Los Angeles": ("US", 34.05, -118.24), "Louisville": ("US", 38.25, -85.76),
+ "Memphis": ("US", 35.15, -90.05), "Milwaukee": ("US", 43.04, -87.91),
+ "Minneapolis": ("US", 44.98, -93.27), "Nashville": ("US", 36.16, -86.78),
+ "New York": ("US", 40.71, -74.01), "Oklahoma City": ("US", 35.47, -97.52),
+ "Omaha": ("US", 41.26, -95.93), "Phoenix": ("US", 33.45, -112.07),
+ "Pittsburgh": ("US", 40.44, -79.99), "Portland": ("US", 45.52, -122.68),
+ "Salt Lake City": ("US", 40.76, -111.89), "Seattle": ("US", 47.61, -122.33),
+ "Spokane": ("US", 47.66, -117.43), "St. Louis": ("US", 38.63, -90.20),
+ "Toledo": ("US", 41.65, -83.54),
 }
 _cities_js = json.dumps({n: {"p": p, "la": la, "ln": ln} for n, (p, la, ln) in CITY_COORDS.items()})
 
@@ -471,7 +489,7 @@ CALCJS = '''<script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
 var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost"),origin=$("origin"),dest=$("dest");
 var CITIES=__CITIES__;
-function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n].p]=g[CITIES[n].p]||[]).push(n);});Object.keys(g).sort().forEach(function(p){var og=document.createElement("optgroup");og.label=p;g[p].sort().forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;og.appendChild(o);});sel.appendChild(og);});}
+function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n].p]=g[CITIES[n].p]||[]).push(n);});Object.keys(g).sort().forEach(function(p){var og=document.createElement("optgroup");og.label=(p==="US"?"United States":p);g[p].sort().forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;og.appendChild(o);});sel.appendChild(og);});}
 function hav(a,b){var R=6371,dLa=(b.la-a.la)*Math.PI/180,dLn=(b.ln-a.ln)*Math.PI/180,la1=a.la*Math.PI/180,la2=b.la*Math.PI/180;var h=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLn/2)*Math.sin(dLn/2);return 2*R*Math.asin(Math.sqrt(h));}
 function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){dist.value=Math.round(hav(o,d)*1.25);for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===o.p){prov.value=prov.options[i].value;break;}}}calc();}
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
@@ -508,12 +526,13 @@ write("fuel-cost-calculator",
 
   <div class="calc">
     <div>
-      <div class="fld"><label for="origin">Lane</label><div class="lane"><div class="inp"><select id="origin"><option value="">From — pick a city</option></select></div><div class="inp"><select id="dest"><option value="">To — pick a city</option></select></div></div><p class="hint">Pick your lane and the distance and fuel price fill in (straight-line × 1.25 for road detour). Override the distance if you know the real number.</p></div>
+      <div class="fld"><label for="origin">Lane</label><div class="lane"><div class="inp"><select id="origin"><option value="">From — pick a city</option></select></div><div class="inp"><select id="dest"><option value="">To — pick a city</option></select></div></div><p class="hint">Pick a Canadian or US lane and the distance and fuel price fill in (straight-line × 1.25 for road detour). US lanes use the US national average, which excludes Canadian carbon tax. Override the distance if you know the real number.</p></div>
       <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div></div>
       <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
         <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
         <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}" data-code="{{code}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
+        <option value="{{eia.us_national_cpl}}" data-name="US national average" data-code="US">US national average — {{eia.us_national_cpl}}¢/L</option>
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
       <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
