@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-292084",
+      "id": "ON-292100",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
+      "highway": "HWY 35/115",
+      "direction": "Southbound",
+      "description": "Collision on HWY 35/115 Southbound  at STATION ST., Clarington. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.64848042,
-      "lng": -79.63784681,
-      "start": 1787503860,
+      "lanes": "right lane closed",
+      "lat": 43.973523,
+      "lng": -78.610367,
+      "start": 1787505420,
       "end": null,
-      "updated": 1787503860
+      "updated": 1787505420
     },
     {
       "id": "ON-292077",
@@ -31,22 +31,6 @@
       "start": 1787502840,
       "end": null,
       "updated": 1787502840
-    },
-    {
-      "id": "ON-292073",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Collision on HWY 404 Northbound  at STOUFFVILLE ROAD, Stouffville-Richmondhill. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.94027354,
-      "lng": -79.38949169,
-      "start": 1787502540,
-      "end": null,
-      "updated": 1787502540
     },
     {
       "id": "ON-291891",
@@ -817,10 +801,26 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787323320
+    },
+    {
+      "id": "ON-291249",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between WESTNEY RD N and SALEM RD, Ajax. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.93769,
+      "lng": -79.07017,
+      "start": 1787706000,
+      "end": 1787994000,
+      "updated": 1787322780
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T17:07:05.558092+00:00",
+  "updated": "2026-08-23T17:38:15.786986+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
