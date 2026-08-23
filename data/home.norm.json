@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-23 20:14",
-  "updated_iso": "2026-08-23T20:14:12+00:00",
-  "build_version": "1787516052",
+  "updated_at": "2026-08-23 20:45",
+  "updated_iso": "2026-08-23T20:45:23+00:00",
+  "build_version": "1787517923",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 2,
+    "moderate_count": 1,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "20 min"
+    "max_wait": "21 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -240,18 +240,18 @@
     "none": false,
     "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 400, HWY 60",
+    "status_line": "HWY 427, HWY 401, HWY 60, HWY 404",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound HOV at BRONTE ROAD, Oakville. All lanes\u2026",
+        "road": "HWY 427",
+        "what": "Collision on HWY 427 Southbound RAMP at HWY 401, Toronto. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at BRONTE ROAD, Oakville. Left lane\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 2 centre\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:16 EDT"
+      "captured_at": "16:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "21 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:34 MDT"
+      "captured_at": "14:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 PDT"
+      "captured_at": "13:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
