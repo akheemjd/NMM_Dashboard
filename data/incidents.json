@@ -1,20 +1,41 @@
 {
   "incidents": [
     {
-      "id": "ON-292024",
+      "id": "drivebc.ca/RIDE-101572",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Highway 99",
+        "direction": "S",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Wildfire at Highway 99, At Conroy Forest Road. Right lane closed. Last update: August 23rd, 2026 at 7:52am PDT. Next update: August 23rd, 2026 at 12:00pm PDT. Do not stop on the highway to view the fire. Slow down and follow traffic control directions. Use caution when travelling through the area and expect delays.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.90638407,
+      "lng": -123.16260987,
+      "start": "2026-08-22T02:31:54-07:00",
+      "end": "",
+      "updated": "2026-08-23T07:52:18-07:00"
+    },
+    {
+      "id": "ON-292034",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound RAMP at LAKE RIDGE ROAD, Whitby. Right lane and right shoulder closed.",
+      "description": "Collision on HWY 401 Eastbound RAMP at LAKE RIDGE ROAD, Whitby. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
+      "closure": true,
+      "lanes": "All lanes closed",
       "lat": 43.860707,
       "lng": -78.987663,
-      "start": 1787493900,
+      "start": 1787496300,
       "end": null,
-      "updated": 1787493900
+      "updated": 1787496300
     },
     {
       "id": "ON-261152",
@@ -47,22 +68,6 @@
       "start": 1787445420,
       "end": null,
       "updated": 1787485980
-    },
-    {
-      "id": "ON-291970",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at LIVERPOOL ROAD, Pickering. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.83069718,
-      "lng": -79.08896887,
-      "start": 1787467680,
-      "end": null,
-      "updated": 1787478780
     },
     {
       "id": "ON-291828",
@@ -815,7 +820,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T14:31:13.302076+00:00",
+  "updated": "2026-08-23T15:02:23.141007+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
