@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-291988",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.78103077,
+      "lng": -79.25480516,
+      "start": 1787479260,
+      "end": null,
+      "updated": 1787479260
+    },
+    {
+      "id": "ON-291970",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at LIVERPOOL ROAD, Pickering. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.83069718,
+      "lng": -79.08896887,
+      "start": 1787467680,
+      "end": null,
+      "updated": 1787478780
+    },
+    {
       "id": "ON-291982",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,38 +63,6 @@
       "start": 1787445420,
       "end": null,
       "updated": 1787473860
-    },
-    {
-      "id": "ON-291979",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at LIVERPOOL ROAD, Pickering. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.83069718,
-      "lng": -79.08896887,
-      "start": 1787473740,
-      "end": null,
-      "updated": 1787473740
-    },
-    {
-      "id": "ON-291970",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at LIVERPOOL ROAD, Pickering. 3 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 right lanes and right shoulder closed",
-      "lat": 43.83069718,
-      "lng": -79.08896887,
-      "start": 1787467680,
-      "end": null,
-      "updated": 1787467680
     },
     {
       "id": "ON-291828",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T09:50:37.303249+00:00",
+  "updated": "2026-08-23T10:21:48.987397+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
