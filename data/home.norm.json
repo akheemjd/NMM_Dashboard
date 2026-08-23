@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-23 15:33",
-  "updated_iso": "2026-08-23T15:33:36+00:00",
-  "build_version": "1787499216",
+  "updated_at": "2026-08-23 16:04",
+  "updated_iso": "2026-08-23T16:04:46+00:00",
+  "build_version": "1787501086",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_wait": "11 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 6",
+    "status_line": "HWY 401, HWY 6, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. Left shoulder and 1 left\u2026",
+        "what": "Collision on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. Left shoulder and 2 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound HOV at HWY 9/DAVIS DR, Kettleby. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound RAMP at LAKE RIDGE ROAD, Whitby. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "11 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "11:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "11:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 PDT"
+      "captured_at": "08:40 PDT"
     },
     {
       "name": "Emerson-Pembina",

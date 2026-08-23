@@ -5,16 +5,16 @@
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. Left shoulder and 1 left lane closed.",
+      "description": "Collision on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. Left shoulder and 2 left lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
+      "lanes": "left shoulder and 2 left lanes closed",
       "lat": 43.84906194,
       "lng": -79.04025259,
       "start": 1787498940,
       "end": null,
-      "updated": 1787498940
+      "updated": 1787500620
     },
     {
       "id": "ON-291891",
@@ -31,22 +31,6 @@
       "start": 1787445420,
       "end": null,
       "updated": 1787498400
-    },
-    {
-      "id": "ON-292046",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound HOV at HWY 9/DAVIS DR, Kettleby. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.029226,
-      "lng": -79.594419,
-      "start": 1787498040,
-      "end": null,
-      "updated": 1787498040
     },
     {
       "id": "drivebc.ca/RIDE-101572",
@@ -817,10 +801,26 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787322780
+    },
+    {
+      "id": "ON-291237",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1788840000,
+      "end": 1789185540,
+      "updated": 1787322540
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T15:33:33.586311+00:00",
+  "updated": "2026-08-23T16:04:43.461872+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
