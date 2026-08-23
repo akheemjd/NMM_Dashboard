@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-23 01:01",
-  "updated_iso": "2026-08-23T01:01:40+00:00",
-  "build_version": "1787446900",
+  "updated_at": "2026-08-23 01:32",
+  "updated_iso": "2026-08-23T01:32:53+00:00",
+  "build_version": "1787448773",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
-    "max_wait": "20 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -235,20 +235,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , QEW, HWY 401, HWY 6",
+    "status_line": "QEW, HWY 6, HWY 401, HWY 61",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at HWY 5 / DUNDAS\u2026",
+        "road": "QEW",
+        "what": "Flooding on QEW Toronto bound RAMP at WEST MALL/EVANS AVE, Toronto. 2 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Flooding on QEW Toronto bound RAMP at WEST MALL/EVANS AVE, Toronto. All lanes\u2026",
+        "road": "HWY 6",
+        "what": "Emergency Roadwork on HWY 6 Southbound  at Spanish River Br, Espanola,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -264,7 +264,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 EDT"
+      "captured_at": "21:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -280,21 +280,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 EDT"
+      "captured_at": "21:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -320,11 +320,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT"
+      "captured_at": "18:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
