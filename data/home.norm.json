@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-23 18:40",
-  "updated_iso": "2026-08-23T18:40:40+00:00",
-  "build_version": "1787510440",
+  "updated_at": "2026-08-23 19:11",
+  "updated_iso": "2026-08-23T19:11:52+00:00",
+  "build_version": "1787512312",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 417, HWY 11, HWY 401, HWY 400",
+    "status_line": "HWY 11, HWY 400, HWY 401",
     "incidents": [
       {
-        "road": "HWY 417",
-        "what": "Collision on HWY 417 Westbound  at MAITLAND AVE (IC 126), Ottawa. 1 right lane\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  between Matheson Hwy 11/101 Jct, Matheson\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Both Directions  between Matheson Hwy 11/101 Jct, Matheson\u2026",
+        "road": "HWY 400",
+        "what": "Vehicle Fire on HWY 400 Southbound  at SB SEVERN RIVER BRIDGE, PORT SEVERN,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 PDT"
+      "captured_at": "12:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
