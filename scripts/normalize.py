@@ -197,6 +197,10 @@ fuel = {
     "low_code": d_sorted[0][0], "low": f"{d_sorted[0][1]:.1f}",
     "high_code": d_sorted[-1][0], "high": f"{d_sorted[-1][1]:.1f}",
     "spread": f"{d_sorted[-1][1]-d_sorted[0][1]:.1f}",
+    "spread_dollars_500l": f"${(d_sorted[-1][1]-d_sorted[0][1]) * 5:.0f}",
+    # Fuel cost per distance at a 35 L/100km loaded-highway burn rate.
+    "fuel_cost_per_km": f"${fuel_nat * 35 / 10000:.2f}",
+    "fuel_cost_per_mi": f"${fuel_nat * 35 / 10000 * 1.609344:.2f}",
 
     "fuel_top": fuel_top,
 }

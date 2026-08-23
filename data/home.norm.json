@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-23 03:37",
-  "updated_iso": "2026-08-23T03:37:35+00:00",
-  "build_version": "1787456255",
+  "updated_at": "2026-08-23 04:11",
+  "updated_iso": "2026-08-23T04:11:16+00:00",
+  "build_version": "1787458276",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "7 min"
+    "max_wait": "6 min"
   },
   "fuel": {
     "national_diesel": "233.9",
@@ -27,6 +27,9 @@
     "high_code": "QC",
     "high": "253.3",
     "spread": "44.6",
+    "spread_dollars_500l": "$223",
+    "fuel_cost_per_km": "$0.82",
+    "fuel_cost_per_mi": "$1.32",
     "fuel_top": [
       {
         "code": "SK",
@@ -235,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 6, HWY 61",
+    "status_line": "HWY 7/8, HWY 401, HWY 404, HWY 6",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Northbound ON-RAMP at DUNDAS STREET, Toronto. Left\u2026",
+        "road": "HWY 7/8",
+        "what": "Collision on HWY 7/8 Both Directions  between Road 106, Shakespeare and Road\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 6",
-        "what": "Emergency Roadwork on HWY 6 Southbound  at Spanish River Br, Espanola,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "23:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -294,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "23:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -324,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:20 PDT"
+      "captured_at": "20:40 PDT"
     },
     {
       "name": "Emerson-Pembina",

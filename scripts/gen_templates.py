@@ -256,9 +256,10 @@ write("index",
       "/", "og.jpg", home_ld)
  + '''
   <section class="hero">
-    <span class="eyebrow">Northern Mile Diesel Index</span>
+    <span class="eyebrow">Free cross-border trucking data · no account</span>
     <h1>Canadian diesel prices today</h1>
     <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
+    <p class="stand">At 35 L/100km that is <b>{{fuel.fuel_cost_per_km}} per km</b> — the fuel half of your rate floor. <a href="/fuel-cost-calculator/">Work out your lane's full floor</a></p>
     <div class="meta"><span>Ten provinces</span><span>NRCan survey print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
 ''' + rail() + chart_summary() + cite() + '''
     <div class="stats">
@@ -381,7 +382,7 @@ write("fuel-prices",
       </div></div>
       <div class="reading">
         <p class="note" style="margin-top:0">Diesel moves once a week, when NRCan publishes a new retail survey. Between prints this figure holds steady. It is a retail survey average, not a rack price, and not what a fleet on a fuel card pays.</p>
-        <p class="note">The {{fuel.spread}}¢/L gap between {{fuel.low_code}} and {{fuel.high_code}} is a real difference on a 500-litre fill. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
+        <p class="note">The {{fuel.spread}}¢/L gap between {{fuel.low_code}} and {{fuel.high_code}} is <b>${{fuel.spread_dollars_500l}}</b> on a 500-litre fill — fuel where it is cheap on your corridor. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
       </div>
     </div>
   </section>
@@ -488,6 +489,8 @@ $("rPrice").textContent=cents.toFixed(1)+"\\u00a2/L \\u00b7 "+(isC?"your price":
 [dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
 origin.addEventListener("change",lane);dest.addEventListener("change",lane);
 fill(origin);fill(dest);
+try{var sb=localStorage.getItem("nm_burn"),so=localStorage.getItem("nm_opcost");if(sb)burn.value=sb;if(so)opcost.value=so;}catch(e){}
+[burn,opcost].forEach(function(el){el.addEventListener("input",function(){try{localStorage.setItem("nm_burn",burn.value);localStorage.setItem("nm_opcost",opcost.value);}catch(e){}});});
 calc();})();
 </script>
 '''.replace("__CITIES__", _cities_js)
@@ -559,7 +562,7 @@ write("border-wait-times",
   <section class="hero">
     <span class="eyebrow">CBSA commercial lanes</span>
     <h1>Border wait times</h1>
-    <p class="stand">Commercial lane waits at Canada-US crossings, polled every 30 minutes. Each time shown is CBSA's own capture time for that crossing, not our fetch time, so it reflects how current their data is.</p>
+    <p class="stand">Busiest right now: <b>{{border.max_name}}</b> at <b>{{border.max_wait}}</b> — wait is idle time, and the faster crossing is usually the cheaper crossing. Polled every 30 minutes from CBSA's own capture times.</p>
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
@@ -592,6 +595,7 @@ write("exchange-rate",
     <div class="figure"><span class="n">{{fx.usd_cad}}</span><span class="u">CAD per USD</span><span class="d {{fx.direction}}">{{fx.change}}</span></div>
     <div class="meta"><span>Bank of Canada</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
     <div class="cite"><div class="cl">What this is</div><q>The Bank of Canada publishes one USD/CAD observation per business day. It is not a continuous market rate and it is not the rate your bank will give you. It is the reference figure, and it is the one worth quoting.</q></div>
+    <p class="stand">A rising rate means a weaker loonie — US freight pays more in CAD, but US parts and equipment cost more. A falling rate is the reverse. <a href="/fuel-cost-calculator/">Work out what a lane costs</a></p>
   </section>
 ''' + sponsor("sponsor_fx") + '''
   <section class="sec">
@@ -1094,6 +1098,7 @@ city_body = (
     <h1>{{name}} diesel prices</h1>
     <div class="figure"><span class="n">{{price}}</span><span class="u">¢/L</span><span class="d {{vs_national_class}}">{{vs_national}} vs national</span></div>
     <div class="meta"><span>NRCan survey print <b>{{print_date}}</b></span><span>{{prov_name}} average <b>{{prov_price}}</b>¢/L</span></div>
+    <p class="stand">{{name}} runs <b>{{vs_national_abs}}¢ {{vs_national_word}}</b> the national index — a real difference on a 500-litre fill. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
     <div class="cite">
       <div class="cl">Citing this figure</div>
       <q id="citation">{{name}} diesel: {{price}}¢/L, NRCan weekly survey print {{print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/diesel-prices/{{prov_slug}}/{{slug}}/</q>

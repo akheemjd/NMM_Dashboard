@@ -495,3 +495,8 @@ main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%);
 .rw-road { font-family: var(--data); font-size: .8125rem; font-weight: 500; color: var(--ink); letter-spacing: .02em; }
 .rw-when { font-family: var(--data); font-size: .8125rem; font-weight: 600; color: var(--ink); flex-shrink: 0; letter-spacing: .02em; }
 .rw-what { font-size: .9375rem; color: var(--ink-2); line-height: 1.5; overflow-wrap: anywhere; }
+@media (max-width: 560px) {
+  .lane { grid-template-columns: 1fr; }
+  .inp input, .inp select { min-height: 44px; }
+  .calc .out { margin-top: 20px; }
+}
