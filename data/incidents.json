@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-291965",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound HOV at 16TH AVE, Markham-Richmondhill . All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.865345,
+      "lng": -79.375166,
+      "start": 1787464440,
+      "end": null,
+      "updated": 1787464440
+    },
+    {
       "id": "ON-291961",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,38 +31,6 @@
       "start": 1787463480,
       "end": null,
       "updated": 1787463480
-    },
-    {
-      "id": "ON-291957",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at VICTORIA PARK AVE, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.76835616,
-      "lng": -79.31981091,
-      "start": 1787462700,
-      "end": null,
-      "updated": 1787462700
-    },
-    {
-      "id": "ON-291950",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.78869528,
-      "lng": -79.22654409,
-      "start": 1787460300,
-      "end": null,
-      "updated": 1787462160
     },
     {
       "id": "ON-291953",
@@ -65,22 +49,6 @@
       "updated": 1787461680
     },
     {
-      "id": "ON-291954",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Vehicle Fire on HWY 400 Southbound  at RUTHERFORD, Vaughan. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.827983,
-      "lng": -79.5464692,
-      "start": 1787461140,
-      "end": null,
-      "updated": 1787461620
-    },
-    {
       "id": "ON-291891",
       "province": "ON",
       "highway": "HWY 6",
@@ -95,22 +63,6 @@
       "start": 1787445420,
       "end": null,
       "updated": 1787459580
-    },
-    {
-      "id": "ON-291944",
-      "province": "ON",
-      "highway": "HWY 406",
-      "direction": "Southbound",
-      "description": "Flooding on HWY 406 Southbound  at WESTCHESTER AVE, St. Catharines. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.15772862,
-      "lng": -79.23581475,
-      "start": 1787458080,
-      "end": null,
-      "updated": 1787458080
     },
     {
       "id": "ON-291942",
@@ -812,10 +764,58 @@
       "start": 1787655600,
       "end": 1787698800,
       "updated": 1787323440
+    },
+    {
+      "id": "ON-291239",
+      "province": "ON",
+      "highway": "HWY 9",
+      "direction": "Eastbound",
+      "description": "Daily Engineering Investigation on HWY 9 Eastbound  between DUFFY'S LANE and ADJALA TWP 6TH LINE, Caledon. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.966644,
+      "lng": -79.88135,
+      "start": 1787745600,
+      "end": 1787778000,
+      "updated": 1787323320
+    },
+    {
+      "id": "ON-291341",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between HARMONY RD N and HARMONY RD N, Oshawa. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.98243,
+      "lng": -78.86877,
+      "start": 1787706000,
+      "end": 1787994000,
+      "updated": 1787323320
+    },
+    {
+      "id": "ON-291249",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between WESTNEY RD N and SALEM RD, Ajax. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.93769,
+      "lng": -79.07017,
+      "start": 1787706000,
+      "end": 1787994000,
+      "updated": 1787322780
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T05:41:15.309748+00:00",
+  "updated": "2026-08-23T06:12:26.985865+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
