@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-291954",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Vehicle Fire on HWY 400 Southbound  at RUTHERFORD, Vaughan. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.827983,
+      "lng": -79.5464692,
+      "start": 1787461140,
+      "end": null,
+      "updated": 1787461620
+    },
+    {
+      "id": "ON-291953",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound EXPRESS at HIGHWAY 7, Vaughan. Both shoulders and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "both shoulders and 2 left lanes closed",
+      "lat": 43.79122614,
+      "lng": -79.53948054,
+      "start": 1787461080,
+      "end": null,
+      "updated": 1787461080
+    },
+    {
+      "id": "ON-291950",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.78869528,
+      "lng": -79.22654409,
+      "start": 1787460300,
+      "end": null,
+      "updated": 1787460300
+    },
+    {
       "id": "ON-291891",
       "province": "ON",
       "highway": "HWY 6",
@@ -15,22 +63,6 @@
       "start": 1787445420,
       "end": null,
       "updated": 1787459580
-    },
-    {
-      "id": "ON-291938",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound  at STEELES AVE, Toronto-Markham. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.8129235,
-      "lng": -79.352163,
-      "start": 1787457180,
-      "end": null,
-      "updated": 1787458740
     },
     {
       "id": "ON-291944",
@@ -780,42 +812,10 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787323320
-    },
-    {
-      "id": "ON-291249",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between WESTNEY RD N and SALEM RD, Ajax. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.93769,
-      "lng": -79.07017,
-      "start": 1787706000,
-      "end": 1787994000,
-      "updated": 1787322780
-    },
-    {
-      "id": "ON-291237",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1788840000,
-      "end": 1789185540,
-      "updated": 1787322540
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T04:38:53.614070+00:00",
+  "updated": "2026-08-23T05:10:04.996919+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
