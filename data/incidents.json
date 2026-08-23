@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-291976",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at HWY 403 OAKVILLE, Oakville. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.4772811,
+      "lng": -79.67260922,
+      "start": 1787470140,
+      "end": null,
+      "updated": 1787470140
+    },
+    {
+      "id": "ON-291974",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.72997534,
+      "lng": -79.44901142,
+      "start": 1787469780,
+      "end": null,
+      "updated": 1787469780
+    },
+    {
       "id": "ON-291973",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -780,42 +812,10 @@
       "start": 1787706000,
       "end": 1787994000,
       "updated": 1787323320
-    },
-    {
-      "id": "ON-291249",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Eastbound  between WESTNEY RD N and SALEM RD, Ajax. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.93769,
-      "lng": -79.07017,
-      "start": 1787706000,
-      "end": 1787994000,
-      "updated": 1787322780
-    },
-    {
-      "id": "ON-291237",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1788840000,
-      "end": 1789185540,
-      "updated": 1787322540
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T07:14:45.316136+00:00",
+  "updated": "2026-08-23T07:45:57.243757+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
