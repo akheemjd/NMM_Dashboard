@@ -1,52 +1,68 @@
 {
   "incidents": [
     {
-      "id": "ON-292258",
+      "id": "ON-292275",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound RAMP at SALEM ROAD, Ajax. Left shoulder and 2 left lanes closed.",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.854335771,
-      "lng": -79.015495777,
-      "start": 1787522340,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.78103077,
+      "lng": -79.25480516,
+      "start": 1787524680,
       "end": null,
-      "updated": 1787523000
+      "updated": 1787524680
     },
     {
-      "id": "ON-292255",
+      "id": "ON-292271",
       "province": "ON",
       "highway": "HWY 407",
       "direction": "Westbound",
-      "description": "Collision on HWY 407 Westbound  at HWY 418, Clarington. Right lane and right shoulder closed.",
+      "description": "Collision on HWY 407 Westbound RAMP at HWY 418, Clarington. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.9702845,
-      "lng": -78.7716126,
-      "start": 1787521920,
+      "lat": 43.97218,
+      "lng": -78.76973,
+      "start": 1787523960,
       "end": null,
-      "updated": 1787521920
+      "updated": 1787523960
+    },
+    {
+      "id": "ON-291891",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola, Espanola. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 46.268502,
+      "lng": -81.77425,
+      "start": 1787445420,
+      "end": null,
+      "updated": 1787523600
     },
     {
       "id": "ON-292254",
       "province": "ON",
       "highway": "HWY 400",
       "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil. 2 lanes and right shoulder closed.",
+      "description": "Collision on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 lanes and right shoulder closed",
+      "lanes": "right lane and right shoulder closed",
       "lat": 44.20017116,
       "lng": -79.65478443,
       "start": 1787521860,
       "end": null,
-      "updated": 1787521860
+      "updated": 1787523540
     },
     {
       "id": "ON-292236",
@@ -63,22 +79,6 @@
       "start": 1787518680,
       "end": null,
       "updated": 1787518680
-    },
-    {
-      "id": "ON-291891",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola, Espanola. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 46.268502,
-      "lng": -81.77425,
-      "start": 1787445420,
-      "end": null,
-      "updated": 1787511300
     },
     {
       "id": "ON-261152",
@@ -815,7 +815,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-23T22:18:57.275502+00:00",
+  "updated": "2026-08-23T22:50:05.363158+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
