@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-24 21:03",
-  "updated_iso": "2026-08-24T21:03:29+00:00",
-  "build_version": "1787605409",
+  "updated_at": "2026-08-24 21:34",
+  "updated_iso": "2026-08-24T21:34:37+00:00",
+  "build_version": "1787607277",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
+    "max_name": "Peace Bridge",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 17, QEW, HWY 400",
+    "status_line": "HWY 11, HWY 17, HWY 400",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Westbound  between FAIRBANKS LAKE RD (N) DEN/LOU RD (S) and\u2026",
+        "road": "HWY 11",
+        "what": "Disabled Vehicle on HWY 11 Northbound  at BIDWELL RD(E), Marten River. Lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Westbound  between FAIRBANKS LAKE RD (N) DEN/LOU RD (S) and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 EDT"
+      "captured_at": "17:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:43 EDT"
+      "captured_at": "17:04 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 MDT"
+      "captured_at": "15:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 CDT"
+      "captured_at": "16:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -396,17 +396,17 @@
   "news": [
     {
       "category": "markets",
+      "source": "Trucking Info",
+      "headline": "What the U.S.-Canada Trade War Means for Trucking",
+      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
+      "category": "markets",
       "source": "The Trucker",
       "headline": "Ontario\u2019s premier: Canada should be ready to cut electricity, critical minerals as trade woes worsen",
       "url": "https://www.thetrucker.com/trucking-news/business/ontarios-premier-canada-should-be-ready-to-cut-electricity-critical-minerals-as-trade-woes-worsen",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "DAT: Dry van load posts unmoved for third straight week",
-      "url": "https://www.thetrucker.com/trucking-news/business/dat-dry-van-load-posts-unmoved-for-third-straight-week",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
