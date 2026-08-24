@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-24 22:36",
-  "updated_iso": "2026-08-24T22:36:04+00:00",
-  "build_version": "1787610964",
+  "updated_at": "2026-08-24 23:06",
+  "updated_iso": "2026-08-24T23:06:21+00:00",
+  "build_version": "1787612781",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
+    "max_name": "Pacific Highway Crossing",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 410, HWY 417, HWY 401",
+    "status_line": "HWY 401, HWY 11, HWY 17, HWY 400",
     "incidents": [
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Northbound TRANSFER at 401 Express to Collector,\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  between CR 2 (IC 461) / Toronto Rd, Port Hope\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 417",
-        "what": "Collision on HWY 417 Eastbound  at PARKDALE AVE (IC 122), Ottawa. Left shoulder\u2026",
+        "road": "HWY 11",
+        "what": "Disabled Vehicle on HWY 11 Northbound  at BIDWELL RD(E), Marten River. Lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 EDT"
+      "captured_at": "18:38 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:04 EDT"
+      "captured_at": "18:34 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
