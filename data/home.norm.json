@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-24 20:32",
-  "updated_iso": "2026-08-24T20:32:18+00:00",
-  "build_version": "1787603538",
+  "updated_at": "2026-08-24 21:03",
+  "updated_iso": "2026-08-24T21:03:29+00:00",
+  "build_version": "1787605409",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "8 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 12,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 17, HWY 400",
+    "status_line": "HWY 17, QEW, HWY 400",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound COLLECTOR RAMP at GARDINER EXPRESSWAY/EVANS\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Westbound  between FAIRBANKS LAKE RD (N) DEN/LOU RD (S) and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Disabled Vehicle on HWY 17 Eastbound  at SAND LAKE RD (S) - DEWAN TWP, Ignace.\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "16:46 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:20 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:57 EDT"
+      "captured_at": "16:44 EDT"
     }
   ],
   "market": [
