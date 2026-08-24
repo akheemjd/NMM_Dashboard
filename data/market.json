@@ -20,8 +20,8 @@
     {
       "name": "Fuel Cost",
       "label": "Fuel cost per 1,000 km",
-      "value": "$819",
-      "detail": "At 233.9\u00a2/L and 35 L/100km",
+      "value": "$820",
+      "detail": "At 234.4\u00a2/L and 35 L/100km",
       "direction": "up",
       "source": "NRCan weekly diesel survey",
       "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
@@ -29,7 +29,7 @@
     {
       "name": "Fuel Spread",
       "label": "BC vs AB diesel spread",
-      "value": "30.4\u00a2/L",
+      "value": "30.8\u00a2/L",
       "direction": "up",
       "source": "Industry surveys",
       "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
@@ -37,11 +37,11 @@
   ],
   "rates_snapshot": {
     "fuel_pct_of_ops": "25-35%",
-    "current_diesel": 233.9,
+    "current_diesel": 234.4,
     "usd_cad": 1.376,
     "note": "Rate data from DAT/Loadlink requires paid subscription. These are operating cost indicators that drive rate floors."
   },
-  "updated": "2026-08-24T18:58:36.736841+00:00",
+  "updated": "2026-08-24T19:29:49.951241+00:00",
   "note": "Public data from Statistics Canada, Bank of Canada, and industry surveys.",
   "direction_summary": "4/4 indicators trending up"
 }

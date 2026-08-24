@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-24 18:58",
-  "updated_iso": "2026-08-24T18:58:45+00:00",
-  "build_version": "1787597925",
+  "updated_at": "2026-08-24 19:29",
+  "updated_iso": "2026-08-24T19:29:56+00:00",
+  "build_version": "1787599796",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 622, HWY 11, HWY 6",
+    "status_line": "HWY 587, QEW, HWY 622, HWY 11",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at NORTHSHORE BLVD, Burlington. 1 right\u2026",
+        "road": "HWY 587",
+        "what": "Disabled Vehicle on HWY 587 Northbound  between PASS LAKE EAST RD and SARE RD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 622",
-        "what": "Highway Maintenance on HWY 622 Southbound  at PIKE RD (W), Ignace. Lane and\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at NORTHSHORE BLVD, Burlington. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 MDT"
+      "captured_at": "13:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT"
+      "captured_at": "12:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 CDT"
+      "captured_at": "14:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     }
   ],
   "market": [
@@ -369,8 +369,8 @@
     },
     {
       "name": "Fuel cost per 1,000 km",
-      "note": "At 233.9\u00a2/L and 35 L/100km",
-      "value": "$819",
+      "note": "At 234.4\u00a2/L and 35 L/100km",
+      "value": "$820",
       "value_class": "flat",
       "source": "NRCan weekly diesel survey",
       "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
@@ -378,7 +378,7 @@
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "30.4\u00a2/L",
+      "value": "30.8\u00a2/L",
       "value_class": "flat",
       "source": "Industry surveys",
       "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
