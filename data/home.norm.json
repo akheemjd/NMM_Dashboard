@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-23 23:52",
-  "updated_iso": "2026-08-23T23:52:29+00:00",
-  "build_version": "1787529149",
+  "updated_at": "2026-08-24 00:23",
+  "updated_iso": "2026-08-24T00:23:38+00:00",
+  "build_version": "1787531018",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 89, HWY 6, HWY 61",
+    "status_line": "HWY 17, HWY 404, HWY 401, HWY 89",
     "incidents": [
       {
-        "road": "HWY 89",
-        "what": "Collision on HWY 89 Both Directions  between 5th Line / County Road 12 and 4th\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Eastbound  at EARNGEY LK ROADSIDE REST STOP (S), Vermillion\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 6",
-        "what": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola,\u2026",
+        "road": "HWY 404",
+        "what": "Disabled Vehicle on HWY 404 Northbound RAMP at MULOCK DRIVE, Newmarket. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "3 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT"
+      "captured_at": "17:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:58 EDT"
+      "captured_at": "20:09 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "2 of 9 crossings slow",
-      "value": "2/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
