@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-292681",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound TRANSFER at 401 Express to Collector, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.640511,
+      "lng": -79.661922,
+      "start": 1787610720,
+      "end": null,
+      "updated": 1787610720
+    },
+    {
+      "id": "ON-292675",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 417 Eastbound  at PARKDALE AVE (IC 122), Ottawa. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 45.397,
+      "lng": -75.72716,
+      "start": 1787610000,
+      "end": null,
+      "updated": 1787610000
+    },
+    {
+      "id": "ON-292674",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  between CR 2 (IC 461) / Toronto Rd, Port Hope and Ontario St (Cobourg), Cobourg. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.96579,
+      "lng": -78.33115,
+      "start": 1787609760,
+      "end": null,
+      "updated": 1787609760
+    },
+    {
       "id": "ON-292669",
       "province": "ON",
       "highway": "HWY 17",
@@ -97,22 +145,6 @@
       "updated": 1787606220
     },
     {
-      "id": "ON-292646",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Collision on HWY 17 Westbound  between FAIRBANKS LAKE RD (N) DEN/LOU RD (S) and FEN RD(S), Whitefish. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 46.3721956,
-      "lng": -81.3704519,
-      "start": 1787604780,
-      "end": null,
-      "updated": 1787604780
-    },
-    {
       "id": "drivebc.ca/RIDE-101624",
       "province": "BC",
       "highway": {
@@ -164,22 +196,6 @@
       "start": 1787602920,
       "end": null,
       "updated": 1787602920
-    },
-    {
-      "id": "ON-292624",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound RAMP at 407, Vaughan. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.78445897,
-      "lng": -79.54022122,
-      "start": 1787602500,
-      "end": null,
-      "updated": 1787602560
     },
     {
       "id": "ON-292625",
@@ -801,26 +817,10 @@
       "start": 1788141600,
       "end": 1788512400,
       "updated": 1787585820
-    },
-    {
-      "id": "ON-292504",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound  between QEW, Oakville and ERIN MILLS PKWY, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.490074,
-      "lng": -79.6733,
-      "start": 1788141600,
-      "end": 1788512400,
-      "updated": 1787585760
     }
   ],
   "total": 50,
-  "updated": "2026-08-24T22:05:46.878733+00:00",
+  "updated": "2026-08-24T22:36:00.830325+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
