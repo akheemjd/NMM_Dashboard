@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-25 21:52",
-  "updated_iso": "2026-08-25T21:52:18+00:00",
-  "build_version": "1787694738",
+  "updated_at": "2026-08-25 22:22",
+  "updated_iso": "2026-08-25T22:22:34+00:00",
+  "build_version": "1787696554",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "25 min"
+    "max_wait": "50 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -240,18 +240,18 @@
     "none": false,
     "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, QEW",
+    "status_line": "HWY 401, HWY 400",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at VICTORIA PARK AVE, Toronto. All lanes\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound RAMP at DIXON ROAD, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 1 centre lane\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound ON-RAMP at VICTORIA PARK AVE, Toronto. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "25 min",
+      "wait": "50 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 EDT"
+      "captured_at": "17:50 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "18:11 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:39 EDT"
+      "captured_at": "18:12 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT"
+      "captured_at": "15:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,17 +395,17 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Trucking Info",
-      "headline": "What the U.S.-Canada Trade War Means for Trucking",
-      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Canada retaliates against US tariffs as trucking braces for impact",
+      "url": "https://www.trucknews.com/transportation/canada-retaliates-against-us-tariffs-as-trucking-braces-for-impact/1003220498/",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
       "category": "regulations",
-      "source": "The Trucker",
-      "headline": "Quarterhill partners with PennDOT to support commercial vehicle monitoring tech infrastructure",
-      "url": "https://www.thetrucker.com/trucking-news/business/quarterhill-partners-with-penndot-to-support-commercial-vehicle-monitoring-tech-infrastructure",
+      "source": "Truck News",
+      "headline": "CBSA finds 385 kg of suspected cocaine in truck at Blue Water Bridge",
+      "url": "https://www.trucknews.com/security/cbsa-finds-385-kg-of-suspected-cocaine-in-truck-at-blue-water-bridge/1003220486/",
       "why": "Rules change compliance cost and driver hours."
     }
   ],
