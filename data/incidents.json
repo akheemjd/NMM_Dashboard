@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-293080",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 401 Westbound  between North AUGUSTA RD (IC 698) and STEWART BLVD (IC 696)/Leeds & Grenville CR 29 (Brockville), Brockville. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.61126,
+      "lng": -75.68513,
+      "start": 1787738400,
+      "end": 1787763600,
+      "updated": 1787673900
+    },
+    {
+      "id": "ON-293044",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 11 Southbound  at N JCT HWYS 17/11B(ALGONQUIN AV), North Bay. 1 lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 lane closed",
+      "lat": 46.329361,
+      "lng": -79.4661661,
+      "start": 1787668020,
+      "end": null,
+      "updated": 1787673540
+    },
+    {
       "id": "ON-293067",
       "province": "ON",
       "highway": "HWY 17",
@@ -17,6 +49,26 @@
       "updated": 1787672220
     },
     {
+      "id": "drivebc.ca/DBC-93840",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 16",
+        "from": "Gossen Creek St",
+        "direction": "BOTH"
+      },
+      "direction": "",
+      "description": "Highway 16 (Yellowhead Highway), in both directions. Bridge maintenance between Gossen Creek St and Kleanza Park Rd (15 km east of Terrace). Until Tue Aug 25 at 4:00 PM PDT. Single lane alternating traffic. Last updated Tue Aug 25 at 8:33 AM PDT. (DBC-93840)",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 54.597884,
+      "lng": -128.402521,
+      "start": "2026-07-30T10:12:35-07:00",
+      "end": "",
+      "updated": "2026-08-25T08:33:54-07:00"
+    },
+    {
       "id": "ON-293064",
       "province": "ON",
       "highway": "HWY 48",
@@ -31,27 +83,6 @@
       "start": 1788224400,
       "end": 1788429600,
       "updated": 1787671320
-    },
-    {
-      "id": "drivebc.ca/RIDE-101639",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Tannery Road",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident at Tannery Road, In Surrey and At Highway 17 and Tannery Road. Left lane blocked. Expect delays. Last update: August 25th, 2026 at 8:18am PDT. Next update: August 25th, 2026 at 9:00am PDT.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.19623774,
-      "lng": -122.89307046,
-      "start": "2026-08-25T07:53:58-07:00",
-      "end": "",
-      "updated": "2026-08-25T08:18:33-07:00"
     },
     {
       "id": "ON-293065",
@@ -136,22 +167,6 @@
       "start": 1787668500,
       "end": null,
       "updated": 1787668500
-    },
-    {
-      "id": "ON-293044",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at N JCT HWYS 17/11B(ALGONQUIN AV), North Bay. 1 lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane closed",
-      "lat": 46.329361,
-      "lng": -79.4661661,
-      "start": 1787668020,
-      "end": null,
-      "updated": 1787668020
     },
     {
       "id": "ON-293045",
@@ -248,22 +263,6 @@
       "start": 1788220800,
       "end": 1788512400,
       "updated": 1787666160
-    },
-    {
-      "id": "ON-293026",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 11 Both Directions  at Rabbit Lake, Hearst. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.739533693,
-      "lng": -84.300621565,
-      "start": 1787665860,
-      "end": null,
-      "updated": 1787665860
     },
     {
       "id": "ON-291891",
@@ -618,22 +617,6 @@
       "updated": 1787635920
     },
     {
-      "id": "ON-292748",
-      "province": "ON",
-      "highway": "HWY 6/21",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 6/21 Northbound  between Highway 6 / County Road 18 and Highway 6 / County Road 18, Springmount. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.5589,
-      "lng": -80.9909,
-      "start": 1787661000,
-      "end": 1787673600,
-      "updated": 1787635080
-    },
-    {
       "id": "ON-292747",
       "province": "ON",
       "highway": "HWY 11",
@@ -808,10 +791,26 @@
       "start": 1787742000,
       "end": 1787871600,
       "updated": 1787596560
+    },
+    {
+      "id": "ON-292627",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Collector between YONGE ST and LESLIE STREET, Toronto. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.753506,
+      "lng": -79.408325,
+      "start": 1787796000,
+      "end": 1787994000,
+      "updated": 1787595600
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T15:40:59.724062+00:00",
+  "updated": "2026-08-25T16:12:17.663258+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
