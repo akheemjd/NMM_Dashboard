@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-293221",
+      "id": "ON-293258",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 3 left lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "3 left lanes closed",
-      "lat": 43.75460869,
-      "lng": -79.53057719,
-      "start": 1787693100,
+      "lanes": "left lane closed",
+      "lat": 43.7857709,
+      "lng": -79.2342145,
+      "start": 1787699940,
       "end": null,
-      "updated": 1787697840
+      "updated": 1787699940
+    },
+    {
+      "id": "ON-293255",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at TRAFALGAR ROAD, Oakville. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.4613874,
+      "lng": -79.68390353,
+      "start": 1787699460,
+      "end": null,
+      "updated": 1787699460
+    },
+    {
+      "id": "ON-293256",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound HOV at TRAFALGAR ROAD, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.460979442,
+      "lng": -79.684342146,
+      "start": 1787699460,
+      "end": null,
+      "updated": 1787699460
     },
     {
       "id": "ON-293242",
@@ -177,22 +209,6 @@
       "updated": 1787687880
     },
     {
-      "id": "ON-293175",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Vehicle Fire on HWY 11 Southbound  at RIVERS RD, Callander, Powassan. 1 lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane and SOUTH shoulder closed",
-      "lat": 46.180482042,
-      "lng": -79.358904209,
-      "start": 1787687820,
-      "end": null,
-      "updated": 1787687820
-    },
-    {
       "id": "ON-293172",
       "province": "ON",
       "highway": "HWY 417",
@@ -239,27 +255,6 @@
       "start": 1787682540,
       "end": null,
       "updated": 1787682540
-    },
-    {
-      "id": "drivebc.ca/RIDE-101652",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Mission Mountain Road",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Rock scaling at Mission Mountain Road, Terzaghi Dam. Starting Tue Aug 4 until Wed Sep 30. From 7:00 AM to 5:00 PM PDT, weekdays. Single lane alternating traffic. Watch for traffic control. Last update: August 25th, 2026 at 11:23am PDT. Scaling above bridge deck. Expect minor delays of up to 20 minutes. Work will be intermittent.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.78687589,
-      "lng": -122.2225687,
-      "start": "2026-08-25T11:23:09-07:00",
-      "end": "",
-      "updated": "2026-08-25T11:23:09-07:00"
     },
     {
       "id": "ON-293163",
@@ -811,7 +806,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T22:53:44.912182+00:00",
+  "updated": "2026-08-25T23:24:00.486736+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

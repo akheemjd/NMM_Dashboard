@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 22:53",
-  "updated_iso": "2026-08-25T22:53:47+00:00",
-  "build_version": "1787698427",
+  "updated_at": "2026-08-25 23:24",
+  "updated_iso": "2026-08-25T23:24:03+00:00",
+  "build_version": "1787700243",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 400, QEW, HWY 17, HWY 11",
+    "status_line": "HWY 401, QEW",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 3 left lanes\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound ON-RAMP at BURLOAK DRIVE, Burlington.\u2026",
+        "what": "Collision on QEW Fort Erie bound  at TRAFALGAR ROAD, Oakville. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 PDT"
+      "captured_at": "16:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Canada retaliates against US tariffs as trucking braces for impact",
-      "url": "https://www.trucknews.com/transportation/canada-retaliates-against-us-tariffs-as-trucking-braces-for-impact/1003220498/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "Trucking Info",
+      "headline": "What the U.S.-Canada Trade War Means for Trucking",
+      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "regulations",
-      "source": "Truck News",
-      "headline": "CBSA finds 385 kg of suspected cocaine in truck at Blue Water Bridge",
-      "url": "https://www.trucknews.com/security/cbsa-finds-385-kg-of-suspected-cocaine-in-truck-at-blue-water-bridge/1003220486/",
-      "why": "Rules change compliance cost and driver hours."
+      "category": "equipment",
+      "source": "Trucking Info",
+      "headline": "Carrier Transicold Adds All-Electric TRU for Stationary Cold Storage",
+      "url": "https://www.truckinginfo.com/news/carrier-transicold-adds-all-electric-tru-for-stationary-cold-storage",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
