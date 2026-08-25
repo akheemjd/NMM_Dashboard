@@ -1,20 +1,25 @@
 {
   "incidents": [
     {
-      "id": "ON-292710",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BATHURST STREET, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/RIDE-101630",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 91",
+        "from": "Alex Fraser Bridge",
+        "direction": "S",
+        "state": "CLOSED"
+      },
+      "direction": "",
+      "description": "Police incident at Highway 91, In Delta and 1km North of Exit 8 to Nordel Way / Highway 1 & 17. Closed. Last update: August 24th, 2026 at 5:53pm PDT. Next update: August 24th, 2026 at 6:45pm PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.73625682,
-      "lng": -79.43391576,
-      "start": 1787617560,
-      "end": null,
-      "updated": 1787617560
+      "lanes": "",
+      "lat": 49.16075133,
+      "lng": -122.94329858,
+      "start": "2026-08-24T17:53:53-07:00",
+      "end": "",
+      "updated": "2026-08-24T17:53:53-07:00"
     },
     {
       "id": "ON-291891",
@@ -816,7 +821,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T00:38:06.595898+00:00",
+  "updated": "2026-08-25T01:09:20.758828+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
