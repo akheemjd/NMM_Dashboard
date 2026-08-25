@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-25 14:07",
-  "updated_iso": "2026-08-25T14:07:17+00:00",
-  "build_version": "1787666837",
+  "updated_at": "2026-08-25 14:38",
+  "updated_iso": "2026-08-25T14:38:33+00:00",
+  "build_version": "1787668713",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 11, QEW",
+    "status_line": "HWY 17, HWY 11, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at GOREVILLE RD SB EXIT 294, South\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Eastbound  at Hagar, Hagar. Lane and EAST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 11",
-        "what": "Collision on HWY 11 Both Directions  at Rabbit Lake, Hearst. All lanes closed.",
+        "what": "Highway Maintenance on HWY 11 Southbound  at N JCT HWYS 17/11B(ALGONQUIN AV),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "10:07 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "10:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:29 EDT"
+      "captured_at": "10:03 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 MDT"
+      "captured_at": "08:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "10:15 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "Truck News",
+      "headline": "DP World expands integrated logistics services across Canada",
+      "url": "https://www.trucknews.com/supply-chain/dp-world-expands-integrated-logistics-services-across-canada/1003220470/",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "equipment",
       "source": "Truck News",
       "headline": "Truckstop Financial processes $3 billion in first year",
       "url": "https://www.trucknews.com/business-management/truckstop-financial-processes-3-billion-in-first-year/1003220459/",
       "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Trump floats renaming Lake Ontario as \u2018Lake America\u2019 as trade war with Canada escalates",
-      "url": "https://www.thetrucker.com/trucking-news/business/trump-floats-renaming-lake-ontario-as-lake-america-as-trade-war-with-canada-escalates",
-      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
