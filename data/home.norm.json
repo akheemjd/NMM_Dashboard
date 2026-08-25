@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 22:22",
-  "updated_iso": "2026-08-25T22:22:34+00:00",
-  "build_version": "1787696554",
+  "updated_at": "2026-08-25 22:53",
+  "updated_iso": "2026-08-25T22:53:47+00:00",
+  "build_version": "1787698427",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "50 min"
+    "max_wait": "70 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400",
+    "status_line": "HWY 400, QEW, HWY 17, HWY 11",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound RAMP at DIXON ROAD, Toronto. Right lane\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 3 left lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at VICTORIA PARK AVE, Toronto. All lanes\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound ON-RAMP at BURLOAK DRIVE, Burlington.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "50 min",
+      "wait": "70 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "17:50 EDT"
+      "captured_at": "18:39 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:11 EDT"
+      "captured_at": "18:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "18:15 EDT"
     }
   ],
   "market": [
