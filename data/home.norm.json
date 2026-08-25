@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 16:12",
-  "updated_iso": "2026-08-25T16:12:23+00:00",
-  "build_version": "1787674343",
+  "updated_at": "2026-08-25 16:43",
+  "updated_iso": "2026-08-25T16:43:39+00:00",
+  "build_version": "1787676219",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "35 min"
+    "max_wait": "50 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 401, HWY 621, HWY 11",
+    "status_line": "HWY 11, HWY 17, HWY 144",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Westbound  at NEYS PROV PARK ENT (S) - COLDWELL\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Southbound  at BIDWELL RD(E), Marten River. Lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound TRANSFER at Warden Express to Collector,\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Eastbound  at MAPLEWARD ROAD, Thunder Bay. Lane and EAST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "35 min",
+      "wait": "50 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:06 EDT"
+      "captured_at": "12:13 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "12:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 EDT"
+      "captured_at": "12:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 MDT"
+      "captured_at": "10:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 PDT"
+      "captured_at": "09:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "12:15 EDT"
     }
   ],
   "market": [
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Range Zero Emissions expands with acquisitions, Hyundai partnership",
+      "url": "https://www.trucknews.com/sustainability/range-zero-emissions-expands-with-acquisitions-hyundai-partnership/1003220474/",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "markets",
       "source": "Truck News",
       "headline": "DP World expands integrated logistics services across Canada",
       "url": "https://www.trucknews.com/supply-chain/dp-world-expands-integrated-logistics-services-across-canada/1003220470/",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Truckstop Financial processes $3 billion in first year",
-      "url": "https://www.trucknews.com/business-management/truckstop-financial-processes-3-billion-in-first-year/1003220459/",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
