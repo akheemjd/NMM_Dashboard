@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 13:04",
-  "updated_iso": "2026-08-25T13:04:45+00:00",
-  "build_version": "1787663085",
+  "updated_at": "2026-08-25 13:36",
+  "updated_iso": "2026-08-25T13:36:01+00:00",
+  "build_version": "1787664961",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_name": "Queenston-Lewiston Bridge",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 400, HWY 622, HWY 6",
+    "status_line": "QEW, HWY 11, HWY 401",
     "incidents": [
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Collision on HWY 403 HAMILTON Eastbound  at MAIN STREET WEST, Hamilton. Left\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at BOWEN ROAD, Fort Erie. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Highway Maintenance on HWY 400 Northbound ON-RAMP at KING ROAD, King. All lanes\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Fort Erie bound  at NETHERBY ROAD, Fort Erie. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 MDT"
+      "captured_at": "07:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 CDT"
+      "captured_at": "08:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -421,57 +421,57 @@
   "sponsor_market": null,
   "sponsor_news": null,
   "eia": {
-    "us_national_usd_gal": "5.454",
-    "us_national_cpl": "199.4",
-    "nadi": "216.9",
-    "ca_us_gap": "35.0",
+    "us_national_usd_gal": "5.652",
+    "us_national_cpl": "206.7",
+    "nadi": "220.5",
+    "ca_us_gap": "27.7",
     "ca_higher": true,
     "gap_word": "Canada higher",
-    "date": "2026-08-17",
+    "date": "2026-08-24",
     "padds_usd_gal": {
-      "east_coast": 5.34,
-      "midwest": 5.435,
-      "gulf_coast": 5.237,
-      "rocky_mountain": 5.427,
-      "west_coast": 6.203
+      "east_coast": 5.498,
+      "midwest": 5.636,
+      "gulf_coast": 5.481,
+      "rocky_mountain": 5.537,
+      "west_coast": 6.407
     },
     "padds_cpl": {
-      "east_coast": 195.3,
-      "midwest": 198.7,
-      "gulf_coast": 191.5,
-      "rocky_mountain": 198.4,
-      "west_coast": 226.8
+      "east_coast": 201.0,
+      "midwest": 206.1,
+      "gulf_coast": 200.4,
+      "rocky_mountain": 202.5,
+      "west_coast": 234.3
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
-        "usd_gal": "5.340",
-        "cpl": "195.3"
+        "usd_gal": "5.498",
+        "cpl": "201.0"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
-        "usd_gal": "5.435",
-        "cpl": "198.7"
+        "usd_gal": "5.636",
+        "cpl": "206.1"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
-        "usd_gal": "5.237",
-        "cpl": "191.5"
+        "usd_gal": "5.481",
+        "cpl": "200.4"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
-        "usd_gal": "5.427",
-        "cpl": "198.4"
+        "usd_gal": "5.537",
+        "cpl": "202.5"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
-        "usd_gal": "6.203",
-        "cpl": "226.8"
+        "usd_gal": "6.407",
+        "cpl": "234.3"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
