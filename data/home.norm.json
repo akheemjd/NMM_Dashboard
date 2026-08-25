@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-25 10:59",
-  "updated_iso": "2026-08-25T10:59:46+00:00",
-  "build_version": "1787655586",
+  "updated_at": "2026-08-25 11:31",
+  "updated_iso": "2026-08-25T11:31:02+00:00",
+  "build_version": "1787657462",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "17 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 400, HWY 401",
+    "status_line": "HWY 401, HWY 427, HWY 400",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Northbound COLLECTOR at DUNDAS STREET, Toronto. 2\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at MAJOR MACKENZIE DRIVE, Vaughan. Left lane\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "17 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 EDT"
+      "captured_at": "07:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,17 +317,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 MDT"
+      "captured_at": "05:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT"
+      "captured_at": "04:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 CDT"
+      "captured_at": "06:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
