@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-293154",
+      "id": "ON-293162",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at PORT UNION ROAD, Toronto. Right lane and right shoulder closed.",
+      "description": "Collision on HWY 401 Westbound RAMP at HWY 409, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.79772524,
-      "lng": -79.14469152,
-      "start": 1787683440,
+      "lat": 43.70704774,
+      "lng": -79.55663024,
+      "start": 1787684580,
       "end": null,
-      "updated": 1787683440
+      "updated": 1787684580
+    },
+    {
+      "id": "ON-293160",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at WESTON ROAD, Toronto. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.712116,
+      "lng": -79.5383189,
+      "start": 1787684520,
+      "end": null,
+      "updated": 1787684520
     },
     {
       "id": "ON-293148",
@@ -33,35 +49,19 @@
       "updated": 1787682540
     },
     {
-      "id": "ON-293139",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.5242815,
-      "lng": -79.64777288,
-      "start": 1787681400,
-      "end": null,
-      "updated": 1787682360
-    },
-    {
-      "id": "ON-293141",
+      "id": "ON-293163",
       "province": "ON",
       "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound ON-RAMP at INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound  between DUNLOP STREET / SIMCOE ROAD 90 and DUNLOP STREET / SIMCOE ROAD 90, Barrie. 2 Right Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.285004,
-      "lng": -79.679513,
-      "start": 1787681760,
-      "end": null,
+      "lanes": "2 Right Lane(s)",
+      "lat": 44.380066,
+      "lng": -79.7109,
+      "start": 1787709600,
+      "end": 1788080400,
       "updated": 1787681760
     },
     {
@@ -85,22 +85,6 @@
       "updated": "2026-08-25T11:12:19-07:00"
     },
     {
-      "id": "ON-293119",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound COLLECTOR at BURNHAMTHORPE ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.64565681,
-      "lng": -79.5629123,
-      "start": 1787680860,
-      "end": null,
-      "updated": 1787680860
-    },
-    {
       "id": "ON-293029",
       "province": "ON",
       "highway": "HWY 11",
@@ -117,20 +101,20 @@
       "updated": 1787680200
     },
     {
-      "id": "ON-293114",
+      "id": "ON-293161",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Emergency Roadwork on HWY 400 Northbound ON-RAMP at LLOYDTOWN-AURORA RD, Kettleby. All lanes closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Construction on QEW Fort Erie Bound  between NORTHSHORE BLVD and BURLINGTON SKYWAY, Burlington. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.001378,
-      "lng": -79.586188,
-      "start": 1787679180,
-      "end": null,
-      "updated": 1787679180
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.315086,
+      "lng": -79.80735,
+      "start": 1787965200,
+      "end": 1788517800,
+      "updated": 1787680140
     },
     {
       "id": "ON-293113",
@@ -291,22 +275,6 @@
       "start": 1788400800,
       "end": 1789552800,
       "updated": 1787674440
-    },
-    {
-      "id": "ON-293081",
-      "province": "ON",
-      "highway": "HWY 144",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 144 Northbound  at DUKE LAKE RD-ARDEN TWP, Gogama. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 47.395162738,
-      "lng": -81.847487648,
-      "start": 1787674260,
-      "end": null,
-      "updated": 1787674260
     },
     {
       "id": "ON-293080",
@@ -685,6 +653,22 @@
       "updated": 1787662320
     },
     {
+      "id": "ON-293155",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Express between WHITES ROAD and BROCK ROAD, Pickering. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.816593,
+      "lng": -79.11463,
+      "start": 1787965200,
+      "end": 1788170400,
+      "updated": 1787662200
+    },
+    {
       "id": "ON-292965",
       "province": "ON",
       "highway": "HWY 622",
@@ -811,10 +795,26 @@
       "start": 1787875200,
       "end": 1787994000,
       "updated": 1787646240
+    },
+    {
+      "id": "ON-293018",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound Collector between MORNINGSIDE AVE and NEILSON ROAD, Toronto. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.796284,
+      "lng": -79.1969,
+      "start": 1788310800,
+      "end": 1788429600,
+      "updated": 1787636160
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T18:47:40.788290+00:00",
+  "updated": "2026-08-25T19:18:54.741709+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

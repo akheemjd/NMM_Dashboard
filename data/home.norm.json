@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-25 18:47",
-  "updated_iso": "2026-08-25T18:47:43+00:00",
-  "build_version": "1787683663",
+  "updated_at": "2026-08-25 19:18",
+  "updated_iso": "2026-08-25T19:18:57+00:00",
+  "build_version": "1787685537",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "25 min"
+    "max_wait": "9 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 15,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 17, HWY 400, QEW",
+    "status_line": "HWY 401, HWY 17, HWY 63",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at PORT UNION ROAD, Toronto.\u2026",
+        "what": "Collision on HWY 401 Westbound RAMP at HWY 409, Toronto. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Both Directions  between HWY 61 - HARBOUR EXPRESSWAY and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at WESTON ROAD, Toronto. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "9 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 PDT"
+      "captured_at": "12:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -396,17 +396,17 @@
   "news": [
     {
       "category": "markets",
-      "source": "The Trucker",
-      "headline": "Trump floats renaming Lake Ontario as \u2018Lake America\u2019 as trade war with Canada escalates",
-      "url": "https://www.thetrucker.com/trucking-news/business/trump-floats-renaming-lake-ontario-as-lake-america-as-trade-war-with-canada-escalates",
-      "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "markets",
       "source": "Trucking Info",
       "headline": "What the U.S.-Canada Trade War Means for Trucking",
       "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
       "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
+      "category": "safety",
+      "source": "The Trucker",
+      "headline": "Kaleb Rains earns 2026 CVSA NAIC grand champion award",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/kaleb-rains-earns-2026-cvsa-naic-grand-champion-award",
+      "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
   "theft_home_json": "[]",
