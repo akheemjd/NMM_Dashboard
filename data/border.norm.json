@@ -1,24 +1,24 @@
 {
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "25 min"
   },
   "border_rows": [
     {
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -34,11 +34,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -48,7 +48,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -78,7 +78,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -106,11 +106,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -126,11 +126,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -140,7 +140,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT"
+      "captured_at": "17:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -170,7 +170,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -193,8 +193,8 @@
       "captured_at": "16:15 EDT"
     }
   ],
-  "updated_at": "2026-08-25 20:51",
-  "updated_iso": "2026-08-25T20:51:45+00:00",
-  "build_version": "1787691105",
-  "captured_at": "2026-08-25 20:51"
+  "updated_at": "2026-08-25 21:22",
+  "updated_iso": "2026-08-25T21:22:00+00:00",
+  "build_version": "1787692920",
+  "captured_at": "2026-08-25 21:22"
 }
