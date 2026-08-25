@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 12:33",
-  "updated_iso": "2026-08-25T12:33:31+00:00",
-  "build_version": "1787661211",
+  "updated_at": "2026-08-25 13:04",
+  "updated_iso": "2026-08-25T13:04:45+00:00",
+  "build_version": "1787663085",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "6 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 622, HWY 6",
+    "status_line": "HWY 403 , HWY 400, HWY 622, HWY 6",
     "incidents": [
       {
-        "road": "HWY 622",
-        "what": "Highway Maintenance on HWY 622 Southbound  at WESTHAWK RD (E), Ignace. Lane and\u2026",
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Eastbound  at MAIN STREET WEST, Hamilton. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 6",
-        "what": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola,\u2026",
+        "road": "HWY 400",
+        "what": "Highway Maintenance on HWY 400 Northbound ON-RAMP at KING ROAD, King. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 EDT"
+      "captured_at": "08:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "08:29 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 PDT"
+      "captured_at": "05:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Trump floats renaming Lake Ontario as \u2018Lake America\u2019 as trade war with Canada escalates",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-floats-renaming-lake-ontario-as-lake-america-as-trade-war-with-canada-escalates",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "industry",
       "source": "Truck News",
       "headline": "DHL expands data center logistics network across US, Canada",
       "url": "https://www.trucknews.com/technology/dhl-expands-data-center-logistics-network-across-us-canada/1003220444/",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "drivers",
-      "source": "Truck News",
-      "headline": "THRC, CIFFA to lead new national transportation workforce alliance",
-      "url": "https://www.trucknews.com/transportation/thrc-ciffa-to-lead-new-national-transportation-workforce-alliance/1003220431/",
-      "why": "Driver supply and pay shape capacity and rates."
     }
   ],
   "theft_home_json": "[]",
