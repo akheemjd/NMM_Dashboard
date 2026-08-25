@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-293212",
+      "id": "ON-293224",
       "province": "ON",
-      "highway": "HWY 427",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound ON-RAMP at VICTORIA PARK AVE, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.768699,
+      "lng": -79.319414,
+      "start": 1787693820,
+      "end": null,
+      "updated": 1787693820
+    },
+    {
+      "id": "ON-293221",
+      "province": "ON",
+      "highway": "HWY 400",
       "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound RAMP at HWY 7, Vaughan. 2 left lanes closed.",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 1 centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.767591894,
-      "lng": -79.633079767,
-      "start": 1787692380,
+      "lanes": "1 centre lane closed",
+      "lat": 43.75460869,
+      "lng": -79.53057719,
+      "start": 1787693100,
       "end": null,
-      "updated": 1787692380
+      "updated": 1787693100
+    },
+    {
+      "id": "ON-293218",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.76855405,
+      "lng": -79.31985853,
+      "start": 1787692860,
+      "end": null,
+      "updated": 1787692980
     },
     {
       "id": "ON-293205",
@@ -324,22 +356,6 @@
       "start": 1787799600,
       "end": 1787907600,
       "updated": 1787675100
-    },
-    {
-      "id": "ON-293086",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at SEC HWY 535-HAGAR, Hagar. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 46.4548863,
-      "lng": -80.4163051,
-      "start": 1787674800,
-      "end": null,
-      "updated": 1787674800
     },
     {
       "id": "ON-293088",
@@ -792,26 +808,10 @@
       "start": 1788138000,
       "end": 1788512400,
       "updated": 1787656800
-    },
-    {
-      "id": "ON-293005",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 401 Eastbound Express between SECOND LINE ROAD and HWY 403, Mississauga. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.617725,
-      "lng": -79.71519,
-      "start": 1788134400,
-      "end": 1788512400,
-      "updated": 1787656260
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T21:21:57.246079+00:00",
+  "updated": "2026-08-25T21:52:15.122551+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
