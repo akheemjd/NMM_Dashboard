@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-25 08:54",
-  "updated_iso": "2026-08-25T08:54:39+00:00",
-  "build_version": "1787648079",
+  "updated_at": "2026-08-25 09:25",
+  "updated_iso": "2026-08-25T09:25:55+00:00",
+  "build_version": "1787649955",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "10 min"
+    "max_wait": "23 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 406, HWY 17, HWY 6",
+    "status_line": "HWY 406, HWY 17, HWY 6",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Other on HWY 403 MISSISSAUGA Westbound  at ERIN MILLS PKWY, Mississauga. Left\u2026",
+        "road": "HWY 406",
+        "what": "Emergency Roadwork on HWY 406 Southbound  at WESTCHESTER AVE, St. Catharines.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 406",
-        "what": "Emergency Roadwork on HWY 406 Southbound  at WESTCHESTER AVE, St. Catharines.\u2026",
+        "road": "HWY 17",
+        "what": "Disabled Vehicle on HWY 17 Eastbound  at SAND LAKE RD (S) - DEWAN TWP, Ignace.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "23 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 EDT"
+      "captured_at": "05:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 MDT"
+      "captured_at": "03:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:40 PDT"
+      "captured_at": "02:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 CDT"
+      "captured_at": "04:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

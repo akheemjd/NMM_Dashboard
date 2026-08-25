@@ -70,22 +70,6 @@
       "updated": "2026-08-24T20:03:12-07:00"
     },
     {
-      "id": "ON-292725",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Other on HWY 403 MISSISSAUGA Westbound  at ERIN MILLS PKWY, Mississauga. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.55395876,
-      "lng": -79.69708938,
-      "start": 1787622180,
-      "end": null,
-      "updated": 1787622180
-    },
-    {
       "id": "ON-292720",
       "province": "ON",
       "highway": "HWY 406",
@@ -555,22 +539,6 @@
       "updated": 1787589780
     },
     {
-      "id": "ON-292566",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound  between CANAL RD. and CANAL RD., Bradford. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.05241,
-      "lng": -79.60943,
-      "start": 1787616000,
-      "end": 1787648400,
-      "updated": 1787589000
-    },
-    {
       "id": "ON-292519",
       "province": "ON",
       "highway": "HWY 102",
@@ -818,10 +786,42 @@
       "start": 1787655600,
       "end": 1787698800,
       "updated": 1787583840
+    },
+    {
+      "id": "ON-292512",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Continuous Construction on QEW Toronto bound  between 4TH LINE and TRAFALGAR ROAD, Oakville. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.43862,
+      "lng": -79.70898,
+      "start": 1787878800,
+      "end": 1787907600,
+      "updated": 1787583600
+    },
+    {
+      "id": "ON-292471",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between WILTON RD (IC 599)/CR 6 and WILTON RD (IC 599)/CR 6, Odessa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.28253,
+      "lng": -76.71596,
+      "start": 1787716740,
+      "end": 1787734800,
+      "updated": 1787579940
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T08:54:34.241622+00:00",
+  "updated": "2026-08-25T09:25:49.662270+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
