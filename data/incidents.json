@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-292746",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at HWY 404, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.76764399,
+      "lng": -79.33825128,
+      "start": 1787633880,
+      "end": null,
+      "updated": 1787633880
+    },
+    {
+      "id": "ON-292747",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Continuous Maintenance on HWY 11 Southbound  between MICROWAVE TOWER RD and COMPRESSOR STA RD, Calstock. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 49.75669,
+      "lng": -84.95635,
+      "start": 1787745600,
+      "end": 1787868000,
+      "updated": 1787633580
+    },
+    {
+      "id": "ON-292744",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MORNINGSIDE AVE, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.7963749,
+      "lng": -79.1968699,
+      "start": 1787632980,
+      "end": null,
+      "updated": 1787632980
+    },
+    {
       "id": "ON-292743",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +79,6 @@
       "start": 1787445420,
       "end": null,
       "updated": 1787631720
-    },
-    {
-      "id": "ON-292736",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Vehicle Fire on HWY 427 Northbound EXPRESS at RATHBURN ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.654395,
-      "lng": -79.5674374,
-      "start": 1787629740,
-      "end": null,
-      "updated": 1787631540
     },
     {
       "id": "ON-292741",
@@ -86,38 +118,6 @@
       "updated": "2026-08-24T20:03:12-07:00"
     },
     {
-      "id": "ON-292732",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 401 Westbound COLLECTOR RAMP at HWY 403, Mississauga. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.64017623,
-      "lng": -79.65606343,
-      "start": 1787625840,
-      "end": null,
-      "updated": 1787625840
-    },
-    {
-      "id": "ON-292727",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Both shoulders and 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "both shoulders and 2 right lanes closed",
-      "lat": 43.76633361,
-      "lng": -79.36293439,
-      "start": 1787622480,
-      "end": null,
-      "updated": 1787623740
-    },
-    {
       "id": "ON-292725",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -148,22 +148,6 @@
       "start": 1787621220,
       "end": null,
       "updated": 1787621220
-    },
-    {
-      "id": "ON-292716",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.76633361,
-      "lng": -79.36293439,
-      "start": 1787620140,
-      "end": null,
-      "updated": 1787620140
     },
     {
       "id": "ON-292715",
@@ -818,10 +802,26 @@
       "start": 1788141600,
       "end": 1788512400,
       "updated": 1787585940
+    },
+    {
+      "id": "ON-292509",
+      "province": "ON",
+      "highway": "HWY 409",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 409 Eastbound  between HWY 427 and 401, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.696983,
+      "lng": -79.60716,
+      "start": 1788141600,
+      "end": 1788512400,
+      "updated": 1787585880
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T04:45:25.682756+00:00",
+  "updated": "2026-08-25T05:16:42.060176+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
