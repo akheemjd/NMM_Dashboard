@@ -1,6 +1,70 @@
 {
   "incidents": [
     {
+      "id": "ON-291891",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola, Espanola. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 46.268502,
+      "lng": -81.77425,
+      "start": 1787445420,
+      "end": null,
+      "updated": 1787677380
+    },
+    {
+      "id": "ON-293102",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 HAMILTON Eastbound  at Johnson Road, Brantford. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.167822222,
+      "lng": -80.19035,
+      "start": 1787676960,
+      "end": null,
+      "updated": 1787676960
+    },
+    {
+      "id": "ON-293103",
+      "province": "ON",
+      "highway": "HWY 638",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 638 Both Directions  at MCCARROLL LK RD-MACDONALD TWP (S), Echo Bay. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 46.4691613,
+      "lng": -83.9570992,
+      "start": 1787676960,
+      "end": null,
+      "updated": 1787676960
+    },
+    {
+      "id": "ON-293091",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17 Both Directions  at MAPLEWARD ROAD, Thunder Bay. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 48.399957502,
+      "lng": -89.360938846,
+      "start": 1787675820,
+      "end": null,
+      "updated": 1787676300
+    },
+    {
       "id": "ON-293094",
       "province": "ON",
       "highway": "HWY 11",
@@ -31,22 +95,6 @@
       "start": 1787706000,
       "end": 1787911200,
       "updated": 1787675880
-    },
-    {
-      "id": "ON-293091",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 17 Eastbound  at MAPLEWARD ROAD, Thunder Bay. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 48.399957502,
-      "lng": -89.360938846,
-      "start": 1787675820,
-      "end": null,
-      "updated": 1787675820
     },
     {
       "id": "ON-293090",
@@ -159,22 +207,6 @@
       "start": 1787668020,
       "end": null,
       "updated": 1787673540
-    },
-    {
-      "id": "ON-293067",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at NEYS PROV PARK ENT (S) - COLDWELL TWP, Marathon. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 48.780396765,
-      "lng": -86.586896904,
-      "start": 1787672220,
-      "end": null,
-      "updated": 1787672220
     },
     {
       "id": "drivebc.ca/DBC-93840",
@@ -391,22 +423,6 @@
       "start": 1788220800,
       "end": 1788512400,
       "updated": 1787666160
-    },
-    {
-      "id": "ON-291891",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola, Espanola. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 46.268502,
-      "lng": -81.77425,
-      "start": 1787445420,
-      "end": null,
-      "updated": 1787665200
     },
     {
       "id": "ON-293020",
@@ -791,26 +807,10 @@
       "start": 1787785200,
       "end": 1787824800,
       "updated": 1787607180
-    },
-    {
-      "id": "ON-292656",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 401 Westbound  between MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault and MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.04695,
-      "lng": -74.90655,
-      "start": 1787745600,
-      "end": 1787947200,
-      "updated": 1787606220
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T16:43:33.862751+00:00",
+  "updated": "2026-08-25T17:14:49.987498+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

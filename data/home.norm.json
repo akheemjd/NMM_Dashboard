@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-25 16:43",
-  "updated_iso": "2026-08-25T16:43:39+00:00",
-  "build_version": "1787676219",
+  "updated_at": "2026-08-25 17:14",
+  "updated_iso": "2026-08-25T17:14:55+00:00",
+  "build_version": "1787678095",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "50 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 17, HWY 144",
+    "status_line": "HWY 403 , HWY 638, HWY 11, HWY 17",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Southbound  at BIDWELL RD(E), Marten River. Lane closed.",
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Eastbound  at Johnson Road, Brantford. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Eastbound  at MAPLEWARD ROAD, Thunder Bay. Lane and EAST\u2026",
+        "road": "HWY 638",
+        "what": "Collision on HWY 638 Both Directions  at MCCARROLL LK RD-MACDONALD TWP (S),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "50 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:13 EDT"
+      "captured_at": "12:50 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:03 EDT"
+      "captured_at": "12:39 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,17 +395,17 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Range Zero Emissions expands with acquisitions, Hyundai partnership",
-      "url": "https://www.trucknews.com/sustainability/range-zero-emissions-expands-with-acquisitions-hyundai-partnership/1003220474/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Trump floats renaming Lake Ontario as \u2018Lake America\u2019 as trade war with Canada escalates",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-floats-renaming-lake-ontario-as-lake-america-as-trade-war-with-canada-escalates",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
       "category": "markets",
-      "source": "Truck News",
-      "headline": "DP World expands integrated logistics services across Canada",
-      "url": "https://www.trucknews.com/supply-chain/dp-world-expands-integrated-logistics-services-across-canada/1003220470/",
+      "source": "Trucking Info",
+      "headline": "What the U.S.-Canada Trade War Means for Trucking",
+      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
       "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
