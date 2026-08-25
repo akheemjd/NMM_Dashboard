@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 13:36",
-  "updated_iso": "2026-08-25T13:36:01+00:00",
-  "build_version": "1787664961",
+  "updated_at": "2026-08-25 14:07",
+  "updated_iso": "2026-08-25T14:07:17+00:00",
+  "build_version": "1787666837",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Queenston-Lewiston Bridge",
+    "max_name": "Pacific Highway Crossing",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -240,18 +240,18 @@
     "none": false,
     "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 11, HWY 401",
+    "status_line": "HWY 11, QEW",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at BOWEN ROAD, Fort Erie. Left lane closed.",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Southbound  at GOREVILLE RD SB EXIT 294, South\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at NETHERBY ROAD, Fort Erie. Left lane closed.",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  at Rabbit Lake, Hearst. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "09:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "5 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "09:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 PDT"
+      "captured_at": "06:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Truckstop Financial processes $3 billion in first year",
+      "url": "https://www.trucknews.com/business-management/truckstop-financial-processes-3-billion-in-first-year/1003220459/",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "markets",
       "source": "The Trucker",
       "headline": "Trump floats renaming Lake Ontario as \u2018Lake America\u2019 as trade war with Canada escalates",
       "url": "https://www.thetrucker.com/trucking-news/business/trump-floats-renaming-lake-ontario-as-lake-america-as-trade-war-with-canada-escalates",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "industry",
-      "source": "Truck News",
-      "headline": "DHL expands data center logistics network across US, Canada",
-      "url": "https://www.trucknews.com/technology/dhl-expands-data-center-logistics-network-across-us-canada/1003220444/",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
@@ -475,11 +475,11 @@
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
-    "us_change_7d": "+0.0",
-    "us_change_7d_class": "flat",
+    "us_change_7d": "+6.9",
+    "us_change_7d_class": "up",
     "us_change_30d": "n/a",
-    "nadi_change_7d": "+0.0",
-    "nadi_change_7d_class": "flat",
+    "nadi_change_7d": "+6.4",
+    "nadi_change_7d_class": "up",
     "nadi_change_30d": "n/a"
   }
 }
