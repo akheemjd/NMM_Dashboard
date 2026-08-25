@@ -87,35 +87,35 @@
     ]
   },
   "fx": {
-    "usd_cad": "1.3842",
-    "direction": "weaker CAD",
-    "change": "+0.0082",
-    "usd_100": "138.42",
-    "usd_500": "692.10",
-    "usd_1000": "1,384.20",
-    "cad_1000": "722.44",
-    "band": "material",
-    "band_pct": "+0.60%",
-    "obs_date": "2026-08-24",
-    "avg_30d": "1.3956",
-    "vs_baseline": "-0.0114",
+    "usd_cad": "1.3839",
+    "direction": "stronger CAD",
+    "change": "-0.0003",
+    "usd_100": "138.39",
+    "usd_500": "691.95",
+    "usd_1000": "1,383.90",
+    "cad_1000": "722.60",
+    "band": "noise",
+    "band_pct": "-0.02%",
+    "obs_date": "2026-08-25",
+    "avg_30d": "1.3943",
+    "vs_baseline": "-0.0104",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "-0.0023",
-    "change_7d_pct": "-0.17%",
-    "change_30d": "-0.0241",
-    "change_30d_pct": "-1.71%",
-    "change_1y": "+0.0089",
-    "change_1y_pct": "+0.65%",
+    "change_7d": "-0.0050",
+    "change_7d_pct": "-0.36%",
+    "change_30d": "-0.0254",
+    "change_30d_pct": "-1.80%",
+    "change_1y": "+0.0088",
+    "change_1y_pct": "+0.64%",
     "range_pct": "45%"
   },
   "eia": {
     "us_national_usd_gal": "5.652",
-    "us_national_cpl": "206.7",
+    "us_national_cpl": "206.6",
     "nadi": "220.5",
-    "ca_us_gap": "27.7",
+    "ca_us_gap": "27.8",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-08-24",
@@ -128,10 +128,10 @@
     },
     "padds_cpl": {
       "east_coast": 201.0,
-      "midwest": 206.1,
+      "midwest": 206.0,
       "gulf_coast": 200.4,
-      "rocky_mountain": 202.5,
-      "west_coast": 234.3
+      "rocky_mountain": 202.4,
+      "west_coast": 234.2
     },
     "padds_list": [
       {
@@ -144,7 +144,7 @@
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "5.636",
-        "cpl": "206.1"
+        "cpl": "206.0"
       },
       {
         "key": "gulf_coast",
@@ -156,13 +156,13 @@
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "5.537",
-        "cpl": "202.5"
+        "cpl": "202.4"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "6.407",
-        "cpl": "234.3"
+        "cpl": "234.2"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
@@ -285,7 +285,7 @@
       "rowclass": "hi"
     }
   ],
-  "updated_at": "2026-08-25 19:49",
-  "updated_iso": "2026-08-25T19:49:14+00:00",
-  "build_version": "1787687354"
+  "updated_at": "2026-08-25 20:20",
+  "updated_iso": "2026-08-25T20:20:30+00:00",
+  "build_version": "1787689230"
 }

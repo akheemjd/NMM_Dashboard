@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-25 19:49",
-  "updated_iso": "2026-08-25T19:49:14+00:00",
-  "build_version": "1787687354",
+  "updated_at": "2026-08-25 20:20",
+  "updated_iso": "2026-08-25T20:20:30+00:00",
+  "build_version": "1787689230",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_wait": "7 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -212,46 +212,46 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.3842",
-    "direction": "weaker CAD",
-    "change": "+0.0082",
-    "usd_100": "138.42",
-    "usd_500": "692.10",
-    "usd_1000": "1,384.20",
-    "cad_1000": "722.44",
-    "band": "material",
-    "band_pct": "+0.60%",
-    "obs_date": "2026-08-24",
-    "avg_30d": "1.3956",
-    "vs_baseline": "-0.0114",
+    "usd_cad": "1.3839",
+    "direction": "stronger CAD",
+    "change": "-0.0003",
+    "usd_100": "138.39",
+    "usd_500": "691.95",
+    "usd_1000": "1,383.90",
+    "cad_1000": "722.60",
+    "band": "noise",
+    "band_pct": "-0.02%",
+    "obs_date": "2026-08-25",
+    "avg_30d": "1.3943",
+    "vs_baseline": "-0.0104",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "-0.0023",
-    "change_7d_pct": "-0.17%",
-    "change_30d": "-0.0241",
-    "change_30d_pct": "-1.71%",
-    "change_1y": "+0.0089",
-    "change_1y_pct": "+0.65%",
+    "change_7d": "-0.0050",
+    "change_7d_pct": "-0.36%",
+    "change_30d": "-0.0254",
+    "change_30d_pct": "-1.80%",
+    "change_1y": "+0.0088",
+    "change_1y_pct": "+0.64%",
     "range_pct": "45%"
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 17, HWY 403 , HWY 11",
+    "status_line": "HWY 401, HWY 17, QEW, HWY 11",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at ALLEN ROAD, Toronto. Right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 17",
-        "what": "Collision on HWY 17 Both Directions  between HWY 61 - HARBOUR EXPRESSWAY and\u2026",
+        "what": "Disabled Vehicle on HWY 17 Eastbound  at TREMBLAY RD (W), Wawa. Lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "13 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "3 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 EDT"
+      "captured_at": "16:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 PDT"
+      "captured_at": "13:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "2 of 9 crossings slow",
-      "value": "2/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -402,11 +402,11 @@
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "equipment",
+      "category": "regulations",
       "source": "The Trucker",
-      "headline": "Volvo Trucks releases new safety recommendations for pets traveling with truckers",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/volvo-trucks-releases-new-safety-recommendations-for-pets-traveling-with-truckers",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "Quarterhill partners with PennDOT to support commercial vehicle monitoring tech infrastructure",
+      "url": "https://www.thetrucker.com/trucking-news/business/quarterhill-partners-with-penndot-to-support-commercial-vehicle-monitoring-tech-infrastructure",
+      "why": "Rules change compliance cost and driver hours."
     }
   ],
   "theft_home_json": "[]",
@@ -422,9 +422,9 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "5.652",
-    "us_national_cpl": "206.7",
+    "us_national_cpl": "206.6",
     "nadi": "220.5",
-    "ca_us_gap": "27.7",
+    "ca_us_gap": "27.8",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-08-24",
@@ -437,10 +437,10 @@
     },
     "padds_cpl": {
       "east_coast": 201.0,
-      "midwest": 206.1,
+      "midwest": 206.0,
       "gulf_coast": 200.4,
-      "rocky_mountain": 202.5,
-      "west_coast": 234.3
+      "rocky_mountain": 202.4,
+      "west_coast": 234.2
     },
     "padds_list": [
       {
@@ -453,7 +453,7 @@
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "5.636",
-        "cpl": "206.1"
+        "cpl": "206.0"
       },
       {
         "key": "gulf_coast",
@@ -465,13 +465,13 @@
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "5.537",
-        "cpl": "202.5"
+        "cpl": "202.4"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "6.407",
-        "cpl": "234.3"
+        "cpl": "234.2"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
