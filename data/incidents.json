@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-292766",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 2/ KINGSTON RD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.79584653,
+      "lng": -79.14945704,
+      "start": 1787651460,
+      "end": null,
+      "updated": 1787651460
+    },
+    {
       "id": "ON-291891",
       "province": "ON",
       "highway": "HWY 6",
@@ -802,26 +818,10 @@
       "start": 1787878800,
       "end": 1787907600,
       "updated": 1787583600
-    },
-    {
-      "id": "ON-292471",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between WILTON RD (IC 599)/CR 6 and WILTON RD (IC 599)/CR 6, Odessa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.28253,
-      "lng": -76.71596,
-      "start": 1787716740,
-      "end": 1787734800,
-      "updated": 1787579940
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T09:25:49.662270+00:00",
+  "updated": "2026-08-25T09:57:05.743972+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
