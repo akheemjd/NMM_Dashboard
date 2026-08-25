@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 12:02",
-  "updated_iso": "2026-08-25T12:02:15+00:00",
-  "build_version": "1787659335",
+  "updated_at": "2026-08-25 12:33",
+  "updated_iso": "2026-08-25T12:33:31+00:00",
+  "build_version": "1787661211",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401, HWY 400, HWY 6",
+    "status_line": "HWY 622, HWY 6",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Northbound ON-RAMP at BLOOMINGTON ROAD, Aurora. All lanes\u2026",
+        "road": "HWY 622",
+        "what": "Highway Maintenance on HWY 622 Southbound  at WESTHAWK RD (E), Ignace. Lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound EXPRESS at YONGE ST, Toronto. 1 left lane closed.",
+        "road": "HWY 6",
+        "what": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,7 +277,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Peace Bridge",
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT"
+      "captured_at": "05:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     }
   ],
   "market": [
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Trucking Info",
-      "headline": "What the U.S.-Canada Trade War Means for Trucking",
-      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "industry",
+      "source": "Truck News",
+      "headline": "DHL expands data center logistics network across US, Canada",
+      "url": "https://www.trucknews.com/technology/dhl-expands-data-center-logistics-network-across-us-canada/1003220444/",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Ontario\u2019s premier: Canada should be ready to cut electricity, critical minerals as trade woes worsen",
-      "url": "https://www.thetrucker.com/trucking-news/business/ontarios-premier-canada-should-be-ready-to-cut-electricity-critical-minerals-as-trade-woes-worsen",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "drivers",
+      "source": "Truck News",
+      "headline": "THRC, CIFFA to lead new national transportation workforce alliance",
+      "url": "https://www.trucknews.com/transportation/thrc-ciffa-to-lead-new-national-transportation-workforce-alliance/1003220431/",
+      "why": "Driver supply and pay shape capacity and rates."
     }
   ],
   "theft_home_json": "[]",
