@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-292735",
+      "id": "ON-292741",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at NEILSON ROAD, Toronto. Left shoulder and left lane closed.",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Collision on HWY 404 Southbound RAMP at 401, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.76759422,
+      "lng": -79.34109236,
+      "start": 1787631000,
+      "end": null,
+      "updated": 1787631000
+    },
+    {
+      "id": "ON-292736",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Vehicle Fire on HWY 427 Northbound EXPRESS at RATHBURN ROAD, Toronto. 2 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.79224382,
-      "lng": -79.21808313,
-      "start": 1787628300,
+      "lanes": "2 right lanes closed",
+      "lat": 43.654395,
+      "lng": -79.5674374,
+      "start": 1787629740,
       "end": null,
-      "updated": 1787628300
+      "updated": 1787629800
     },
     {
       "id": "drivebc.ca/DBC-94035",
@@ -81,22 +97,6 @@
       "lanes": "left shoulder and left lane closed",
       "lat": 43.55395876,
       "lng": -79.69708938,
-      "start": 1787622180,
-      "end": null,
-      "updated": 1787622180
-    },
-    {
-      "id": "ON-292726",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Other on HWY 403 MISSISSAUGA Westbound HOV at ERIN MILLS PKWY, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.55394462,
-      "lng": -79.69710724,
       "start": 1787622180,
       "end": null,
       "updated": 1787622180
@@ -821,7 +821,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T03:43:49.743550+00:00",
+  "updated": "2026-08-25T04:15:06.198517+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
