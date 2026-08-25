@@ -7,20 +7,20 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <title>Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile</title>
-<meta name="description" content="Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print Tue, 18 Aug 2026.">
+<meta name="description" content="Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print Tue, 25 Aug 2026.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Northern Mile Media">
 <meta property="og:title" content="Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile">
-<meta property="og:description" content="Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print Tue, 18 Aug 2026.">
+<meta property="og:description" content="Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print Tue, 25 Aug 2026.">
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-08-25T17:14:55+00:00">
+<meta name="build" content="2026-08-25T17:46:09+00:00">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/nm.css?v=1787678095">
+<link rel="stylesheet" href="/assets/nm.css?v=1787679969">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel cost calculator","item":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/"}]},{"@type":"WebApplication","name":"Truck Fuel Cost Calculator","url":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@id":"https://northernmilemedia.com/#org"},"description":"Calculates trip diesel cost from distance, fuel consumption, and current Canadian provincial diesel prices."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate truck fuel cost per kilometre?","acceptedAnswer":{"@type":"Answer","text":"Multiply your fuel consumption in litres per 100 kilometres by the diesel price per litre, then divide by 100. At 35 litres per 100 kilometres and diesel at 2.00 dollars per litre, that is 70 cents per kilometre."}},{"@type":"Question","name":"What fuel consumption should I use for a loaded tractor-trailer?","acceptedAnswer":{"@type":"Answer","text":"Use your own figure from your own fuel records. Consumption varies widely with load weight, terrain, season, speed, and equipment, so any single assumed number would be wrong for most operators. This calculator does not assume one."}}]}]}
 </script>
@@ -40,7 +40,7 @@
 <main class="wrap" id="main">
 
   <section class="hero">
-    <span class="eyebrow">Prices from NRCan survey print Tue, 18 Aug 2026</span>
+    <span class="eyebrow">Prices from NRCan survey print Tue, 25 Aug 2026</span>
     <h1>Truck fuel cost calculator</h1>
     <p class="stand">What a run costs in diesel, using this week's Canadian prices and your own consumption figure. Change any field and the result updates.</p>
   </section>
@@ -52,7 +52,7 @@
       <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
         <option value="234.4" data-name="National average">National average — 234.4¢/L</option>
-        <option value="209.2" data-name="Saskatchewan" data-code="SK">Saskatchewan — 209.2¢/L</option><option value="212.4" data-name="Alberta" data-code="AB">Alberta — 212.4¢/L</option><option value="217.2" data-name="Manitoba" data-code="MB">Manitoba — 217.2¢/L</option><option value="226.3" data-name="Ontario" data-code="ON">Ontario — 226.3¢/L</option><option value="242.6" data-name="Nova Scotia" data-code="NS">Nova Scotia — 242.6¢/L</option><option value="243.2" data-name="British Columbia" data-code="BC">British Columbia — 243.2¢/L</option><option value="243.7" data-name="New Brunswick" data-code="NB">New Brunswick — 243.7¢/L</option><option value="245.4" data-name="PEI" data-code="PE">PEI — 245.4¢/L</option><option value="249.9" data-name="Newfoundland" data-code="NL">Newfoundland — 249.9¢/L</option><option value="254.0" data-name="Quebec" data-code="QC">Quebec — 254.0¢/L</option>
+        <option value="209.1" data-name="Saskatchewan" data-code="SK">Saskatchewan — 209.1¢/L</option><option value="212.1" data-name="Alberta" data-code="AB">Alberta — 212.1¢/L</option><option value="217.4" data-name="Manitoba" data-code="MB">Manitoba — 217.4¢/L</option><option value="226.0" data-name="Ontario" data-code="ON">Ontario — 226.0¢/L</option><option value="243.0" data-name="British Columbia" data-code="BC">British Columbia — 243.0¢/L</option><option value="243.0" data-name="Nova Scotia" data-code="NS">Nova Scotia — 243.0¢/L</option><option value="244.0" data-name="New Brunswick" data-code="NB">New Brunswick — 244.0¢/L</option><option value="245.7" data-name="PEI" data-code="PE">PEI — 245.7¢/L</option><option value="249.9" data-name="Newfoundland" data-code="NL">Newfoundland — 249.9¢/L</option><option value="254.3" data-name="Quebec" data-code="QC">Quebec — 254.3¢/L</option>
         <option value="206.7" data-name="US national average" data-code="US">US national average — 206.7¢/L</option>
         <option value="201.0" data-name="East Coast (PADD 1)" data-code="east_coast">East Coast (PADD 1) — 201.0¢/L</option><option value="206.1" data-name="Midwest (PADD 2)" data-code="midwest">Midwest (PADD 2) — 206.1¢/L</option><option value="200.4" data-name="Gulf Coast (PADD 3)" data-code="gulf_coast">Gulf Coast (PADD 3) — 200.4¢/L</option><option value="202.5" data-name="Rocky Mountain (PADD 4)" data-code="rocky_mountain">Rocky Mountain (PADD 4) — 202.5¢/L</option><option value="234.3" data-name="West Coast (PADD 5)" data-code="west_coast">West Coast (PADD 5) — 234.3¢/L</option>
         <option value="custom" data-name="Custom">Enter my own price</option>
@@ -105,10 +105,10 @@
 <footer class="ft"><div class="wrap">
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
   <nav class="flinks" aria-label="Footer"><a href="/freight-barometer/">Barometer</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a></nav>
-  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-08-25 17:14 UTC</span></div>
+  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-08-25 17:46 UTC</span></div>
 </div></footer>
 
-<script src="/assets/nm.js?v=1787678095"></script>
+<script src="/assets/nm.js?v=1787679969"></script>
 <script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
 var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost"),origin=$("origin"),dest=$("dest");

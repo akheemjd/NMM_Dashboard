@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-293114",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Emergency Roadwork on HWY 400 Northbound ON-RAMP at LLOYDTOWN-AURORA RD, Kettleby. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.001378,
+      "lng": -79.586188,
+      "start": 1787679180,
+      "end": null,
+      "updated": 1787679180
+    },
+    {
+      "id": "ON-293113",
+      "province": "ON",
+      "highway": "HWY 63",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 63 Westbound  at BEHNKE RD-JOCKO TWP, Eldee. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 46.580323128,
+      "lng": -79.166770935,
+      "start": 1787678700,
+      "end": null,
+      "updated": 1787678700
+    },
+    {
       "id": "ON-291891",
       "province": "ON",
       "highway": "HWY 6",
@@ -28,22 +60,6 @@
       "lanes": "right lane closed",
       "lat": 43.167822222,
       "lng": -80.19035,
-      "start": 1787676960,
-      "end": null,
-      "updated": 1787676960
-    },
-    {
-      "id": "ON-293103",
-      "province": "ON",
-      "highway": "HWY 638",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 638 Both Directions  at MCCARROLL LK RD-MACDONALD TWP (S), Echo Bay. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 46.4691613,
-      "lng": -83.9570992,
       "start": 1787676960,
       "end": null,
       "updated": 1787676960
@@ -193,22 +209,6 @@
       "updated": 1787673900
     },
     {
-      "id": "ON-293044",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at N JCT HWYS 17/11B(ALGONQUIN AV), North Bay. 1 lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 lane closed",
-      "lat": 46.329361,
-      "lng": -79.4661661,
-      "start": 1787668020,
-      "end": null,
-      "updated": 1787673540
-    },
-    {
       "id": "drivebc.ca/DBC-93840",
       "province": "BC",
       "highway": {
@@ -259,22 +259,6 @@
       "start": 1788224400,
       "end": 1788429600,
       "updated": 1787671080
-    },
-    {
-      "id": "ON-293062",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Warden Express to Collector, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.7712509,
-      "lng": -79.29935802,
-      "start": 1787670600,
-      "end": null,
-      "updated": 1787670600
     },
     {
       "id": "drivebc.ca/DBC-94054",
@@ -807,10 +791,26 @@
       "start": 1787785200,
       "end": 1787824800,
       "updated": 1787607180
+    },
+    {
+      "id": "ON-292656",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Daily Maintenance on HWY 401 Westbound  between MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault and MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.04695,
+      "lng": -74.90655,
+      "start": 1787745600,
+      "end": 1787947200,
+      "updated": 1787606220
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T17:14:49.987498+00:00",
+  "updated": "2026-08-25T17:46:06.507782+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
