@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-292727",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Both shoulders and right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "both shoulders and right lane closed",
+      "lat": 43.76633361,
+      "lng": -79.36293439,
+      "start": 1787622480,
+      "end": null,
+      "updated": 1787622480
+    },
+    {
+      "id": "ON-292725",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Other on HWY 403 MISSISSAUGA Westbound  at ERIN MILLS PKWY, Mississauga. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.55395876,
+      "lng": -79.69708938,
+      "start": 1787622180,
+      "end": null,
+      "updated": 1787622180
+    },
+    {
+      "id": "ON-292726",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Other on HWY 403 MISSISSAUGA Westbound HOV at ERIN MILLS PKWY, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.55394462,
+      "lng": -79.69710724,
+      "start": 1787622180,
+      "end": null,
+      "updated": 1787622180
+    },
+    {
       "id": "ON-292720",
       "province": "ON",
       "highway": "HWY 406",
@@ -15,27 +63,6 @@
       "start": 1787621220,
       "end": null,
       "updated": 1787621220
-    },
-    {
-      "id": "drivebc.ca/RIDE-101632",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 7",
-        "from": "Lougheed Highway",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall at Highway 7, In Maple Ridge and 14m East of 280 Street. Right lane blocked. Expect minor delays. Last update: August 24th, 2026 at 6:20pm PDT. Next update: August 24th, 2026 at 7:00pm PDT.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.17406715,
-      "lng": -122.44410507,
-      "start": "2026-08-24T18:20:22-07:00",
-      "end": "",
-      "updated": "2026-08-24T18:20:22-07:00"
     },
     {
       "id": "ON-292716",
@@ -116,22 +143,6 @@
       "start": 1787785200,
       "end": 1787824800,
       "updated": 1787607180
-    },
-    {
-      "id": "ON-292657",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 11 Northbound  at BIDWELL RD(E), Marten River. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 46.668236481,
-      "lng": -79.729294363,
-      "start": 1787606520,
-      "end": null,
-      "updated": 1787606520
     },
     {
       "id": "ON-292656",
@@ -802,26 +813,10 @@
       "start": 1788141600,
       "end": 1788512400,
       "updated": 1787585820
-    },
-    {
-      "id": "ON-292504",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound  between QEW, Oakville and ERIN MILLS PKWY, Mississauga. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.490074,
-      "lng": -79.6733,
-      "start": 1788141600,
-      "end": 1788512400,
-      "updated": 1787585760
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T01:39:42.753213+00:00",
+  "updated": "2026-08-25T02:10:57.541642+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
