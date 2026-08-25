@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-24 23:36",
-  "updated_iso": "2026-08-24T23:36:38+00:00",
-  "build_version": "1787614598",
+  "updated_at": "2026-08-25 00:07",
+  "updated_iso": "2026-08-25T00:07:54+00:00",
+  "build_version": "1787616474",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 17, HWY 400",
+    "status_line": "HWY 401, HWY 11, HWY 17",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at EAST OF WINSTON CHURCHILL BLVD,\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BASKET WEAVE/JANE ST,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Disabled Vehicle on HWY 11 Northbound  at BIDWELL RD(E), Marten River. Lane and\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at EAST OF WINSTON CHURCHILL BLVD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 PDT"
+      "captured_at": "16:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
