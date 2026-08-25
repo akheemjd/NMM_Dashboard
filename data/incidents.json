@@ -1,36 +1,57 @@
 {
   "incidents": [
     {
-      "id": "ON-292731",
+      "id": "ON-292733",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at GUELPH LINE, Milton. Right lane and right shoulder closed.",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 427 Southbound  at HWY 401, Toronto. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.4912624,
-      "lng": -79.98811157,
-      "start": 1787624880,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.67105057,
+      "lng": -79.57948461,
+      "start": 1787627220,
       "end": null,
-      "updated": 1787624880
+      "updated": 1787627220
     },
     {
-      "id": "ON-292730",
+      "id": "drivebc.ca/DBC-94035",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "at Inks Lake Road near Kamloops",
+        "to": "near Kamloops",
+        "direction": "N"
+      },
+      "direction": "",
+      "description": "HWY 5 , northbound. Vehicle incident at Inks Lake Road near Kamloops. Visual Obstruction Nothing Blocking Road Way. Last updated Mon Aug 24 at 8:03 PM PDT. (DBC-94035)",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.616176,
+      "lng": -120.47188,
+      "start": "2026-08-21T20:06:44-07:00",
+      "end": "",
+      "updated": "2026-08-24T20:03:12-07:00"
+    },
+    {
+      "id": "ON-292732",
       "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 403 MISSISSAUGA Eastbound EXPRESS RAMP at 401 EAST EXP, Mississauga. Left shoulder and left lane closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 401 Westbound COLLECTOR RAMP at HWY 403, Mississauga. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "left shoulder and left lane closed",
-      "lat": 43.63828447,
-      "lng": -79.6545815,
-      "start": 1787624520,
+      "lat": 43.64017623,
+      "lng": -79.65606343,
+      "start": 1787625840,
       "end": null,
-      "updated": 1787624520
+      "updated": 1787625840
     },
     {
       "id": "ON-292727",
@@ -797,26 +818,10 @@
       "start": 1788141600,
       "end": 1788512400,
       "updated": 1787585940
-    },
-    {
-      "id": "ON-292509",
-      "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 409 Eastbound  between HWY 427 and 401, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.696983,
-      "lng": -79.60716,
-      "start": 1788141600,
-      "end": 1788512400,
-      "updated": 1787585880
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T02:42:16.063339+00:00",
+  "updated": "2026-08-25T03:13:30.278660+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
