@@ -1,36 +1,89 @@
 {
   "incidents": [
     {
-      "id": "ON-293061",
+      "id": "ON-293067",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Emergency Roadwork on QEW Fort Erie bound RAMP at WALKERS LINE, Burlington. Right lane closed.",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 17 Westbound  at NEYS PROV PARK ENT (S) - COLDWELL TWP, Marathon. Lane and WEST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.36871748,
-      "lng": -79.78592949,
-      "start": 1787670300,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 48.780396765,
+      "lng": -86.586896904,
+      "start": 1787672220,
       "end": null,
-      "updated": 1787670300
+      "updated": 1787672220
     },
     {
-      "id": "ON-293057",
+      "id": "ON-293064",
       "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 403 MISSISSAUGA Eastbound RAMP at EASTGATE/CAWTHRA, Mississauga. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 48",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 48 Southbound  between BLOOMINGTON ROAD and BLOOMINGTON ROAD, Whitchurch-Stouffville. 1 Right Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.6135963,
-      "lng": -79.6309669,
-      "start": 1787670060,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.000816,
+      "lng": -79.28898,
+      "start": 1788224400,
+      "end": 1788429600,
+      "updated": 1787671320
+    },
+    {
+      "id": "drivebc.ca/RIDE-101639",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Tannery Road",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Tannery Road, In Surrey and At Highway 17 and Tannery Road. Left lane blocked. Expect delays. Last update: August 25th, 2026 at 8:18am PDT. Next update: August 25th, 2026 at 9:00am PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.19623774,
+      "lng": -122.89307046,
+      "start": "2026-08-25T07:53:58-07:00",
+      "end": "",
+      "updated": "2026-08-25T08:18:33-07:00"
+    },
+    {
+      "id": "ON-293065",
+      "province": "ON",
+      "highway": "HWY 48",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 48 Northbound  between BLOOMINGTON ROAD and BLOOMINGTON ROAD, Whitchurch-Stouffville. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.000816,
+      "lng": -79.28898,
+      "start": 1788224400,
+      "end": 1788429600,
+      "updated": 1787671080
+    },
+    {
+      "id": "ON-293062",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound TRANSFER at Warden Express to Collector, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.7712509,
+      "lng": -79.29935802,
+      "start": 1787670600,
       "end": null,
-      "updated": 1787670060
+      "updated": 1787670600
     },
     {
       "id": "drivebc.ca/DBC-94054",
@@ -69,27 +122,6 @@
       "updated": 1787669640
     },
     {
-      "id": "drivebc.ca/RIDE-101639",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Tannery Road",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall at Tannery Road, In Surrey and At Highway 17 and Tannery Road. Left lane blocked. Expect delays. Last update: August 25th, 2026 at 7:53am PDT. Next update: August 25th, 2026 at 9:00am PDT.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.19623774,
-      "lng": -122.89307046,
-      "start": "2026-08-25T07:53:58-07:00",
-      "end": "",
-      "updated": "2026-08-25T07:53:58-07:00"
-    },
-    {
       "id": "ON-293047",
       "province": "ON",
       "highway": "HWY 621",
@@ -104,22 +136,6 @@
       "start": 1787668500,
       "end": null,
       "updated": 1787668500
-    },
-    {
-      "id": "ON-293046",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at Hagar, Hagar. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.454806902,
-      "lng": -80.415907677,
-      "start": 1787668380,
-      "end": null,
-      "updated": 1787668380
     },
     {
       "id": "ON-293044",
@@ -440,22 +456,6 @@
       "start": 1787967000,
       "end": 1788166800,
       "updated": 1787662320
-    },
-    {
-      "id": "ON-292981",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 400 Northbound ON-RAMP at KING ROAD, King. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.922819,
-      "lng": -79.565713,
-      "start": 1787662200,
-      "end": null,
-      "updated": 1787662200
     },
     {
       "id": "ON-292965",
@@ -811,7 +811,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-25T15:09:47.748739+00:00",
+  "updated": "2026-08-25T15:40:59.724062+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

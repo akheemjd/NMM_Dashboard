@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25 15:09",
-  "updated_iso": "2026-08-25T15:09:54+00:00",
-  "build_version": "1787670594",
+  "updated_at": "2026-08-25 15:41",
+  "updated_iso": "2026-08-25T15:41:05+00:00",
+  "build_version": "1787672465",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "20 min"
+    "max_wait": "35 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 403 , HWY 621, HWY 17",
+    "status_line": "HWY 17, HWY 401, HWY 621, HWY 11",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Emergency Roadwork on QEW Fort Erie bound RAMP at WALKERS LINE, Burlington.\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Westbound  at NEYS PROV PARK ENT (S) - COLDWELL\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Highway Maintenance on HWY 403 MISSISSAUGA Eastbound RAMP at EASTGATE/CAWTHRA,\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound TRANSFER at Warden Express to Collector,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "35 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:07 EDT"
+      "captured_at": "11:06 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT"
+      "captured_at": "08:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 CDT"
+      "captured_at": "10:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
