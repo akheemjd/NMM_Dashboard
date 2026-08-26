@@ -1,6 +1,48 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101734",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 29",
+        "from": "Highway 29 N",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Construction work at Highway 29, Upper Cache Rd. Starting Mon Aug 31 until Fri Oct 30. From 7:00 AM to 5:00 PM MST, weekdays. Reduced to one lane. Watch for traffic control. Last update: August 26th, 2026 at 4:26pm MST.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 56.24166011,
+      "lng": -121.40050704,
+      "start": "2026-08-26T16:22:37-07:00",
+      "end": "",
+      "updated": "2026-08-26T16:26:00-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101731",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Highway 99",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 99, In Squamish and At Cleveland Avenue. Last update: August 26th, 2026 at 4:20pm PDT. Next update: August 26th, 2026 at 7:00pm PDT. Two northbound left turn lanes onto Cleveland Ave are blocked. Southbound ramp onto Cleveland Ave is also blocked. Expect major delays.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.70446203,
+      "lng": -123.14534604,
+      "start": "2026-08-26T15:42:52-07:00",
+      "end": "",
+      "updated": "2026-08-26T16:20:18-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-101730",
       "province": "BC",
       "highway": {
@@ -22,38 +64,6 @@
       "updated": "2026-08-26T15:25:54-07:00"
     },
     {
-      "id": "ON-293973",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at MISSISSAUGA ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.56081054,
-      "lng": -79.68579567,
-      "start": 1787782740,
-      "end": null,
-      "updated": 1787782740
-    },
-    {
-      "id": "ON-293974",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound HOV at MISSISSAUGA ROAD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.5608452,
-      "lng": -79.68574338,
-      "start": 1787782740,
-      "end": null,
-      "updated": 1787782740
-    },
-    {
       "id": "drivebc.ca/RIDE-101728",
       "province": "BC",
       "highway": {
@@ -73,22 +83,6 @@
       "start": "2026-08-26T15:17:00-07:00",
       "end": "",
       "updated": "2026-08-26T15:17:00-07:00"
-    },
-    {
-      "id": "ON-293962",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Collision on HWY 11 Northbound  at MENOKE BEACH RD, Severn. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 44.686354,
-      "lng": -79.403151,
-      "start": 1787780940,
-      "end": null,
-      "updated": 1787780940
     },
     {
       "id": "ON-293951",
@@ -206,6 +200,27 @@
       "start": 1787835600,
       "end": 1787853600,
       "updated": 1787771700
+    },
+    {
+      "id": "drivebc.ca/RIDE-101713",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Summit Lake Overhead",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road maintenance at Highway 1. Starting Wed Sep 16 until Wed Sep 16. Single lane alternating traffic. Last update: August 26th, 2026 at 11:46am PDT. Soil remediation.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.96290331,
+      "lng": -118.38057682,
+      "start": "2026-08-26T11:46:28-07:00",
+      "end": "",
+      "updated": "2026-08-26T11:46:28-07:00"
     },
     {
       "id": "ON-293902",
@@ -858,7 +873,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-26T22:58:15.351691+00:00",
+  "updated": "2026-08-26T23:29:26.505744+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
