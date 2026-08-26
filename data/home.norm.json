@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-26 21:55",
-  "updated_iso": "2026-08-26T21:55:58+00:00",
-  "build_version": "1787781358",
+  "updated_at": "2026-08-26 22:27",
+  "updated_iso": "2026-08-26T22:27:07+00:00",
+  "build_version": "1787783227",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "20 min"
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 409, HWY 602",
+    "status_line": "HWY 400, HWY 403 , HWY 417",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Northbound  at MENOKE BEACH RD, Severn. Left lane closed.",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound RAMP at 401 EAST COLL, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Southbound  at BRENNAN LINE, Severn. All lanes closed.",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at MISSISSAUGA ROAD, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:14 EDT"
+      "captured_at": "18:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "9 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 EDT"
+      "captured_at": "18:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT"
+      "captured_at": "15:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "18:15 EDT"
     }
   ],
   "market": [
