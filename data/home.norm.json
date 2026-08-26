@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-26 00:24",
-  "updated_iso": "2026-08-26T00:24:36+00:00",
-  "build_version": "1787703876",
+  "updated_at": "2026-08-26 00:54",
+  "updated_iso": "2026-08-26T00:54:50+00:00",
+  "build_version": "1787705690",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 404, HWY 400",
+    "status_line": "HWY 410, HWY 401, HWY 404, HWY 400",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MISSISSAUGA RD, Mississauga.\u2026",
+        "road": "HWY 410",
+        "what": "Collision on HWY 410 Northbound RAMP at CLARK BLVD, Brampton. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Southbound  at 407, Markham. 1 right lane and right\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at YONGE ST, Toronto. Left shoulder\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 EDT"
+      "captured_at": "20:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "9 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:00 EDT"
+      "captured_at": "20:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 PDT"
+      "captured_at": "17:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 EDT"
+      "captured_at": "20:15 EDT"
     }
   ],
   "market": [
