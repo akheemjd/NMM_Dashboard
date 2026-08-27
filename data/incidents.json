@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101736",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Port Mann Bridge",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall at Highway 1, In Coquitlam and 463m North of Port Mann Bridge West Tower. Right lane blocked. Last update: August 26th, 2026 at 4:53pm PDT. Next update: August 26th, 2026 at 5:45pm PDT. Right Surrey exit lane blocked.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.22366785,
+      "lng": -122.81531373,
+      "start": "2026-08-26T16:53:51-07:00",
+      "end": "",
+      "updated": "2026-08-26T16:53:51-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-101734",
       "province": "BC",
       "highway": {
@@ -200,27 +221,6 @@
       "start": 1787835600,
       "end": 1787853600,
       "updated": 1787771700
-    },
-    {
-      "id": "drivebc.ca/RIDE-101713",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Summit Lake Overhead",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Road maintenance at Highway 1. Starting Wed Sep 16 until Wed Sep 16. Single lane alternating traffic. Last update: August 26th, 2026 at 11:46am PDT. Soil remediation.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.96290331,
-      "lng": -118.38057682,
-      "start": "2026-08-26T11:46:28-07:00",
-      "end": "",
-      "updated": "2026-08-26T11:46:28-07:00"
     },
     {
       "id": "ON-293902",
@@ -873,7 +873,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-26T23:29:26.505744+00:00",
+  "updated": "2026-08-27T00:00:39.227964+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
