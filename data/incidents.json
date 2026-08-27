@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-294042",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound HOV at THIRD LINE, Oakville. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.423705008,
+      "lng": -79.725669622,
+      "start": 1787819220,
+      "end": null,
+      "updated": 1787819220
+    },
+    {
       "id": "drivebc.ca/DBC-94035",
       "province": "BC",
       "highway": {
@@ -849,26 +865,10 @@
       "start": 1788908400,
       "end": 1790067600,
       "updated": 1787745240
-    },
-    {
-      "id": "ON-293884",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound Express between RENFORTH DR, Toronto and WINSTON CHURCHILL BLVD, Mississauga. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.66864,
-      "lng": -79.59122,
-      "start": 1788141600,
-      "end": 1788512400,
-      "updated": 1787743620
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T08:19:34.844612+00:00",
+  "updated": "2026-08-27T08:50:46.513847+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
