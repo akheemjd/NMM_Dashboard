@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 08:50",
-  "updated_iso": "2026-08-27T08:50:49+00:00",
-  "build_version": "1787820649",
+  "updated_at": "2026-08-27 09:22",
+  "updated_iso": "2026-08-27T09:22:01+00:00",
+  "build_version": "1787822521",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "12 min"
+    "max_wait": "27 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -240,11 +240,11 @@
     "none": false,
     "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 6",
+    "status_line": "HWY 401, HWY 6",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound HOV at THIRD LINE, Oakville. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at LESLIE STREET, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "12 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "27 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:40 PDT"
+      "captured_at": "02:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Trucking Info",
-      "headline": "What the U.S.-Canada Trade War Means for Trucking",
-      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "industry",
+      "source": "Truck News",
+      "headline": "HAP Transportation Group launches GTA drayage service",
+      "url": "https://www.trucknews.com/business-management/hap-transportation-group-launches-gta-drayage-service/1003220563/",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Laredo Port of Entry extends Saturday operational hours for World Trade Bridge",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/laredo-port-of-entry-extends-saturday-operational-hours-for-world-trade-bridge",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Roadcheck 2026 puts 10,350 trucks and 3,184 drivers out of service",
+      "url": "https://www.trucknews.com/regulations/roadcheck-2026-puts-10350-trucks-and-3184-drivers-out-of-service/1003220535/",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
