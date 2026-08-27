@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-294025",
+      "province": "ON",
+      "highway": "HWY 21",
+      "direction": "Both Directions",
+      "description": "Building Fire on HWY 21 Both Directions  between Jowett's Grove Road / Old River Road [ near Bayfield ] and Telephone Road, Bayfield. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.570174761,
+      "lng": -81.70079219,
+      "start": 1787800740,
+      "end": null,
+      "updated": 1787800740
+    },
+    {
       "id": "ON-291891",
       "province": "ON",
       "highway": "HWY 6",
@@ -844,31 +860,10 @@
       "start": 1788908400,
       "end": 1790067600,
       "updated": 1787745240
-    },
-    {
-      "id": "drivebc.ca/DBC-94035",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "at Inks Lake Road near Kamloops",
-        "to": "near Kamloops",
-        "direction": "N"
-      },
-      "direction": "",
-      "description": "HWY 5 , northbound. Vehicle incident at Inks Lake Road near Kamloops. Visual Obstruction Nothing Blocking Road Way. Last updated Wed Aug 26 at 4:41 AM PDT. (DBC-94035)",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.616176,
-      "lng": -120.47188,
-      "start": "2026-08-21T20:06:44-07:00",
-      "end": "",
-      "updated": "2026-08-26T04:41:56-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T03:07:36.768831+00:00",
+  "updated": "2026-08-27T03:38:47.591227+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
