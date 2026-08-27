@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-294101",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at MAMAINSE HARBOUR RD(W), Algoma. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 47.033188189,
+      "lng": -84.781190024,
+      "start": 1787831100,
+      "end": null,
+      "updated": 1787831100
+    },
+    {
+      "id": "ON-261152",
+      "province": "ON",
+      "highway": "HWY 61",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1781491500,
+      "end": null,
+      "updated": 1787830080
+    },
+    {
+      "id": "ON-294089",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LIVERPOOL ROAD, Pickering. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.827872,
+      "lng": -79.094667,
+      "start": 1787829960,
+      "end": null,
+      "updated": 1787829960
+    },
+    {
       "id": "ON-294086",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +63,6 @@
       "start": 1787829840,
       "end": null,
       "updated": 1787829840
-    },
-    {
-      "id": "ON-294073",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.29851876,
-      "lng": -79.79709653,
-      "start": 1787828760,
-      "end": null,
-      "updated": 1787828760
     },
     {
       "id": "ON-294048",
@@ -833,42 +865,10 @@
       "start": 1788138000,
       "end": 1788426000,
       "updated": 1787753760
-    },
-    {
-      "id": "ON-293673",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound Off-ramp at BARTLETT AVENUE, Grimsby. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.189972,
-      "lng": -79.52388,
-      "start": 1788138000,
-      "end": 1788426000,
-      "updated": 1787753580
-    },
-    {
-      "id": "ON-293658",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound On-ramp at BARTLETT AVENUE, Grimsby. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.189972,
-      "lng": -79.52388,
-      "start": 1788138000,
-      "end": 1788426000,
-      "updated": 1787752800
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T11:26:46.188774+00:00",
+  "updated": "2026-08-27T11:57:56.724879+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-27 11:26",
-  "updated_iso": "2026-08-27T11:26:56+00:00",
-  "build_version": "1787830016",
+  "updated_at": "2026-08-27 11:58",
+  "updated_iso": "2026-08-27T11:58:00+00:00",
+  "build_version": "1787831880",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 11",
+    "status_line": "HWY 17, HWY 401, HWY 11",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Eastbound  at MAMAINSE HARBOUR RD(W), Algoma.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LIVERPOOL ROAD, Pickering.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:00 EDT"
+      "captured_at": "07:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:00 EDT"
+      "captured_at": "07:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:00 PDT"
+      "captured_at": "04:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -402,11 +402,11 @@
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "markets",
+      "category": "equipment",
       "source": "The Trucker",
-      "headline": "Laredo Port of Entry extends Saturday operational hours for World Trade Bridge",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/laredo-port-of-entry-extends-saturday-operational-hours-for-world-trade-bridge",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "headline": "Woman injured after hitting parked semi-truck on I-29 in Missouri",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/woman-injured-after-hitting-parked-semi-truck-on-i-29-in-missouri",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
