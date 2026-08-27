@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 20:17",
-  "updated_iso": "2026-08-27T20:17:14+00:00",
-  "build_version": "1787861834",
+  "updated_at": "2026-08-27 20:48",
+  "updated_iso": "2026-08-27T20:48:26+00:00",
+  "build_version": "1787863706",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
-    "max_name": "Coutts-Sweetgrass",
-    "max_wait": "25 min"
+    "max_name": "Thousand Islands Bridge",
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 401",
+    "status_line": "HWY 401, HWY 410, HWY 427",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Northbound ON-RAMP at EGLINTON AVENUE, Toronto. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 404, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound  at REGIONAL ROAD 25, Milton. Right lane\u2026",
+        "road": "HWY 410",
+        "what": "Disabled Vehicle on HWY 410 Northbound  at STEELES AVE, Brampton. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:49 EDT"
+      "captured_at": "16:31 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "16:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "5 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:00 EDT"
+      "captured_at": "16:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,27 +307,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:04 EDT"
+      "captured_at": "16:34 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
       "slug": "coutts-sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:23 MDT"
+      "captured_at": "14:37 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 PDT"
+      "captured_at": "13:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -343,11 +343,11 @@
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "15:50 EDT"
+      "captured_at": "16:25 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "5 of 9 crossings slow",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
