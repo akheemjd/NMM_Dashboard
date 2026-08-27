@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-27 13:00",
-  "updated_iso": "2026-08-27T13:00:35+00:00",
-  "build_version": "1787835635",
+  "updated_at": "2026-08-27 13:31",
+  "updated_iso": "2026-08-27T13:31:35+00:00",
+  "build_version": "1787837495",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "233.3",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 11,
+    "active_count": 13,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 401",
+    "status_line": "HWY 401, HWY 6, HWY 105",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Eastbound  at PRAIRIE RIVER BR - E ABUTMENT,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at MARKHAM ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto.\u2026",
+        "road": "HWY 6",
+        "what": "Highway Maintenance on HWY 6 Northbound  at UPPER JAMES, Hamilton. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "8 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:57 EDT"
+      "captured_at": "09:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,17 +317,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 MDT"
+      "captured_at": "07:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT"
+      "captured_at": "08:17 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -369,8 +369,8 @@
     },
     {
       "name": "Fuel cost per 1,000 km",
-      "note": "At 234.4\u00a2/L and 35 L/100km",
-      "value": "$820",
+      "note": "At 233.3\u00a2/L and 35 L/100km",
+      "value": "$817",
       "value_class": "flat",
       "source": "NRCan weekly diesel survey",
       "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
@@ -378,7 +378,7 @@
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "30.9\u00a2/L",
+      "value": "31.2\u00a2/L",
       "value_class": "flat",
       "source": "Industry surveys",
       "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
@@ -402,11 +402,11 @@
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "safety",
+      "category": "equipment",
       "source": "The Trucker",
-      "headline": "Arizona police say fatigue could have factored in big rig crash",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/arizona-police-say-fatigue-could-have-factored-in-big-rig-crash",
-      "why": "Safety rules and blitzes hit the road on specific dates."
+      "headline": "Truckload Authority September/October 2026 \u2013 Digital Edition",
+      "url": "https://www.thetrucker.com/trucking-news/digital-edition/truckload-authority-september-october-2026-digital-edition",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
