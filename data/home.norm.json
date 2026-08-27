@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-27 18:43",
-  "updated_iso": "2026-08-27T18:43:38+00:00",
-  "build_version": "1787856218",
+  "updated_at": "2026-08-27 19:14",
+  "updated_iso": "2026-08-27T19:14:50+00:00",
+  "build_version": "1787858090",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 2,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 427",
+    "status_line": "QEW, HWY 401, HWY 427",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at Woodstock OnRoute/Eastbound service centre,\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at HWY 10/HURONTARIO, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound  at DIXON ROAD/AIRPORT ROAD, Toronto. 1 left\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound  at LAKE RIDGE ROAD, Whitby. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:10 EDT"
+      "captured_at": "14:55 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "15:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 PDT"
+      "captured_at": "12:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
