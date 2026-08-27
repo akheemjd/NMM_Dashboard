@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-294009",
+      "id": "ON-294011",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. Right lane and right shoulder closed.",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at ERIN MILLS PKWY, Mississauga. 2 centre lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.2851185,
-      "lng": -79.67958049,
-      "start": 1787794200,
+      "lanes": "2 centre lanes closed",
+      "lat": 43.5541298,
+      "lng": -79.69624357,
+      "start": 1787795760,
       "end": null,
-      "updated": 1787794200
+      "updated": 1787795760
     },
     {
       "id": "ON-294007",
@@ -442,27 +442,6 @@
       "updated": 1787766240
     },
     {
-      "id": "drivebc.ca/RIDE-101709",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 5",
-        "from": "Highway 5",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Road maintenance at Highway 5. Starting Wed Aug 26 until Wed Aug 26. Left lane closed in both directions. Watch for traffic control. Last update: August 26th, 2026 at 10:40am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.49703844,
-      "lng": -120.49870668,
-      "start": "2026-08-26T10:13:38-07:00",
-      "end": "",
-      "updated": "2026-08-26T10:40:39-07:00"
-    },
-    {
       "id": "ON-293817",
       "province": "ON",
       "highway": "HWY 401",
@@ -865,10 +844,26 @@
       "start": 1788138000,
       "end": 1788426000,
       "updated": 1787753580
+    },
+    {
+      "id": "ON-293658",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Construction on QEW Fort Erie Bound On-ramp at BARTLETT AVENUE, Grimsby. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.189972,
+      "lng": -79.52388,
+      "start": 1788138000,
+      "end": 1788426000,
+      "updated": 1787752800
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T01:34:12.786475+00:00",
+  "updated": "2026-08-27T02:05:23.572729+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

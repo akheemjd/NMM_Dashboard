@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-27 01:34",
-  "updated_iso": "2026-08-27T01:34:16+00:00",
-  "build_version": "1787794456",
+  "updated_at": "2026-08-27 02:05",
+  "updated_iso": "2026-08-27T02:05:27+00:00",
+  "build_version": "1787796327",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -240,11 +240,11 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 401, HWY 58, QEW",
+    "status_line": "HWY 403 , HWY 401, HWY 58, QEW",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21,\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at ERIN MILLS PKWY, Mississauga. 2\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "10 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:45 EDT"
+      "captured_at": "21:46 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 PDT"
+      "captured_at": "18:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
