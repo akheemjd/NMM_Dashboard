@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-294009",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.2851185,
+      "lng": -79.67958049,
+      "start": 1787794200,
+      "end": null,
+      "updated": 1787794200
+    },
+    {
+      "id": "ON-294007",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS RAMP at HWY 403, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.64211676,
+      "lng": -79.65372435,
+      "start": 1787793900,
+      "end": null,
+      "updated": 1787793900
+    },
+    {
+      "id": "ON-291891",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola, Espanola. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 46.268502,
+      "lng": -81.77425,
+      "start": 1787445420,
+      "end": null,
+      "updated": 1787793540
+    },
+    {
       "id": "ON-293993",
       "province": "ON",
       "highway": "QEW",
@@ -15,22 +63,6 @@
       "start": 1787790600,
       "end": null,
       "updated": 1787791620
-    },
-    {
-      "id": "ON-293996",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at FORD DRIVE, Oakville. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.49210007,
-      "lng": -79.67252069,
-      "start": 1787790900,
-      "end": null,
-      "updated": 1787790900
     },
     {
       "id": "ON-293994",
@@ -68,27 +100,6 @@
       "start": "2026-08-26T16:22:37-07:00",
       "end": "",
       "updated": "2026-08-26T16:26:00-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-101731",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 99",
-        "from": "Highway 99",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident at Highway 99, In Squamish and At Cleveland Avenue. Last update: August 26th, 2026 at 4:20pm PDT. Next update: August 26th, 2026 at 7:00pm PDT. Two northbound left turn lanes onto Cleveland Ave are blocked. Southbound ramp onto Cleveland Ave is also blocked. Expect major delays.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.70446203,
-      "lng": -123.14534604,
-      "start": "2026-08-26T15:42:52-07:00",
-      "end": "",
-      "updated": "2026-08-26T16:20:18-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-101730",
@@ -131,22 +142,6 @@
       "start": "2026-08-26T15:17:00-07:00",
       "end": "",
       "updated": "2026-08-26T15:17:00-07:00"
-    },
-    {
-      "id": "ON-291891",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola, Espanola. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 46.268502,
-      "lng": -81.77425,
-      "start": 1787445420,
-      "end": null,
-      "updated": 1787779080
     },
     {
       "id": "ON-293906",
@@ -873,7 +868,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T01:03:01.584868+00:00",
+  "updated": "2026-08-27T01:34:12.786475+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
