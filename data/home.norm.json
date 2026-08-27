@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 22:53",
-  "updated_iso": "2026-08-27T22:53:12+00:00",
-  "build_version": "1787871192",
+  "updated_at": "2026-08-27 23:24",
+  "updated_iso": "2026-08-27T23:24:23+00:00",
+  "build_version": "1787873063",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "22 min"
+    "max_wait": "14 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW",
+    "status_line": "HWY 401, QEW, HWY 77, HWY 427",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right\u2026",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at LIVERPOOL ROAD, Pickering. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at MAVIS ROAD, Mississauga. Left\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound RAMP at MISSISSAUGA ROAD, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "22 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "14 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 EDT"
+      "captured_at": "19:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 PDT"
+      "captured_at": "16:00 PDT"
     },
     {
       "name": "Emerson-Pembina",

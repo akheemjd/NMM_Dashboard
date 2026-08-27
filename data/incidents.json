@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-294426",
+      "id": "ON-294434",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane closed.",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at LIVERPOOL ROAD, Pickering. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.78085209,
-      "lng": -79.25477778,
-      "start": 1787870100,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.8305714,
+      "lng": -79.0883714,
+      "start": 1787871540,
       "end": null,
-      "updated": 1787870100
-    },
-    {
-      "id": "ON-294421",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at MAVIS ROAD, Mississauga. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.621331,
-      "lng": -79.706966,
-      "start": 1787869320,
-      "end": null,
-      "updated": 1787869320
+      "updated": 1787871540
     },
     {
       "id": "ON-294423",
@@ -81,22 +65,6 @@
       "updated": 1787868720
     },
     {
-      "id": "ON-294408",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.6659913,
-      "lng": -79.5996896,
-      "start": 1787867640,
-      "end": null,
-      "updated": 1787867640
-    },
-    {
       "id": "ON-294403",
       "province": "ON",
       "highway": "HWY 77",
@@ -143,22 +111,6 @@
       "start": 1788174000,
       "end": 1790352000,
       "updated": 1787865720
-    },
-    {
-      "id": "ON-294375",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound  at HWY 401, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.67220467,
-      "lng": -79.57728764,
-      "start": 1787861640,
-      "end": null,
-      "updated": 1787861640
     },
     {
       "id": "ON-294370",
@@ -769,22 +721,6 @@
       "updated": 1787854800
     },
     {
-      "id": "ON-294290",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound  at DIXON ROAD/AIRPORT ROAD, Toronto. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.686292806,
-      "lng": -79.6011132,
-      "start": 1787854740,
-      "end": null,
-      "updated": 1787854740
-    },
-    {
       "id": "ON-294294",
       "province": "ON",
       "highway": "HWY 400",
@@ -799,10 +735,74 @@
       "start": 1789945200,
       "end": 1790420400,
       "updated": 1787854740
+    },
+    {
+      "id": "ON-294293",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 400 Northbound  between MAPLEVIEW DRIVE, Barrie and HWY 11 JCT, Springwater. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.335453,
+      "lng": -79.68464,
+      "start": 1789948800,
+      "end": 1790416800,
+      "updated": 1787854680
+    },
+    {
+      "id": "ON-294295",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 400 Southbound  between HWY 11 JCT, Springwater and MAPLEVIEW DRIVE, Barrie. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.427162,
+      "lng": -79.65115,
+      "start": 1789948800,
+      "end": 1790416800,
+      "updated": 1787854680
+    },
+    {
+      "id": "ON-294287",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 400 Southbound  between MAPLEVIEW DRIVE, Barrie and CANAL RD., Bradford. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.335453,
+      "lng": -79.68464,
+      "start": 1789948800,
+      "end": 1790413200,
+      "updated": 1787854620
+    },
+    {
+      "id": "ON-294288",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 400 Northbound  between CANAL RD., Bradford and MAPLEVIEW DRIVE, Barrie. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.05241,
+      "lng": -79.60943,
+      "start": 1789956000,
+      "end": 1790420400,
+      "updated": 1787854560
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T22:53:08.630946+00:00",
+  "updated": "2026-08-27T23:24:20.264157+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
