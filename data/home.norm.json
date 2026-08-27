@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 15:36",
-  "updated_iso": "2026-08-27T15:36:26+00:00",
-  "build_version": "1787844986",
+  "updated_at": "2026-08-27 16:07",
+  "updated_iso": "2026-08-27T16:07:38+00:00",
+  "build_version": "1787846858",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "35 min"
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "233.3",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 16,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 410, HWY 400",
+    "status_line": "HWY 631, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KEELE ST, Toronto. 1 left lane\u2026",
+        "road": "HWY 631",
+        "what": "Collision on HWY 631 Both Directions  between HWY 17-WHITE RIVER, White River\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Northbound RAMP at QUEEN STREET/S JCT HWY 7,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:59 EDT"
+      "captured_at": "11:55 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "11:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "11:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "35 min",
+      "wait": "30 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 PDT"
+      "captured_at": "08:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
-      "source": "Truck News",
-      "headline": "Priority Courier Experts expands Southeast footprint with INPAX acquisition",
-      "url": "https://www.trucknews.com/business-management/priority-courier-experts-expands-southeast-footprint-with-inpax-acquisition/1003220609/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "markets",
+      "source": "Trucking Info",
+      "headline": "What the U.S.-Canada Trade War Means for Trucking",
+      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "business",
-      "source": "Truck News",
-      "headline": "Arrive Logistics investment to fuel technology, service expansion",
-      "url": "https://www.trucknews.com/business-management/arrive-logistics-investment-to-fuel-technology-service-expansion/1003220604/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "Corgi Insurance and Trucker Path to use navigation data in underwriting",
+      "url": "https://www.thetrucker.com/trucking-news/business/corgi-insurance-and-trucker-path-to-use-navigation-data-in-underwriting",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
