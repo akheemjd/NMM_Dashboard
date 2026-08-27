@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 22:22",
-  "updated_iso": "2026-08-27T22:22:00+00:00",
-  "build_version": "1787869320",
+  "updated_at": "2026-08-27 22:53",
+  "updated_iso": "2026-08-27T22:53:12+00:00",
+  "build_version": "1787871192",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "9 min"
+    "max_wait": "22 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 77, HWY 9, HWY 427",
+    "status_line": "HWY 401, QEW",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. 1 right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 77",
-        "what": "Collision on HWY 77 Both Directions  between Mersea Road 8, Blytheswood and\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at MAVIS ROAD, Mississauga. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "18:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "9 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "22 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:37 MDT"
+      "captured_at": "16:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Trucking Info",
-      "headline": "What the U.S.-Canada Trade War Means for Trucking",
-      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Missouri kicks off I-70 truck parking expansion project",
+      "url": "https://www.trucknews.com/transportation/missouri-kicks-off-i-70-truck-parking-expansion-project/1003220625/",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
-      "category": "regulations",
-      "source": "Trucking Info",
-      "headline": "Hours of Service Pilot Programs: FMCSA Readies for 2027 Rollout",
-      "url": "https://www.truckinginfo.com/news/hours-of-service-pilot-programs-fmcsa-readies-for-2027-rollout",
-      "why": "Rules change compliance cost and driver hours."
+      "category": "industry",
+      "source": "Truck News",
+      "headline": "Ryder study highlights consumer trends affecting last-mile operations",
+      "url": "https://www.trucknews.com/transportation/ryder-study-highlights-consumer-trends-affecting-last-mile-operations/1003220620/",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
