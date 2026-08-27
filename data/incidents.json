@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-294173",
+      "id": "ON-294190",
       "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Debris on HWY 403 HAMILTON Eastbound  at MAIN STREET WEST, Hamilton. Left shoulder and left lane closed.",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 417 Westbound  between BRONSON AVE (IC 121A) and ROCHESTER ST  (IC 121B), Ottawa. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.40489,
+      "lng": -75.70192,
+      "start": 1787839200,
+      "end": 1787853600,
+      "updated": 1787840580
+    },
+    {
+      "id": "ON-294187",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 427 Southbound COLLECTOR RAMP at EVANS AVE, Toronto. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.26059401,
-      "lng": -79.89387213,
-      "start": 1787838240,
+      "lanes": "left lane closed",
+      "lat": 43.611646,
+      "lng": -79.549043,
+      "start": 1787840220,
       "end": null,
-      "updated": 1787838240
+      "updated": 1787840220
     },
     {
       "id": "ON-294164",
@@ -143,6 +159,22 @@
       "start": 1788224400,
       "end": 1788512400,
       "updated": 1787835600
+    },
+    {
+      "id": "ON-294182",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 403 HAMILTON Eastbound  between LINCOLN M. ALEXANDER PARKWAY and ABERDEEN AVE, Hamilton. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 43.232258,
+      "lng": -79.950745,
+      "start": 1788228000,
+      "end": 1788512400,
+      "updated": 1787835540
     },
     {
       "id": "ON-294133",
@@ -803,42 +835,10 @@
       "start": 1788138000,
       "end": 1788516000,
       "updated": 1787763300
-    },
-    {
-      "id": "ON-293828",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound  between HARMONY ROAD and RITSON ROAD, Oshawa. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.8871,
-      "lng": -78.82658,
-      "start": 1788134400,
-      "end": 1788512400,
-      "updated": 1787763240
-    },
-    {
-      "id": "ON-293836",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Continuous Construction on QEW Fort Erie Bound Off-ramp at MCLEOD ROAD, Niagara Falls. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.070297,
-      "lng": -79.120995,
-      "start": 1787803200,
-      "end": 1787975940,
-      "updated": 1787763240
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T14:02:44.923943+00:00",
+  "updated": "2026-08-27T14:34:01.655180+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
