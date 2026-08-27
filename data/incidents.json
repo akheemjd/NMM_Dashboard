@@ -1,25 +1,36 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-101736",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Port Mann Bridge",
-        "direction": "E",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle stall at Highway 1, In Coquitlam and 463m North of Port Mann Bridge West Tower. Right lane blocked. Last update: August 26th, 2026 at 4:53pm PDT. Next update: August 26th, 2026 at 5:45pm PDT. Right Surrey exit lane blocked.",
-      "event_type": "incident",
-      "severity": "MAJOR",
+      "id": "ON-293993",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at TRAFALGAR ROAD, Oakville. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
       "closure": false,
-      "lanes": "",
-      "lat": 49.22366785,
-      "lng": -122.81531373,
-      "start": "2026-08-26T16:53:51-07:00",
-      "end": "",
-      "updated": "2026-08-26T16:53:51-07:00"
+      "lanes": "right lane closed",
+      "lat": 43.46143303,
+      "lng": -79.68362343,
+      "start": 1787790600,
+      "end": null,
+      "updated": 1787790600
+    },
+    {
+      "id": "ON-293992",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at MAVIS ROAD, Mississauga. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.58785416,
+      "lng": -79.65943538,
+      "start": 1787789640,
+      "end": null,
+      "updated": 1787789640
     },
     {
       "id": "drivebc.ca/RIDE-101734",
@@ -104,22 +115,6 @@
       "start": "2026-08-26T15:17:00-07:00",
       "end": "",
       "updated": "2026-08-26T15:17:00-07:00"
-    },
-    {
-      "id": "ON-293951",
-      "province": "ON",
-      "highway": "HWY 602",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 602 Both Directions  at HWYS 11/71-EMO, Emo. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 48.632164689,
-      "lng": -93.833707792,
-      "start": 1787780040,
-      "end": null,
-      "updated": 1787780040
     },
     {
       "id": "ON-291891",
@@ -221,6 +216,27 @@
       "start": 1787835600,
       "end": 1787853600,
       "updated": 1787771700
+    },
+    {
+      "id": "drivebc.ca/RIDE-101713",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Summit Lake Overhead",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road maintenance at Highway 1. Starting Wed Sep 16 until Wed Sep 16. Single lane alternating traffic. Last update: August 26th, 2026 at 11:46am PDT. Soil remediation.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.96290331,
+      "lng": -118.38057682,
+      "start": "2026-08-26T11:46:28-07:00",
+      "end": "",
+      "updated": "2026-08-26T11:46:28-07:00"
     },
     {
       "id": "ON-293902",
@@ -854,26 +870,10 @@
       "start": 1788138000,
       "end": 1788426000,
       "updated": 1787752800
-    },
-    {
-      "id": "ON-293634",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound  between CASABLANCA BLVD., Grimsby and VICTORIA AVENUE, Lincoln. 2 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Left Lane(s)",
-      "lat": 43.206974,
-      "lng": -79.59536,
-      "start": 1788138000,
-      "end": 1788433200,
-      "updated": 1787749740
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T00:00:39.227964+00:00",
+  "updated": "2026-08-27T00:31:48.752533+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

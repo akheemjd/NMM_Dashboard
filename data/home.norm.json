@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-08-27 00:00",
-  "updated_iso": "2026-08-27T00:00:42+00:00",
-  "build_version": "1787788842",
+  "updated_at": "2026-08-27 00:31",
+  "updated_iso": "2026-08-27T00:31:51+00:00",
+  "build_version": "1787790711",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
+    "max_name": "Blue Water Bridge",
     "max_wait": "25 min"
   },
   "fuel": {
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 602, HWY 6",
+    "status_line": "QEW, HWY 403 , HWY 6",
     "incidents": [
       {
-        "road": "HWY 602",
-        "what": "Collision on HWY 602 Both Directions  at HWYS 11/71-EMO, Emo. All lanes closed.",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at TRAFALGAR ROAD, Oakville. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 6",
-        "what": "Highway Maintenance on HWY 6 Southbound  at Spanish River Br, Espanola,\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at MAVIS ROAD, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,41 +263,41 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 EDT"
+      "captured_at": "20:12 EDT"
     },
     {
       "name": "Blue Water Bridge",
       "slug": "blue-water-bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 EDT"
+      "captured_at": "20:06 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "9 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "6 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 EDT"
+      "captured_at": "20:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT"
+      "captured_at": "17:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 EDT"
+      "captured_at": "20:15 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "5 of 9 crossings slow",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
