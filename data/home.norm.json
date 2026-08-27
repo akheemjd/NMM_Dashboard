@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-27 11:58",
-  "updated_iso": "2026-08-27T11:58:00+00:00",
-  "build_version": "1787831880",
+  "updated_at": "2026-08-27 12:29",
+  "updated_iso": "2026-08-27T12:29:13+00:00",
+  "build_version": "1787833753",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 401, HWY 11",
+    "status_line": "QEW, HWY 144, HWY 17, HWY 401",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Eastbound  at MAMAINSE HARBOUR RD(W), Algoma.\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LIVERPOOL ROAD, Pickering.\u2026",
+        "road": "HWY 144",
+        "what": "Highway Maintenance on HWY 144 Southbound  at JOANETTE ST(W), Chelmsford. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "9 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "07:57 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT"
+      "captured_at": "05:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 CDT"
+      "captured_at": "07:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     }
   ],
   "market": [
@@ -402,11 +402,11 @@
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "equipment",
+      "category": "safety",
       "source": "The Trucker",
-      "headline": "Woman injured after hitting parked semi-truck on I-29 in Missouri",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/woman-injured-after-hitting-parked-semi-truck-on-i-29-in-missouri",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "Arizona police say fatigue could have factored in big rig crash",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/arizona-police-say-fatigue-could-have-factored-in-big-rig-crash",
+      "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
   "theft_home_json": "[]",
