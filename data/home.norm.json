@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-27 14:34",
-  "updated_iso": "2026-08-27T14:34:05+00:00",
-  "build_version": "1787841245",
+  "updated_at": "2026-08-27 15:05",
+  "updated_iso": "2026-08-27T15:05:12+00:00",
+  "build_version": "1787843112",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "30 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "25 min"
   },
   "fuel": {
     "national_diesel": "233.3",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 13,
+    "active_count": 16,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 17, HWY 6, HWY 401",
+    "status_line": "HWY 401, HWY 631",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Southbound COLLECTOR RAMP at EVANS AVE, Toronto.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at 410 NORTH / 403 WEST,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Westbound  at HWY 108-ELLIOT LAKE RD, Serpent\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at HWY 10 / HURONTARIO STREET,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:19 EDT"
+      "captured_at": "10:59 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "30 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 PDT"
+      "captured_at": "07:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
-      "source": "Truck News",
-      "headline": "Arrive Logistics investment to fuel technology, service expansion",
-      "url": "https://www.trucknews.com/business-management/arrive-logistics-investment-to-fuel-technology-service-expansion/1003220604/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "markets",
+      "source": "Trucking Info",
+      "headline": "What the U.S.-Canada Trade War Means for Trucking",
+      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "regulations",
-      "source": "Truck News",
-      "headline": "Detroit opens orders for Gen 6 engines ahead of EPA27 rules",
-      "url": "https://www.trucknews.com/equipment/detroit-opens-orders-for-gen-6-engines-ahead-of-epa27-rules/1003220597/",
-      "why": "Rules change compliance cost and driver hours."
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "2026 Safety & Security Meeting: Building a safer, stronger trucking industry",
+      "url": "https://www.thetrucker.com/trucking-news/truckload-authority/talking-tca/2026-safety-security-meeting-building-a-safer-stronger-trucking-industry",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
