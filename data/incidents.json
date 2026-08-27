@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-294032",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.76327209,
+      "lng": -79.38728169,
+      "start": 1787803500,
+      "end": null,
+      "updated": 1787803500
+    },
+    {
+      "id": "ON-294031",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 11 Southbound  at LACLIE STREET, Orillia. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 44.642234,
+      "lng": -79.422858,
+      "start": 1787803200,
+      "end": null,
+      "updated": 1787803200
+    },
+    {
       "id": "ON-294025",
       "province": "ON",
       "highway": "HWY 21",
@@ -828,42 +860,10 @@
       "start": 1788138000,
       "end": 1788426000,
       "updated": 1787752800
-    },
-    {
-      "id": "ON-293634",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound  between CASABLANCA BLVD., Grimsby and VICTORIA AVENUE, Lincoln. 2 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Left Lane(s)",
-      "lat": 43.206974,
-      "lng": -79.59536,
-      "start": 1788138000,
-      "end": 1788433200,
-      "updated": 1787749740
-    },
-    {
-      "id": "ON-293749",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Maintenance on HWY 401 Westbound  between SALEM ROAD, Ajax and BROCK ROAD, Pickering. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.855537,
-      "lng": -79.012146,
-      "start": 1788908400,
-      "end": 1790067600,
-      "updated": 1787745240
     }
   ],
   "total": 50,
-  "updated": "2026-08-27T03:38:47.591227+00:00",
+  "updated": "2026-08-27T04:10:00.617746+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
