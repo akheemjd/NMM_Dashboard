@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-27 04:10",
-  "updated_iso": "2026-08-27T04:10:05+00:00",
-  "build_version": "1787803805",
+  "updated_at": "2026-08-27 04:41",
+  "updated_iso": "2026-08-27T04:41:18+00:00",
+  "build_version": "1787805678",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 21, HWY 58",
+    "status_line": "HWY 21, HWY 58, HWY 6",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 2 right lanes\u2026",
+        "road": "HWY 21",
+        "what": "Building Fire on HWY 21 Both Directions  between Jowett's Grove Road / Old\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at LACLIE STREET, Orillia. Right lane\u2026",
+        "road": "HWY 58",
+        "what": "Other on HWY 58 Southbound  at THOROLD TUNNEL, Thorold. Centre lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:22 EDT"
+      "captured_at": "00:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "11 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 CDT"
+      "captured_at": "23:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     }
   ],
   "market": [
