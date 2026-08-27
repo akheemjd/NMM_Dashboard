@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 10:24",
-  "updated_iso": "2026-08-27T10:24:25+00:00",
-  "build_version": "1787826265",
+  "updated_at": "2026-08-27 10:55",
+  "updated_iso": "2026-08-27T10:55:38+00:00",
+  "build_version": "1787828138",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "234.4",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 6",
+    "status_line": "HWY 401, QEW, HWY 11",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Northbound  at SOULES ROAD/TELFORD LANE, Severn.\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KEELE ST, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at CENTRE AVE, Severn. Left shoulder\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at WOODWARD AVENUE, Hamilton. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 PDT"
+      "captured_at": "03:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 CDT"
+      "captured_at": "05:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:11 EDT"
+      "captured_at": "06:15 EDT"
     }
   ],
   "market": [
