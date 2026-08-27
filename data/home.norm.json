@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 16:38",
-  "updated_iso": "2026-08-27T16:38:50+00:00",
-  "build_version": "1787848730",
+  "updated_at": "2026-08-27 17:10",
+  "updated_iso": "2026-08-27T17:10:00+00:00",
+  "build_version": "1787850600",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "233.3",
@@ -240,18 +240,18 @@
     "none": false,
     "active_count": 13,
     "gauge_class": "warn",
-    "status_line": "HWY 6, HWY 401, HWY 631",
+    "status_line": "QEW, HWY 401, HWY 6, HWY 631",
     "incidents": [
       {
-        "road": "HWY 6",
-        "what": "Highway Maintenance on HWY 6 Northbound  at UPPER JAMES, Hamilton. Centre lane\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at THIRD LINE, Oakville. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Left\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 400, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:55 EDT"
+      "captured_at": "12:46 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "8 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 PDT"
+      "captured_at": "09:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -402,11 +402,11 @@
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "regulations",
+      "category": "equipment",
       "source": "The Trucker",
-      "headline": "FMCSA advances hours of service pilot programs",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/fmcsa-advances-hours-of-service-pilot-programs",
-      "why": "Rules change compliance cost and driver hours."
+      "headline": "Kodiak taps AMD for its seventh-generation driverless truck platform",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kodiak-taps-amd-for-its-seventh-generation-driverless-truck-platform",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
