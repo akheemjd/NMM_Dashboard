@@ -1,36 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-294461",
+      "id": "ON-294471",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Left shoulder and left lane closed.",
+      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at MARKHAM ROAD, Toronto. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.79363237,
-      "lng": -79.21586112,
-      "start": 1787878200,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.7868707,
+      "lng": -79.23262544,
+      "start": 1787880180,
       "end": null,
-      "updated": 1787878200
+      "updated": 1787880180
     },
     {
-      "id": "ON-294459",
+      "id": "ON-294469",
       "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound RAMP at DERRY ROAD, Mississauga. 1 centre lane closed.",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound EXPRESS RAMP at 401 EAST EXP, Mississauga. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.658602,
-      "lng": -79.685828,
-      "start": 1787877660,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.63828447,
+      "lng": -79.6545815,
+      "start": 1787879940,
       "end": null,
-      "updated": 1787877660
+      "updated": 1787879940
+    },
+    {
+      "id": "ON-294468",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BASKET WEAVE/JANE ST, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.719549529,
+      "lng": -79.499816895,
+      "start": 1787879820,
+      "end": null,
+      "updated": 1787879820
     },
     {
       "id": "ON-294449",
@@ -783,26 +799,10 @@
       "start": 1789956000,
       "end": 1790420400,
       "updated": 1787854560
-    },
-    {
-      "id": "ON-294265",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 7 Eastbound  between UPPER FLINTON RD and Hwy 41 (Kaladar), Kaladar. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.55852,
-      "lng": -77.25539,
-      "start": 1788267600,
-      "end": 1788282000,
-      "updated": 1787851560
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T00:57:56.655729+00:00",
+  "updated": "2026-08-28T01:29:08.428936+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
