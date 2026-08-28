@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-294895",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at REGIONAL ROAD 25, Milton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.5281053,
+      "lng": -79.90482,
+      "start": 1787958840,
+      "end": null,
+      "updated": 1787960820
+    },
+    {
+      "id": "ON-294896",
+      "province": "ON",
+      "highway": "HWY 102",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 102 Eastbound  at SILVER FALLS RD (N), Thunder Bay. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.533309439,
+      "lng": -89.587866043,
+      "start": 1787959020,
+      "end": null,
+      "updated": 1787959020
+    },
+    {
       "id": "drivebc.ca/DBC-93772",
       "province": "BC",
       "highway": {
@@ -20,43 +52,6 @@
       "start": "2026-07-24T15:03:25-07:00",
       "end": "",
       "updated": "2026-08-28T16:15:03-07:00"
-    },
-    {
-      "id": "drivebc.ca/DBC-93780",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Big Bar Rd",
-        "to": "Pavilion Clinton Rd",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Jesmond Rd, in both directions. Road cleared between Big Bar Rd and Pavilion Clinton Rd. Last updated Fri Aug 28 at 4:14 PM PDT. (DBC-93780)",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.137574,
-      "lng": -121.90665,
-      "start": "2026-07-26T11:34:57-07:00",
-      "end": "",
-      "updated": "2026-08-28T16:14:07-07:00"
-    },
-    {
-      "id": "ON-294895",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at REGIONAL ROAD 25, Milton. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.5281053,
-      "lng": -79.90482,
-      "start": 1787958840,
-      "end": null,
-      "updated": 1787958840
     },
     {
       "id": "ON-294885",
@@ -89,22 +84,6 @@
       "start": 1787958120,
       "end": null,
       "updated": 1787958120
-    },
-    {
-      "id": "ON-294878",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY, Mississauga. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.54569517,
-      "lng": -79.6242423,
-      "start": 1787956200,
-      "end": null,
-      "updated": 1787956200
     },
     {
       "id": "ON-294837",
@@ -414,22 +393,6 @@
       "start": 1788314400,
       "end": 1788512400,
       "updated": 1787939280
-    },
-    {
-      "id": "ON-294705",
-      "province": "ON",
-      "highway": "HWY 102",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 102 Both Directions  between HWYS 11/17 - SISTONEN'S CORNER  - END OF HWY and MAPLEWARD RD -  THUNDER BAY, Thunder Bay. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 48.5338363,
-      "lng": -89.6498099,
-      "start": 1787937660,
-      "end": null,
-      "updated": 1787937660
     },
     {
       "id": "ON-294687",
@@ -814,10 +777,42 @@
       "start": 1787914800,
       "end": 1788303600,
       "updated": 1787865900
+    },
+    {
+      "id": "ON-294402",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Daily Engineering Investigation on HWY 17 Eastbound  between SEC HWY 531-BONFIELD RD, Bonfield and PIMISI BAY PARK ENT, Rutherglen. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.269833,
+      "lng": -79.13994,
+      "start": 1788174000,
+      "end": 1790352000,
+      "updated": 1787865720
+    },
+    {
+      "id": "ON-294577",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound Express between HWY 404 and YONGE ST, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.767586,
+      "lng": -79.33804,
+      "start": 1788235140,
+      "end": 1788339600,
+      "updated": 1787862120
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T23:19:28.677781+00:00",
+  "updated": "2026-08-28T23:50:48.863694+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
