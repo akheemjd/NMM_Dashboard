@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-28 15:00",
-  "updated_iso": "2026-08-28T15:00:18+00:00",
-  "build_version": "1787929218",
+  "updated_at": "2026-08-28 15:31",
+  "updated_iso": "2026-08-28T15:31:44+00:00",
+  "build_version": "1787931104",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "25 min"
+    "max_wait": "45 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 12,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 621, HWY 6, HWY 17",
+    "status_line": "QEW, HWY 409, HWY 404",
     "incidents": [
       {
         "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. Right lane\u2026",
+        "what": "Collision on QEW Toronto bound  at WOODWARD AVE, Hamilton. 1 left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 621",
-        "what": "Highway Maintenance on HWY 621 Northbound  at HWY 11-SLEEMAN, Rainy River. Lane\u2026",
+        "road": "HWY 409",
+        "what": "Highway Maintenance on HWY 409 Eastbound RAMP at ATTWELL DRIVE, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "25 min",
+      "wait": "45 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:09 EDT"
+      "captured_at": "11:18 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "4 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT"
+      "captured_at": "08:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -352,22 +352,6 @@
   ],
   "market": [
     {
-      "name": "Monthly GDP",
-      "note": "$2369B (chained 2017)",
-      "value": "+0.3%",
-      "value_class": "flat",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+2.0%",
-      "value_class": "flat",
-      "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
-    },
-    {
       "name": "Fuel cost per 1,000 km",
       "note": "At 233.1\u00a2/L and 35 L/100km",
       "value": "$816",
@@ -385,8 +369,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
