@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-28 21:14",
-  "updated_iso": "2026-08-28T21:14:44+00:00",
-  "build_version": "1787951684",
+  "updated_at": "2026-08-28 21:45",
+  "updated_iso": "2026-08-28T21:45:56+00:00",
+  "build_version": "1787953556",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 2,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "60 min"
+    "max_wait": "75 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 10,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 404, HWY 40, HWY 401",
+    "status_line": "HWY 401, HWY 400, QEW",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at FRUITLAND ROAD, Hamilton. Left shoulder\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at VICTORIA PARK AVE,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Debris on HWY 404 Southbound  at FINCH AVE, Toronto. 1 right lane and right\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound RAMP at HIGHWAY 7, Vaughan. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,41 +263,41 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "60 min",
+      "wait": "75 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:58 EDT"
+      "captured_at": "17:10 EDT"
     },
     {
       "name": "Blue Water Bridge",
       "slug": "blue-water-bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:08 EDT"
+      "captured_at": "17:33 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "8 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:00 EDT"
+      "captured_at": "17:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 PDT"
+      "captured_at": "14:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:16 EDT"
+      "captured_at": "17:15 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "5 of 9 crossings slow",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Reading Truck Equipment, Masterack combine upfit operations",
-      "url": "https://www.trucknews.com/transportation/reading-truck-equipment-masterack-combine-upfit-operations/1003220728/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "CBP seizes meth worth $10.75 million from truck hauling leeks at Texas border crossing",
-      "url": "https://www.trucknews.com/security/cbp-seizes-meth-worth-10-75-million-from-truck-hauling-leeks-at-texas-border-crossing/1003220723/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "Trucking Info",
+      "headline": "What the U.S.-Canada Trade War Means for Trucking",
+      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
