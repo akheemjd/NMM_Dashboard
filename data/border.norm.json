@@ -1,13 +1,13 @@
 {
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min"
+    "max_wait": "30 min"
   },
   "border_rows": [
     {
@@ -34,21 +34,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "12 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -58,7 +58,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:11 EDT"
+      "captured_at": "00:17 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -74,11 +74,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -88,7 +88,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 CDT"
+      "captured_at": "23:28 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -98,7 +98,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     }
   ],
   "crossings": [
@@ -126,21 +126,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "12 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -150,7 +150,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:11 EDT"
+      "captured_at": "00:17 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -166,11 +166,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -180,7 +180,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 CDT"
+      "captured_at": "23:28 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -190,11 +190,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     }
   ],
-  "updated_at": "2026-08-28 04:05",
-  "updated_iso": "2026-08-28T04:05:26+00:00",
-  "build_version": "1787889926",
-  "captured_at": "2026-08-28 04:05"
+  "updated_at": "2026-08-28 04:36",
+  "updated_iso": "2026-08-28T04:36:24+00:00",
+  "build_version": "1787891784",
+  "captured_at": "2026-08-28 04:36"
 }
