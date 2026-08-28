@@ -1,20 +1,57 @@
 {
   "incidents": [
     {
-      "id": "ON-294693",
+      "id": "ON-294709",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at VICTORIA PARK AVE, Toronto. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.76817728,
+      "lng": -79.31964942,
+      "start": 1787938380,
+      "end": null,
+      "updated": 1787938380
+    },
+    {
+      "id": "ON-294705",
       "province": "ON",
       "highway": "HWY 102",
       "direction": "Both Directions",
-      "description": "Collision on HWY 102 Both Directions  at SILVER FALLS RD (N), Thunder Bay. All lanes closed.",
+      "description": "Collision on HWY 102 Both Directions  between HWYS 11/17 - SISTONEN'S CORNER  - END OF HWY and MAPLEWARD RD -  THUNDER BAY, Thunder Bay. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 48.533309439,
-      "lng": -89.587866043,
-      "start": 1787935500,
+      "lat": 48.5338363,
+      "lng": -89.6498099,
+      "start": 1787937660,
       "end": null,
-      "updated": 1787935500
+      "updated": 1787937660
+    },
+    {
+      "id": "drivebc.ca/RIDE-101775",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "RW Bruhn Bridge",
+        "direction": "BOTH",
+        "state": "CLOSED"
+      },
+      "direction": "",
+      "description": "Police incident at Highway 1, In Sicamous and Bruhn Bridge. Bridge closed. Watch for traffic control. Expect delays. Last update: August 28th, 2026 at 10:03am PDT. Next update: August 28th, 2026 at 12:00pm PDT. Use Highway 97A and Highway 97B as alternate routes. No estimated time of reopening.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.83605538,
+      "lng": -118.99389069,
+      "start": "2026-08-28T08:46:41-07:00",
+      "end": "",
+      "updated": "2026-08-28T10:03:54-07:00"
     },
     {
       "id": "ON-294588",
@@ -63,6 +100,22 @@
       "start": 1788436800,
       "end": 1788548400,
       "updated": 1787933820
+    },
+    {
+      "id": "ON-294700",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Daily Construction on HWY 401 Eastbound  between LIBERTY ST and HWY 35/115, Clarington. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.89879,
+      "lng": -78.67506,
+      "start": 1788267600,
+      "end": 1788458400,
+      "updated": 1787933580
     },
     {
       "id": "ON-294540",
@@ -751,58 +804,10 @@
       "start": 1789995600,
       "end": 1790276400,
       "updated": 1787855640
-    },
-    {
-      "id": "ON-294322",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Daily Moving Maintenance Closure on HWY 11 Northbound  between LACLIE STREET, Orillia and SEVERN RIVER BRIDGE/WEST BRANCH, Severn. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.642235,
-      "lng": -79.42286,
-      "start": 1789995600,
-      "end": 1790280000,
-      "updated": 1787855580
-    },
-    {
-      "id": "ON-294326",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Daily Moving Maintenance Closure on HWY 11 Southbound  between SEVERN RIVER BRIDGE/WEST BRANCH, Severn and LACLIE STREET, Orillia. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.762962,
-      "lng": -79.33468,
-      "start": 1789995600,
-      "end": 1790280000,
-      "updated": 1787855580
-    },
-    {
-      "id": "ON-294315",
-      "province": "ON",
-      "highway": "HWY 93",
-      "direction": "Southbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 93 Southbound  between HWY 12/ANGELA SCHMIDT FOSTER ROAD, Tay and HWY 400, Springwater. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.718716,
-      "lng": -79.89774,
-      "start": 1789948800,
-      "end": 1790420400,
-      "updated": 1787855520
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T17:05:03.127594+00:00",
+  "updated": "2026-08-28T17:36:14.767643+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
