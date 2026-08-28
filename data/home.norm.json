@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-28 10:19",
-  "updated_iso": "2026-08-28T10:19:30+00:00",
-  "build_version": "1787912370",
+  "updated_at": "2026-08-28 10:50",
+  "updated_iso": "2026-08-28T10:50:42+00:00",
+  "build_version": "1787914242",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401",
+    "status_line": "HWY 11, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Highway Maintenance on HWY 401 Eastbound ON-RAMP at WINSTON CHURCHILL BLVD,\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Southbound  at SEC HWY 582 (S JCT) (E) - TO HURKETT,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Eastbound COLLECTOR at EAST OF WINSTON CHURCHILL BLVD,\u2026",
+        "what": "Highway Maintenance on HWY 401 Eastbound ON-RAMP at WINSTON CHURCHILL BLVD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 PDT"
+      "captured_at": "03:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 CDT"
+      "captured_at": "05:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     }
   ],
   "market": [
@@ -402,11 +402,11 @@
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "industry",
+      "category": "equipment",
       "source": "The Trucker",
-      "headline": "Duffy says \u2018Corridors of Commerce\u2019 will transform highways into multi-use arteries",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/duffy-says-corridors-of-commerce-will-transform-highways-into-multi-use-arteries",
-      "why": "Industry movement worth tracking."
+      "headline": "Trucker killed in single-vehicle crash in Idaho",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-killed-in-single-vehicle-crash-in-idaho",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
