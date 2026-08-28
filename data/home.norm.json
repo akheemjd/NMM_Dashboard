@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-28 03:02",
-  "updated_iso": "2026-08-28T03:02:49+00:00",
-  "build_version": "1787886169",
+  "updated_at": "2026-08-28 03:33",
+  "updated_iso": "2026-08-28T03:33:59+00:00",
+  "build_version": "1787888039",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "19 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 5",
+    "status_line": "HWY 35/1, HWY 401, HWY 400, HWY 5",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. 1 centre\u2026",
+        "road": "HWY 35/115",
+        "what": "Disabled Vehicle on HWY 35/115 Southbound  at HWY 2, Clarington. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 5",
-        "what": "Collision on HWY 5 Westbound  at OFIELD ROAD / W FLAMBORO TWP RD 13/14,\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at MORNINGSIDE AVE, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 EDT"
+      "captured_at": "23:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "19 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:45 EDT"
+      "captured_at": "23:11 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 PDT"
+      "captured_at": "20:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 CDT"
+      "captured_at": "22:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
