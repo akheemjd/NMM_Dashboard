@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-28 10:50",
-  "updated_iso": "2026-08-28T10:50:42+00:00",
-  "build_version": "1787914242",
+  "updated_at": "2026-08-28 11:21",
+  "updated_iso": "2026-08-28T11:21:52+00:00",
+  "build_version": "1787916112",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min"
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 EDT"
+      "captured_at": "07:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT"
+      "captured_at": "04:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -404,8 +404,8 @@
     {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Trucker killed in single-vehicle crash in Idaho",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-killed-in-single-vehicle-crash-in-idaho",
+      "headline": "Bot Auto to use U.S.-based remote assistants for its autonomous trucking operations",
+      "url": "https://www.thetrucker.com/trucking-news/business/bot-auto-to-use-u-s-based-remote-assistants-for-its-autonomous-trucking-operations",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
