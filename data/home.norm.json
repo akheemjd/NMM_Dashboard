@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-28 14:29",
-  "updated_iso": "2026-08-28T14:29:06+00:00",
-  "build_version": "1787927346",
+  "updated_at": "2026-08-28 15:00",
+  "updated_iso": "2026-08-28T15:00:18+00:00",
+  "build_version": "1787929218",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 401, HWY 409, HWY 400",
+    "status_line": "QEW, HWY 621, HWY 6, HWY 17",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Collision on HWY 403 MISSISSAUGA Eastbound RAMP at HWY 10 / HURONTARIO STREET,\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Left\u2026",
+        "road": "HWY 621",
+        "what": "Highway Maintenance on HWY 621 Northbound  at HWY 11-SLEEMAN, Rainy River. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:00 PDT"
+      "captured_at": "07:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "The Auction Company joins Yoder & Frey, expands reach for heavy truck and equipment auctions",
+      "url": "https://www.trucknews.com/equipment/the-auction-company-joins-yoder-frey-expands-reach-for-heavy-truck-and-equipment-auctions/1003220646/",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "markets",
       "source": "The Trucker",
       "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
       "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Saskatchewan steps up truck inspections during Brake Safety Week",
-      "url": "https://www.trucknews.com/regulations/saskatchewan-steps-up-truck-inspections-during-brake-safety-week/1003220641/",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
