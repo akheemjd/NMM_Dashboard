@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-294743",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound ON-RAMP at MORNINGSIDE AVE, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.797057,
+      "lng": -79.196496,
+      "start": 1787943360,
+      "end": null,
+      "updated": 1787943360
+    },
+    {
+      "id": "ON-294740",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON ROAD, Toronto. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.69381372,
+      "lng": -79.56746367,
+      "start": 1787943120,
+      "end": null,
+      "updated": 1787943120
+    },
+    {
       "id": "ON-294727",
       "province": "ON",
       "highway": "HWY 401",
@@ -49,22 +81,6 @@
       "updated": 1787941560
     },
     {
-      "id": "ON-294724",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at ISLINGTON AVE, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.70943894,
-      "lng": -79.55241593,
-      "start": 1787941200,
-      "end": null,
-      "updated": 1787941200
-    },
-    {
       "id": "ON-294723",
       "province": "ON",
       "highway": "HWY 404",
@@ -79,22 +95,6 @@
       "start": 1787941080,
       "end": null,
       "updated": 1787941080
-    },
-    {
-      "id": "ON-294720",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 403 MISSISSAUGA Westbound RAMP at EASTGATE/CAWTHRA, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.62064566,
-      "lng": -79.63623733,
-      "start": 1787940360,
-      "end": null,
-      "updated": 1787940360
     },
     {
       "id": "ON-294716",
@@ -127,27 +127,6 @@
       "start": 1787937660,
       "end": null,
       "updated": 1787937660
-    },
-    {
-      "id": "drivebc.ca/RIDE-101775",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "RW Bruhn Bridge",
-        "direction": "BOTH",
-        "state": "CLOSED"
-      },
-      "direction": "",
-      "description": "Police incident at Highway 1, In Sicamous and Bruhn Bridge. Bridge closed. Watch for traffic control. Expect delays. Last update: August 28th, 2026 at 10:03am PDT. Next update: August 28th, 2026 at 12:00pm PDT. Use Highway 97A and Highway 97B as alternate routes. No estimated time of reopening.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.83605538,
-      "lng": -118.99389069,
-      "start": "2026-08-28T08:46:41-07:00",
-      "end": "",
-      "updated": "2026-08-28T10:03:54-07:00"
     },
     {
       "id": "ON-294687",
@@ -804,10 +783,26 @@
       "start": 1789995600,
       "end": 1790276400,
       "updated": 1787855820
+    },
+    {
+      "id": "ON-294321",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Daily Moving Maintenance Closure on HWY 26 Westbound  between CARSON ROAD, Springwater and POPLAR SIDEROAD, Clearview. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.42869,
+      "lng": -79.7241,
+      "start": 1789995600,
+      "end": 1790276400,
+      "updated": 1787855820
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T18:38:50.660042+00:00",
+  "updated": "2026-08-28T19:09:50.712032+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
