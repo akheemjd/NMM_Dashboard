@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-294495",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at ISLINGTON AVE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.70935828,
+      "lng": -79.55216537,
+      "start": 1787902080,
+      "end": null,
+      "updated": 1787902080
+    },
+    {
       "id": "ON-294493",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1788138000,
       "end": 1788339600,
       "updated": 1787848500
-    },
-    {
-      "id": "ON-294374",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 403 MISSISSAUGA Eastbound  between ERIN MILLS PKWY and HWY 10 / HURONTARIO STREET, Mississauga. 2 Left(with HOV) Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Left(with HOV) Lane(s)",
-      "lat": 43.55404,
-      "lng": -79.696594,
-      "start": 1788138000,
-      "end": 1788512400,
-      "updated": 1787847660
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T07:12:17.045797+00:00",
+  "updated": "2026-08-28T07:43:28.657029+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
