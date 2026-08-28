@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-28 16:33",
-  "updated_iso": "2026-08-28T16:33:54+00:00",
-  "build_version": "1787934834",
+  "updated_at": "2026-08-28 17:05",
+  "updated_iso": "2026-08-28T17:05:07+00:00",
+  "build_version": "1787936707",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -240,11 +240,11 @@
     "none": false,
     "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 621, HWY 6, HWY 17",
+    "status_line": "HWY 102, HWY 621, HWY 6, HWY 17",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at NIKOLA TESLA, Hamilton. Left shoulder and 1\u2026",
+        "road": "HWY 102",
+        "what": "Collision on HWY 102 Both Directions  at SILVER FALLS RD (N), Thunder Bay. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,27 +267,27 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:18 EDT"
+      "captured_at": "12:26 EDT"
     },
     {
       "name": "Blue Water Bridge",
       "slug": "blue-water-bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "12:31 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:45 EDT"
+      "captured_at": "12:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 PDT"
+      "captured_at": "09:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "5 of 9 crossings slow",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "CBP seizes meth worth $10.75 million from truck hauling leeks at Texas border crossing",
+      "url": "https://www.trucknews.com/security/cbp-seizes-meth-worth-10-75-million-from-truck-hauling-leeks-at-texas-border-crossing/1003220723/",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "industry",
       "source": "Truck News",
       "headline": "Athens opens its doors, and the crowds flock in",
       "url": "https://www.trucknews.com/equipment/athens-opens-its-doors-and-the-crowds-flock-in/1003220653/",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "The Auction Company joins Yoder & Frey, expands reach for heavy truck and equipment auctions",
-      "url": "https://www.trucknews.com/equipment/the-auction-company-joins-yoder-frey-expands-reach-for-heavy-truck-and-equipment-auctions/1003220646/",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
