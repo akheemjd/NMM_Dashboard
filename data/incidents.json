@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-294471",
+      "id": "ON-294474",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at MARKHAM ROAD, Toronto. All lanes closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BRONTE ROAD, Oakville. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.7868707,
-      "lng": -79.23262544,
-      "start": 1787880180,
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.41325013,
+      "lng": -79.73744222,
+      "start": 1787882040,
       "end": null,
-      "updated": 1787880180
+      "updated": 1787882040
     },
     {
       "id": "ON-294469",
@@ -31,22 +31,6 @@
       "start": 1787879940,
       "end": null,
       "updated": 1787879940
-    },
-    {
-      "id": "ON-294468",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BASKET WEAVE/JANE ST, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.719549529,
-      "lng": -79.499816895,
-      "start": 1787879820,
-      "end": null,
-      "updated": 1787879820
     },
     {
       "id": "ON-294449",
@@ -799,10 +783,26 @@
       "start": 1789956000,
       "end": 1790420400,
       "updated": 1787854560
+    },
+    {
+      "id": "ON-294265",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 7 Eastbound  between UPPER FLINTON RD and Hwy 41 (Kaladar), Kaladar. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.55852,
+      "lng": -77.25539,
+      "start": 1788267600,
+      "end": 1788282000,
+      "updated": 1787851560
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T01:29:08.428936+00:00",
+  "updated": "2026-08-28T02:00:20.452942+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
