@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-294482",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at WHITES ROAD, Pickering. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.81674829,
+      "lng": -79.11498161,
+      "start": 1787889360,
+      "end": null,
+      "updated": 1787889360
+    },
+    {
       "id": "ON-294480",
       "province": "ON",
       "highway": "HWY 35/115",
@@ -31,22 +47,6 @@
       "start": 1787886720,
       "end": null,
       "updated": 1787886720
-    },
-    {
-      "id": "ON-294476",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.81034617,
-      "lng": -79.54373723,
-      "start": 1787885220,
-      "end": null,
-      "updated": 1787885220
     },
     {
       "id": "ON-294449",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T03:33:55.164350+00:00",
+  "updated": "2026-08-28T04:05:22.115935+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
