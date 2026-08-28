@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-294500",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 401 Eastbound ON-RAMP at WINSTON CHURCHILL BLVD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.6000223,
+      "lng": -79.7882079,
+      "start": 1787910360,
+      "end": null,
+      "updated": 1787910360
+    },
+    {
       "id": "ON-294493",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1788138000,
       "end": 1788339600,
       "updated": 1787848500
-    },
-    {
-      "id": "ON-294374",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 403 MISSISSAUGA Eastbound  between ERIN MILLS PKWY and HWY 10 / HURONTARIO STREET, Mississauga. 2 Left(with HOV) Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Left(with HOV) Lane(s)",
-      "lat": 43.55404,
-      "lng": -79.696594,
-      "start": 1788138000,
-      "end": 1788512400,
-      "updated": 1787847660
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T09:48:14.675358+00:00",
+  "updated": "2026-08-28T10:19:26.895856+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
