@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-28 02:00",
-  "updated_iso": "2026-08-28T02:00:24+00:00",
-  "build_version": "1787882424",
+  "updated_at": "2026-08-28 02:31",
+  "updated_iso": "2026-08-28T02:31:35+00:00",
+  "build_version": "1787884295",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "35 min"
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 403 , HWY 5",
+    "status_line": "HWY 5",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at BRONTE ROAD, Oakville. Right\u2026",
+        "road": "HWY 5",
+        "what": "Collision on HWY 5 Westbound  at OFIELD ROAD / W FLAMBORO TWP RD 13/14,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound EXPRESS RAMP at 401 EAST EXP,\u2026",
+        "road": "HWY 5",
+        "what": "Collision on HWY 5 Eastbound  at BROCK ROAD / HAM/WENT ROAD 504, Hamilton. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "35 min",
+      "wait": "20 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT"
+      "captured_at": "20:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:35 EDT"
+      "captured_at": "22:15 EDT"
     }
   ],
   "market": [
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "regulations",
+      "source": "Truck News",
+      "headline": "Bill would give FMCSA more enforcement tools on non-domiciled CDLs",
+      "url": "https://www.trucknews.com/transportation/non-domiciled-cdls-2/1003220631/",
+      "why": "Rules change compliance cost and driver hours."
+    },
+    {
       "category": "industry",
       "source": "Truck News",
       "headline": "ATA urges Pentagon to strengthen oversight of military shipments",
       "url": "https://www.trucknews.com/transportation/ata-urges-pentagon-to-strengthen-oversight-of-military-shipments/1003220629/",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Missouri kicks off I-70 truck parking expansion project",
-      "url": "https://www.trucknews.com/transportation/missouri-kicks-off-i-70-truck-parking-expansion-project/1003220625/",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
