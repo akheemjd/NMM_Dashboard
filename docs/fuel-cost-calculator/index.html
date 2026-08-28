@@ -17,10 +17,10 @@
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/fuel-cost-calculator/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-08-28T18:07:30+00:00">
+<meta name="build" content="2026-08-28T18:38:54+00:00">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/nm.css?v=1787940450">
+<link rel="stylesheet" href="/assets/nm.css?v=1787942334">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Fuel cost calculator","item":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/"}]},{"@type":"WebApplication","name":"Truck Fuel Cost Calculator","url":"https://dashboard.northernmilemedia.com/fuel-cost-calculator/","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"creator":{"@id":"https://northernmilemedia.com/#org"},"description":"Calculates trip diesel cost from distance, fuel consumption, and current Canadian provincial diesel prices."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate truck fuel cost per kilometre?","acceptedAnswer":{"@type":"Answer","text":"Multiply your fuel consumption in litres per 100 kilometres by the diesel price per litre, then divide by 100. At 35 litres per 100 kilometres and diesel at 2.00 dollars per litre, that is 70 cents per kilometre."}},{"@type":"Question","name":"What fuel consumption should I use for a loaded tractor-trailer?","acceptedAnswer":{"@type":"Answer","text":"Use your own figure from your own fuel records. Consumption varies widely with load weight, terrain, season, speed, and equipment, so any single assumed number would be wrong for most operators. This calculator does not assume one."}}]}]}
 </script>
@@ -51,13 +51,13 @@
       <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div><p class="hint" id="distHint">Pick a lane above and this fills in automatically — or type the distance you know.</p></div>
       <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
-        <option value="233.1" data-name="National average">National average — 233.1¢/L</option>
-        <option value="209.2" data-name="Saskatchewan" data-code="SK">Saskatchewan — 209.2¢/L</option><option value="210.6" data-name="Alberta" data-code="AB">Alberta — 210.6¢/L</option><option value="217.1" data-name="Manitoba" data-code="MB">Manitoba — 217.1¢/L</option><option value="222.8" data-name="Ontario" data-code="ON">Ontario — 222.8¢/L</option><option value="241.2" data-name="Newfoundland" data-code="NL">Newfoundland — 241.2¢/L</option><option value="241.5" data-name="British Columbia" data-code="BC">British Columbia — 241.5¢/L</option><option value="241.5" data-name="New Brunswick" data-code="NB">New Brunswick — 241.5¢/L</option><option value="244.1" data-name="Nova Scotia" data-code="NS">Nova Scotia — 244.1¢/L</option><option value="247.1" data-name="PEI" data-code="PE">PEI — 247.1¢/L</option><option value="255.8" data-name="Quebec" data-code="QC">Quebec — 255.8¢/L</option>
+        <option value="233.0" data-name="National average">National average — 233.0¢/L</option>
+        <option value="209.1" data-name="Saskatchewan" data-code="SK">Saskatchewan — 209.1¢/L</option><option value="210.5" data-name="Alberta" data-code="AB">Alberta — 210.5¢/L</option><option value="217.0" data-name="Manitoba" data-code="MB">Manitoba — 217.0¢/L</option><option value="222.7" data-name="Ontario" data-code="ON">Ontario — 222.7¢/L</option><option value="241.6" data-name="Newfoundland" data-code="NL">Newfoundland — 241.6¢/L</option><option value="241.7" data-name="British Columbia" data-code="BC">British Columbia — 241.7¢/L</option><option value="242.6" data-name="New Brunswick" data-code="NB">New Brunswick — 242.6¢/L</option><option value="242.7" data-name="Nova Scotia" data-code="NS">Nova Scotia — 242.7¢/L</option><option value="246.3" data-name="PEI" data-code="PE">PEI — 246.3¢/L</option><option value="256.0" data-name="Quebec" data-code="QC">Quebec — 256.0¢/L</option>
         <option value="207.0" data-name="US national average" data-code="US">US national average — 207.0¢/L</option>
         <option value="201.3" data-name="East Coast (PADD 1)" data-code="east_coast">East Coast (PADD 1) — 201.3¢/L</option><option value="206.4" data-name="Midwest (PADD 2)" data-code="midwest">Midwest (PADD 2) — 206.4¢/L</option><option value="200.7" data-name="Gulf Coast (PADD 3)" data-code="gulf_coast">Gulf Coast (PADD 3) — 200.7¢/L</option><option value="202.7" data-name="Rocky Mountain (PADD 4)" data-code="rocky_mountain">Rocky Mountain (PADD 4) — 202.7¢/L</option><option value="234.6" data-name="West Coast (PADD 5)" data-code="west_coast">West Coast (PADD 5) — 234.6¢/L</option>
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
-      <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="233.1"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
+      <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="233.0"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
       <div class="fld"><label for="opcost">Fixed operating cost</label><div class="inp"><input id="opcost" type="number" inputmode="decimal" min="0" step="0.01" value="1.85"><span class="unit">$/mi</span></div><p class="hint">Truck payment, insurance, driver pay, maintenance — your all-in cost per mile before fuel. Pull it from your own books.</p></div>
     </div>
     <div class="out">
@@ -105,10 +105,10 @@
 <footer class="ft"><div class="wrap">
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
   <nav class="flinks" aria-label="Footer"><a href="/freight-barometer/">Barometer</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a></nav>
-  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-08-28 18:07 UTC</span></div>
+  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-08-28 18:38 UTC</span></div>
 </div></footer>
 
-<script src="/assets/nm.js?v=1787940450"></script>
+<script src="/assets/nm.js?v=1787942334"></script>
 <script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
 var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost"),origin=$("origin"),dest=$("dest");
