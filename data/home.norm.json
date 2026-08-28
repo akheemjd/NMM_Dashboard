@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-28 22:17",
-  "updated_iso": "2026-08-28T22:17:16+00:00",
-  "build_version": "1787955436",
+  "updated_at": "2026-08-28 22:48",
+  "updated_iso": "2026-08-28T22:48:20+00:00",
+  "build_version": "1787957300",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 5, HWY 407, QEW",
+    "status_line": "QEW, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 5",
-        "what": "Collision on HWY 5 Eastbound  at HIGHWAY 8 / PETER'S CORNERS, Hamilton. Right\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at ERIN MILLS PKWY, Mississauga. 2 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 407",
-        "what": "Collision on HWY 407 Westbound  at BALDWIN ST S, Whitby. Left shoulder and 2\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at QEW, Oakville. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "12 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 EDT"
+      "captured_at": "18:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 PDT"
+      "captured_at": "15:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:05 CDT"
+      "captured_at": "17:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Reading Truck Equipment, Masterack combine upfit operations",
-      "url": "https://www.trucknews.com/transportation/reading-truck-equipment-masterack-combine-upfit-operations/1003220728/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "CBP seizes meth worth $10.75 million from truck hauling leeks at Texas border crossing",
-      "url": "https://www.trucknews.com/security/cbp-seizes-meth-worth-10-75-million-from-truck-hauling-leeks-at-texas-border-crossing/1003220723/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "Trucking Info",
+      "headline": "What the U.S.-Canada Trade War Means for Trucking",
+      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
