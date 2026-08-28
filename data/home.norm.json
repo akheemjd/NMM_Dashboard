@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-28 13:57",
-  "updated_iso": "2026-08-28T13:57:52+00:00",
-  "build_version": "1787925472",
+  "updated_at": "2026-08-28 14:29",
+  "updated_iso": "2026-08-28T14:29:06+00:00",
+  "build_version": "1787927346",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_wait": "25 min"
   },
   "fuel": {
     "national_diesel": "233.1",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 26, HWY 6, HWY 17",
+    "status_line": "HWY 403 , HWY 401, HWY 409, HWY 400",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at SHEPPARD AVENUE, Toronto. 2 right lanes and\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Eastbound RAMP at HWY 10 / HURONTARIO STREET,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 26",
-        "what": "Emergency Roadwork on HWY 26 Eastbound  at CARSON ROAD, Springwater. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 EDT"
+      "captured_at": "10:09 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 EDT"
+      "captured_at": "10:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 MDT"
+      "captured_at": "08:18 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT"
+      "captured_at": "09:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,10 +347,26 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "10:15 EDT"
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2369B (chained 2017)",
+      "value": "+0.3%",
+      "value_class": "flat",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+2.0%",
+      "value_class": "flat",
+      "source": "Statistics Canada",
+      "what_it_means": "Longer-term freight demand trend."
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 233.1\u00a2/L and 35 L/100km",
@@ -379,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "equipment",
       "source": "Truck News",
       "headline": "Saskatchewan steps up truck inspections during Brake Safety Week",
       "url": "https://www.trucknews.com/regulations/saskatchewan-steps-up-truck-inspections-during-brake-safety-week/1003220641/",
       "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "regulations",
-      "source": "Truck News",
-      "headline": "Bill would give FMCSA more enforcement tools on non-domiciled CDLs",
-      "url": "https://www.trucknews.com/transportation/non-domiciled-cdls-2/1003220631/",
-      "why": "Rules change compliance cost and driver hours."
     }
   ],
   "theft_home_json": "[]",
