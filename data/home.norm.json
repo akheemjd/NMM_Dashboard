@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-28 16:02",
-  "updated_iso": "2026-08-28T16:02:41+00:00",
-  "build_version": "1787932961",
+  "updated_at": "2026-08-28 16:33",
+  "updated_iso": "2026-08-28T16:33:54+00:00",
+  "build_version": "1787934834",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 401, HWY 621, HWY 6",
+    "status_line": "QEW, HWY 621, HWY 6, HWY 17",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound  at MAJOR MACKENZIE DRIVE, Vaughan.\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at NIKOLA TESLA, Hamilton. Left shoulder and 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at AVENUE ROAD, Toronto. 1\u2026",
+        "road": "HWY 621",
+        "what": "Highway Maintenance on HWY 621 Northbound  at HWY 11-SLEEMAN, Rainy River. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "4 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:18 MDT"
+      "captured_at": "10:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT"
+      "captured_at": "09:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "12:15 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
