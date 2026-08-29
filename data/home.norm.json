@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-29 11:48",
-  "updated_iso": "2026-08-29T11:48:19+00:00",
-  "build_version": "1788004099",
+  "updated_at": "2026-08-29 12:19",
+  "updated_iso": "2026-08-29T12:19:32+00:00",
+  "build_version": "1788005972",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "22 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -240,11 +240,11 @@
     "none": false,
     "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 61",
+    "status_line": "HWY 401, HWY 61",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound RAMP at 401 WEST COLL, Toronto. Left shoulder\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound TRANSFER at Bayview Express to Collector,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "22 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 EDT"
+      "captured_at": "08:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:20 PDT"
+      "captured_at": "05:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
-      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Reading Truck Equipment, Masterack combine upfit operations",
+      "url": "https://www.trucknews.com/transportation/reading-truck-equipment-masterack-combine-upfit-operations/1003220728/",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
-      "category": "markets",
-      "source": "Trucking Info",
-      "headline": "What the U.S.-Canada Trade War Means for Trucking",
-      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "CBP seizes meth worth $10.75 million from truck hauling leeks at Texas border crossing",
+      "url": "https://www.trucknews.com/security/cbp-seizes-meth-worth-10-75-million-from-truck-hauling-leeks-at-texas-border-crossing/1003220723/",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
