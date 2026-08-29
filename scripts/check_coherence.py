@@ -60,7 +60,13 @@ def main():
     no_chrome = []
 
     for p in pages:
-        rel = p.replace(DOCS, "") or "/"
+        rel = os.path.relpath(p, DOCS)
+        if rel == ".":
+            rel = "/"
+        else:
+            # Normalize to forward slashes so comparisons against CHART_ALLOWED work on all OSes
+            rel = rel.replace("\\", "/")
+            rel = f"/{rel}"
         html = open(p, encoding="utf-8").read()
 
         h = chrome(html)
