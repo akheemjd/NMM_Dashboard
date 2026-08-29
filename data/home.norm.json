@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-29 14:55",
-  "updated_iso": "2026-08-29T14:55:35+00:00",
-  "build_version": "1788015335",
+  "updated_at": "2026-08-29 15:26",
+  "updated_iso": "2026-08-29T15:26:47+00:00",
+  "build_version": "1788017207",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 3,
     "gauge_class": "warn",
     "status_line": "HWY 401, HWY 400, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at HWY 409, Toronto. Right\u2026",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 2 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at ISLINGTON AVE, Toronto.\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at MAPLEVIEW DRIVE, Barrie. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:22 EDT"
+      "captured_at": "10:52 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT"
+      "captured_at": "11:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT"
+      "captured_at": "08:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 CDT"
+      "captured_at": "10:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -402,11 +402,11 @@
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Reading Truck Equipment, Masterack combine upfit operations",
-      "url": "https://www.trucknews.com/transportation/reading-truck-equipment-masterack-combine-upfit-operations/1003220728/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
+      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
