@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-29 15:58",
-  "updated_iso": "2026-08-29T15:58:01+00:00",
-  "build_version": "1788019081",
+  "updated_at": "2026-08-29 16:29",
+  "updated_iso": "2026-08-29T16:29:13+00:00",
+  "build_version": "1788020953",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 409, HWY 61",
+    "status_line": "HWY 48, HWY 401, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. Left\u2026",
+        "road": "HWY 48",
+        "what": "Collision on HWY 48 Southbound  at BALDWIN ROAD, Baldwin. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 409",
-        "what": "Disabled Vehicle on HWY 409 Westbound  at MARTIN GROVE ROAD, Toronto. Right\u2026",
+        "road": "HWY 48",
+        "what": "Collision on HWY 48 Northbound  at CRYDERMAN SIDEROAD, Baldwin. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:45 EDT"
+      "captured_at": "12:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 MDT"
+      "captured_at": "10:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT"
+      "captured_at": "09:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "12:15 EDT"
     }
   ],
   "market": [
