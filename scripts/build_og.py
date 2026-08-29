@@ -15,11 +15,32 @@ INK = "#FFFFFF"
 MUTED = "#C8CFD8"
 AMBER = "#F5C518"
 
-FONT_DIR = "/usr/share/fonts/truetype/dejavu"
+# Cross-platform font detection. On Linux this may point to DejaVu; on Windows fall back to system fonts.
+import sys as _sys
+if _sys.platform == "win32":
+    FONT_DIR = None  # use fallback below
+else:
+    FONT_DIR = "/usr/share/fonts/truetype/dejavu"
 
 
 def font(name, size):
-    return ImageFont.truetype(os.path.join(FONT_DIR, name), size)
+    # Try the configured directory first
+    if FONT_DIR and os.path.isfile(os.path.join(FONT_DIR, name)):
+        return ImageFont.truetype(os.path.join(FONT_DIR, name), size)
+    # Windows fallbacks — Calibri, Arial, Segoe UI
+    win_fallbacks = [
+        "C:/Windows/Fonts/calibri.ttf",
+        "C:/Windows/Fonts/calibrib.ttf",
+        "C:/Windows/Fonts/arial.ttf",
+        "C:/Windows/Fonts/seguiemj.ttf",
+    ]
+    for path in win_fallbacks:
+        try:
+            return ImageFont.truetype(path, size)
+        except OSError:
+            continue
+    # Last resort: PIL default (will look ugly but won't crash)
+    return ImageFont.load_default()
 
 
 def build_fuel_card():
