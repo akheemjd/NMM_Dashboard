@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-29 01:55",
-  "updated_iso": "2026-08-29T01:55:32+00:00",
-  "build_version": "1787968532",
+  "updated_at": "2026-08-29 02:26",
+  "updated_iso": "2026-08-29T02:26:44+00:00",
+  "build_version": "1787970404",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 3,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "75 min"
+    "max_wait": "50 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 102",
+    "status_line": "HWY 401, HWY 102, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at YONGE ST, Toronto. Left shoulder\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at DUFFERIN STREET, Toronto. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Right\u2026",
+        "what": "Collision on HWY 401 Eastbound  at Duart Rd, West Lorne. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "75 min",
+      "wait": "50 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:11 EDT"
+      "captured_at": "22:12 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "14 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:39 CDT"
+      "captured_at": "20:50 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
