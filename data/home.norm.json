@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-29 02:57",
-  "updated_iso": "2026-08-29T02:57:55+00:00",
-  "build_version": "1787972275",
+  "updated_at": "2026-08-29 03:29",
+  "updated_iso": "2026-08-29T03:29:08+00:00",
+  "build_version": "1787974148",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 3,
+    "heavy_count": 2,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "50 min"
+    "max_name": "Blue Water Bridge",
+    "max_wait": "45 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 102",
+    "status_line": "HWY 17, GARDINER, HWY 401, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound  at BROCK ROAD, Pickering. 1 right lane\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Both Directions  at W JCT PARK DR (N), Markstay. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at HWY 6 SOUTH, Puslinch. Right lane and\u2026",
+        "road": "GARDINER EXPWY",
+        "what": "Collision on GARDINER EXPWY Westbound COLLECTOR at KIPLING AVENUE, Toronto. 2\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,31 +263,31 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "50 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:12 EDT"
+      "captured_at": "23:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
       "slug": "blue-water-bridge",
       "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
-      "wait": "30 min",
+      "wait": "45 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:10 EDT"
+      "captured_at": "23:08 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 EDT"
+      "captured_at": "23:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "30 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 PDT"
+      "captured_at": "20:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:50 CDT"
+      "captured_at": "22:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 EDT"
+      "captured_at": "23:15 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "5 of 9 crossings slow",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
-      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Reading Truck Equipment, Masterack combine upfit operations",
+      "url": "https://www.trucknews.com/transportation/reading-truck-equipment-masterack-combine-upfit-operations/1003220728/",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
-      "category": "markets",
-      "source": "Trucking Info",
-      "headline": "What the U.S.-Canada Trade War Means for Trucking",
-      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "CBP seizes meth worth $10.75 million from truck hauling leeks at Texas border crossing",
+      "url": "https://www.trucknews.com/security/cbp-seizes-meth-worth-10-75-million-from-truck-hauling-leeks-at-texas-border-crossing/1003220723/",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
