@@ -1,20 +1,62 @@
 {
   "incidents": [
     {
-      "id": "ON-294895",
+      "id": "drivebc.ca/RIDE-101798",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 1, In Burnaby and Gaglardi Way. HOV lane closed. Left lane blocked. Centre lane blocked. Last update: August 28th, 2026 at 5:14pm PDT. Next update: August 28th, 2026 at 6:15pm PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.24313423,
+      "lng": -122.91382081,
+      "start": "2026-08-28T17:13:00-07:00",
+      "end": "",
+      "updated": "2026-08-28T17:14:35-07:00"
+    },
+    {
+      "id": "ON-294909",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at REGIONAL ROAD 25, Milton. Right lane and right shoulder closed.",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 427 Northbound RAMP at HWY 409, Toronto. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.5281053,
-      "lng": -79.90482,
-      "start": 1787958840,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.69610812,
+      "lng": -79.60508452,
+      "start": 1787962320,
       "end": null,
-      "updated": 1787960820
+      "updated": 1787962320
+    },
+    {
+      "id": "drivebc.ca/RIDE-101797",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Highway 99",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Utility work at Highway 99, In Squamish and Finch Drive. Starting Mon Aug 31 until Thu Sep 3. From 6:30 PM to 6:30 AM PDT the next day, every day. Left turn lane closed. Right turn lane closed. Watch for traffic control. Last update: August 28th, 2026 at 5:08pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.71830526,
+      "lng": -123.14785094,
+      "start": "2026-08-28T17:08:39-07:00",
+      "end": "",
+      "updated": "2026-08-28T17:08:39-07:00"
     },
     {
       "id": "ON-294896",
@@ -52,38 +94,6 @@
       "start": "2026-07-24T15:03:25-07:00",
       "end": "",
       "updated": "2026-08-28T16:15:03-07:00"
-    },
-    {
-      "id": "ON-294885",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.77015354,
-      "lng": -79.30383775,
-      "start": 1787957280,
-      "end": null,
-      "updated": 1787958180
-    },
-    {
-      "id": "ON-294891",
-      "province": "ON",
-      "highway": "NIKOLA TESLA BLVD",
-      "direction": "Eastbound",
-      "description": "Collision on NIKOLA TESLA BLVD Eastbound RAMP at QEW NIAGARA, Burlington. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.258393,
-      "lng": -79.768608,
-      "start": 1787958120,
-      "end": null,
-      "updated": 1787958120
     },
     {
       "id": "ON-294837",
@@ -812,7 +822,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-28T23:50:48.863694+00:00",
+  "updated": "2026-08-29T00:21:52.949780+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
