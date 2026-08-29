@@ -1,0 +1,13 @@
+# Northern Mile Media — Email Digest Configuration (test copy)
+smtp:
+  host: "smtp.gmail.com"
+  port: 587
+  sender_address: "digest@northernmilemedia.com"
+  password_env_var_name: "NMM_SMTP_PASSWORD_TEST"
+  use_tls: true
+
+recipients:
+  - "test@example.com"
+
+subject_prefix: "[NMM]"
+from_name: "Northern Mile"

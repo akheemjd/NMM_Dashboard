@@ -1,0 +1,16 @@
+# Northern Mile Media — Email Digest Configuration
+# SMTP settings for sending weekly digests via smtplib.
+# Password is loaded from an environment variable (never hard-coded).
+
+smtp:
+  host: "smtp.gmail.com"
+  port: 587
+  sender_address: "digest@northernmilemedia.com"
+  password_env_var_name: "NMM_SMTP_PASSWORD"
+  use_tls: true
+
+recipients:
+  - "subscriber-list@example.com"
+
+subject_prefix: "[NMM]"
+from_name: "Northern Mile"

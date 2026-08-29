@@ -27,7 +27,12 @@ echo "  Using Python: $PYTHON"
 # 1. Collect fresh data
 $PYTHON scripts/collector.py && $PYTHON scripts/normalize.py && $PYTHON scripts/normalize_provinces.py 2>&1
 
-# 1b. Copy assets BEFORE build
+# 1b. Generate email digest (skip on DRY_RUN, log error but never crash pipeline)
+if [ "$DRY_RUN" != "1" ]; then
+  $PYTHON scripts/digest_email.py --send 2>&1 || echo "  [warn] digest email failed — continuing deploy" >&2
+fi
+
+# 1c. Copy assets BEFORE build
 mkdir -p docs/assets && cp -r assets/. docs/assets/
 cp assets/favicon.ico docs/favicon.ico
 

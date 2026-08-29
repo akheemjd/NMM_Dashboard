@@ -1,0 +1,31 @@
+{
+  "incidents": [
+    {
+      "id": "ON-1",
+      "province": "ON",
+      "highway": "HWY 401",
+      "description": "Collision on HWY 401 Westbound at BROCK ST, Whitby. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false
+    },
+    {
+      "id": "ON-2",
+      "province": "ON",
+      "highway": "HWY 401",
+      "description": "Nightly Construction on HWY 401 Westbound between CAMDEN EAST RD and CR 4, Odessa.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true
+    },
+    {
+      "id": "BC-1",
+      "province": "BC",
+      "highway": {"name": "Highway 99"},
+      "description": "Pavilion-Clinton Rd wildfire between Pear Lake Road and Mowhich Road. Road closed.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false
+    }
+  ]
+}
