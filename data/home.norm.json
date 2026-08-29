@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-29 09:43",
-  "updated_iso": "2026-08-29T09:43:35+00:00",
-  "build_version": "1787996615",
+  "updated_at": "2026-08-29 10:14",
+  "updated_iso": "2026-08-29T10:14:42+00:00",
+  "build_version": "1787998482",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "16 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 1,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 61",
+    "status_line": "HWY 61",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
-        "severity_label": "Collision",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound RAMP at ERIN MILLS PKWY/SOUTHDOWN ROAD,\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +276,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "16 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +300,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:50 EDT"
+      "captured_at": "05:52 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +320,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:20 PDT"
+      "captured_at": "03:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
