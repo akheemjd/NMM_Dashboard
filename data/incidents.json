@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-294953",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Collision on HWY 404 Northbound RAMP at 401, Toronto. Both shoulders and 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "both shoulders and 2 right lanes closed",
-      "lat": 43.76722864,
-      "lng": -79.33620755,
-      "start": 1787977920,
-      "end": null,
-      "updated": 1787977980
-    },
-    {
       "id": "ON-294949",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +15,6 @@
       "start": 1787977260,
       "end": null,
       "updated": 1787977260
-    },
-    {
-      "id": "ON-294941",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  at W JCT PARK DR (N), Markstay. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 46.514913836,
-      "lng": -80.622356182,
-      "start": 1787973960,
-      "end": null,
-      "updated": 1787973960
     },
     {
       "id": "ON-294925",
@@ -814,10 +782,42 @@
       "start": 1788174000,
       "end": 1790352000,
       "updated": 1787865720
+    },
+    {
+      "id": "ON-294577",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound Express between HWY 404 and YONGE ST, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.767586,
+      "lng": -79.33804,
+      "start": 1788235140,
+      "end": 1788339600,
+      "updated": 1787862120
+    },
+    {
+      "id": "ON-294359",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound On-ramp at GARDINERS  RD/ CR 38 (IC 611), Kingston. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.2854,
+      "lng": -76.57009,
+      "start": 1788228000,
+      "end": 1789120800,
+      "updated": 1787859360
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T05:33:50.876462+00:00",
+  "updated": "2026-08-29T06:05:01.674577+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
