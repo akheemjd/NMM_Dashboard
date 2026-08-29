@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-29 04:31",
-  "updated_iso": "2026-08-29T04:31:32+00:00",
-  "build_version": "1787977892",
+  "updated_at": "2026-08-29 05:02",
+  "updated_iso": "2026-08-29T05:02:44+00:00",
+  "build_version": "1787979764",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 2,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 17, HWY 61",
+    "status_line": "HWY 404, HWY 401, HWY 17",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at HWY 15 (IC 623)/Frontenac CR 15, Kingston.\u2026",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Northbound RAMP at 401, Toronto. Both shoulders and 2\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MAVIS ROAD, Mississauga. Right\u2026",
+        "what": "Collision on HWY 401 Westbound  at HWY 15 (IC 623)/Frontenac CR 15, Kingston.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:20 EDT"
+      "captured_at": "00:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:20 EDT"
+      "captured_at": "00:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:45 EDT"
+      "captured_at": "00:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "35 min",
+      "wait": "30 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 PDT"
+      "captured_at": "21:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
