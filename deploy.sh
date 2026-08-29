@@ -135,5 +135,7 @@ fi
 
 echo "Done."
 if [ "$DRY_RUN" != "1" ]; then
-  date -u +%s > "$REPO_DIR/.hermes/.nmm_deploy_ok"
+  # Write heartbeat relative to our known filesystem layout: .hermes/.nmm_deploy_ok
+  _HEARTBEAT="$(cd "$(dirname "$0")/.." && pwd)/.nmm_deploy_ok"
+  date -u +%s > "$_HEARTBEAT"
 fi
