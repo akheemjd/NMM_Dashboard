@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
+      "id": "ON-295004",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at HWY 409, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.709667,
+      "lng": -79.552872,
+      "start": 1788014280,
+      "end": null,
+      "updated": 1788014280
+    },
+    {
+      "id": "ON-295001",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at ISLINGTON AVE, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.71163768,
+      "lng": -79.54669193,
+      "start": 1788013500,
+      "end": null,
+      "updated": 1788013500
+    },
+    {
       "id": "ON-294996",
       "province": "ON",
       "highway": "HWY 400",
       "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at MAPLEVIEW DRIVE, Barrie. 2 right lanes closed.",
+      "description": "Collision on HWY 400 Southbound  at MAPLEVIEW DRIVE, Barrie. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
+      "closure": true,
+      "lanes": "All lanes closed",
       "lat": 44.33530847,
       "lng": -79.68484275,
       "start": 1788012300,
       "end": null,
-      "updated": 1788012300
+      "updated": 1788013440
     },
     {
       "id": "ON-294994",
@@ -782,42 +814,10 @@
       "start": 1787914800,
       "end": 1788303600,
       "updated": 1787865900
-    },
-    {
-      "id": "ON-294402",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Daily Engineering Investigation on HWY 17 Eastbound  between SEC HWY 531-BONFIELD RD, Bonfield and PIMISI BAY PARK ENT, Rutherglen. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.269833,
-      "lng": -79.13994,
-      "start": 1788174000,
-      "end": 1790352000,
-      "updated": 1787865720
-    },
-    {
-      "id": "ON-294577",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound Express between HWY 404 and YONGE ST, Toronto. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.767586,
-      "lng": -79.33804,
-      "start": 1788235140,
-      "end": 1788339600,
-      "updated": 1787862120
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T14:24:19.744392+00:00",
+  "updated": "2026-08-29T14:55:31.678552+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
