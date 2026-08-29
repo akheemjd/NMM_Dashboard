@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-29 15:26",
-  "updated_iso": "2026-08-29T15:26:47+00:00",
-  "build_version": "1788017207",
+  "updated_at": "2026-08-29 15:58",
+  "updated_iso": "2026-08-29T15:58:01+00:00",
+  "build_version": "1788019081",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -240,18 +240,18 @@
     "none": false,
     "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 61",
+    "status_line": "HWY 401, HWY 409, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 2 left\u2026",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at MAPLEVIEW DRIVE, Barrie. Right lane and\u2026",
+        "road": "HWY 409",
+        "what": "Disabled Vehicle on HWY 409 Westbound  at MARTIN GROVE ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:52 EDT"
+      "captured_at": "11:27 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:00 EDT"
+      "captured_at": "11:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:00 EDT"
+      "captured_at": "11:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:45 EDT"
+      "captured_at": "11:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 PDT"
+      "captured_at": "08:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -402,11 +402,11 @@
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Trump says the US doesn\u2019t need Canada. The economy says otherwise",
-      "url": "https://www.thetrucker.com/trucking-news/business/trump-says-the-us-doesnt-need-canada-the-economy-says-otherwise",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Reading Truck Equipment, Masterack combine upfit operations",
+      "url": "https://www.trucknews.com/transportation/reading-truck-equipment-masterack-combine-upfit-operations/1003220728/",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
