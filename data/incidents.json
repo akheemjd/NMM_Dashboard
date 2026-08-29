@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-294943",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.77015354,
+      "lng": -79.30383775,
+      "start": 1787974320,
+      "end": null,
+      "updated": 1787974680
+    },
+    {
       "id": "ON-294941",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,22 +31,6 @@
       "start": 1787973960,
       "end": null,
       "updated": 1787973960
-    },
-    {
-      "id": "ON-294935",
-      "province": "ON",
-      "highway": "GARDINER EXPWY",
-      "direction": "Westbound",
-      "description": "Collision on GARDINER EXPWY Westbound COLLECTOR at KIPLING AVENUE, Toronto. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.61827,
-      "lng": -79.525387,
-      "start": 1787972760,
-      "end": null,
-      "updated": 1787972760
     },
     {
       "id": "ON-294925",
@@ -817,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T03:29:04.822068+00:00",
+  "updated": "2026-08-29T04:00:16.723338+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
