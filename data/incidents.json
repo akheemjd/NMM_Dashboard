@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-294943",
+      "id": "ON-294949",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. 2 left lanes closed.",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at HWY 15 (IC 623)/Frontenac CR 15, Kingston. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.77015354,
-      "lng": -79.30383775,
-      "start": 1787974320,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.289094,
+      "lng": -76.430005,
+      "start": 1787977260,
       "end": null,
-      "updated": 1787974680
+      "updated": 1787977260
+    },
+    {
+      "id": "ON-294948",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MAVIS ROAD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.621261,
+      "lng": -79.706472,
+      "start": 1787977020,
+      "end": null,
+      "updated": 1787977020
     },
     {
       "id": "ON-294941",
@@ -47,22 +63,6 @@
       "start": 1788220800,
       "end": 1788516000,
       "updated": 1787968980
-    },
-    {
-      "id": "ON-294922",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at Duart Rd, West Lorne. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 42.541097222,
-      "lng": -81.793255556,
-      "start": 1787968740,
-      "end": null,
-      "updated": 1787968740
     },
     {
       "id": "drivebc.ca/RIDE-101797",
@@ -817,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T04:00:16.723338+00:00",
+  "updated": "2026-08-29T04:31:28.554593+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
