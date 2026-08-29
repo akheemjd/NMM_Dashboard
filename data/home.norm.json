@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-29 02:26",
-  "updated_iso": "2026-08-29T02:26:44+00:00",
-  "build_version": "1787970404",
+  "updated_at": "2026-08-29 02:57",
+  "updated_iso": "2026-08-29T02:57:55+00:00",
+  "build_version": "1787972275",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 3,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 102, HWY 61",
+    "status_line": "HWY 401, HWY 102",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at DUFFERIN STREET, Toronto. 1\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound  at BROCK ROAD, Pickering. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at Duart Rd, West Lorne. Left lane closed.",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at HWY 6 SOUTH, Puslinch. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -287,17 +287,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "13 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 PDT"
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
