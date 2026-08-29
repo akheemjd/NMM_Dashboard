@@ -1,78 +1,73 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-101803",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 99",
-        "from": "Oak Street Bridge",
-        "direction": "N",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident at Highway 99, In Richmond. Right lane blocked. Expect delays due to congestion. Last update: August 29th, 2026 at 12:31pm PDT. Next update: August 29th, 2026 at 1:00pm PDT.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.19810962,
-      "lng": -123.12397752,
-      "start": "2026-08-29T11:45:45-07:00",
-      "end": "",
-      "updated": "2026-08-29T12:31:27-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-101802",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Trans-Canada Highway",
-        "direction": "N",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident at Highway 1, In North Cowichan. Right lane blocked. Expect major delays due to congestion. Watch for traffic control. Last update: August 29th, 2026 at 12:19pm PDT. Next update: August 29th, 2026 at 1:00pm PDT.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 48.7866709,
-      "lng": -123.70617526,
-      "start": "2026-08-29T10:35:27-07:00",
-      "end": "",
-      "updated": "2026-08-29T12:19:26-07:00"
-    },
-    {
-      "id": "ON-295068",
+      "id": "ON-295082",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at GARDEN CITY SKYWAY, St. Catharines. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at BAYVIEW AVE, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.16718726,
-      "lng": -79.19346889,
-      "start": 1788029940,
+      "lat": 43.764389,
+      "lng": -79.3842018,
+      "start": 1788033540,
       "end": null,
-      "updated": 1788029940
+      "updated": 1788033540
+    },
+    {
+      "id": "drivebc.ca/RIDE-101805",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 97",
+        "from": "Highway 97 N",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Traffic signal out at Highway 97, In Kelowna and At Airport Way. Expect major delays due to congestion. Last update: August 29th, 2026 at 12:54pm PDT. Next update: August 29th, 2026 at 2:00pm PDT. Traffic lights are flashing red in all directions at Airport Road. Crews are en route. Use the all-way stop procedure when navigating the intersection.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.95205199,
+      "lng": -119.38632488,
+      "start": "2026-08-29T12:54:16-07:00",
+      "end": "",
+      "updated": "2026-08-29T12:54:16-07:00"
+    },
+    {
+      "id": "ON-295079",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 HAMILTON Westbound  at HWY 6 NORTH, Burlington. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.29359138,
+      "lng": -79.89270159,
+      "start": 1788033240,
+      "end": null,
+      "updated": 1788033240
     },
     {
       "id": "ON-295052",
       "province": "ON",
       "highway": "HWY 427",
       "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 427 Southbound  at HWY 7, Vaughan. Right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 427 Southbound  at HWY 7, Vaughan. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
+      "lanes": "2 right lanes and right shoulder closed",
       "lat": 43.769976,
       "lng": -79.63386,
       "start": 1788025740,
       "end": null,
-      "updated": 1788028440
+      "updated": 1788032340
     },
     {
       "id": "ON-295031",
@@ -827,7 +822,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T19:36:23.388439+00:00",
+  "updated": "2026-08-29T20:07:34.507906+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
