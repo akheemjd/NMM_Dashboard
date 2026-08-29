@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-295034",
+      "id": "ON-295040",
       "province": "ON",
-      "highway": "HWY 48",
-      "direction": "Southbound",
-      "description": "Collision on HWY 48 Southbound  at BALDWIN ROAD, Baldwin. All lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS RAMP at HWY 403, Mississauga. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.2617,
-      "lng": -79.344517,
-      "start": 1788020640,
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.64211676,
+      "lng": -79.65372435,
+      "start": 1788022080,
       "end": null,
-      "updated": 1788020640
-    },
-    {
-      "id": "ON-295032",
-      "province": "ON",
-      "highway": "HWY 48",
-      "direction": "Northbound",
-      "description": "Collision on HWY 48 Northbound  at CRYDERMAN SIDEROAD, Baldwin. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.257164,
-      "lng": -79.342842,
-      "start": 1788020520,
-      "end": null,
-      "updated": 1788020520
+      "updated": 1788022080
     },
     {
       "id": "ON-295031",
@@ -63,22 +47,6 @@
       "start": 1788019200,
       "end": null,
       "updated": 1788019200
-    },
-    {
-      "id": "ON-295022",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.6520701,
-      "lng": -79.627282,
-      "start": 1788018600,
-      "end": null,
-      "updated": 1788018600
     },
     {
       "id": "ON-294994",
@@ -814,10 +782,42 @@
       "start": 1788062400,
       "end": 1788580740,
       "updated": 1787869320
+    },
+    {
+      "id": "ON-294416",
+      "province": "ON",
+      "highway": "HWY 520",
+      "direction": "Westbound",
+      "description": "Daily Construction on HWY 520 Westbound  between WHALLEY LK RD WEST(N)CROFT TWP, Magnetawan and ONTARIO ST-BURK'S FALLS, . 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.684963,
+      "lng": -79.67197,
+      "start": 1788174000,
+      "end": 1789167600,
+      "updated": 1787868720
+    },
+    {
+      "id": "ON-294406",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Daily Maintenance on HWY 17 Westbound  between CENTURION RD/MESSIER TRAIL (military gated rd) and CLOUTHIER RD, Petawawa. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.91954,
+      "lng": -77.32018,
+      "start": 1787914800,
+      "end": 1788303600,
+      "updated": 1787865900
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T16:29:09.549371+00:00",
+  "updated": "2026-08-29T17:00:19.884755+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
