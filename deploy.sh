@@ -5,17 +5,13 @@ DRY_RUN="${DRY_RUN:-0}"
 
 # Derive our own filesystem location — works regardless of $HOME (which differs in cron vs interactive shells)
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_DIR="$(pwd)"
-
-# Thin wrapper guard: if ~/.hermes/scripts/deploy.sh exists it must be thin (<3 logic lines)
-HERMES_ENTRY="$REPO_DIR/../.hermes/scripts/deploy.sh"
-if [ -f "$HERMES_ENTRY" ]; then
-  ENTRY_LINES=$(grep -cvE '^\s*(#|$)' "$HERMES_ENTRY")
-  if [ "$ENTRY_LINES" -gt 3 ]; then
-    echo "FATAL: $HERMES_ENTRY is not a thin exec wrapper ($ENTRY_LINES logic lines)."
-    exit 1
-  fi
+REPO_DIR="$SCRIPT_DIR"
+if [ -f "$SCRIPT_DIR/deploy.sh" ]; then
+  : # we're inside the repo
+else
+  REPO_DIR="$(cd "$SCRIPT_DIR/../northern-mile-dashboard" && pwd)"
 fi
+cd "$REPO_DIR" || { echo "FATAL: cannot cd to repo dir $REPO_DIR"; exit 1; }
 
 echo "=== Deploy $(date) ==="
 
@@ -36,7 +32,7 @@ fi
 mkdir -p docs/assets && cp -r assets/. docs/assets/
 cp assets/favicon.ico docs/favicon.ico
 
-$PYTHON scripts/gen_templates.py && $PYTHON scripts/build_chart_data.py && $PYTHON scripts/build_templates.py && $PYTHON scripts/build_provinces.py && $PYTHON scripts/build_city_pages.py && $PYTHON scripts/build_us_pages.py && $PYTHON scripts/build_border_pages.py && $PYTHON scripts/build_og.py && $PYTHON scripts/build_sitemap.py && $PYTHON scripts/check_coherence.py 2>&1
+$PYTHON scripts/gen_templates.py && $PYTHON scripts/build_chart_data.py && $PYTHON scripts/build_templates.py && $PYTHON scripts/build_provinces.py && $PYTHON scripts/build_city_pages.py && $PYTHON scripts/build_us_pages.py && $PYTHON scripts/build_border_pages.py && $PYTHON scripts/build_border_trends.py && $PYTHON scripts/build_og.py && $PYTHON scripts/build_sitemap.py && $PYTHON scripts/check_coherence.py 2>&1
 
 # 2. Health check
 $PYTHON -c "

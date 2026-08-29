@@ -33,6 +33,7 @@ NAV = [
     ("/fuel-prices/", "Diesel"),
     ("/fuel-cost-calculator/", "Calculator"),
     ("/border-wait-times/", "Border"),
+    ("/border-trends/", "Trends"),
     ("/exchange-rate/", "Exchange"),
     ("/road-incidents/", "Incidents"),
     ("/market-pulse/", "Market"),
