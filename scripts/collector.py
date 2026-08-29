@@ -138,7 +138,7 @@ def collect_weather():
 def collect_news():
     """Industry headlines from free RSS feeds with dates and categories."""
     feeds = [
-        ("Truck News", "https://www.trucknews.com/feed/"),
+        ("Trucking Business", "https://www.thetruckingbusiness.com/feed/"),
         ("Trucking Info", "https://www.truckinginfo.com/rss/news/"),
         ("The Trucker", "https://www.thetrucker.com/feed/"),
     ]

@@ -138,6 +138,14 @@ else
   fi
 fi
 
+# 4. (Optional) Generate & send email digest
+if [ "${SEND_DIGEST:-0}" = "1" ]; then
+  echo "[4/6] Sending digest..."
+  $PYTHON scripts/digest_email.py --send --date "$(date -u +%Y-%m-%d)" 2>&1 || {
+    echo "  Digest send failed (non-fatal)." >&2
+  }
+fi
+
 echo "Done."
 if [ "$DRY_RUN" != "1" ]; then
   # Write heartbeat relative to our known filesystem layout: .hermes/.nmm_deploy_ok
