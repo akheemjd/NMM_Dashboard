@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-294965",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 17 Eastbound  at STEEPHILL DAM RD, WAWA, Wawa. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.073892112,
-      "lng": -84.806985056,
-      "start": 1787989440,
-      "end": null,
-      "updated": 1787989440
-    },
-    {
       "id": "ON-294925",
       "province": "ON",
       "highway": "HWY 401",
@@ -814,10 +798,26 @@
       "start": 1788228000,
       "end": 1789120800,
       "updated": 1787859360
+    },
+    {
+      "id": "ON-294368",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.600674,
+      "lng": -79.64447,
+      "start": 1788235140,
+      "end": 1788512400,
+      "updated": 1787859060
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T08:41:04.924296+00:00",
+  "updated": "2026-08-29T09:12:15.142992+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
