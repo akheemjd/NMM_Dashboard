@@ -1,6 +1,48 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101803",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Oak Street Bridge",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 99, In Richmond. Right lane blocked. Expect delays due to congestion. Last update: August 29th, 2026 at 12:31pm PDT. Next update: August 29th, 2026 at 1:00pm PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.19810962,
+      "lng": -123.12397752,
+      "start": "2026-08-29T11:45:45-07:00",
+      "end": "",
+      "updated": "2026-08-29T12:31:27-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-101802",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 1, In North Cowichan. Right lane blocked. Expect major delays due to congestion. Watch for traffic control. Last update: August 29th, 2026 at 12:19pm PDT. Next update: August 29th, 2026 at 1:00pm PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 48.7866709,
+      "lng": -123.70617526,
+      "start": "2026-08-29T10:35:27-07:00",
+      "end": "",
+      "updated": "2026-08-29T12:19:26-07:00"
+    },
+    {
       "id": "ON-295068",
       "province": "ON",
       "highway": "QEW",
@@ -17,27 +59,6 @@
       "updated": 1788029940
     },
     {
-      "id": "drivebc.ca/RIDE-101804",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 1",
-        "from": "Trans-Canada Highway",
-        "direction": "W",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle incident at Highway 1, In Chilliwack and 2km Northeast of Exit 129 to Annis Road. Emergency vehicles on scene. Expect delays. Last update: August 29th, 2026 at 11:53am PDT. Next update: August 29th, 2026 at 12:30pm PDT.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.16071048,
-      "lng": -121.80804926,
-      "start": "2026-08-29T11:53:08-07:00",
-      "end": "",
-      "updated": "2026-08-29T11:53:08-07:00"
-    },
-    {
       "id": "ON-295052",
       "province": "ON",
       "highway": "HWY 427",
@@ -52,22 +73,6 @@
       "start": 1788025740,
       "end": null,
       "updated": 1788028440
-    },
-    {
-      "id": "ON-295045",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at NEILSON ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.79224382,
-      "lng": -79.21808313,
-      "start": 1788023880,
-      "end": null,
-      "updated": 1788023880
     },
     {
       "id": "ON-295031",
@@ -822,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T19:05:09.432594+00:00",
+  "updated": "2026-08-29T19:36:23.388439+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
