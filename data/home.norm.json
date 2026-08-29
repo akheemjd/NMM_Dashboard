@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-29 18:34",
-  "updated_iso": "2026-08-29T18:34:01+00:00",
-  "build_version": "1788028441",
+  "updated_at": "2026-08-29 19:05",
+  "updated_iso": "2026-08-29T19:05:12+00:00",
+  "build_version": "1788030312",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "40 min"
+    "max_wait": "35 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 401, HWY 61",
+    "status_line": "QEW, HWY 427, HWY 401",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Southbound  at HWY 7, Vaughan. 2 right lanes and\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at GARDEN CITY SKYWAY, St. Catharines.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at NEILSON ROAD, Toronto.\u2026",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Southbound  at HWY 7, Vaughan. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "40 min",
+      "wait": "35 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:11 EDT"
+      "captured_at": "14:49 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "14:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 EDT"
+      "captured_at": "14:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:45 EDT"
+      "captured_at": "14:48 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 PDT"
+      "captured_at": "11:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
