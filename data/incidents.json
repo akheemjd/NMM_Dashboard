@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-294917",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at KIRBY ROAD, Vaughan. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.88391657,
+      "lng": -79.55729547,
+      "start": 1787965860,
+      "end": null,
+      "updated": 1787965860
+    },
+    {
+      "id": "ON-294912",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.65020833,
+      "lng": -79.63756055,
+      "start": 1787964360,
+      "end": null,
+      "updated": 1787965740
+    },
+    {
+      "id": "ON-294915",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at GUELPH LINE, Milton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.49118566,
+      "lng": -79.98777262,
+      "start": 1787965620,
+      "end": null,
+      "updated": 1787965620
+    },
+    {
       "id": "ON-294913",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +63,6 @@
       "start": 1787964540,
       "end": null,
       "updated": 1787964540
-    },
-    {
-      "id": "ON-294912",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at DIXIE ROAD, Mississauga. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.65020833,
-      "lng": -79.63756055,
-      "start": 1787964360,
-      "end": null,
-      "updated": 1787964360
     },
     {
       "id": "ON-294911",
@@ -782,42 +814,10 @@
       "start": 1788174000,
       "end": 1789167600,
       "updated": 1787868720
-    },
-    {
-      "id": "ON-294406",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 17 Westbound  between CENTURION RD/MESSIER TRAIL (military gated rd) and CLOUTHIER RD, Petawawa. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.91954,
-      "lng": -77.32018,
-      "start": 1787914800,
-      "end": 1788303600,
-      "updated": 1787865900
-    },
-    {
-      "id": "ON-294402",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Daily Engineering Investigation on HWY 17 Eastbound  between SEC HWY 531-BONFIELD RD, Bonfield and PIMISI BAY PARK ENT, Rutherglen. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.269833,
-      "lng": -79.13994,
-      "start": 1788174000,
-      "end": 1790352000,
-      "updated": 1787865720
     }
   ],
   "total": 50,
-  "updated": "2026-08-29T00:53:12.837116+00:00",
+  "updated": "2026-08-29T01:24:16.752684+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
