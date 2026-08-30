@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-30 17:25",
-  "updated_iso": "2026-08-30T17:25:01+00:00",
-  "build_version": "1788110701",
+  "updated_at": "2026-08-30 17:56",
+  "updated_iso": "2026-08-30T17:56:02+00:00",
+  "build_version": "1788112562",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "7 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW",
+    "status_line": "QEW, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at McCOWAN ROAD, Toronto. 1 right lane\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound HOV at BURLOAK DRIVE, Burlington. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound RAMP at Highway 19 / Plank Line/Harris St,\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at BURLOAK DRIVE, Burlington. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "13:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:00 EDT"
+      "captured_at": "13:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:10 EDT"
+      "captured_at": "13:39 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:57 MDT"
+      "captured_at": "11:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:00 PDT"
+      "captured_at": "10:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 CDT"
+      "captured_at": "12:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT"
+      "captured_at": "13:15 EDT"
     }
   ],
   "market": [
