@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-30 13:16",
-  "updated_iso": "2026-08-30T13:16:56+00:00",
-  "build_version": "1788095816",
+  "updated_at": "2026-08-30 13:47",
+  "updated_iso": "2026-08-30T13:47:57+00:00",
+  "build_version": "1788097677",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 17, QEW, HWY 61",
+    "status_line": "HWY 400, HWY 17, QEW, HWY 61",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Disabled Vehicle on HWY 17 Eastbound  at ELY LAKE BOAT LAUNCH ENTRANCE (N),\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Northbound RAMP at TESTON ROAD, Vaughan. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at CAWTHRA ROAD, Mississauga. 1 left lane\u2026",
+        "road": "HWY 17",
+        "what": "Disabled Vehicle on HWY 17 Eastbound  at ELY LAKE BOAT LAUNCH ENTRANCE (N),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:00 EDT"
+      "captured_at": "09:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:45 EDT"
+      "captured_at": "09:21 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 PDT"
+      "captured_at": "06:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:15 EDT"
     }
   ],
   "market": [
