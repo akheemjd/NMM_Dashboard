@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-30 04:29",
-  "updated_iso": "2026-08-30T04:29:42+00:00",
-  "build_version": "1788064182",
+  "updated_at": "2026-08-30 05:00",
+  "updated_iso": "2026-08-30T05:00:43+00:00",
+  "build_version": "1788066043",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 401, HWY 11",
+    "status_line": "QEW, HWY 404, HWY 400",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Northbound EXPRESS at BURNHAMTHORPE ROAD, Toronto.\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound HOV at DORVAL DRIVE, Oakville. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at WHITES ROAD, Pickering. 2 right\u2026",
+        "road": "HWY 404",
+        "what": "Disabled Vehicle on HWY 404 Southbound HOV at MAJOR MACKENZIE DRIVE,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 EDT"
+      "captured_at": "00:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 EDT"
+      "captured_at": "00:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:45 EDT"
+      "captured_at": "00:46 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 PDT"
+      "captured_at": "21:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
