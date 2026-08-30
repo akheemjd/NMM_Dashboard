@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-295198",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at WHITES ROAD, Pickering. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.81674829,
+      "lng": -79.11498161,
+      "start": 1788061200,
+      "end": null,
+      "updated": 1788062340
+    },
+    {
       "id": "ON-295199",
       "province": "ON",
       "highway": "HWY 427",
@@ -15,22 +31,6 @@
       "start": 1788061980,
       "end": null,
       "updated": 1788061980
-    },
-    {
-      "id": "ON-295198",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at WHITES ROAD, Pickering. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.81674829,
-      "lng": -79.11498161,
-      "start": 1788061200,
-      "end": null,
-      "updated": 1788061200
     },
     {
       "id": "ON-295192",
@@ -817,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T03:58:38.313993+00:00",
+  "updated": "2026-08-30T04:29:39.262648+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
