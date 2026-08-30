@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-295163",
+      "id": "ON-295199",
       "province": "ON",
-      "highway": "HWY 3",
-      "direction": "Westbound",
-      "description": "Collision on HWY 3 Westbound  at PLEASANT BEACH ROAD, Port Colborne. Right lane closed.",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 427 Northbound EXPRESS at BURNHAMTHORPE ROAD, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 42.89207,
-      "lng": -79.124113,
-      "start": 1788047820,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.6455796,
+      "lng": -79.56314768,
+      "start": 1788061980,
       "end": null,
-      "updated": 1788059940
+      "updated": 1788061980
+    },
+    {
+      "id": "ON-295198",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at WHITES ROAD, Pickering. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.81674829,
+      "lng": -79.11498161,
+      "start": 1788061200,
+      "end": null,
+      "updated": 1788061200
     },
     {
       "id": "ON-295192",
@@ -798,26 +814,10 @@
       "start": 1788062400,
       "end": 1788580740,
       "updated": 1787869320
-    },
-    {
-      "id": "ON-294416",
-      "province": "ON",
-      "highway": "HWY 520",
-      "direction": "Westbound",
-      "description": "Daily Construction on HWY 520 Westbound  between WHALLEY LK RD WEST(N)CROFT TWP, Magnetawan and ONTARIO ST-BURK'S FALLS, . 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.684963,
-      "lng": -79.67197,
-      "start": 1788174000,
-      "end": 1789167600,
-      "updated": 1787868720
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T03:27:37.194339+00:00",
+  "updated": "2026-08-30T03:58:38.313993+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
