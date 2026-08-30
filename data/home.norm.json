@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-30 01:26",
-  "updated_iso": "2026-08-30T01:26:05+00:00",
-  "build_version": "1788053165",
+  "updated_at": "2026-08-30 01:51",
+  "updated_iso": "2026-08-30T01:51:41+00:00",
+  "build_version": "1788054701",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 401, HWY 3",
+    "status_line": "HWY 403 , HWY 400, HWY 401, HWY 3",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound RAMP at 401 EAST COLL, Toronto. Right lane and\u2026",
+        "road": "HWY 403 HAMILTON",
+        "what": "Disabled Vehicle on HWY 403 HAMILTON Westbound  at WATERDOWN ROAD, Burlington.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound RAMP at 401 EAST COLL, Toronto. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:00 EDT"
+      "captured_at": "21:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 PDT"
+      "captured_at": "18:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:23 CDT"
+      "captured_at": "20:38 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

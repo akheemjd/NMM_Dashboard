@@ -1,6 +1,43 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-101817",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "W",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 1, In Langley - District. Left lane blocked. Expect delays due to congestion. Last update: August 29th, 2026 at 6:46pm PDT. Next update: August 29th, 2026 at 7:30pm PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.11815206,
+      "lng": -122.53441875,
+      "start": "2026-08-29T17:50:47-07:00",
+      "end": "",
+      "updated": "2026-08-29T18:46:15-07:00"
+    },
+    {
+      "id": "ON-295179",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 403 HAMILTON Westbound  at WATERDOWN ROAD, Burlington. Centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "centre lane closed",
+      "lat": 43.31209876,
+      "lng": -79.86012323,
+      "start": 1788053100,
+      "end": null,
+      "updated": 1788053100
+    },
+    {
       "id": "ON-295175",
       "province": "ON",
       "highway": "HWY 400",
@@ -782,42 +819,10 @@
       "start": 1788314400,
       "end": 1788426000,
       "updated": 1787904720
-    },
-    {
-      "id": "ON-294585",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Construction on QEW Toronto bound  between NIKOLA TESLA, Hamilton and BURLINGTON SKYWAY, Burlington. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.254734,
-      "lng": -79.76535,
-      "start": 1788390000,
-      "end": 1788512400,
-      "updated": 1787878620
-    },
-    {
-      "id": "ON-294599",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound  between THOROLD STONE ROAD and THOROLD STONE ROAD, Niagara Falls. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.114716,
-      "lng": -79.12025,
-      "start": 1788138000,
-      "end": 1788519600,
-      "updated": 1787872860
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T01:26:02.461799+00:00",
+  "updated": "2026-08-30T01:51:37.721287+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
