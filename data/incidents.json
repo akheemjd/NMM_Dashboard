@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-295260",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound RAMP at Highway 19 / Plank Line/Harris St, Ingersoll. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.025834,
+      "lng": -80.854342,
+      "start": 1788104820,
+      "end": null,
+      "updated": 1788104820
+    },
+    {
       "id": "ON-295252",
       "province": "ON",
       "highway": "QEW",
@@ -15,38 +31,6 @@
       "start": 1788102480,
       "end": null,
       "updated": 1788102480
-    },
-    {
-      "id": "ON-295250",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at HWY 407, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.52757993,
-      "lng": -79.72183943,
-      "start": 1788101520,
-      "end": null,
-      "updated": 1788101520
-    },
-    {
-      "id": "ON-295247",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound HOV at HWY 407, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.53382864,
-      "lng": -79.71969926,
-      "start": 1788100440,
-      "end": null,
-      "updated": 1788100440
     },
     {
       "id": "ON-295224",
@@ -814,10 +798,26 @@
       "start": 1788174000,
       "end": 1790352000,
       "updated": 1787865720
+    },
+    {
+      "id": "ON-294577",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound Express between HWY 404 and YONGE ST, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.767586,
+      "lng": -79.33804,
+      "start": 1788235140,
+      "end": 1788339600,
+      "updated": 1787862120
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T15:20:56.467781+00:00",
+  "updated": "2026-08-30T15:51:55.944918+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
