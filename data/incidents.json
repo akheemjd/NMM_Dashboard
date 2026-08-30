@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-295224",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at CAWTHRA ROAD, Mississauga. 2 left lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes and right shoulder closed",
+      "lat": 43.58352621,
+      "lng": -79.58328062,
+      "start": 1788083160,
+      "end": null,
+      "updated": 1788084120
+    },
+    {
       "id": "drivebc.ca/RIDE-101825",
       "province": "BC",
       "highway": {
@@ -803,26 +819,10 @@
       "start": 1788235140,
       "end": 1788339600,
       "updated": 1787862120
-    },
-    {
-      "id": "ON-294359",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound On-ramp at GARDINERS  RD/ CR 38 (IC 611), Kingston. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.2854,
-      "lng": -76.57009,
-      "start": 1788228000,
-      "end": 1789120800,
-      "updated": 1787859360
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T09:39:46.967409+00:00",
+  "updated": "2026-08-30T10:10:47.128630+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
