@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-30 07:35",
-  "updated_iso": "2026-08-30T07:35:47+00:00",
-  "build_version": "1788075347",
+  "updated_at": "2026-08-30 08:37",
+  "updated_iso": "2026-08-30T08:37:49+00:00",
+  "build_version": "1788079069",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 2,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 1,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "18 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 11",
+    "status_line": "HWY 401, HWY 11, HWY 61",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Vaughan. All\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound ON-RAMP at TESTON ROAD, Vaughan. All lanes\u2026",
+        "road": "HWY 11",
+        "what": "Vehicle Fire on HWY 11 Both Directions  between HWY 64(W), Marten River and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 EDT"
+      "captured_at": "04:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 EDT"
+      "captured_at": "04:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "18 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "03:20 EDT"
+      "captured_at": "04:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:20 EDT"
+      "captured_at": "04:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 MDT"
+      "captured_at": "02:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:20 PDT"
+      "captured_at": "01:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
