@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-30 21:33",
-  "updated_iso": "2026-08-30T21:33:08+00:00",
-  "build_version": "1788125588",
+  "updated_at": "2026-08-30 22:04",
+  "updated_iso": "2026-08-30T22:04:09+00:00",
+  "build_version": "1788127449",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 1,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 61",
+    "status_line": "HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at VICTORIA PARK AVE, Toronto. Left\u2026",
-        "severity_label": "Collision",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at McCOWAN ROAD, Toronto. 1 right lane\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +256,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:21 EDT"
+      "captured_at": "17:39 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +276,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:20 EDT"
+      "captured_at": "17:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:20 EDT"
+      "captured_at": "17:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +316,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 PDT"
+      "captured_at": "14:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
