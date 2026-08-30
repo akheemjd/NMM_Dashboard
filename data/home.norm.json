@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-30 02:22",
-  "updated_iso": "2026-08-30T02:22:40+00:00",
-  "build_version": "1788056560",
+  "updated_at": "2026-08-30 02:56",
+  "updated_iso": "2026-08-30T02:56:39+00:00",
+  "build_version": "1788058599",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 8,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 17, HWY 401, HWY 427, HWY 3",
+    "status_line": "HWY 401, HWY 17, HWY 3",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Disabled Vehicle on HWY 17 Eastbound  at JACKFISH RD (S) - SYINE TWP, Terrace\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Left\u2026",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at WHITES ROAD, Pickering. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -263,11 +263,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:46 EDT"
+      "captured_at": "22:46 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -277,17 +277,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:45 EDT"
+      "captured_at": "22:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT"
+      "captured_at": "20:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 PDT"
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:11 EDT"
+      "captured_at": "22:15 EDT"
     }
   ],
   "market": [
@@ -385,8 +385,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."

@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-295190",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.76327209,
+      "lng": -79.38728169,
+      "start": 1788058260,
+      "end": null,
+      "updated": 1788058260
+    },
+    {
+      "id": "ON-295188",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at WHITES ROAD, Pickering. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.81433167,
+      "lng": -79.11696039,
+      "start": 1788057180,
+      "end": null,
+      "updated": 1788057540
+    },
+    {
       "id": "ON-295185",
       "province": "ON",
       "highway": "HWY 17",
@@ -17,38 +49,6 @@
       "updated": 1788056220
     },
     {
-      "id": "ON-295184",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at LESLIE STREET, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.76633361,
-      "lng": -79.36293439,
-      "start": 1788056100,
-      "end": null,
-      "updated": 1788056100
-    },
-    {
-      "id": "ON-295181",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound ON-RAMP at REXDALE BLVD / DERRY ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.718192,
-      "lng": -79.620459,
-      "start": 1788054900,
-      "end": null,
-      "updated": 1788054900
-    },
-    {
       "id": "ON-295163",
       "province": "ON",
       "highway": "HWY 3",
@@ -63,22 +63,6 @@
       "start": 1788047820,
       "end": null,
       "updated": 1788047820
-    },
-    {
-      "id": "ON-295158",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Vehicle Fire on HWY 401 Westbound ON-RAMP at BROCK ST, Whitby. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.866236,
-      "lng": -78.936299,
-      "start": 1788046440,
-      "end": null,
-      "updated": 1788046440
     },
     {
       "id": "ON-295142",
@@ -814,10 +798,26 @@
       "start": 1788138000,
       "end": 1788516000,
       "updated": 1787872800
+    },
+    {
+      "id": "ON-294583",
+      "province": "ON",
+      "highway": "HWY 48",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 48 Southbound  between PRINCESS STREET and PRINCESS STREET, Mt. Albert. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.133575,
+      "lng": -79.32128,
+      "start": 1788181200,
+      "end": 1788462000,
+      "updated": 1787869560
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T02:22:35.882549+00:00",
+  "updated": "2026-08-30T02:56:36.617215+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
