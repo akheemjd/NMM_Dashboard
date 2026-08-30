@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-295224",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at CAWTHRA ROAD, Mississauga. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.58352621,
+      "lng": -79.58328062,
+      "start": 1788083160,
+      "end": null,
+      "updated": 1788090000
+    },
+    {
+      "id": "ON-295231",
+      "province": "ON",
+      "highway": "HWY 407",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 407 Westbound  at LAKE RIDGE RD, Whitby. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.949415,
+      "lng": -79.021081,
+      "start": 1788089940,
+      "end": null,
+      "updated": 1788089940
+    },
+    {
+      "id": "ON-295230",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at YONGE STREET, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.75954553,
+      "lng": -79.39811954,
+      "start": 1788089760,
+      "end": null,
+      "updated": 1788089760
+    },
+    {
       "id": "ON-295192",
       "province": "ON",
       "highway": "HWY 11",
@@ -17,54 +65,6 @@
       "updated": 1788088080
     },
     {
-      "id": "ON-295228",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 404 Southbound  at STEELES AVE, Toronto-Markham. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.8129235,
-      "lng": -79.352163,
-      "start": 1788087600,
-      "end": null,
-      "updated": 1788087600
-    },
-    {
-      "id": "ON-295226",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21, Innisfil. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.2851185,
-      "lng": -79.67958049,
-      "start": 1788086940,
-      "end": null,
-      "updated": 1788086940
-    },
-    {
-      "id": "ON-295224",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at CAWTHRA ROAD, Mississauga. 3 lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 lanes and right shoulder closed",
-      "lat": 43.58352621,
-      "lng": -79.58328062,
-      "start": 1788083160,
-      "end": null,
-      "updated": 1788085200
-    },
-    {
       "id": "ON-295225",
       "province": "ON",
       "highway": "HWY 17",
@@ -79,27 +79,6 @@
       "start": 1788085080,
       "end": null,
       "updated": 1788085080
-    },
-    {
-      "id": "drivebc.ca/RIDE-101825",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Grand Boulevard",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Road maintenance at Grand Boulevard, In Kamloops. Starting Sun Aug 30 until Sun Aug 30. Single lane alternating traffic. Last update: August 30th, 2026 at 1:49am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.67118027,
-      "lng": -120.2270552,
-      "start": "2026-08-30T01:49:58-07:00",
-      "end": "",
-      "updated": "2026-08-30T01:49:58-07:00"
     },
     {
       "id": "ON-261152",
@@ -819,10 +798,26 @@
       "start": 1788174000,
       "end": 1789167600,
       "updated": 1787868720
+    },
+    {
+      "id": "ON-294406",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Daily Maintenance on HWY 17 Westbound  between CENTURION RD/MESSIER TRAIL (military gated rd) and CLOUTHIER RD, Petawawa. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.91954,
+      "lng": -77.32018,
+      "start": 1787914800,
+      "end": 1788303600,
+      "updated": 1787865900
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T11:12:49.154565+00:00",
+  "updated": "2026-08-30T11:43:49.830496+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
