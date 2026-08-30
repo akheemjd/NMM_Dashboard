@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-295323",
+      "id": "ON-295339",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Police Investigation on HWY 400 Northbound  at TESTON ROAD, Vaughan. 1 right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at MEADOWVALE ROAD, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.86535141,
-      "lng": -79.55289289,
-      "start": 1788118320,
+      "lat": 43.79984668,
+      "lng": -79.16636203,
+      "start": 1788121620,
       "end": null,
-      "updated": 1788119160
-    },
-    {
-      "id": "ON-295312",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Vehicle Fire on QEW Toronto bound  at ROYAL WINDSOR DRIVE, Oakville. 3 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 right lanes and right shoulder closed",
-      "lat": 43.47083556,
-      "lng": -79.67429177,
-      "start": 1788116340,
-      "end": null,
-      "updated": 1788116340
+      "updated": 1788121620
     },
     {
       "id": "ON-295266",
@@ -814,10 +798,26 @@
       "start": 1788235140,
       "end": 1788339600,
       "updated": 1787862120
+    },
+    {
+      "id": "ON-294359",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound On-ramp at GARDINERS  RD/ CR 38 (IC 611), Kingston. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.2854,
+      "lng": -76.57009,
+      "start": 1788228000,
+      "end": 1789120800,
+      "updated": 1787859360
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T20:00:01.946084+00:00",
+  "updated": "2026-08-30T20:31:02.810689+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
