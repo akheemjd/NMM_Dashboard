@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-30 14:49",
-  "updated_iso": "2026-08-30T14:49:58+00:00",
-  "build_version": "1788101398",
+  "updated_at": "2026-08-30 15:20",
+  "updated_iso": "2026-08-30T15:20:59+00:00",
+  "build_version": "1788103259",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , QEW, HWY 61",
+    "status_line": "QEW, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Collision on HWY 403 MISSISSAUGA Eastbound HOV at HWY 407, Mississauga. All\u2026",
+        "road": "QEW",
+        "what": "Emergency Roadwork on QEW Fort Erie bound  at CAWTHRA ROAD, Mississauga. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound ON-RAMP at RED HILL CREEK EXPRESSWAY,\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at HWY 407, Mississauga. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "11:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:05 EDT"
+      "captured_at": "11:02 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,17 +317,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:26 MDT"
+      "captured_at": "08:58 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 PDT"
+      "captured_at": "08:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 CDT"
+      "captured_at": "10:02 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
