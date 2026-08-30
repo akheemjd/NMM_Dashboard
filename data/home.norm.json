@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-30 09:08",
-  "updated_iso": "2026-08-30T09:08:50+00:00",
-  "build_version": "1788080930",
+  "updated_at": "2026-08-30 09:39",
+  "updated_iso": "2026-08-30T09:39:51+00:00",
+  "build_version": "1788082791",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "16 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 61",
+    "status_line": "HWY 11, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound  at DIXON ROAD, Toronto. 1 right lane and\u2026",
+        "road": "HWY 11",
+        "what": "Vehicle Fire on HWY 11 Both Directions  between HWY 64(W), Marten River and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Vehicle Fire on HWY 11 Both Directions  between HWY 64(W), Marten River and\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "16 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 EDT"
+      "captured_at": "05:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:40 PDT"
+      "captured_at": "02:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -347,7 +347,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:29 EDT"
+      "captured_at": "05:15 EDT"
     }
   ],
   "market": [
