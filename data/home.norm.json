@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-31 15:39",
-  "updated_iso": "2026-08-31T15:39:04+00:00",
-  "build_version": "1788190744",
+  "updated_at": "2026-08-31 16:10",
+  "updated_iso": "2026-08-31T16:10:05+00:00",
+  "build_version": "1788192605",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "6 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 9,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 17",
+    "status_line": "HWY 11, HWY 401, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Right\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Northbound RAMP at LINE 15/MEMORIAL AVE/SIMCOE RD 49, Oro\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at TRAFALGAR ROAD,\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Northbound  at LINE 14, Oro Medonte. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "6 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "12:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:22 EDT"
+      "captured_at": "12:01 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:20 PDT"
+      "captured_at": "09:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,18 +395,18 @@
   "theft": [],
   "news": [
     {
+      "category": "regulations",
+      "source": "The Trucker",
+      "headline": "Indiana to get DOT relief funds after flood devastated the state\u2019s infrastructure",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/indiana-to-get-dot-relief-funds-after-flood-devastated-infrastructure",
+      "why": "Rules change compliance cost and driver hours."
+    },
+    {
       "category": "markets",
       "source": "The Trucker",
       "headline": "Fuel prices, seasonal shipping lull impact July-August freight volumes and profitability",
       "url": "https://www.thetrucker.com/trucking-news/business/fuel-prices-seasonal-shipping-lull-impact-july-august-freight-volumes-and-profitability",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "regulations",
-      "source": "Trucking Info",
-      "headline": "NHTSA Moves to Rewrite Truck Fuel-Economy Rules",
-      "url": "https://www.truckinginfo.com/news/nhtsa-moves-to-rewrite-truck-fuel-economy-rules",
-      "why": "Rules change compliance cost and driver hours."
     }
   ],
   "theft_home_json": "[]",
