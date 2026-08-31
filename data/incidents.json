@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-295399",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 427 Northbound RAMP at HWY 401, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.67417185,
+      "lng": -79.57719306,
+      "start": 1788134220,
+      "end": null,
+      "updated": 1788134220
+    },
+    {
+      "id": "ON-295397",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at ISLINGTON AVE, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.70916343,
+      "lng": -79.55209794,
+      "start": 1788134100,
+      "end": null,
+      "updated": 1788134100
+    },
+    {
       "id": "ON-295384",
       "province": "ON",
       "highway": "QEW",
@@ -782,42 +814,10 @@
       "start": 1788235140,
       "end": 1788339600,
       "updated": 1787862120
-    },
-    {
-      "id": "ON-294359",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound On-ramp at GARDINERS  RD/ CR 38 (IC 611), Kingston. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.2854,
-      "lng": -76.57009,
-      "start": 1788228000,
-      "end": 1789120800,
-      "updated": 1787859360
-    },
-    {
-      "id": "ON-294368",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.600674,
-      "lng": -79.64447,
-      "start": 1788235140,
-      "end": 1788512400,
-      "updated": 1787859060
     }
   ],
   "total": 50,
-  "updated": "2026-08-30T23:37:08.886190+00:00",
+  "updated": "2026-08-31T00:08:08.187793+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

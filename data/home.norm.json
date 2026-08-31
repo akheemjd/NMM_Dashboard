@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-30 23:37",
-  "updated_iso": "2026-08-30T23:37:12+00:00",
-  "build_version": "1788133032",
+  "updated_at": "2026-08-31 00:08",
+  "updated_iso": "2026-08-31T00:08:12+00:00",
+  "build_version": "1788134892",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "30 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 61",
+    "status_line": "HWY 427, HWY 401, QEW, HWY 61",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at CASABLANCA BLVD., Grimsby. Left lane\u2026",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Northbound RAMP at HWY 401, Toronto. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 61",
-        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at ISLINGTON AVE, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -287,7 +287,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 EDT"
+      "captured_at": "19:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "30 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 PDT"
+      "captured_at": "16:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
