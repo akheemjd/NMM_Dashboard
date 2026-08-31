@@ -1,6 +1,59 @@
 {
   "incidents": [
     {
+      "id": "ON-296656",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound RAMP at 401 EAST COLL, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.71607414,
+      "lng": -79.51850808,
+      "start": 1788195900,
+      "end": null,
+      "updated": 1788195900
+    },
+    {
+      "id": "ON-295893",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at MAMAINSE HARBOUR RD(W), Algoma. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 47.033188189,
+      "lng": -84.781190024,
+      "start": 1788175740,
+      "end": null,
+      "updated": 1788195420
+    },
+    {
+      "id": "drivebc.ca/RIDE-101852",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 13",
+        "from": "264 Street",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Paving operations at Highway 13, In Langley - District and At Route 1a - Fraser Highway. Starting Thu Sep 3 until Sat Sep 5. From 9:00 PM to 5:00 AM PDT the next day, Thursday and Friday. Traffic signal out. Single lane alternating traffic. Watch for traffic control. Last update: August 31st, 2026 at 9:49am PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.0595534,
+      "lng": -122.4927038,
+      "start": "2026-08-31T09:49:37-07:00",
+      "end": "",
+      "updated": "2026-08-31T09:49:37-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-101849",
       "province": "BC",
       "highway": {
@@ -59,11 +112,11 @@
       "updated": "2026-08-31T09:13:34-07:00"
     },
     {
-      "id": "ON-296598",
+      "id": "ON-296628",
       "province": "ON",
       "highway": "HWY 48",
       "direction": "Northbound",
-      "description": "Continuous Moving Maintenance Closure on HWY 48 Northbound  between BLOOMINGTON ROAD and BLOOMINGTON ROAD, Whitchurch-Stouffville. 1 Right Lane(s).",
+      "description": "Nightly Moving Maintenance Closure on HWY 48 Northbound  between BLOOMINGTON ROAD and BLOOMINGTON ROAD, Whitchurch-Stouffville. 1 Right Lane(s).",
       "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
@@ -89,22 +142,6 @@
       "start": 1788192420,
       "end": null,
       "updated": 1788192420
-    },
-    {
-      "id": "ON-296563",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at PORT UNION ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7974359,
-      "lng": -79.1442258,
-      "start": 1788192180,
-      "end": null,
-      "updated": 1788192300
     },
     {
       "id": "ON-296589",
@@ -315,22 +352,6 @@
       "updated": 1788187140
     },
     {
-      "id": "ON-296339",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at TRAFALGAR ROAD, Halton-Milton. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.5682421,
-      "lng": -79.8316825,
-      "start": 1788182760,
-      "end": null,
-      "updated": 1788187080
-    },
-    {
       "id": "ON-296503",
       "province": "ON",
       "highway": "HWY 401",
@@ -377,22 +398,6 @@
       "start": 1788217200,
       "end": 1788343200,
       "updated": 1788184320
-    },
-    {
-      "id": "ON-295893",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at MAMAINSE HARBOUR RD(W), Algoma. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 47.033188189,
-      "lng": -84.781190024,
-      "start": 1788175740,
-      "end": null,
-      "updated": 1788175740
     },
     {
       "id": "ON-296214",
@@ -827,7 +832,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T16:41:02.913600+00:00",
+  "updated": "2026-08-31T17:12:03.476504+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
