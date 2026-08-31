@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-31 10:28",
-  "updated_iso": "2026-08-31T10:28:58+00:00",
-  "build_version": "1788172138",
+  "updated_at": "2026-08-31 10:59",
+  "updated_iso": "2026-08-31T10:59:59+00:00",
+  "build_version": "1788173999",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 400, HWY 61",
+    "status_line": "HWY 401",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at GRAYS ROAD, Hamilton. Left shoulder\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BASKET WEAVE/JANE ST, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound HOV at HWY 9/DAVIS DR, Kettleby. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at KENNEDY RD -SCARBOROUGH,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 PDT"
+      "captured_at": "03:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
