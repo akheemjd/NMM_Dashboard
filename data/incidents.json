@@ -1,36 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-296690",
+      "id": "ON-296718",
       "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Collision on HWY 404 Northbound RAMP at AURORA ROAD, Whitchurch-Stouffville. All lanes closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 7",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 7 Westbound  between Adelaide Street and Highway 23 / Mitchell Line, Elginfield. 2 Right Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.01262178,
-      "lng": -79.40520323,
-      "start": 1788198180,
-      "end": null,
-      "updated": 1788198660
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 43.1744,
+      "lng": -81.326645,
+      "start": 1788454800,
+      "end": 1788472800,
+      "updated": 1788200340
     },
     {
-      "id": "ON-296668",
+      "id": "ON-296712",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 401 Eastbound COLLECTOR at MARKHAM ROAD, Toronto. 2 right lanes closed.",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at GANANOQUE TIS W/B, Gananoque. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.78533038,
-      "lng": -79.23509759,
-      "start": 1788196740,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.35974,
+      "lng": -76.08364,
+      "start": 1788200280,
       "end": null,
-      "updated": 1788198240
+      "updated": 1788200280
     },
     {
       "id": "ON-296701",
@@ -174,22 +174,6 @@
       "start": 1788483600,
       "end": 1788516000,
       "updated": 1788192720
-    },
-    {
-      "id": "ON-296570",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 401 Eastbound COLLECTOR at HWY 404, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.767071,
-      "lng": -79.33800849,
-      "start": 1788192420,
-      "end": null,
-      "updated": 1788192420
     },
     {
       "id": "ON-296589",
@@ -446,6 +430,22 @@
       "start": 1788872400,
       "end": 1789239600,
       "updated": 1788185400
+    },
+    {
+      "id": "ON-296721",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound Express between PORT UNION ROAD and NEILSON ROAD, Toronto. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.797802,
+      "lng": -79.144936,
+      "start": 1788919200,
+      "end": 1788946200,
+      "updated": 1788184500
     },
     {
       "id": "ON-296379",
@@ -827,7 +827,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T18:14:05.009420+00:00",
+  "updated": "2026-08-31T18:45:06.187046+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
