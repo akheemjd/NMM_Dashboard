@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-31 14:37",
-  "updated_iso": "2026-08-31T14:37:02+00:00",
-  "build_version": "1788187022",
+  "updated_at": "2026-08-31 15:08",
+  "updated_iso": "2026-08-31T15:08:04+00:00",
+  "build_version": "1788188884",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401, ALLEN RO, HWY 409",
+    "status_line": "HWY 427, HWY 401, HWY 17",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Northbound RAMP at MAJOR MACKENZIE DRIVE,\u2026",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Northbound EXPRESS at DUNDAS STREET, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. 1 right lane and\u2026",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at EAST OF WINSTON CHURCHILL BLVD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -277,27 +277,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT"
+      "captured_at": "10:59 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "3 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 EDT"
+      "captured_at": "10:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 PDT"
+      "captured_at": "07:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -395,11 +395,11 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
+      "category": "regulations",
       "source": "Trucking Info",
-      "headline": "What the U.S.-Canada Trade War Means for Trucking",
-      "url": "https://www.truckinginfo.com/news/what-the-us-canada-trade-war-means-for-trucking",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "headline": "NHTSA Moves to Rewrite Truck Fuel-Economy Rules",
+      "url": "https://www.truckinginfo.com/news/nhtsa-moves-to-rewrite-truck-fuel-economy-rules",
+      "why": "Rules change compliance cost and driver hours."
     },
     {
       "category": "industry",
