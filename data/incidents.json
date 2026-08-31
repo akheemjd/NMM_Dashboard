@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-296484",
+      "id": "ON-296524",
       "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound EXPRESS at DUNDAS STREET, Toronto. Left shoulder and left lane closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.62858489,
-      "lng": -79.5567846,
-      "start": 1788188520,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.76343241,
+      "lng": -79.38732453,
+      "start": 1788190320,
       "end": null,
-      "updated": 1788188520
+      "updated": 1788190320
     },
     {
       "id": "ON-296467",
@@ -33,22 +33,6 @@
       "updated": 1788187440
     },
     {
-      "id": "ON-296454",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at EAST OF WINSTON CHURCHILL BLVD, Milton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.6017329,
-      "lng": -79.7678868,
-      "start": 1788187200,
-      "end": null,
-      "updated": 1788187200
-    },
-    {
       "id": "ON-296339",
       "province": "ON",
       "highway": "HWY 401",
@@ -62,6 +46,22 @@
       "lng": -79.8316825,
       "start": 1788182760,
       "end": null,
+      "updated": 1788187080
+    },
+    {
+      "id": "ON-296503",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Daily Construction on HWY 401 Westbound  between HWY 35/115 and LIBERTY ST, Clarington. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.902897,
+      "lng": -78.62546,
+      "start": 1788872400,
+      "end": 1789066800,
       "updated": 1788187080
     },
     {
@@ -817,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T15:08:00.691885+00:00",
+  "updated": "2026-08-31T15:39:01.466928+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
