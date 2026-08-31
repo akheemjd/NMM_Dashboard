@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-296757",
+      "id": "ON-296774",
       "province": "ON",
-      "highway": "HWY 401",
+      "highway": "HWY 17",
       "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 401 Eastbound COLLECTOR at HWY 404, Toronto. Left shoulder and left lane closed.",
+      "description": "Daily Engineering Investigation on HWY 17 Eastbound  between SEC HWY 531-BONFIELD RD,  and BOUNDARY RD, MATTAWA, Mattawa. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.269833,
+      "lng": -79.13994,
+      "start": 1788174000,
+      "end": 1790352000,
+      "updated": 1788204600
+    },
+    {
+      "id": "ON-296764",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound RAMP at NIKOLA TESLA, Hamilton. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.767071,
-      "lng": -79.33800849,
-      "start": 1788203580,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.2585035,
+      "lng": -79.7657876,
+      "start": 1788203940,
       "end": null,
-      "updated": 1788203580
+      "updated": 1788203940
     },
     {
       "id": "ON-296753",
@@ -28,22 +44,6 @@
       "lanes": "left shoulder and left lane closed",
       "lat": 43.769261531,
       "lng": -79.339082837,
-      "start": 1788203520,
-      "end": null,
-      "updated": 1788203520
-    },
-    {
-      "id": "ON-296758",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at WEST OF HWY 409, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.70412874,
-      "lng": -79.55872688,
       "start": 1788203520,
       "end": null,
       "updated": 1788203520
@@ -143,22 +143,6 @@
       "start": 1788258600,
       "end": 1788305400,
       "updated": 1788197760
-    },
-    {
-      "id": "ON-295893",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at MAMAINSE HARBOUR RD(W), Algoma. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 47.033188189,
-      "lng": -84.781190024,
-      "start": 1788175740,
-      "end": null,
-      "updated": 1788195420
     },
     {
       "id": "drivebc.ca/RIDE-101852",
@@ -824,10 +808,26 @@
       "start": 1788400800,
       "end": 1789635600,
       "updated": 1787950080
+    },
+    {
+      "id": "ON-294819",
+      "province": "ON",
+      "highway": "HWY 15",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 15 Northbound  between PERTH RD/3RD LINE RD, Franktown and HWY 7, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.03812,
+      "lng": -76.05842,
+      "start": 1788134400,
+      "end": 1788436800,
+      "updated": 1787949960
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T19:16:06.968551+00:00",
+  "updated": "2026-08-31T19:47:06.758147+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
