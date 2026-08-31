@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-296656",
+      "id": "ON-296678",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound RAMP at 401 EAST COLL, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 417 Eastbound  at BELFAST RD, Ottawa. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.71607414,
-      "lng": -79.51850808,
-      "start": 1788195900,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 45.41921,
+      "lng": -75.6473,
+      "start": 1788197100,
       "end": null,
-      "updated": 1788195900
+      "updated": 1788197100
+    },
+    {
+      "id": "ON-296668",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 401 Eastbound COLLECTOR at MARKHAM ROAD, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.78533038,
+      "lng": -79.23509759,
+      "start": 1788196740,
+      "end": null,
+      "updated": 1788196740
     },
     {
       "id": "ON-295893",
@@ -318,6 +334,22 @@
       "start": 1788393600,
       "end": 1788512400,
       "updated": 1788191160
+    },
+    {
+      "id": "ON-296680",
+      "province": "ON",
+      "highway": "HWY 4",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 4 Northbound  between Medway Road and Medway Road, Arva. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.05041,
+      "lng": -81.294945,
+      "start": 1788350400,
+      "end": 1788472800,
+      "updated": 1788188340
     },
     {
       "id": "ON-296467",
@@ -792,47 +824,10 @@
       "start": 1789124400,
       "end": 1789164000,
       "updated": 1787948880
-    },
-    {
-      "id": "drivebc.ca/DBC-93773",
-      "province": "BC",
-      "highway": {
-        "name": "Other Roads",
-        "from": "Silver Skagit Rd 6km mark",
-        "to": "USA/Canada Border",
-        "direction": "BOTH"
-      },
-      "direction": "",
-      "description": "Silver Skagit Rd, in both directions. There is a wildfire between Silver Skagit Rd 6km mark and USA/Canada Border. Road closed. Closure point is approximately 6km south of Flood Hope Rd due to Provincial Parks closure caused by Hozomeen Mountain Wildfire. Silver Lake remains open. Ross Lake Campground and Skagit Valley Park closed. Next update time Mon Aug 31 at 12:00 PM PDT. Last updated Fri Aug 28 at 1:26 PM PDT. (DBC-93773)",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.327686,
-      "lng": -121.430866,
-      "start": "2026-07-24T16:34:16-07:00",
-      "end": "",
-      "updated": "2026-08-28T13:26:24-07:00"
-    },
-    {
-      "id": "ON-294788",
-      "province": "ON",
-      "highway": "HWY 642",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 642 Northbound  between STURGEON RIVER BR and STURGEON RIVER BR, . 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 50.09957,
-      "lng": -91.765594,
-      "start": 1789038000,
-      "end": 1789077600,
-      "updated": 1787947680
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T17:12:03.476504+00:00",
+  "updated": "2026-08-31T17:43:04.608067+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
