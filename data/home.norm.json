@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-31 09:57",
-  "updated_iso": "2026-08-31T09:57:57+00:00",
-  "build_version": "1788170277",
+  "updated_at": "2026-08-31 10:28",
+  "updated_iso": "2026-08-31T10:28:58+00:00",
+  "build_version": "1788172138",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -238,13 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 1,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 61",
+    "status_line": "QEW, HWY 400, HWY 61",
     "incidents": [
       {
-        "road": "HWY 61",
-        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at GRAYS ROAD, Hamilton. Left shoulder\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound HOV at HWY 9/DAVIS DR, Kettleby. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -280,7 +287,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -290,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -300,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -310,7 +317,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 MDT"
+      "captured_at": "04:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -320,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 PDT"
+      "captured_at": "03:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -330,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 CDT"
+      "captured_at": "05:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
