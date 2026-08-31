@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-296255",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at MISSISSAUGA RD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.605153,
+      "lng": -79.7463043,
+      "start": 1788180540,
+      "end": null,
+      "updated": 1788180540
+    },
+    {
       "id": "ON-296243",
       "province": "ON",
       "highway": "HWY 401",
@@ -798,26 +814,10 @@
       "start": 1788138000,
       "end": 1788516000,
       "updated": 1787872800
-    },
-    {
-      "id": "ON-294583",
-      "province": "ON",
-      "highway": "HWY 48",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 48 Southbound  between PRINCESS STREET and PRINCESS STREET, Mt. Albert. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.133575,
-      "lng": -79.32128,
-      "start": 1788181200,
-      "end": 1788462000,
-      "updated": 1787869560
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T12:48:35.740061+00:00",
+  "updated": "2026-08-31T13:03:57.477190+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
