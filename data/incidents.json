@@ -1,36 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-295453",
+      "id": "ON-295468",
       "province": "ON",
-      "highway": "HWY 404",
+      "highway": "HWY 410",
       "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 404 Northbound  at SHEPPARD AVE, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 410 Northbound COLLECTOR RAMP at COURTNEY PARK DRIVE, Mississauga. Centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.78176629,
-      "lng": -79.34052528,
-      "start": 1788145380,
+      "lanes": "centre lane closed",
+      "lat": 43.6505671,
+      "lng": -79.6745346,
+      "start": 1788147180,
       "end": null,
-      "updated": 1788145380
+      "updated": 1788147180
     },
     {
-      "id": "ON-295449",
+      "id": "ON-295465",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 left lane closed.",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 HAMILTON Eastbound ON-RAMP at LINCOLN M. ALEXANDER PARKWAY, Hamilton. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.7811849,
-      "lng": -79.25514924,
-      "start": 1788143940,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.232058,
+      "lng": -79.950944,
+      "start": 1788147000,
       "end": null,
-      "updated": 1788143940
+      "updated": 1788147000
+    },
+    {
+      "id": "ON-295463",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 HAMILTON Eastbound  at LINCOLN M. ALEXANDER PARKWAY, Hamilton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.23234924,
+      "lng": -79.95039837,
+      "start": 1788146940,
+      "end": null,
+      "updated": 1788146940
     },
     {
       "id": "ON-261152",
@@ -798,26 +814,10 @@
       "start": 1788235140,
       "end": 1788339600,
       "updated": 1787862120
-    },
-    {
-      "id": "ON-294359",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound On-ramp at GARDINERS  RD/ CR 38 (IC 611), Kingston. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.2854,
-      "lng": -76.57009,
-      "start": 1788228000,
-      "end": 1789120800,
-      "updated": 1787859360
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T03:14:44.040306+00:00",
+  "updated": "2026-08-31T03:45:44.374173+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
