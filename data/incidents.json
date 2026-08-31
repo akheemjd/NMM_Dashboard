@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-295513",
+      "id": "ON-295518",
       "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound  at REXDALE BLVD / DERRY ROAD, Toronto. 2 left lanes closed.",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at LANGSTAFF ROAD, Vaughan. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.715314,
-      "lng": -79.618577,
-      "start": 1788164160,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.81034617,
+      "lng": -79.54373723,
+      "start": 1788167280,
       "end": null,
-      "updated": 1788164280
-    },
-    {
-      "id": "ON-295514",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound HOV at REXDALE BLVD / DERRY ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.715348,
-      "lng": -79.618491,
-      "start": 1788164280,
-      "end": null,
-      "updated": 1788164280
+      "updated": 1788167940
     },
     {
       "id": "ON-261152",
@@ -814,10 +798,26 @@
       "start": 1788228000,
       "end": 1789120800,
       "updated": 1787859360
+    },
+    {
+      "id": "ON-294368",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.600674,
+      "lng": -79.64447,
+      "start": 1788235140,
+      "end": 1788512400,
+      "updated": 1787859060
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T08:55:51.862067+00:00",
+  "updated": "2026-08-31T09:26:52.488031+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
