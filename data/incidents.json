@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-295513",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound  at REXDALE BLVD / DERRY ROAD, Toronto. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.715314,
+      "lng": -79.618577,
+      "start": 1788164160,
+      "end": null,
+      "updated": 1788164280
+    },
+    {
+      "id": "ON-295514",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound HOV at REXDALE BLVD / DERRY ROAD, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.715348,
+      "lng": -79.618491,
+      "start": 1788164280,
+      "end": null,
+      "updated": 1788164280
+    },
+    {
       "id": "ON-295512",
       "province": "ON",
       "highway": "QEW",
@@ -782,42 +814,10 @@
       "start": 1788235140,
       "end": 1788339600,
       "updated": 1787862120
-    },
-    {
-      "id": "ON-294359",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound On-ramp at GARDINERS  RD/ CR 38 (IC 611), Kingston. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.2854,
-      "lng": -76.57009,
-      "start": 1788228000,
-      "end": 1789120800,
-      "updated": 1787859360
-    },
-    {
-      "id": "ON-294368",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 403 MISSISSAUGA Eastbound On-ramp at HWY 10 / HURONTARIO STREET, Mississauga. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.600674,
-      "lng": -79.64447,
-      "start": 1788235140,
-      "end": 1788512400,
-      "updated": 1787859060
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T07:53:50.413684+00:00",
+  "updated": "2026-08-31T08:24:51.443872+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
