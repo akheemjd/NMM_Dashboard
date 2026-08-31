@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-31 02:43",
-  "updated_iso": "2026-08-31T02:43:48+00:00",
-  "build_version": "1788144228",
+  "updated_at": "2026-08-31 03:14",
+  "updated_iso": "2026-08-31T03:14:48+00:00",
+  "build_version": "1788146088",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "10 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 61",
+    "status_line": "HWY 404, HWY 401, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 left lane\u2026",
+        "road": "HWY 404",
+        "what": "Disabled Vehicle on HWY 404 Northbound  at SHEPPARD AVE, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound TRANSFER at Allen Road Express to Collector,\u2026",
+        "what": "Collision on HWY 401 Westbound EXPRESS at McCOWAN ROAD, Toronto. 1 left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
+      "captured_at": "23:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:20 EDT"
+      "captured_at": "23:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:45 EDT"
+      "captured_at": "22:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -323,11 +323,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 PDT"
+      "captured_at": "20:00 PDT"
     },
     {
       "name": "Emerson-Pembina",

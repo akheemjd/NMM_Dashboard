@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-295453",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 404 Northbound  at SHEPPARD AVE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.78176629,
+      "lng": -79.34052528,
+      "start": 1788145380,
+      "end": null,
+      "updated": 1788145380
+    },
+    {
       "id": "ON-295449",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,38 +31,6 @@
       "start": 1788143940,
       "end": null,
       "updated": 1788143940
-    },
-    {
-      "id": "ON-295441",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Allen Road Express to Collector, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.73040965,
-      "lng": -79.44417322,
-      "start": 1788142260,
-      "end": null,
-      "updated": 1788142260
-    },
-    {
-      "id": "ON-295440",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at ALLEN ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.72979731,
-      "lng": -79.44886732,
-      "start": 1788142200,
-      "end": null,
-      "updated": 1788142200
     },
     {
       "id": "ON-261152",
@@ -814,10 +798,26 @@
       "start": 1788235140,
       "end": 1788339600,
       "updated": 1787862120
+    },
+    {
+      "id": "ON-294359",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound On-ramp at GARDINERS  RD/ CR 38 (IC 611), Kingston. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.2854,
+      "lng": -76.57009,
+      "start": 1788228000,
+      "end": 1789120800,
+      "updated": 1787859360
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T02:43:44.887077+00:00",
+  "updated": "2026-08-31T03:14:44.040306+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
