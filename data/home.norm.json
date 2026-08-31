@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-31 03:45",
-  "updated_iso": "2026-08-31T03:45:47+00:00",
-  "build_version": "1788147947",
+  "updated_at": "2026-08-31 04:16",
+  "updated_iso": "2026-08-31T04:16:49+00:00",
+  "build_version": "1788149809",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "5 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "10 min"
   },
   "fuel": {
     "national_diesel": "233.0",
@@ -21,7 +21,7 @@
     "change_7d": "+0.0",
     "change_7d_band": "noise",
     "change_7d_class": "flat",
-    "change_30d": "+11.6",
+    "change_30d": "+6.2",
     "low_code": "SK",
     "low": "209.1",
     "high_code": "QC",
@@ -238,20 +238,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 5,
     "gauge_class": "warn",
-    "status_line": "HWY 410, HWY 403 , HWY 61",
+    "status_line": "HWY 406, HWY 401, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Northbound COLLECTOR RAMP at COURTNEY PARK DRIVE,\u2026",
+        "road": "HWY 406",
+        "what": "Spill on HWY 406 Northbound  at GENEVA STREET, St. Catharines. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Collision on HWY 403 HAMILTON Eastbound ON-RAMP at LINCOLN M. ALEXANDER\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at BLACK CREEK DRIVE,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,11 +283,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "00:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +297,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 EDT"
+      "captured_at": "00:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:45 EDT"
+      "captured_at": "23:46 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -317,17 +317,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 MDT"
+      "captured_at": "21:49 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:20 PDT"
+      "captured_at": "21:00 PDT"
     },
     {
       "name": "Emerson-Pembina",

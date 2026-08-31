@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-295468",
+      "id": "ON-295486",
       "province": "ON",
-      "highway": "HWY 410",
+      "highway": "HWY 406",
       "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound COLLECTOR RAMP at COURTNEY PARK DRIVE, Mississauga. Centre lane closed.",
+      "description": "Spill on HWY 406 Northbound  at GENEVA STREET, St. Catharines. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.6505671,
-      "lng": -79.6745346,
-      "start": 1788147180,
+      "lanes": "left lane closed",
+      "lat": 43.15788202,
+      "lng": -79.23992641,
+      "start": 1788149400,
       "end": null,
-      "updated": 1788147180
+      "updated": 1788149400
+    },
+    {
+      "id": "ON-295483",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at BLACK CREEK DRIVE, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.71735,
+      "lng": -79.52002269,
+      "start": 1788149280,
+      "end": null,
+      "updated": 1788149280
     },
     {
       "id": "ON-295465",
@@ -798,26 +814,10 @@
       "start": 1788174000,
       "end": 1790352000,
       "updated": 1787865720
-    },
-    {
-      "id": "ON-294577",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound Express between HWY 404 and YONGE ST, Toronto. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.767586,
-      "lng": -79.33804,
-      "start": 1788235140,
-      "end": 1788339600,
-      "updated": 1787862120
     }
   ],
   "total": 50,
-  "updated": "2026-08-31T03:45:44.374173+00:00",
+  "updated": "2026-08-31T04:16:45.223329+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
