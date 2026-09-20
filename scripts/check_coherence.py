@@ -29,7 +29,20 @@ CHART_MARKERS = ["d3.min.js", "nmdi-chart.js"]
 
 
 def chrome(html):
-    """The header+nav+footer, with per-page active markers normalized out."""
+    """The header+nav+footer, with per-page and per-build variation normalized out.
+
+    Two things vary legitimately between pages and must not count as drift:
+
+    - the active-page marker (`class="on"`, `aria-current="page"`)
+    - the footer's "Updated <timestamp> UTC", which is the BUILD time
+
+    The timestamp was not normalized, so this guard was flaky: a full deploy
+    builds every page inside one minute and passed, while any partial rebuild
+    left the rebuilt pages on a different minute and reported
+    "2 distinct header/nav/footer variants — pages have drifted" for a site
+    whose chrome was identical. A guard that fails on build ordering trains
+    people to ignore it.
+    """
     head = re.search(r'<header class="hd">.*?</nav>', html, re.DOTALL)
     foot = re.search(r'<footer class="ft">.*?</footer>', html, re.DOTALL)
     parts = []
@@ -39,6 +52,7 @@ def chrome(html):
         s = m.group(0)
         s = re.sub(r' class="on"', "", s)
         s = re.sub(r' aria-current="page"', "", s)
+        s = re.sub(r'Updated \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC', "Updated <ts> UTC", s)
         parts.append(s)
     return hashlib.md5("".join(parts).encode()).hexdigest()
 

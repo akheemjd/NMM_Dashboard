@@ -43,11 +43,11 @@ nothing worth your time, you will not hear from us twice to make up for it.
 
 ## Where the numbers come from
 
-Every figure is a primary source, named and dated: the Natural Resources Canada
-weekly retail survey, the Canada Border Services Agency, the Bank of Canada and
-the US Energy Information Administration. Every number we publish carries its
-source and a copy-paste citation. If we get something wrong, we correct it in
-the next issue and say what changed.
+Every figure comes from a primary source, named and dated: the Natural Resources
+Canada weekly retail survey, the Canada Border Services Agency, the Bank of
+Canada and the US Energy Information Administration. Every number we publish
+carries its source. If we get something wrong, we correct it in the next issue
+and say what changed.
 
 ## Unsubscribing
 

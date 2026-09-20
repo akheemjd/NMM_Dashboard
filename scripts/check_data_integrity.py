@@ -117,10 +117,53 @@ def check_spread_definition():
     return out
 
 
+def check_fx_average_agreement():
+    """The 30-day FX average must be one number, not two.
+
+    normalize.py defines it as the trailing 21 business days and market_pulse.py
+    used a calendar window, so the site published 1.3864 in fx.norm.json and
+    1.3868 in market.json. Rounding to one decimal made it worse: the home page
+    reported a gap of +0.0002 against a true +0.0138.
+    """
+    norm = _load("fx.norm.json")
+    market = _load("market.json")
+    if norm is None or market is None:
+        return ["could not load fx.norm.json / market.json"]
+
+    fx = norm.get("fx") if isinstance(norm.get("fx"), dict) else norm
+    published = str(fx.get("avg_30d") or "")
+    if not published:
+        return []
+
+    out = []
+    detail = ""
+    for i in (market.get("indicators") or []):
+        if "CAD" in (i.get("name") or ""):
+            detail = str(i.get("detail") or "")
+    if not detail:
+        return []
+
+    if published not in detail:
+        out.append(f"market.json quotes a 30-day FX average that is not "
+                   f"fx.norm.json's {published}: {detail!r}")
+
+    # A one-decimal average is the specific failure that hid this for weeks.
+    try:
+        decimals = len(published.split(".")[1]) if "." in published else 0
+        if decimals < 3:
+            out.append(f"fx avg_30d {published} carries only {decimals} decimal(s). "
+                       f"At one decimal the 30-day gap collapses to ~0.")
+    except (IndexError, ValueError):
+        pass
+
+    return out
+
+
 CHECKS = (
     ("lookback never returns the newest point", check_lookback_not_latest),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
     ("spread uses the ten-province definition", check_spread_definition),
+    ("one 30-day FX average across the site", check_fx_average_agreement),
 )
 
 

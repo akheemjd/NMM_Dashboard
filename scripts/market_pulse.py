@@ -1,7 +1,7 @@
 import urllib.request, io, zipfile, csv, json, os, sys
 from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from history import span_days, average
+from history import span_days, average, average_obs
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
@@ -121,7 +121,12 @@ def collect_market_pulse():
         rate = fx.get("current", 0)
         # Guarded: only show when 30 days of history exist
         if span_days("fx", "usd_cad") >= 30:
-            avg30 = average("fx", "usd_cad", 30)
+            # 21 observations AND four decimals, to match the canonical
+            # definition in normalize.py. The FX module defines its 30-day
+            # average as the trailing 21 business days; a calendar window over
+            # the same period holds a different set of points. Getting either
+            # wrong put a second, different 30-day FX average on the site.
+            avg30 = average_obs("fx", "usd_cad", 21, 4)
             if avg30 is not None:
                 pulse["indicators"].append({
                     "name": "CAD Impact",

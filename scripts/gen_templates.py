@@ -1009,7 +1009,7 @@ write("methodology",
   <section class="reading" style="max-width:720px">
     <h2>Population</h2>
     <p class="note" style="margin-top:8px">The NMDI is computed from ten provinces: British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland and Labrador.</p>
-    <p class="note">Yukon and the Northwest Territories are collected from the same NRCan survey and displayed on the fuel page. They are excluded from the national index because they carry negligible national freight volume and equal-weighting them distorts the figure. Territorial diesel is supplied off Edmonton and typically lands near Alberta's price, below the national mean, so the exclusion is the more conservative choice.</p>
+    <p class="note">Yukon and the Northwest Territories are collected from the same NRCan survey and reported in the weekly brief, but they are not published as separate locations on the fuel page. They are excluded from the national index because they carry negligible national freight volume and equal-weighting them distorts the figure. Territorial diesel is supplied off Edmonton and typically lands near Alberta's price, below the national mean, so the exclusion is the more conservative choice.</p>
 
     <h2 style="margin-top:32px">Method</h2>
     <p class="note" style="margin-top:8px">Each provincial figure is the unweighted arithmetic mean of NRCan survey city prices within that province. The number of survey cities varies by province. The national index is the unweighted mean of the ten provincial figures. It is not population-weighted or freight-weighted; every province counts equally.</p>
@@ -1259,7 +1259,7 @@ us_body = (
   <section class="sec">
     <div class="lead"><h2>The North American index</h2></div>
     <div class="reading">
-      <p class="note" style="margin-top:0">The North American Diesel Index (NADI) is the mean of the Canadian national average and the US national average — each country counts once, not consumption-weighted. This week the NADI is <b>{{eia.nadi}}¢/L</b>, with Canada {{eia.gap_word}} by <b>{{eia.ca_us_gap}}¢/L</b>.</p>
+      <p class="note" style="margin-top:0">The North American Diesel Index (NADI) is the mean of the Canadian national average and the US national average — each country counts once, not consumption-weighted. This week the NADI is <b>{{eia.nadi}}¢/L</b>, with {{eia.gap_word}} by <b>{{eia.ca_us_gap}}¢/L</b>.</p>
       <p class="note">Methodology: <a href="/methodology/nmdi/">/methodology/nmdi/</a>. The Canadian half is the NRCan weekly survey (ten provinces); the US half is the EIA national average above.</p>
     </div>
   </section>

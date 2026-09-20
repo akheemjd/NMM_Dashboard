@@ -154,8 +154,31 @@ def delta(series, key, days_ago, tolerance=3, ndigits=1):
     return round(now - then, ndigits)
 
 
-def average(series, key, days):
-    """Mean over the trailing window. None if fewer than 14 points."""
+def average(series, key, days, ndigits=1):
+    """Mean over the trailing calendar window. None if fewer than 14 points.
+
+    ndigits exists for the same reason it does on delta(). Diesel moves in
+    cents, so one decimal is right, but USD/CAD moves in the fourth decimal:
+    round(1.3868, 1) is 1.4, which made the home page report a 30-day FX
+    comparison of "+0.0002 vs 30-day avg 1.4000" against a true mean of 1.3868
+    and a true gap of +0.0138, understating it about 67 times. Callers working
+    in a finer unit have to say so.
+    """
     cutoff = date.today() - timedelta(days=days)
     vals = [v for d, v in _points(series, key) if d >= cutoff]
-    return round(sum(vals) / len(vals), 1) if len(vals) >= 14 else None
+    return round(sum(vals) / len(vals), ndigits) if len(vals) >= 14 else None
+
+
+def average_obs(series, key, n, ndigits=1):
+    """Mean of the last n observations. None if fewer than n exist.
+
+    The FX module defines its "30-day average" as the trailing 21 business
+    days, and a calendar window over the same period contains a different set
+    of observations. Computing it both ways put two different 30-day FX
+    averages on the site at once (1.3864 in fx.norm.json, 1.3868 in
+    market.json). Count observations, not days, when matching that figure.
+    """
+    pts = [v for _, v in _points(series, key)]
+    if len(pts) < n:
+        return None
+    return round(sum(pts[-n:]) / n, ndigits)

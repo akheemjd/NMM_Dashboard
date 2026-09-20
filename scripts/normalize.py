@@ -208,7 +208,9 @@ fuel = {
     "low_code": d_sorted[0][0], "low": f"{d_sorted[0][1]:.1f}",
     "high_code": d_sorted[-1][0], "high": f"{d_sorted[-1][1]:.1f}",
     "spread": f"{d_sorted[-1][1]-d_sorted[0][1]:.1f}",
-    "spread_dollars_500l": f"${(d_sorted[-1][1]-d_sorted[0][1]) * 5:.0f}",
+    # Bare number, no currency symbol. The template adds the "$", so including
+    # it here rendered "$$266 on a 500-litre fill" on /fuel-prices/.
+    "spread_dollars_500l": f"{(d_sorted[-1][1]-d_sorted[0][1]) * 5:.0f}",
     # Fuel cost per distance at a 35 L/100km loaded-highway burn rate.
     "fuel_cost_per_km": f"${fuel_nat * 35 / 10000:.2f}",
     "fuel_cost_per_mi": f"${fuel_nat * 35 / 10000 * 1.609344:.2f}",
@@ -394,7 +396,11 @@ if _eia_usd is not None and fx_rate and not _eia_stale:
         "nadi": f"{_nadi:.1f}",
         "ca_us_gap": f"{_gap:.1f}",
         "ca_higher": _gap > 0,
-        "gap_word": "Canada higher" if _gap > 0 else ("US higher" if _gap < 0 else "level with"),
+        # Phrased to stand alone after a unit ("¢/L · Canada higher") and inside
+        # a sentence after a preposition ("with Canada higher by"). The template
+        # used to prepend its own "Canada", which rendered "with Canada Canada
+        # higher by" on /us-diesel/.
+        "gap_word": "Canada higher" if _gap > 0 else ("the US higher" if _gap < 0 else "level with"),
         "date": raw_eia.get("date", ""),
         "padds_usd_gal": _padds,
         "padds_cpl": _padds_cpl,
