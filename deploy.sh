@@ -131,8 +131,21 @@ else
       fi
     fi
   else
-    echo "  No data change — skipping"
+    echo "  No data change — skipping rebuild"
     git reset >/dev/null
+    # A commit that touches scripts/, templates/ or content/ changes no data, so
+    # this branch would strand it locally forever. The media kit rewrite sat
+    # unpushed for exactly this reason: correct on disk, absent from the repo.
+    UNPUSHED=$(git log origin/master..HEAD --oneline 2>/dev/null)
+    if [ -n "$UNPUSHED" ]; then
+      echo "  Unpushed commits present:"
+      echo "$UNPUSHED" | sed 's/^/    /'
+      if git push origin master >/dev/null 2>&1; then
+        echo "  pushed."
+      else
+        echo "  push failed — will retry next run" >&2
+      fi
+    fi
   fi
 fi
 
