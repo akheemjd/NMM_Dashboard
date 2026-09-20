@@ -249,12 +249,15 @@ def collect_news():
         # Health tracking
     try:
         from health_tracker import record_success, record_failure
+        # record_success takes ONE argument. Passing a count raised TypeError,
+        # and the bare except below swallowed it, so news success was never
+        # recorded at all: a real news outage would have gone unnoticed.
         if headlines:
-            record_success("news", len(headlines))
+            record_success("news")
         else:
             record_failure("news", "No headlines collected")
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"  news health tracking failed: {e}")
     
     save("news", {
         "headlines": headlines,

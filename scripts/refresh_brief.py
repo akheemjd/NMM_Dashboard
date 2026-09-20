@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from ghost_publish import (  # noqa: E402
-    api_call, markdown_to_html, find_post_by_slug, _load_dotenv,
+    api_call, markdown_to_html, find_post_by_slug, lint_markdown, _load_dotenv,
 )
 from weekly_brief import build_brief  # noqa: E402
 from send_weekly_brief import recent_posts  # noqa: E402
@@ -61,6 +61,16 @@ def main(argv=None):
             print(f"WARNING: regenerated title differs ({title!r})")
             print("         writing the existing title back, not the new one")
             title = post.get("title")
+
+        # This script writes a body straight through api_call, so it never
+        # passes the gate that lives inside create_or_update_post. Lint here.
+        ok, out = lint_markdown(md)
+        print(f"voice lint: {out.splitlines()[0] if out else 'no output'}")
+        if not ok:
+            print("ABORT: refreshed body failed the voice lint, not writing it")
+            print(out)
+            return 1
+
         html = markdown_to_html(md)
         links = html.count("<a href=")
         print(f"body:      {len(html)} chars, {links} links")

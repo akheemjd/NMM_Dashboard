@@ -104,12 +104,19 @@ def main():
         print("usage: voice_lint.py <draft.md>", file=sys.stderr)
         return 2
 
-    path = Path(sys.argv[1])
-    if not path.exists():
-        print(f"missing file: {path}", file=sys.stderr)
-        return 2
-
-    text = path.read_text(encoding="utf-8")
+    arg = sys.argv[1]
+    if arg == "-":
+        # Lint stdin. Lets a caller holding markdown in memory gate it without
+        # writing a temp file, which is what the publish path needs.
+        text = sys.stdin.read()
+        label = "<stdin>"
+    else:
+        path = Path(arg)
+        if not path.exists():
+            print(f"missing file: {path}", file=sys.stderr)
+            return 2
+        text = path.read_text(encoding="utf-8")
+        label = path.name
     problems = []
 
     # 1. Banned words/phrases
@@ -156,12 +163,12 @@ def main():
             )
 
     if problems:
-        print(f"FAIL — {path.name}")
+        print(f"FAIL — {label}")
         for p in problems:
             print(f"  - {p}")
         return 1
 
-    print(f"PASS — {path.name} ({len(counts)} sentences)")
+    print(f"PASS — {label} ({len(counts)} sentences)")
     for w in warnings:
         print(f"  warn: {w}")
     return 0

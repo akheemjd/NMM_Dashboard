@@ -48,9 +48,18 @@ def _write(rows):
 
 
 def snapshot(series, key, value, when=None):
-    """Record value for a date. First write wins per (date, series, key):
-    a later build for the same date keeps the original value, never overwrites.
-    New keys still append as normal."""
+    """Record value for a date.
+
+    First write wins for settled history, so a mid-week rebuild cannot rewrite
+    a past observation.
+
+    The NEWEST date is deliberately the exception. NRCan revises a print after
+    publishing it, and the series has to follow the correction. Under a strict
+    first-write-wins the 15 September print stayed at its original 249.2 while
+    every other surface on the site quoted the revised 267.1 from the same
+    feed, so the homepage chart contradicted its own citation four lines below
+    it, and nothing errored for weeks.
+    """
     if value is None:
         return
     try:
@@ -60,12 +69,22 @@ def snapshot(series, key, value, when=None):
 
     day = (when or date.today()).isoformat()
     rows = _load()
+
+    newest = max((r["date"] for r in rows
+                  if r["series"] == series and r["key"] == key), default=None)
+
     for r in rows:
         if r["date"] == day and r["series"] == series and r["key"] == key:
-            break  # already recorded — first write wins, keep existing value
-    else:
-        rows.append({"date": day, "series": series, "key": key,
-                     "value": f"{value:.4f}"})
+            if day != newest:
+                return  # settled history — keep the original value
+            if r["value"] == f"{value:.4f}":
+                return  # unchanged
+            r["value"] = f"{value:.4f}"  # accept the revision to the live point
+            _write(rows)
+            return
+
+    rows.append({"date": day, "series": series, "key": key,
+                 "value": f"{value:.4f}"})
     rows.sort(key=lambda r: (r["series"], r["key"], r["date"]))
     _write(rows)
 
@@ -94,25 +113,45 @@ def latest(series, key):
 
 
 def value_at(series, key, days_ago, tolerance=3):
-    """Value closest to N days back, within tolerance days. None if no match."""
+    """Value closest to N days before the NEWEST observation, within tolerance.
+
+    Anchored to the newest observation, not to today. The diesel series is
+    weekly, so "today minus 7" never lands on a data point: it fell two days
+    from the newest print, inside the tolerance, and this function returned the
+    newest value as its own comparator. Every 7-day delta on the site computed
+    to exactly 0.0, in text and as zero-width bars.
+
+    Excluding the newest point is the other half of the fix. A lookback has to
+    compare against something genuinely older than the latest observation, or
+    "change over the period" is always zero by construction.
+    """
     pts = _points(series, key)
-    if not pts:
+    if len(pts) < 2:
         return None
-    target = date.today() - timedelta(days=days_ago)
+    newest = pts[-1][0]
+    target = newest - timedelta(days=days_ago)
     best, best_gap = None, None
     for d, v in pts:
+        if d >= newest:
+            continue
         gap = abs((d - target).days)
         if best_gap is None or gap < best_gap:
             best, best_gap = v, gap
     return best if best_gap is not None and best_gap <= tolerance else None
 
 
-def delta(series, key, days_ago, tolerance=3):
-    """Change from N days ago to now. None if history is too short."""
+def delta(series, key, days_ago, tolerance=3, ndigits=1):
+    """Change from N observations back to the newest. None if history is short.
+
+    ndigits matters more than it looks. Diesel moves in cents, so one decimal
+    is right, but USD/CAD moves in the fourth decimal: a 0.0093 move rounded to
+    one place is 0.0, which reads as "the loonie did not move". Callers working
+    in a finer unit have to say so.
+    """
     now, then = latest(series, key), value_at(series, key, days_ago, tolerance)
     if now is None or then is None:
         return None
-    return round(now - then, 1)
+    return round(now - then, ndigits)
 
 
 def average(series, key, days):

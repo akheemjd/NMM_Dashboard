@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-309549",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KEELE ST, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.72269454,
+      "lng": -79.4814239,
+      "start": 1789938960,
+      "end": null,
+      "updated": 1789938960
+    },
+    {
       "id": "ON-309544",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1789988400,
       "end": 1790377200,
       "updated": 1789746180
-    },
-    {
-      "id": "ON-308914",
-      "province": "ON",
-      "highway": "HWY 4",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 4 Northbound  between Clinton Line and Clinton Line, St Thomas. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 42.82063,
-      "lng": -81.26101,
-      "start": 1790074800,
-      "end": 1790110800,
-      "updated": 1789745700
     }
   ],
   "total": 50,
-  "updated": "2026-09-20T21:08:16.409965+00:00",
+  "updated": "2026-09-20T21:19:47.558516+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

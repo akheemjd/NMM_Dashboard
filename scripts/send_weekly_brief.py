@@ -37,7 +37,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from ghost_publish import (  # noqa: E402
     api_call, markdown_to_html, slugify, find_post_by_slug, upload_image,
-    _load_dotenv,
+    lint_markdown, _load_dotenv,
 )
 from weekly_brief import build_brief  # noqa: E402
 
@@ -195,6 +195,17 @@ def main(argv=None):
     print(f"=== {title} ===")
     print(f"  slug:       {slug}")
     print(f"  newsletter: {nl_slug} (query param, applied at publish)")
+
+    # This path creates and publishes the newsletter straight through api_call,
+    # so it never reaches the gate inside create_or_update_post and was never
+    # linted. The brief publishes to the site as a post, so it is held to the
+    # same standard as any article.
+    ok, out = lint_markdown(markdown)
+    print(f"  voice lint: {out.splitlines()[0] if out else 'no output'}")
+    if not ok:
+        print("\nREFUSING to publish: the brief failed the voice lint.")
+        print(out)
+        return 1
 
     print("\n[1/3] creating draft (a draft can never email anyone)...")
     payload = build_payload(title, subtitle, markdown, slug, "draft")

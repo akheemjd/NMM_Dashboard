@@ -229,6 +229,15 @@ def create_or_update_post(title, markdown, options=None):
     """
     options = options or {}
 
+    # Both gates live here rather than in main(), so every caller is covered.
+    # send_weekly_brief.py and refresh_brief.py write bodies too, and neither
+    # went through the CLI, so neither was ever linted.
+    if not options.get("skip_lint"):
+        ok, out = lint_markdown(markdown)
+        print(f"  voice lint: {out.splitlines()[0] if out else 'no output'}")
+        if not ok:
+            raise ValueError(f"voice lint refused this draft:\n{out}")
+
     slug = options.get("slug") or slugify(title)
     status = options.get("status", "published")
     tags = options.get("tags") or ([options["primary_tag"]] if options.get("primary_tag") else [])
@@ -271,14 +280,36 @@ def create_or_update_post(title, markdown, options=None):
     posts = result.get("posts") or []
     post = posts[0] if posts else result.get("post", {})
 
+    if not post.get("id"):
+        raise RuntimeError(
+            f"Ghost returned no post id for '{slug}'. Response: {str(result)[:300]}"
+        )
+
+    # Assert the body actually stored. Ghost answers 201 for writes it silently
+    # discards: a `markdown` field stores an empty body, and the newsletter
+    # relation is dropped from a body field. Checking the HTTP status alone
+    # would have called every one of those a success.
+    try:
+        chk = api_call("GET", f"posts/{post['id']}/?formats=html&fields=html,status")
+        stored = ((chk.get("posts") or [{}])[0].get("html") or "").strip()
+    except Exception as e:
+        raise RuntimeError(f"could not read back post {post['id']}: {e}")
+
+    if not stored:
+        raise RuntimeError(
+            f"post {post['id']} stored an EMPTY body. Ghost accepted the write "
+            f"but kept nothing. Not reporting success."
+        )
+
     return {
-        "success": bool(post.get("id")),
+        "success": True,
         "action": action,
         "ghost_id": post.get("id"),
         "status": post.get("status"),
         "url": post.get("url"),
         "slug": post.get("slug"),
         "updated_at": post.get("updated_at"),
+        "body_chars": len(stored),
     }
 
 
@@ -327,14 +358,23 @@ def parse_frontmatter(content):
     return fm, parts[2].strip()
 
 
-def options_from_frontmatter(fm, default_status="published"):
+def options_from_frontmatter(fm, default_status=None):
     """Build Ghost post options from YAML frontmatter.
 
-    NOTE: `status` from frontmatter is only used when the caller did not
-    explicitly pass a status. The CLI --status flag always wins — an explicit
-    operator instruction must not be silently overridden by file contents.
+    Resolution order for status: the CLI --status flag (passed in as
+    default_status) wins, then the file's own `status:` key, then "published".
+
+    This previously took default_status="published" and never looked at
+    fm["status"] at all, so a draft file with `status: draft` in its
+    frontmatter published LIVE. The docstring claimed the opposite, and the
+    blog cron's frontmatter template emits a status key.
     """
-    opts = {"status": default_status}
+    opts = {"status": default_status or fm.get("status") or "published"}
+    if opts["status"] not in ("published", "draft", "scheduled"):
+        raise ValueError(
+            f"frontmatter status {opts['status']!r} is not one of "
+            "published/draft/scheduled"
+        )
 
     if fm.get("slug"):
         opts["slug"] = fm["slug"]
@@ -446,19 +486,43 @@ def upload_image(path, purpose="image"):
 
 
 def run_voice_lint(path):
-    """Run the deterministic AI-tell scanner on a draft.
+    """Run the deterministic AI-tell scanner on a draft file.
 
     Returns (ok, output). An LLM cannot see its own tells reliably, so this
     is a hard gate rather than a suggestion.
+
+    A missing scanner FAILS CLOSED. Returning ok=True when voice_lint.py was
+    absent meant the gate silently disappeared — the one failure mode a gate
+    must never have.
     """
     import subprocess
     script = Path(__file__).resolve().parent / "voice_lint.py"
     if not script.exists():
-        return True, "voice_lint.py not found — gate skipped"
+        return False, f"voice lint FATAL: {script} not found — refusing to publish"
     try:
         p = subprocess.run(
             [sys.executable, str(script), str(path)],
             capture_output=True, text=True, timeout=60,
+        )
+    except Exception as e:
+        return False, f"voice lint could not run: {e}"
+    out = (p.stdout or "") + (p.stderr or "")
+    return p.returncode == 0, out.strip()
+
+
+def lint_markdown(markdown):
+    """Lint markdown held in memory, so every writer is gated, not just the CLI.
+
+    Returns (ok, output), failing closed like run_voice_lint.
+    """
+    import subprocess
+    script = Path(__file__).resolve().parent / "voice_lint.py"
+    if not script.exists():
+        return False, f"voice lint FATAL: {script} not found — refusing to publish"
+    try:
+        p = subprocess.run(
+            [sys.executable, str(script), "-"],
+            input=markdown, capture_output=True, text=True, timeout=60,
         )
     except Exception as e:
         return False, f"voice lint could not run: {e}"
@@ -545,7 +609,9 @@ def main():
     ap = argparse.ArgumentParser(description="Publish NMM blog posts to Ghost")
     ap.add_argument("file", nargs="?", help="Markdown file (default: newest in content/blog-posts/)")
     ap.add_argument("--status", choices=["published", "draft", "scheduled"],
-                   default="published", help="Post status (default: published)")
+                   default=None,
+                   help="Post status. Omit to let the file's frontmatter "
+                        "decide, falling back to published.")
     ap.add_argument("--dry-run", action="store_true",
                    help="Validate content without sending to Ghost")
     ap.add_argument("--check", action="store_true", help="Test credentials and list recent posts")
