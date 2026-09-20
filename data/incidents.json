@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-309559",
+      "id": "ON-302207",
       "province": "ON",
-      "highway": "HWY 400",
+      "highway": "HWY 61",
       "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound RAMP at LLOYDTOWN-AURORA RD, Kettleby. Right lane and right shoulder closed.",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.0002535,
-      "lng": -79.5841782,
-      "start": 1789940400,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1788407400,
       "end": null,
-      "updated": 1789940400
+      "updated": 1789942560
+    },
+    {
+      "id": "ON-309569",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound HOV at JAMES SNOW PKWY, Milton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.543239,
+      "lng": -79.860868,
+      "start": 1789941900,
+      "end": null,
+      "updated": 1789941900
+    },
+    {
+      "id": "ON-309562",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at HWY 403, Mississauga. Centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "centre lane closed",
+      "lat": 43.6387168,
+      "lng": -79.659223,
+      "start": 1789940940,
+      "end": null,
+      "updated": 1789940940
     },
     {
       "id": "ON-309544",
@@ -47,22 +79,6 @@
       "start": 1789937760,
       "end": null,
       "updated": 1789937760
-    },
-    {
-      "id": "ON-302207",
-      "province": "ON",
-      "highway": "HWY 61",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.055068306,
-      "lng": -89.540597444,
-      "start": 1788407400,
-      "end": null,
-      "updated": 1789935900
     },
     {
       "id": "ON-309521",
@@ -783,26 +799,10 @@
       "start": 1790074800,
       "end": 1790110800,
       "updated": 1789745700
-    },
-    {
-      "id": "ON-308913",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound Express Off-ramp at HWY 403, Mississauga. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.639378,
-      "lng": -79.66015,
-      "start": 1790305200,
-      "end": 1790326800,
-      "updated": 1789744980
     }
   ],
   "total": 50,
-  "updated": "2026-09-20T21:50:48.664227+00:00",
+  "updated": "2026-09-20T22:21:49.284678+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
