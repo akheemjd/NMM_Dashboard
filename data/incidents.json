@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-309505",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 3 Eastbound  between Quaker Road, New Sarum and Prior Street , Orwell. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 42.77682,
+      "lng": -81.09589,
+      "start": 1790035200,
+      "end": 1790067600,
+      "updated": 1789931280
+    },
+    {
+      "id": "ON-302207",
+      "province": "ON",
+      "highway": "HWY 61",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1788407400,
+      "end": null,
+      "updated": 1789930560
+    },
+    {
       "id": "ON-309500",
       "province": "ON",
       "highway": "HWY 3",
@@ -15,22 +47,6 @@
       "start": 1789988400,
       "end": 1790024400,
       "updated": 1789929000
-    },
-    {
-      "id": "ON-309489",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at LAKE STREET, St. Catharines. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.17723773,
-      "lng": -79.25146883,
-      "start": 1789927560,
-      "end": null,
-      "updated": 1789928280
     },
     {
       "id": "ON-309484",
@@ -63,38 +79,6 @@
       "start": 1790078400,
       "end": 1790974800,
       "updated": 1789925520
-    },
-    {
-      "id": "ON-302207",
-      "province": "ON",
-      "highway": "HWY 61",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.055068306,
-      "lng": -89.540597444,
-      "start": 1788407400,
-      "end": null,
-      "updated": 1789905840
-    },
-    {
-      "id": "ON-309414",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Collision on HWY 17 Westbound  at SEC HWY 622-BENDING LAKE RD, Ignace. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 49.508883,
-      "lng": -92.0599355,
-      "start": 1789886100,
-      "end": null,
-      "updated": 1789902420
     },
     {
       "id": "ON-309220",
@@ -804,10 +788,26 @@
       "start": "2026-09-18T06:09:54-07:00",
       "end": "",
       "updated": "2026-09-18T06:09:54-07:00"
+    },
+    {
+      "id": "ON-308874",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Maintenance on QEW Fort Erie Bound On-ramp at RED HILL CREEK EXPRESSWAY, Hamilton. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.248516,
+      "lng": -79.76113,
+      "start": 1790132400,
+      "end": 1790416800,
+      "updated": 1789736340
     }
   ],
   "total": 50,
-  "updated": "2026-09-20T18:44:43.309349+00:00",
+  "updated": "2026-09-20T19:15:44.732994+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
