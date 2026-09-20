@@ -1,233 +1,156 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-CA">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northern Mile Media — Sponsorship Media Kit</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northern Mile Media — Sponsorship</title>
 <style>
-  :root {
-    --paper: #FBFAF8;
-    --raise: #FFFFFF;
-    --ink: #1A1A17;
-    --muted: #6B6862;
-    --line: #E8E4DD;
-    --signal: #0B5D3B;
-    --wash: #EDF3EF;
-    --amber: #C8891A;
-    --amber-wash: #F7ECD6;
-    --display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
-    --body: 'Inter', ui-sans-serif, system-ui, sans-serif;
-    --data: 'IBM Plex Mono', ui-monospace, monospace;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--body);
-    font-size: 15px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 820px; margin: 0 auto; padding: 56px 40px 80px; }
-
-  /* Masthead */
-  .masthead { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 3px solid var(--signal); padding-bottom: 18px; margin-bottom: 44px; }
-  .masthead .brand { font-family: var(--display); font-weight: 700; font-size: 26px; color: var(--signal); letter-spacing: -0.02em; }
-  .masthead .brand .mile { color: var(--amber); }
-  .masthead .kicker { font-family: var(--data); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
-
-  /* Hero */
-  .hero { margin-bottom: 48px; }
-  .hero h1 { font-family: var(--display); font-weight: 700; font-size: 40px; line-height: 1.12; letter-spacing: -0.02em; margin-bottom: 16px; }
-  .hero h1 .accent { color: var(--signal); }
-  .hero p { font-size: 18px; color: var(--muted); max-width: 620px; }
-
-  /* Sections */
-  section { margin-bottom: 44px; }
-  .label { font-family: var(--data); font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--signal); margin-bottom: 12px; }
-  h2 { font-family: var(--display); font-weight: 600; font-size: 22px; letter-spacing: -0.01em; margin-bottom: 12px; }
-  p + p { margin-top: 10px; }
-  ul { list-style: none; }
-  li { padding-left: 20px; position: relative; margin-bottom: 8px; }
-  li::before { content: "—"; position: absolute; left: 0; color: var(--amber); font-weight: 600; }
-
-  /* Product card */
-  .product { background: var(--raise); border: 1px solid var(--line); border-left: 4px solid var(--signal); border-radius: 6px; padding: 22px 24px; }
-  .product .name { font-family: var(--display); font-weight: 600; font-size: 17px; margin-bottom: 6px; }
-  .product .meta { font-family: var(--data); font-size: 13px; color: var(--muted); }
-  .product .tag { display: inline-block; margin-top: 12px; background: var(--wash); color: var(--signal); font-weight: 600; font-size: 13px; padding: 4px 10px; border-radius: 20px; }
-
-  /* Sponsor block mock */
-  .mock { background: var(--raise); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; }
-  .mock .mock-label { font-family: var(--data); font-size: 10px; letter-spacing: 0.14em; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
-  .mock .presented { display: flex; align-items: center; gap: 14px; }
-  .mock .logo { width: 46px; height: 46px; border-radius: 8px; background: var(--wash); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 700; color: var(--signal); font-size: 18px; }
-  .mock .brand-name { font-family: var(--display); font-weight: 600; font-size: 16px; }
-  .mock .tagline { font-size: 13px; color: var(--muted); }
-  .mock .link { font-size: 13px; color: var(--signal); text-decoration: underline; }
-
-  /* Tables */
-  table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  th { text-align: left; font-family: var(--data); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 500; padding: 8px 12px; border-bottom: 2px solid var(--signal); }
-  td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
-  tr:last-child td { border-bottom: none; }
-  .num { font-family: var(--data); font-weight: 500; color: var(--signal); white-space: nowrap; }
-  .mono { font-family: var(--data); }
-
-  /* Metric pills */
-  .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .metric { background: var(--raise); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
-  .metric .k { font-size: 12px; color: var(--muted); }
-  .metric .v { font-family: var(--data); font-size: 15px; font-weight: 500; color: var(--ink); }
-
-  /* Contact */
-  .contact { background: var(--signal); color: var(--paper); border-radius: 8px; padding: 28px 30px; }
-  .contact h2 { color: var(--paper); }
-  .contact .email { font-family: var(--data); font-size: 18px; margin: 8px 0; }
-  .contact .email a { color: var(--amber-wash); text-decoration: underline; }
-  .contact .url { color: var(--wash); font-size: 14px; }
-
-  .footer { margin-top: 40px; text-align: center; font-family: var(--data); font-size: 12px; color: var(--muted); }
-
-  @media (max-width: 640px) {
-    .wrap { padding: 32px 20px 56px; }
-    .hero h1 { font-size: 30px; }
-    .metric-grid { grid-template-columns: 1fr; }
-  }
-
-  @page { size: Letter; margin: 16mm 14mm; }
+:root { --paper:#FBFAF8; --ink:#1A1A17; --muted:#6B6862; --line:#E8E4DD; --signal:#0B5D3B; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 42px 34px; background: var(--paper); color: var(--ink);
+  font: 16px/1.62 Inter, -apple-system, Segoe UI, sans-serif;
+  max-width: 780px; margin-inline: auto;
+}
+h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -.02em; margin: 0 0 6px; }
+h2 {
+  font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  margin: 38px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font-weight: 600;
+}
+h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+p { margin: 0 0 13px; }
+a { color: var(--signal); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 30px 0; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: .95rem; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+ul { padding-left: 20px; margin: 0 0 14px; }
+li { margin-bottom: 7px; }
+strong { font-weight: 600; }
+em { color: var(--muted); }
 </style>
 </head>
 <body>
-<div class="wrap">
-
-  <div class="masthead">
-    <div class="brand">Northern <span class="mile">Mile</span> Media</div>
-    <div class="kicker">Sponsorship Media Kit · 2026</div>
-  </div>
-
-  <div class="hero">
-    <h1>The source of truth for <span class="accent">Canadian trucking</span>.</h1>
-    <p>A free, live data dashboard plus a weekly email that tells dispatchers and fleet operators what changed and what to do about it — before their competition does.</p>
-  </div>
-
-  <section>
-    <div class="label">The product</div>
-    <div class="product">
-      <div class="name">The Wednesday Fuel &amp; Freight Snapshot</div>
-      <div class="meta">Every Wednesday · 7:00 AM ET · 200–300 words · 90-second read</div>
-      <span class="tag">Know before they do</span>
-    </div>
-  </section>
-
-  <section>
-    <div class="label">Audience</div>
-    <h2>Canadian trucking decision-makers</h2>
-    <p>The people who check fuel prices, exchange rates, and border waits every morning:</p>
-    <ul>
-      <li>Fleet operators and dispatchers</li>
-      <li>Owner-operators</li>
-      <li>Freight brokers and 3PLs</li>
-      <li>Shippers moving freight across the border</li>
-    </ul>
-    <p style="color: var(--muted);">They buy fuel cards, insurance, ELDs, factoring, customs brokerage, and equipment finance — the exact categories our sponsors sell. They don't read marketing email. They read numbers. You reach them where they already are.</p>
-  </section>
-
-  <section>
-    <div class="label">Why sponsor</div>
-    <ul>
-      <li><strong>Trust by association.</strong> Our brand is built on unbiased, primary-source data (Natural Resources Canada, Bank of Canada, CBSA). Readers trust us because we show our work. Your brand sits inside that trust.</li>
-      <li><strong>A hard-to-reach audience.</strong> Dispatchers and owner-operators are notoriously hard to reach with display or social ads. They open a data email.</li>
-      <li><strong>Contextual placement.</strong> Your category, placed against the data it relates to.</li>
-      <li><strong>No competition for attention.</strong> One sponsor per placement. Exclusivity.</li>
-    </ul>
-  </section>
-
-  <section>
-    <div class="label">The placement</div>
-    <h2>"Presented by" — top of the email</h2>
-    <p style="margin-bottom: 16px;">A sponsor block at the top of every issue, under the masthead. Your logo, a one-line tagline, and a clickable link. The only brand in the email besides Northern Mile.</p>
-    <div class="mock">
-      <div class="mock-label">How it looks in the email</div>
-      <div class="presented">
-        <div class="logo">YX</div>
-        <div>
-          <div class="brand-name">Presented by Your Brand</div>
-          <div class="tagline">One line about what you do.</div>
-        </div>
-        <div class="link" style="margin-left:auto;">yourbrand.ca →</div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="label">Rates</div>
-    <h2>Simple, no lock-in</h2>
-    <table>
-      <thead>
-        <tr><th>Package</th><th>Price</th><th>What you get</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Single placement</td>
-          <td class="num">$2,500</td>
-          <td>One issue, exclusive to your category</td>
-        </tr>
-        <tr>
-          <td>Monthly — 4 issues</td>
-          <td class="num">$10,000</td>
-          <td>Every Wednesday, exclusive</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="color: var(--muted); margin-top: 12px; font-size: 13px;">30-day minimum. No long-term contract. Cancel any time.</p>
-  </section>
-
-  <section>
-    <div class="label">Metrics</div>
-    <h2>Honest numbers, shared before renewal</h2>
-    <div class="metric-grid">
-      <div class="metric"><div class="k">Dashboard</div><div class="v">Live since Aug 2026</div></div>
-      <div class="metric"><div class="k">Growth engine</div><div class="v">69 city pages, SEO</div></div>
-      <div class="metric"><div class="k">Newsletter</div><div class="v">Launching Aug 19, 2026</div></div>
-      <div class="metric"><div class="k">Subscribers</div><div class="v">Reported monthly</div></div>
-      <div class="metric"><div class="k">Open-rate target</div><div class="v">35–50%</div></div>
-      <div class="metric"><div class="k">Click-rate target</div><div class="v">5–8%</div></div>
-    </div>
-    <p style="color: var(--muted); margin-top: 14px; font-size: 13px;">We report the real numbers. If they're not where we want them, we'll tell you — and show you the growth plan before you renew.</p>
-  </section>
-
-  <section>
-    <div class="label">Who should sponsor</div>
-    <table>
-      <thead>
-        <tr><th>Category</th><th>Example sponsors</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Fuel cards</td><td>Petro-Canada SuperPass, Esso Cardlock, Shell Fleet Navigator, WEX, 4Refuel</td></tr>
-        <tr><td>Insurance / ELD</td><td>Northbridge, Intact, Samsara, Geotab, Omnitracs, Isaac</td></tr>
-        <tr><td>FX / Factoring</td><td>RBC, BMO Transportation, Ritchie Bros Financial, Element Fleet</td></tr>
-        <tr><td>Customs brokerage</td><td>Livingston, Farrow, Carson, Cole</td></tr>
-        <tr><td>Equipment finance</td><td>Penske, Daimler Truck Financial, Volvo Financial</td></tr>
-        <tr><td>Security / tracking</td><td>LoJack, SkyBitz, Phillips Connect, CargoNet</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <div class="contact">
-      <h2>Let's talk</h2>
-      <div class="email"><a href="mailto:northernmilemedia@gmail.com">northernmilemedia@gmail.com</a></div>
-      <div class="url">dashboard.northernmilemedia.com</div>
-    </div>
-  </section>
-
-  <div class="footer">Northern Mile Media — the source of truth for Canadian trucking.</div>
-
-</div>
+<h1>Northern Mile Media — Sponsorship</h1>
+<hr />
+<h2>What Northern Mile is</h2>
+<p>A free, live data dashboard for Canadian trucking, and one email a week about it.</p>
+<p>Every figure comes from a primary source, is dated, and carries a copy-paste
+citation: the Natural Resources Canada weekly retail survey, the Canada Border
+Services Agency, the Bank of Canada and the US Energy Information
+Administration. If we get something wrong we correct it and say what changed.</p>
+<p>The dashboard is 108 pages: 69 city diesel pages, all ten provinces, five US
+PADD regions, and nine commercial border crossings. It is free and stays free.</p>
+<hr />
+<h2>The product: The Northern Mile Brief</h2>
+<p>One email, Wednesday mornings at 06:00 ET. Roughly 240 words. Fuel by province,
+border wait times, USD/CAD, and the one number worth acting on before the next
+set of fills.</p>
+<p>Not a news digest. The numbers that move a carrier's margin, with the source
+attached.</p>
+<hr />
+<h2>Audience, stated honestly</h2>
+<p><strong>The list is new and small.</strong> We are not going to quote a reach figure we
+cannot stand behind, because the reason a sponsor would buy this is that our
+numbers are true, and the same standard applies to ours.</p>
+<p>What we can tell you exactly:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Who it goes to</td>
+<td>Carriers, owner-operators, dispatchers, brokers and cross-border shippers</td>
+</tr>
+<tr>
+<td>What it is</td>
+<td>A weekly data email, opt-in only</td>
+</tr>
+<tr>
+<td>Reach</td>
+<td>Disclosed to you in writing before you commit, and reported after every issue</td>
+</tr>
+<tr>
+<td>Where it comes from</td>
+<td>Organic search on city and province diesel queries, and referral</td>
+</tr>
+</tbody>
+</table>
+<p>If the reach is not worth your money at the founding rate, do not buy it. We
+would rather lose the placement than sell you a number that decays.</p>
+<hr />
+<h2>Placements</h2>
+<p>Sold separately. No programmatic, no retargeting, no popups.</p>
+<table>
+<thead>
+<tr>
+<th>Placement</th>
+<th>Where</th>
+<th>Sold as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Brief</td>
+<td>Every Wednesday, to the full list</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>Diesel pages</td>
+<td><code>/fuel-prices/</code> plus every city and province page</td>
+<td>Placement</td>
+</tr>
+<tr>
+<td>Tool pages</td>
+<td>The fuel cost calculator and the rate floor</td>
+<td>Placement</td>
+</tr>
+<tr>
+<td>Data pages</td>
+<td>Border waits, exchange rate, market pulse, incidents</td>
+<td>Placement</td>
+</tr>
+</tbody>
+</table>
+<p>Every placement is labelled as a sponsorship and separated from editorial. We do
+not run sponsored content disguised as our own analysis.</p>
+<hr />
+<h2>Founding terms</h2>
+<p>For the first sponsors, while the list is being built.</p>
+<ul>
+<li><strong>Rate</strong> — agreed in writing before the first placement runs, fixed for the
+  term. No rate card is published here because the honest price depends on what
+  you buy and when you start.</li>
+<li><strong>Lock</strong> — the founding rate holds for twelve months, including while the list
+  grows underneath it.</li>
+<li><strong>Reporting</strong> — sends, opens and clicks for any email placement, sent after
+  each issue. Actual numbers, not targets.</li>
+<li><strong>Notice</strong> — cancel before the next issue and you are not billed for it.</li>
+</ul>
+<hr />
+<h2>Who this suits</h2>
+<p>Fuel cards, factoring, insurance, ELD and compliance software, load boards,
+truck stop operators, and equipment finance. Anything a Canadian carrier buys
+with the money it just saved on diesel.</p>
+<hr />
+<h2>What we will not do</h2>
+<ul>
+<li>We will not quote an audience number we cannot evidence.</li>
+<li>We will not accept payment for a figure on this site. No sponsor influences a
+  number, a ranking or an editorial decision.</li>
+<li>We will not run a placement that a reader could mistake for our own analysis.</li>
+<li>We will not send marketing email to anyone who did not ask for it.</li>
+</ul>
+<hr />
+<h2>Contact</h2>
+<p><strong>northernmilemedia@gmail.com</strong> — sponsorship enquiries.</p>
+<p>Full placement detail and terms: <strong>dashboard.northernmilemedia.com/advertise/</strong></p>
+<p><em>Northern Mile Media is an independent Canadian publication. It is not owned by,
+funded by, or affiliated with any carrier, broker, fuel retailer or industry
+association.</em></p>
 </body>
 </html>
