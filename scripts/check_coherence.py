@@ -57,6 +57,7 @@ def main():
     hashes = {}
     retired_hits = {}
     chart_leaks = {}
+    empty_v = {}
     no_chrome = []
 
     for p in pages:
@@ -80,6 +81,13 @@ def main():
             if re.search(r'/assets/' + re.escape(asset) + r'\b', html) or \
                re.search(r'["\'/]' + re.escape(asset) + r'\?', html):
                 retired_hits.setdefault(rel, []).append(asset)
+
+        # An empty cache-buster ("?v=") means the version variable was never
+        # substituted. That shipped on ~90 city pages because
+        # build_city_pages.py read build_version from a file with no such key.
+        # It is silent, and it makes a deploy look like it did nothing.
+        for m in re.finditer(r'/assets/[A-Za-z0-9._-]+\?v=(?=["\'])', html):
+            empty_v.setdefault(rel, []).append(m.group(0))
 
         # Chart library must appear only on the allowed pages.
         if rel not in CHART_ALLOWED:
@@ -121,6 +129,18 @@ def main():
         print(f"  chart is allowed only on: {', '.join(sorted(CHART_ALLOWED))}")
     else:
         print(f"GUARD OK: chart library confined to {len(CHART_ALLOWED)} allowed pages")
+
+    if empty_v:
+        ok = False
+        print(f"GUARD FATAL: {len(empty_v)} page(s) ship an empty asset cache-buster:")
+        for rel, hits in list(empty_v.items())[:10]:
+            print(f"  {rel}: {', '.join(sorted(set(hits)))}")
+        if len(empty_v) > 10:
+            print(f"  ... and {len(empty_v) - 10} more")
+        print("  an empty ?v= means build_version was never substituted, so")
+        print("  browsers can serve stale CSS/JS after a deploy.")
+    else:
+        print(f"GUARD OK: every asset cache-buster carries a version")
 
     return 0 if ok else 1
 
