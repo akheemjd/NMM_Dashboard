@@ -54,9 +54,19 @@ UP = "#B3261E"
 UP_WASH = "#FBECEA"
 FOCUS = "#1C6FE0"
 
-# Chart canvas: wide enough for blog content, 2x for retina
-FIGSIZE = (9.0, 4.6)
-DPI = 160
+# Chart canvas.
+#
+# Sized for MOBILE-FIRST legibility. What matters is not the pixel count but
+# the ratio of text height to canvas width: at a 9in canvas a 10pt label is
+# ~1.5% of the width, which renders at about 4px when Ghost scales the image
+# to a 343px phone column. Illegible.
+#
+# A ~6in canvas with proportionally larger type puts labels near 4% of the
+# width, so they land around 13px on a phone and stay sharp on desktop
+# (the PNG is ~1000px wide at the DPI below, close to 1:1 at typical
+# desktop content widths).
+FIGSIZE = (6.4, 3.9)
+DPI = 155
 
 # Brand faces. Each has static 400-700 TTFs in assets/fonts so matplotlib can
 # actually select weights (variable fonts resolve to their light default).
@@ -165,8 +175,12 @@ def set_theme():
         "axes.titlesize": 13,
         "figure.dpi": DPI,
         "savefig.dpi": DPI,
-        "savefig.bbox": "tight",
-        "savefig.pad_inches": 0.3,
+        # NOT 'tight': tight bbox expands the canvas to include text placed
+        # outside the axes, which inflates the width and throws off the
+        # text-to-width ratio the mobile legibility depends on. Title and
+        # source are positioned inside the figure instead.
+        "savefig.bbox": "standard",
+        "savefig.pad_inches": 0,
         "axes.grid": False,
         "axes.spines.top": False,
         "axes.spines.right": False,
@@ -181,32 +195,82 @@ def set_theme():
     _theme_ready = True
 
 
-def _figure(title=None, subtitle=None, source=None):
-    """Create a styled figure. Title/subtitle/source render as figure text
-    so they sit outside the axes and never collide with the data."""
+def _figure(title=None, subtitle=None, source=None, figsize=None):
+    """Create a styled figure. Title/subtitle/source are positioned INSIDE the
+    figure bounds so the saved PNG is exactly figsize x DPI, which keeps the
+    text-to-width ratio (and therefore mobile legibility) predictable.
+
+    Type sizes are tuned for the ~6.4in canvas: roughly 3% of canvas width for
+    body labels, which lands near 11px when a phone scales the image to a
+    343px column.
+    """
     set_theme()
-    fig, ax = plt.subplots(figsize=FIGSIZE)
+    fig, ax = plt.subplots(figsize=figsize or FIGSIZE)
 
     if title:
-        fig.text(0.0, 1.075, title,
-                 fontproperties=display_font(15.5, weight=600),
-                 color=INK, ha="left", va="bottom")
+        fig.text(0.0, 0.985, title,
+                 fontproperties=display_font(21, weight=600),
+                 color=INK, ha="left", va="top")
     if subtitle:
-        fig.text(0.0, 1.012, subtitle,
-                 fontproperties=body_font(10.5, weight=400),
-                 color=MUTED, ha="left", va="bottom")
-    if source:
-        fig.text(0.0, -0.045, f"Source: {source}",
-                 fontproperties=body_font(9, weight=400),
+        fig.text(0.0, 0.925, subtitle,
+                 fontproperties=body_font(14.5, weight=400),
                  color=MUTED, ha="left", va="top")
+    if source:
+        fig.text(0.0, 0.015, f"Source: {source}",
+                 fontproperties=body_font(12.5, weight=400),
+                 color=MUTED, ha="left", va="bottom")
 
-    fig.subplots_adjust(top=0.86, bottom=0.10, left=0.02, right=0.98)
+    fig.subplots_adjust(top=0.855, bottom=0.115, left=0.02, right=0.98)
     return fig, ax
 
 
 def _xgrid(ax, axis="x"):
     ax.grid(axis=axis, color=LINE, linewidth=0.9, zorder=0)
     ax.set_axisbelow(True)
+
+
+def _finalize(fig, ax):
+    """Reserve margin for what was actually drawn.
+
+    Fixed fractions (left=0.02, bottom=0.11) clip tick labels once the type is
+    large enough to read on a phone, and let the source line collide with the
+    x-axis labels. Measure the real artists instead.
+
+    Tick labels are measured directly rather than via ax.get_tightbbox(): the
+    tight bbox did not reliably include them here, which silently dropped the
+    y-axis numbers off the left edge.
+
+    Call this last, just before returning a figure.
+    """
+    try:
+        fig.canvas.draw()
+        r = fig.canvas.get_renderer()
+        fw = fig.get_size_inches()[0] * fig.dpi
+        fh = fig.get_size_inches()[1] * fig.dpi
+        ab = ax.get_window_extent()
+
+        # Left: widest y tick label, plus a gutter.
+        widest = 0.0
+        for t in ax.get_yticklabels():
+            if t.get_text().strip():
+                widest = max(widest, t.get_window_extent(renderer=r).width)
+        left_px = widest + 14 if widest else 10
+
+        # Bottom: how far the x tick labels hang below the axes, plus room for
+        # the source line (drawn at figure y=0.015).
+        below = 0.0
+        for t in ax.get_xticklabels():
+            if t.get_text().strip():
+                bb = t.get_window_extent(renderer=r)
+                below = max(below, ab.y0 - bb.y0)
+        bottom_px = below + 48
+
+        fig.subplots_adjust(
+            left=min(0.46, left_px / fw),
+            bottom=min(0.34, bottom_px / fh),
+        )
+    except Exception:
+        pass
 
 
 # ══════════════════════════════════════════════════════════════
@@ -230,7 +294,10 @@ def ranked_bars(labels, values, title=None, subtitle=None, source=None,
     labs = [p[0] for p in pairs]
     vals = [p[1] for p in pairs]
 
-    fig, ax = _figure(title, subtitle, source)
+    # More rows need more vertical room, or the labels crowd at phone width.
+    # A 12-province chart gets a taller canvas than a 5-port one.
+    h = max(FIGSIZE[1], 0.30 * len(labs) + 1.9)
+    fig, ax = _figure(title, subtitle, source, figsize=(FIGSIZE[0], h))
     ypos = range(len(labs))
 
     colors = []
@@ -244,20 +311,20 @@ def ranked_bars(labels, values, title=None, subtitle=None, source=None,
 
     ax.barh(list(ypos), vals, color=colors, height=0.62, zorder=3)
     ax.set_yticks(list(ypos))
-    ax.set_yticklabels(labs, fontproperties=body_font(10, weight=500))
+    ax.set_yticklabels(labs, fontproperties=body_font(15, weight=500))
 
     _xgrid(ax, "x")
     ax.spines["bottom"].set_visible(False)
     ax.tick_params(axis="x", length=0)
     for lbl in ax.get_xticklabels():
-        lbl.set_fontproperties(data_font(9.5, weight=400))
+        lbl.set_fontproperties(data_font(13.5, weight=400))
 
     # Direct value labels at the bar ends — avoids needing a legend
     span = max(vals) - min(vals) or 1
     for i, v in enumerate(vals):
         ax.text(v + span * 0.015, i, f"{v:,.1f}{unit}",
                 va="center", ha="left",
-                fontproperties=data_font(10, weight=500),
+                fontproperties=data_font(14.5, weight=500),
                 color=INK2, zorder=4)
 
     if average is not None:
@@ -265,12 +332,13 @@ def ranked_bars(labels, values, title=None, subtitle=None, source=None,
                    zorder=4, alpha=0.75)
         # Place the caption below the plot so it never collides with a bar
         ax.text(average, -1.35, f"average {average:,.1f}{unit}",
-                fontproperties=body_font(9, weight=500),
+                fontproperties=body_font(12.5, weight=500),
                 color=INK2, va="top", ha="center", zorder=5)
 
     ax.set_xlim(min(vals) - span * 0.06, max(vals) + span * 0.20)
     ax.set_ylim(-1.9, len(labs) - 0.2)
     ax.xaxis.set_major_locator(MaxNLocator(5))
+    _finalize(fig, ax)
     return fig
 
 
@@ -318,7 +386,7 @@ def trend_line(dates, values, title=None, subtitle=None, source=None,
                    linestyle=(0, (4, 3)), zorder=2)
         if reference_label:
             ax.text(xs[0], reference, f" {reference_label}",
-                    fontproperties=body_font(9, weight=500),
+                    fontproperties=body_font(13, weight=500),
                     color=AMBER, va="bottom", ha="left")
 
     _xgrid(ax, "y")
@@ -343,18 +411,19 @@ def trend_line(dates, values, title=None, subtitle=None, source=None,
     ax.xaxis.set_major_locator(locator)
     ax.xaxis.set_major_formatter(mdates.ConciseDateFormatter(locator))
     for lbl in ax.get_xticklabels():
-        lbl.set_fontproperties(data_font(9.5, weight=400))
+        lbl.set_fontproperties(data_font(13.5, weight=400))
 
     if annotate_last:
         ax.plot([xs[-1]], [ys[-1]], "o", color=SIGNAL, markersize=6, zorder=4)
         ax.annotate(f"{ys[-1]:,.{decimals}f}{unit}",
                     xy=(xs[-1], ys[-1]),
                     xytext=(8, 0), textcoords="offset points",
-                    fontproperties=data_font(11, weight=600),
+                    fontproperties=data_font(16, weight=600),
                     color=INK, ha="left", va="center", zorder=5)
 
     if label:
-        ax.legend(loc="upper left", fontsize=10)
+        ax.legend(loc="upper left", fontsize=13.5)
+    _finalize(fig, ax)
     return fig
 
 
@@ -387,11 +456,12 @@ def dumbbell(labels, value_a, value_b, name_a="Before", name_b="Now",
     ax.scatter(b_vals, ypos, s=62, color=SIGNAL, zorder=4, label=name_b)
 
     ax.set_yticks(ypos)
-    ax.set_yticklabels(labs, fontsize=10)
+    ax.set_yticklabels(labs, fontsize=15)
     _xgrid(ax, "x")
     ax.tick_params(axis="both", length=0)
     ax.spines["bottom"].set_visible(False)
-    ax.legend(loc="lower right", fontsize=10, ncol=2)
+    ax.legend(loc="lower right", fontsize=13.5, ncol=2)
+    _finalize(fig, ax)
     return fig
 
 
@@ -412,11 +482,12 @@ def distribution(values, title=None, subtitle=None, source=None,
         med = statistics.median(vals)
         ax.axvline(med, color=AMBER, linewidth=1.6, zorder=4)
         ax.text(med, ax.get_ylim()[1] * 0.94, f" median {med:,.1f}{unit}",
-                fontsize=9.5, color=AMBER, va="top", ha="left")
+                fontsize=13.5, color=AMBER, va="top", ha="left")
 
     _xgrid(ax, "y")
     ax.tick_params(axis="both", length=0)
-    ax.set_ylabel("observations", fontsize=10)
+    ax.set_ylabel("observations", fontsize=13.5)
+    _finalize(fig, ax)
     return fig
 
 
@@ -447,11 +518,12 @@ def grouped_bars(categories, series, title=None, subtitle=None, source=None,
                label=name, color=palette[i], zorder=3)
 
     ax.set_xticks(x)
-    ax.set_xticklabels([str(c) for c in categories], fontsize=10)
+    ax.set_xticklabels([str(c) for c in categories], fontsize=13.5)
     _xgrid(ax, "y")
     ax.tick_params(axis="both", length=0)
     ax.spines["bottom"].set_visible(False)
-    ax.legend(loc="upper left", fontsize=10, ncol=n)
+    ax.legend(loc="upper left", fontsize=13.5, ncol=n)
+    _finalize(fig, ax)
     return fig
 
 
@@ -479,19 +551,20 @@ def share_bar(segments, title=None, subtitle=None, source=None, unit=""):
                 color=palette[i % len(palette)], zorder=3)
         if pct > 7:
             ax.text(left + pct / 2, 0, f"{pct:.0f}%", ha="center", va="center",
-                    color="#FFFFFF", fontsize=10.5, fontweight="600", zorder=4)
+                    color="#FFFFFF", fontsize=15, fontweight="600", zorder=4)
         left += pct
 
     ax.set_xlim(0, 100)
     ax.set_ylim(-0.6, 0.9)
     ax.axis("off")
 
-    # Direct labels below the bar rather than a legend
+    # Direct labels below the bar rather than a legend. Placed inside the
+    # figure bounds, since the canvas is saved without a tight bbox.
     handles = []
-    x = 0.0
-    for i, (label, value) in enumerate(segs):
+    for label, value in segs:
         handles.append(f"{label} ({value:,.1f}{unit})")
-    fig.text(0.0, -0.06, "   ".join(handles), fontsize=9.5, color=INK2)
+    fig.text(0.0, 0.06, "   ".join(handles), fontsize=13, color=INK2,
+             ha="left", va="bottom")
     return fig
 
 
