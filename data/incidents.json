@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-309544",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at DIXIE ROAD, Mississauga. 3 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 right lanes and right shoulder closed",
+      "lat": 43.64822746,
+      "lng": -79.63726221,
+      "start": 1789937700,
+      "end": null,
+      "updated": 1789938000
+    },
+    {
+      "id": "ON-309545",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Westbound",
+      "description": "Collision on HWY 7 Westbound  at OAK ST (NEAR PINE ST), Norwood. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 44.37861,
+      "lng": -77.98333,
+      "start": 1789937760,
+      "end": null,
+      "updated": 1789937760
+    },
+    {
+      "id": "ON-309543",
+      "province": "ON",
+      "highway": "HWY 406",
+      "direction": "Northbound",
+      "description": "Collision on HWY 406 Northbound  at 4TH AVE, St. Catharines. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.15742436,
+      "lng": -79.26028734,
+      "start": 1789937460,
+      "end": null,
+      "updated": 1789937460
+    },
+    {
       "id": "ON-309541",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +79,6 @@
       "start": 1788407400,
       "end": null,
       "updated": 1789935900
-    },
-    {
-      "id": "ON-309523",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at BRONTE ROAD, Oakville. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.40937976,
-      "lng": -79.7414212,
-      "start": 1789934880,
-      "end": null,
-      "updated": 1789934880
     },
     {
       "id": "ON-309521",
@@ -767,42 +799,10 @@
       "start": 1790074800,
       "end": 1790110800,
       "updated": 1789745700
-    },
-    {
-      "id": "ON-308913",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound Express Off-ramp at HWY 403, Mississauga. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.639378,
-      "lng": -79.66015,
-      "start": 1790305200,
-      "end": 1790326800,
-      "updated": 1789744980
-    },
-    {
-      "id": "ON-308902",
-      "province": "ON",
-      "highway": "HWY 4",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 4 Northbound  between Clinton Line and Clinton Line, St Thomas. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 42.82063,
-      "lng": -81.26101,
-      "start": 1789988400,
-      "end": 1790024400,
-      "updated": 1789743360
     }
   ],
   "total": 50,
-  "updated": "2026-09-20T20:50:27.855545+00:00",
+  "updated": "2026-09-20T21:08:16.409965+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
