@@ -116,6 +116,23 @@ def build_brief(today=None, recent_posts=None):
     locs = fuel.get("location_count")
     n_prov = len(rows)
 
+    # Low, high and spread come from the dashboard's own normalised figures,
+    # NOT recomputed from fuel.json. normalize.py computes them across the TEN
+    # index provinces. fuel.json carries twelve jurisdictions because Yukon and
+    # the NWT are surveyed but excluded from the index. Recomputing here took
+    # the NWT as the low and published an 82.5 cent spread against the
+    # dashboard's 53.2, so the same property stated two different numbers for
+    # one figure.
+    nf = load("fuel.norm") or {}
+    nfuel = nf.get("fuel") if isinstance(nf.get("fuel"), dict) else nf
+    canon = {
+        "low_code": nfuel.get("low_code"),
+        "low": nfuel.get("low"),
+        "high_code": nfuel.get("high_code"),
+        "high": nfuel.get("high"),
+        "spread": nfuel.get("spread"),
+    }
+
     title = f"The Northern Mile Brief: week of {today.strftime('%d %B %Y').lstrip('0')}"
     subtitle = "Fuel, border and market shifts for Canadian carriers."
 
@@ -123,25 +140,34 @@ def build_brief(today=None, recent_posts=None):
 
     # Lead with the national number.
     if nat is not None and rows:
-        lo_code, lo = rows[0]
-        hi_code, hi = rows[-1]
-        spread = round(hi - lo, 1)
+        lo_code = canon["low_code"] or rows[0][0]
+        lo = canon["low"] if canon["low"] is not None else rows[0][1]
+        hi_code = canon["high_code"] or rows[-1][0]
+        hi = canon["high"] if canon["high"] is not None else rows[-1][1]
+        spread = canon["spread"]
+        if spread is None:
+            spread = round(float(hi) - float(lo), 1)
         printed = _norm_print_date(print_date)
         md.append(
             f"Diesel averaged {nat}{CENT} a litre across Canada this week, "
             f"per the NRCan survey printed {printed}."
         )
         md.append(
-            f"The cheapest fuel was in {_prov(lo_code)} at {lo}{CENT}. "
-            f"The most expensive was {_prov(hi_code)} at {hi}{CENT}. "
-            f"That is {_article(spread)} {spread}{CENT} spread for the same "
-            f"product in the same country."
+            f"Across the ten index provinces the cheapest was "
+            f"{_prov(lo_code)} at {lo}{CENT} and the dearest "
+            f"{_prov(hi_code)} at {hi}{CENT}, {_article(spread)} {spread}{CENT} "
+            f"spread for the same product in the same country."
         )
 
     md.append("## Where fuel sits")
     if rows:
-        above = [r for r in rows if nat is not None and r[1] >= nat]
-        below = [r for r in rows if nat is not None and r[1] < nat]
+        # Compare against the index only. Listing the territories here put
+        # Northwest Territories at 213.8 below a lead that had just called
+        # Alberta the cheapest province, because the index excludes them.
+        index_rows = [r for r in rows if r[0] in INDEX_PROVINCES]
+        terr_rows = [r for r in rows if r[0] not in INDEX_PROVINCES]
+        above = [r for r in index_rows if nat is not None and r[1] >= nat]
+        below = [r for r in index_rows if nat is not None and r[1] < nat]
         if above:
             md.append(
                 "At or above the national average: "
@@ -151,6 +177,11 @@ def build_brief(today=None, recent_posts=None):
             md.append(
                 "Below it: "
                 + ", ".join(f"{_prov(c)} {v}{CENT}" for c, v in reversed(below)) + "."
+            )
+        if terr_rows:
+            md.append(
+                "Surveyed but outside the index: "
+                + ", ".join(f"{_prov(c)} {v}{CENT}" for c, v in terr_rows) + "."
             )
 
     # Border.
@@ -230,6 +261,12 @@ PROVINCE_NAMES = {
     "PE": "Prince Edward Island", "QC": "Quebec", "SK": "Saskatchewan",
     "YT": "Yukon",
 }
+
+# The ten provinces the Northern Mile Diesel Index is built from. Yukon,
+# Nunavut and the NWT are surveyed by NRCan and appear on the dashboard, but
+# they are deliberately excluded from the index. Anything comparing a province
+# to the national figure must use this set, not every jurisdiction in fuel.json.
+INDEX_PROVINCES = {"BC", "AB", "SK", "MB", "ON", "QC", "NB", "NS", "PE", "NL"}
 
 
 def _prov(code):
