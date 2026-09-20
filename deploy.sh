@@ -27,7 +27,7 @@ $PYTHON scripts/collector.py && $PYTHON scripts/normalize.py && $PYTHON scripts/
 mkdir -p docs/assets && cp -r assets/. docs/assets/
 cp assets/favicon.ico docs/favicon.ico
 
-$PYTHON scripts/gen_templates.py && $PYTHON scripts/build_chart_data.py && $PYTHON scripts/build_templates.py && $PYTHON scripts/build_provinces.py && $PYTHON scripts/build_city_pages.py && $PYTHON scripts/build_us_pages.py && $PYTHON scripts/build_border_pages.py && $PYTHON scripts/build_border_trends.py && $PYTHON scripts/build_og.py && $PYTHON scripts/build_sitemap.py && $PYTHON scripts/check_coherence.py && $PYTHON scripts/check_links.py 2>&1
+$PYTHON scripts/gen_templates.py && $PYTHON scripts/build_chart_data.py && $PYTHON scripts/build_templates.py && $PYTHON scripts/build_provinces.py && $PYTHON scripts/build_city_pages.py && $PYTHON scripts/build_us_pages.py && $PYTHON scripts/build_border_pages.py && $PYTHON scripts/build_border_trends.py && $PYTHON scripts/build_og.py && $PYTHON scripts/build_sitemap.py && $PYTHON scripts/check_coherence.py && $PYTHON scripts/check_links.py && $PYTHON scripts/check_data_integrity.py 2>&1
 
 # 2. Health check
 $PYTHON -c "
