@@ -1,9 +1,52 @@
 {
-  "fuel": "",
-  "incidents": "",
-  "exchange": "",
-  "border": "",
-  "market": "",
-  "theft": "",
-  "headlines": ""
+  "_comment": "Sponsor slots, keyed by the token name the templates use. Nothing read this file before 2026-09-20, so every <!--OPTIONAL:sponsor_*--> block was stripped and no slot had ever rendered. A slot with an empty name is dropped and its block is removed from the page. The 'label' controls the small eyebrow, so an unsold slot can read 'Sponsor slot' while a sold one reads 'Presented by'.",
+
+  "sponsor_page": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "The homepage is where carriers start. Founding rates are available while the list is small.",
+    "url": "/advertise/"
+  },
+  "sponsor_fuel": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "Diesel is the page carriers check before they fill. Put your name beside the number.",
+    "url": "/advertise/"
+  },
+  "sponsor_fx": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "Everyone running cross-border checks the rate. This is that page.",
+    "url": "/advertise/"
+  },
+  "sponsor_border": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "Wait times at the crossings your customers queue at.",
+    "url": "/advertise/"
+  },
+  "sponsor_incidents": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "Road incidents and closures, read by drivers before they roll.",
+    "url": "/advertise/"
+  },
+  "sponsor_calc": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "Carriers use this calculator to price a run. High intent, low volume, one buyer.",
+    "url": "/advertise/"
+  },
+  "sponsor_market": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "The market pulse page, for readers tracking cost and demand together.",
+    "url": "/advertise/"
+  },
+  "sponsor_news": {
+    "label": "Sponsor slot",
+    "name": "This slot is open",
+    "line": "Industry news, read by operators keeping up with the rules.",
+    "url": "/advertise/"
+  }
 }

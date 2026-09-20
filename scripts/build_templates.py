@@ -117,6 +117,36 @@ def fill_ifs(template, data):
             template = template.replace(match.group(0), "")
     return template
 
+def load_sponsors():
+    """Sponsor slots, keyed by the token name the templates use.
+
+    data/sponsors.json sat on disk with seven empty slots and NOTHING read it,
+    so every <!--OPTIONAL:sponsor_*--> block was stripped on every page and the
+    slot had never rendered once. Its old keys did not even match the template
+    slot names, so it could not have worked as written.
+
+    A slot with no name is skipped, which is what removes the block from the
+    page. Slot names come from the templates: sponsor_page, sponsor_fuel,
+    sponsor_fx, sponsor_border, sponsor_incidents, sponsor_calc, sponsor_market,
+    sponsor_news.
+    """
+    raw = load_json("sponsors") or {}
+    out = {}
+    for key, val in raw.items():
+        if not isinstance(val, dict):
+            continue  # skips the _comment key
+        name = str(val.get("name") or "").strip()
+        if not name:
+            continue
+        out[key] = {
+            "name": name,
+            "label": str(val.get("label") or "Presented by").strip(),
+            "line": str(val.get("line") or "").strip(),
+            "url": str(val.get("url") or "#").strip(),
+        }
+    return out
+
+
 def build_page(name, data):
     """Build one page from template + data."""
     tmpl_path = os.path.join(TMPL, name + ".template.html")
@@ -167,6 +197,10 @@ def build_all():
         "methodology": load_json("home.norm"),
         "press": {**load_json("fx.norm"), **load_json("fuel.norm")},
         "freight-barometer": {**load_json("home.norm"), **load_json("market.norm")},
+        # Sponsor and contact pages. They were 404s, so a prospective sponsor
+        # had no way to find the inventory or reach anyone.
+        "advertise": {**load_json("fuel.norm"), **load_json("market.norm")},
+        "contact": load_json("home.norm"),
     }
 
     # Chart data for home + fuel. chart_data_json is a JSON string inserted raw
@@ -224,6 +258,17 @@ def build_all():
     fx_page["fx_change_bars_svg"] = charts.fx_change_bars_svg(fx_hist)
     fx_page["fx_histogram_svg"] = charts.fx_histogram_svg(fx_hist)
     fx_page["fx_band_scale_svg"] = charts.fx_band_scale_svg((fx_page.get("fx") or {}).get("band", ""))
+
+    # Sponsor slots apply to any page that carries a block for them. This merge
+    # is the wire that was missing: without it every <!--OPTIONAL:sponsor_*>-->
+    # block resolved to nothing and was stripped, so the slot never rendered.
+    sponsors = load_sponsors()
+    for _page in list(page_data):
+        page_data[_page] = {**page_data[_page], **sponsors}
+    if sponsors:
+        print(f"Sponsors: {len(sponsors)} slot(s) active on pages that have the block")
+    else:
+        print("Sponsors: none active (no slot has a name)")
 
     built = []
     for name in page_data:

@@ -111,6 +111,12 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 
 def foot(extra_script=""):
     flinks = "".join(f'<a href="{h}">{l}</a>' for h, l in NAV if l != "Home")
+    # Business and legal links live in a second footer row rather than in the
+    # data nav, which should stay about data. Reachability matters: a page
+    # nothing links to does not exist, and check_links.py enforces that.
+    blinks = "".join(f'<a href="{h}">{l}</a>' for h, l in (
+        ("/advertise/", "Advertise"), ("/contact/", "Contact"),
+    ))
     year = datetime.date.today().year
     return f"""
 </main>
@@ -118,6 +124,7 @@ def foot(extra_script=""):
 <footer class="ft"><div class="wrap">
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
   <nav class="flinks" aria-label="Footer">{flinks}</nav>
+  <nav class="flinks biz" aria-label="Company">{blinks}</nav>
   <div class="bottom"><span>&copy; {year} Northern Mile Media</span><a href="{SUB}" data-portal="signup">Subscribe free</a><span>Updated {{{{updated_at}}}} UTC</span></div>
 </div></footer>
 
@@ -128,12 +135,17 @@ def foot(extra_script=""):
 
 
 def sponsor(key):
-    """One optional module sponsor. Rendered only when data supplies the block."""
+    """One optional module sponsor. Rendered only when data supplies the block.
+
+    The eyebrow reads {{label}} from data rather than a hardcoded "Presented by",
+    so an unsold slot can say "Sponsor slot" and a sold one "Presented by",
+    without a template change.
+    """
     return (f'\n  <!--OPTIONAL:{key}-->\n'
-            f'  <aside class="sp"><span class="t">Presented by</span>'
+            f'  <aside class="sp"><span class="t">{{{{{key}.label}}}}</span>'
             f'<span class="n">{{{{{key}.name}}}}</span>'
             f'<span class="l">{{{{{key}.line}}}}</span>'
-            f'<a class="c" href="{{{{{key}.url}}}}">Learn more →</a></aside>\n'
+            f'<a class="c" href="{{{{{key}.url}}}}">Learn more</a></aside>\n'
             f'  <!--/OPTIONAL:{key}-->\n')
 
 
@@ -1127,6 +1139,95 @@ prov_body = (
    "Where {{name}} diesel moved, what the border looked like, and what it means for cost per kilometre. One email on Wednesday mornings.")
  + '''
   <p class="note"><a href="/fuel-prices/">← All ten provinces</a></p>
+''' + foot())
+
+write("advertise",
+ head("Advertise — Reach Canadian Carriers | Northern Mile",
+      "Sponsor the pages Canadian carriers check before they buy fuel. Founding rates for the first sponsors, with no audience number we cannot stand behind.",
+      "/advertise/", "og.jpg",
+      '{"@context":"https://***@graph":[' + crumb("Advertise", "/advertise/") + ',' +
+      '{"@type":"WebPage","name":"Advertise","description":"Sponsorship and founding rates for Northern Mile Media.","url":"' + BASE + '/advertise/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">For sponsors</span>
+    <h1>Advertise</h1>
+    <p class="stand">Northern Mile reaches Canadian carriers, owner-operators and fleet managers at the moment they check fuel, border and currency data. The list is new and small. That is what a founding rate is for.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Where you appear</h2><p>Four placements, sold separately. None of them are programmatic, and none of them follow a reader around the internet.</p></div>
+    <div class="rows">
+      <div class="r"><span class="k">The Northern Mile Brief<small>one email a week, every Wednesday, to the full list</small></span><span class="v">Weekly</span></div>
+      <div class="r"><span class="k">Diesel pages<small>the page carriers open before they fill, plus every city and province page</small></span><span class="v">Placement</span></div>
+      <div class="r"><span class="k">Tool pages<small>the fuel cost calculator and the rate floor, used to price an actual run</small></span><span class="v">Placement</span></div>
+      <div class="r"><span class="k">Data pages<small>border wait times, exchange rate, market pulse, incidents</small></span><span class="v">Placement</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>What we will and will not say</h2></div>
+    <div class="reading">
+      <p>The Brief goes to a small number of inboxes today. We are not going to quote you a reach number we cannot stand behind, because the reason you would buy this is that our numbers are true. The same applies to ours.</p>
+      <p>What we can tell you is exactly what you are buying: the placement, the page, the issue, and the date. Every figure on this site carries its source and its print date, and so does every invoice.</p>
+      <p>We do not run popups, interstitials, auto-play video or retargeting. A sponsorship is one quiet block on a page a carrier chose to open.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Founding terms</h2><p>For the first sponsors, while the list is being built.</p></div>
+    <div class="rows">
+      <div class="r"><span class="k">Rate<small>agreed in writing before the first placement runs</small></span><span class="v">Fixed</span></div>
+      <div class="r"><span class="k">Lock<small>the founding rate holds for twelve months, including while the list grows</small></span><span class="v">12 months</span></div>
+      <div class="r"><span class="k">Position<small>your name on the page, labelled as a sponsor, never disguised as editorial</small></span><span class="v">Labelled</span></div>
+      <div class="r"><span class="k">Reporting<small>sends, opens and clicks for any email placement, sent after each issue</small></span><span class="v">Per issue</span></div>
+      <div class="r"><span class="k">Notice<small>cancel before the next issue and you are not billed for it</small></span><span class="v">One issue</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Who this suits</h2></div>
+    <div class="reading">
+      <p>Fuel cards, factoring, insurance, ELD and compliance software, load boards, and truck stop operators. Anything a Canadian carrier buys with the money it just saved on diesel.</p>
+      <p>If you sell to carriers and you want to be the name they saw first, get in while the rate reflects that the list is young.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Talk to us</h2></div>
+    <div class="reading">
+      <p>Email <a href="mailto:northernmilemedia@gmail.com?subject=Sponsorship">northernmilemedia@gmail.com</a> with what you sell and which placement you are considering. You will get a reply from a person, and a rate you can hold us to.</p>
+    </div>
+  </section>
+''' + foot())
+
+write("contact",
+ head("Contact | Northern Mile",
+      "How to reach Northern Mile Media for sponsorship, data questions, corrections and press.",
+      "/contact/", "og.jpg",
+      '{"@context":"https://***@graph":[' + crumb("Contact", "/contact/") + ',' +
+      '{"@type":"WebPage","name":"Contact","description":"Contact Northern Mile Media.","url":"' + BASE + '/contact/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">Contact</span>
+    <h1>Get in touch</h1>
+    <p class="stand">One address, read by a person. Say what you need and you will get an answer.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Who to write to</h2></div>
+    <div class="rows">
+      <div class="r"><span class="k">Sponsorship<small>placements, founding rates, campaign dates</small></span><span class="v"><a href="mailto:northernmilemedia@gmail.com?subject=Sponsorship">Email</a></span></div>
+      <div class="r"><span class="k">Corrections<small>if a figure is wrong, tell us. We correct at the next issue and say what changed</small></span><span class="v"><a href="mailto:northernmilemedia@gmail.com?subject=Correction">Email</a></span></div>
+      <div class="r"><span class="k">Press and citable data<small>sources, dates, and a copy-paste citation for any figure</small></span><span class="v"><a href="/press/">/press/</a></span></div>
+      <div class="r"><span class="k">How the numbers are built<small>every source, every method, every revision</small></span><span class="v"><a href="/methodology/nmdi/">/methodology/nmdi/</a></span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="reading">
+      <p>Northern Mile Media is an independent Canadian publication. It is not owned by, funded by, or affiliated with any carrier, broker, fuel retailer or industry association. Nobody pays for a number on this site.</p>
+    </div>
+  </section>
 ''' + foot())
 
 with open(os.path.join(OUT, "province.template.html"), "w") as f:

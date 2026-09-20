@@ -500,3 +500,30 @@ main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%);
   .inp input, .inp select { min-height: 44px; }
   .calc .out { margin-top: 20px; }
 }
+
+/* Sponsor slot. The <!--OPTIONAL:sponsor_*--> blocks in the templates had no
+   styling at all, because nothing read data/sponsors.json so the blocks were
+   always stripped and nobody ever saw one render. Deliberately quiet: this is
+   a footnote to the data, not a banner. Scoped with aside. so it cannot touch
+   the .rail .cap .sp caption span above. */
+aside.sp {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  margin: 30px 0; padding: 13px 16px;
+  border: 1px solid var(--line); border-left: 3px solid var(--signal);
+  border-radius: 3px; background: var(--paper);
+}
+aside.sp .t {
+  font-family: var(--data); font-size: .6875rem; font-weight: 500;
+  letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+}
+aside.sp .n { font-weight: 600; color: var(--ink); font-size: .9375rem; }
+aside.sp .l { flex: 1 1 100%; color: var(--muted); font-size: .875rem; line-height: 1.5; }
+aside.sp .c {
+  font-weight: 600; color: var(--signal); text-decoration: none;
+  font-size: .875rem; white-space: nowrap;
+}
+aside.sp .c:hover { text-decoration: underline; }
+@media (max-width: 560px) {
+  aside.sp .c { flex: 1 1 100%; }
+  aside.sp .c { min-height: 32px; display: inline-flex; align-items: center; }
+}
