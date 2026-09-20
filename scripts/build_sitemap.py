@@ -23,7 +23,13 @@ def discover():
     for dirpath, _, files in os.walk(DOCS):
         if "index.html" not in files:
             continue
-        rel = dirpath.replace(DOCS, "")
+        # Normalise Windows separators. os.walk yields "C:\...\docs\border-trends",
+        # so stripping DOCS left "\border-trends" and the sitemap advertised URLs
+        # containing backslashes. Search engines cannot crawl those, which left
+        # every page except the homepage effectively unlisted. The same bug also
+        # defeated the EXCLUDE lookup below, since "/\methodology/" never matched
+        # "/methodology/".
+        rel = dirpath.replace(DOCS, "").replace("\\", "/")
         path = (rel + "/").replace("//", "/")
         if not path.startswith("/"):
             path = "/" + path
