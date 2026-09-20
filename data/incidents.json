@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-302207",
+      "province": "ON",
+      "highway": "HWY 61",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane closed",
+      "lat": 48.055068306,
+      "lng": -89.540597444,
+      "start": 1788407400,
+      "end": null,
+      "updated": 1789935900
+    },
+    {
+      "id": "ON-309534",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.69200023,
+      "lng": -79.56896285,
+      "start": 1789935900,
+      "end": null,
+      "updated": 1789935900
+    },
+    {
       "id": "ON-309523",
       "province": "ON",
       "highway": "QEW",
@@ -95,22 +127,6 @@
       "start": 1790035200,
       "end": 1790067600,
       "updated": 1789931280
-    },
-    {
-      "id": "ON-302207",
-      "province": "ON",
-      "highway": "HWY 61",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 48.055068306,
-      "lng": -89.540597444,
-      "start": 1788407400,
-      "end": null,
-      "updated": 1789930560
     },
     {
       "id": "ON-309500",
@@ -783,26 +799,10 @@
       "start": 1790305200,
       "end": 1790326800,
       "updated": 1789744980
-    },
-    {
-      "id": "ON-308902",
-      "province": "ON",
-      "highway": "HWY 4",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 4 Northbound  between Clinton Line and Clinton Line, St Thomas. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 42.82063,
-      "lng": -81.26101,
-      "start": 1789988400,
-      "end": 1790024400,
-      "updated": 1789743360
     }
   ],
   "total": 50,
-  "updated": "2026-09-20T20:17:46.338484+00:00",
+  "updated": "2026-09-20T20:31:46.441137+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
