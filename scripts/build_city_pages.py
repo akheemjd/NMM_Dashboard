@@ -71,11 +71,15 @@ def main():
     fuel = load_json("fuel.json")
     national = float(fuel.get("diesel_national_avg", 0) or 0)
     print_date = fuel.get("print_date", "")
-    build_version = fuel.get("build_version", "")
 
     home = load_json("home.norm.json")
     updated_at = home.get("updated_at", "")
     updated_iso = home.get("updated_iso", "")
+    # build_version lives in the NORMALISED files. Raw fuel.json has no such
+    # key, so reading it from fuel silently produced "" and every city page
+    # shipped a cache-buster of "?v=". Those ~90 pages could then serve stale
+    # CSS from browser cache after a stylesheet change.
+    build_version = home.get("build_version") or ""
 
     with open(os.path.join(TMPL, "city.template.html")) as f:
         template = f.read()
