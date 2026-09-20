@@ -56,17 +56,20 @@ FOCUS = "#1C6FE0"
 
 # Chart canvas.
 #
-# Sized for MOBILE-FIRST legibility. What matters is not the pixel count but
-# the ratio of text height to canvas width: at a 9in canvas a 10pt label is
-# ~1.5% of the width, which renders at about 4px when Ghost scales the image
-# to a 343px phone column. Illegible.
+# Sized to be NATIVE at both display widths rather than scaled down at both.
+# Ghost's default theme gives post content roughly 720px on desktop and ~343px
+# on a phone. At 160dpi this lands ~830px, so desktop is a mild downscale and
+# phones get a clean 2x asset.
 #
-# A ~6in canvas with proportionally larger type puts labels near 4% of the
-# width, so they land around 13px on a phone and stay sharp on desktop
-# (the PNG is ~1000px wide at the DPI below, close to 1:1 at typical
-# desktop content widths).
-FIGSIZE = (6.4, 3.9)
-DPI = 155
+# Legibility depends on the ratio of text height to canvas width, not on DPI.
+# At 5.2in the labels sit near 4% of the width, which lands around 13px on a
+# phone. DPI affects sharpness only; lowering it does NOT shrink the type
+# relative to the canvas.
+#
+# Do not shrink this much further: the canvas still has to FIT its labels.
+# At 4.5in, "Prince Edward Island" and the source line both overflowed.
+FIGSIZE = (5.2, 3.5)
+DPI = 160
 
 # Brand faces. Each has static 400-700 TTFs in assets/fonts so matplotlib can
 # actually select weights (variable fonts resolve to their light default).
@@ -195,32 +198,59 @@ def set_theme():
     _theme_ready = True
 
 
+def _fit_fig_text(fig, text, x, y, font_fn, start_size, min_size=8,
+                  color=INK, ha="left", va="top", max_frac=0.99):
+    """Draw figure-level text, shrinking the font until it fits the canvas.
+
+    Source lines and titles vary a lot in length ("NRCan" vs "Natural Resources
+    Canada weekly diesel survey"). Fixed sizes silently overflow the canvas and
+    get cut off, so measure and step down instead.
+    """
+    if not text:
+        return None
+    fw_px = fig.get_size_inches()[0] * fig.dpi
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+
+    size = start_size
+    while True:
+        t = fig.text(x, y, text, fontproperties=font_fn(size), color=color,
+                     ha=ha, va=va)
+        if t.get_window_extent(renderer=r).width <= fw_px * max_frac:
+            return t
+        t.remove()
+        size -= 0.5
+        if size <= min_size:
+            return fig.text(x, y, text, fontproperties=font_fn(min_size),
+                            color=color, ha=ha, va=va)
+
+
 def _figure(title=None, subtitle=None, source=None, figsize=None):
     """Create a styled figure. Title/subtitle/source are positioned INSIDE the
     figure bounds so the saved PNG is exactly figsize x DPI, which keeps the
     text-to-width ratio (and therefore mobile legibility) predictable.
 
-    Type sizes are tuned for the ~6.4in canvas: roughly 3% of canvas width for
-    body labels, which lands near 11px when a phone scales the image to a
+    Type sizes are tuned for the ~5.2in canvas: roughly 4% of canvas width for
+    body labels, which lands near 13px when a phone scales the image to a
     343px column.
     """
     set_theme()
     fig, ax = plt.subplots(figsize=figsize or FIGSIZE)
+    fig.subplots_adjust(top=0.855, bottom=0.115, left=0.02, right=0.98)
 
     if title:
-        fig.text(0.0, 0.985, title,
-                 fontproperties=display_font(21, weight=600),
-                 color=INK, ha="left", va="top")
+        _fit_fig_text(fig, title, 0.0, 0.985,
+                      lambda s: display_font(s, weight=600), 19,
+                      min_size=12, color=INK)
     if subtitle:
-        fig.text(0.0, 0.925, subtitle,
-                 fontproperties=body_font(14.5, weight=400),
-                 color=MUTED, ha="left", va="top")
+        _fit_fig_text(fig, subtitle, 0.0, 0.925,
+                      lambda s: body_font(s, weight=400), 13.5,
+                      min_size=9.5, color=MUTED)
     if source:
-        fig.text(0.0, 0.015, f"Source: {source}",
-                 fontproperties=body_font(12.5, weight=400),
-                 color=MUTED, ha="left", va="bottom")
+        _fit_fig_text(fig, f"Source: {source}", 0.0, 0.015,
+                      lambda s: body_font(s, weight=400), 12,
+                      min_size=8.5, color=MUTED, va="bottom")
 
-    fig.subplots_adjust(top=0.855, bottom=0.115, left=0.02, right=0.98)
     return fig, ax
 
 
@@ -266,7 +296,7 @@ def _finalize(fig, ax):
         bottom_px = below + 48
 
         fig.subplots_adjust(
-            left=min(0.46, left_px / fw),
+            left=min(0.55, left_px / fw),
             bottom=min(0.34, bottom_px / fh),
         )
     except Exception:
@@ -278,11 +308,24 @@ def _finalize(fig, ax):
 # ══════════════════════════════════════════════════════════════
 
 def ranked_bars(labels, values, title=None, subtitle=None, source=None,
-                unit="", highlight=None, average=None):
-    """Horizontal bars, sorted ascending. For RANKINGS (provinces, cities, ports).
+                unit="", highlight=None, average=None, force=None):
+    """Horizontal ranking chart, sorted ascending.
 
-    Values should already be in the display unit. `average` draws a reference line.
-    Bars at or above the average take the amber accent; the rest stay green.
+    ENCODING IS CHOSEN BY THE DATA, and this matters for honesty:
+
+    - **Bars** encode magnitude as LENGTH, which is only truthful when zero is
+      a meaningful baseline and the spread is wide.
+    - **Dots** encode magnitude as POSITION, which stays truthful on a
+      truncated axis.
+
+    Diesel prices all sit between roughly 210 and 300 cents. On a truncated
+    axis, drawing those as bars made a 1.22x difference (Alberta to Quebec)
+    look like a 5x difference, because bar length still reads as magnitude to
+    the eye even when the scale does not start at zero. So a narrow-band,
+    far-from-zero dataset gets dots.
+
+    `average` draws a reference line; `force` overrides the choice
+    ("bars" or "dots").
     """
     set_theme()
     pairs = [(str(l), float(v)) for l, v in zip(labels, values)
@@ -294,23 +337,41 @@ def ranked_bars(labels, values, title=None, subtitle=None, source=None,
     labs = [p[0] for p in pairs]
     vals = [p[1] for p in pairs]
 
+    # Choose the encoding.
+    lo_v, hi_v = min(vals), max(vals)
+    span = (hi_v - lo_v) or 1
+    ratio = (hi_v / lo_v) if lo_v else 1.0
+    if force in ("bars", "dots"):
+        use_dots = force == "dots"
+    else:
+        use_dots = ratio < 1.6 and lo_v > 0
+
     # More rows need more vertical room, or the labels crowd at phone width.
-    # A 12-province chart gets a taller canvas than a 5-port one.
     h = max(FIGSIZE[1], 0.30 * len(labs) + 1.9)
     fig, ax = _figure(title, subtitle, source, figsize=(FIGSIZE[0], h))
-    ypos = range(len(labs))
+    ypos = list(range(len(labs)))
 
     colors = []
     for v in vals:
-        if highlight and labs[vals.index(v)] == highlight:
-            colors.append(AMBER)
-        elif average is not None and v >= average:
+        if average is not None and v >= average:
             colors.append(AMBER)
         else:
             colors.append(SIGNAL)
+    if highlight and highlight in labs:
+        colors[labs.index(highlight)] = AMBER
 
-    ax.barh(list(ypos), vals, color=colors, height=0.62, zorder=3)
-    ax.set_yticks(list(ypos))
+    if use_dots:
+        # Position encoding: a faint full-width guide per row, then the mark.
+        x_left = lo_v - span * 0.10
+        for i, v in enumerate(vals):
+            ax.plot([x_left, v], [i, i], color=LINE, linewidth=1.4,
+                    zorder=2, solid_capstyle="round")
+            ax.plot([v], [i], "o", color=colors[i], markersize=8.5, zorder=4)
+    else:
+        # Length encoding. Only used when zero is a meaningful baseline.
+        ax.barh(ypos, vals, color=colors, height=0.62, zorder=3)
+
+    ax.set_yticks(ypos)
     ax.set_yticklabels(labs, fontproperties=body_font(15, weight=500))
 
     _xgrid(ax, "x")
@@ -319,24 +380,42 @@ def ranked_bars(labels, values, title=None, subtitle=None, source=None,
     for lbl in ax.get_xticklabels():
         lbl.set_fontproperties(data_font(13.5, weight=400))
 
-    # Direct value labels at the bar ends — avoids needing a legend
-    span = max(vals) - min(vals) or 1
+    # Direct value labels, so no legend is needed.
     for i, v in enumerate(vals):
-        ax.text(v + span * 0.015, i, f"{v:,.1f}{unit}",
+        ax.text(v + span * 0.035, i, f"{v:,.1f}{unit}",
                 va="center", ha="left",
                 fontproperties=data_font(14.5, weight=500),
-                color=INK2, zorder=4)
+                color=INK2, zorder=5)
 
     if average is not None:
         ax.axvline(average, color=INK2, linewidth=1.1, linestyle=(0, (4, 3)),
-                   zorder=4, alpha=0.75)
-        # Place the caption below the plot so it never collides with a bar
-        ax.text(average, -1.35, f"average {average:,.1f}{unit}",
+                   zorder=3, alpha=0.75)
+        ax.text(average, -1.45, f"average {average:,.1f}{unit}",
                 fontproperties=body_font(12.5, weight=500),
                 color=INK2, va="top", ha="center", zorder=5)
 
-    ax.set_xlim(min(vals) - span * 0.06, max(vals) + span * 0.20)
-    ax.set_ylim(-1.9, len(labs) - 0.2)
+    # Generous right padding: the value label sits outside the final mark and
+    # must not be clipped at the canvas edge.
+    ax.set_xlim(lo_v - span * 0.16, hi_v + span * 0.34)
+    ax.set_ylim(-2.0, len(labs) - 0.3)
+
+    # The value labels are drawn in data coordinates just past each mark. If
+    # the widest one would run past the axis limit, widen the limit to fit it
+    # rather than letting the canvas crop the number.
+    try:
+        fig.canvas.draw()
+        r = fig.canvas.get_renderer()
+        axw = ax.get_window_extent().width
+        x0, x1 = ax.get_xlim()
+        px_per_unit = axw / (x1 - x0)
+        widest = max((t.get_window_extent(renderer=r).width
+                      for t in ax.texts), default=0)
+        needed = hi_v + span * 0.035 + (widest + 12) / px_per_unit
+        if needed > x1:
+            ax.set_xlim(x0, needed)
+    except Exception:
+        pass
+
     ax.xaxis.set_major_locator(MaxNLocator(5))
     _finalize(fig, ax)
     return fig
@@ -712,13 +791,32 @@ def save_hero(img, name, outdir=None):
 # Output
 # ══════════════════════════════════════════════════════════════
 
-def save(fig, name, outdir=None):
-    """Write the figure to a PNG and return the path. Closes the figure."""
+def save(fig, name, outdir=None, optimize=True):
+    """Write the figure to a PNG and return the path. Closes the figure.
+
+    Charts are flat-colour graphics, so an adaptive palette cuts file size
+    hard with no visible difference. Measured across the chart set: about 63%
+    smaller. Antialiased text still renders smoothly because the palette
+    adapts to the image rather than being fixed.
+    """
+    from PIL import Image
+
     outdir = Path(outdir) if outdir else VISUAL_DIR
     outdir.mkdir(parents=True, exist_ok=True)
     path = outdir / f"{name}.png"
     fig.savefig(path)
     plt.close(fig)
+
+    if optimize:
+        try:
+            im = Image.open(path).convert("RGB")
+            # 128 adaptive colours: plenty for text antialiasing and a handful
+            # of brand hues.
+            q = im.quantize(colors=128, method=Image.MEDIANCUT, dither=Image.NONE)
+            q.save(path, "PNG", optimize=True)
+        except Exception:
+            pass  # keep the unoptimised file rather than failing the render
+
     return path
 
 
@@ -748,6 +846,17 @@ def _demo():
                     subtitle="Cents per litre, week of September 15",
                     source="Natural Resources Canada weekly diesel survey",
                     unit="c", average=267.1)
+    if f:
+        made.append(save(f, "demo-ranked-dots", out))
+
+    # Wide range from a meaningful zero -> length encoding is honest here.
+    ports = ["Ambassador", "Blue Water", "Peace", "Queenston", "Coutts", "Pacific"]
+    waits = [42, 31, 18, 12, 6, 3]
+    f = ranked_bars(ports, waits,
+                    title="Border waits by crossing",
+                    subtitle="Average commercial delay, minutes",
+                    source="CBSA border wait times",
+                    unit=" min", force="bars")
     if f:
         made.append(save(f, "demo-ranked-bars", out))
 
