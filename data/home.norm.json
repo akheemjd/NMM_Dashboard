@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-20 22:31",
-  "updated_iso": "2026-09-20T22:31:51+00:00",
-  "build_version": "1789943511",
+  "updated_at": "2026-09-20 22:52",
+  "updated_iso": "2026-09-20T22:52:54+00:00",
+  "build_version": "1789944774",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_wait": "5 min"
   },
   "fuel": {
     "national_diesel": "267.1",
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 401, HWY 7, HWY 400",
+    "status_line": "HWY 11, HWY 400, HWY 61",
     "incidents": [
       {
         "road": "HWY 11",
-        "what": "Collision on HWY 11 Both Directions  at GOLDIE RD(N) - MTO PATROL YARD 9,\u2026",
+        "what": "Collision on HWY 11 Both Directions  between SEC HWY 560(W)9TH ST(E) and SEC\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound HOV at JAMES SNOW PKWY, Milton. All lanes\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  at GOLDIE RD(N) - MTO PATROL YARD 9,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -299,11 +299,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "7 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -313,7 +313,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -339,11 +339,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
