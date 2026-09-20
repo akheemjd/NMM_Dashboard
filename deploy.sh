@@ -23,11 +23,6 @@ echo "  Using Python: $PYTHON"
 # 1. Collect fresh data
 $PYTHON scripts/collector.py && $PYTHON scripts/normalize.py && $PYTHON scripts/normalize_provinces.py 2>&1
 
-# 1b. Generate email digest (skip on DRY_RUN, log error but never crash pipeline)
-if [ "$DRY_RUN" != "1" ]; then
-  $PYTHON scripts/digest_email.py --send 2>&1 || echo "  [warn] digest email failed — continuing deploy" >&2
-fi
-
 # 1c. Copy assets BEFORE build
 mkdir -p docs/assets && cp -r assets/. docs/assets/
 cp assets/favicon.ico docs/favicon.ico
@@ -134,13 +129,8 @@ else
   fi
 fi
 
-# 4. (Optional) Generate & send email digest
-if [ "${SEND_DIGEST:-0}" = "1" ]; then
-  echo "[4/6] Sending digest..."
-  $PYTHON scripts/digest_email.py --send --date "$(date -u +%Y-%m-%d)" 2>&1 || {
-    echo "  Digest send failed (non-fatal)." >&2
-  }
-fi
+# 4. (Optional) Generate & send email digest — REMOVED (Akheem: not needed)
+# Digest email step disabled 2026-08-31; deploy.sh no longer sends email digests.
 
 echo "Done."
 if [ "$DRY_RUN" != "1" ]; then
