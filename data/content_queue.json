@@ -1,0 +1,168 @@
+{
+  "_comment": "Topic bank for the NMM blog pipeline. The scheduler pulls the next unused topic per pillar. Add topics to 'queues'; completed topics are moved to 'completed' automatically.",
+  "version": 1,
+  "queues": {
+    "market": [
+      {
+        "id": "market-diesel-national-week",
+        "title": "Canada's national diesel average this week",
+        "keyword": "canada diesel price this week",
+        "angle": "National average plus the three provinces moving most against it.",
+        "source": "NRCan weekly diesel survey"
+      },
+      {
+        "id": "market-fx-fuel-cost",
+        "title": "What the loonie is doing to your fuel bill",
+        "keyword": "usd cad exchange rate trucking",
+        "angle": "CAD/USD move translated into cost per litre of imported diesel.",
+        "source": "Bank of Canada Valet API"
+      },
+      {
+        "id": "market-border-week",
+        "title": "Where the border was slow this week",
+        "keyword": "canada us border wait times",
+        "angle": "Crossings with the worst commercial delays and what pushed them.",
+        "source": "CBSA border wait times"
+      },
+      {
+        "id": "market-us-canada-diesel-gap",
+        "title": "Canadian diesel versus American diesel right now",
+        "keyword": "canada us diesel price comparison",
+        "angle": "EIA US national against NRCan Canadian average, converted properly.",
+        "source": "EIA + NRCan"
+      },
+      {
+        "id": "market-week-ahead",
+        "title": "The week ahead for Canadian freight",
+        "keyword": "canadian trucking fuel costs",
+        "angle": "Where fuel, currency, and border conditions are pointed.",
+        "source": "Dashboard composite"
+      },
+      {
+        "id": "market-prairie-diesel",
+        "title": "Prairie diesel is the cheapest in Canada again",
+        "keyword": "alberta saskatchewan diesel price",
+        "angle": "AB/SK/MB against the national index and why the gap persists.",
+        "source": "NRCan weekly diesel survey"
+      },
+      {
+        "id": "market-atlantic-diesel",
+        "title": "Why Atlantic Canada pays more at the pump",
+        "keyword": "nova scotia new brunswick diesel price",
+        "angle": "Atlantic provinces against the national average, distribution costs explained.",
+        "source": "NRCan weekly diesel survey"
+      }
+    ],
+    "deep": [
+      {
+        "id": "deep-provincial-spread",
+        "title": "The provincial diesel gap, mapped",
+        "keyword": "diesel price by province canada",
+        "angle": "Full provincial ranking plus the tax and logistics reasons behind the spread.",
+        "source": "NRCan weekly diesel survey"
+      },
+      {
+        "id": "deep-cost-per-km",
+        "title": "What a kilometre actually costs you in fuel",
+        "keyword": "trucking cost per kilometre canada",
+        "angle": "Fuel cost per 1,000 km at current diesel, and how it moves with price.",
+        "source": "NRCan + fuel cost calculator"
+      },
+      {
+        "id": "deep-crossing-deep-dive",
+        "title": "One crossing, examined properly",
+        "keyword": "ambassador bridge wait times",
+        "angle": "Average, P75 and P90 waits at a single crossing including hourly pattern.",
+        "source": "CBSA border history"
+      },
+      {
+        "id": "deep-excise-tax",
+        "title": "What the diesel excise tax actually does to your costs",
+        "keyword": "diesel excise tax canada trucking",
+        "angle": "The cents-per-litre arithmetic of the federal excise and provincial layers.",
+        "source": "Finance Canada + NRCan"
+      },
+      {
+        "id": "deep-seasonal-diesel",
+        "title": "Diesel seasonality: when prices actually move",
+        "keyword": "diesel price trends canada seasonal",
+        "angle": "Historical pattern from the 2016-onward series, month by month.",
+        "source": "NRCan historical series"
+      },
+      {
+        "id": "deep-regional-freight",
+        "title": "Which provinces carry the freight burden",
+        "keyword": "canadian freight corridor data",
+        "angle": "Diesel consumption geography against crossing volumes.",
+        "source": "NRCan + CBSA"
+      },
+      {
+        "id": "deep-city-level-costs",
+        "title": "Diesel city by city across Canada",
+        "keyword": "diesel prices by city canada",
+        "angle": "The 72 survey locations ranked, and where the outliers are.",
+        "source": "NRCan survey locations"
+      }
+    ],
+    "rules": [
+      {
+        "id": "rules-driver-inc",
+        "title": "Driver Inc: what the crackdown actually changes",
+        "keyword": "driver inc rules canada",
+        "angle": "The structure the CRA is targeting and what carriers must document.",
+        "source": "CRA guidance + industry reporting"
+      },
+      {
+        "id": "rules-ifta",
+        "title": "IFTA filing: the mistakes that trigger audits",
+        "keyword": "ifta filing deadlines canada",
+        "angle": "Quarterly deadlines plus the record-keeping failures auditors look for.",
+        "source": "IFTA Inc. + provincial guidance"
+      },
+      {
+        "id": "rules-psb-cra",
+        "title": "The CRA's PSB test, in plain language",
+        "keyword": "cra personal services business trucking",
+        "angle": "The test criteria and where owner-operators get caught out.",
+        "source": "CRA guidance"
+      },
+      {
+        "id": "rules-hours-of-service",
+        "title": "Hours of service: the parts drivers actually get wrong",
+        "keyword": "hours of service canada trucking",
+        "angle": "Cycle limits, resets, and the documentation that proves compliance.",
+        "source": "Transport Canada"
+      },
+      {
+        "id": "rules-cargo-theft",
+        "title": "Cargo theft liability: who pays when a load disappears",
+        "keyword": "cargo theft canada liability",
+        "angle": "Claims exposure and the security practices that reduce it.",
+        "source": "NMM theft tracker + industry reporting"
+      },
+      {
+        "id": "rules-tariffs",
+        "title": "Tariffs and the cross-border haul",
+        "keyword": "canada us tariffs trucking",
+        "angle": "How tariff changes reach carriers through volumes and documentation.",
+        "source": "CBSA + trade reporting"
+      },
+      {
+        "id": "rules-customs-docs",
+        "title": "Cross-border paperwork that holds loads up",
+        "keyword": "cbsa customs documentation trucking",
+        "angle": "The documentation errors that cause the longest border delays.",
+        "source": "CBSA"
+      },
+      {
+        "id": "rules-eld",
+        "title": "ELD rules and the inspection reality",
+        "keyword": "eld mandate canada trucking",
+        "angle": "What inspectors check and the common malfunction violations.",
+        "source": "Transport Canada + CVSA"
+      }
+    ]
+  },
+  "completed": [],
+  "last_published": {}
+}
