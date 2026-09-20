@@ -14,7 +14,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-FONT_DIR = Path(__file__).resolve().parent.parent / "assets" / "fonts"
+FONT_DIR = Path(__file__).resolve().parent.parent / "fonts"
 
 FAMILIES = {
     "Inter": "Inter:wght@400;500;600;700",

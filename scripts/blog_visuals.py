@@ -35,7 +35,7 @@ from matplotlib.ticker import MaxNLocator
 logging.getLogger("matplotlib.font_manager").setLevel(logging.ERROR)
 
 ROOT = Path(__file__).resolve().parent.parent
-FONT_DIR = ROOT / "assets" / "fonts"
+FONT_DIR = ROOT / "fonts"  # build-only; assets/ gets copied to the published site
 VISUAL_DIR = ROOT / "visuals"
 
 # ── Brand tokens (mirrors assets/nm.css) ───────────────────────
@@ -65,23 +65,30 @@ BODY_FONT = "Inter"              # labels, subtitles
 DATA_FONT = "IBM Plex Mono"      # numbers
 
 _theme_ready = False
+_fonts_loaded = False
 
 
 def _load_fonts():
-    """Register every static weight in assets/fonts. Returns the family names."""
-    families = set()
+    """Register every static weight in assets/fonts. Returns the family names.
+
+    Idempotent, and safe to call before set_theme() — the *_font() helpers
+    depend on it having run, and they are used to build figures directly.
+    """
+    global _fonts_loaded
+    if _fonts_loaded:
+        return
+    _fonts_loaded = True
     if FONT_DIR.exists():
         for f in sorted(FONT_DIR.glob("*.ttf")):
             try:
                 fm.fontManager.addfont(str(f))
-                families.add(fm.FontProperties(fname=str(f)).get_name())
             except Exception:
                 pass
-    return families
 
 
 def _available(family):
     """True if the family is registered and usable."""
+    _load_fonts()
     try:
         fm.findfont(fm.FontProperties(family=family), fallback_to_default=False)
         return True
