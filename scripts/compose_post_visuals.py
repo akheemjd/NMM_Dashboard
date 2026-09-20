@@ -99,7 +99,7 @@ def fig_provincial_ranked(fuel):
         title="Diesel by province",
         subtitle=f"Cents per litre, NRCan print {date}" if date else "Cents per litre",
         source="Natural Resources Canada weekly diesel survey",
-        unit="c", average=nat,
+        unit="\u00a2", average=nat,
     )
     if not f:
         return None
@@ -126,7 +126,7 @@ def fig_diesel_trend(fuel):
         title="National diesel average",
         subtitle="Cents per litre, historical series",
         source="Natural Resources Canada weekly diesel survey",
-        unit="c",
+        unit="\u00a2",
     )
     if not f:
         return None
@@ -233,7 +233,9 @@ def compose(topic_id, headline, keyword=None, eyebrow=None,
     if not stat_value:
         nat = national_average(fuel)
         if nat:
-            stat_value = f"{nat}c"
+            # Match the dashboard convention (¢/L, 16 uses on /fuel-prices/).
+            # A bare "c" was ambiguous and inconsistent with the brand.
+            stat_value = f"{nat}\u00a2/L"
             stat_label = stat_label or "national diesel average"
             source = source or "Natural Resources Canada weekly diesel survey"
 
