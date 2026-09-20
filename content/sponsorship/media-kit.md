@@ -1,4 +1,4 @@
-# Northern Mile Media — Sponsorship
+# Northern Mile Media: Sponsorship
 
 ---
 
@@ -29,7 +29,7 @@ attached.
 
 ## Audience, stated honestly
 
-**The list is new and small.** We are not going to quote a reach figure we
+The list is new and small. We are not going to quote a reach figure we
 cannot stand behind, because the reason a sponsor would buy this is that our
 numbers are true, and the same standard applies to ours.
 
@@ -67,14 +67,14 @@ not run sponsored content disguised as our own analysis.
 
 For the first sponsors, while the list is being built.
 
-- **Rate** — agreed in writing before the first placement runs, fixed for the
+- Rate: agreed in writing before the first placement runs, fixed for the
   term. No rate card is published here because the honest price depends on what
   you buy and when you start.
-- **Lock** — the founding rate holds for twelve months, including while the list
+- Lock: the founding rate holds for twelve months, including while the list
   grows underneath it.
-- **Reporting** — sends, opens and clicks for any email placement, sent after
+- Reporting: sends, opens and clicks for any email placement, sent after
   each issue. Actual numbers, not targets.
-- **Notice** — cancel before the next issue and you are not billed for it.
+- Notice: cancel before the next issue and you are not billed for it.
 
 ---
 
@@ -98,9 +98,9 @@ with the money it just saved on diesel.
 
 ## Contact
 
-**northernmilemedia@gmail.com** — sponsorship enquiries.
+northernmilemedia@gmail.com: sponsorship enquiries.
 
-Full placement detail and terms: **dashboard.northernmilemedia.com/advertise/**
+Full placement detail and terms: dashboard.northernmilemedia.com/advertise/
 
 *Northern Mile Media is an independent Canadian publication. It is not owned by,
 funded by, or affiliated with any carrier, broker, fuel retailer or industry

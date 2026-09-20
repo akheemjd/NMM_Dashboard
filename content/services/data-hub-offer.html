@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Hub: what we build, and what it costs</title>
+<style>
+:root { --paper:#FBFAF8; --ink:#1A1A17; --muted:#6B6862; --line:#E8E4DD; --signal:#0B5D3B; }
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto; padding: 44px 34px; max-width: 800px;
+  background: var(--paper); color: var(--ink);
+  font: 16px/1.62 Inter, -apple-system, Segoe UI, sans-serif;
+}
+h1 { font-size: 2rem; line-height: 1.15; letter-spacing: -.02em; margin: 0 0 8px; }
+h2 {
+  font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+  margin: 38px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font-weight: 600;
+}
+h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+p { margin: 0 0 13px; }
+a { color: var(--signal); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 30px 0; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: .95rem; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+ul, ol { padding-left: 20px; margin: 0 0 14px; }
+li { margin-bottom: 7px; }
+strong { font-weight: 600; }
+em { color: var(--muted); }
+</style>
+</head>
+<body>
+<h1>Data Hub: what we build, and what it costs</h1>
+<p><em>A one-page offer. Northern Mile Media is the reference build.</em></p>
+<hr />
+<h2>The problem we solve</h2>
+<p>Your industry has data your members or readers care about, and it lives in
+scattered PDF releases, government tables and spreadsheets nobody opens.</p>
+<p>You have probably already decided you should publish it. What stopped you is the
+same thing that stops everyone: a live data property is not a web project, it is
+an operations problem. Somebody has to collect it, clean it, notice when a feed
+breaks, regenerate the charts, rewrite the pages, keep it indexed, and do it
+again next week, forever. Most organisations buy the build and quietly abandon
+the thing eight months later when the person who maintained it leaves.</p>
+<p>We have solved that problem, and we can point at a live one.</p>
+<hr />
+<h2>The reference build</h2>
+<p>dashboard.northernmilemedia.com: a free Canadian trucking data property.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pages published</td>
+<td>108</td>
+</tr>
+<tr>
+<td>Primary sources</td>
+<td>Natural Resources Canada, Canada Border Services Agency, Bank of Canada, US Energy Information Administration, Statistics Canada</td>
+</tr>
+<tr>
+<td>Refresh</td>
+<td>Every 30 minutes, unattended</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>56 scripts, 13,465 lines, 20 page templates</td>
+</tr>
+<tr>
+<td>Human input to publish</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Editorial output</td>
+<td>Articles and a weekly newsletter, generated, gated and sent automatically</td>
+</tr>
+</tbody>
+</table>
+<p>What it does without anyone touching it:</p>
+<ul>
+<li>Collects from five primary sources and normalises them into one schema</li>
+<li>Generates 108 pages: 69 city pages, ten provinces, five US regions, nine
+  commercial border crossings</li>
+<li>Renders charts, share cards and structured data per page</li>
+<li>Writes, lints and publishes articles, then emails them</li>
+<li>Deploys itself and re-submits its own sitemap</li>
+</ul>
+<p>And the part that actually matters: it refuses to publish a number it cannot
+verify. Four independent guards run on every build and stop the deploy on a
+broken link, an orphaned page, a missing data source, or a figure that
+contradicts another page on the same site. Every figure carries its source and
+its print date.</p>
+<p>That last property is the whole product. Anyone can put up a chart. Publishing a
+number a professional will cite, and standing behind it, is the hard part.</p>
+<hr />
+<h2>What you get</h2>
+<p>Build (weeks 1 to 6)</p>
+<ol>
+<li>Source audit. Which feeds exist, which are stable, which revise after
+   publication, which will silently die.</li>
+<li>A normalisation layer, so every source lands in one schema.</li>
+<li>The page system, built around the questions your audience actually searches.</li>
+<li>Charts matched to the shape of the data, not one uniform template.</li>
+<li>A self-correcting publish path: sources, citations, structured data, sitemap,
+   share cards.</li>
+<li>The guards. This is the deliverable that keeps it alive in year two.</li>
+<li>Your team trained on the one file they need to understand to add a source.</li>
+</ol>
+<p>Operate (ongoing)</p>
+<p>We run it. Feed monitoring, breakage alerts, source changes, revisions, and a
+monthly note on what moved and what broke. You get a property that stays true
+without employing anyone to maintain it.</p>
+<hr />
+<h2>How this differs from hiring an agency</h2>
+<p>An agency builds you a site and leaves. You then own a thing that decays, and the
+decay is invisible until a number is wrong in public.</p>
+<p>We hand over something that checks itself, and we stay on the hook for it. The
+guards are the point. A data property without them is a liability with a nice
+chart on it.</p>
+<hr />
+<h2>What we need from you</h2>
+<ul>
+<li>The data. Public feeds, or your own records.</li>
+<li>One person inside your organisation who knows the industry and can be
+  consulted, not a project manager.</li>
+<li>A decision on what the property is for: member value, lead generation, or
+  public authority. It changes the page architecture.</li>
+</ul>
+<hr />
+<h2>Commercial shape</h2>
+<p>Two numbers: a build fee, and a monthly operating fee.</p>
+<p>The build fee reflects scope, mainly how many sources and how many page
+families. The operating fee is deliberately low, because the entire design goal
+is that it runs without us once it is up.</p>
+<p>Rates are set per engagement and we will quote yours in writing before any work
+starts. We do not publish a rate card here, because the honest number depends
+on your sources and your page families, and a public range would just be a
+number we walk back later.</p>
+<hr />
+<h2>Who this is for</h2>
+<ul>
+<li>Trade associations who want their members to have live industry data</li>
+<li>B2B and trade publishers who want a data property they cannot currently staff</li>
+<li>Companies who want to be the authority in their category, and understand that
+  publishing real numbers is how that is earned</li>
+</ul>
+<p>It is not for anyone who wants a marketing site with a chart on it.</p>
+<hr />
+<h2>Contact</h2>
+<p>northernmilemedia@gmail.com: say what data you have and what you want it to
+do. You will get an answer from a person and a straight view on whether it is
+worth building.</p>
+</body>
+</html>
