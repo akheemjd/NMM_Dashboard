@@ -53,15 +53,26 @@ PROVINCE_NAMES = {
     "YT": "Yukon",
 }
 
+# Short forms for axis labels. Charts have limited width, and Canadian
+# truckers read postal abbreviations instantly. "Prince Edward Island" and
+# "Northwest Territories" in particular blow out the label gutter.
+PROVINCE_SHORT = {
+    "AB": "Alberta", "BC": "BC", "MB": "Manitoba", "NB": "New Brunswick",
+    "NL": "Newfoundland", "NS": "Nova Scotia", "NT": "NWT", "NU": "Nunavut",
+    "ON": "Ontario", "PE": "PEI", "QC": "Quebec", "SK": "Saskatchewan",
+    "YT": "Yukon",
+}
+
 INDEX_PROVINCES = ["AB", "BC", "MB", "NB", "NL", "NS", "ON", "PE", "QC", "SK"]
 
 
-def province_prices(fuel):
+def province_prices(fuel, short=True):
     """[(display_name, price)] for every province that has a price."""
+    names = PROVINCE_SHORT if short else PROVINCE_NAMES
     out = []
     for code, info in (fuel.get("provinces") or {}).items():
         if isinstance(info, dict) and info.get("diesel") is not None:
-            out.append((PROVINCE_NAMES.get(code, code), float(info["diesel"])))
+            out.append((names.get(code, code), float(info["diesel"])))
     return out
 
 

@@ -188,6 +188,28 @@ def slugify(text):
     return s.strip("-")[:180]
 
 
+def markdown_to_html(md):
+    """Convert markdown to HTML for the Ghost Admin API.
+
+    CRITICAL: Ghost's Admin API does NOT accept a `markdown` field. It accepts
+    html, mobiledoc, or lexical only. Sending `markdown` does not error — Ghost
+    quietly stores an EMPTY body and returns 201, so the post publishes with a
+    title and no content. `?source=markdown` is not a valid value either (422).
+
+    So: convert to HTML here and post it as `html` with source=html. Raw HTML
+    blocks pass through untouched, which is what lets the figures carry
+    responsive srcset markup.
+    """
+    import markdown as _md
+    return _md.markdown(md, extensions=[
+        "tables",
+        "fenced_code",
+        "sane_lists",
+        "attr_list",
+        "md_in_html",
+    ])
+
+
 def find_post_by_slug(slug):
     """Return an existing post dict for this slug, or None."""
     try:
@@ -215,9 +237,12 @@ def create_or_update_post(title, markdown, options=None):
     )
 
     # Ghost expects tag_list as a list of names (it creates missing tags itself)
+    # Ghost takes HTML, not markdown. Convert here, or the body publishes empty.
+    html_body = markdown_to_html(markdown)
+
     body = {
         "title": title,
-        "markdown": markdown,
+        "html": html_body,
         "slug": slug,
         "status": status,
         "visibility": options.get("visibility", "public"),
@@ -453,11 +478,43 @@ def load_visual_manifest(topic_id):
         return None
 
 
-def substitute_figures(markdown, manifest):
-    """Replace {{figure:name}} placeholders with real markdown images.
 
-    Returns (text, unresolved_names). Unresolved placeholders are stripped
-    rather than shipped literally.
+
+def ghost_variant(url, width=720, fmt="webp"):
+    """Point a Ghost asset URL at a resized/transcoded variant.
+
+    Ghost serves /content/images/size/w720/format/webp/<path> for any uploaded
+    image, so one master upload covers every display size.
+
+    Why 720px WebP as a single src rather than a srcset:
+
+    - Desktop post content is ~720px, so it renders 1:1.
+    - A phone shows it at ~343px, which needs ~686px for a retina screen, so
+      720px is still exactly sharp.
+    - Ghost does NOT reliably preserve a hand-written srcset on a raw <img>:
+      it either strips it or rewrites it by prepending its own transform to an
+      already-transformed URL, producing /size/w600/size/w720/format/webp/.
+      It does preserve a transformed src untouched.
+
+    So one well-chosen src beats fighting the platform's rewriting.
+    """
+    marker = "/content/images/"
+    if marker not in url:
+        return url
+    prefix, _, tail = url.partition(marker)
+    # Strip any transform the URL already carries so we never double up.
+    tail = re.sub(r"^(size/w\d+/)|(format/\w+/)+", "", tail)
+    return f"{prefix}{marker}size/w{width}/format/{fmt}/{tail}"
+
+
+def substitute_figures(markdown, manifest):
+    """Replace {{figure:name}} placeholders with image markup.
+
+    Returns (text, unresolved_names).
+
+    Emits a plain <img> whose src already points at a correctly sized WebP
+    variant. Ghost wraps it in its own kg-image-card and keeps the transform.
+    Unresolved placeholders are stripped rather than shipped literally.
     """
     if not manifest:
         return markdown, []
@@ -470,11 +527,13 @@ def substitute_figures(markdown, manifest):
         if not fig or not fig.get("url"):
             unresolved.append(name)
             return ""
+
         caption = fig.get("caption", "")
-        alt = caption or name.replace("-", " ")
-        block = f"![{alt}]({fig['url']})"
+        alt = (caption or name.replace("-", " ")).replace('"', "'")
+        src = ghost_variant(fig["url"], width=720, fmt="webp")
+        block = f'<img src="{src}" alt="{alt}">'
         if caption:
-            block += f"\n*{caption}*"
+            block += f'\n<p class="fig-caption"><em>{caption}</em></p>'
         return block
 
     return re.sub(r"\{\{figure:([a-zA-Z0-9_-]+)\}\}", _repl, markdown), unresolved
