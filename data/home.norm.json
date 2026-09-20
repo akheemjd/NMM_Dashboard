@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-20 20:31",
-  "updated_iso": "2026-09-20T20:31:50+00:00",
-  "build_version": "1789936310",
+  "updated_at": "2026-09-20 20:50",
+  "updated_iso": "2026-09-20T20:50:31+00:00",
+  "build_version": "1789937431",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -34,6 +34,7 @@
       {
         "code": "AB",
         "name": "Alberta",
+        "slug": "alberta",
         "price": "243.1",
         "pct": 0.0,
         "change": "+0.0",
@@ -45,6 +46,7 @@
       {
         "code": "SK",
         "name": "Saskatchewan",
+        "slug": "saskatchewan",
         "price": "244.1",
         "pct": 1.9,
         "change": "+0.0",
@@ -56,6 +58,7 @@
       {
         "code": "MB",
         "name": "Manitoba",
+        "slug": "manitoba",
         "price": "247.3",
         "pct": 7.9,
         "change": "+0.0",
@@ -67,6 +70,7 @@
       {
         "code": "ON",
         "name": "Ontario",
+        "slug": "ontario",
         "price": "261.0",
         "pct": 33.6,
         "change": "+0.0",
@@ -78,6 +82,7 @@
       {
         "code": "NS",
         "name": "Nova Scotia",
+        "slug": "nova-scotia",
         "price": "270.0",
         "pct": 50.6,
         "change": "+0.0",
@@ -89,6 +94,7 @@
       {
         "code": "PE",
         "name": "PEI",
+        "slug": "prince-edward-island",
         "price": "273.0",
         "pct": 56.2,
         "change": "+0.0",
@@ -103,6 +109,7 @@
     {
       "code": "AB",
       "name": "Alberta",
+      "slug": "alberta",
       "price": "243.1",
       "pct": 0.0,
       "change": "+0.0",
@@ -114,6 +121,7 @@
     {
       "code": "SK",
       "name": "Saskatchewan",
+      "slug": "saskatchewan",
       "price": "244.1",
       "pct": 1.9,
       "change": "+0.0",
@@ -125,6 +133,7 @@
     {
       "code": "MB",
       "name": "Manitoba",
+      "slug": "manitoba",
       "price": "247.3",
       "pct": 7.9,
       "change": "+0.0",
@@ -136,6 +145,7 @@
     {
       "code": "ON",
       "name": "Ontario",
+      "slug": "ontario",
       "price": "261.0",
       "pct": 33.6,
       "change": "+0.0",
@@ -147,6 +157,7 @@
     {
       "code": "NS",
       "name": "Nova Scotia",
+      "slug": "nova-scotia",
       "price": "270.0",
       "pct": 50.6,
       "change": "+0.0",
@@ -158,6 +169,7 @@
     {
       "code": "PE",
       "name": "PEI",
+      "slug": "prince-edward-island",
       "price": "273.0",
       "pct": 56.2,
       "change": "+0.0",
@@ -169,6 +181,7 @@
     {
       "code": "NB",
       "name": "New Brunswick",
+      "slug": "new-brunswick",
       "price": "276.3",
       "pct": 62.4,
       "change": "+0.0",
@@ -180,6 +193,7 @@
     {
       "code": "BC",
       "name": "British Columbia",
+      "slug": "british-columbia",
       "price": "277.7",
       "pct": 65.0,
       "change": "+0.0",
@@ -191,6 +205,7 @@
     {
       "code": "NL",
       "name": "Newfoundland",
+      "slug": "newfoundland-and-labrador",
       "price": "282.3",
       "pct": 73.7,
       "change": "+0.0",
@@ -202,6 +217,7 @@
     {
       "code": "QC",
       "name": "Quebec",
+      "slug": "quebec",
       "price": "296.3",
       "pct": 100.0,
       "change": "+0.0",
@@ -238,13 +254,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 400, HWY 404",
+    "status_line": "HWY 401, QEW, HWY 400, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1\u2026",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at HWY 409, Toronto. Left shoulder and 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -287,7 +303,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -297,7 +313,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +323,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT"
+      "captured_at": "16:31 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:20 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
