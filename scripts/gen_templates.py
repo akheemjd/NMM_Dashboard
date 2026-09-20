@@ -155,7 +155,7 @@ def rail():
     <div class="rail">
       <div class="cap"><h3>The spread</h3><span class="sp">{{fuel.low_code}} <b>{{fuel.low}}</b> → {{fuel.high_code}} <b>{{fuel.high}}</b> · {{fuel.spread}}¢/L</span></div>
       <div class="mean-wrap"><span class="mean" style="left:{{fuel.national_pct}}%"><span class="lab">Index {{fuel.national_diesel}}</span></span></div>
-      <!--LOOP:provinces--><a class="row" href="/fuel-prices/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
+      <!--LOOP:provinces--><a class="row" href="/diesel-prices/{{slug}}/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
     </div>
 """
 
@@ -1119,7 +1119,7 @@ prov_body = (
   <section class="sec">
     <div class="lead"><h2>{{name}} survey cities</h2><p>¢/L · distance from the provincial mean</p></div>
     <div class="rows">
-    <!--LOOP:cities--><div class="r"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></div><!--/LOOP:cities-->
+    <!--LOOP:cities--><a class="r" href="/diesel-prices/{{slug}}/{{city_slug}}/"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></a><!--/LOOP:cities-->
     </div>
     <p class="note">Every price is an NRCan survey observation from the print dated {{print_date}}. The provincial figure is the unweighted mean of these {{city_count}} cities, the same figure that enters the <a href="/methodology/nmdi/">Northern Mile Diesel Index</a>. Prices include all federal and provincial fuel, carbon, and sales taxes.</p>
   </section>
@@ -1167,7 +1167,7 @@ city_body = (
   <section class="sec">
     <div class="lead"><h2>{{prov_name}} survey cities</h2><p>¢/L · distance from the provincial mean</p></div>
     <div class="rows">
-    <!--LOOP:siblings--><div class="r"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></div><!--/LOOP:siblings-->
+    <!--LOOP:siblings--><a class="r" href="/diesel-prices/{{prov_slug}}/{{city_slug}}/"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></a><!--/LOOP:siblings-->
     </div>
     <p class="note">Every price is an NRCan survey observation from the print dated {{print_date}}. The provincial figure is the unweighted mean of its survey cities, the same figure that enters the <a href="/methodology/nmdi/">Northern Mile Diesel Index</a>.</p>
   </section>
@@ -1180,6 +1180,50 @@ city_body = (
 with open(os.path.join(OUT, "city.template.html"), "w") as f:
     f.write(city_body)
 print(f"  city                      {len(city_body):6,} bytes")
+
+# One template, rendered per province by build_city_pages.py.
+#
+# Every one of the ten provinces needs this page, not just the two with
+# editorial prose. It is the ONLY hub that links a province's survey cities.
+# Before it existed, /diesel-prices/quebec/ was a 404 and its cities had no
+# inbound link from anywhere on the site, so nothing could crawl to them.
+PROVINCE_INDEX_LD = ('{"@context":"https://***@graph":[' + crumb("{{prov_name}} diesel prices", "/diesel-prices/{{prov_slug}}/") + ','
+ '{"@type":"Dataset","name":"{{prov_name}} Diesel Prices","description":"Retail diesel prices across {{city_count}} {{prov_name}} survey cities, from the Natural Resources Canada weekly retail survey.","url":"' + BASE + '/diesel-prices/{{prov_slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"{{prov_name}}, Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"{{updated_iso}}"}]}')
+
+province_index_body = (
+ head("{{prov_name}} Diesel Prices — {{prov_price}}¢/L | Northern Mile",
+      "Diesel prices across {{city_count}} {{prov_name}} survey cities, {{prov_price}}¢/L provincial average, {{vs_national_abs}}¢ {{vs_national_word}} the national index. NRCan weekly survey, print {{print_date}}.",
+      "/diesel-prices/{{prov_slug}}/", "og-fuel.jpg", PROVINCE_INDEX_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">{{prov_name}} · {{city_count}} survey cities</span>
+    <h1>{{prov_name}} diesel prices</h1>
+    <div class="figure"><span class="n">{{prov_price}}</span><span class="u">¢/L</span><span class="d {{vs_national_class}}">{{vs_national}} vs national</span></div>
+    <div class="meta"><span>NRCan survey print <b>{{print_date}}</b></span><span>National index <b>{{national}}</b>¢/L</span></div>
+    <p class="stand">The {{prov_name}} average is the unweighted mean of its {{city_count}} survey cities. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
+    <div class="cite">
+      <div class="cl">Citing this figure</div>
+      <q id="citation">{{prov_name}} diesel: {{prov_price}}¢/L provincial average across {{city_count}} survey cities, NRCan weekly survey print {{print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/diesel-prices/{{prov_slug}}/</q>
+      <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Every {{prov_name}} survey city</h2><p>¢/L · distance from the provincial mean</p></div>
+    <div class="rows">
+    <!--LOOP:cities--><a class="r" href="/diesel-prices/{{prov_slug}}/{{city_slug}}/"><span class="k">{{city}}</span><span class="v">{{price}} &nbsp; <span class="{{vs_class}}">{{vs_prov}}</span></span></a><!--/LOOP:cities-->
+    </div>
+    <p class="note">Every price is an NRCan survey observation from the print dated {{print_date}}. This page rebuilds every 30 minutes, but the survey figure holds until the next weekly print.</p>
+  </section>
+''' + subscribe("{{prov_name}} diesel, every week",
+   "Where {{prov_name}} and the rest of Canada moved, and what it means for cost per kilometre. One email on Wednesday mornings.")
+ + '''
+  <p class="note"><a href="/fuel-prices/">← All ten provinces</a> · <a href="/methodology/nmdi/">Methodology</a></p>
+''' + foot())
+
+with open(os.path.join(OUT, "province-index.template.html"), "w") as f:
+    f.write(province_index_body)
+print(f"  province-index            {len(province_index_body):6,} bytes")
 
 # ═══ US diesel pages ════════════════════════════════════════════════════
 # One overview template + one per-PADD template, rendered by build_us_pages.py.

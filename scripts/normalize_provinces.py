@@ -16,6 +16,7 @@ Design rules, consistent with the rest of the pipeline:
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 
@@ -83,6 +84,15 @@ def signed(v):
     return f"{v:+.1f}"
 
 
+def _slugify(s):
+    """City URL slug. Deliberately identical to build_city_pages.slugify.
+
+    Both sides must produce the same string or the province page links to a
+    404. If one changes, change the other.
+    """
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
 def build_province(code, city_prices, national, print_date, build_version):
     """Assemble one province's render block."""
     name = PROVINCE_NAMES[code]
@@ -110,6 +120,9 @@ def build_province(code, city_prices, national, print_date, build_version):
         rows.append(
             {
                 "city": city,
+                # MUST stay identical to build_city_pages.slugify(_norm(city)),
+                # or the link and the page it points at drift apart.
+                "city_slug": _slugify(_norm(city)),
                 "price": f"{price:.1f}",
                 "vs_prov": signed(delta),
                 # Cost frame: above the provincial mean is the expensive side.

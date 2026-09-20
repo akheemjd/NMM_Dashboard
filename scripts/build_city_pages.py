@@ -84,6 +84,9 @@ def main():
     with open(os.path.join(TMPL, "city.template.html")) as f:
         template = f.read()
 
+    with open(os.path.join(TMPL, "province-index.template.html")) as f:
+        prov_template = f.read()
+
     # Group by province; keep only cities that map to a real index province.
     by_prov = defaultdict(list)
     for city, price in prices.items():
@@ -94,6 +97,7 @@ def main():
 
     seen_slugs = {}
     built = []
+    hubs = []
 
     for code in sorted(by_prov):
         cities = sorted(by_prov[code], key=lambda cv: cv[1])  # cheapest first
@@ -108,6 +112,9 @@ def main():
             vs_prov = round(price - prov_price, 1)
             siblings.append({
                 "city": city,
+                # Same slug function used for the directory below, so the link
+                # and the page it points at cannot drift apart.
+                "city_slug": slugify(_norm(city)),
                 "price": f"{price:.1f}",
                 "vs_prov": (f"+{vs_prov:.1f}" if vs_prov >= 0 else f"{vs_prov:.1f}"),
                 "vs_class": "lo" if vs_prov < 0 else "hi",
@@ -158,7 +165,45 @@ def main():
                 f.write(html)
             built.append((prov_slug, slug))
 
+        # The province hub, for provinces with no hand-written in-depth page.
+        #
+        # This is the only thing that links a province's survey cities. Without
+        # it /diesel-prices/<prov>/ is a 404 and every city beneath it is
+        # unreachable by any crawler — which is exactly why 69 city pages sat
+        # unindexed. ON and AB keep their editorial page (build_provinces.py
+        # writes it), and that page now links its cities too.
+        if code not in DEDICATED_PAGE_PROVINCES:
+            pv_nat = round(prov_price - national, 1)
+            prov_data = {
+                "prov_name": prov_name,
+                "prov_slug": prov_slug,
+                "prov_price": f"{prov_price:.1f}",
+                "city_count": n,
+                "national": f"{national:.1f}",
+                "print_date": print_date,
+                "updated_at": updated_at,
+                "updated_iso": updated_iso,
+                "build_version": build_version,
+                "vs_national": (f"+{pv_nat:.1f}" if pv_nat >= 0 else f"{pv_nat:.1f}"),
+                "vs_national_abs": f"{abs(pv_nat):.1f}",
+                "vs_national_word": "below" if pv_nat < 0 else "above",
+                "vs_national_class": "lo" if pv_nat < 0 else "hi",
+                "cities": siblings,
+            }
+            phtml = fill(prov_template, prov_data)
+            pleft = [t for t in ("{{", "<!--LOOP:", "<!--IF:") if t in phtml]
+            if pleft:
+                raise ValueError(
+                    f"{prov_slug}: unresolved template markup remains: {pleft}"
+                )
+            pdir = os.path.join(DOCS, "diesel-prices", prov_slug)
+            os.makedirs(pdir, exist_ok=True)
+            with open(os.path.join(pdir, "index.html"), "w") as f:
+                f.write(phtml)
+            hubs.append(prov_slug)
+
     print(f"Built {len(built)} city pages across {len(by_prov)} provinces")
+    print(f"Built {len(hubs)} province hubs: {', '.join(hubs)}")
     for prov_slug, slug in built[:10]:
         print(f"  /diesel-prices/{prov_slug}/{slug}/")
     if len(built) > 10:

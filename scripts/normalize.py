@@ -2,6 +2,11 @@
 """Normalize collector data into exact template-fillable format (v3 — matches kit data shapes)."""
 import json, os, re, time
 from datetime import datetime
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+if HERE not in __import__("sys").path:
+    __import__("sys").path.insert(0, HERE)
+from normalize_provinces import SLUGS as PROVINCE_SLUGS  # noqa: E402
 from history import snapshot, delta, average, span_days
 
 def clip(text, limit=110):
@@ -148,6 +153,12 @@ for i, (code, price) in enumerate(d_sorted):
     provinces_data.append({
         "code": code,
         "name": names[code],
+        # Slug of this province's page under /diesel-prices/. Added so the
+        # province table can link to the province instead of to /fuel-prices/
+        # (its own page). Ten rows all pointing at /fuel-prices/ left eight
+        # provinces with no inbound link at all, and every city page beneath
+        # them unreachable.
+        "slug": PROVINCE_SLUGS.get(code, ""),
         "price": f"{price:.1f}",
         "pct": _pct(price),
         "change": _fmt_delta(delta("diesel", code, 7)),
