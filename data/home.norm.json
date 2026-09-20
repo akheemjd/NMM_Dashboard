@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-20 17:42",
-  "updated_iso": "2026-09-20T17:42:59+00:00",
-  "build_version": "1789926179",
+  "updated_at": "2026-09-20 18:13",
+  "updated_iso": "2026-09-20T18:13:46+00:00",
+  "build_version": "1789928026",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "9 min"
   },
   "fuel": {
     "national_diesel": "267.1",
@@ -240,11 +240,11 @@
     "none": false,
     "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 427, HWY 17, HWY 61",
+    "status_line": "QEW, HWY 427, HWY 17, HWY 61",
     "incidents": [
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Collision on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. Left\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at LAKE STREET, St. Catharines. 1 left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -267,7 +267,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:30 EDT"
+      "captured_at": "13:49 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -283,21 +283,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "9 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:20 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "2 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:20 EDT"
+      "captured_at": "14:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -307,7 +307,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:08 EDT"
+      "captured_at": "13:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -327,7 +327,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 PDT"
+      "captured_at": "11:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -337,7 +337,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 CDT"
+      "captured_at": "12:38 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -393,8 +393,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "2 of 9 crossings slow",
-      "value": "2/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
