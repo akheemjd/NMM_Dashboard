@@ -21,3 +21,6 @@ templates/*.template.html
 .env
 .env.*
 !.env.example
+
+# Generated visuals (charts, hero cards) — rebuilt on demand, not source
+visuals/

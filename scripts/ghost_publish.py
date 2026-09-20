@@ -341,14 +341,159 @@ def pretty_url(url):
     return f"{GHOST_SITE}{url}"
 
 
+def upload_image(path, purpose="image"):
+    """Upload a local image file to Ghost and return its public URL.
+
+    Ghost stores uploads under /content/images/<year>/<month>/ and returns
+    the absolute URL in the response. Requires multipart/form-data, so this
+    uses `requests` rather than the JSON `api_call` helper.
+
+    Args:
+        path: local file path to the image
+        purpose: Ghost's purpose hint — "image", "profile_image", or "icon"
+
+    Returns:
+        dict with success, url, and the raw response
+    """
+    import requests
+
+    _load_dotenv()
+    if not GHOST_SITE:
+        raise EnvironmentError("NMM_GHOST_SITE_URL is not set")
+    if not GHOST_ADMIN_KEY:
+        raise EnvironmentError("NMM_GHOST_ADMIN_API_KEY is not set")
+
+    path = Path(path)
+    if not path.exists():
+        raise FileNotFoundError(f"No such image: {path}")
+
+    ext = path.suffix.lower().lstrip(".") or "png"
+    mime = {
+        "png": "image/png",
+        "jpg": "image/jpeg",
+        "jpeg": "image/jpeg",
+        "gif": "image/gif",
+        "webp": "image/webp",
+        "svg": "image/svg+xml",
+    }.get(ext, "application/octet-stream")
+
+    url = f"{GHOST_SITE}/ghost/api/admin/images/upload/"
+    headers = {"Authorization": f"Ghost {make_jwt()}"}
+
+    last_err = None
+    for attempt in range(3):
+        headers["Authorization"] = f"Ghost {make_jwt()}"  # fresh token
+        try:
+            with open(path, "rb") as fh:
+                resp = requests.post(
+                    url,
+                    headers=headers,
+                    files={"file": (path.name, fh, mime)},
+                    data={"purpose": purpose, "ref": path.stem},
+                    timeout=60,
+                )
+        except Exception as e:
+            last_err = str(e)
+            time.sleep(2 ** attempt)
+            continue
+
+        if resp.status_code in (200, 201):
+            try:
+                body = resp.json()
+            except ValueError:
+                return {"success": False, "error": f"non-JSON response: {resp.text[:200]}"}
+            images = body.get("images") or []
+            if images:
+                return {"success": True, "url": images[0].get("url"),
+                        "raw": images[0]}
+            return {"success": False, "error": f"no images in response: {str(body)[:200]}"}
+
+        if resp.status_code in (401, 403):
+            raise EnvironmentError(
+                f"Ghost auth failed ({resp.status_code}) on image upload: {resp.text[:200]}"
+            )
+
+        last_err = f"HTTP {resp.status_code}: {resp.text[:200]}"
+        if resp.status_code >= 500:
+            time.sleep(2 ** attempt)
+
+    return {"success": False, "error": last_err}
+
+
+def run_voice_lint(path):
+    """Run the deterministic AI-tell scanner on a draft.
+
+    Returns (ok, output). An LLM cannot see its own tells reliably, so this
+    is a hard gate rather than a suggestion.
+    """
+    import subprocess
+    script = Path(__file__).resolve().parent / "voice_lint.py"
+    if not script.exists():
+        return True, "voice_lint.py not found — gate skipped"
+    try:
+        p = subprocess.run(
+            [sys.executable, str(script), str(path)],
+            capture_output=True, text=True, timeout=60,
+        )
+    except Exception as e:
+        return False, f"voice lint could not run: {e}"
+    out = (p.stdout or "") + (p.stderr or "")
+    return p.returncode == 0, out.strip()
+
+
+def load_visual_manifest(topic_id):
+    """Load visuals/<topic_id>/manifest.json if the composer produced one."""
+    mpath = Path(__file__).resolve().parent.parent / "visuals" / topic_id / "manifest.json"
+    if not mpath.exists():
+        return None
+    try:
+        with open(mpath, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def substitute_figures(markdown, manifest):
+    """Replace {{figure:name}} placeholders with real markdown images.
+
+    Returns (text, unresolved_names). Unresolved placeholders are stripped
+    rather than shipped literally.
+    """
+    if not manifest:
+        return markdown, []
+    figs = {f["name"]: f for f in manifest.get("figures", [])}
+    unresolved = []
+
+    def _repl(m):
+        name = m.group(1).strip()
+        fig = figs.get(name)
+        if not fig or not fig.get("url"):
+            unresolved.append(name)
+            return ""
+        caption = fig.get("caption", "")
+        alt = caption or name.replace("-", " ")
+        block = f"![{alt}]({fig['url']})"
+        if caption:
+            block += f"\n*{caption}*"
+        return block
+
+    return re.sub(r"\{\{figure:([a-zA-Z0-9_-]+)\}\}", _repl, markdown), unresolved
+
+
 def main():
     import argparse
 
     ap = argparse.ArgumentParser(description="Publish NMM blog posts to Ghost")
     ap.add_argument("file", nargs="?", help="Markdown file (default: newest in content/blog-posts/)")
-    ap.add_argument("--status", choices=["published", "draft", "scheduled"], default="published")
-    ap.add_argument("--dry-run", action="store_true", help="Validate only, no API write")
+    ap.add_argument("--status", choices=["published", "draft", "scheduled"],
+                   default="published", help="Post status (default: published)")
+    ap.add_argument("--dry-run", action="store_true",
+                   help="Validate content without sending to Ghost")
     ap.add_argument("--check", action="store_true", help="Test credentials and list recent posts")
+    ap.add_argument("--skip-lint", action="store_true",
+                   help="Bypass the voice-lint gate (only for re-publishing an already-linted post)")
+    ap.add_argument("--allow-missing-visuals", action="store_true",
+                   help="Publish even if figure placeholders did not resolve")
     args = ap.parse_args()
 
     _load_dotenv()
@@ -402,6 +547,49 @@ def main():
 
     if words < 200:
         print(f"  WARN: body is only {words} words — looks like a stub")
+
+    # ── GATE 1: voice lint ──────────────────────────────────────
+    # Mechanical AI tells are not a style preference here; they are the
+    # difference between a blog that reads like a person and one that does not.
+    if not args.skip_lint:
+        ok, out = run_voice_lint(target)
+        if not ok:
+            print("  VOICE LINT FAILED — refusing to publish")
+            for line in out.splitlines():
+                print(f"    {line}")
+            return 1
+        print(f"  voice lint: PASS{' (' + out.splitlines()[-1] + ')' if out else ''}")
+    else:
+        print("  voice lint: SKIPPED (--skip-lint)")
+
+    # ── GATE 2: visuals ────────────────────────────────────────
+    # A post with unresolved figure placeholders must not ship: the reader
+    # would see raw {{figure:...}} markup.
+    manifest = load_visual_manifest(target.stem)
+    placeholder_count = len(re.findall(r"\{\{figure:[a-zA-Z0-9_-]+\}\}", body))
+
+    if manifest:
+        figs = manifest.get("figures", [])
+        hero = manifest.get("hero") or {}
+        uploaded = sum(1 for f in figs if f.get("url"))
+        print(f"  visuals: manifest found — {uploaded}/{len(figs)} figures uploaded")
+        if hero.get("url") and not opts.get("feature_image"):
+            opts["feature_image"] = hero["url"]
+            print(f"  feature image set from hero card")
+        body, unresolved = substitute_figures(body, manifest)
+        if unresolved:
+            print(f"  VISUALS: unresolved placeholders {unresolved} — stripping")
+        if placeholder_count and uploaded == 0 and not args.allow_missing_visuals:
+            print("  VISUALS FAILED — placeholders present but nothing uploaded")
+            return 1
+    elif placeholder_count:
+        print(f"  VISUALS FAILED — {placeholder_count} placeholder(s) but no manifest at "
+              f"visuals/{target.stem}/manifest.json")
+        print("  Run scripts/compose_post_visuals.py for this topic first.")
+        if not args.allow_missing_visuals:
+            return 1
+    else:
+        print("  visuals: none referenced")
 
     if args.dry_run:
         print("  DRY RUN — no API call made")
