@@ -188,8 +188,16 @@ def set_theme():
         "axes.spines.top": False,
         "axes.spines.right": False,
         "axes.spines.left": False,
-        "axes.spines.bottom": True,
-        "axes.linewidth": 1.0,
+        "axes.spines.bottom": False,
+        "axes.linewidth": 0.0,
+        # No tick marks anywhere. They rendered as stray hyphens after
+        # category names, which read as punctuation rather than axes.
+        "xtick.major.size": 0,
+        "ytick.major.size": 0,
+        "xtick.minor.size": 0,
+        "ytick.minor.size": 0,
+        "xtick.major.pad": 7,
+        "ytick.major.pad": 9,
         "lines.linewidth": 2.4,
         "lines.solid_capstyle": "round",
         "legend.frameon": False,
@@ -226,9 +234,15 @@ def _fit_fig_text(fig, text, x, y, font_fn, start_size, min_size=8,
 
 
 def _figure(title=None, subtitle=None, source=None, figsize=None):
-    """Create a styled figure. Title/subtitle/source are positioned INSIDE the
-    figure bounds so the saved PNG is exactly figsize x DPI, which keeps the
-    text-to-width ratio (and therefore mobile legibility) predictable.
+    """Create a styled figure.
+
+    Title, subtitle, and source are positioned INSIDE the figure bounds so the
+    saved PNG is exactly figsize x DPI, which keeps the text-to-width ratio
+    (and therefore mobile legibility) predictable.
+
+    Their vertical positions are measured from the rendered text rather than
+    hard-coded as fractions. Fixed fractions collided: on a short canvas the
+    title's own height exceeded the gap to the subtitle, so the two overlapped.
 
     Type sizes are tuned for the ~5.2in canvas: roughly 4% of canvas width for
     body labels, which lands near 13px when a phone scales the image to a
@@ -236,27 +250,69 @@ def _figure(title=None, subtitle=None, source=None, figsize=None):
     """
     set_theme()
     fig, ax = plt.subplots(figsize=figsize or FIGSIZE)
-    fig.subplots_adjust(top=0.855, bottom=0.115, left=0.02, right=0.98)
+    fh_px = fig.get_size_inches()[1] * fig.dpi
 
+    def _draw(text, y_top, font_fn, start, floor, color, gap_px):
+        """Draw text with its top at y_top; return the next y below it."""
+        t = _fit_fig_text(fig, text, 0.0, y_top, font_fn, start,
+                          min_size=floor, color=color, va="top")
+        if t is None:
+            return y_top
+        fig.canvas.draw()
+        bb = t.get_window_extent(renderer=fig.canvas.get_renderer())
+        return y_top - (bb.height + gap_px) / fh_px
+
+    y = 0.988
     if title:
-        _fit_fig_text(fig, title, 0.0, 0.985,
-                      lambda s: display_font(s, weight=600), 19,
-                      min_size=12, color=INK)
+        y = _draw(title, y, lambda s: display_font(s, weight=600),
+                  19, 12, INK, gap_px=5)
     if subtitle:
-        _fit_fig_text(fig, subtitle, 0.0, 0.925,
-                      lambda s: body_font(s, weight=400), 13.5,
-                      min_size=9.5, color=MUTED)
+        y = _draw(subtitle, y, lambda s: body_font(s, weight=400),
+                  13.5, 9.5, MUTED, gap_px=14)
+
     if source:
         _fit_fig_text(fig, f"Source: {source}", 0.0, 0.015,
                       lambda s: body_font(s, weight=400), 12,
                       min_size=8.5, color=MUTED, va="bottom")
 
+    # Leave a clear band under the heading block so the plot never runs into it.
+    fig.subplots_adjust(top=min(0.855, y), bottom=0.115,
+                        left=0.02, right=0.98)
     return fig, ax
 
 
 def _xgrid(ax, axis="x"):
     ax.grid(axis=axis, color=LINE, linewidth=0.9, zorder=0)
     ax.set_axisbelow(True)
+
+
+def _text_width_px(fig, s, fp):
+    """Width of a string in display pixels, without drawing it."""
+    from matplotlib.textpath import TextPath
+    if not s:
+        return 0.0
+    tp = TextPath((0, 0), s, size=fp.get_size(), prop=fp)
+    return tp.get_extents().width * fig.dpi / 72.0
+
+
+def _wrap_items(fig, items, fp, joiner="   ", max_frac=0.99):
+    """Greedily pack strings into lines that fit the canvas width.
+
+    Measured rather than guessed, so legend rows can never run off the edge or
+    silently lose their last entry the way a single joined string did.
+    """
+    limit = fig.get_size_inches()[0] * fig.dpi * max_frac
+    lines, cur = [], ""
+    for it in items:
+        trial = it if not cur else f"{cur}{joiner}{it}"
+        if not cur or _text_width_px(fig, trial, fp) <= limit:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur = it
+    if cur:
+        lines.append(cur)
+    return lines
 
 
 def _finalize(fig, ax):
@@ -279,12 +335,24 @@ def _finalize(fig, ax):
         fh = fig.get_size_inches()[1] * fig.dpi
         ab = ax.get_window_extent()
 
-        # Left: widest y tick label, plus a gutter.
+        # Left: widest y tick label, plus its gap to the axis, plus a gutter.
+        #
+        # The tick pad matters and was the bug here: matplotlib offsets labels
+        # from the axis by ytick.major.pad, so ignoring it left the margin one
+        # digit short and 3-digit ticks rendered clipped ("300" showed as "00").
         widest = 0.0
         for t in ax.get_yticklabels():
             if t.get_text().strip():
                 widest = max(widest, t.get_window_extent(renderer=r).width)
-        left_px = widest + 14 if widest else 10
+
+        pad_px = float(plt.rcParams.get("ytick.major.pad", 3.5)) * fig.dpi / 72.0
+        left_px = widest + pad_px + 6 if widest else 10
+
+        # An axis label sits further left again, outside the ticks. Ignoring it
+        # pushed it off the canvas entirely.
+        if ax.get_ylabel().strip():
+            yl = ax.yaxis.label.get_window_extent(renderer=r)
+            left_px += yl.width + 8
 
         # Bottom: how far the x tick labels hang below the axes, plus room for
         # the source line (drawn at figure y=0.015).
@@ -360,64 +428,85 @@ def ranked_bars(labels, values, title=None, subtitle=None, source=None,
     if highlight and highlight in labs:
         colors[labs.index(highlight)] = AMBER
 
+    # Fix the x range up front so the rails, the dots, and the value column
+    # can all be laid out against it.
+    #
+    # Value labels go in a FIXED column at the right rather than trailing each
+    # dot. Trailing labels produced a ragged edge, collided with the marks they
+    # labelled, and were the thing that kept getting clipped at the canvas
+    # boundary. A fixed column aligns, never collides, and reads as a table.
+    x_lo = lo_v - span * 0.08
+    x_rail_end = hi_v + span * 0.05
+    x_label = hi_v + span * 0.11
+    ax.set_xlim(x_lo, hi_v + span * 0.44)
+
     if use_dots:
-        # Position encoding: a faint full-width guide per row, then the mark.
-        x_left = lo_v - span * 0.10
+        # One hairline rail per row, spanning the data range so it reads as
+        # structure rather than as a data mark. A rail that stopped at the dot
+        # looked like a strikethrough.
         for i, v in enumerate(vals):
-            ax.plot([x_left, v], [i, i], color=LINE, linewidth=1.4,
-                    zorder=2, solid_capstyle="round")
-            ax.plot([v], [i], "o", color=colors[i], markersize=8.5, zorder=4)
+            ax.plot([x_lo, x_rail_end], [i, i], color=LINE, linewidth=1.0,
+                    zorder=1, alpha=0.85, solid_capstyle="butt")
+            ax.plot([v], [i], "o", color=colors[i], markersize=9.5, zorder=4)
     else:
         # Length encoding. Only used when zero is a meaningful baseline.
         ax.barh(ypos, vals, color=colors, height=0.62, zorder=3)
+        _xgrid(ax, "x")
 
     ax.set_yticks(ypos)
-    ax.set_yticklabels(labs, fontproperties=body_font(15, weight=500))
+    ax.set_yticklabels(labs, fontproperties=body_font(14.5, weight=500))
+    ax.set_ylim(-0.85, len(labs) - 0.05)
 
-    _xgrid(ax, "x")
-    ax.spines["bottom"].set_visible(False)
-    ax.tick_params(axis="x", length=0)
     for lbl in ax.get_xticklabels():
-        lbl.set_fontproperties(data_font(13.5, weight=400))
+        lbl.set_fontproperties(data_font(12.5, weight=400))
 
-    # Direct value labels, so no legend is needed.
+    # Values in one clean column down the right-hand side.
     for i, v in enumerate(vals):
-        ax.text(v + span * 0.035, i, f"{v:,.1f}{unit}",
+        ax.text(x_label, i, f"{v:,.1f}{unit}",
                 va="center", ha="left",
-                fontproperties=data_font(14.5, weight=500),
-                color=INK2, zorder=5)
+                fontproperties=data_font(14, weight=500),
+                color=INK, zorder=5)
 
     if average is not None:
-        ax.axvline(average, color=INK2, linewidth=1.1, linestyle=(0, (4, 3)),
-                   zorder=3, alpha=0.75)
-        ax.text(average, -1.45, f"average {average:,.1f}{unit}",
-                fontproperties=body_font(12.5, weight=500),
-                color=INK2, va="top", ha="center", zorder=5)
+        ax.axvline(average, color=INK2, linewidth=1.0, linestyle=(0, (3, 3)),
+                   zorder=2, alpha=0.55)
+        # Label rides the top of the line with a paper-coloured pad, so it
+        # needs no collision maths and cannot orphan itself below the plot.
+        ax.text(average, len(labs) - 0.30, f"avg {average:,.1f}{unit}",
+                fontproperties=body_font(11.5, weight=500),
+                color=INK2, va="bottom", ha="center", zorder=6,
+                bbox=dict(boxstyle="round,pad=0.30", fc=PAPER, ec="none"))
 
-    # Generous right padding: the value label sits outside the final mark and
-    # must not be clipped at the canvas edge.
-    ax.set_xlim(lo_v - span * 0.16, hi_v + span * 0.34)
-    ax.set_ylim(-2.0, len(labs) - 0.3)
+    # Ticks span only the data range, so none land under the value column.
+    loc = MaxNLocator(nbins=5, steps=[1, 2, 2.5, 5, 10])
+    ticks = [t for t in loc.tick_values(lo_v, hi_v) if lo_v <= t <= hi_v]
+    if ticks:
+        ax.set_xticks(ticks)
 
-    # The value labels are drawn in data coordinates just past each mark. If
-    # the widest one would run past the axis limit, widen the limit to fit it
-    # rather than letting the canvas crop the number.
+    # Order matters: settle the axes geometry first, then widen for text.
+    # Measuring before _finalize read the old, wider axes; _finalize then
+    # shrank it for the category labels and pushed the value column off the
+    # canvas again.
+    _finalize(fig, ax)
+
     try:
         fig.canvas.draw()
         r = fig.canvas.get_renderer()
-        axw = ax.get_window_extent().width
+        abb = ax.get_window_extent()
         x0, x1 = ax.get_xlim()
-        px_per_unit = axw / (x1 - x0)
-        widest = max((t.get_window_extent(renderer=r).width
-                      for t in ax.texts), default=0)
-        needed = hi_v + span * 0.035 + (widest + 12) / px_per_unit
-        if needed > x1:
-            ax.set_xlim(x0, needed)
+        ppu = abb.width / ((x1 - x0) or 1)
+        over = 0.0
+        for t in ax.texts:
+            # Only the left-aligned value column can overflow here. The
+            # average caption is centred on its line, so it must not be
+            # allowed to trigger a pointless widening.
+            if t.get_text().strip() and t.get_ha() == "left":
+                over = max(over, t.get_window_extent(renderer=r).x1 - abb.x1)
+        if over > 0:
+            ax.set_xlim(x0, x1 + (over + 6) / ppu)
     except Exception:
         pass
 
-    ax.xaxis.set_major_locator(MaxNLocator(5))
-    _finalize(fig, ax)
     return fig
 
 
@@ -494,15 +583,50 @@ def trend_line(dates, values, title=None, subtitle=None, source=None,
 
     if annotate_last:
         ax.plot([xs[-1]], [ys[-1]], "o", color=SIGNAL, markersize=6, zorder=4)
-        ax.annotate(f"{ys[-1]:,.{decimals}f}{unit}",
-                    xy=(xs[-1], ys[-1]),
-                    xytext=(8, 0), textcoords="offset points",
-                    fontproperties=data_font(16, weight=600),
-                    color=INK, ha="left", va="center", zorder=5)
+        note = ax.annotate(f"{ys[-1]:,.{decimals}f}{unit}",
+                           xy=(xs[-1], ys[-1]),
+                           xytext=(9, 0), textcoords="offset points",
+                           fontproperties=data_font(16, weight=600),
+                           color=INK, ha="left", va="center", zorder=5)
 
     if label:
         ax.legend(loc="upper left", fontsize=13.5)
+
     _finalize(fig, ax)
+
+    # Widen for the end label only AFTER the geometry settles. The label is
+    # offset in PIXELS, so measuring before _finalize used the old axes width
+    # and the value still got clipped.
+    if annotate_last:
+        try:
+            fig.canvas.draw()
+            r = fig.canvas.get_renderer()
+            bb = note.get_window_extent(renderer=r)
+            abb = ax.get_window_extent()
+            over = bb.x1 - abb.x1
+            if over > 0:
+                x0, x1 = ax.get_xlim()
+                ppu = abb.width / ((x1 - x0) or 1)
+                ax.set_xlim(x0, x1 + (over + 6) / ppu)
+        except Exception:
+            pass
+
+    # Widening the limit can leave the date locator placing a tick past the
+    # final observation, labelling empty space. Drop the strays.
+    #
+    # Normalise through date2num: xs may hold datetimes while get_xticks()
+    # returns floats, and comparing the two directly raises. A bare except
+    # then swallowed it and the stray tick silently survived.
+    try:
+        last = float(mdates.date2num(max(xs)))
+        ticks = [t for t in ax.get_xticks() if float(t) <= last]
+        if len(ticks) >= 2:
+            ax.set_xticks(ticks)
+            ax.xaxis.set_major_formatter(
+                mdates.ConciseDateFormatter(mdates.FixedLocator(ticks)))
+    except Exception:
+        pass
+
     return fig
 
 
@@ -525,21 +649,35 @@ def dumbbell(labels, value_a, value_b, name_a="Before", name_b="Now",
     b_vals = [r[2] for r in rows]
     ypos = list(range(len(rows)))
 
-    fig, ax = _figure(title, subtitle, source)
+    # Explain the encoding in the subtitle instead of a legend. An in-plot
+    # legend sat on top of the lowest data row, and its key markers read as
+    # real data points sitting on the axis.
+    note = f"{name_a.lower()} in grey, {name_b.lower()} in green"
+    sub = f"{subtitle}  ·  {note}" if subtitle else note
+
+    fig, ax = _figure(title, sub, source)
 
     for y, a, b in zip(ypos, a_vals, b_vals):
-        ax.plot([a, b], [y, y], color=LINE, linewidth=2.6, zorder=2,
+        ax.plot([a, b], [y, y], color=LINE, linewidth=2.8, zorder=2,
                 solid_capstyle="round")
 
-    ax.scatter(a_vals, ypos, s=62, color=MUTED, zorder=4, label=name_a)
-    ax.scatter(b_vals, ypos, s=62, color=SIGNAL, zorder=4, label=name_b)
+    ax.scatter(a_vals, ypos, s=74, color=MUTED, zorder=4)
+    ax.scatter(b_vals, ypos, s=74, color=SIGNAL, zorder=4)
 
     ax.set_yticks(ypos)
-    ax.set_yticklabels(labs, fontsize=15)
+    ax.set_yticklabels(labs, fontproperties=body_font(14.5, weight=500))
+    ax.set_ylim(-0.65, len(rows) - 0.35)
+
+    # Breathing room at both ends so the furthest marker never sits on the
+    # canvas edge.
+    allv = a_vals + b_vals
+    lo_v, hi_v = min(allv), max(allv)
+    pad = (hi_v - lo_v) * 0.07 or 1.0
+    ax.set_xlim(lo_v - pad, hi_v + pad)
+
     _xgrid(ax, "x")
-    ax.tick_params(axis="both", length=0)
-    ax.spines["bottom"].set_visible(False)
-    ax.legend(loc="lower right", fontsize=13.5, ncol=2)
+    for lbl in ax.get_xticklabels():
+        lbl.set_fontproperties(data_font(12.5, weight=400))
     _finalize(fig, ax)
     return fig
 
@@ -586,7 +724,12 @@ def grouped_bars(categories, series, title=None, subtitle=None, source=None,
     if n < 2 or n > 3:
         return None
 
-    fig, ax = _figure(title, subtitle, source)
+    # Name the series in the subtitle rather than a legend. A legend anchored
+    # inside the plot landed on top of the bars and read as data labels.
+    note = " vs ".join(names)
+    sub = f"{subtitle}  ·  {note}" if subtitle else note
+
+    fig, ax = _figure(title, sub, source)
     x = np.arange(len(categories))
     width = 0.78 / n
     palette = [SIGNAL, AMBER, FOCUS]
@@ -594,14 +737,18 @@ def grouped_bars(categories, series, title=None, subtitle=None, source=None,
     for i, name in enumerate(names):
         vals = series[name]
         ax.bar(x + (i - (n - 1) / 2) * width, vals, width * 0.92,
-               label=name, color=palette[i], zorder=3)
+               color=palette[i], zorder=3)
+
+    # Headroom so the tallest bar is never flush with the top of the plot.
+    allv = [v for name in names for v in series[name] if v is not None]
+    ax.set_ylim(0, (max(allv) if allv else 1) * 1.12)
 
     ax.set_xticks(x)
-    ax.set_xticklabels([str(c) for c in categories], fontsize=13.5)
+    ax.set_xticklabels([str(c) for c in categories],
+                       fontproperties=body_font(14, weight=500))
     _xgrid(ax, "y")
-    ax.tick_params(axis="both", length=0)
-    ax.spines["bottom"].set_visible(False)
-    ax.legend(loc="upper left", fontsize=13.5, ncol=n)
+    for lbl in ax.get_yticklabels():
+        lbl.set_fontproperties(data_font(12.5, weight=400))
     _finalize(fig, ax)
     return fig
 
@@ -623,27 +770,38 @@ def share_bar(segments, title=None, subtitle=None, source=None, unit=""):
     fig, ax = _figure(title, subtitle, source)
     palette = [SIGNAL, AMBER, MUTED, FOCUS, SIGNAL2]
 
+    # Wrap the legend BEFORE drawing anything, so the space reserved below the
+    # bar matches what actually renders. A single joined string silently ran
+    # off the canvas and dropped its last entry entirely.
+    fp = body_font(12.5, weight=400)
+    items = [f"{label} ({value:,.1f}{unit})" for label, value in segs]
+    lines = _wrap_items(fig, items, fp)
+
+    fh_px = fig.get_size_inches()[1] * fig.dpi
+    line_h = (fp.get_size() * fig.dpi / 72.0) * 1.4 / fh_px
+    # Clear of the source line, which sits at figure y=0.015.
+    block_bottom = 0.098
+    block_top = block_bottom + len(lines) * line_h
+    fig.subplots_adjust(bottom=min(0.66, block_top + 0.05))
+
+    for i, ln in enumerate(reversed(lines)):
+        fig.text(0.0, block_bottom + i * line_h, ln,
+                 fontproperties=fp, color=INK2, ha="left", va="bottom")
+
     left = 0.0
     for i, (label, value) in enumerate(segs):
         pct = value / total * 100
-        ax.barh([0], [pct], left=left, height=0.42,
+        ax.barh([0], [pct], left=left, height=0.34,
                 color=palette[i % len(palette)], zorder=3)
         if pct > 7:
             ax.text(left + pct / 2, 0, f"{pct:.0f}%", ha="center", va="center",
-                    color="#FFFFFF", fontsize=15, fontweight="600", zorder=4)
+                    color="#FFFFFF",
+                    fontproperties=data_font(14, weight=600), zorder=4)
         left += pct
 
     ax.set_xlim(0, 100)
-    ax.set_ylim(-0.6, 0.9)
+    ax.set_ylim(-1, 1)
     ax.axis("off")
-
-    # Direct labels below the bar rather than a legend. Placed inside the
-    # figure bounds, since the canvas is saved without a tight bbox.
-    handles = []
-    for label, value in segs:
-        handles.append(f"{label} ({value:,.1f}{unit})")
-    fig.text(0.0, 0.06, "   ".join(handles), fontsize=13, color=INK2,
-             ha="left", va="bottom")
     return fig
 
 
