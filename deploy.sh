@@ -89,9 +89,16 @@ echo "=== Coverage validation ==="
 $PYTHON scripts/coverage.py validate || { echo "COVERAGE VALIDATION FAILED"; exit 1; }
 
 echo "=== Source-tree guard ==="
-if [ -n "$(git status --porcelain -- scripts/ templates/ assets/ config/ '*.yml' '*.sh' 2>/dev/null)" ]; then
+# Exclude editor/tool scratch files. Hermes writes .hermes-tmp.* into the
+# working directory during file operations, and an interrupted write leaves one
+# behind, which then blocks every deploy until someone notices. Those are not
+# source changes and must not gate the build.
+TREE_PATTERNS="scripts/ templates/ assets/ config/ *.yml *.sh"
+DIRTY=$(git status --porcelain -- $TREE_PATTERNS 2>/dev/null \
+  | grep -vE '(^|/)\.hermes-tmp\.|\.tmp$|~$' || true)
+if [ -n "$DIRTY" ]; then
   echo "FATAL: uncommitted source changes present." >&2
-  git status --short -- scripts/ templates/ assets/ config/ '*.yml' '*.sh'
+  echo "$DIRTY"
   exit 1
 fi
 
