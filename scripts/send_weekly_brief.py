@@ -36,7 +36,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from ghost_publish import (  # noqa: E402
-    api_call, markdown_to_html, slugify, find_post_by_slug, _load_dotenv,
+    api_call, markdown_to_html, slugify, find_post_by_slug, upload_image,
+    _load_dotenv,
 )
 from weekly_brief import build_brief  # noqa: E402
 
@@ -59,6 +60,84 @@ def resolve_newsletter(default="default-newsletter"):
     except Exception:
         pass
     return default
+
+
+def recent_posts(days=7, limit=8, exclude_slug=None):
+    """The week's published articles, newest first, for the brief's links.
+
+    Returns [] on any failure. A brief with a missing link list is still worth
+    sending; a brief that fails to send because Ghost had a hiccup is not.
+    """
+    import datetime as _dt
+
+    try:
+        r = api_call(
+            "GET",
+            f"posts/?limit={limit}&filter=status:published"
+            "&order=published_at%20desc&fields=title,url,slug,published_at",
+        )
+    except Exception:
+        return []
+
+    cutoff = _dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(days=days)
+    out = []
+    for p in r.get("posts", []):
+        if exclude_slug and p.get("slug") == exclude_slug:
+            continue
+        # Never link a brief to another brief, including an earlier one sent
+        # the same week. The brief points at articles.
+        if (p.get("slug") or "").startswith("the-northern-mile-brief"):
+            continue
+        pa = p.get("published_at") or ""
+        try:
+            when = _dt.datetime.fromisoformat(pa.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if when < cutoff:
+            continue
+        out.append({"title": p.get("title") or "", "url": p.get("url") or ""})
+    return out
+
+
+def brief_hero():
+    """Generate and upload a feature image for the brief.
+
+    The first brief shipped with no feature image, so it rendered as a
+    text-only card on the blog beside posts that all had one. Returns None on
+    any failure: a brief without a hero is worse than one with, but a brief
+    that never sends because image generation broke is worse than both.
+    """
+    import json
+
+    try:
+        import blog_visuals
+
+        with open(ROOT / "data" / "fuel.json", encoding="utf-8") as f:
+            fuel = json.load(f)
+    except Exception:
+        return None
+
+    nat = fuel.get("diesel_national_avg")
+    stamp = fuel.get("print_date")
+    try:
+        img = blog_visuals.hero_card(
+            headline="Canada's diesel average this week",
+            eyebrow="The Northern Mile Brief",
+            stat_value=f"{nat}¢" if nat is not None else None,
+            stat_label="/L national average",
+            source=(f"NRCan weekly survey, print {stamp}" if stamp
+                    else "NRCan weekly survey"),
+            variant="paper",
+        )
+        path = blog_visuals.save_hero(img, "brief-hero")
+    except Exception:
+        return None
+
+    try:
+        res = upload_image(str(path))
+        return res.get("url") if isinstance(res, dict) else res
+    except Exception:
+        return None
 
 
 def build_payload(title, subtitle, markdown, slug, status, published_at=None):
@@ -84,7 +163,9 @@ def main(argv=None):
                     help="Schedule instead, e.g. 2026-09-23T06:00:00.000Z")
     args = ap.parse_args(argv)
 
-    title, subtitle, markdown = build_brief()
+    title, subtitle, markdown = build_brief(
+        recent_posts=None if args.dry_run else recent_posts()
+    )
     slug = slugify(title)
     nl_slug = None if args.dry_run else resolve_newsletter()
 
@@ -117,6 +198,12 @@ def main(argv=None):
 
     print("\n[1/3] creating draft (a draft can never email anyone)...")
     payload = build_payload(title, subtitle, markdown, slug, "draft")
+    hero = brief_hero()
+    if hero:
+        payload["feature_image"] = hero
+        print(f"      hero: {hero.rsplit('/', 1)[-1]}")
+    else:
+        print("      hero: NONE (image generation unavailable)")
     r = api_call("POST", "posts/?source=html", {"posts": [payload]})
     post = (r.get("posts") or [{}])[0]
     pid = post.get("id")

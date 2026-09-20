@@ -90,8 +90,16 @@ def _article(n):
     return "a"
 
 
-def build_brief(today=None):
-    """Return (title, subtitle, markdown). Pure function over the data files."""
+def build_brief(today=None, recent_posts=None):
+    """Return (title, subtitle, markdown). Pure function over the data files.
+
+    `recent_posts` is an optional list of {"title", "url"} for the week's
+    published articles. The brief is the newsletter, and a newsletter's job is
+    to point at the week's work, not to reproduce it. Without this the closing
+    section promised "the longer pieces" and linked to none of them, which made
+    the brief read as a thin duplicate of the article it was supposed to be
+    pointing at.
+    """
     today = today or dt.date.today()
     fuel = load("fuel")
     border = load("border")
@@ -197,10 +205,19 @@ def build_brief(today=None):
             md.append(f"- {label}: {val} ({d})")
 
     md.append("## Read this week's posts")
-    md.append(
-        "The full tables behind these numbers live on the dashboard, and the "
-        "longer pieces go up through the week."
-    )
+    if recent_posts:
+        for p in recent_posts:
+            md.append(f"- [{p['title']}]({p['url']})")
+        md.append("")
+        md.append(
+            "Full tables for every figure above are on the "
+            "[dashboard](https://dashboard.northernmilemedia.com/)."
+        )
+    else:
+        md.append(
+            "Full tables for every figure above are on the "
+            "[dashboard](https://dashboard.northernmilemedia.com/)."
+        )
     md.append("")
 
     return title, subtitle, "\n\n".join(md)
