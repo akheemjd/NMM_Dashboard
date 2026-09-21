@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102575",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 5",
+        "from": "Highway 5",
+        "direction": "N",
+        "state": "CLOSED"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 5, 152m Northeast of Grimshire Road Underpass. Closed. Watch for traffic control. Last update: September 21st, 2026 at 12:06am PDT. Next update: September 21st, 2026 at 6:30am PDT. Alternate route via Highway 5A. Highway 5, northbound, north of Merritt will be closed overnight, with a 6:30 AM update.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.21027146,
+      "lng": -120.64799634,
+      "start": "2026-09-20T21:33:18-07:00",
+      "end": "",
+      "updated": "2026-09-21T00:06:25-07:00"
+    },
+    {
       "id": "ON-309577",
       "province": "ON",
       "highway": "HWY 11",
@@ -783,26 +804,10 @@
       "start": 1790125200,
       "end": 1790413200,
       "updated": 1789740840
-    },
-    {
-      "id": "ON-308900",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 404 Southbound Express between AURORA ROAD, Whitchurch-Stouffville and STOUFFVILLE ROAD, Stouffville-Richmondhill. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 44.013714,
-      "lng": -79.406654,
-      "start": 1790125200,
-      "end": 1790413200,
-      "updated": 1789740720
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T06:38:01.761178+00:00",
+  "updated": "2026-09-21T07:09:02.925038+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
