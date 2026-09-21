@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-309904",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Vehicle Fire on QEW Toronto bound HOV at BRONTE ROAD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.4089135,
-      "lng": -79.7413258,
-      "start": 1790030040,
-      "end": null,
-      "updated": 1790030040
-    },
-    {
       "id": "ON-309902",
       "province": "ON",
       "highway": "HWY 400",
@@ -30,7 +14,7 @@
       "lng": -79.55289289,
       "start": 1790029500,
       "end": null,
-      "updated": 1790029860
+      "updated": 1790031900
     },
     {
       "id": "ON-309903",
@@ -47,22 +31,6 @@
       "start": 1790029560,
       "end": null,
       "updated": 1790029560
-    },
-    {
-      "id": "ON-309897",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound RAMP at STEELES AVE, Toronto-Markham. Centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.81405982,
-      "lng": -79.35577504,
-      "start": 1790028600,
-      "end": null,
-      "updated": 1790028600
     },
     {
       "id": "ON-309886",
@@ -129,22 +97,6 @@
       "updated": 1790023740
     },
     {
-      "id": "ON-309663",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at MIJINEMUNGSHING RD-LAKE SUPERIOR PROV PK, Algoma. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 47.681937556,
-      "lng": -84.813402737,
-      "start": 1789992360,
-      "end": null,
-      "updated": 1790021880
-    },
-    {
       "id": "ON-309857",
       "province": "ON",
       "highway": "HWY 400",
@@ -191,22 +143,6 @@
       "start": 1790038800,
       "end": 1790060400,
       "updated": 1790015100
-    },
-    {
-      "id": "ON-309715",
-      "province": "ON",
-      "highway": "HWY 35",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 35 Southbound  at MacLennan Dr-Muskoka Rd 117, Dorset, Dorset. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 45.2376589,
-      "lng": -78.8966009,
-      "start": 1789999860,
-      "end": null,
-      "updated": 1790014680
     },
     {
       "id": "ON-309804",
@@ -799,10 +735,74 @@
       "start": 1789959600,
       "end": 1790244000,
       "updated": 1789829100
+    },
+    {
+      "id": "ON-309130",
+      "province": "ON",
+      "highway": "HWY 34",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 34 Northbound On-ramp at HWY 417, Vankleek Hill. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.46751,
+      "lng": -74.68014,
+      "start": 1790334000,
+      "end": 1790355600,
+      "updated": 1789774260
+    },
+    {
+      "id": "ON-309127",
+      "province": "ON",
+      "highway": "HWY 34",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 34 Southbound On-ramp at HWY 417, Vankleek Hill. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.46751,
+      "lng": -74.68014,
+      "start": 1790247600,
+      "end": 1790355600,
+      "updated": 1789774020
+    },
+    {
+      "id": "ON-309128",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 11 Northbound  between LAKESHORE DR (E) - MACGREGOR TWP and MACKENZIE STATION RD(W) - MACGREGOR TWP, Thunder Bay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 48.53258,
+      "lng": -88.94932,
+      "start": 1790078400,
+      "end": 1790200800,
+      "updated": 1789773960
+    },
+    {
+      "id": "ON-309126",
+      "province": "ON",
+      "highway": "HWY 34",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 34 Northbound Off-ramp at HWY 417, Vankleek Hill. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.46751,
+      "lng": -74.68014,
+      "start": 1790247600,
+      "end": 1790269200,
+      "updated": 1789773900
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T22:43:27.123191+00:00",
+  "updated": "2026-09-21T23:10:27.600843+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
