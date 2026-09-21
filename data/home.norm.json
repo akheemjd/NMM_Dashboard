@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-21 09:13",
-  "updated_iso": "2026-09-21T09:13:09+00:00",
-  "build_version": "1789981989",
+  "updated_at": "2026-09-21 09:44",
+  "updated_iso": "2026-09-21T09:44:09+00:00",
+  "build_version": "1789983849",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -254,20 +254,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 1,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 427, HWY 11, HWY 61",
+    "status_line": "HWY 61",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at HWY 9/DAVIS DR, Kettleby. Left shoulder and\u2026",
-        "severity_label": "Collision",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Southbound COLLECTOR RAMP at THE QUEENSWAY,\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,7 +276,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 EDT"
+      "captured_at": "05:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -299,11 +292,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 EDT"
+      "captured_at": "05:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -313,7 +306,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 EDT"
+      "captured_at": "05:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -343,7 +336,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:00 PDT"
+      "captured_at": "02:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -353,7 +346,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 CDT"
+      "captured_at": "04:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
