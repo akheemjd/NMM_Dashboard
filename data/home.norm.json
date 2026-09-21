@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-21 12:50",
-  "updated_iso": "2026-09-21T12:50:15+00:00",
-  "build_version": "1789995015",
+  "updated_at": "2026-09-21 13:21",
+  "updated_iso": "2026-09-21T13:21:16+00:00",
+  "build_version": "1789996876",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
+    "max_name": "Queenston-Lewiston Bridge",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 3, HWY 17, HWY 61",
+    "status_line": "HWY 404, HWY 403 , HWY 10",
     "incidents": [
       {
-        "road": "HWY 3",
-        "what": "Collision on HWY 3 Both Directions  between Yarmouth Centre Road and Tower\u2026",
+        "road": "HWY 404",
+        "what": "Highway Maintenance on HWY 404 Northbound  at GREEN LANE, Gwillimbury. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Eastbound  at MIJINEMUNGSHING RD-LAKE SUPERIOR\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound  at MAVIS ROAD, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -299,21 +299,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "4 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 EDT"
+      "captured_at": "09:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,7 +323,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:27 EDT"
+      "captured_at": "08:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -420,16 +420,16 @@
   "news": [
     {
       "category": "equipment",
-      "source": "The Trucker",
-      "headline": "Truck driver found dead in Home Depot parking lot in Louisiana",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/truck-driver-found-dead-in-home-depot-parking-lot-in-louisiana",
+      "source": "Trucking Info",
+      "headline": "PrePass, Kodiak Connect Driverless Trucks to Roadside Enforcement",
+      "url": "https://www.truckinginfo.com/news/prepass-kodiak-connect-driverless-trucks-to-roadside-enforcement",
       "why": "Equipment cost and availability shape fleet economics."
     },
     {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Crash involving semi-truck kills 2 in Louisiana",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/crash-involving-semi-truck-kills-2-in-louisiana",
+      "headline": "Truck driver found dead in Home Depot parking lot in Louisiana",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/truck-driver-found-dead-in-home-depot-parking-lot-in-louisiana",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
