@@ -1,6 +1,70 @@
 {
   "incidents": [
     {
+      "id": "ON-309802",
+      "province": "ON",
+      "highway": "HWY 410",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 410 Northbound  at 407, Brampton. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.66899895,
+      "lng": -79.6999618,
+      "start": 1790014740,
+      "end": null,
+      "updated": 1790014740
+    },
+    {
+      "id": "ON-309715",
+      "province": "ON",
+      "highway": "HWY 35",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 35 Southbound  at MacLennan Dr-Muskoka Rd 117, Dorset, Dorset. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 45.2376589,
+      "lng": -78.8966009,
+      "start": 1789999860,
+      "end": null,
+      "updated": 1790014680
+    },
+    {
+      "id": "ON-309804",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Engineering Investigation on QEW Fort Erie Bound  between THIRD LINE and THIRD LINE, Oakville. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.42389,
+      "lng": -79.72526,
+      "start": 1790301600,
+      "end": 1790326800,
+      "updated": 1790014320
+    },
+    {
+      "id": "ON-309798",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound Express between WARDEN AVE and NEILSON ROAD, Toronto. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.770397,
+      "lng": -79.30408,
+      "start": 1790042400,
+      "end": 1790413200,
+      "updated": 1790012700
+    },
+    {
       "id": "ON-309786",
       "province": "ON",
       "highway": "QEW",
@@ -113,22 +177,6 @@
       "updated": 1790010540
     },
     {
-      "id": "ON-309688",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at Hwy 3, Whitefish, Whitefish. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 46.381307947,
-      "lng": -81.342198906,
-      "start": 1789997100,
-      "end": null,
-      "updated": 1790009880
-    },
-    {
       "id": "drivebc.ca/DBC-94218",
       "province": "BC",
       "highway": {
@@ -179,22 +227,6 @@
       "start": 1791172800,
       "end": 1791604740,
       "updated": 1790008140
-    },
-    {
-      "id": "ON-309754",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 11 Northbound  at GARBAGE DISPOSAL RD(E), Thunder Bay. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 48.650122888,
-      "lng": -88.699371827,
-      "start": 1790007540,
-      "end": null,
-      "updated": 1790007540
     },
     {
       "id": "ON-309663",
@@ -259,22 +291,6 @@
       "start": 1790042400,
       "end": 1790326800,
       "updated": 1790001960
-    },
-    {
-      "id": "ON-309715",
-      "province": "ON",
-      "highway": "HWY 35",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 35 Southbound  at MacLennan Dr-Muskoka Rd 117, Dorset, Dorset. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 45.2376589,
-      "lng": -78.8966009,
-      "start": 1789999860,
-      "end": null,
-      "updated": 1789999860
     },
     {
       "id": "ON-309719",
@@ -787,26 +803,10 @@
       "start": 1776819600,
       "end": 1790244000,
       "updated": 1789767240
-    },
-    {
-      "id": "ON-309076",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Continuous Maintenance on HWY 403 HAMILTON Westbound  between Garden Ave and Garden Ave, Brantford. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.167484,
-      "lng": -80.21334,
-      "start": 1790294400,
-      "end": 1790326800,
-      "updated": 1789766040
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T18:00:18.924742+00:00",
+  "updated": "2026-09-21T18:31:20.740162+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

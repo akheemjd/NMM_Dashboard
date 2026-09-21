@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-21 18:00",
-  "updated_iso": "2026-09-21T18:00:22+00:00",
-  "build_version": "1790013622",
+  "updated_at": "2026-09-21 18:31",
+  "updated_iso": "2026-09-21T18:31:24+00:00",
+  "build_version": "1790015484",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 417, HWY 401, HWY 427, HWY 11",
+    "status_line": "HWY 410, HWY 417, HWY 401, HWY 427",
     "incidents": [
       {
-        "road": "HWY 417",
-        "what": "Debris on HWY 417 Eastbound  between LIMOGES RD (IC 79)/CR 5, Limoges and ST.\u2026",
+        "road": "HWY 410",
+        "what": "Disabled Vehicle on HWY 410 Northbound  at 407, Brampton. 1 right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at PORT UNION ROAD, Toronto.\u2026",
+        "road": "HWY 417",
+        "what": "Debris on HWY 417 Eastbound  between LIMOGES RD (IC 79)/CR 5, Limoges and ST.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -293,27 +293,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "14:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "2 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 EDT"
+      "captured_at": "14:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -333,7 +333,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 MDT"
+      "captured_at": "12:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -363,7 +363,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 EDT"
+      "captured_at": "14:15 EDT"
     }
   ],
   "market": [
@@ -421,16 +421,16 @@
     {
       "category": "markets",
       "source": "The Trucker",
-      "headline": "DAT: Reefer spot rate climbs 9 cents to $3.59 as diesel jumps 37 cents",
-      "url": "https://www.thetrucker.com/trucking-news/business/dat-reefer-spot-rate-climbs-9-cents-to-3-59-as-diesel-jumps-37-cents",
+      "headline": "Truckstop, FTR: Van spot rates decline while flatbed rates rise",
+      "url": "https://www.thetrucker.com/trucking-news/business/truckstop-ftr-van-spot-rates-decline-while-flatbed-rates-rise",
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "equipment",
+      "category": "markets",
       "source": "The Trucker",
-      "headline": "Phone virus warning? What truck drivers should do next to prevent trouble on the road",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/phone-virus-warning-what-truck-drivers-should-do-next-to-prevent-trouble-on-the-road",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "DAT: Reefer spot rate climbs 9 cents to $3.59 as diesel jumps 37 cents",
+      "url": "https://www.thetrucker.com/trucking-news/business/dat-reefer-spot-rate-climbs-9-cents-to-3-59-as-diesel-jumps-37-cents",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
