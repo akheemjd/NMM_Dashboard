@@ -1,13 +1,13 @@
 {
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Emerson-Pembina",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_wait": "20 min"
   },
   "border_rows": [
     {
@@ -18,7 +18,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "21:54 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -28,27 +28,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "9 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -58,7 +58,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:21 EDT"
+      "captured_at": "22:16 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -68,17 +68,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT"
+      "captured_at": "20:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -98,7 +98,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:01 EDT"
+      "captured_at": "22:11 EDT"
     }
   ],
   "crossings": [
@@ -110,7 +110,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "21:54 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -120,27 +120,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "3 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "9 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -150,7 +150,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:21 EDT"
+      "captured_at": "22:16 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -160,17 +160,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT"
+      "captured_at": "20:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -190,11 +190,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:01 EDT"
+      "captured_at": "22:11 EDT"
     }
   ],
-  "updated_at": "2026-09-21 01:58",
-  "updated_iso": "2026-09-21T01:58:58+00:00",
-  "build_version": "1789955938",
-  "captured_at": "2026-09-21 01:58"
+  "updated_at": "2026-09-21 02:29",
+  "updated_iso": "2026-09-21T02:29:59+00:00",
+  "build_version": "1789957799",
+  "captured_at": "2026-09-21 02:29"
 }

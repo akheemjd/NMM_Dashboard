@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-309612",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Vehicle Fire on HWY 400 Southbound  at HWY 93/PENETANGUISHENE RD/SIMCOE ROAD 9, Springwater. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.55273788,
+      "lng": -79.74528199,
+      "start": 1789957320,
+      "end": null,
+      "updated": 1789957320
+    },
+    {
+      "id": "ON-309577",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 11 Both Directions  between SEC HWY 560(W)9TH ST(E) and SEC HWY 573(W), Englehart. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 47.8272768,
+      "lng": -79.889,
+      "start": 1789944000,
+      "end": null,
+      "updated": 1789956720
+    },
+    {
       "id": "ON-309607",
       "province": "ON",
       "highway": "HWY 400",
@@ -49,22 +81,6 @@
       "updated": 1789953060
     },
     {
-      "id": "ON-309603",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at QEW, Oakville. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.488929,
-      "lng": -79.673501,
-      "start": 1789952580,
-      "end": null,
-      "updated": 1789952580
-    },
-    {
       "id": "ON-309599",
       "province": "ON",
       "highway": "HWY 11",
@@ -79,38 +95,6 @@
       "start": 1789951500,
       "end": null,
       "updated": 1789951500
-    },
-    {
-      "id": "ON-309597",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.7854924,
-      "lng": -79.2351519,
-      "start": 1789951380,
-      "end": null,
-      "updated": 1789951380
-    },
-    {
-      "id": "ON-309577",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 11 Both Directions  between SEC HWY 560(W)9TH ST(E) and SEC HWY 573(W), Englehart. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 47.8272768,
-      "lng": -79.889,
-      "start": 1789944000,
-      "end": null,
-      "updated": 1789944000
     },
     {
       "id": "ON-309518",
@@ -799,10 +783,26 @@
       "start": 1789988400,
       "end": 1790377200,
       "updated": 1789746180
+    },
+    {
+      "id": "ON-308914",
+      "province": "ON",
+      "highway": "HWY 4",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 4 Northbound  between Clinton Line and Clinton Line, St Thomas. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 42.82063,
+      "lng": -81.26101,
+      "start": 1790074800,
+      "end": 1790110800,
+      "updated": 1789745700
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T01:58:54.842780+00:00",
+  "updated": "2026-09-21T02:29:55.945425+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
