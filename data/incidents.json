@@ -17,22 +17,6 @@
       "updated": 1790016540
     },
     {
-      "id": "ON-309815",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound ON-RAMP at NIKOLA TESLA, Hamilton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.257799503,
-      "lng": -79.766739607,
-      "start": 1790016420,
-      "end": null,
-      "updated": 1790016420
-    },
-    {
       "id": "ON-309821",
       "province": "ON",
       "highway": "QEW",
@@ -383,22 +367,6 @@
       "start": 1790215200,
       "end": 1791450000,
       "updated": 1789997400
-    },
-    {
-      "id": "ON-309687",
-      "province": "ON",
-      "highway": "HWY 614",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 614 Northbound  at SWEDE RD (W), Manitouwadge. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 48.936453591,
-      "lng": -85.925773327,
-      "start": 1789997100,
-      "end": null,
-      "updated": 1789997100
     },
     {
       "id": "ON-309686",
@@ -799,10 +767,42 @@
       "start": 1790078400,
       "end": 1790200800,
       "updated": 1789773960
+    },
+    {
+      "id": "ON-309126",
+      "province": "ON",
+      "highway": "HWY 34",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 34 Northbound Off-ramp at HWY 417, Vankleek Hill. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.46751,
+      "lng": -74.68014,
+      "start": 1790247600,
+      "end": 1790269200,
+      "updated": 1789773900
+    },
+    {
+      "id": "ON-309125",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 11 Northbound  between LAKESHORE DR (E) - MACGREGOR TWP and LAKESHORE DR (E) - MACGREGOR TWP, Thunder Bay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 48.53258,
+      "lng": -88.94932,
+      "start": 1789992000,
+      "end": 1790114400,
+      "updated": 1789773840
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T19:02:21.285727+00:00",
+  "updated": "2026-09-21T19:33:21.856998+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
