@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-21 16:42",
-  "updated_iso": "2026-09-21T16:42:23+00:00",
-  "build_version": "1790008943",
+  "updated_at": "2026-09-21 16:58",
+  "updated_iso": "2026-09-21T16:58:23+00:00",
+  "build_version": "1790009903",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -256,18 +256,18 @@
     "none": false,
     "active_count": 7,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 401, HWY 35, HWY 614",
+    "status_line": "HWY 401, HWY 11, HWY 35, HWY 614",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Northbound  at GARBAGE DISPOSAL RD(E), Thunder\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound TRANSFER at Kennedy Collector to Express,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. Left\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Northbound  at GARBAGE DISPOSAL RD(E), Thunder\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -303,17 +303,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 EDT"
+      "captured_at": "12:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:20 PDT"
+      "captured_at": "09:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -409,8 +409,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "2 of 9 crossings slow",
-      "value": "2/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -419,17 +419,17 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "PrePass, Kodiak AI collaborate to advance safe, scalable driverless trucking nationwide",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/prepass-kodiak-ai-collaborate-to-advance-safe-scalable-driverless-trucking-nationwide",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "equipment",
       "source": "The Trucker",
       "headline": "Transition Trucking 2026 Elite 11: Michael Bivens honors his late father with every mile he drives",
       "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/transition-trucking-2026-elite-11-michael-bivens-honors-his-late-father-with-every-mile-he-drives",
-      "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "equipment",
-      "source": "Trucking Info",
-      "headline": "PrePass, Kodiak Connect Driverless Trucks to Roadside Enforcement",
-      "url": "https://www.truckinginfo.com/news/prepass-kodiak-connect-driverless-trucks-to-roadside-enforcement",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
