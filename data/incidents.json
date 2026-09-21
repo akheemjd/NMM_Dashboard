@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
+      "id": "ON-309754",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 11 Northbound  at GARBAGE DISPOSAL RD(E), Thunder Bay. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 48.650122888,
+      "lng": -88.699371827,
+      "start": 1790007540,
+      "end": null,
+      "updated": 1790007540
+    },
+    {
+      "id": "ON-309663",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Highway Maintenance on HWY 17 Eastbound  at MIJINEMUNGSHING RD-LAKE SUPERIOR PROV PK, Algoma. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 47.681937556,
+      "lng": -84.813402737,
+      "start": 1789992360,
+      "end": null,
+      "updated": 1790006820
+    },
+    {
       "id": "ON-309742",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1 left lane closed.",
+      "description": "Collision on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. Left shoulder and 2 left lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 left lane closed",
+      "lanes": "left shoulder and 2 left lanes closed",
       "lat": 43.69200023,
       "lng": -79.56896285,
       "start": 1790004780,
       "end": null,
-      "updated": 1790004780
+      "updated": 1790005980
     },
     {
       "id": "ON-309745",
@@ -31,22 +63,6 @@
       "start": 1790308740,
       "end": 1790326800,
       "updated": 1790004180
-    },
-    {
-      "id": "ON-309737",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at LLOYDTOWN-AURORA RD, Kettleby. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.00146,
-      "lng": -79.58604142,
-      "start": 1790004060,
-      "end": null,
-      "updated": 1790004060
     },
     {
       "id": "ON-309734",
@@ -241,22 +257,6 @@
       "updated": 1789996800
     },
     {
-      "id": "ON-309682",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 404 Northbound  at GREEN LANE, Gwillimbury. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 44.08494795,
-      "lng": -79.42245955,
-      "start": 1789996260,
-      "end": null,
-      "updated": 1789996260
-    },
-    {
       "id": "ON-309703",
       "province": "ON",
       "highway": "HWY 401",
@@ -287,22 +287,6 @@
       "start": 1788407400,
       "end": null,
       "updated": 1789992780
-    },
-    {
-      "id": "ON-309663",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at MIJINEMUNGSHING RD-LAKE SUPERIOR PROV PK, Algoma. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 47.681937556,
-      "lng": -84.813402737,
-      "start": 1789992360,
-      "end": null,
-      "updated": 1789992360
     },
     {
       "id": "ON-309691",
@@ -799,10 +783,26 @@
       "start": 1789963200,
       "end": 1790567940,
       "updated": 1789763220
+    },
+    {
+      "id": "ON-309683",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Nightly Engineering Investigation on HWY 403 HAMILTON Eastbound  between LINCOLN M. ALEXANDER PARKWAY and ABERDEEN AVE, Hamilton. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.232258,
+      "lng": -79.950745,
+      "start": 1790132400,
+      "end": 1790326800,
+      "updated": 1789762680
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T15:56:16.616526+00:00",
+  "updated": "2026-09-21T16:27:17.089088+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
