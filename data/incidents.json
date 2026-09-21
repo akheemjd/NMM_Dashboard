@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-309605",
+      "id": "ON-309607",
       "province": "ON",
       "highway": "HWY 400",
       "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 2 centre lanes closed.",
+      "description": "Collision on HWY 400 Southbound  at SOUTH OF SHEPPARD, Toronto. 4 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 centre lanes closed",
-      "lat": 43.73616852,
-      "lng": -79.5264349,
-      "start": 1789953120,
+      "lanes": "4 right lanes closed",
+      "lat": 43.73163807,
+      "lng": -79.52539007,
+      "start": 1789954020,
       "end": null,
-      "updated": 1789953360
+      "updated": 1789954320
+    },
+    {
+      "id": "ON-309608",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.77486841,
+      "lng": -79.28440092,
+      "start": 1789954020,
+      "end": null,
+      "updated": 1789954020
     },
     {
       "id": "ON-302207",
@@ -783,26 +799,10 @@
       "start": 1789988400,
       "end": 1790377200,
       "updated": 1789746180
-    },
-    {
-      "id": "ON-308914",
-      "province": "ON",
-      "highway": "HWY 4",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 4 Northbound  between Clinton Line and Clinton Line, St Thomas. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 42.82063,
-      "lng": -81.26101,
-      "start": 1790074800,
-      "end": 1790110800,
-      "updated": 1789745700
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T01:27:54.345105+00:00",
+  "updated": "2026-09-21T01:58:54.842780+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
