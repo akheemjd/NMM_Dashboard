@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-21 09:44",
-  "updated_iso": "2026-09-21T09:44:09+00:00",
-  "build_version": "1789983849",
+  "updated_at": "2026-09-21 10:15",
+  "updated_iso": "2026-09-21T10:15:11+00:00",
+  "build_version": "1789985711",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Queenston-Lewiston Bridge",
+    "max_wait": "8 min"
   },
   "fuel": {
     "national_diesel": "267.1",
@@ -254,10 +254,17 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 1,
+    "active_count": 2,
     "gauge_class": "warn",
-    "status_line": "HWY 61",
+    "status_line": "HWY 403 , HWY 61",
     "incidents": [
+      {
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. 2 left\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
       {
         "road": "HWY 61",
         "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
@@ -292,21 +299,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "4 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "8 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -336,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:20 PDT"
+      "captured_at": "03:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -402,8 +409,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "2 of 9 crossings slow",
-      "value": "2/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -412,17 +419,17 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
+      "category": "markets",
       "source": "The Trucker",
-      "headline": "Transition Trucking 2026 Elite 11: Juan Rosado Lozada makes the most of an opportunity opened through the Marine Corps",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/transition-trucking-2026-elite-11-juan-rosado-lozada-makes-the-most-of-an-opportunity-opened-through-the-marine-corps",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "Rising gas prices frustrate voters. Trump says it\u2019s an \u2018inexpensive price to pay\u2019 for the Iran war",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/rising-gas-prices-frustrate-voters-trump-says-its-an-inexpensive-price-to-pay-for-the-iran-war",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Semi truck involved in 2 accidents on I-29 in Missouri",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/semi-truck-involved-in-2-accidents-on-i-29-in-missouri",
+      "headline": "Transition Trucking 2026 Elite 11: Juan Rosado Lozada makes the most of an opportunity opened through the Marine Corps",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/transition-trucking-2026-elite-11-juan-rosado-lozada-makes-the-most-of-an-opportunity-opened-through-the-marine-corps",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
