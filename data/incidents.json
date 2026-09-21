@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-309704",
+      "id": "ON-309715",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at HWY 404, Toronto. 2 right lanes closed.",
+      "highway": "HWY 35",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 35 Southbound  at MacLennan Dr-Muskoka Rd 117, Dorset, Dorset. Lane and SOUTH shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.76806181,
-      "lng": -79.33825898,
-      "start": 1789998300,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 45.2376589,
+      "lng": -78.8966009,
+      "start": 1789999860,
       "end": null,
-      "updated": 1789998540
+      "updated": 1789999860
+    },
+    {
+      "id": "ON-309712",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 11 Northbound  at Macdiarmid Road West, Beardmore. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 49.4375793,
+      "lng": -88.123504,
+      "start": 1789999560,
+      "end": null,
+      "updated": 1789999560
     },
     {
       "id": "ON-309706",
@@ -113,6 +129,22 @@
       "updated": 1789996920
     },
     {
+      "id": "ON-309718",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Continuous Construction on QEW Fort Erie Bound  between GLENDALE AVENUE and HWY 405, Niagara-On-The-Lake. 2 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Left Lane(s)",
+      "lat": 43.157192,
+      "lng": -79.16448,
+      "start": 1790218800,
+      "end": 1790586000,
+      "updated": 1789996800
+    },
+    {
       "id": "ON-309682",
       "province": "ON",
       "highway": "HWY 404",
@@ -127,22 +159,6 @@
       "start": 1789996260,
       "end": null,
       "updated": 1789996260
-    },
-    {
-      "id": "ON-309679",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound  at MAVIS ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.58581024,
-      "lng": -79.66006297,
-      "start": 1789995360,
-      "end": null,
-      "updated": 1789995360
     },
     {
       "id": "ON-309677",
@@ -783,26 +799,10 @@
       "start": 1790125200,
       "end": 1790676000,
       "updated": 1789757640
-    },
-    {
-      "id": "ON-309002",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 404 Northbound  between MCNICOLL AVE, Toronto and STEELES AVE, Toronto-Markham. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.802925,
-      "lng": -79.34531,
-      "start": 1790121600,
-      "end": 1790676000,
-      "updated": 1789757340
     }
   ],
   "total": 50,
-  "updated": "2026-09-21T13:52:13.941488+00:00",
+  "updated": "2026-09-21T14:23:13.979743+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
