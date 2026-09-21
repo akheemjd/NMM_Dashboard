@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-21 04:03",
-  "updated_iso": "2026-09-21T04:03:02+00:00",
-  "build_version": "1789963382",
+  "updated_at": "2026-09-21 04:34",
+  "updated_iso": "2026-09-21T04:34:02+00:00",
+  "build_version": "1789965242",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 2,
     "closed_count": 0,
-    "min_name": "Emerson-Pembina",
+    "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "10 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "7 min"
   },
   "fuel": {
     "national_diesel": "267.1",
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, HWY 11, HWY 61",
+    "status_line": "HWY 400, HWY 11, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto.\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 1 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Southbound  at SHEPPARD AVENUE, Toronto. 3 left\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  between SEC HWY 560(W)9TH ST(E) and SEC\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -293,17 +293,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -313,7 +313,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 EDT"
+      "captured_at": "00:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -333,17 +333,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 MDT"
+      "captured_at": "22:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -359,11 +359,11 @@
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
       "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:11 EDT"
+      "captured_at": "00:23 EDT"
     }
   ],
   "market": [
@@ -409,8 +409,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
