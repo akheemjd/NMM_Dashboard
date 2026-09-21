@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-21 20:04",
-  "updated_iso": "2026-09-21T20:04:27+00:00",
-  "build_version": "1790021067",
+  "updated_at": "2026-09-21 21:06",
+  "updated_iso": "2026-09-21T21:06:27+00:00",
+  "build_version": "1790024787",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "6 min"
   },
   "fuel": {
     "national_diesel": "270.5",
@@ -228,46 +228,46 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4002",
+    "usd_cad": "1.4021",
     "direction": "weaker CAD",
-    "change": "+0.0014",
-    "usd_100": "140.02",
-    "usd_500": "700.10",
-    "usd_1000": "1,400.20",
-    "cad_1000": "714.18",
+    "change": "+0.0019",
+    "usd_100": "140.21",
+    "usd_500": "701.05",
+    "usd_1000": "1,402.10",
+    "cad_1000": "713.22",
     "band": "noise",
-    "band_pct": "+0.10%",
-    "obs_date": "2026-09-18",
-    "avg_30d": "1.3864",
-    "vs_baseline": "+0.0138",
+    "band_pct": "+0.14%",
+    "obs_date": "2026-09-21",
+    "avg_30d": "1.3875",
+    "vs_baseline": "+0.0146",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "+0.0136",
-    "change_7d_pct": "+0.98%",
-    "change_30d": "+0.0178",
-    "change_30d_pct": "+1.29%",
-    "change_1y": "+0.0208",
-    "change_1y_pct": "+1.51%",
-    "range_pct": "68%"
+    "change_7d": "+0.0112",
+    "change_7d_pct": "+0.81%",
+    "change_30d": "+0.0236",
+    "change_30d_pct": "+1.71%",
+    "change_1y": "+0.0192",
+    "change_1y_pct": "+1.39%",
+    "range_pct": "70%"
   },
   "incidents": {
     "none": false,
-    "active_count": 5,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 417, HWY 35, HWY 17",
+    "status_line": "HWY 417, HWY 35, HWY 17, HWY 61",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at ROYAL WINDSOR DRIVE, Oakville. Left\u2026",
+        "road": "HWY 417",
+        "what": "Debris on HWY 417 Eastbound  between LIMOGES RD (IC 79)/CR 5, Limoges and ST.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 417",
-        "what": "Debris on HWY 417 Eastbound  between LIMOGES RD (IC 79)/CR 5, Limoges and ST.\u2026",
+        "road": "HWY 35",
+        "what": "Highway Maintenance on HWY 35 Southbound  at MacLennan Dr-Muskoka Rd 117,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,7 +283,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 EDT"
+      "captured_at": "16:28 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -293,27 +293,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "16:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "2 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "2 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -363,7 +363,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "16:15 EDT"
     }
   ],
   "market": [
@@ -401,8 +401,8 @@
     },
     {
       "name": "USD/CAD vs 30-day average",
-      "note": "+0.0138 vs 30-day avg 1.3864",
-      "value": "1.4002",
+      "note": "+0.0146 vs 30-day avg 1.3875",
+      "value": "1.4021",
       "value_class": "flat",
       "source": "Bank of Canada",
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
@@ -419,18 +419,18 @@
   "theft": [],
   "news": [
     {
+      "category": "regulations",
+      "source": "Trucking Info",
+      "headline": "New California Law Could Shed Light on Electric Truck Prices",
+      "url": "https://www.truckinginfo.com/news/california-bill-could-shed-light-on-electric-truck-prices",
+      "why": "Rules change compliance cost and driver hours."
+    },
+    {
       "category": "markets",
       "source": "The Trucker",
       "headline": "ACT: Freight market dynamics shape August commercial vehicle orders",
       "url": "https://www.thetrucker.com/trucking-news/business/act-freight-market-dynamics-shape-august-commercial-vehicle-orders",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "Volvo Trucks wins International Truck of the Year 2027 for its global electric range",
-      "url": "https://www.thetrucker.com/trucking-news/business/volvo-trucks-wins-international-truck-of-the-year-2027-for-its-global-electric-range",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
@@ -446,9 +446,9 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "6.285",
-    "us_national_cpl": "232.5",
-    "nadi": "251.5",
-    "ca_us_gap": "38.0",
+    "us_national_cpl": "232.8",
+    "nadi": "251.6",
+    "ca_us_gap": "37.7",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-09-14",
@@ -460,50 +460,50 @@
       "west_coast": 7.25
     },
     "padds_cpl": {
-      "east_coast": 227.8,
-      "midwest": 231.2,
-      "gulf_coast": 222.9,
-      "rocky_mountain": 224.4,
-      "west_coast": 268.2
+      "east_coast": 228.1,
+      "midwest": 231.5,
+      "gulf_coast": 223.2,
+      "rocky_mountain": 224.7,
+      "west_coast": 268.5
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "6.158",
-        "cpl": "227.8"
+        "cpl": "228.1"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "6.250",
-        "cpl": "231.2"
+        "cpl": "231.5"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "6.027",
-        "cpl": "222.9"
+        "cpl": "223.2"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "6.066",
-        "cpl": "224.4"
+        "cpl": "224.7"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "7.250",
-        "cpl": "268.2"
+        "cpl": "268.5"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
-    "us_change_7d": "+15.2",
+    "us_change_7d": "+15.5",
     "us_change_7d_class": "up",
-    "us_change_30d": "+32.7",
-    "nadi_change_7d": "+20.4",
+    "us_change_30d": "+33.0",
+    "nadi_change_7d": "+20.5",
     "nadi_change_7d_class": "up",
-    "nadi_change_30d": "+37.4"
+    "nadi_change_30d": "+37.5"
   }
 }
