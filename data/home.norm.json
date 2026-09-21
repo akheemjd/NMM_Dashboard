@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-21 16:58",
-  "updated_iso": "2026-09-21T16:58:23+00:00",
-  "build_version": "1790009903",
+  "updated_at": "2026-09-21 17:29",
+  "updated_iso": "2026-09-21T17:29:22+00:00",
+  "build_version": "1790011762",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,7 +9,7 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
+    "max_name": "Peace Bridge",
     "max_wait": "5 min"
   },
   "fuel": {
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 7,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 11, HWY 35, HWY 614",
+    "status_line": "HWY 401, HWY 427",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound TRANSFER at Kennedy Collector to Express,\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound TRANSFER at 400 Express to Collector,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Northbound  at GARBAGE DISPOSAL RD(E), Thunder\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at PORT UNION ROAD, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,7 +283,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT"
+      "captured_at": "13:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -299,11 +299,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -313,7 +313,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT"
+      "captured_at": "13:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,7 +323,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:20 EDT"
+      "captured_at": "13:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT"
+      "captured_at": "10:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -353,7 +353,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 CDT"
+      "captured_at": "12:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -421,15 +421,15 @@
     {
       "category": "markets",
       "source": "The Trucker",
-      "headline": "PrePass, Kodiak AI collaborate to advance safe, scalable driverless trucking nationwide",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/prepass-kodiak-ai-collaborate-to-advance-safe-scalable-driverless-trucking-nationwide",
+      "headline": "DAT: Reefer spot rate climbs 9 cents to $3.59 as diesel jumps 37 cents",
+      "url": "https://www.thetrucker.com/trucking-news/business/dat-reefer-spot-rate-climbs-9-cents-to-3-59-as-diesel-jumps-37-cents",
       "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Transition Trucking 2026 Elite 11: Michael Bivens honors his late father with every mile he drives",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/transition-trucking-2026-elite-11-michael-bivens-honors-his-late-father-with-every-mile-he-drives",
+      "headline": "Phone virus warning? What truck drivers should do next to prevent trouble on the road",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/phone-virus-warning-what-truck-drivers-should-do-next-to-prevent-trouble-on-the-road",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
