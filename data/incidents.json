@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-309926",
+      "id": "ON-309928",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound ON-RAMP at LESLIE STREET, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.76327209,
-      "lng": -79.38728169,
-      "start": 1790036940,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.766743,
+      "lng": -79.36228,
+      "start": 1790038380,
       "end": null,
-      "updated": 1790036940
-    },
-    {
-      "id": "ON-309920",
-      "province": "ON",
-      "highway": "HWY 406",
-      "direction": "Northbound",
-      "description": "Collision on HWY 406 Northbound  at GENEVA STREET, St. Catharines. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.15788202,
-      "lng": -79.23992641,
-      "start": 1790035620,
-      "end": null,
-      "updated": 1790035620
+      "updated": 1790038380
     },
     {
       "id": "ON-309886",
@@ -799,10 +783,26 @@
       "start": 1790247600,
       "end": 1790269200,
       "updated": 1789773900
+    },
+    {
+      "id": "ON-309125",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 11 Northbound  between LAKESHORE DR (E) - MACGREGOR TWP and LAKESHORE DR (E) - MACGREGOR TWP, Thunder Bay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 48.53258,
+      "lng": -88.94932,
+      "start": 1789992000,
+      "end": 1790114400,
+      "updated": 1789773840
     }
   ],
   "total": 50,
-  "updated": "2026-09-22T00:43:29.521646+00:00",
+  "updated": "2026-09-22T01:14:30.478512+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
