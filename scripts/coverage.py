@@ -88,7 +88,9 @@ def compute(records, series, key, latest_obs):
 
 
 def write(fuel_records, fx_records, border_records, theft_records,
-          fuel_obs=None, fx_obs=None, border_obs=None, theft_obs=None):
+          fuel_obs=None, fx_obs=None, border_obs=None, theft_obs=None,
+          cbp_border_records=0, cbp_border_obs=None,
+          ifta_records=0, ifta_obs=None):
     """Write the full coverage report. Called by collectors."""
     report = {
         "generated_at": now_iso(),
@@ -97,8 +99,22 @@ def write(fuel_records, fx_records, border_records, theft_records,
             "fx":     compute(fx_records,     "fx",      "usd_cad",  fx_obs),
             "border": compute(border_records, "border",  "all",      border_obs),
             "theft":  compute(theft_records,  "theft",   "incidents", theft_obs),
+            "cbp_border": compute(cbp_border_records, "cbp_border", "ports", cbp_border_obs),
+            "ifta": compute(ifta_records, "ifta", "jurisdictions", ifta_obs),
         }
     }
+    # CBP is a live, hourly feed rather than a surveyed series, so the historical
+    # comparability flags do not apply to it. Mark them false explicitly rather
+    # than leaving a snapshot-history claim that will never come true.
+    report["categories"]["cbp_border"]["quantitative_field"] = "commercial_delay"
+    report["categories"]["cbp_border"]["comparable_7d"] = False
+    report["categories"]["cbp_border"]["comparable_yoy"] = False
+
+    # IFTA is a quarterly published table, not a survey series, so year-on-year
+    # comparison is meaningful only if we keep past quarters. Until that history
+    # exists the flags say so rather than implying a comparison we cannot make.
+    report["categories"]["ifta"]["quantitative_field"] = "diesel_rate"
+    report["categories"]["ifta"]["comparable_7d"] = False
 
     health_path = os.path.join(ROOT, "data", "health.json")
     if os.path.exists(health_path):
@@ -125,7 +141,7 @@ def validate():
         raise AssertionError("coverage.json missing — no collectors ran")
     with open(COVERAGE_PATH) as f:
         report = json.load(f)
-    required = ["fuel", "fx", "border", "theft"]
+    required = ["fuel", "fx", "border", "theft", "cbp_border", "ifta"]
     fields = ["records", "history_days", "latest_observation",
               "staleness_days", "comparable_7d", "comparable_yoy"]
     border_extras = ["quantitative_field"]

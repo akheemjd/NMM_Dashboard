@@ -19,6 +19,8 @@ from market_pulse import collect_market_pulse
 from collect_nrcan_diesel import collect as collect_fuel
 from incidents import collect_incidents
 from collect_border import collect_border_live
+from collect_cbp_border import collect_cbp_border
+from collect_ifta import collect_ifta
 from theft_incidents import collect_theft_incidents
 from collect_eia_diesel import collect_eia_diesel
 from health_tracker import record_success, record_failure
@@ -279,6 +281,8 @@ if __name__ == "__main__":
         ("eia_diesel", collect_eia_diesel),
         ("news", collect_news),
         ("border", collect_border_live),
+        ("cbp_border", collect_cbp_border),
+        ("ifta", collect_ifta),
         ("theft", collect_theft_incidents),
     ]:
         try:
@@ -309,6 +313,12 @@ if __name__ == "__main__":
                 return len([i for i in d.get("incidents", []) if i.get("source_url")])
             if path == "eia_diesel.json":
                 return 1 if d.get("us_national_usd_gal") else 0
+            if path == "ifta.json":
+                return len(d.get("jurisdictions", []))
+            if path == "cbp_border.json":
+                # Count PORTS, not the file. The feed carrying 85 ports but zero
+                # parsable commercial delays is a failure mode worth seeing here.
+                return len(d.get("ports", []))
             if path == "incidents.json":
                 return len(d.get("incidents", []))
         except Exception:
@@ -324,6 +334,16 @@ if __name__ == "__main__":
                     return None
                 caps = [c.get("captured_utc") for c in d.get("crossings", []) if c.get("captured_utc")]
                 return max(caps)[:10] if caps else None
+            if path == "ifta.json":
+                # A DATE belongs here, not a count. A blanket str.replace wrote the
+                # count branch into _latest as well, which made latest_observation
+                # read 58, so the coverage report published a record count where it
+                # promises an observation date.
+                return (d.get("fetched_date") or "")[:10] or None
+            if path == "cbp_border.json":
+                # fetched_date is the observation date; captured_utc is when we
+                # pulled it. Use the fetch date because it is always present.
+                return (d.get("fetched_date") or "")[:10] or None
             # Use print_date (source publication date) if available, else fetch date
             obs = d.get("print_date") or d.get("updated")
             if obs:
@@ -392,6 +412,10 @@ if __name__ == "__main__":
         fx_obs=_latest("exchange.json"),
         border_obs=_latest("border.json"),
         theft_obs=theft_obs,
+        cbp_border_records=_count("cbp_border.json"),
+        cbp_border_obs=_latest("cbp_border.json"),
+        ifta_records=_count("ifta.json"),
+        ifta_obs=_latest("ifta.json"),
     )
 
     # Inject field_completeness

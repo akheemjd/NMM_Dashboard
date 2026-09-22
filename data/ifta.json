@@ -1,0 +1,1030 @@
+{
+  "quarter": "3Q2026",
+  "quarter_requested": "3Q2026",
+  "jurisdictions": [
+    {
+      "name": "ALBERTA",
+      "ifta_number": 14,
+      "us": {
+        "gasoline": 0.3519,
+        "diesel": 0.3519
+      },
+      "ca": {
+        "gasoline": 0.13,
+        "diesel": 0.13
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "AB",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "BRITISH COLUMBIA",
+      "ifta_number": 13,
+      "us": {
+        "gasoline": 0.3924,
+        "diesel": 0.406
+      },
+      "ca": {
+        "gasoline": 0.145,
+        "diesel": 0.15
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "BC",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MANITOBA",
+      "ifta_number": 17,
+      "us": {
+        "gasoline": 0.3383,
+        "diesel": 0.3383
+      },
+      "ca": {
+        "gasoline": 0.125,
+        "diesel": 0.125
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "MB",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEW BRUNSWICK",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.2942,
+        "diesel": 0.4182
+      },
+      "ca": {
+        "gasoline": 0.1087,
+        "diesel": 0.1545
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "NB",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEWFOUNDLAND",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.203,
+        "diesel": 0.2572
+      },
+      "ca": {
+        "gasoline": 0.075,
+        "diesel": 0.095
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "NL",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NOVA SCOTIA",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.4196,
+        "diesel": 0.4168
+      },
+      "ca": {
+        "gasoline": 0.155,
+        "diesel": 0.154
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "NS",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "ONTARIO",
+      "ifta_number": 5,
+      "us": {
+        "gasoline": 0.2436,
+        "diesel": 0.2436
+      },
+      "ca": {
+        "gasoline": 0.09,
+        "diesel": 0.09
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "ON",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "PRINCE EDWARD ISLAND",
+      "ifta_number": 27,
+      "us": {
+        "gasoline": 0.2293,
+        "diesel": 0.383
+      },
+      "ca": {
+        "gasoline": 0.0847,
+        "diesel": 0.1415
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "PE",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "QUEBEC",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.5197,
+        "diesel": 0.5468
+      },
+      "ca": {
+        "gasoline": 0.192,
+        "diesel": 0.202
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "QC",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "SASKATCHEWAN",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.406,
+        "diesel": 0.406
+      },
+      "ca": {
+        "gasoline": 0.15,
+        "diesel": 0.15
+      },
+      "surcharge": {},
+      "is_canadian": true,
+      "code": "SK",
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "ALABAMA",
+      "ifta_number": 35,
+      "us": {
+        "gasoline": 0.3,
+        "diesel": 0.31
+      },
+      "ca": {
+        "gasoline": 0.1109,
+        "diesel": 0.1145
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "ARIZONA",
+      "ifta_number": 7,
+      "us": {
+        "gasoline": 0.18,
+        "diesel": 0.26
+      },
+      "ca": {
+        "gasoline": 0.0666,
+        "diesel": 0.0961
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "ARKANSAS",
+      "ifta_number": 29,
+      "us": {
+        "gasoline": 0.247,
+        "diesel": 0.285
+      },
+      "ca": {
+        "gasoline": 0.0913,
+        "diesel": 0.1053
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "CALIFORNIA",
+      "ifta_number": 1,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.979
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.3618
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "COLORADO",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.28,
+        "diesel": 0.335
+      },
+      "ca": {
+        "gasoline": 0.1035,
+        "diesel": 0.1238
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "CONNECTICUT",
+      "ifta_number": 15,
+      "us": {
+        "gasoline": 0.25,
+        "diesel": 0.499
+      },
+      "ca": {
+        "gasoline": 0.0924,
+        "diesel": 0.1843
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "DELAWARE",
+      "ifta_number": 36,
+      "us": {
+        "gasoline": 0.23,
+        "diesel": 0.22
+      },
+      "ca": {
+        "gasoline": 0.085,
+        "diesel": 0.0812
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "FLORIDA",
+      "ifta_number": 18,
+      "us": {
+        "gasoline": 0.411,
+        "diesel": 0.4097
+      },
+      "ca": {
+        "gasoline": 0.1519,
+        "diesel": 0.1513
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "GEORGIA",
+      "ifta_number": 30,
+      "us": {
+        "gasoline": 0.333,
+        "diesel": 0.373
+      },
+      "ca": {
+        "gasoline": 0.1231,
+        "diesel": 0.1377
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "IDAHO",
+      "ifta_number": 6,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.32
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.1182
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "ILLINOIS",
+      "ifta_number": 26,
+      "us": {
+        "gasoline": 0.653,
+        "diesel": 0.738
+      },
+      "ca": {
+        "gasoline": 0.2412,
+        "diesel": 0.2727
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "INDIANA",
+      "ifta_number": 31,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.63
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.2327
+      },
+      "surcharge": {
+        "us": {
+          "gasoline": 0.0,
+          "diesel": 0.0
+        },
+        "ca": {
+          "gasoline": 0.0,
+          "diesel": 0.0
+        }
+      },
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "IOWA",
+      "ifta_number": 25,
+      "us": {
+        "gasoline": 0.3,
+        "diesel": 0.325
+      },
+      "ca": {
+        "gasoline": 0.1109,
+        "diesel": 0.1201
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "KANSAS",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.24,
+        "diesel": 0.26
+      },
+      "ca": {
+        "gasoline": 0.0887,
+        "diesel": 0.0961
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "KENTUCKY",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.25,
+        "diesel": 0.22
+      },
+      "ca": {
+        "gasoline": 0.0924,
+        "diesel": 0.0812
+      },
+      "surcharge": {
+        "us": {
+          "gasoline": 0.045,
+          "diesel": 0.105
+        },
+        "ca": {
+          "gasoline": 0.0166,
+          "diesel": 0.0387
+        }
+      },
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "LOUISIANA",
+      "ifta_number": 21,
+      "us": {
+        "gasoline": 0.2,
+        "diesel": 0.2
+      },
+      "ca": {
+        "gasoline": 0.0738,
+        "diesel": 0.0738
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MAINE",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.312
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.1152
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MARYLAND",
+      "ifta_number": 23,
+      "us": {
+        "gasoline": 0.466,
+        "diesel": 0.4745
+      },
+      "ca": {
+        "gasoline": 0.1721,
+        "diesel": 0.1754
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MASSACHUSETTS",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.24,
+        "diesel": 0.24
+      },
+      "ca": {
+        "gasoline": 0.0887,
+        "diesel": 0.0887
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MICHIGAN",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.524,
+        "diesel": 0.524
+      },
+      "ca": {
+        "gasoline": 0.1935,
+        "diesel": 0.1935
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MINNESOTA",
+      "ifta_number": 16,
+      "us": {
+        "gasoline": 0.326,
+        "diesel": 0.326
+      },
+      "ca": {
+        "gasoline": 0.1204,
+        "diesel": 0.1204
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MISSISSIPPI",
+      "ifta_number": 2,
+      "us": {
+        "gasoline": 0.24,
+        "diesel": 0.24
+      },
+      "ca": {
+        "gasoline": 0.0887,
+        "diesel": 0.0887
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MISSOURI",
+      "ifta_number": 3,
+      "us": {
+        "gasoline": 0.295,
+        "diesel": 0.295
+      },
+      "ca": {
+        "gasoline": 0.1089,
+        "diesel": 0.1089
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "MONTANA",
+      "ifta_number": 9,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.2975
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.1099
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEBRASKA",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.318,
+        "diesel": 0.318
+      },
+      "ca": {
+        "gasoline": 0.1175,
+        "diesel": 0.1175
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEVADA",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.23,
+        "diesel": 0.27
+      },
+      "ca": {
+        "gasoline": 0.085,
+        "diesel": 0.0997
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEW HAMPSHIRE",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.222
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.0821
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEW JERSEY",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.491,
+        "diesel": 0.561
+      },
+      "ca": {
+        "gasoline": 0.1814,
+        "diesel": 0.2072
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEW MEXICO",
+      "ifta_number": 33,
+      "us": {
+        "gasoline": 0.12,
+        "diesel": 0.21
+      },
+      "ca": {
+        "gasoline": 0.0443,
+        "diesel": 0.0776
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NEW YORK",
+      "ifta_number": 11,
+      "us": {
+        "gasoline": 0.398,
+        "diesel": 0.3805
+      },
+      "ca": {
+        "gasoline": 0.1471,
+        "diesel": 0.1405
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NORTH CAROLINA",
+      "ifta_number": 24,
+      "us": {
+        "gasoline": 0.41,
+        "diesel": 0.41
+      },
+      "ca": {
+        "gasoline": 0.1514,
+        "diesel": 0.1514
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "NORTH DAKOTA",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.23,
+        "diesel": 0.23
+      },
+      "ca": {
+        "gasoline": 0.085,
+        "diesel": 0.085
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "OHIO",
+      "ifta_number": 28,
+      "us": {
+        "gasoline": 0.385,
+        "diesel": 0.47
+      },
+      "ca": {
+        "gasoline": 0.1422,
+        "diesel": 0.1737
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "OKLAHOMA",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.19,
+        "diesel": 0.19
+      },
+      "ca": {
+        "gasoline": 0.0702,
+        "diesel": 0.0702
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "OREGON",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.0
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.0
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "PENNSYLVANIA",
+      "ifta_number": 4,
+      "us": {
+        "gasoline": 0.576,
+        "diesel": 0.741
+      },
+      "ca": {
+        "gasoline": 0.2128,
+        "diesel": 0.2738
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "RHODE ISLAND",
+      "ifta_number": 34,
+      "us": {
+        "gasoline": 0.4,
+        "diesel": 0.4
+      },
+      "ca": {
+        "gasoline": 0.1478,
+        "diesel": 0.1478
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "SOUTH CAROLINA",
+      "ifta_number": 22,
+      "us": {
+        "gasoline": 0.28,
+        "diesel": 0.28
+      },
+      "ca": {
+        "gasoline": 0.1035,
+        "diesel": 0.1035
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "SOUTH DAKOTA",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.28,
+        "diesel": 0.28
+      },
+      "ca": {
+        "gasoline": 0.1035,
+        "diesel": 0.1035
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "TENNESSEE",
+      "ifta_number": 8,
+      "us": {
+        "gasoline": 0.26,
+        "diesel": 0.27
+      },
+      "ca": {
+        "gasoline": 0.0961,
+        "diesel": 0.0997
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "TEXAS",
+      "ifta_number": 12,
+      "us": {
+        "gasoline": 0.2,
+        "diesel": 0.2
+      },
+      "ca": {
+        "gasoline": 0.0738,
+        "diesel": 0.0738
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "UTAH",
+      "ifta_number": 20,
+      "us": {
+        "gasoline": 0.319,
+        "diesel": 0.379
+      },
+      "ca": {
+        "gasoline": 0.1179,
+        "diesel": 0.14
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "VERMONT",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.0,
+        "diesel": 0.31
+      },
+      "ca": {
+        "gasoline": 0.0,
+        "diesel": 0.1145
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "VIRGINIA",
+      "ifta_number": 19,
+      "us": {
+        "gasoline": 0.326,
+        "diesel": 0.336
+      },
+      "ca": {
+        "gasoline": 0.1204,
+        "diesel": 0.1242
+      },
+      "surcharge": {
+        "us": {
+          "gasoline": 0.153,
+          "diesel": 0.143
+        },
+        "ca": {
+          "gasoline": 0.0565,
+          "diesel": 0.0529
+        }
+      },
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "WASHINGTON",
+      "ifta_number": 10,
+      "us": {
+        "gasoline": 0.565,
+        "diesel": 0.595
+      },
+      "ca": {
+        "gasoline": 0.2088,
+        "diesel": 0.2198
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "WEST VIRGINIA",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.357,
+        "diesel": 0.357
+      },
+      "ca": {
+        "gasoline": 0.1319,
+        "diesel": 0.1319
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "WISCONSIN",
+      "ifta_number": null,
+      "us": {
+        "gasoline": 0.329,
+        "diesel": 0.329
+      },
+      "ca": {
+        "gasoline": 0.1215,
+        "diesel": 0.1215
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    },
+    {
+      "name": "WYOMING",
+      "ifta_number": 32,
+      "us": {
+        "gasoline": 0.24,
+        "diesel": 0.24
+      },
+      "ca": {
+        "gasoline": 0.0887,
+        "diesel": 0.0887
+      },
+      "surcharge": {},
+      "is_canadian": false,
+      "code": null,
+      "has_us_rate": true,
+      "has_ca_rate": true
+    }
+  ],
+  "counts": {
+    "total": 58,
+    "canadian": 10,
+    "us": 48,
+    "with_diesel_rate": 58
+  },
+  "source": "IFTA, Inc. quarterly Tax Matrix",
+  "source_url": "https://www.iftach.org/taxmatrix/charts/3Q2026.csv",
+  "source_note": "IFTA publishes a rate for US-licensed and Canadian-licensed carriers separately where they differ, so both are kept.",
+  "fetched_date": "2026-09-22",
+  "captured_utc": "2026-09-22T23:51:16.238487+00:00"
+}

@@ -25,10 +25,13 @@ Exit 0 = clean, 1 = violation.
 
 import json
 import os
+import pathlib
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
+DOCS = os.path.join(ROOT, "docs")
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 
 import history  # noqa: E402
@@ -159,11 +162,66 @@ def check_fx_average_agreement():
     return out
 
 
+def check_jsonld_valid():
+    """Every built page's JSON-LD must parse.
+
+    Found live: 26 pages shipped `{"@context":"https://***@graph":[...`, which is
+    invalid JSON, because a redaction pass had written its own redaction into
+    gen_templates.py. Google cannot read unparseable structured data and nothing
+    noticed, because the string is still perfectly valid HTML.
+
+    Note the trap this file has to guard: gen_templates.py REGENERATES
+    templates/*.html, so repairing the templates alone is silently overwritten on
+    the next build. The generator is the only place worth fixing.
+    """
+    bad = []
+    for path in sorted(pathlib.Path(DOCS).rglob("index.html")):
+        html = path.read_text(encoding="utf-8", errors="replace")
+        for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>',
+                             html, re.S):
+            try:
+                json.loads(m.group(1))
+            except Exception as e:
+                bad.append(f"{path.relative_to(DOCS)}: JSON-LD does not parse ({e})")
+                break
+    return bad
+
+
+def check_cbp_missing_not_zero():
+    """A CBP port that published no delay must not be stored as a delay of 0.
+
+    At fetch time only ~37 of 85 ports carry a numeric commercial delay; the rest
+    read N/A, Update Pending or Lanes Closed. Zero means "measured, no wait".
+    None means "not reported". Collapsing them publishes "no delay" at a port
+    that simply did not answer, which is the worst claim this data can make.
+    """
+    d = _load("cbp_border.json")
+    if d is None:
+        return []
+    bad = []
+    for p in d.get("ports", []):
+        has_num = p.get("commercial_delay") is not None
+        if p.get("commercial_reported") != has_num:
+            bad.append(f"{p.get('port_name')}: commercial_reported="
+                       f"{p.get('commercial_reported')} but commercial_delay="
+                       f"{p.get('commercial_delay')}")
+        lane = ((p.get("commercial") or {}).get("standard") or {}).get("delay")
+        if lane != p.get("commercial_delay"):
+            bad.append(f"{p.get('port_name')}: headline delay disagrees with its "
+                       f"lane block")
+    counts = d.get("counts") or {}
+    if counts.get("commercial_delay_reported", 0) > counts.get("total", 0):
+        bad.append("reported commercial delays exceed the port count")
+    return bad
+
+
 CHECKS = (
     ("lookback never returns the newest point", check_lookback_not_latest),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
     ("spread uses the ten-province definition", check_spread_definition),
     ("one 30-day FX average across the site", check_fx_average_agreement),
+    ("structured data parses on every page", check_jsonld_valid),
+    ("cbp commercial delay never faked as zero", check_cbp_missing_not_zero),
 )
 
 

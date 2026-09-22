@@ -33,6 +33,7 @@ NAV = [
     ("/fuel-prices/", "Diesel"),
     ("/fuel-cost-calculator/", "Calculator"),
     ("/border-wait-times/", "Border"),
+    ("/fuel-tax-rates/", "Fuel tax"),
     ("/border-trends/", "Trends"),
     ("/exchange-rate/", "Exchange"),
     ("/road-incidents/", "Incidents"),
@@ -633,6 +634,7 @@ write("border-wait-times",
   <!--LOOP:crossings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></a><!--/LOOP:crossings-->
   </div>
   <p class="note">Source: Canada Border Services Agency commercial lane feed. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
+  <p class="note">Looking for the US-bound direction, or the Mexican border? We publish every port the US Customs and Border Protection feed carries — <a href="/border-wait-times/all-ports/">all 85 land border crossings</a>, including the commercial and FAST lanes.</p>
 ''' + sponsor("sponsor_border") + subscribe("Border and diesel, weekly",
    "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + '''
   <section class="sec">
@@ -1058,7 +1060,7 @@ write("press",
  head("Press & Data — Citable Canadian Trucking Figures | Northern Mile",
       "For journalists: citable Canadian fuel, exchange-rate, and border-wait figures with sources and dates attached. Story angles, how to cite us, and press contact.",
       "/press/", "og.jpg",
-      '{"@context":"https://***@graph":[' + crumb("Press & data", "/press/") + ',' +
+      '{"@context":"https://schema.org","@graph":[' + crumb("Press & data", "/press/") + ',' +
       '{"@type":"WebPage","name":"Press & Data","description":"Citable Canadian trucking data for journalists, from Northern Mile Media.","url":"' + BASE + '/press/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
  + '''
   <section class="hero">
@@ -1145,7 +1147,7 @@ write("advertise",
  head("Advertise — Reach Canadian Carriers | Northern Mile",
       "Sponsor the pages Canadian carriers check before they buy fuel. Founding rates for the first sponsors, with no audience number we cannot stand behind.",
       "/advertise/", "og.jpg",
-      '{"@context":"https://***@graph":[' + crumb("Advertise", "/advertise/") + ',' +
+      '{"@context":"https://schema.org","@graph":[' + crumb("Advertise", "/advertise/") + ',' +
       '{"@type":"WebPage","name":"Advertise","description":"Sponsorship and founding rates for Northern Mile Media.","url":"' + BASE + '/advertise/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
  + '''
   <section class="hero">
@@ -1204,7 +1206,7 @@ write("contact",
  head("Contact | Northern Mile",
       "How to reach Northern Mile Media for sponsorship, data questions, corrections and press.",
       "/contact/", "og.jpg",
-      '{"@context":"https://***@graph":[' + crumb("Contact", "/contact/") + ',' +
+      '{"@context":"https://schema.org","@graph":[' + crumb("Contact", "/contact/") + ',' +
       '{"@type":"WebPage","name":"Contact","description":"Contact Northern Mile Media.","url":"' + BASE + '/contact/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
  + '''
   <section class="hero">
@@ -1288,7 +1290,7 @@ print(f"  city                      {len(city_body):6,} bytes")
 # editorial prose. It is the ONLY hub that links a province's survey cities.
 # Before it existed, /diesel-prices/quebec/ was a 404 and its cities had no
 # inbound link from anywhere on the site, so nothing could crawl to them.
-PROVINCE_INDEX_LD = ('{"@context":"https://***@graph":[' + crumb("{{prov_name}} diesel prices", "/diesel-prices/{{prov_slug}}/") + ','
+PROVINCE_INDEX_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{prov_name}} diesel prices", "/diesel-prices/{{prov_slug}}/") + ','
  '{"@type":"Dataset","name":"{{prov_name}} Diesel Prices","description":"Retail diesel prices across {{city_count}} {{prov_name}} survey cities, from the Natural Resources Canada weekly retail survey.","url":"' + BASE + '/diesel-prices/{{prov_slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"{{prov_name}}, Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"{{updated_iso}}"}]}')
 
 province_index_body = (
@@ -1328,7 +1330,7 @@ print(f"  province-index            {len(province_index_body):6,} bytes")
 
 # ═══ US diesel pages ════════════════════════════════════════════════════
 # One overview template + one per-PADD template, rendered by build_us_pages.py.
-US_LD = ('{"@context":"https://***@graph":[' + crumb("US diesel prices", "/us-diesel/") + ','
+US_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("US diesel prices", "/us-diesel/") + ','
  '{"@type":"Dataset","name":"US Retail Diesel Prices","description":"US on-highway diesel, national average plus five PADD regions, from the U.S. Energy Information Administration weekly retail diesel survey, converted to Canadian cents per litre at the latest Bank of Canada rate.","url":"' + BASE + '/us-diesel/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
 
 us_body = (
@@ -1372,7 +1374,7 @@ with open(os.path.join(OUT, "us-diesel.template.html"), "w") as f:
 print(f"  us-diesel                 {len(us_body):6,} bytes")
 
 # One template, rendered per PADD by build_us_pages.py.
-USPADD_LD = ('{"@context":"https://***@graph":[' + crumb("{{label}} diesel prices", "/us-diesel/{{key}}/") + ','
+USPADD_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{label}} diesel prices", "/us-diesel/{{key}}/") + ','
  '{"@type":"Dataset","name":"{{label}} Diesel Prices","description":"US on-highway diesel price in {{label}}, from the EIA weekly retail diesel survey, converted to Canadian cents per litre.","url":"' + BASE + '/us-diesel/{{key}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
 
 uspadd_body = (
@@ -1415,7 +1417,7 @@ with open(os.path.join(OUT, "us-padd.template.html"), "w") as f:
 print(f"  us-padd                  {len(uspadd_body):6,} bytes")
 
 # One template, rendered per crossing by build_border_pages.py.
-BORDER_LD = ('{"@context":"https://***@graph":[' + crumb("{{name}} border wait", "/border-wait-times/{{slug}}/") + ','
+BORDER_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{name}} border wait", "/border-wait-times/{{slug}}/") + ','
  '{"@type":"Dataset","name":"{{name}} Commercial Border Wait","description":"Commercial lane wait time at {{name}}, from the Canada Border Services Agency feed.","url":"' + BASE + '/border-wait-times/{{slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
 
 border_body = (
@@ -1450,5 +1452,111 @@ border_body = (
 with open(os.path.join(OUT, "border-crossing.template.html"), "w") as f:
     f.write(border_body)
 print(f"  border-crossing           {len(border_body):6,} bytes")
+
+# ═══ CBP port reference ══════════════════════════════════════════════════════
+# Every port CBP publishes, both borders, all three lane classes. This is the
+# page that closes the 9-crossings gap: CBSA covers 9 Canada-bound crossings,
+# CBP covers 85 in the US-bound direction and nobody presents the full set.
+#
+# The template carries TWO loop blocks because a port with no published delay
+# must render differently from a port that measured zero. {{reported}} drives an
+# IF block so "not reported" is visible rather than an implied zero.
+CBP_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("All border crossings", "/border-wait-times/all-ports/") + ','
+ '{"@type":"Dataset","name":"North American Land Border Ports","description":"Every US land border port published by U.S. Customs and Border Protection, with commercial, passenger and pedestrian lane waits. 85 ports across the Canadian and Mexican borders.","url":"' + BASE + '/border-wait-times/all-ports/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+
+cbp_ports_body = (
+ head("All Border Crossings — 85 US Land Ports | Northern Mile",
+      "Every land border port U.S. Customs and Border Protection publishes, with commercial truck, passenger and pedestrian lane waits. Both the Canadian and Mexican borders, refreshed from the CBP feed.",
+      "/border-wait-times/all-ports/", "og.jpg", CBP_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">CBP · all lanes · US-bound</span>
+    <h1>Every land border crossing</h1>
+    <div class="figure"><span class="n">{{port_count}}</span><span class="u">ports</span></div>
+    <div class="meta"><span>{{ca_count}} on the Canadian border · {{mx_count}} on the Mexican border</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>How to read this</h2></div>
+    <div class="reading">
+      <p>These are <b>US-bound</b> waits. The Canada-bound direction is a separate feed published by the Canada Border Services Agency, and it is on the <a href="/border-wait-times/">crossing pages</a>. A carrier crossing south checks here; a carrier coming home checks there.</p>
+      <p>Only {{reported_count}} of {{port_count}} ports had published a commercial truck delay when this page was last built. <b>A port with no published figure is shown as not reported, never as zero.</b> Zero means the agency measured no wait. Not reported means the agency did not say, and those are not the same thing to a driver deciding whether to roll now or wait an hour.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Canadian border</h2><p>US-bound · CBP commercial lanes</p></div>
+    <div class="rows">
+    <!--LOOP:ca_ports--><div class="r"><span class="k">{{port_name}}{{crossing_suffix}}<small>{{jurisdiction}}</small></span><span class="v">{{commercial_display}}</span></div><!--/LOOP:ca_ports-->
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Mexican border</h2><p>US-bound · CBP commercial lanes</p></div>
+    <div class="rows">
+    <!--LOOP:mx_ports--><div class="r"><span class="k">{{port_name}}{{crossing_suffix}}<small>{{jurisdiction}}</small></span><span class="v">{{commercial_display}}</span></div><!--/LOOP:mx_ports-->
+    </div>
+    <p class="note">Mexico publishes no southbound figures, so only the US-bound direction exists for these ports.</p>
+  </section>
+''' + subscribe("Border and diesel, weekly",
+   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + foot())
+
+with open(os.path.join(OUT, "cbp-ports.template.html"), "w") as f:
+    f.write(cbp_ports_body)
+print(f"  cbp-ports                 {len(cbp_ports_body):6,} bytes")
+
+# ═══ IFTA fuel tax rates ═════════════════════════════════════════════════════
+# Compliance reference. IFTA, Inc. publishes the authoritative quarterly rate
+# for every jurisdiction in one file, and this is the only all-jurisdiction
+# compliance dataset that exists in a single place. Everything else in this
+# space is fragmented across 50+ government portals.
+#
+# Two rate schedules are published because they genuinely differ: the U.S. row
+# applies to US-licensed carriers and the Can row to Canadian-licensed carriers.
+# Showing one number would be wrong for roughly a third of the jurisdictions.
+IFTA_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("IFTA fuel tax rates", "/fuel-tax-rates/") + ','
+ '{"@type":"Dataset","name":"IFTA Fuel Tax Rates by Jurisdiction","description":"Official quarterly IFTA fuel tax rates for all 10 Canadian provinces and 48 US states, for US-licensed and Canadian-licensed carriers separately.","url":"' + BASE + '/fuel-tax-rates/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+
+ifta_body = (
+ head("IFTA Fuel Tax Rates — All 58 Jurisdictions | Northern Mile",
+      "Official IFTA fuel tax rates for every Canadian province and US state, both carrier rate schedules, for the current quarter. Free, cited, and updated when IFTA publishes.",
+      "/fuel-tax-rates/", "og.jpg", IFTA_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">IFTA · {{quarter}} · official matrix</span>
+    <h1>IFTA fuel tax rates</h1>
+    <div class="figure"><span class="n">{{jurisdiction_count}}</span><span class="u">jurisdictions</span></div>
+    <div class="meta"><span>{{ca_count}} provinces · {{us_count}} states</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Two rates, and why</h2></div>
+    <div class="reading">
+      <p>IFTA publishes a rate for <b>US-licensed</b> carriers and a separate rate for <b>Canadian-licensed</b> carriers wherever the two differ. They are columns here, not one averaged number, because a carrier filing with one licence should not be reading the other licence's rate.</p>
+      <p>Rates are set quarterly by IFTA, Inc. from each jurisdiction's own fuel tax statute, and shown in the unit that statute uses: cents per litre in Canada, and per gallon in the US. Three states also levy a separate surcharge on certain fuel types, which is shown beside the base rate rather than silently added to it.</p>
+      <p class="note">This is the published tax rate. It is not tax advice, and it is not your filing. Your return depends on litres purchased and distance travelled in each jurisdiction.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Canadian provinces</h2><p>per litre · {{quarter}}</p></div>
+    <div class="rows">
+    <!--LOOP:ca_jur--><div class="r"><span class="k">{{name}}<small>{{surcharge_note}}</small></span><span class="v">{{rates_display}}</span></div><!--/LOOP:ca_jur-->
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>US states</h2><p>per gallon · {{quarter}}</p></div>
+    <div class="rows">
+    <!--LOOP:us_jur--><div class="r"><span class="k">{{name}}<small>{{surcharge_note}}</small></span><span class="v">{{rates_display}}</span></div><!--/LOOP:us_jur-->
+    </div>
+    <p class="note">US rates are levied per gallon and Canadian rates per litre; both are shown in the unit the jurisdiction actually uses rather than converted, so the figure matches the statute.</p>
+  </section>
+''' + subscribe("Border and diesel, weekly",
+   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + foot())
+
+with open(os.path.join(OUT, "ifta-rates.template.html"), "w") as f:
+    f.write(ifta_body)
+print(f"  ifta-rates                {len(ifta_body):6,} bytes")
 
 print("\\nAll templates generated.")

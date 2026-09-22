@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T23:28:07.993993+00:00",
+  "generated_at": "2026-09-22T23:51:17.454949+00:00",
   "categories": {
     "fuel": {
       "records": 13,
@@ -34,6 +34,24 @@
       "comparable_7d": false,
       "comparable_yoy": false,
       "field_completeness": {}
+    },
+    "cbp_border": {
+      "records": 85,
+      "history_days": 0,
+      "latest_observation": "2026-09-22",
+      "staleness_days": 0,
+      "comparable_7d": false,
+      "comparable_yoy": false,
+      "quantitative_field": "commercial_delay"
+    },
+    "ifta": {
+      "records": 58,
+      "history_days": 0,
+      "latest_observation": "2026-09-22",
+      "staleness_days": 0,
+      "comparable_7d": false,
+      "comparable_yoy": false,
+      "quantitative_field": "diesel_rate"
     }
   },
   "source_health": {
@@ -48,6 +66,8 @@
     "pmi": "failing",
     "oil": "failing",
     "retail": "failing",
-    "rates": "failing"
+    "rates": "failing",
+    "cbp_border": "ok",
+    "ifta": "ok"
   }
 }
