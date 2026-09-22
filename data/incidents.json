@@ -1,36 +1,46 @@
 {
   "incidents": [
     {
-      "id": "ON-310193",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at JAMES SNOW PKWY, Milton. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/RIDE-102664",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway W",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Bridge maintenance at Highway 1, At Golden Hill Wildlife Overpass and 2km East of Golden Donald Upper Road Underpass. Starting Wed Sep 23 until Wed Sep 23. Last update: September 22nd, 2026 at 4:22pm MDT. Slow moving vehicle in eastbound lane from Golden Hill Wildlife Overpass to Park Bridge.",
+      "event_type": "construction",
+      "severity": "MINOR",
       "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.5445588,
-      "lng": -79.8598146,
-      "start": 1790110380,
-      "end": null,
-      "updated": 1790113440
+      "lanes": "",
+      "lat": 51.29886105,
+      "lng": -116.92922433,
+      "start": "2026-09-22T15:22:29-07:00",
+      "end": "",
+      "updated": "2026-09-22T15:22:29-07:00"
     },
     {
-      "id": "ON-310206",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at BAYVIEW AVE, Toronto. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
+      "id": "drivebc.ca/RIDE-102663",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "Trans-Canada Highway Onramp",
+        "direction": "E",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall at Trans-Canada Highway Onramp, In Burnaby and Kensington Ave on ramp. Eastbound lane closure. Expect delays. Last update: September 22nd, 2026 at 3:16pm PDT. Next update: September 22nd, 2026 at 4:00pm PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.76297558,
-      "lng": -79.38691646,
-      "start": 1790112240,
-      "end": null,
-      "updated": 1790112240
+      "lanes": "",
+      "lat": 49.24204538,
+      "lng": -122.96437449,
+      "start": "2026-09-22T15:16:50-07:00",
+      "end": "",
+      "updated": "2026-09-22T15:16:50-07:00"
     },
     {
       "id": "ON-310195",
@@ -807,7 +817,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-22T21:55:01.628710+00:00",
+  "updated": "2026-09-22T22:26:02.337409+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
