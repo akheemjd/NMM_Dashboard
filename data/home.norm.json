@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-22 22:48",
-  "updated_iso": "2026-09-22T22:48:07+00:00",
-  "build_version": "1790117287",
+  "updated_at": "2026-09-22 22:57",
+  "updated_iso": "2026-09-22T22:57:05+00:00",
+  "build_version": "1790117825",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
-    "max_wait": "20 min"
+    "max_wait": "22 min"
   },
   "fuel": {
     "national_diesel": "271.0",
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 2,
     "gauge_class": "warn",
     "status_line": "HWY 401, HWY 61",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound RAMP at WESTNEY ROAD, Ajax. Right lane\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MISSISSAUGA RD, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MISSISSAUGA RD, Mississauga.\u2026",
+        "road": "HWY 61",
+        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -299,11 +299,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "22 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -313,7 +313,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 EDT"
+      "captured_at": "18:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:20 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -363,7 +363,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 EDT"
+      "captured_at": "18:40 EDT"
     }
   ],
   "market": [
