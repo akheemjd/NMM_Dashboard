@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-309936",
+      "id": "ON-309939",
       "province": "ON",
-      "highway": "HWY 406",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound RAMP at RED HILL, Hamilton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.25041132,
+      "lng": -79.76289332,
+      "start": 1790046600,
+      "end": null,
+      "updated": 1790046600
+    },
+    {
+      "id": "ON-309937",
+      "province": "ON",
+      "highway": "HWY 655",
       "direction": "Northbound",
-      "description": "Emergency Roadwork on HWY 406 Northbound  at GENEVA STREET, St. Catharines. Left shoulder and left lane closed.",
+      "description": "Collision on HWY 655 Northbound  at KIDD CK MINE RD-TEXASGULF, Timmins. Lane and NORTH shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.15788202,
-      "lng": -79.23992641,
-      "start": 1790044500,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 48.652803711,
+      "lng": -81.332337041,
+      "start": 1790045940,
       "end": null,
-      "updated": 1790044500
+      "updated": 1790045940
     },
     {
       "id": "ON-309935",
@@ -783,26 +799,10 @@
       "start": 1790078400,
       "end": 1790200800,
       "updated": 1789773960
-    },
-    {
-      "id": "ON-309126",
-      "province": "ON",
-      "highway": "HWY 34",
-      "direction": "Northbound",
-      "description": "Continuous Construction on HWY 34 Northbound Off-ramp at HWY 417, Vankleek Hill. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.46751,
-      "lng": -74.68014,
-      "start": 1790247600,
-      "end": 1790269200,
-      "updated": 1789773900
     }
   ],
   "total": 50,
-  "updated": "2026-09-22T02:47:32.942605+00:00",
+  "updated": "2026-09-22T03:18:33.489354+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
