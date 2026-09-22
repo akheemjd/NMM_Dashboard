@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-309931",
+      "id": "ON-309936",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound TRANSFER at Warden Express to Collector, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 406",
+      "direction": "Northbound",
+      "description": "Emergency Roadwork on HWY 406 Northbound  at GENEVA STREET, St. Catharines. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7712509,
-      "lng": -79.29935802,
-      "start": 1790042580,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.15788202,
+      "lng": -79.23992641,
+      "start": 1790044500,
       "end": null,
-      "updated": 1790042580
+      "updated": 1790044500
+    },
+    {
+      "id": "ON-309935",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Collision on HWY 417 Westbound  at RICHMOND RD (IC 130)/BAYSHORE DR, Ottawa. 2 centre lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 centre lanes closed",
+      "lat": 45.34548,
+      "lng": -75.80572,
+      "start": 1790044080,
+      "end": null,
+      "updated": 1790044080
     },
     {
       "id": "ON-309886",
@@ -783,26 +799,10 @@
       "start": 1790247600,
       "end": 1790269200,
       "updated": 1789773900
-    },
-    {
-      "id": "ON-309125",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 11 Northbound  between LAKESHORE DR (E) - MACGREGOR TWP and LAKESHORE DR (E) - MACGREGOR TWP, Thunder Bay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 48.53258,
-      "lng": -88.94932,
-      "start": 1789992000,
-      "end": 1790114400,
-      "updated": 1789773840
     }
   ],
   "total": 50,
-  "updated": "2026-09-22T02:16:32.572117+00:00",
+  "updated": "2026-09-22T02:47:32.942605+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

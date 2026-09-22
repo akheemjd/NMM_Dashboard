@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-22 02:16",
-  "updated_iso": "2026-09-22T02:16:36+00:00",
-  "build_version": "1790043396",
+  "updated_at": "2026-09-22 02:47",
+  "updated_iso": "2026-09-22T02:47:37+00:00",
+  "build_version": "1790045257",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "5 min"
+    "max_name": "Queenston-Lewiston Bridge",
+    "max_wait": "14 min"
   },
   "fuel": {
     "national_diesel": "270.5",
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 3,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 61",
+    "status_line": "HWY 406, HWY 417, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound TRANSFER at Warden Express to Collector,\u2026",
+        "road": "HWY 406",
+        "what": "Emergency Roadwork on HWY 406 Northbound  at GENEVA STREET, St. Catharines.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 61",
-        "what": "Highway Maintenance on HWY 61 Northbound  at LAKE LENORE ROAD (W), Hymers. Lane\u2026",
+        "road": "HWY 417",
+        "what": "Collision on HWY 417 Westbound  at RICHMOND RD (IC 130)/BAYSHORE DR, Ottawa. 2\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,7 +283,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -293,27 +293,27 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "14 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:00 EDT"
+      "captured_at": "22:20 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -333,7 +333,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT"
+      "captured_at": "20:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 PDT"
+      "captured_at": "19:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -363,7 +363,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:15 EDT"
     }
   ],
   "market": [
