@@ -1,6 +1,86 @@
 {
   "incidents": [
     {
+      "id": "ON-310191",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at WALKERS LINE, Burlington. 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 left lanes closed",
+      "lat": 43.36643406,
+      "lng": -79.78786008,
+      "start": 1790110320,
+      "end": null,
+      "updated": 1790111880
+    },
+    {
+      "id": "ON-310203",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound HOV at WALKERS LINE, Burlington. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.36660767,
+      "lng": -79.78763938,
+      "start": 1790111880,
+      "end": null,
+      "updated": 1790111880
+    },
+    {
+      "id": "ON-310202",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound  at KING ROAD, King. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.9204266,
+      "lng": -79.5662497,
+      "start": 1790111640,
+      "end": null,
+      "updated": 1790111640
+    },
+    {
+      "id": "ON-310195",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MISSISSAUGA RD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.605153,
+      "lng": -79.7463043,
+      "start": 1790111160,
+      "end": null,
+      "updated": 1790111160
+    },
+    {
+      "id": "ON-310193",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at JAMES SNOW PKWY, Milton. Centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "centre lane closed",
+      "lat": 43.5445588,
+      "lng": -79.8598146,
+      "start": 1790110380,
+      "end": null,
+      "updated": 1790110380
+    },
+    {
       "id": "ON-310188",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -79,22 +159,6 @@
       "start": 1790107920,
       "end": null,
       "updated": 1790107920
-    },
-    {
-      "id": "ON-310177",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at DUFFERIN STREET, Toronto. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.72803927,
-      "lng": -79.45798094,
-      "start": 1790107800,
-      "end": null,
-      "updated": 1790107800
     },
     {
       "id": "ON-309993",
@@ -454,26 +518,6 @@
       "updated": 1790086140
     },
     {
-      "id": "drivebc.ca/DBC-94221",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 97",
-        "from": "Old Summit Lake Rd N",
-        "direction": "NONE"
-      },
-      "direction": "",
-      "description": "Highway 97. Shoulder maintenance between Old Summit Lake Rd N and Edric Rd (18 km north of Prince George). Until Tue Sep 22 at 2:00 PM PDT. Single lane alternating traffic. Watch for traffic control. Last updated Tue Sep 22 at 5:59 AM PDT. (DBC-94221)",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 54.168334,
-      "lng": -122.609315,
-      "start": "2026-09-22T05:59:40-07:00",
-      "end": "",
-      "updated": "2026-09-22T07:00:00-07:00"
-    },
-    {
       "id": "ON-302207",
       "province": "ON",
       "highway": "HWY 61",
@@ -634,22 +678,6 @@
       "updated": 1790038860
     },
     {
-      "id": "ON-309959",
-      "province": "ON",
-      "highway": "HWY 28",
-      "direction": "Southbound",
-      "description": "Continuous Maintenance on HWY 28 Southbound  between ADDINGTON RD 8, Denbigh and RUBY MINE RD, Hardwood Lake. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.1448,
-      "lng": -77.30513,
-      "start": 1790074800,
-      "end": 1790110800,
-      "updated": 1790028540
-    },
-    {
       "id": "ON-309886",
       "province": "ON",
       "highway": "HWY 17",
@@ -664,22 +692,6 @@
       "start": 1790424000,
       "end": 1790798400,
       "updated": 1790027160
-    },
-    {
-      "id": "ON-309870",
-      "province": "ON",
-      "highway": "HWY 3",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 3 Westbound  between Yarmouth Centre Road, Yarmouth Centre and Penhale Road, Orwell. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 42.77732,
-      "lng": -81.1213,
-      "start": 1790074800,
-      "end": 1790110800,
-      "updated": 1790024940
     },
     {
       "id": "ON-309865",
@@ -792,26 +804,10 @@
       "start": 1790215200,
       "end": 1791453600,
       "updated": 1790015640
-    },
-    {
-      "id": "ON-309804",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Engineering Investigation on QEW Fort Erie Bound  between THIRD LINE and THIRD LINE, Oakville. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.42389,
-      "lng": -79.72526,
-      "start": 1790301600,
-      "end": 1790326800,
-      "updated": 1790014320
     }
   ],
   "total": 50,
-  "updated": "2026-09-22T20:53:06.829033+00:00",
+  "updated": "2026-09-22T21:24:00.893808+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
