@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-309941",
+      "province": "ON",
+      "highway": "NIKOLA TESLA BLVD",
+      "direction": "Eastbound",
+      "description": "Collision on NIKOLA TESLA BLVD Eastbound RAMP at RED HILL, Burlington. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.25798703,
+      "lng": -79.76862252,
+      "start": 1790047620,
+      "end": null,
+      "updated": 1790047620
+    },
+    {
       "id": "ON-309939",
       "province": "ON",
       "highway": "QEW",
@@ -31,22 +47,6 @@
       "start": 1790045940,
       "end": null,
       "updated": 1790045940
-    },
-    {
-      "id": "ON-309935",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Collision on HWY 417 Westbound  at RICHMOND RD (IC 130)/BAYSHORE DR, Ottawa. 2 centre lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 centre lanes closed",
-      "lat": 45.34548,
-      "lng": -75.80572,
-      "start": 1790044080,
-      "end": null,
-      "updated": 1790044080
     },
     {
       "id": "ON-309886",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-22T03:18:33.489354+00:00",
+  "updated": "2026-09-22T03:49:34.168009+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
