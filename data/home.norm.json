@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-22 01:45",
-  "updated_iso": "2026-09-22T01:45:36+00:00",
-  "build_version": "1790041536",
+  "updated_at": "2026-09-22 02:16",
+  "updated_iso": "2026-09-22T02:16:36+00:00",
+  "build_version": "1790043396",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 2,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -260,7 +260,7 @@
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound ON-RAMP at WHITES ROAD, Pickering. Right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound TRANSFER at Warden Express to Collector,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -299,21 +299,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "4 min",
+      "wait": "1 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:20 EDT"
+      "captured_at": "22:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,7 +323,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:45 EDT"
+      "captured_at": "21:48 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:20 PDT"
+      "captured_at": "19:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -409,8 +409,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "2 of 9 crossings slow",
-      "value": "2/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
