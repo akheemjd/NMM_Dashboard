@@ -247,9 +247,28 @@ def write(name, body):
 
 
 def crumb(name, slug):
+    """Two-level trail: Dashboard > name.
+
+    The final crumb carries no 'item'. Google's breadcrumb guidance is that the
+    last element is the current page and does not need a URL; all 160 trails on
+    the site were emitting one.
+    """
     return ('{"@type":"BreadcrumbList","itemListElement":['
             '{"@type":"ListItem","position":1,"name":"Dashboard","item":"' + BASE + '/"},'
-            '{"@type":"ListItem","position":2,"name":"' + name + '","item":"' + BASE + slug + '"}]}')
+            '{"@type":"ListItem","position":2,"name":"' + name + '"}]}')
+
+
+def crumb3(mid_name, mid_slug, name):
+    """Three-level trail: Dashboard > mid > name.
+
+    A city page lives at /diesel-prices/<province>/<city>/, but the trail said
+    Dashboard > City and skipped the province — so it described a hierarchy the
+    URL does not have.
+    """
+    return ('{"@type":"BreadcrumbList","itemListElement":['
+            '{"@type":"ListItem","position":1,"name":"Dashboard","item":"' + BASE + '/"},'
+            '{"@type":"ListItem","position":2,"name":"' + mid_name + '","item":"' + BASE + mid_slug + '"},'
+            '{"@type":"ListItem","position":3,"name":"' + name + '"}]}')
 
 
 print("Generating templates")
@@ -1264,7 +1283,7 @@ print(f"  province                   {len(prov_body):6,} bytes")
 # One template, rendered per city by build_city_pages.py. Same shell.
 # {{prose}} is the writer-generated context section; {{siblings}} loops the
 # other survey cities in the same province.
-CITY_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{name}} diesel prices", "/diesel-prices/{{prov_slug}}/{{slug}}/") + ','
+CITY_LD = ('{"@context":"https://schema.org","@graph":[' + crumb3("{{prov_name}} diesel prices", "/diesel-prices/{{prov_slug}}/", "{{name}} diesel prices") + ','
  '{"@type":"Dataset","name":"{{name}} Diesel Prices","description":"Retail diesel price in {{name}}, {{prov_name}}, from the NRCan weekly survey.","url":"' + BASE + '/diesel-prices/{{prov_slug}}/{{slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"{{name}}, {{prov_name}}, Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"{{updated_iso}}"}]}')
 
 city_body = (
@@ -1302,7 +1321,7 @@ city_body = (
 ''' + subscribe("{{name}} diesel, every week",
    "Where {{name}} and the rest of {{prov_name}} moved, and what it means for cost per kilometre. One email on Wednesday mornings.")
  + '''
-  <p class="note"><!--IF:has_province_page--><a href="/diesel-prices/{{prov_slug}}/">← {{prov_name}} overview</a> · <!--/IF:has_province_page--><a href="/fuel-prices/">All ten provinces</a></p>
+  <p class="note"><a href="/diesel-prices/{{prov_slug}}/">← {{prov_name}} overview</a> · <a href="/fuel-prices/">All ten provinces</a></p>
 ''' + foot())
 
 with open(os.path.join(OUT, "city.template.html"), "w") as f:

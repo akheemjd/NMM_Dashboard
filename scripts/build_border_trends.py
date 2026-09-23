@@ -177,6 +177,14 @@ def build_table_rows(trends):
     return rows_html
 
 
+def _prose_html(md):
+    """Markdown -> HTML for the writer's copy, minus its own H1."""
+    import markdown as _md
+    body = chr(10).join(
+        ln for ln in md.splitlines() if not ln.startswith("# "))
+    return _md.markdown(body.strip(), extensions=["extra"])
+
+
 def load_prose():
     """Load human-written prose for the page. Must be >400 chars."""
     path = os.path.join(CONTENT, "border-trends.md")
@@ -187,6 +195,11 @@ def load_prose():
     body = re.sub(r"<!--.*?-->", "", prose, flags=re.DOTALL).strip()
     if len(body) < MIN_PROSE_CHARS:
         raise ValueError(f"Prose body is {len(body)} chars, minimum {MIN_PROSE_CHARS}. Too thin.")
+    # Rendered here, not in the template: the template had NO {{prose}}
+    # slot at all, so 1,186 bytes of written copy was handed to fill()
+    # every build and silently discarded. The page shipped as a bare
+    # table. Anything fill() is given that the template does not use
+    # now fails loudly below.
     return prose
 
 def main():
@@ -299,7 +312,7 @@ def main():
         "updated_iso": updated_iso,
         "build_version": build_version,
         "table_rows": table_rows,
-        "prose": prose,
+        "prose_html": _prose_html(prose),
         "top_alerts": "\n".join(alert_lines),
         "hourly_charts": hourly_charts_html,
         "daily_charts": daily_charts_html,
@@ -310,6 +323,13 @@ def main():
     html = fill(template, data)
 
     leftover = [t for t in ("{{", "<!--LOOP:", "<!--IF:") if t in html]
+    # fill() raises on tokens the DATA does not satisfy, but is silent about
+    # data the TEMPLATE never uses. That asymmetry is how 1,186 bytes of
+    # prose came to be handed to fill() every build and thrown away.
+    _marker = 'Border wait times vary by time of day'
+    if _marker not in html:
+        raise ValueError('border-trends prose is not in the built page — '
+                         'the template has no slot for it')
     if leftover:
         raise ValueError(f"Unresolved template markup: {leftover}")
 
