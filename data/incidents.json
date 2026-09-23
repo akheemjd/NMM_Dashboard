@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-310276",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Vaughan. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.847259,
+      "lng": -79.549089,
+      "start": 1790123160,
+      "end": null,
+      "updated": 1790123160
+    },
+    {
+      "id": "ON-310273",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS RAMP at HWY 403, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.63876153,
+      "lng": -79.65543458,
+      "start": 1790122800,
+      "end": null,
+      "updated": 1790122800
+    },
+    {
       "id": "ON-310262",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +47,6 @@
       "start": 1790119440,
       "end": null,
       "updated": 1790119440
-    },
-    {
-      "id": "ON-310257",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound ON-RAMP at HWY 9/DAVIS DR, Kettleby. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.027344,
-      "lng": -79.596296,
-      "start": 1790118660,
-      "end": null,
-      "updated": 1790118660
     },
     {
       "id": "ON-310181",
@@ -788,26 +804,10 @@
       "start": 1790215200,
       "end": 1791450000,
       "updated": 1790011680
-    },
-    {
-      "id": "ON-309778",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 400 Southbound  between PORT SEVERN ROAD and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.79756,
-      "lng": -79.71239,
-      "start": 1790593200,
-      "end": 1790895600,
-      "updated": 1790011500
     }
   ],
   "total": 50,
-  "updated": "2026-09-22T23:52:37.563776+00:00",
+  "updated": "2026-09-23T00:30:04.963059+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
