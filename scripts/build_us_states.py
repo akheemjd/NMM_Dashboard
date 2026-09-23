@@ -121,6 +121,23 @@ def build():
         j = ifta_jur.get(name.upper())
         ifta_diesel = ((j or {}).get("us") or {}).get("diesel")
 
+        # Three of the 51 jurisdictions are not IFTA members at all: Alaska,
+        # Hawaii and the District of Columbia. Saying "not published" would imply
+        # IFTA has a figure and we failed to read it, which is the opposite of
+        # true and would send a carrier looking for a rate that does not exist.
+        if not j:
+            ifta_display = "not an IFTA jurisdiction"
+            ifta_absent = True
+        elif ifta_diesel in (0, 0.0):
+            # Oregon publishes a NIL rate in the matrix. That is a published
+            # value, not a gap, and a bare "$0.0000" invites the reader to think
+            # the page failed to load a number.
+            ifta_display = "nil"
+            ifta_absent = False
+        else:
+            ifta_display = money(ifta_diesel, 4)
+            ifta_absent = False
+
         state_excise = st.get("diesel_state_excise")
         all_in = st.get("diesel_all_in")
 
@@ -162,16 +179,51 @@ def build():
             price_txt = "not published"
             price_short = "n/a"
 
-        tax_note = (
-            f"The two figures above answer different questions. The statutory excise "
-            f"is what {name} levies on a gallon of diesel sold in the state. The IFTA "
-            f"rate is what a carrier reports to {name} for a litre burned there, and "
-            f"in most jurisdictions the two are not the same number."
-        )
-        if ifta_diesel is None:
+        if ifta_absent:
+            # Do not describe an IFTA rate that does not exist for this state.
             tax_note = (
-                f"IFTA did not publish a separate rate for {name} this quarter, so only "
-                f"the statutory excise is shown. " + tax_note
+                f"The four figures above are the whole picture for {name}. The "
+                f"statutory excise is what the state levies on a gallon of diesel sold "
+                f"there, other state fees are added on top, and the federal rate "
+                f"applies everywhere in the country."
+            )
+        elif ifta_display == "nil":
+            tax_note = (
+                f"{name} is the exception in the country here, which is why the top of "
+                f"this page carries a statutory excise and a nil IFTA rate at the same "
+                f"time. They are not in conflict. They describe different vehicles."
+            )
+        else:
+            tax_note = (
+                f"The two figures above answer different questions. The statutory excise "
+                f"is what {name} levies on a gallon of diesel sold in the state. The IFTA "
+                f"rate is what a carrier reports to {name} for a litre burned there, and "
+                f"in most jurisdictions the two are not the same number."
+            )
+        if ifta_absent:
+            ifta_sentence = (
+                f"{name} is not an IFTA jurisdiction, so no IFTA rate exists to file "
+                f"for it. That is not a gap in this page. The statutory excise above "
+                f"is the figure that applies."
+            )
+        elif ifta_display == "nil":
+            # Oregon is the one state that does not tax heavy trucks by the
+            # gallon, so the excise above and the IFTA rate below describe
+            # different vehicles. Saying only "the rate is nil" would look like a
+            # contradiction against the $0.40 excise sitting right above it.
+            ifta_sentence = (
+                f"IFTA publishes a <b>nil</b> diesel rate for {name}. That is a "
+                f"published value, not a missing one. {name} does not tax heavy "
+                f"trucks by the gallon, so the statutory excise shown above is not "
+                f"the figure that applies to them, which is why the two differ."
+            )
+        else:
+            ifta_sentence = (
+                f"Under IFTA, a US-licensed carrier files {name} at "
+                f"<b>{money(ifta_diesel, 4)}</b> a gallon for diesel. That is the "
+                f"rate the state collects on a gallon sold there, and it is a "
+                f"different number from the statutory total above because IFTA and "
+                f"the statute do not measure the same thing."
             )
 
         description = (
@@ -192,8 +244,8 @@ def build():
             "district_price_short": price_short,
             "district_unit": "USD/gal",
             "diesel_week": diesel_week,
-            "ifta_diesel": money(ifta_diesel, 4),
-            "ifta_display": money(ifta_diesel, 4),
+            "ifta_sentence": ifta_sentence,
+            "ifta_display": ifta_display,
             "state_excise": money(state_excise, 4),
             "state_excise_display": money(state_excise, 4),
             # A blank in EIA's "Other taxes & Fees" column means ZERO, not

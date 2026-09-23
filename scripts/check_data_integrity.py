@@ -380,6 +380,47 @@ def check_us_state_pages():
     return bad
 
 
+def check_brand_identity():
+    """The brand must describe the same geography the data covers.
+
+    check_coherence.py only compares pages to each other, so it catches drift on
+    ONE page and is blind to a stale string that sits on ALL of them. When the
+    brand was continentalised, "Canadian trucking data" survived in the header of
+    the hand-maintained border-trends template for two build cycles precisely
+    because that page was consistent with itself.
+
+    The brand tagline now appears in two places, the header mark and the footer,
+    and both must agree.
+    """
+    bad = []
+    banned = [
+        "Canadian trucking data",   # identity, not geography
+        "Canadian Carriers",        # advertise page
+        "Citable Canadian",         # press page
+    ]
+    counts = {b: 0 for b in banned}
+    foot_tags = {}
+    for dirpath, _, files in os.walk(DOCS):
+        if "index.html" not in files:
+            continue
+        h = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                 errors="replace").read()
+        rel = os.path.relpath(os.path.join(dirpath, "index.html"), DOCS).replace("\\", "/")
+        for b in banned:
+            if b in h:
+                counts[b] += 1
+                bad.append(f"{rel}: still says {b!r}")
+        m = re.search(r'<span class="tag">([^<]*)</span>', h)
+        if m:
+            foot_tags[m.group(1)] = foot_tags.get(m.group(1), 0) + 1
+
+    if len(foot_tags) > 1:
+        bad.append(f"footer tagline is not uniform: {foot_tags}")
+    if "North American" not in "".join(foot_tags):
+        bad.append(f"footer tagline does not read North American: {foot_tags}")
+    return bad
+
+
 CHECKS = (
     ("lookback never returns the newest point", check_lookback_not_latest),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
@@ -389,6 +430,7 @@ CHECKS = (
     ("cbp commercial delay never faked as zero", check_cbp_missing_not_zero),
     ("sitemap is well-formed, complete and honestly dated", check_sitemap),
     ("us state pages attribute diesel to a district", check_us_state_pages),
+    ("brand identity matches the data geography", check_brand_identity),
 )
 
 

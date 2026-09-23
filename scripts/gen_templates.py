@@ -101,7 +101,7 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hd"><div class="wrap">
-  <a class="mark" href="/"><img class="logo" src="/assets/logo.png" width="32" height="32" alt=""><b>Northern Mile</b><span>Canadian trucking data</span></a>
+  <a class="mark" href="/"><img class="logo" src="/assets/logo.png" width="32" height="32" alt=""><b>Northern Mile</b><span>North American trucking data</span></a>
 </div></header>
 
 <nav class="nav" aria-label="Sections"><div class="wrap">{nav_html(canon)}</div></nav>
@@ -649,10 +649,10 @@ write("border-wait-times",
 # ═══ Exchange ═════════════════════════════════════════════════════════
 write("exchange-rate",
  head("USD/CAD Exchange Rate for Carriers — {{fx.usd_cad}} | Northern Mile",
-      "The Bank of Canada daily USD/CAD observation at {{fx.usd_cad}}, published for Canadian carriers running cross-border freight and settling fuel in two currencies.",
+      "The Bank of Canada daily USD/CAD observation at {{fx.usd_cad}}, published for carriers running cross-border freight and settling fuel in two currencies.",
       "/exchange-rate/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("USD/CAD exchange rate","/exchange-rate/") + ','
-      '{"@type":"Dataset","name":"USD/CAD Exchange Rate for Canadian Carriers","description":"The Bank of Canada daily USD/CAD observation, published alongside Canadian diesel prices for carriers running cross-border freight.","url":"' + BASE + '/exchange-rate/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}', "article")
+      '{"@type":"Dataset","name":"USD/CAD Exchange Rate for Cross-Border Carriers","description":"The Bank of Canada daily USD/CAD observation, published alongside diesel prices on both sides of the border for carriers running cross-border freight.","url":"' + BASE + '/exchange-rate/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}', "article")
  + '''
   <section class="hero">
     <span class="eyebrow">Bank of Canada daily observation</span>
@@ -1061,7 +1061,7 @@ write("press",
       "For journalists: citable Canadian fuel, exchange-rate, and border-wait figures with sources and dates attached. Story angles, how to cite us, and press contact.",
       "/press/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Press & data", "/press/") + ',' +
-      '{"@type":"WebPage","name":"Press & Data","description":"Citable Canadian trucking data for journalists, from Northern Mile Media.","url":"' + BASE + '/press/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
+      '{"@type":"WebPage","name":"Press & Data","description":"Citable North American trucking data for journalists, from Northern Mile Media.","url":"' + BASE + '/press/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
  + '''
   <section class="hero">
     <span class="eyebrow">For journalists</span>
@@ -1598,7 +1598,7 @@ us_state_body = (
     </div>
     <div class="reading">
       <p>The four numbers add up. State excise {{state_excise}} plus other state fees {{state_other}} gives a state total of <b>{{state_total}}</b>. Add the federal {{federal_excise}} and the all-in figure is <b>{{all_in}}</b> a gallon.</p>
-      <p>Under IFTA, a US-licensed carrier files {{state_name}} at <b>{{ifta_diesel}}</b> a gallon for diesel. That is what the state actually collects on a gallon sold there, and it is a different number from the statutory total because IFTA and the statute do not measure the same thing.</p>
+      <p>{{ifta_sentence}}</p>
       <p>{{tax_note}}</p>
     </div>
   </section>
