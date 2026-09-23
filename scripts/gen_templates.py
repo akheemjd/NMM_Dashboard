@@ -1352,11 +1352,13 @@ us_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>Five regions</h2><p>Petroleum Administration for Defense Districts · ¢/L CAD and $/gal</p></div>
+    <div class="lead"><h2>Eleven districts</h2><p>Every EIA diesel district · ¢/L CAD and $/gal</p></div>
     <div class="rows">
     <!--LOOP:padds--><a class="r" href="/us-diesel/{{key}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:padds-->
     </div>
     <p class="note">Each region is an EIA PADD — Petroleum Administration for Defense District. The price is that region&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
+    <p class="note">Each district is an EIA pricing region. The price is that district&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
+    <p class="note">EIA does not price diesel by state, so there is no state-level figure to show. The <a href="/us-diesel/states/">state pages</a> give each state&rsquo;s fuel tax and name the district its diesel figure comes from.</p>
   </section>
 
   <section class="sec">
@@ -1558,5 +1560,139 @@ ifta_body = (
 with open(os.path.join(OUT, "ifta-rates.template.html"), "w") as f:
     f.write(ifta_body)
 print(f"  ifta-rates                {len(ifta_body):6,} bytes")
+
+# ═══ US state pages ═══════════════════════════════════════════════════════════
+#
+# The honest version of what the incumbents fake. EIA does not publish diesel by
+# state, so most US "state diesel price" pages quietly serve a district figure
+# under a state URL and mention the fact in a footnote. This page shows what IS
+# state-level (the fuel taxes) AS state-level, and shows the diesel figure as a
+# district figure with the reason stated in the body. The attribution is the
+# product: it is the one thing a competitor cannot copy without giving up the
+# number of "state" pages they advertise.
+US_STATE_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{state_name}}", "{{path_url}}") + ','
+ '{"@type":"WebPage","name":"{{state_name}} diesel prices and fuel tax",'
+ '"url":"{{canonical}}","isAccessibleForFree":true,'
+ '"creator":{"@id":"' + ORG_URL + '/#org"},'
+ '"dateModified":"{{updated_iso}}"}]}')
+
+us_state_body = (
+ head("{{state_name}} Diesel Prices and Fuel Tax | Northern Mile",
+      "{{description}}",
+      "{{path_url}}", "og.jpg", US_STATE_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">United States · {{abbr}}</span>
+    <h1>{{state_name}} diesel prices and fuel tax</h1>
+    <div class="figure"><span class="n">{{district_price_short}}</span><span class="u">{{district_unit}}</span></div>
+    <div class="meta"><span>{{district_label}} district · week ending {{diesel_week}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Fuel tax in {{state_name}}</h2><p>The part of this page that is genuinely about {{state_name}}</p></div>
+    <div class="cards">
+      <div class="card"><div class="k">State excise, diesel</div><div class="v">{{state_excise}}</div><div class="s">per gallon, statutory</div></div>
+      <div class="card"><div class="k">Other state fees</div><div class="v">{{state_other}}</div><div class="s">{{state_other_note}}</div></div>
+      <div class="card"><div class="k">Federal</div><div class="v">{{federal_excise}}</div><div class="s">per gallon, all states</div></div>
+      <div class="card"><div class="k">All in</div><div class="v">{{all_in}}</div><div class="s">state total plus federal</div></div>
+    </div>
+    <div class="reading">
+      <p>The four numbers add up. State excise {{state_excise}} plus other state fees {{state_other}} gives a state total of <b>{{state_total}}</b>. Add the federal {{federal_excise}} and the all-in figure is <b>{{all_in}}</b> a gallon.</p>
+      <p>Under IFTA, a US-licensed carrier files {{state_name}} at <b>{{ifta_diesel}}</b> a gallon for diesel. That is what the state actually collects on a gallon sold there, and it is a different number from the statutory total because IFTA and the statute do not measure the same thing.</p>
+      <p>{{tax_note}}</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Why there is no {{state_name}} diesel price here</h2></div>
+    <div class="reading">
+      <p>The Energy Information Administration publishes a weekly on-highway diesel price on a <b>district</b> basis, not a state basis. There are eleven districts in the whole country and {{state_name}} is not one of them.</p>
+      <p>{{state_name}} sits in the <b>{{district_label}}</b> district. The figure at the top of this page is that district's weekly price. It is not a {{state_name}} price, and we are not going to label it as one.</p>
+      <p>Plenty of sites will show you a {{state_name}} diesel price. What they are showing you is the same district number they show for every neighbouring state, because the state-level number does not exist to show. If a site claims a per-state diesel price, ask it which survey it came from.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>What is state-level in {{state_name}}</h2></div>
+    <div class="rows">
+      <div class="r"><span class="k">Fuel tax rate<span class="s2">levied by {{abbr}}, published by IFTA</span></span><span class="v">{{ifta_display}}</span></div>
+      <div class="r"><span class="k">Statutory excise<span class="s2">levied by {{abbr}}, published by EIA</span></span><span class="v">{{state_excise_display}}</span></div>
+      <div class="r"><span class="k">Diesel price<span class="s2">published by district, not by state</span></span><span class="v">{{district_label}}</span></div>
+    </div>
+  </section>
+  <!--IF:has_border-->
+  <section class="sec">
+    <div class="lead"><h2>Border crossings in {{state_name}}</h2><p>{{border_count}} ports · CBP commercial lanes</p></div>
+    <div class="reading">
+      <p>{{border_intro}}</p>
+    </div>
+    <div class="rows">
+      <!--LOOP:borderrows--><div class="r"><span class="k">{{label}}</span><span class="v">{{delay}}</span></div><!--/LOOP:borderrows-->
+    </div>
+    <p class="note">A port with no published figure is shown as not reported. Zero means the agency measured no commercial delay. Not reported means the agency did not say.</p>
+  </section>
+  <!--/IF:has_border-->
+
+  <section class="sec">
+    <div class="lead"><h2>Where to go next</h2></div>
+    <div class="rows">
+      <a class="r" href="/us-diesel/"><span class="k">US diesel by district<span class="s2">All 11 EIA districts in one table</span></span><span class="v">all 11</span></a>
+      <a class="r" href="/fuel-tax-rates/"><span class="k">IFTA fuel tax rates<span class="s2">Every province and state</span></span><span class="v">58</span></a>
+      <a class="r" href="/border-wait-times/all-ports/"><span class="k">Border crossings<span class="s2">Both borders, all lanes</span></span><span class="v">85</span></a>
+      <a class="r" href="/fuel-prices/"><span class="k">Canadian diesel prices<span class="s2">By province and city</span></span><span class="v">by province</span></a>
+      <a class="r" href="/methodology/nmdi/"><span class="k">Methodology<span class="s2">Sources and how the index is built</span></span><span class="v">sources</span></a>
+    </div>
+  </section>
+''' + subscribe("Diesel, border and tax, weekly",
+   "What fuel, the border and the dollar did to cost per mile this week. One email on Wednesday mornings.") + foot())
+
+with open(os.path.join(OUT, "us-state.template.html"), "w") as f:
+    f.write(us_state_body)
+print(f"  us-state                  {len(us_state_body):6,} bytes")
+
+# ═══ US state index ═══════════════════════════════════════════════════════════
+# Without this the 51 state pages are orphans: nothing links to them, and
+# check_links.py fails the build on an unreachable page. The hub is also where
+# the district/state distinction gets stated once, plainly, before the reader
+# clicks into a state.
+US_STATES_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("US states", "/us-diesel/states/") + ','
+ '{"@type":"CollectionPage","name":"US state diesel and fuel tax",'
+ '"url":"' + BASE + '/us-diesel/states/","isAccessibleForFree":true,'
+ '"creator":{"@id":"' + ORG_URL + '/#org"}}]}')
+
+us_states_body = (
+ head("US State Diesel Prices and Fuel Tax — All 51 | Northern Mile",
+      "Every US state with the fuel tax it actually levies and the diesel district it sits in. EIA prices diesel by district, not by state, and each page says which district applies.",
+      "/us-diesel/states/", "og.jpg", US_STATES_LD, "article")
+ + '''
+  <section class="hero">
+    <span class="eyebrow">United States · 50 states and DC</span>
+    <h1>Diesel and fuel tax by state</h1>
+    <div class="figure"><span class="n">{{state_count}}</span><span class="u">states</span></div>
+    <div class="meta"><span>{{district_count}} diesel districts · week ending {{diesel_week}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Read this before the table</h2></div>
+    <div class="reading">
+      <p>The Energy Information Administration publishes a weekly on-highway diesel price for <b>eleven districts</b>, not for fifty states. There is no state-level diesel price to publish, for any state, from any source.</p>
+      <p>So every US site with a "state diesel price" page is serving you a district number under a state heading. Some say so in a footnote. Most do not say so at all.</p>
+      <p>This table gives you the two things that genuinely are per-state, the fuel tax a state levies and the tax a carrier files under IFTA, and names the district each state's diesel figure comes from. A state page shows the same district number a neighbouring state's page shows, and tells you that is what it is doing.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>All 51</h2><p>Rates per gallon. Diesel is the district figure.</p></div>
+    <div class="rows">
+      <!--LOOP:states--><a class="r" href="{{url}}"><span class="k">{{name}}<span class="s2">{{district}} district · IFTA {{ifta}}</span></span><span class="v">{{all_in}}<span class="s2">all in</span></span></a><!--/LOOP:states-->
+    </div>
+    <p class="note">All-in is state excise plus other state fees plus the {{federal}} federal rate. IFTA is the rate a US-licensed carrier files for that state.</p>
+  </section>
+''' + subscribe("Diesel, border and tax, weekly",
+   "What fuel, the border and the dollar did to cost per mile this week. One email on Wednesday mornings.") + foot())
+
+with open(os.path.join(OUT, "us-states.template.html"), "w") as f:
+    f.write(us_states_body)
+print(f"  us-states                 {len(us_states_body):6,} bytes")
 
 print("\\nAll templates generated.")

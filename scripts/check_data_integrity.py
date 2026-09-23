@@ -290,6 +290,96 @@ def check_sitemap():
     return bad
 
 
+def _slugify_state(name):
+    """Must match build_us_states.py's slugify exactly, or nothing is found."""
+    s = name.lower().replace("&", " and ")
+    s = re.sub(r"[^a-z0-9]+", "-", s)
+    return s.strip("-")
+
+
+def check_us_state_pages():
+    """Every US state page must attribute its diesel figure to a district.
+
+    This is the one property that separates these pages from the fifty-state
+    pages the incumbents publish. EIA prices diesel across eleven districts, not
+    fifty states, so a state page showing a diesel number without saying where it
+    came from is making a claim the source does not support.
+
+    Three things are asserted, and all three have a real failure behind them:
+
+    1. The district is named. A page that says "Texas diesel" and prints the Gulf
+       Coast number is the exact dishonesty this build exists to avoid.
+    2. The page states that EIA does not price by state. Without that sentence
+       the attribution is present but inert.
+    3. The tax figures reconcile, because the page prints the arithmetic. A card
+       showing excise, other fees, federal and all-in that does not add up is a
+       wrong number on a page whose whole pitch is that the numbers are right.
+    """
+    import html as _html
+
+    base = os.path.join(DOCS, "us-diesel")
+    if not os.path.isdir(base):
+        return ["docs/us-diesel/ is missing — build_us_states.py did not run"]
+
+    # _load() takes a full filename; it does not append ".json".
+    tax = _load("us_fuel_tax.json")
+    if not tax:
+        return ["data/us_fuel_tax.json unreadable — cannot verify the state pages"]
+    federal = (tax.get("federal") or {}).get("diesel_total")
+    states_tax = {s["abbr"]: s for s in tax.get("states", []) if s.get("abbr")}
+
+    # Only the state pages. /us-diesel/ also holds the district pages
+    # (midwest, gulf_coast, ...), and those are a different kind of page with a
+    # different contract, so they are matched out by name rather than by a
+    # guessed phrase. A slug is a state page only if a state name slugs to it.
+    state_slugs = {_slugify_state(s["name"]) for s in tax.get("states", [])
+                   if s.get("name")}
+
+    bad = []
+    found = 0
+    for dirpath, _, files in os.walk(base):
+        if "index.html" not in files:
+            continue
+        slug = os.path.basename(dirpath)
+        if slug not in state_slugs:
+            continue
+        path = os.path.join(dirpath, "index.html")
+        rel = os.path.relpath(path, DOCS).replace("\\", "/")
+        h = open(path, encoding="utf-8", errors="replace").read()
+        text = _html.unescape(re.sub(r"<[^>]+>", " ", h))
+        text = re.sub(r"\s+", " ", text)
+        found += 1
+
+        if "district" not in text.lower():
+            bad.append(f"{rel}: no district attribution anywhere on the page")
+            continue
+
+        if "not a state basis" not in text and "by district, not by state" not in text \
+                and "not by state" not in text:
+            bad.append(f"{rel}: diesel figure shown without saying EIA prices by district")
+
+        # the page prints "excise + other fees = state total" and "+ federal = all-in"
+        a = re.search(r"State excise \$([0-9.]+) plus other state fees \$([0-9.]+) "
+                      r"gives a state total of \$([0-9.]+)", text)
+        b = re.search(r"Add the federal \$([0-9.]+) and the all-in figure is \$([0-9.]+)", text)
+        if not a or not b:
+            bad.append(f"{rel}: the tax arithmetic sentence is missing")
+        else:
+            exc, oth, tot = (float(x) for x in a.groups())
+            fed, allin = (float(x) for x in b.groups())
+            if abs((exc + oth) - tot) > 0.0006:
+                bad.append(f"{rel}: excise {exc} + other {oth} != state total {tot}")
+            if abs((tot + fed) - allin) > 0.0006:
+                bad.append(f"{rel}: state total {tot} + federal {fed} != all-in {allin}")
+            if federal is not None and abs(fed - federal) > 0.0001:
+                bad.append(f"{rel}: page prints federal {fed}, data says {federal}")
+
+    if found < 45:
+        bad.append(f"only {found} US state pages built; expected 50 or more")
+
+    return bad
+
+
 CHECKS = (
     ("lookback never returns the newest point", check_lookback_not_latest),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
@@ -298,6 +388,7 @@ CHECKS = (
     ("structured data parses on every page", check_jsonld_valid),
     ("cbp commercial delay never faked as zero", check_cbp_missing_not_zero),
     ("sitemap is well-formed, complete and honestly dated", check_sitemap),
+    ("us state pages attribute diesel to a district", check_us_state_pages),
 )
 
 

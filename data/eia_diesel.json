@@ -3,14 +3,125 @@
   "us_national_usd_gal": 6.529,
   "padds_usd_gal": {
     "east_coast": 6.268,
+    "new_england": 6.517,
+    "central_atlantic": 6.546,
+    "lower_atlantic": 6.139,
     "midwest": 6.68,
     "gulf_coast": 6.177,
     "rocky_mountain": 6.34,
-    "west_coast": 7.456
+    "west_coast": 7.456,
+    "california": 8.246,
+    "west_coast_ex_california": 6.791
+  },
+  "districts": {
+    "east_coast": {
+      "price_usd_gal": 6.268,
+      "label": "East Coast (PADD 1)",
+      "padd": "R10"
+    },
+    "new_england": {
+      "price_usd_gal": 6.517,
+      "label": "New England (PADD 1A)",
+      "padd": "R1X"
+    },
+    "central_atlantic": {
+      "price_usd_gal": 6.546,
+      "label": "Central Atlantic (PADD 1B)",
+      "padd": "R1Y"
+    },
+    "lower_atlantic": {
+      "price_usd_gal": 6.139,
+      "label": "Lower Atlantic (PADD 1C)",
+      "padd": "R1Z"
+    },
+    "midwest": {
+      "price_usd_gal": 6.68,
+      "label": "Midwest (PADD 2)",
+      "padd": "R20"
+    },
+    "gulf_coast": {
+      "price_usd_gal": 6.177,
+      "label": "Gulf Coast (PADD 3)",
+      "padd": "R30"
+    },
+    "rocky_mountain": {
+      "price_usd_gal": 6.34,
+      "label": "Rocky Mountain (PADD 4)",
+      "padd": "R40"
+    },
+    "west_coast": {
+      "price_usd_gal": 7.456,
+      "label": "West Coast (PADD 5)",
+      "padd": "R50"
+    },
+    "california": {
+      "price_usd_gal": 8.246,
+      "label": "California",
+      "padd": "SCA"
+    },
+    "west_coast_ex_california": {
+      "price_usd_gal": 6.791,
+      "label": "West Coast excluding California",
+      "padd": "R5XCA"
+    }
+  },
+  "state_padd": {
+    "CT": "new_england",
+    "ME": "new_england",
+    "MA": "new_england",
+    "NH": "new_england",
+    "RI": "new_england",
+    "VT": "new_england",
+    "DE": "central_atlantic",
+    "DC": "central_atlantic",
+    "MD": "central_atlantic",
+    "NJ": "central_atlantic",
+    "NY": "central_atlantic",
+    "PA": "central_atlantic",
+    "FL": "lower_atlantic",
+    "GA": "lower_atlantic",
+    "NC": "lower_atlantic",
+    "SC": "lower_atlantic",
+    "VA": "lower_atlantic",
+    "WV": "lower_atlantic",
+    "IL": "midwest",
+    "IN": "midwest",
+    "IA": "midwest",
+    "KS": "midwest",
+    "KY": "midwest",
+    "MI": "midwest",
+    "MN": "midwest",
+    "MO": "midwest",
+    "NE": "midwest",
+    "ND": "midwest",
+    "OH": "midwest",
+    "OK": "midwest",
+    "SD": "midwest",
+    "TN": "midwest",
+    "WI": "midwest",
+    "AL": "gulf_coast",
+    "AR": "gulf_coast",
+    "LA": "gulf_coast",
+    "MS": "gulf_coast",
+    "NM": "gulf_coast",
+    "TX": "gulf_coast",
+    "CO": "rocky_mountain",
+    "ID": "rocky_mountain",
+    "MT": "rocky_mountain",
+    "UT": "rocky_mountain",
+    "WY": "rocky_mountain",
+    "AK": "west_coast",
+    "AZ": "west_coast",
+    "CA": "california",
+    "HI": "west_coast",
+    "NV": "west_coast",
+    "OR": "west_coast",
+    "WA": "west_coast"
   },
   "unit": "USD per gallon",
   "grade": "Ultra-low sulfur diesel (0-15 ppm), on-highway",
   "source": "U.S. Energy Information Administration weekly retail diesel survey",
   "source_url": "https://www.eia.gov/petroleum/gasdiesel/xls/psw18vwall.xls",
-  "updated": "2026-09-23T14:58:29.029768+00:00"
+  "note": "EIA publishes diesel by district, not by state. State pages show the figure for the district the state sits in, and say so.",
+  "updated": "2026-09-23T15:09:26.176394+00:00"
 }

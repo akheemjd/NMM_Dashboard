@@ -21,6 +21,7 @@ from incidents import collect_incidents
 from collect_border import collect_border_live
 from collect_cbp_border import collect_cbp_border
 from collect_ifta import collect_ifta
+from collect_us_fuel_tax import collect_us_fuel_tax
 from theft_incidents import collect_theft_incidents
 from collect_eia_diesel import collect_eia_diesel
 from health_tracker import record_success, record_failure
@@ -283,6 +284,7 @@ if __name__ == "__main__":
         ("border", collect_border_live),
         ("cbp_border", collect_cbp_border),
         ("ifta", collect_ifta),
+        ("us_fuel_tax", collect_us_fuel_tax),
         ("theft", collect_theft_incidents),
     ]:
         try:

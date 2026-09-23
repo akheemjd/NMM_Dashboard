@@ -78,6 +78,48 @@ PORT_JURISDICTION = {
     "380102": ("MI", "ON", "Windsor"),
     "380201": ("MI", "ON", "Sarnia"),
     "380301": ("MI", "ON", "Sault Ste. Marie"),
+
+    # ---- Mexican border, 55 ports -------------------------------------------
+    # The second and third tuple slots name the Canadian side and carry no
+    # meaning here, so they stay None. What the state pages need is the US state.
+    #
+    # Keyed on port_number, NOT on the customs district prefix. Columbus (240601)
+    # and Santa Teresa (240801) sit in New Mexico but belong to the El Paso
+    # district, so a prefix rule would file both under Texas. District 24 is El
+    # Paso, which is why only those two port numbers are excepted.
+    # California — district 25
+    "250201": ("CA", None, None), "250301": ("CA", None, None),
+    "250302": ("CA", None, None), "250401": ("CA", None, None),
+    "250407": ("CA", None, None), "250409": ("CA", None, None),
+    "250501": ("CA", None, None), "250601": ("CA", None, None),
+    "250602": ("CA", None, None), "250608": ("CA", None, None),
+    "250609": ("CA", None, None),
+    # Arizona — district 26
+    "260101": ("AZ", None, None), "260201": ("AZ", None, None),
+    "260301": ("AZ", None, None), "260305": ("AZ", None, None),
+    "260401": ("AZ", None, None), "260402": ("AZ", None, None),
+    "260403": ("AZ", None, None), "260801": ("AZ", None, None),
+    "260802": ("AZ", None, None),
+    # New Mexico — the two district-24 exceptions
+    "240601": ("NM", None, None), "240801": ("NM", None, None),
+    # Texas — districts 20, 23, 24, 53 and the l2 prefix
+    "230106": ("TX", None, None), "230103": ("TX", None, None),
+    "230201": ("TX", None, None), "230301": ("TX", None, None),
+    "230302": ("TX", None, None), "230401": ("TX", None, None),
+    "230402": ("TX", None, None), "230403": ("TX", None, None),
+    "230404": ("TX", None, None), "230501": ("TX", None, None),
+    "230502": ("TX", None, None), "230503": ("TX", None, None),
+    "230701": ("TX", None, None), "230901": ("TX", None, None),
+    "230902": ("TX", None, None), "231001": ("TX", None, None),
+    "231002": ("TX", None, None),
+    "240104": ("TX", None, None), "240201": ("TX", None, None),
+    "240202": ("TX", None, None), "240203": ("TX", None, None),
+    "240204": ("TX", None, None), "240207": ("TX", None, None),
+    "240215": ("TX", None, None), "240221": ("TX", None, None),
+    "240301": ("TX", None, None), "240401": ("TX", None, None),
+    "202401": ("TX", None, None), "l24501": ("TX", None, None),
+    "535501": ("TX", None, None), "535502": ("TX", None, None),
+    "535503": ("TX", None, None), "535504": ("TX", None, None),
 }
 
 # Values CBP uses for "no figure provided". Anything else is treated as a number.
