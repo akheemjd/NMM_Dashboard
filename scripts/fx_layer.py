@@ -157,6 +157,36 @@ NAV_END = re.compile(r'(</div>\s*</nav>)', re.I)
 SCRIPT_END = re.compile(r'(<script src="/assets/nm\.js\?v=[^"]*"></script>)', re.I)
 
 
+NAV_OPEN = re.compile(
+    r'(<nav class="nav"[^>]*>\s*<div class="wrap">)', re.I
+)
+NAV_CLOSE = re.compile(r'(</div>\s*</nav>)', re.I)
+NAV_WRAPPED = re.compile(r'<div class="nv">', re.I)
+
+
+def wrap_navlinks(html):
+    """Wrap the nav's inner content in .nv so the toggle gets its own slot.
+
+    Idempotent: a build that runs twice must not nest another .nv.
+    """
+    if NAV_WRAPPED.search(html):
+        return html
+    m = NAV_OPEN.search(html)
+    if not m:
+        return html
+    start = m.end()
+    c = NAV_CLOSE.search(html, start)
+    if not c:
+        return html
+    return (
+        html[:start]
+        + '<div class="nv">'
+        + html[start:c.start()]
+        + "</div>"
+        + html[c.start():]
+    )
+
+
 def add_toggle(html):
     """Insert the currency toggle into the nav and load fx.js. Idempotent."""
     if 'class="fxtog"' in html:
@@ -304,6 +334,7 @@ def main():
                 rel = ""
             html = open(path, encoding="utf-8").read()
             html, n = mark(html, rel)
+            html = wrap_navlinks(html)
             html = add_toggle(html)
             open(path, "w", encoding="utf-8").write(html)
             pages += 1

@@ -89,7 +89,17 @@ a { color: inherit; }
    scroll content, so the sticky currency toggle parked 104px inside the content
    column and looked like it was floating mid-nav. right:0 with no padding lands it
    flush with the column's right edge, the same edge the header and footer use. */
-.nav .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+/* .wrap is a plain flex row. The links scroll inside .nv, which gives the
+   currency toggle a slot of its own beside them. Previously the toggle was a
+   sticky child of the scrolling .wrap, so it was painted on top of the links and
+   covered the tail of the nav wherever it sat. */
+.nav .wrap { display: flex; align-items: center; gap: 10px; }
+.nav .nv { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
+  flex: 1 1 auto; min-width: 0;
+  /* The box clips mid-word, which left a stray letter against the toggle. Fade
+     the clip edge so it reads as "more to scroll" rather than a broken label. */
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
 .nav .wrap::-webkit-scrollbar { display: none; }
 .nav a {
   flex: 0 0 auto; position: relative;
@@ -537,14 +547,12 @@ aside.sp .c:hover { text-decoration: underline; }
    dollars/gallon, and both used to render as a bare "$". This lets a reader pick
    the currency they think in. Sized to sit inside the sticky nav without pushing
    the links, and to stay a comfortable tap target at 360px. */
-/* Pinned to the right edge of the nav, NOT placed in the link flow. The nav
-   scrolls horizontally (13 links), so margin-left:auto pushed this past the end
-   of the scroll extent and it was invisible on desktop — the feature was live and
-   unreachable. Sticky keeps it on screen while the links scroll behind it. */
-.fxtog { position: sticky; right: 0; display: inline-flex; align-items: center; gap: 0;
-  align-self: center; flex: 0 0 auto; margin-left: auto;
-  border: 1px solid var(--line); border-radius: 999px; overflow: hidden;
-  background: var(--raise); box-shadow: -8px 0 8px -4px var(--paper); }
+/* A real flex item beside .nv, not a sticky overlay. No overlap is possible and
+   it sits on the content column's inner right edge, same as the header and
+   footer content. */
+.fxtog { display: inline-flex; align-items: center; gap: 0;
+  flex: 0 0 auto; border: 1px solid var(--line); border-radius: 999px;
+  overflow: hidden; background: var(--raise); }
 .fxtog button { appearance: none; border: 0; background: transparent; cursor: pointer;
   font: 600 11px/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .04em;
   color: var(--muted); padding: 7px 11px; min-height: 30px; }
@@ -556,5 +564,4 @@ aside.sp .c:hover { text-decoration: underline; }
 .fxnote { font: 400 11px/1.4 "Inter", system-ui, sans-serif; color: var(--muted); }
 @media (max-width: 560px) {
   .fxtog button { padding: 8px 10px; min-height: 34px; }
-  .fxtog { box-shadow: -10px 0 10px -6px var(--paper); }
 }
