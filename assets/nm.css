@@ -85,10 +85,11 @@ a { color: inherit; }
 @media (min-width: 680px) { .mark span { display: inline; } }
 
 .nav { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 20; }
-.nav .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
-  /* Room for the currency toggle, which is pinned right and would otherwise sit
-     on top of the last nav links. */
-  padding-right: 104px; }
+/* No padding-right here. On a horizontal scroller that is space at the END of the
+   scroll content, so the sticky currency toggle parked 104px inside the content
+   column and looked like it was floating mid-nav. right:0 with no padding lands it
+   flush with the column's right edge, the same edge the header and footer use. */
+.nav .wrap { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
 .nav .wrap::-webkit-scrollbar { display: none; }
 .nav a {
   flex: 0 0 auto; position: relative;
