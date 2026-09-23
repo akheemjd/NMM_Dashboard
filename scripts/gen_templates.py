@@ -1590,11 +1590,11 @@ us_state_body = (
 
   <section class="sec">
     <div class="lead"><h2>Fuel tax in {{state_name}}</h2><p>The part of this page that is genuinely about {{state_name}}</p></div>
-    <div class="cards">
-      <div class="card"><div class="k">State excise, diesel</div><div class="v">{{state_excise}}</div><div class="s">per gallon, statutory</div></div>
-      <div class="card"><div class="k">Other state fees</div><div class="v">{{state_other}}</div><div class="s">{{state_other_note}}</div></div>
-      <div class="card"><div class="k">Federal</div><div class="v">{{federal_excise}}</div><div class="s">per gallon, all states</div></div>
-      <div class="card"><div class="k">All in</div><div class="v">{{all_in}}</div><div class="s">state total plus federal</div></div>
+    <div class="stats">
+      <div class="stat"><div class="l">State excise, diesel</div><div class="v">{{state_excise}}</div><div class="s">per gallon, statutory</div></div>
+      <div class="stat"><div class="l">Other state fees</div><div class="v">{{state_other}}</div><div class="s">{{state_other_note}}</div></div>
+      <div class="stat"><div class="l">Federal</div><div class="v">{{federal_excise}}</div><div class="s">per gallon, all states</div></div>
+      <div class="stat"><div class="l">All in</div><div class="v">{{all_in}}</div><div class="s">state total plus federal</div></div>
     </div>
     <div class="reading">
       <p>The four numbers add up. State excise {{state_excise}} plus other state fees {{state_other}} gives a state total of <b>{{state_total}}</b>. Add the federal {{federal_excise}} and the all-in figure is <b>{{all_in}}</b> a gallon.</p>
@@ -1615,9 +1615,9 @@ us_state_body = (
   <section class="sec">
     <div class="lead"><h2>What is state-level in {{state_name}}</h2></div>
     <div class="rows">
-      <div class="r"><span class="k">Fuel tax rate<span class="s2">levied by {{abbr}}, published by IFTA</span></span><span class="v">{{ifta_display}}</span></div>
-      <div class="r"><span class="k">Statutory excise<span class="s2">levied by {{abbr}}, published by EIA</span></span><span class="v">{{state_excise_display}}</span></div>
-      <div class="r"><span class="k">Diesel price<span class="s2">published by district, not by state</span></span><span class="v">{{district_label}}</span></div>
+      <div class="r"><span class="k">Fuel tax rate<small>levied by {{abbr}}, published by IFTA</small></span><span class="v">{{ifta_display}}</span></div>
+      <div class="r"><span class="k">Statutory excise<small>levied by {{abbr}}, published by EIA</small></span><span class="v">{{state_excise_display}}</span></div>
+      <div class="r"><span class="k">Diesel price<small>published by district, not by state</small></span><span class="v">{{district_label}}</span></div>
     </div>
   </section>
   <!--IF:has_border-->
@@ -1636,11 +1636,11 @@ us_state_body = (
   <section class="sec">
     <div class="lead"><h2>Where to go next</h2></div>
     <div class="rows">
-      <a class="r" href="/us-diesel/"><span class="k">US diesel by district<span class="s2">All 11 EIA districts in one table</span></span><span class="v">all 11</span></a>
-      <a class="r" href="/fuel-tax-rates/"><span class="k">IFTA fuel tax rates<span class="s2">Every province and state</span></span><span class="v">58</span></a>
-      <a class="r" href="/border-wait-times/all-ports/"><span class="k">Border crossings<span class="s2">Both borders, all lanes</span></span><span class="v">85</span></a>
-      <a class="r" href="/fuel-prices/"><span class="k">Canadian diesel prices<span class="s2">By province and city</span></span><span class="v">by province</span></a>
-      <a class="r" href="/methodology/nmdi/"><span class="k">Methodology<span class="s2">Sources and how the index is built</span></span><span class="v">sources</span></a>
+      <a class="r" href="/us-diesel/"><span class="k">US diesel by district<small>All 11 EIA districts in one table</small></span><span class="v">all 11</span></a>
+      <a class="r" href="/fuel-tax-rates/"><span class="k">IFTA fuel tax rates<small>Every province and state</small></span><span class="v">58</span></a>
+      <a class="r" href="/border-wait-times/all-ports/"><span class="k">Border crossings<small>Both borders, all lanes</small></span><span class="v">85</span></a>
+      <a class="r" href="/fuel-prices/"><span class="k">Canadian diesel prices<small>By province and city</small></span><span class="v">by province</span></a>
+      <a class="r" href="/methodology/nmdi/"><span class="k">Methodology<small>Sources and how the index is built</small></span><span class="v">sources</span></a>
     </div>
   </section>
 ''' + subscribe("Diesel, border and tax, weekly",
@@ -1684,7 +1684,7 @@ us_states_body = (
   <section class="sec">
     <div class="lead"><h2>All 51</h2><p>Rates per gallon. Diesel is the district figure.</p></div>
     <div class="rows">
-      <!--LOOP:states--><a class="r" href="{{url}}"><span class="k">{{name}}<span class="s2">{{district}} district · IFTA {{ifta}}</span></span><span class="v">{{all_in}}<span class="s2">all in</span></span></a><!--/LOOP:states-->
+      <!--LOOP:states--><a class="r" href="{{url}}"><span class="k">{{name}}<small>{{district}} district · IFTA {{ifta}}</small></span><span class="v">{{all_in}}<small>all in</small></span></a><!--/LOOP:states-->
     </div>
     <p class="note">All-in is state excise plus other state fees plus the {{federal}} federal rate. IFTA is the rate a US-licensed carrier files for that state.</p>
   </section>
