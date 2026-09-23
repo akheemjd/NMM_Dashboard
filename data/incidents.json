@@ -49,22 +49,6 @@
       "updated": 1790200860
     },
     {
-      "id": "ON-310617",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at Cambridge North & South OnRoute/Westbound & Eastbound service centre, Cambridge. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.43395,
-      "lng": -80.245647222,
-      "start": 1790200560,
-      "end": null,
-      "updated": 1790200560
-    },
-    {
       "id": "ON-310613",
       "province": "ON",
       "highway": "HWY 28",
@@ -79,22 +63,6 @@
       "start": 1790199960,
       "end": null,
       "updated": 1790199960
-    },
-    {
-      "id": "ON-310601",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound ON-RAMP at CAWTHRA ROAD, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.584336,
-      "lng": -79.582711,
-      "start": 1790197140,
-      "end": null,
-      "updated": 1790199120
     },
     {
       "id": "ON-310576",
@@ -799,10 +767,42 @@
       "start": 1790377200,
       "end": 1790427600,
       "updated": 1790172960
+    },
+    {
+      "id": "ON-310437",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 427 Southbound On-ramp at EVA ROAD, Toronto. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.63874,
+      "lng": -79.56062,
+      "start": 1790946000,
+      "end": 1791057600,
+      "updated": 1790172600
+    },
+    {
+      "id": "ON-310436",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 427 Southbound Collector Off-ramp at EVA ROAD, Toronto. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.63874,
+      "lng": -79.56062,
+      "start": 1790946000,
+      "end": 1791057600,
+      "updated": 1790172420
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T22:28:12.865363+00:00",
+  "updated": "2026-09-23T22:52:39.500821+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
