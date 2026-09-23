@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-310620",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at WHITES ROAD, Pickering. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.8165886,
+      "lng": -79.1144832,
+      "start": 1790201400,
+      "end": null,
+      "updated": 1790201400
+    },
+    {
       "id": "ON-310619",
       "province": "ON",
       "highway": "HWY 401",
@@ -783,26 +799,10 @@
       "start": 1790384400,
       "end": 1790427600,
       "updated": 1790173380
-    },
-    {
-      "id": "ON-310428",
-      "province": "ON",
-      "highway": "HWY 10",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 10 Southbound  between HWY. 9 SOUTH JCT and HWY. 9 SOUTH JCT, Caledon. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.91916,
-      "lng": -80.07717,
-      "start": 1790377200,
-      "end": 1790427600,
-      "updated": 1790172960
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T22:12:39.186826+00:00",
+  "updated": "2026-09-23T22:16:17.260261+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
