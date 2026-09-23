@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-23 09:48",
-  "updated_iso": "2026-09-23T09:48:24+00:00",
-  "build_version": "1790156904",
+  "updated_at": "2026-09-23 10:19",
+  "updated_iso": "2026-09-23T10:19:25+00:00",
+  "build_version": "1790158765",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "16 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "271.0",
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 61",
+    "status_line": "QEW, HWY 401, HWY 61",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering.\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at NIKOLA TESLA, Hamilton. Left shoulder\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at KENNEDY RD\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -299,11 +299,11 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "16 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "1 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -313,7 +313,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:20 EDT"
+      "captured_at": "06:00 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -333,17 +333,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 MDT"
+      "captured_at": "04:09 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:20 PDT"
+      "captured_at": "03:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -421,16 +421,16 @@
     {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Driver Decision Kit launches personalized recruiting tool for trucking fleets",
-      "url": "https://www.thetrucker.com/trucking-news/business/driver-decision-kit-launches-personalized-recruiting-tool-for-trucking-fleets",
+      "headline": "Your lymphatic system: The filtration network truck drivers don\u2019t talk about enough",
+      "url": "https://www.thetrucker.com/trucking-news/perspective/mind-over-matter-by-hope-zvara/your-lymphatic-system-the-filtration-network-truck-drivers-dont-talk-about-enough",
       "why": "Equipment cost and availability shape fleet economics."
     },
     {
-      "category": "markets",
+      "category": "equipment",
       "source": "The Trucker",
-      "headline": "Army veteran trucker receives Freightliner from Progressive to help launch business",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/army-veteran-trucker-receives-freightliner-from-progressive-to-help-launch-business",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "headline": "Driver Decision Kit launches personalized recruiting tool for trucking fleets",
+      "url": "https://www.thetrucker.com/trucking-news/business/driver-decision-kit-launches-personalized-recruiting-tool-for-trucking-fleets",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
