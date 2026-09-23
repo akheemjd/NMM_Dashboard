@@ -215,6 +215,81 @@ def check_cbp_missing_not_zero():
     return bad
 
 
+def check_sitemap():
+    """The sitemap must be well-formed, complete, and honestly dated.
+
+    Every failure here has already happened once:
+
+    - Backslashes in <loc> (from an unnormalised os.walk path) made every page
+      except the homepage uncrawlable, and the same bug defeated the EXCLUDE
+      lookup because "/\\methodology/" never matched "/methodology/".
+    - A missing page is silently unlisted, so the URL set is compared to the
+      pages that actually exist on disk.
+    - A lastmod in the future is a claim about tomorrow that no source supports.
+    - A lastmod of "today" on a page with no changing data is the "always now"
+      inaccuracy that made the tag worthless in the first place.
+    """
+    import datetime
+    import xml.etree.ElementTree as ET
+
+    path = os.path.join(DOCS, "sitemap.xml")
+    if not os.path.exists(path):
+        return ["docs/sitemap.xml is missing — build_sitemap.py did not run"]
+    raw = open(path, encoding="utf-8").read()
+    bad = []
+
+    if "\\" in raw:
+        bad.append(f"sitemap contains {raw.count(chr(92))} backslash(es); "
+                   f"search engines cannot crawl those URLs")
+
+    try:
+        root = ET.fromstring(raw)
+    except Exception as e:
+        return [f"sitemap.xml is not well-formed XML ({e})"]
+
+    ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    entries = root.findall(f"{ns}url")
+    listed = {u.find(f"{ns}loc").text for u in entries}
+
+    # Completeness: every built page must be advertised, and nothing extra.
+    on_disk = set()
+    for dirpath, _, files in os.walk(DOCS):
+        if "index.html" not in files:
+            continue
+        rel = dirpath.replace(DOCS, "").replace("\\", "/")
+        p = (rel + "/").replace("//", "/")
+        if not p.startswith("/"):
+            p = "/" + p
+        if p in ("/methodology/",):
+            continue
+        html = open(os.path.join(dirpath, "index.html"), encoding="utf-8").read()
+        if "http-equiv=\"refresh\"" in html.lower() and len(html) < 600:
+            continue
+        on_disk.add("https://dashboard.northernmilemedia.com" + p)
+
+    missing = sorted(on_disk - listed)
+    extra = sorted(listed - on_disk)
+    if missing:
+        bad.append(f"{len(missing)} built page(s) absent from the sitemap, e.g. {missing[:3]}")
+    if extra:
+        bad.append(f"{len(extra)} sitemap URL(s) have no page, e.g. {extra[:3]}")
+
+    today = datetime.date.today()
+    for u in entries:
+        lm = u.find(f"{ns}lastmod")
+        if lm is None or not lm.text:
+            continue
+        try:
+            d = datetime.date.fromisoformat(lm.text.strip())
+        except ValueError:
+            bad.append(f"unparsable lastmod {lm.text!r}")
+            continue
+        if d > today:
+            bad.append(f"lastmod {d} is in the future (today {today})")
+
+    return bad
+
+
 CHECKS = (
     ("lookback never returns the newest point", check_lookback_not_latest),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
@@ -222,6 +297,7 @@ CHECKS = (
     ("one 30-day FX average across the site", check_fx_average_agreement),
     ("structured data parses on every page", check_jsonld_valid),
     ("cbp commercial delay never faked as zero", check_cbp_missing_not_zero),
+    ("sitemap is well-formed, complete and honestly dated", check_sitemap),
 )
 
 
