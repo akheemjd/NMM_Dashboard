@@ -84,10 +84,39 @@ STATE_PADD = {
     # PADD 4 Rocky Mountain
     "CO": "rocky_mountain", "ID": "rocky_mountain", "MT": "rocky_mountain",
     "UT": "rocky_mountain", "WY": "rocky_mountain",
-    # PADD 5 West Coast
-    "AK": "west_coast", "AZ": "west_coast", "CA": "california",
-    "HI": "west_coast", "NV": "west_coast", "OR": "west_coast",
-    "WA": "west_coast",
+    # PADD 5 West Coast. EIA publishes THREE overlapping series here:
+    #   west_coast                 = all of PADD 5, California included ($7.456)
+    #   california                 = California alone                ($8.246)
+    #   west_coast_ex_california   = PADD 5 minus California         ($6.791)
+    # Every PADD 5 state except California is priced most precisely by the
+    # excluding-California series. Assigning them to the parent series pulled
+    # California's highs into Arizona and Oregon. The parent stays available as a
+    # district page, it is just not the figure a state page should cite.
+    "AK": "west_coast_ex_california", "AZ": "west_coast_ex_california",
+    "CA": "california",
+    "HI": "west_coast_ex_california", "NV": "west_coast_ex_california",
+    "OR": "west_coast_ex_california", "WA": "west_coast_ex_california",
+}
+
+# Which states each district COVERS. Distinct from STATE_PADD above, which says
+# which district a state is PRICED IN. A parent district covers its children:
+# west_coast covers all seven PADD 5 states including California, while no state
+# is priced in it any more. The district pages read this; the state pages read
+# STATE_PADD. Conflating the two is what made the West Coast page omit California
+# while claiming to describe PADD 5.
+DISTRICT_STATES = {
+    "east_coast": ["CT", "ME", "MA", "NH", "RI", "VT", "DE", "DC", "MD", "NJ",
+                   "NY", "PA", "FL", "GA", "NC", "SC", "VA", "WV"],
+    "new_england": ["CT", "ME", "MA", "NH", "RI", "VT"],
+    "central_atlantic": ["DE", "DC", "MD", "NJ", "NY", "PA"],
+    "lower_atlantic": ["FL", "GA", "NC", "SC", "VA", "WV"],
+    "midwest": ["IL", "IN", "IA", "KS", "KY", "MI", "MN", "MO", "NE", "ND",
+                "OH", "OK", "SD", "TN", "WI"],
+    "gulf_coast": ["AL", "AR", "LA", "MS", "NM", "TX"],
+    "rocky_mountain": ["CO", "ID", "MT", "UT", "WY"],
+    "west_coast": ["AK", "AZ", "CA", "HI", "NV", "OR", "WA"],
+    "california": ["CA"],
+    "west_coast_ex_california": ["AK", "AZ", "HI", "NV", "OR", "WA"],
 }
 
 
@@ -159,6 +188,7 @@ def collect_eia_diesel():
             for _col, (key, label, padd) in SERIES.items() if key != "us_national"
         },
         "state_padd": STATE_PADD,
+        "district_states": DISTRICT_STATES,
         "unit": "USD per gallon",
         "grade": "Ultra-low sulfur diesel (0-15 ppm), on-highway",
         "source": "U.S. Energy Information Administration weekly retail diesel survey",

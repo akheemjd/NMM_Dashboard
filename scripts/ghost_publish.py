@@ -352,10 +352,37 @@ def parse_frontmatter(content):
         return {}, content
 
     fm = {}
-    for line in parts[1].strip().splitlines():
-        if ":" not in line:
+    lines = parts[1].strip().splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        i += 1
+        if ":" not in line or line.startswith((" ", "\t")):
             continue
         k, v = line.split(":", 1)
+        v = v.strip()
+
+        # YAML block scalars. 'description: >' means "the value is the indented
+        # lines below, folded into one paragraph"; '|' means the same but with
+        # the newlines kept. The old parser treated every line as self-contained,
+        # so it read the marker itself as the value and threw the text away. Two
+        # live posts shipped meta_description and custom_excerpt of literally ">"
+        # because of it, and the homepage card showed a ">" as the excerpt.
+        if v in (">", "|", ">-", "|-", ">+", "|+"):
+            folded = v.startswith(">")
+            block = []
+            while i < len(lines):
+                nxt = lines[i]
+                if nxt.strip() and not nxt.startswith((" ", "\t")):
+                    break
+                block.append(nxt.strip())
+                i += 1
+            while block and not block[-1]:
+                block.pop()
+            v = " ".join(x for x in block if x) if folded else "\n".join(block)
+            fm[k.strip()] = v
+            continue
+
         v = v.strip().strip('"').strip("'")
         # Inline YAML list: tags: [a, b, c]
         if v.startswith("[") and v.endswith("]"):

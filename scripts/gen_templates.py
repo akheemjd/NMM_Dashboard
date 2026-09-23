@@ -500,19 +500,44 @@ CITY_COORDS = {
 _cities_js = json.dumps({n: {"p": p, "la": la, "ln": ln} for n, (p, la, ln) in CITY_COORDS.items()})
 
 # US city → EIA PADD region, for precise fuel pricing.
+# City -> the EIA district its STATE is priced in. Derived from the same
+# STATE_PADD the state pages use, so the calculator and the state pages
+# cannot disagree. Was a hand-written map to top-level PADDs, which put
+# Los Angeles in West Coast (277.6 c/L) instead of California (307.1).
 US_PADD = {
-    "Atlanta": "east_coast", "Boston": "east_coast", "Buffalo": "east_coast",
-    "Charlotte": "east_coast", "New York": "east_coast", "Pittsburgh": "east_coast",
-    "Chicago": "midwest", "Cincinnati": "midwest", "Cleveland": "midwest",
-    "Columbus": "midwest", "Detroit": "midwest", "Fargo": "midwest",
-    "Grand Rapids": "midwest", "Indianapolis": "midwest", "Kansas City": "midwest",
-    "Louisville": "midwest", "Memphis": "midwest", "Milwaukee": "midwest",
-    "Minneapolis": "midwest", "Nashville": "midwest", "Oklahoma City": "midwest",
-    "Omaha": "midwest", "St. Louis": "midwest", "Toledo": "midwest",
-    "Dallas": "gulf_coast", "Houston": "gulf_coast",
-    "Denver": "rocky_mountain", "Salt Lake City": "rocky_mountain",
-    "Los Angeles": "west_coast", "Phoenix": "west_coast", "Portland": "west_coast",
-    "Seattle": "west_coast", "Spokane": "west_coast",
+    "Los Angeles": "california",
+    "Buffalo": "central_atlantic",
+    "New York": "central_atlantic",
+    "Pittsburgh": "central_atlantic",
+    "Dallas": "gulf_coast",
+    "Houston": "gulf_coast",
+    "Atlanta": "lower_atlantic",
+    "Charlotte": "lower_atlantic",
+    "Chicago": "midwest",
+    "Cincinnati": "midwest",
+    "Cleveland": "midwest",
+    "Columbus": "midwest",
+    "Detroit": "midwest",
+    "Fargo": "midwest",
+    "Grand Rapids": "midwest",
+    "Indianapolis": "midwest",
+    "Kansas City": "midwest",
+    "Louisville": "midwest",
+    "Memphis": "midwest",
+    "Milwaukee": "midwest",
+    "Minneapolis": "midwest",
+    "Nashville": "midwest",
+    "Oklahoma City": "midwest",
+    "Omaha": "midwest",
+    "St. Louis": "midwest",
+    "Toledo": "midwest",
+    "Boston": "new_england",
+    "Denver": "rocky_mountain",
+    "Salt Lake City": "rocky_mountain",
+    "Phoenix": "west_coast_ex_california",
+    "Portland": "west_coast_ex_california",
+    "Seattle": "west_coast_ex_california",
+    "Spokane": "west_coast_ex_california",
 }
 # City name → airport code, for the precomputed road-distance matrix.
 CITY_CODES = {
@@ -1352,7 +1377,7 @@ us_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>Eleven districts</h2><p>Every EIA diesel district · ¢/L CAD and $/gal</p></div>
+    <div class="lead"><h2>Ten districts</h2><p>Every EIA diesel district · ¢/L CAD and $/gal</p></div>
     <div class="rows">
     <!--LOOP:padds--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:padds-->
     </div>
@@ -1405,7 +1430,7 @@ uspadd_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>The five regions</h2><p>¢/L CAD · $/gal</p></div>
+    <div class="lead"><h2>The other districts</h2><p>¢/L CAD · $/gal</p></div>
     <div class="rows">
     <!--LOOP:siblings--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:siblings-->
     </div>
@@ -1598,6 +1623,7 @@ us_state_body = (
     </div>
     <div class="reading">
       <p>The four numbers add up. State excise {{state_excise}} plus other state fees {{state_other}} gives a state total of <b>{{state_total}}</b>. Add the federal {{federal_excise}} and the all-in figure is <b>{{all_in}}</b> a gallon.</p>
+      <p class="note">Every figure is rounded to four decimal places of a dollar before it is shown, and the totals are the sum of the rounded figures rather than of the unrounded ones. On three states those two differ by one ten-thousandth of a dollar. We print the sum that matches the numbers you can see, because a page that shows its arithmetic should have arithmetic that checks out.</p>
       <p>{{ifta_sentence}}</p>
       <p>{{tax_note}}</p>
     </div>
@@ -1606,7 +1632,7 @@ us_state_body = (
   <section class="sec">
     <div class="lead"><h2>Why there is no {{state_name}} diesel price here</h2></div>
     <div class="reading">
-      <p>The Energy Information Administration publishes a weekly on-highway diesel price on a <b>district</b> basis, not a state basis. There are eleven districts in the whole country and {{state_name}} is not one of them.</p>
+      <p>The Energy Information Administration publishes a weekly on-highway diesel price on a <b>district</b> basis, not a state basis. There are ten districts in the whole country and {{state_name}} is not one of them.</p>
       <p>{{state_name}} sits in the <b>{{district_label}}</b> district. The figure at the top of this page is that district's weekly price. It is not a {{state_name}} price, and we are not going to label it as one.</p>
       <p>Plenty of sites will show you a {{state_name}} diesel price. What they are showing you is the same district number they show for every neighbouring state, because the state-level number does not exist to show. If a site claims a per-state diesel price, ask it which survey it came from.</p>
     </div>
@@ -1636,7 +1662,7 @@ us_state_body = (
   <section class="sec">
     <div class="lead"><h2>Where to go next</h2></div>
     <div class="rows">
-      <a class="r" href="/us-diesel/"><span class="k">US diesel by district<small>All 11 EIA districts in one table</small></span><span class="v">all 11</span></a>
+      <a class="r" href="/us-diesel/"><span class="k">US diesel by district<small>All ten EIA districts in one table</small></span><span class="v">all 10</span></a>
       <a class="r" href="/fuel-tax-rates/"><span class="k">IFTA fuel tax rates<small>Every province and state</small></span><span class="v">58</span></a>
       <a class="r" href="/border-wait-times/all-ports/"><span class="k">Border crossings<small>Both borders, all lanes</small></span><span class="v">85</span></a>
       <a class="r" href="/fuel-prices/"><span class="k">Canadian diesel prices<small>By province and city</small></span><span class="v">by province</span></a>
@@ -1669,13 +1695,13 @@ us_states_body = (
     <span class="eyebrow">United States · 50 states and DC</span>
     <h1>Diesel and fuel tax by state</h1>
     <div class="figure"><span class="n">{{state_count}}</span><span class="u">states</span></div>
-    <div class="meta"><span>{{district_count}} diesel districts · week ending {{diesel_week}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+    <div class="meta"><span>{{district_count}} districts cover the 50 states · week ending {{diesel_week}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
   <section class="sec">
     <div class="lead"><h2>Read this before the table</h2></div>
     <div class="reading">
-      <p>The Energy Information Administration publishes a weekly on-highway diesel price for <b>eleven districts</b>, not for fifty states. There is no state-level diesel price to publish, for any state, from any source.</p>
+      <p>The Energy Information Administration publishes a weekly on-highway diesel price for <b>ten districts</b>, not for fifty states. There is no state-level diesel price to publish, for any state, from any source.</p>
       <p>So every US site with a "state diesel price" page is serving you a district number under a state heading. Some say so in a footnote. Most do not say so at all.</p>
       <p>This table gives you the two things that genuinely are per-state, the fuel tax a state levies and the tax a carrier files under IFTA, and names the district each state's diesel figure comes from. A state page shows the same district number a neighbouring state's page shows, and tells you that is what it is doing.</p>
     </div>

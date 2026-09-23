@@ -55,6 +55,11 @@ def row(port):
     # CBP repeats the port name as the crossing name for single-crossing ports
     # (Pembina, Sumas). Printing "Pembina Pembina" reads like a bug.
     suffix = f" — {crossing}" if crossing and crossing != name else ""
+    # Two Naco, Arizona ports exist (260301 and 260305) and CBP gives
+    # neither a crossing name, so both rendered as a bare "Naco": the page
+    # showed 84 rows for 85 ports and one port had no row of its own.
+    if not suffix and port.get("port_number"):
+        suffix = f" — port {port['port_number']}"
     juris = ""
     if port.get("us_state") and port.get("ca_province"):
         juris = f" · {port['us_state']}–{port['ca_province']}"

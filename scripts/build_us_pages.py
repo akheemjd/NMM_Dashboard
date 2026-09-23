@@ -24,7 +24,7 @@ from build_templates import fill  # noqa: E402
 
 # PADD coverage — the states each district contains (standard EIA definitions).
 # Which states sit in which district is data, not prose. It was a hardcoded map
-# with five entries; when the collector was extended to all eleven districts the
+# with five entries; when the collector was extended to all ten districts the
 # five new ones fell through to an empty string and shipped pages of ~1,150
 # characters with no state list at all. Deriving it means a district added
 # upstream cannot produce an empty page.
@@ -53,13 +53,15 @@ def _slug(k):
     return (k or "").replace("_", "-")
 
 
-def district_states_sentence(key, label, state_padd):
-    """'Midwest (PADD 2) spans Illinois, Indiana, ... and Wisconsin.'"""
-    import collections
-    by = collections.defaultdict(list)
-    for st, k in (state_padd or {}).items():
-        by[k].append(st)
-    codes = sorted(by.get(key, []))
+def district_states_sentence(key, label, district_states):
+    """'Midwest (PADD 2) spans Illinois, Indiana, ... and Wisconsin.'
+
+    Reads DISTRICT_STATES (what the district covers), not state_padd (which
+    district a state is priced in). Using the assignment map made the West Coast
+    page list six states and omit California, on a page whose own label says
+    PADD 5 — and PADD 5 includes California.
+    """
+    codes = sorted((district_states or {}).get(key, []))
     names = [STATE_NAMES.get(c, c) for c in codes]
     if not names:
         return ""
@@ -98,7 +100,7 @@ def main():
     with open(os.path.join(TMPL, "us-padd.template.html")) as f:
         padd_tmpl = f.read()
 
-    # Overview — national figure + the five regions.
+    # Overview — national figure + every district.
     overview = fill(us_tmpl, {
         "eia": eia,
         "padds": [dict(p, key_url=_slug(p["key"])) for p in padds],
@@ -113,7 +115,7 @@ def main():
 
     # Per-PADD pages.
     national_cpl = float(eia.get("us_national_cpl", 0) or 0)
-    _state_padd = load_json("eia_diesel.json").get("state_padd") or {}
+    _district_states = load_json("eia_diesel.json").get("district_states") or {}
     # The templates link districts under /us-diesel/district/<slug>/, so every
     # item in a LOOP needs key_url — the overview's padds list included. Missing
     # it is a hard failure in fill(), which is the point.
@@ -142,7 +144,7 @@ def main():
             "vs_national_abs": f"{abs(vs):.1f}",
             "vs_national_word": "above" if vs >= 0 else "below",
             "vs_national_class": "lo" if vs < 0 else "hi",
-            "states": district_states_sentence(p["key"], p["label"], _state_padd),
+            "states": district_states_sentence(p["key"], p["label"], _district_states),
             "siblings": [s for s in siblings if s["key"] != p["key"]],
             "updated_at": updated_at,
             "updated_iso": updated_iso,

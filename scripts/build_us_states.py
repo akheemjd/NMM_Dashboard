@@ -4,7 +4,7 @@
 WHAT MAKES THESE PAGES DIFFERENT
 --------------------------------
 EIA publishes a weekly on-highway diesel price by DISTRICT, not by state. There
-are eleven districts in the country. Every free US site with fifty "state diesel
+are ten districts in the country. Every free US site with fifty "state diesel
 price" pages is serving nine or ten district numbers under fifty URLs, and most
 say so only in a footnote. dieselcostpergallon.com states it plainly on its Texas
 page: "EIA prices the US, its districts and California only, so state pages show
@@ -200,7 +200,7 @@ def build():
             tax_note = (
                 f"The two figures above answer different questions. The statutory excise "
                 f"is what {name} levies on a gallon of diesel sold in the state. The IFTA "
-                f"rate is what a carrier reports to {name} for a litre burned there, and "
+                f"rate is what a carrier reports to {name} for a gallon burned there, and "
                 f"in most jurisdictions the two are not the same number."
             )
         if ifta_absent:
@@ -231,10 +231,23 @@ def build():
 
         description = (
             f"{name} diesel by district and the fuel tax {abbr} actually levies. "
-            f"IFTA rate {money(ifta_diesel, 4)} a litre, state excise "
+            f"IFTA rate {money(ifta_diesel, 4)} a gallon, state excise "
             f"{money(state_excise, 4)} a gallon. EIA prices diesel by district, not "
             f"by state, and this page says which district {name} is in."
         )
+
+        # Components at display precision, computed once, so the figures in the
+        # printed equation cannot round differently from their own addends.
+        # diesel_total_state INCLUDES diesel_other, so the pure statutory
+        # excise is the difference. Using it directly double-counted the
+        # other fees into the state total.
+        _exc = round(float(st.get('diesel_total_state') or 0.0)
+                    - float(st.get('diesel_other') or 0.0), 4)
+        # 'other' comes from EIA's own diesel_other column, NOT from
+        # all_in minus excise — that subtraction double-counted the
+        # federal rate and made every state total equal its all-in value.
+        _oth = round(float(st.get('diesel_other') or 0.0), 4)
+        _fed = round(float(federal.get('diesel_total') or 0.0), 4)
 
         data = {
             "state_name": name,
@@ -257,12 +270,25 @@ def build():
             # figure exactly, which only holds if the blank contributes nothing.
             # An unknown would show as "--" or "W" in that table.
             "state_other": money(st.get("diesel_other") or 0.0, 4),
+        # Components at display precision, computed once so the three figures
+            # below cannot round differently from the ones above them.
+            "state_other_note_hint": "",
             "state_other_note": (
                 "inspection and environmental fees" if (st.get("diesel_other") or 0) > 0
                 else "none levied on diesel"),
-            "state_total": money(st.get("diesel_total_state"), 4),
-            "federal_excise": money(federal.get("diesel_total"), 4),
-            "all_in": money(all_in, 4),
+            # The page prints its arithmetic, so the printed total must equal the
+            # two printed addends. It did not on three states — Colorado,
+            # Louisiana and New Mexico printed addends summing to one unit less
+            # than the total, because the total was rounded from the unrounded
+            # data while the addends were rounded for display.
+            #
+            # Round the components first, then add those. The displayed equation
+            # is then exactly true; the cost is a possible 0.0001 difference from
+            # the raw table, which is invisible. Work that does not add up is the
+            # worse error for a page whose point is showing its work.
+            "state_total": money(_exc + _oth, 4),
+            "federal_excise": money(_fed, 4),
+            "all_in": money(_exc + _oth + _fed, 4),
             "tax_note": tax_note,
             "has_border": has_border,
             "border_count": len(plist),
