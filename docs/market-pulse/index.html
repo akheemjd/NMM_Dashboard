@@ -35,7 +35,7 @@
   <a class="mark" href="/"><img class="logo" src="/assets/logo.png" width="32" height="32" alt=""><b>Northern Mile</b><span>North American trucking data</span></a>
 </div></header>
 
-<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/">Home</a><a href="/freight-barometer/">Barometer</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/fuel-tax-rates/">Fuel tax</a><a href="/border-trends/">Trends</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/" class="on" aria-current="page">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a></div></nav>
+<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/">Home</a><a href="/freight-barometer/">Barometer</a><a href="/fuel-prices/">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/fuel-tax-rates/">Fuel tax</a><a href="/border-trends/">Trends</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/" class="on" aria-current="page">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a><div class="fxtog" role="group" aria-label="Display currency" title="Figures convert at the live Bank of Canada rate"><button type="button" data-cur="CAD" aria-pressed="true">CAD</button><button type="button" data-cur="USD" aria-pressed="false">USD</button></div></div></nav>
 
 <main class="wrap" id="main">
 
@@ -48,7 +48,7 @@
 
   <section class="sec">
     <div class="lead"><h2>The week in one line</h2></div>
-    <p class="stand">The week in one line: diesel at 271.0¢/L, the loonie at 1.4096, GDP moving +0.3% last month.</p>
+    <p class="stand">The week in one line: diesel at <span class="fx" data-c="CAD" data-u="cpl" data-v="271.0">271.0¢/L</span>, the loonie at 1.4096, GDP moving +0.3% last month.</p>
   </section>
 
   <section class="sec">
@@ -57,7 +57,7 @@
   </section>
 
   <div class="rows">
-  <div class="r"><span class="k">Monthly GDP<small>Broadest measure of economic activity. GDP growth = more freight moving. · Statistics Canada</small></span><span class="v flat">+0.3%</span></div><div class="r"><span class="k">Year-over-year<small>Longer-term freight demand trend. · Statistics Canada</small></span><span class="v flat">+2.0%</span></div><div class="r"><span class="k">Fuel cost per 1,000 km<small>Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes. · NRCan weekly diesel survey</small></span><span class="v flat">$948</span></div><div class="r"><span class="k">BC vs AB diesel spread<small>Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB. · Industry surveys</small></span><span class="v flat">35.8¢/L</span></div><div class="r"><span class="k">USD/CAD vs 30-day average<small>Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts. · Bank of Canada</small></span><span class="v flat">1.4096</span></div><div class="r"><span class="k">Border congestion<small>Backed-up crossings add idle time and late-delivery risk on cross-border lanes. · CBSA commercial lane feed</small></span><span class="v flat">4/9</span></div>
+  <div class="r"><span class="k">Monthly GDP<small>Broadest measure of economic activity. GDP growth = more freight moving. · Statistics Canada</small></span><span class="v flat">+0.3%</span></div><div class="r"><span class="k">Year-over-year<small>Longer-term freight demand trend. · Statistics Canada</small></span><span class="v flat">+2.0%</span></div><div class="r"><span class="k">Fuel cost per 1,000 km<small>Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes. · NRCan weekly diesel survey</small></span><span class="v flat">$948</span></div><div class="r"><span class="k">BC vs AB diesel spread<small>Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB. · Industry surveys</small></span><span class="v flat"><span class="fx" data-c="CAD" data-u="cpl" data-v="35.8">35.8¢/L</span></span></div><div class="r"><span class="k">USD/CAD vs 30-day average<small>Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts. · Bank of Canada</small></span><span class="v flat">1.4096</span></div><div class="r"><span class="k">Border congestion<small>Backed-up crossings add idle time and late-delivery risk on cross-border lanes. · CBSA commercial lane feed</small></span><span class="v flat">4/9</span></div>
   </div>
   <p class="note">These indicators mix cost signals and demand signals, which move in opposite directions for a carrier. A rising number is not automatically good news and we do not colour them as though it were. <a href="/methodology/nmdi/">How the numbers are sourced</a></p>
 
@@ -83,5 +83,6 @@
 </div></footer>
 
 <script src="/assets/nm.js?v=1790204157"></script>
+<script src="/assets/fx.js?v=1790204157"></script>
 </body>
 </html>

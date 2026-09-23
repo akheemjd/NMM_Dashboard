@@ -1,0 +1,240 @@
+/* Northern Mile — currency switching.
+ *
+ * WHAT THIS DOES
+ * The site publishes two currencies natively and never said which was which.
+ * Canadian diesel is quoted in cents per litre (CAD); US diesel in dollars per
+ * gallon (USD). Both rendered as a bare number with a bare "$", so a US carrier
+ * reading a Canadian figure saw a dollar sign and read it as US dollars — about
+ * 40% off from what they pay.
+ *
+ * Every money figure is now emitted with its NATIVE currency and unit:
+ *
+ *   <span class="fx" data-c="CAD" data-u="cpl" data-v="271.0">271.0¢/L</span>
+ *
+ * This file reads the live USD/CAD rate, re-renders every marked figure in the
+ * reader's chosen currency, and wires the nav toggle. The default is CAD, which
+ * is byte-identical to what the page already shows — so with JavaScript off, or
+ * with the rate unavailable, the site is exactly as it was.
+ *
+ * UNITS ARE NOT CURRENCIES
+ * A Canadian price is per LITRE and a US price is per GALLON. Converting only
+ * the currency would produce a number nobody recognises: Canada's 271.0¢/L is
+ * 7.29 USD/gal, not 1.93 USD/L. The unit conversion is applied too, because a
+ * per-litre US price is not something any US carrier thinks in.
+ *
+ *   cpl  cents per litre, CAD      -> USD: /100, /rate, *3.785411784, -> $/gal
+ *   gpg  dollars per gallon, USD   -> CAD: *rate, *3.785411784, *100  -> ¢/L
+ *   cad  plain Canadian dollars    -> USD: /rate
+ *   usd  plain US dollars          -> CAD: *rate
+ *
+ * FAILS VISIBLE
+ * If the rate cannot be fetched the toggle disables itself and says so. It must
+ * not look live while doing nothing — that is precisely the bug this whole
+ * session was spent fixing elsewhere.
+ */
+(function () {
+  "use strict";
+
+  var STORE = "nm_currency";
+  var RATE_URL = "/assets/fx.json";
+  var LITRES_PER_GALLON = 3.785411784;
+
+  var rate = null;
+  var rateAsOf = "";
+  var currency = "CAD";
+
+  try {
+    currency = localStorage.getItem(STORE) === "USD" ? "USD" : "CAD";
+  } catch (e) {
+    currency = "CAD";
+  }
+
+  function litresPerGallon() {
+    return LITRES_PER_GALLON;
+  }
+
+  /* Convert a native value into the display currency. Returns a number. */
+  function convert(value, fromCurrency, unit, toCurrency) {
+    var v = Number(value);
+    if (!isFinite(v) || !rate) return null;
+
+    if (fromCurrency === toCurrency) return v;
+
+    if (fromCurrency === "CAD" && toCurrency === "USD") {
+      if (unit === "cpl") return v / 100 / rate * litresPerGallon(); // ¢/L -> $/gal
+      if (unit === "lpg") return v / rate * litresPerGallon();       // $/L -> $/gal
+      return v / rate;                                               // plain CAD -> USD
+    }
+    if (fromCurrency === "USD" && toCurrency === "CAD") {
+      if (unit === "gpg") return v * rate / litresPerGallon() * 100; // $/gal -> ¢/L
+      if (unit === "lpg") return v * rate / litresPerGallon();       // $/gal -> $/L
+      return v * rate;                                               // plain USD -> CAD
+    }
+    return v;
+  }
+
+  /* The unit label for a figure in the display currency. */
+  function unitLabel(fromCurrency, unit, toCurrency) {
+    if (fromCurrency === toCurrency) {
+      return { cpl: "¢/L", gpg: "$/gal", lpg: "$/L", cad: "", usd: "", p4: "", plain: "" }[unit] || "";
+    }
+    if (fromCurrency === "CAD" && toCurrency === "USD") {
+      return { cpl: "$/gal", lpg: "$/gal", cad: "", usd: "", p4: "", plain: "" }[unit] || "";
+    }
+    if (fromCurrency === "USD" && toCurrency === "CAD") {
+      return { gpg: "¢/L", lpg: "$/L", cad: "", usd: "", p4: "", plain: "" }[unit] || "";
+    }
+    return "";
+  }
+
+  function decimalsFor(fromCurrency, unit, toCurrency) {
+    var label = unitLabel(fromCurrency, unit, toCurrency);
+    if (label === "¢/L") return 1;
+    if (label === "$/gal") return 3;
+    // Statutory fuel tax rates are published to four decimals and a two-decimal
+    // render turns California's $0.4820 into C$0.68, losing the precision the
+    // figure is quoted at.
+    if (unit === "p4") return 4;
+    return 2;
+  }
+
+  function format(value, fromCurrency, unit, toCurrency) {
+    var label = unitLabel(fromCurrency, unit, toCurrency);
+    var dp = decimalsFor(fromCurrency, unit, toCurrency);
+    var n = value.toLocaleString("en-CA", { minimumFractionDigits: dp, maximumFractionDigits: dp });
+    // The dollar sign belongs to the unit label when there is one. Prefixing
+    // another rendered "$7.278 $/gal".
+    if (label) return label.charAt(0) === "$" ? "$" + n + "/" + label.slice(2) : n + label;
+    return (toCurrency === "USD" ? "US$" : "C$") + n;
+  }
+
+  function renderOptions() {
+    // <option> cannot contain markup, so these are annotated with attributes by
+    // the build and their label string is rebuilt here. Wrapping them in a span
+    // made the browser discard the content and blanked the calculator.
+    var opts = document.querySelectorAll("option[data-fxv]");
+    for (var i = 0; i < opts.length; i++) {
+      var o = opts[i];
+      var raw = o.getAttribute("data-fxv");
+      var from = o.getAttribute("data-fxc");
+      var unit = o.getAttribute("data-fxu") || "plain";
+      var label = o.getAttribute("data-fxlabel") || "";
+      if (!rate) continue;
+      var out = convert(raw, from, unit, currency);
+      if (out === null) continue;
+      var shown = format(out, from, unit, currency);
+      o.textContent = label ? label + " — " + shown : shown;
+      // The calculator reads the option's VALUE as the cents-per-litre figure.
+      // It must stay in the native unit or the arithmetic would change with the
+      // display currency.
+      if (o.hasAttribute("value") && o.getAttribute("value") !== "custom") {
+        // value is left exactly as built — do not touch it.
+      }
+    }
+  }
+
+  function render() {
+    renderOptions();
+    var nodes = document.querySelectorAll(".fx");
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i];
+      var from = el.getAttribute("data-c");
+      var unit = el.getAttribute("data-u") || "plain";
+      var raw = el.getAttribute("data-v");
+      if (raw === null || raw === "") continue;
+
+      if (!rate) {
+        // No rate: leave the native text exactly as built.
+        continue;
+      }
+      var out = convert(raw, from, unit, currency);
+      if (out === null) continue;
+      el.textContent = format(out, from, unit, currency);
+      el.setAttribute("data-shown", currency);
+    }
+  }
+
+  function paintToggle() {
+    var btns = document.querySelectorAll(".fxtog button");
+    for (var i = 0; i < btns.length; i++) {
+      var on = btns[i].getAttribute("data-cur") === currency;
+      btns[i].setAttribute("aria-pressed", on ? "true" : "false");
+      btns[i].className = on ? "on" : "";
+    }
+    var note = document.querySelector(".fxnote");
+    if (note) {
+      note.textContent = rate
+        ? "Converted at USD/CAD " + rate.toFixed(4) + (rateAsOf ? " (" + rateAsOf + ")" : "")
+        : "";
+    }
+  }
+
+  function set(which) {
+    currency = which === "USD" ? "USD" : "CAD";
+    try { localStorage.setItem(STORE, currency); } catch (e) {}
+    render();
+    paintToggle();
+    // The calculator recomputes its own outputs; tell it the currency changed.
+    if (typeof window.NMCalcRefresh === "function") {
+      try { window.NMCalcRefresh(); } catch (e) {}
+    }
+  }
+
+  function wire() {
+    var btns = document.querySelectorAll(".fxtog button");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        if (!rate) return;
+        set(this.getAttribute("data-cur"));
+      });
+    }
+  }
+
+  function disable(reason) {
+    var tog = document.querySelector(".fxtog");
+    if (tog) {
+      tog.className = "fxtog off";
+      tog.setAttribute("title", reason);
+    }
+  }
+
+  function boot() {
+    wire();
+    paintToggle();
+    fetch(RATE_URL, { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (j) {
+        if (!j || !isFinite(Number(j.usd_cad)) || Number(j.usd_cad) <= 0) {
+          throw new Error("bad rate");
+        }
+        rate = Number(j.usd_cad);
+        rateAsOf = j.as_of || "";
+        render();
+        paintToggle();
+        if (typeof window.NMCalcRefresh === "function") {
+          try { window.NMCalcRefresh(); } catch (e) {}
+        }
+      })
+      .catch(function (e) {
+        // Stay on native units and SAY SO rather than looking live.
+        rate = null;
+        disable("Currency conversion unavailable: " + e.message);
+      });
+  }
+
+  // Exposed so page scripts can render marked values they generate at runtime.
+  window.NMFX = {
+    convert: convert,
+    format: format,
+    render: render,
+    currency: function () { return currency; },
+    rate: function () { return rate; },
+    ready: function () { return rate !== null; }
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();

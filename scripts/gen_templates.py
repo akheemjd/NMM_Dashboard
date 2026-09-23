@@ -581,18 +581,35 @@ function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n]
 function hav(a,b){var R=6371,dLa=(b.la-a.la)*Math.PI/180,dLn=(b.ln-a.ln)*Math.PI/180,la1=a.la*Math.PI/180,la2=b.la*Math.PI/180;var h=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLn/2)*Math.sin(dLn/2);return 2*R*Math.asin(Math.sqrt(h));}
 function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){var ca=CODES[origin.value],cb=CODES[dest.value],km=(ca&&cb)?(DISTANCES[ca+"-"+cb]||DISTANCES[cb+"-"+ca]||0):0;dist.value=km?km:Math.round(hav(o,d)*1.25);$("distHint").textContent="Auto: "+origin.value+" → "+dest.value+" = "+dist.value+" km";var t=(o.p==="US")?(US_PADD[origin.value]||"US"):o.p;for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===t){prov.value=prov.options[i].value;break;}}}calc();}
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
+// Emit a marked span instead of flat text so the currency toggle can
+// re-render these. The calculator computes in CAD natively (every fuel
+// option is a CAD cents/litre figure) and fx.js converts for display.
+function fxs(v,unit){
+  var t=(unit==='cpl')?(v.toFixed(1)+'¢/L'):('$'+v.toFixed(2));
+  return '<span class="fx" data-c="CAD" data-u="'+unit+'" data-v="'+v.toFixed(unit==='cpl'?1:2)+'">'+t+'</span>';
+}
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
 var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
 if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice","rOpMi","rFloor"].forEach(function(i){$(i).textContent="\\u2014";});return;}
 var litres=d/100*b,total=litres*(cents/100),perMi=total/d*1.609344,floor=perMi+op;
 $("rLitres").textContent=litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L";
-$("rTotal").textContent=money(total);$("rPerKm").textContent=money(total/d)+" /km";
-$("rPerMi").textContent=money(perMi)+" /mi";
-$("rOpMi").textContent=money(op)+" /mi";
-$("rFloor").textContent=money(floor)+" /mi";
+$("rTotal").innerHTML=fxs(total,"plain");
+$("rPerKm").innerHTML=fxs(total/d,"plain")+" /km";
+$("rPerMi").innerHTML=fxs(perMi,"plain")+" /mi";
+$("rOpMi").innerHTML=fxs(op,"plain")+" /mi";
+$("rFloor").innerHTML=fxs(floor,"plain")+" /mi";
 var o=prov.options[prov.selectedIndex];
-$("rPrice").textContent=cents.toFixed(1)+"\\u00a2/L \\u00b7 "+(isC?"your price":o.getAttribute("data-name"));}
+$("rPrice").innerHTML=fxs(cents,"cpl")+" · "+(isC?"your price":o.getAttribute("data-name"));
+// calc() rebuilds its outputs as native-CAD spans, so ask the currency
+// layer to render them. Must live inside calc(): at IIFE top level it ran
+// once on load and every later recompute stayed in CAD.
+if(window.NMFX&&window.NMFX.ready&&window.NMFX.ready()){try{window.NMFX.render();}catch(e){}}
+}
 [dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
+// fx.js calls this after the reader switches currency, so the results
+// re-render in the new one. Without it the toggle would convert the static
+// page and leave the calculator showing stale CAD.
+window.NMCalcRefresh=calc;
 origin.addEventListener("change",lane);dest.addEventListener("change",lane);dist.addEventListener("input",function(){if(origin.value&&dest.value)$("distHint").textContent="Manual distance — overrides the lane estimate.";});
 fill(origin);fill(dest);
 try{var sb=localStorage.getItem("nm_burn"),so=localStorage.getItem("nm_opcost");if(sb)burn.value=sb;if(so)opcost.value=so;}catch(e){}

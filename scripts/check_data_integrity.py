@@ -450,8 +450,52 @@ def check_og_images_exist():
     return missing
 
 
+def check_fx_markers():
+    """The currency layer must be complete, well-formed and non-nesting.
+
+    Three failure modes, all of which have already happened once:
+
+    1. A marker missing data-v renders nothing once the reader toggles currency —
+       the figure just disappears. Silent and invisible in CAD.
+    2. Nested markers double-wrap on every rebuild; at 48 deploys a day that is
+       48 levels deep by the evening.
+    3. fx.json missing or unparseable leaves the toggle looking live while doing
+       nothing, which is the defect class this codebase keeps producing.
+    """
+    import json as _json
+    import re as _re
+    base = pathlib.Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    docs = base / "docs"
+    out = []
+
+    rate = docs / "assets" / "fx.json"
+    if not rate.exists():
+        out.append("assets/fx.json is missing — the toggle would silently do nothing")
+    else:
+        try:
+            j = _json.loads(rate.read_text(encoding="utf-8"))
+            if not (j.get("usd_cad") and float(j["usd_cad"]) > 0):
+                out.append("assets/fx.json has no usable usd_cad")
+        except Exception as e:
+            out.append(f"assets/fx.json does not parse: {e}")
+
+    MISSING = _re.compile(r'<span class="fx"(?![^>]*data-v=)[^>]*>')
+    NESTED = _re.compile(r'<span class="fx"[^>]*><span class="fx"')
+    for f in docs.rglob("index.html"):
+        h = f.read_text(encoding="utf-8", errors="replace")
+        rel = f.parent.relative_to(docs)
+        if MISSING.search(h):
+            out.append(f"{rel}: .fx marker with no data-v")
+        if NESTED.search(h):
+            out.append(f"{rel}: nested .fx markers — the layer is not idempotent")
+        if 'class="fxtog"' in h and "/assets/fx.js" not in h:
+            out.append(f"{rel}: currency toggle rendered without fx.js")
+    return out
+
+
 CHECKS = (
     ("every og:image resolves to a built file", check_og_images_exist),
+    ("the currency layer is complete and non-nesting", check_fx_markers),
     ("lookback never returns the newest point", check_lookback_not_latest),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
     ("spread uses the ten-province definition", check_spread_definition),
