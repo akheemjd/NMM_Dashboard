@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-310310",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BURLOAK DRIVE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.39799018,
+      "lng": -79.7541197,
+      "start": 1790141760,
+      "end": null,
+      "updated": 1790141760
+    },
+    {
       "id": "ON-310307",
       "province": "ON",
       "highway": "HWY 401",
@@ -788,26 +804,10 @@
       "start": 1790042400,
       "end": 1790413200,
       "updated": 1790012100
-    },
-    {
-      "id": "ON-309787",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Construction on QEW Toronto bound  between NORTHSHORE BLVD and FAIRVIEW STREET/PLAINS ROAD, Burlington. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.315086,
-      "lng": -79.80735,
-      "start": 1790215200,
-      "end": 1791450000,
-      "updated": 1790011680
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T05:09:14.903253+00:00",
+  "updated": "2026-09-23T05:40:14.021008+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

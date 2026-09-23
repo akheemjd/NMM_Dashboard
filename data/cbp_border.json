@@ -18,42 +18,42 @@
         "max_lanes": 5,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At 3:00 am EDT"
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "nexus": null,
         "ready": null
       },
-      "commercial_delay": null,
-      "commercial_reported": false,
+      "commercial_delay": 0,
+      "commercial_reported": true,
       "passenger": {
         "max_lanes": 8,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At 3:00 am EDT"
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
@@ -63,7 +63,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -71,12 +71,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "300401",
@@ -154,7 +154,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "300402",
@@ -232,7 +232,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "300403",
@@ -310,7 +310,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "090104",
@@ -330,10 +330,10 @@
         "max_lanes": 4,
         "automation": "Bluetooth",
         "standard": {
-          "delay": 15,
+          "delay": 20,
           "lanes_open": 2,
           "status": "delay",
-          "as_of": "At 0:58 am EDT"
+          "as_of": "At 1:28 am EDT"
         },
         "fast": {
           "delay": null,
@@ -344,16 +344,16 @@
         "nexus": null,
         "ready": null
       },
-      "commercial_delay": 15,
+      "commercial_delay": 20,
       "commercial_reported": true,
       "passenger": {
         "max_lanes": 8,
         "automation": "Bluetooth",
         "standard": {
           "delay": 0,
-          "lanes_open": 2,
+          "lanes_open": 1,
           "status": "no delay",
-          "as_of": "At 0:58 am EDT"
+          "as_of": "At 1:28 am EDT"
         },
         "fast": null,
         "nexus": {
@@ -388,7 +388,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "090101",
@@ -408,10 +408,10 @@
         "max_lanes": 8,
         "automation": "Bluetooth",
         "standard": {
-          "delay": 8,
+          "delay": 4,
           "lanes_open": 4,
           "status": "no delay",
-          "as_of": "At 0:58 am EDT"
+          "as_of": "At 1:28 am EDT"
         },
         "fast": {
           "delay": null,
@@ -422,16 +422,16 @@
         "nexus": null,
         "ready": null
       },
-      "commercial_delay": 8,
+      "commercial_delay": 4,
       "commercial_reported": true,
       "passenger": {
         "max_lanes": 17,
         "automation": "Bluetooth",
         "standard": {
-          "delay": 2,
+          "delay": 4,
           "lanes_open": 1,
           "status": "no delay",
-          "as_of": "At 0:58 am EDT"
+          "as_of": "At 1:28 am EDT"
         },
         "fast": null,
         "nexus": {
@@ -466,7 +466,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "090102",
@@ -506,10 +506,10 @@
         "max_lanes": 16,
         "automation": "Bluetooth",
         "standard": {
-          "delay": 1,
+          "delay": 3,
           "lanes_open": 1,
           "status": "no delay",
-          "as_of": "At 0:58 am EDT"
+          "as_of": "At 1:28 am EDT"
         },
         "fast": null,
         "nexus": {
@@ -544,7 +544,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "090103",
@@ -622,7 +622,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "011501",
@@ -700,7 +700,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "011503",
@@ -778,7 +778,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "011502",
@@ -856,7 +856,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "071201",
@@ -899,7 +899,7 @@
           "delay": 0,
           "lanes_open": 1,
           "status": "no delay",
-          "as_of": "At Midnight EDT"
+          "as_of": "At 1:00 am EDT"
         },
         "fast": null,
         "nexus": {
@@ -934,7 +934,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "020901",
@@ -1012,7 +1012,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "380001",
@@ -1090,7 +1090,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "380102",
@@ -1168,7 +1168,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "380002",
@@ -1246,7 +1246,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "021201",
@@ -1324,7 +1324,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "010601",
@@ -1402,7 +1402,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "360401",
@@ -1422,42 +1422,42 @@
         "max_lanes": 1,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At 2:00 am CDT"
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "nexus": null,
         "ready": null
       },
-      "commercial_delay": null,
-      "commercial_reported": false,
+      "commercial_delay": 0,
+      "commercial_reported": true,
       "passenger": {
         "max_lanes": 3,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At 2:00 am CDT"
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
@@ -1467,7 +1467,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -1475,12 +1475,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "010401",
@@ -1558,7 +1558,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "302301",
@@ -1636,7 +1636,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "L01901",
@@ -1714,7 +1714,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "070401",
@@ -1734,42 +1734,42 @@
         "max_lanes": 3,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At 3:00 am EDT"
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "nexus": null,
         "ready": null
       },
-      "commercial_delay": null,
-      "commercial_reported": false,
+      "commercial_delay": 0,
+      "commercial_reported": true,
       "passenger": {
         "max_lanes": 6,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At 3:00 am EDT"
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
@@ -1779,7 +1779,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -1787,12 +1787,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "021101",
@@ -1870,7 +1870,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "070101",
@@ -1948,7 +1948,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "340101",
@@ -2026,7 +2026,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "380201",
@@ -2104,7 +2104,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "380301",
@@ -2182,7 +2182,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "01:05:01"
+      "agency_time": "01:35:05"
     },
     {
       "port_number": "300901",
@@ -2260,7 +2260,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "331001",
@@ -2338,7 +2338,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "250201",
@@ -2378,10 +2378,10 @@
         "max_lanes": 3,
         "automation": "Manual",
         "standard": {
-          "delay": 4,
+          "delay": 15,
           "lanes_open": 1,
-          "status": "no delay",
-          "as_of": "At 8:00 pm PDT"
+          "status": "delay",
+          "as_of": "At 9:00 pm PDT"
         },
         "fast": null,
         "nexus": {
@@ -2404,7 +2404,7 @@
           "delay": 0,
           "lanes_open": 1,
           "status": "no delay",
-          "as_of": "At 8:00 pm PDT"
+          "as_of": "At 9:00 pm PDT"
         },
         "fast": null,
         "nexus": null,
@@ -2416,7 +2416,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "230106",
@@ -2494,7 +2494,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "240215",
@@ -2572,7 +2572,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "240207",
@@ -2650,7 +2650,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "535501",
@@ -2728,7 +2728,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "535504",
@@ -2806,7 +2806,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "535503",
@@ -2884,7 +2884,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "535502",
@@ -2962,7 +2962,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "250301",
@@ -3002,33 +3002,33 @@
         "max_lanes": 8,
         "automation": "Manual",
         "standard": {
-          "delay": 5,
-          "lanes_open": 1,
-          "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "delay": null,
+          "lanes_open": null,
+          "status": "Lanes Closed",
+          "as_of": null
         },
         "fast": null,
         "nexus": {
-          "delay": 5,
-          "lanes_open": 2,
-          "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "delay": null,
+          "lanes_open": null,
+          "status": "Lanes Closed",
+          "as_of": null
         },
         "ready": {
-          "delay": 5,
-          "lanes_open": 4,
-          "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "delay": null,
+          "lanes_open": null,
+          "status": "Lanes Closed",
+          "as_of": null
         }
       },
       "pedestrian": {
         "max_lanes": 4,
         "automation": "Manual",
         "standard": {
-          "delay": 5,
-          "lanes_open": 3,
-          "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "delay": null,
+          "lanes_open": null,
+          "status": "Lanes Closed",
+          "as_of": null
         },
         "fast": null,
         "nexus": null,
@@ -3040,7 +3040,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "250302",
@@ -3080,23 +3080,23 @@
         "max_lanes": 16,
         "automation": "Manual",
         "standard": {
-          "delay": 30,
-          "lanes_open": 3,
+          "delay": 20,
+          "lanes_open": 2,
           "status": "delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 10:00 pm PDT"
         },
         "fast": null,
         "nexus": {
           "delay": 5,
-          "lanes_open": 4,
+          "lanes_open": 2,
           "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 10:00 pm PDT"
         },
         "ready": {
-          "delay": 30,
+          "delay": 20,
           "lanes_open": 3,
           "status": "delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 10:00 pm PDT"
         }
       },
       "pedestrian": {
@@ -3104,21 +3104,21 @@
         "automation": "Manual",
         "standard": {
           "delay": 5,
-          "lanes_open": 3,
+          "lanes_open": 2,
           "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 10:00 pm PDT"
         },
         "fast": null,
         "nexus": null,
         "ready": {
           "delay": 5,
-          "lanes_open": 3,
+          "lanes_open": 2,
           "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 10:00 pm PDT"
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "240601",
@@ -3196,7 +3196,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "230201",
@@ -3274,7 +3274,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "260101",
@@ -3314,17 +3314,17 @@
         "max_lanes": 7,
         "automation": "Manual",
         "standard": {
-          "delay": 30,
-          "lanes_open": 4,
-          "status": "delay",
-          "as_of": "At 9:00 pm PST"
+          "delay": 1,
+          "lanes_open": 3,
+          "status": "no delay",
+          "as_of": "At 10:00 pm PST"
         },
         "fast": null,
         "nexus": {
-          "delay": 0,
-          "lanes_open": 1,
-          "status": "no delay",
-          "as_of": "At 9:00 pm PST"
+          "delay": null,
+          "lanes_open": null,
+          "status": "Lanes Closed",
+          "as_of": null
         },
         "ready": {
           "delay": null,
@@ -3337,10 +3337,10 @@
         "max_lanes": 3,
         "automation": "Manual",
         "standard": {
-          "delay": 3,
+          "delay": 1,
           "lanes_open": 2,
           "status": "no delay",
-          "as_of": "At 9:00 pm PST"
+          "as_of": "At 10:00 pm PST"
         },
         "fast": null,
         "nexus": null,
@@ -3352,7 +3352,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "230301",
@@ -3430,7 +3430,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230302",
@@ -3452,13 +3452,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "nexus": null,
@@ -3470,22 +3470,22 @@
         "max_lanes": 7,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 15,
+          "lanes_open": 4,
+          "status": "delay",
+          "as_of": "At Midnight CDT"
         },
         "fast": null,
         "nexus": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 1,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At Midnight CDT"
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         }
       },
@@ -3495,7 +3495,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -3503,12 +3503,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "240221",
@@ -3586,7 +3586,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "240201",
@@ -3664,7 +3664,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "240202",
@@ -3742,7 +3742,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "240204",
@@ -3820,7 +3820,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "240203",
@@ -3898,7 +3898,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "l24501",
@@ -3976,7 +3976,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "230103",
@@ -4054,7 +4054,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230503",
@@ -4076,13 +4076,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "nexus": null,
@@ -4096,20 +4096,20 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         }
       },
@@ -4119,7 +4119,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -4127,12 +4127,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230501",
@@ -4154,13 +4154,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "nexus": null,
@@ -4172,22 +4172,22 @@
         "max_lanes": 12,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 5,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At Midnight CDT"
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         }
       },
@@ -4195,22 +4195,22 @@
         "max_lanes": 10,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 15,
+          "lanes_open": 1,
+          "status": "delay",
+          "as_of": "At Midnight CDT"
         },
         "fast": null,
         "nexus": null,
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230502",
@@ -4232,13 +4232,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "nexus": null,
@@ -4252,20 +4252,20 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         }
       },
@@ -4275,7 +4275,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -4283,12 +4283,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230401",
@@ -4310,13 +4310,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "nexus": null,
@@ -4330,20 +4330,20 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": null,
         "nexus": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At Midnight CDT"
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         }
       },
@@ -4353,20 +4353,20 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": null,
         "nexus": null,
         "ready": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 1,
+          "status": "no delay",
+          "as_of": "At Midnight CDT"
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230402",
@@ -4388,13 +4388,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "nexus": null,
@@ -4406,23 +4406,23 @@
         "max_lanes": 15,
         "automation": "Manual",
         "standard": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 5,
+          "lanes_open": 2,
+          "status": "no delay",
+          "as_of": "At Midnight CDT"
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "ready": {
-          "delay": null,
-          "lanes_open": null,
-          "status": "Update Pending",
-          "as_of": null
+          "delay": 0,
+          "lanes_open": 3,
+          "status": "no delay",
+          "as_of": "At Midnight CDT"
         }
       },
       "pedestrian": {
@@ -4431,7 +4431,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -4439,12 +4439,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230403",
@@ -4466,13 +4466,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "nexus": null,
@@ -4486,20 +4486,20 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         }
       },
@@ -4509,7 +4509,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -4517,12 +4517,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230404",
@@ -4544,13 +4544,13 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "fast": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "Lanes Closed",
           "as_of": null
         },
         "nexus": null,
@@ -4564,20 +4564,20 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
         "nexus": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
@@ -4587,7 +4587,7 @@
         "standard": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         },
         "fast": null,
@@ -4595,12 +4595,12 @@
         "ready": {
           "delay": null,
           "lanes_open": null,
-          "status": "Update Pending",
+          "status": "N/A",
           "as_of": null
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "260201",
@@ -4678,7 +4678,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "240401",
@@ -4756,7 +4756,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "260305",
@@ -4834,7 +4834,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "260301",
@@ -4912,7 +4912,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "260401",
@@ -4990,7 +4990,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "260402",
@@ -5068,7 +5068,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "260403",
@@ -5146,7 +5146,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "250609",
@@ -5224,7 +5224,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "250602",
@@ -5302,7 +5302,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "250601",
@@ -5343,32 +5343,32 @@
         "automation": "Manual",
         "standard": {
           "delay": 90,
-          "lanes_open": 4,
+          "lanes_open": 1,
           "status": "delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 10:00 pm PDT"
         },
         "fast": null,
         "nexus": {
-          "delay": 5,
-          "lanes_open": 2,
-          "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "delay": null,
+          "lanes_open": null,
+          "status": "Lanes Closed",
+          "as_of": null
         },
         "ready": {
-          "delay": 80,
-          "lanes_open": 4,
+          "delay": 75,
+          "lanes_open": 2,
           "status": "delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 10:00 pm PDT"
         }
       },
       "pedestrian": {
         "max_lanes": 6,
         "automation": "Manual",
         "standard": {
-          "delay": 5,
-          "lanes_open": 6,
-          "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "delay": 40,
+          "lanes_open": 3,
+          "status": "delay",
+          "as_of": "At 10:00 pm PDT"
         },
         "fast": null,
         "nexus": null,
@@ -5380,7 +5380,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "250608",
@@ -5458,7 +5458,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "202401",
@@ -5536,7 +5536,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "240301",
@@ -5614,7 +5614,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230902",
@@ -5692,7 +5692,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230901",
@@ -5770,7 +5770,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "230701",
@@ -5848,7 +5848,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "231001",
@@ -5926,7 +5926,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "231002",
@@ -6004,7 +6004,7 @@
         }
       },
       "agency_date": "9/23/2026",
-      "agency_time": "00:05:01"
+      "agency_time": "00:35:05"
     },
     {
       "port_number": "260801",
@@ -6082,7 +6082,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "260802",
@@ -6160,7 +6160,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "250401",
@@ -6238,7 +6238,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "250409",
@@ -6302,9 +6302,9 @@
         "automation": "Manual",
         "standard": {
           "delay": 0,
-          "lanes_open": 6,
+          "lanes_open": 4,
           "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 11:00 pm PDT"
         },
         "fast": null,
         "nexus": null,
@@ -6312,11 +6312,11 @@
           "delay": 0,
           "lanes_open": 1,
           "status": "no delay",
-          "as_of": "At 9:00 pm PDT"
+          "as_of": "At 11:00 pm PDT"
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "250407",
@@ -6394,7 +6394,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "240801",
@@ -6472,7 +6472,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     },
     {
       "port_number": "250501",
@@ -6550,7 +6550,7 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "22:05:01"
+      "agency_time": "22:35:05"
     },
     {
       "port_number": "240104",
@@ -6628,21 +6628,21 @@
         }
       },
       "agency_date": "9/22/2026",
-      "agency_time": "23:05:01"
+      "agency_time": "23:35:05"
     }
   ],
   "counts": {
     "total": 85,
     "canadian": 30,
     "mexican": 55,
-    "commercial_delay_reported": 17,
-    "commercial_delay_reported_canadian": 12,
+    "commercial_delay_reported": 20,
+    "commercial_delay_reported_canadian": 15,
     "jurisdiction_unknown": 55
   },
   "source": "U.S. Customs and Border Protection border wait times API",
   "source_url": "https://bwt.cbp.gov/api/bwtnew",
-  "source_note": "CBP: 17 of 85 ports reported a commercial delay at fetch time. Ports with no published figure are shown as not reported, not as zero.",
+  "source_note": "CBP: 20 of 85 ports reported a commercial delay at fetch time. Ports with no published figure are shown as not reported, not as zero.",
   "direction": "US-bound",
-  "captured_utc": "2026-09-23T05:09:17.762150+00:00",
+  "captured_utc": "2026-09-23T05:40:16.991524+00:00",
   "fetched_date": "2026-09-23"
 }
