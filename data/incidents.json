@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-310285",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.76855405,
+      "lng": -79.31985853,
+      "start": 1790124960,
+      "end": null,
+      "updated": 1790124960
+    },
+    {
+      "id": "ON-310281",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound TRANSFER at Morningside Express to Collector, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.7971471,
+      "lng": -79.19412042,
+      "start": 1790124000,
+      "end": null,
+      "updated": 1790124000
+    },
+    {
       "id": "ON-310276",
       "province": "ON",
       "highway": "HWY 400",
@@ -15,38 +47,6 @@
       "start": 1790123160,
       "end": null,
       "updated": 1790123160
-    },
-    {
-      "id": "ON-310273",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS RAMP at HWY 403, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.63876153,
-      "lng": -79.65543458,
-      "start": 1790122800,
-      "end": null,
-      "updated": 1790122800
-    },
-    {
-      "id": "ON-310262",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at BASKET WEAVE/JANE ST, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.71866873,
-      "lng": -79.50050005,
-      "start": 1790119440,
-      "end": null,
-      "updated": 1790119440
     },
     {
       "id": "ON-310181",
@@ -807,7 +807,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T00:30:04.963059+00:00",
+  "updated": "2026-09-23T01:01:06.078062+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
