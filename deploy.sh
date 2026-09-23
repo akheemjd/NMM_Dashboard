@@ -1,6 +1,17 @@
 #!/bin/bash
 # Deploy dashboard to GitHub Pages
 set -e
+
+# Self-syntax-check. deploy.sh embeds Python inside bash double-quoted strings
+# ($PYTHON -c "..."), so a stray " in an added line silently terminates the
+# string and the whole script stops parsing. That happened during the 2026-09-23
+# audit and was only caught because the deploy happened to run. Refuse to run
+# rather than half-run.
+if ! bash -n "$0" 2>/dev/null; then
+  echo "FATAL: deploy.sh has a syntax error — refusing to run" >&2
+  bash -n "$0" >&2
+  exit 1
+fi
 DRY_RUN="${DRY_RUN:-0}"
 
 # Derive our own filesystem location — works regardless of $HOME (which differs in cron vs interactive shells)
@@ -115,9 +126,13 @@ for src, filename in {'fuel':'fuel.json','exchange':'exchange.json','incidents':
             # down while the last good figure is still fresh, and that used to be
             # completely invisible: NRCan returned 503 for hours and health said
             # 'ok' because yesterday's print was inside the ceiling.
+            # Single quotes only in this block. It is a bash double-quoted
+            # string, so a double-quote character anywhere inside it -- in code
+            # OR in a comment -- ends the string early and bash then chokes on
+            # whatever follows. That is what broke this file twice.
             flag = ''
             if d.get('live_fetch_ok') is False:
-                flag = f"  <-- LIVE FETCH FAILING: {str(d.get('last_fetch_error'))[:60]}"
+                flag = '  <-- LIVE FETCH FAILING: ' + str(d.get('last_fetch_error'))[:60]
             print(f'  {src}: ok ({age}d){flag}')
     except Exception as e:
         record_failure(src, str(e)); print(f'  {src}: ERROR {e}')

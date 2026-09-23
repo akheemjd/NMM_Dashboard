@@ -93,91 +93,131 @@
     ]
   },
   "fx": {
-    "usd_cad": "1.4064",
+    "usd_cad": "1.4096",
     "direction": "weaker CAD",
-    "change": "+0.0043",
-    "usd_100": "140.64",
-    "usd_500": "703.20",
-    "usd_1000": "1,406.40",
-    "cad_1000": "711.04",
+    "change": "+0.0032",
+    "usd_100": "140.96",
+    "usd_500": "704.80",
+    "usd_1000": "1,409.60",
+    "cad_1000": "709.42",
     "band": "notable",
-    "band_pct": "+0.31%",
-    "obs_date": "2026-09-22",
-    "avg_30d": "1.3889",
-    "vs_baseline": "+0.0175",
+    "band_pct": "+0.23%",
+    "obs_date": "2026-09-23",
+    "avg_30d": "1.3902",
+    "vs_baseline": "+0.0194",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "+0.0147",
-    "change_7d_pct": "+1.06%",
-    "change_30d": "+0.0304",
-    "change_30d_pct": "+2.21%",
-    "change_1y": "+0.0235",
-    "change_1y_pct": "+1.70%",
-    "range_pct": "76%"
+    "change_7d": "+0.0149",
+    "change_7d_pct": "+1.07%",
+    "change_30d": "+0.0254",
+    "change_30d_pct": "+1.83%",
+    "change_1y": "+0.0280",
+    "change_1y_pct": "+2.03%",
+    "range_pct": "81%"
   },
   "eia": {
     "us_national_usd_gal": "6.529",
-    "us_national_cpl": "242.6",
-    "nadi": "256.8",
-    "ca_us_gap": "28.4",
+    "us_national_cpl": "243.1",
+    "nadi": "257.1",
+    "ca_us_gap": "27.9",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-09-21",
     "padds_usd_gal": {
       "east_coast": 6.268,
+      "new_england": 6.517,
+      "central_atlantic": 6.546,
+      "lower_atlantic": 6.139,
       "midwest": 6.68,
       "gulf_coast": 6.177,
       "rocky_mountain": 6.34,
-      "west_coast": 7.456
+      "west_coast": 7.456,
+      "california": 8.246,
+      "west_coast_ex_california": 6.791
     },
     "padds_cpl": {
-      "east_coast": 232.9,
-      "midwest": 248.2,
-      "gulf_coast": 229.5,
-      "rocky_mountain": 235.6,
-      "west_coast": 277.0
+      "east_coast": 233.4,
+      "new_england": 242.7,
+      "central_atlantic": 243.8,
+      "lower_atlantic": 228.6,
+      "midwest": 248.7,
+      "gulf_coast": 230.0,
+      "rocky_mountain": 236.1,
+      "west_coast": 277.6,
+      "california": 307.1,
+      "west_coast_ex_california": 252.9
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "6.268",
-        "cpl": "232.9"
+        "cpl": "233.4"
+      },
+      {
+        "key": "new_england",
+        "label": "new_england",
+        "usd_gal": "6.517",
+        "cpl": "242.7"
+      },
+      {
+        "key": "central_atlantic",
+        "label": "central_atlantic",
+        "usd_gal": "6.546",
+        "cpl": "243.8"
+      },
+      {
+        "key": "lower_atlantic",
+        "label": "lower_atlantic",
+        "usd_gal": "6.139",
+        "cpl": "228.6"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "6.680",
-        "cpl": "248.2"
+        "cpl": "248.7"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "6.177",
-        "cpl": "229.5"
+        "cpl": "230.0"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "6.340",
-        "cpl": "235.6"
+        "cpl": "236.1"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "7.456",
-        "cpl": "277.0"
+        "cpl": "277.6"
+      },
+      {
+        "key": "california",
+        "label": "california",
+        "usd_gal": "8.246",
+        "cpl": "307.1"
+      },
+      {
+        "key": "west_coast_ex_california",
+        "label": "west_coast_ex_california",
+        "usd_gal": "6.791",
+        "cpl": "252.9"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
-    "us_change_7d": "+9.8",
+    "us_change_7d": "+10.3",
     "us_change_7d_class": "up",
-    "us_change_30d": "+35.9",
-    "nadi_change_7d": "+5.2",
+    "us_change_30d": "+36.4",
+    "nadi_change_7d": "+5.5",
     "nadi_change_7d_class": "up",
-    "nadi_change_30d": "+36.3"
+    "nadi_change_30d": "+36.6"
   },
   "provinces": [
     {
@@ -301,7 +341,7 @@
       "rowclass": "hi"
     }
   ],
-  "updated_at": "2026-09-23 14:58",
-  "updated_iso": "2026-09-23T14:58:32+00:00",
-  "build_version": "1790175512"
+  "updated_at": "2026-09-23 21:53",
+  "updated_iso": "2026-09-23T21:53:43+00:00",
+  "build_version": "1790200423"
 }
