@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-310311",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 401 Westbound ON-RAMP at ALLEN ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.728716,
-      "lng": -79.44739,
-      "start": 1790145240,
-      "end": null,
-      "updated": 1790145240
-    },
-    {
       "id": "ON-310304",
       "province": "ON",
       "highway": "HWY 6",
@@ -209,27 +193,6 @@
       "updated": 1790103840
     },
     {
-      "id": "drivebc.ca/RIDE-102622",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 5",
-        "from": "Highway 5",
-        "direction": "N",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Vehicle recovery at Highway 5, 15KM North of Exit 290. Until Tue Sep 22. Left lane closed. Centre lane closed. Speed Limit restriction: 70 KM/HR. Last update: September 22nd, 2026 at 11:54am PDT. Please watch for Crew and Equipment.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.22526128,
-      "lng": -120.63928789,
-      "start": "2026-09-22T06:18:37-07:00",
-      "end": "",
-      "updated": "2026-09-22T11:54:24-07:00"
-    },
-    {
       "id": "ON-310143",
       "province": "ON",
       "highway": "HWY 417",
@@ -259,22 +222,6 @@
       "lng": -78.14456,
       "start": 1790161200,
       "end": 1790193600,
-      "updated": 1790098980
-    },
-    {
-      "id": "ON-310128",
-      "province": "ON",
-      "highway": "HWY 8",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 8 Eastbound  between Sportsworld Drive / Maple Grove Road and Highway 401, Kitchener. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.410572,
-      "lng": -80.39164,
-      "start": 1790125200,
-      "end": 1790146800,
       "updated": 1790098980
     },
     {
@@ -804,10 +751,58 @@
       "start": 1790215200,
       "end": 1791450000,
       "updated": 1790011680
+    },
+    {
+      "id": "ON-309778",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 400 Southbound  between PORT SEVERN ROAD and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.79756,
+      "lng": -79.71239,
+      "start": 1790593200,
+      "end": 1790895600,
+      "updated": 1790011500
+    },
+    {
+      "id": "ON-309772",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1791864000,
+      "end": 1792209540,
+      "updated": 1790008560
+    },
+    {
+      "id": "ON-309771",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1791172800,
+      "end": 1791604740,
+      "updated": 1790008140
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T06:42:14.895258+00:00",
+  "updated": "2026-09-23T07:13:15.830069+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
