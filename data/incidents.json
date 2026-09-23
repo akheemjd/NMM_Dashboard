@@ -1,36 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-310394",
+      "id": "ON-310412",
       "province": "ON",
-      "highway": "HWY 522",
-      "direction": "Both Directions",
-      "description": "Debris on HWY 522 Both Directions  at E JCT VALLEY CEMETARY RD(N), Golden Valley. All lanes closed.",
+      "highway": "HWY 614",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 614 Northbound  at SWEDE RD (W), Manitouwadge. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 48.936453591,
+      "lng": -85.925773327,
+      "start": 1790171400,
+      "end": null,
+      "updated": 1790171400
+    },
+    {
+      "id": "ON-310409",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound ON-RAMP at SALEM ROAD, Ajax. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 45.9249092,
-      "lng": -79.8025324,
-      "start": 1790168940,
+      "lat": 43.855538,
+      "lng": -79.012145,
+      "start": 1790171100,
       "end": null,
-      "updated": 1790168940
+      "updated": 1790171100
     },
     {
-      "id": "ON-310391",
+      "id": "ON-310405",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at Highway 8 / King Street E/Shantz Hill Rd, Kitchener. 1 right lane closed.",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at KEELE ST, Toronto. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.40185,
-      "lng": -80.379097222,
-      "start": 1790168580,
+      "lanes": "left lane closed",
+      "lat": 43.72286319,
+      "lng": -79.48147926,
+      "start": 1790170800,
       "end": null,
-      "updated": 1790168580
+      "updated": 1790170800
     },
     {
       "id": "ON-310345",
@@ -783,26 +799,10 @@
       "start": 1790640000,
       "end": 1791540000,
       "updated": 1790022420
-    },
-    {
-      "id": "ON-309821",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Nightly Construction on QEW Fort Erie Bound  between BRANT STREET and FAIRVIEW STREET/PLAINS ROAD, Burlington. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.341724,
-      "lng": -79.82237,
-      "start": 1790215200,
-      "end": 1791453600,
-      "updated": 1790015640
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T13:25:25.743683+00:00",
+  "updated": "2026-09-23T13:56:25.564354+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
