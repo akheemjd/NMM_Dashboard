@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102677",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 91",
+        "from": "Alex Fraser Bridge",
+        "direction": "S",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle stall at Highway 91, In Delta. Right lane blocked. Last update: September 23rd, 2026 at 3:58am PDT. Next update: September 23rd, 2026 at 5:00am PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.16496504,
+      "lng": -122.94502606,
+      "start": "2026-09-23T03:58:22-07:00",
+      "end": "",
+      "updated": "2026-09-23T03:58:22-07:00"
+    },
+    {
       "id": "ON-310330",
       "province": "ON",
       "highway": "HWY 37",
@@ -678,22 +699,6 @@
       "updated": 1790022420
     },
     {
-      "id": "ON-309857",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Continuous Construction on HWY 400 Southbound  between HORSESHOE VALLEY ROAD/SIMCOE RD 22 and FORBES ROAD/SIMCOE ROAD 11, Springwater. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.52354,
-      "lng": -79.73963,
-      "start": 1790118000,
-      "end": 1790161200,
-      "updated": 1790021400
-    },
-    {
       "id": "ON-309821",
       "province": "ON",
       "highway": "QEW",
@@ -807,7 +812,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T10:50:53.831526+00:00",
+  "updated": "2026-09-23T11:10:51.013756+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
