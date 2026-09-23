@@ -134,7 +134,7 @@ def build_brief(today=None, recent_posts=None):
     }
 
     title = f"The Northern Mile Brief: week of {today.strftime('%d %B %Y').lstrip('0')}"
-    subtitle = "Fuel, border and market shifts for Canadian carriers."
+    subtitle = "Fuel, border and market shifts for carriers in Canada and the US."
 
     md = []
 

@@ -22,7 +22,7 @@ from ghost_publish import api_call, markdown_to_html, lint_markdown, _load_doten
 
 BODY = """
 The Northern Mile Brief is one email a week about what fuel, the border and the
-dollar are doing to Canadian carriers.
+dollar are doing to carriers on both sides of it.
 
 ## What lands in your inbox
 

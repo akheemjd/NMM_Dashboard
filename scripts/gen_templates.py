@@ -123,7 +123,7 @@ def foot(extra_script=""):
 </main>
 
 <footer class="ft"><div class="wrap">
-  <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live Canadian trucking data</span></div>
+  <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live North American trucking data</span></div>
   <nav class="flinks" aria-label="Footer">{flinks}</nav>
   <nav class="flinks biz" aria-label="Company">{blinks}</nav>
   <div class="bottom"><span>&copy; {year} Northern Mile Media</span><a href="{SUB}" data-portal="signup">Subscribe free</a><span>Updated {{{{updated_at}}}} UTC</span></div>
@@ -265,13 +265,13 @@ home_ld = ('{"@context":"https://schema.org","@graph":[' + ORG_LD + ','
  '{"@type":"Question","name":"Can I cite the Northern Mile Diesel Index?","acceptedAnswer":{"@type":"Answer","text":"Yes. The dashboard provides a formatted citation with the figure and the survey print date. The full method and a dated revision history of every published correction are on the methodology page."}}]}]}')
 
 write("index",
- head("Canadian Diesel Prices Today — {{fuel.national_diesel}}¢/L National Average | Northern Mile",
+ head("Diesel Prices in Canada and the US — {{fuel.national_diesel}}¢/L Canada | Northern Mile",
       "The Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L across ten Canadian provinces from the NRCan weekly survey, print {{fuel.print_date}}. Live commercial border wait times and the Bank of Canada exchange rate.",
       "/", "og.jpg", home_ld)
  + '''
   <section class="hero">
     <span class="eyebrow">Free cross-border trucking data · no account</span>
-    <h1>Canadian diesel prices today</h1>
+    <h1>Diesel prices in Canada and the US today</h1>
     <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
     <p class="stand">At 35 L/100km that is <b>{{fuel.fuel_cost_per_km}} per km</b> — the fuel half of your rate floor. <a href="/fuel-cost-calculator/">Work out your lane's full floor</a></p>
     <div class="meta"><span>Ten provinces</span><span>NRCan survey print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
@@ -558,7 +558,7 @@ calc();})();
 '''.replace("__CITIES__", _cities_js).replace("__DIST__", _dist_js).replace("__PADD__", _padd_js).replace("__CODES__", _codes_js)
 
 write("fuel-cost-calculator",
- head("Truck Fuel Cost Calculator (Canada) — Rate Floor + Trip Cost | Northern Mile",
+ head("Truck Fuel Cost Calculator — Rate Floor + Trip Cost | Northern Mile",
       "Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print {{fuel.print_date}}.",
       "/fuel-cost-calculator/", "og.jpg", calc_ld)
  + '''
@@ -727,7 +727,7 @@ write("exchange-rate",
 
 # ═══ Market ═══════════════════════════════════════════════════════════
 write("market-pulse",
- head("Canadian Freight Market Pulse | Northern Mile",
+ head("Freight Market Pulse | Northern Mile",
       "Freight demand and cost signals for Canadian carriers, alongside diesel at {{current_diesel}}¢/L and USD/CAD at {{usd_cad}}.",
       "/market-pulse/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Market pulse","/market-pulse/") + ']}', "article")
@@ -758,7 +758,7 @@ write("market-pulse",
 
 # ═══ News ═════════════════════════════════════════════════════════════
 write("industry-news",
- head("Canadian Trucking Industry News | Northern Mile",
+ head("Trucking Industry News, Canada and the US | Northern Mile",
       "Headlines we are reading in Canadian trucking and freight, alongside live diesel prices and border wait times.",
       "/industry-news/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Industry news","/industry-news/") + ']}', "article")
@@ -983,7 +983,7 @@ INCIDENTS_JS = '''<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 
 # Build incidents head with the extra leaflet stylesheet folded in.
 _inc_head = head(
-    "Canadian Freight Road Incidents & Closures | Northern Mile",
+    "Road Incidents & Closures, Canada and the US | Northern Mile",
     "Live closures and major collisions on Canadian freight corridors, on an interactive map. Click any incident for detail and the source report.",
     "/road-incidents/", "og.jpg",
     '{"@context":"https://schema.org","@graph":[' + crumb("Road incidents","/road-incidents/") + ']}', "article")
@@ -1057,7 +1057,7 @@ print("methodology done")
 
 # ═══ Press ═════════════════════════════════════════════════════════════
 write("press",
- head("Press & Data — Citable Canadian Trucking Figures | Northern Mile",
+ head("Press & Data — Citable North American Trucking Figures | Northern Mile",
       "For journalists: citable Canadian fuel, exchange-rate, and border-wait figures with sources and dates attached. Story angles, how to cite us, and press contact.",
       "/press/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Press & data", "/press/") + ',' +
@@ -1144,7 +1144,7 @@ prov_body = (
 ''' + foot())
 
 write("advertise",
- head("Advertise — Reach Canadian Carriers | Northern Mile",
+ head("Advertise — Reach North American Carriers | Northern Mile",
       "Sponsor the pages Canadian carriers check before they buy fuel. Founding rates for the first sponsors, with no audience number we cannot stand behind.",
       "/advertise/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Advertise", "/advertise/") + ',' +
