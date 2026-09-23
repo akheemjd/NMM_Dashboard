@@ -228,6 +228,13 @@ def main(argv=None):
         return 1
     print(f"      body: {len(stored)} chars  status: draft  OK")
 
+    # Gate the destructive path only. A dry run must still work with publishing
+    # switched off, or the switch would blind you at exactly the moment you want
+    # to look at what would have gone out.
+    if args.send or args.schedule:
+        import killswitch
+        killswitch.check("newsletter send")
+
     if not args.send and not args.schedule:
         print("\n[3/3] stopping. Post is a DRAFT and ready.")
         print("      Re-run with --send to publish and email the list.")

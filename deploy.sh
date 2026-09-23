@@ -21,7 +21,27 @@ PYTHON="/c/Users/Akheem/AppData/Local/hermes/hermes-agent/venv/Scripts/python.ex
 echo "  Using Python: $PYTHON"
 
 # 1. Collect fresh data
-$PYTHON scripts/collector.py && $PYTHON scripts/normalize.py && $PYTHON scripts/normalize_provinces.py 2>&1
+# Collection is a REQUIRED step. It used to be one `&&` chain, and bash's `set -e`
+# does not exit on a failure that is not the final command of an `&&` list — so a
+# collector that crashed at import left the chain, the build then ran from
+# whatever data was already on disk, the guards all passed (they check the pages
+# against the stale data, which was self-consistent), and the cron reported ok.
+# The site served frozen numbers for seven hours.
+#
+# Now each step is checked. A failed collection stops the deploy instead of
+# silently republishing yesterday's data.
+if ! $PYTHON scripts/collector.py; then
+  echo "FATAL: collection failed — refusing to rebuild from stale data" >&2
+  exit 1
+fi
+if ! $PYTHON scripts/normalize.py; then
+  echo "FATAL: normalize failed" >&2
+  exit 1
+fi
+if ! $PYTHON scripts/normalize_provinces.py; then
+  echo "FATAL: normalize_provinces failed" >&2
+  exit 1
+fi
 
 # 1c. Copy assets BEFORE build
 mkdir -p docs/assets && cp -r assets/. docs/assets/

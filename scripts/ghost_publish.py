@@ -229,6 +229,12 @@ def create_or_update_post(title, markdown, options=None):
     """
     options = options or {}
 
+    # The killswitch gates here, not in main(), so every caller is covered —
+    # refresh_brief.py and send_weekly_brief.py write posts too and neither goes
+    # through the CLI. Same reasoning as the lint gate below it.
+    import killswitch
+    killswitch.check("Ghost publish")
+
     # Both gates live here rather than in main(), so every caller is covered.
     # send_weekly_brief.py and refresh_brief.py write bodies too, and neither
     # went through the CLI, so neither was ever linted.

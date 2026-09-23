@@ -222,6 +222,17 @@ def parse(raw):
     }
 
 
+def collect_us_fuel_tax():
+    """Entry point expected by collector.py.
+
+    collector.py imports this by name. It originally defined only main(), so
+    `from collect_us_fuel_tax import collect_us_fuel_tax` raised ImportError at
+    the top of collector.py and killed the ENTIRE collection run — every source,
+    not just this one — for seven hours.
+    """
+    return main()
+
+
 def main():
     print(f"fetching {URL}")
     raw = fetch()
