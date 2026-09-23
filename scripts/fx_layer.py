@@ -286,9 +286,6 @@ def write_rate():
     os.makedirs(os.path.join(DOCS, "assets"), exist_ok=True)
     with open(os.path.join(DOCS, "assets", "fx.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2)
-    # and keep the source copy with the other assets
-    with open(os.path.join(ASSETS, "fx.json"), "w", encoding="utf-8") as f:
-        json.dump(out, f, indent=2)
     print(f"  fx.json: USD/CAD {out['usd_cad']} as of {out['as_of']}")
     return out
 

@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-310620",
+      "id": "ON-310636",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at WHITES ROAD, Pickering. Left shoulder and 1 left lane closed.",
+      "highway": "HWY 28",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 28 Both Directions  between HWY 41, Denbigh and Renfrew Rd 514 / Shutt Rd, Hardwood Lake. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.8165886,
-      "lng": -79.1144832,
-      "start": 1790201400,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.14276,
+      "lng": -77.26504,
+      "start": 1790204160,
       "end": null,
-      "updated": 1790201400
-    },
-    {
-      "id": "ON-310619",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH DR, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.66899647,
-      "lng": -79.59157211,
-      "start": 1790200980,
-      "end": null,
-      "updated": 1790200980
+      "updated": 1790204160
     },
     {
       "id": "ON-310618",
@@ -47,22 +31,6 @@
       "start": 1790200860,
       "end": null,
       "updated": 1790200860
-    },
-    {
-      "id": "ON-310613",
-      "province": "ON",
-      "highway": "HWY 28",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 28 Both Directions  between BRIDGE ST -WEST OF HWY 41, Denbigh and Renfrew Rd 514 / Shutt Rd, Hardwood Lake. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.13982,
-      "lng": -77.2747,
-      "start": 1790199960,
-      "end": null,
-      "updated": 1790199960
     },
     {
       "id": "ON-310576",
@@ -159,22 +127,6 @@
       "start": 1790596800,
       "end": 1790967600,
       "updated": 1790190540
-    },
-    {
-      "id": "ON-310368",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17 Eastbound  at MIJINEMUNGSHING RD-LAKE SUPERIOR PROV PK, Algoma. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 47.681937556,
-      "lng": -84.813402737,
-      "start": 1790165940,
-      "end": null,
-      "updated": 1790190480
     },
     {
       "id": "ON-310550",
@@ -799,10 +751,58 @@
       "start": 1790946000,
       "end": 1791057600,
       "updated": 1790172420
+    },
+    {
+      "id": "ON-310533",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Continuous Construction on QEW Toronto bound  between HWY 10/HURONTARIO and CAWTHRA ROAD, Mississauga. 2 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Right Lane(s)",
+      "lat": 43.568066,
+      "lng": -79.6,
+      "start": 1790218800,
+      "end": 1790240400,
+      "updated": 1790168460
+    },
+    {
+      "id": "ON-310373",
+      "province": "ON",
+      "highway": "HWY 35/115",
+      "direction": "Southbound",
+      "description": "Daily Maintenance on HWY 35/115 Southbound  between HWY 35 and 4TH ROAD, Clarington. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.060196,
+      "lng": -78.62273,
+      "start": 1790341200,
+      "end": 1790971200,
+      "updated": 1790164800
+    },
+    {
+      "id": "ON-310379",
+      "province": "ON",
+      "highway": "HWY 35/115",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 35/115 Northbound  between MAIN ST., Clarington and HWY 35, . 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 43.964195,
+      "lng": -78.61096,
+      "start": 1790341200,
+      "end": 1790964000,
+      "updated": 1790164680
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T22:55:39.867176+00:00",
+  "updated": "2026-09-23T23:19:34.915736+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
