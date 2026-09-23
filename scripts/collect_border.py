@@ -8,18 +8,48 @@ OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 
 
 # Map CBSA port names to our crossing IDs
 # CBSA port name → crossing ID
-CBSA_MAP = [
-    ("Ambassador Bridge", "windsor-detroit"),
-    ("Blue Water Bridge", "sarnia-port-huron"),
-    ("Peace Bridge", "fort-erie-buffalo"),
-    ("Queenston Lewiston", "queenston-lewiston"),
-    ("Lacolle", "lacolle-champlain"),
-    ("St-Bernard-de-Lacolle", "lacolle-champlain"),
-    ("Thousand Islands", "lansdowne-alexandria"),
-    ("Coutts", "coutts-sweetgrass"),
-    ("Pacific Highway", "pacific-blaine"),
-    ("Emerson", "emerson-pembina"),
-]
+# CBSA publishes "<Port>: <Route>". Match the PORT exactly — never by substring.
+# A substring matcher let "Lacolle" swallow "St-Bernard-de-Lacolle" because it sat
+# first in the list, so three distinct ports shared one entry and the last record
+# in the feed won. See the module docstring in fix_border_port_match.py.
+CBSA_PORT_MAP = {
+    "Ambassador Bridge": "windsor-detroit",
+    "Blue Water Bridge": "sarnia-port-huron",
+    "Peace Bridge": "fort-erie-buffalo",
+    "Queenston Lewiston": "queenston-lewiston",
+    "St-Bernard-de-Lacolle": "lacolle-champlain",
+    "Thousand Islands": "lansdowne-alexandria",
+    "Coutts": "coutts-sweetgrass",
+    "Pacific Highway": "pacific-blaine",
+    "Emerson": "emerson-pembina",
+}
+
+# Real CBSA ports we deliberately do not publish. Listed so the omission is a
+# decision on the record rather than an accident, and so the reserved names are
+# visible to anyone tempted to add a looser rule.
+IGNORED_PORTS = {
+    "Lacolle": "Route 221 and Route 223 — secondary crossings, not among the nine curated",
+}
+
+
+def match_port(cbsa_name):
+    """Return the crossing id for a CBSA name, or None.
+
+    Splits "<Port>: <Route>" and matches the port exactly. Falls back to a
+    longest-first scan of the map keys for names that carry no route suffix,
+    which is still exact-per-key rather than arbitrary-substring.
+    """
+    if not cbsa_name:
+        return None
+    port = cbsa_name.split(":")[0].strip()
+    if port in CBSA_PORT_MAP:
+        return CBSA_PORT_MAP[port]
+    # Longest key first so a more specific name always beats a shorter one that
+    # happens to be contained in it.
+    for key in sorted(CBSA_PORT_MAP, key=len, reverse=True):
+        if key.lower() == port.lower():
+            return CBSA_PORT_MAP[key]
+    return None
 
 
 def collect_border_live():
@@ -44,11 +74,7 @@ def collect_border_live():
     for cbsa in data.get("waitTimes", []):
         name = cbsa.get("poe-name", "")
         # Match CBSA name against our map
-        matched = None
-        for cbsa_name, our_id in CBSA_MAP:
-            if cbsa_name.lower() in name.lower():
-                matched = our_id
-                break
+        matched = match_port(name)
 
         if matched:
             for crossing in existing.get("crossings", []):
@@ -86,7 +112,7 @@ def collect_border_live():
                     break
 
     existing["updated"] = updated
-    unique_ids = len({our_id for _, our_id in CBSA_MAP})
+    unique_ids = len(set(CBSA_PORT_MAP.values()))
     live_count = len(live_ids)
     if live_count == 0:
         existing["source_note"] = "CBSA fetch returned no matching crossings. Delays below are from the last successful fetch."
