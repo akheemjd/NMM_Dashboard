@@ -1,6 +1,59 @@
 {
   "incidents": [
     {
+      "id": "ON-310330",
+      "province": "ON",
+      "highway": "HWY 37",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 37 Northbound  between ZION RD and ZION RD, Plainfield. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.3129,
+      "lng": -77.34806,
+      "start": 1790164800,
+      "end": 1790195400,
+      "updated": 1790159940
+    },
+    {
+      "id": "ON-310329",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.31208216,
+      "lng": -79.85974017,
+      "start": 1790159880,
+      "end": null,
+      "updated": 1790159880
+    },
+    {
+      "id": "drivebc.ca/RIDE-102676",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 1",
+        "from": "Trans-Canada Highway",
+        "direction": "W",
+        "state": "CLOSED"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 1, In Burnaby and Kensington Ave. Closed. Last update: September 23rd, 2026 at 3:35am PDT. Next update: September 23rd, 2026 at 5:30am PDT. Investigation underway. Exit 33 to Kensington Ave is open. Entrance to Hwy 1 westbound from Kensington Ave is closed. Traffic can use Sprott St westbound to re-enter Hwy 1 westbound. Expect delays.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.24496137,
+      "lng": -122.96887892,
+      "start": "2026-09-23T00:43:31-07:00",
+      "end": "",
+      "updated": "2026-09-23T03:35:59-07:00"
+    },
+    {
       "id": "ON-310319",
       "province": "ON",
       "highway": "QEW",
@@ -15,22 +68,6 @@
       "start": 1790157780,
       "end": null,
       "updated": 1790157780
-    },
-    {
-      "id": "ON-310315",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.83731548,
-      "lng": -79.07273129,
-      "start": 1790155680,
-      "end": null,
-      "updated": 1790155680
     },
     {
       "id": "ON-310312",
@@ -767,42 +804,10 @@
       "start": 1790042400,
       "end": 1790413200,
       "updated": 1790012100
-    },
-    {
-      "id": "ON-309787",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Construction on QEW Toronto bound  between NORTHSHORE BLVD and FAIRVIEW STREET/PLAINS ROAD, Burlington. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.315086,
-      "lng": -79.80735,
-      "start": 1790215200,
-      "end": 1791450000,
-      "updated": 1790011680
-    },
-    {
-      "id": "ON-309778",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 400 Southbound  between PORT SEVERN ROAD and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.79756,
-      "lng": -79.71239,
-      "start": 1790593200,
-      "end": 1790895600,
-      "updated": 1790011500
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T10:19:20.088196+00:00",
+  "updated": "2026-09-23T10:50:38.524764+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

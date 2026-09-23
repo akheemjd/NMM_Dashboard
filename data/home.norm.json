@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-23 10:19",
-  "updated_iso": "2026-09-23T10:19:25+00:00",
-  "build_version": "1790158765",
+  "updated_at": "2026-09-23 10:50",
+  "updated_iso": "2026-09-23T10:50:42+00:00",
+  "build_version": "1790160642",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "6 min"
   },
   "fuel": {
     "national_diesel": "271.0",
@@ -256,18 +256,18 @@
     "none": false,
     "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 401, HWY 61",
+    "status_line": "HWY 403 , QEW, HWY 401, HWY 61",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at NIKOLA TESLA, Hamilton. Left shoulder\u2026",
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering.\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Toronto bound  at NIKOLA TESLA, Hamilton. Left shoulder\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,7 +283,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -299,21 +299,21 @@
       "name": "Peace Bridge",
       "slug": "peace-bridge",
       "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
-      "wait": "1 min",
+      "wait": "6 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
       "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
-      "wait": "1 min",
+      "wait": "3 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 EDT"
+      "captured_at": "06:40 EDT"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -323,7 +323,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -333,17 +333,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:09 MDT"
+      "captured_at": "04:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 PDT"
+      "captured_at": "03:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -353,7 +353,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 CDT"
+      "captured_at": "05:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -363,7 +363,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     }
   ],
   "market": [
@@ -419,18 +419,18 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "Your lymphatic system: The filtration network truck drivers don\u2019t talk about enough",
-      "url": "https://www.thetrucker.com/trucking-news/perspective/mind-over-matter-by-hope-zvara/your-lymphatic-system-the-filtration-network-truck-drivers-dont-talk-about-enough",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "Oil prices stabilize after Trump says US and Iran met at the UN",
+      "url": "https://www.thetrucker.com/trucking-news/business/oil-prices-stabilize-after-trump-says-us-and-iran-met-at-the-un",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "equipment",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "Driver Decision Kit launches personalized recruiting tool for trucking fleets",
-      "url": "https://www.thetrucker.com/trucking-news/business/driver-decision-kit-launches-personalized-recruiting-tool-for-trucking-fleets",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "Diesel prices keep climbing",
+      "url": "https://www.thetrucker.com/trucking-news/business/diesel-prices-keep-climbing-2",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
