@@ -1430,6 +1430,13 @@ uspadd_body = (
   </section>
 
   <section class="sec">
+    <section class="sec">
+      <div class="lead"><h2>States in {{label}}</h2><p>Each state's own fuel tax and IFTA rate</p></div>
+      <div class="rows">
+      <!--LOOP:state_links--><a class="r" href="/us-diesel/{{slug}}/"><span class="k">{{name}}</span><span class="v">{{abbr}}</span></a><!--/LOOP:state_links-->
+      </div>
+    </section>
+
     <div class="lead"><h2>The other districts</h2><p>¢/L CAD · $/gal</p></div>
     <div class="rows">
     <!--LOOP:siblings--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:siblings-->

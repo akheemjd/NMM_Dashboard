@@ -428,7 +428,30 @@ def check_brand_identity():
     return bad
 
 
+def check_og_images_exist():
+    """Every og:image on every page must point at a file we actually built.
+
+    /border-trends/ pointed at /og/border-trends.png, which did not exist —
+    build_og.py only produces og.jpg and og-fuel.jpg. Nothing checked, so a
+    social card would have silently fallen back to a blank for that page. Adding
+    the tags is only half the job; this is the other half.
+    """
+    import re as _re
+    base = pathlib.Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    docs = base / "docs"
+    missing = []
+    for f in docs.rglob("index.html"):
+        h = f.read_text(encoding="utf-8", errors="replace")
+        for m in _re.finditer(r'<meta property="og:image" content="([^"]+)"', h):
+            url = m.group(1)
+            rel = url.split("dashboard.northernmilemedia.com/", 1)[-1]
+            if not (docs / rel).exists():
+                missing.append(f"{f.parent.relative_to(docs)} -> {rel}")
+    return missing
+
+
 CHECKS = (
+    ("every og:image resolves to a built file", check_og_images_exist),
     ("lookback never returns the newest point", check_lookback_not_latest),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
     ("spread uses the ten-province definition", check_spread_definition),

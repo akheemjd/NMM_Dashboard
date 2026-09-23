@@ -48,6 +48,34 @@ STATE_NAMES = {
 }
 
 
+def _state_links(key):
+    """The states a district covers, as {name, abbr, slug} for the template.
+
+    The slug comes from the SAME source the state pages are built from, not from
+    my display-name map. STATE_NAMES calls DC "the District of Columbia" for
+    prose readability, and slugifying that produced the-district-of-columbia
+    while the state page lives at district-of-columbia — a broken link on every
+    district containing DC. check_links.py caught it.
+    """
+    import re as _re
+
+    def slugify(n):
+        n = n.replace("&", " and ")
+        return _re.sub(r"[^a-z0-9]+", "-", n.lower()).strip("-")
+
+    by_abbr = {s["abbr"]: s["name"] for s in (load_json("us_fuel_tax.json").get("states") or [])
+               if s.get("abbr")}
+    codes = sorted((_DISTRICT_STATES or {}).get(key, []))
+    out = []
+    for c in codes:
+        # real name first, display name only for the prose label
+        real = by_abbr.get(c)
+        if not real:
+            continue
+        out.append({"name": real, "abbr": c, "slug": slugify(real)})
+    return out
+
+
 def _slug(k):
     """District keys use underscores; URLs use hyphens, like the state pages."""
     return (k or "").replace("_", "-")
@@ -116,6 +144,7 @@ def main():
     # Per-PADD pages.
     national_cpl = float(eia.get("us_national_cpl", 0) or 0)
     _district_states = load_json("eia_diesel.json").get("district_states") or {}
+    globals()["_DISTRICT_STATES"] = _district_states
     # The templates link districts under /us-diesel/district/<slug>/, so every
     # item in a LOOP needs key_url — the overview's padds list included. Missing
     # it is a hard failure in fill(), which is the point.
@@ -145,6 +174,10 @@ def main():
             "vs_national_word": "above" if vs >= 0 else "below",
             "vs_national_class": "lo" if vs < 0 else "hi",
             "states": district_states_sentence(p["key"], p["label"], _district_states),
+            # Every district links to its member states. Without this all 51 state
+            # pages had exactly ONE inbound link, from the states hub, which is
+            # the weakest crawl position on the site.
+            "state_links": _state_links(p["key"]),
             "siblings": [s for s in siblings if s["key"] != p["key"]],
             "updated_at": updated_at,
             "updated_iso": updated_iso,
