@@ -1,20 +1,52 @@
 {
   "incidents": [
     {
-      "id": "ON-310300",
+      "id": "ON-310307",
       "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound EXPRESS at EGLINTON AVE, Mississauga. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at RENFORTH, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.62675589,
-      "lng": -79.6428765,
-      "start": 1790136000,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.66709941,
+      "lng": -79.59592849,
+      "start": 1790137380,
       "end": null,
-      "updated": 1790136000
+      "updated": 1790137380
+    },
+    {
+      "id": "ON-310305",
+      "province": "ON",
+      "highway": "HWY 409",
+      "direction": "Westbound",
+      "description": "Highway Maintenance on HWY 409 Westbound RAMP at HWY 427, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.697327,
+      "lng": -79.609165,
+      "start": 1790136720,
+      "end": null,
+      "updated": 1790136720
+    },
+    {
+      "id": "ON-310304",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Northbound",
+      "description": "Daily Maintenance on HWY 6 Northbound  between Rocky Saugeen Road and DOUGLAS STREET (DURHAM SOUTH LIMITS), Rocky Saugeen. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.227283,
+      "lng": -80.83283,
+      "start": 1790596800,
+      "end": 1790805600,
+      "updated": 1790136540
     },
     {
       "id": "ON-310303",
@@ -31,22 +63,6 @@
       "start": 1790683200,
       "end": 1790805600,
       "updated": 1790136000
-    },
-    {
-      "id": "ON-310301",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 427 Northbound RAMP at HWY 409, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.69610812,
-      "lng": -79.60508452,
-      "start": 1790135940,
-      "end": null,
-      "updated": 1790135940
     },
     {
       "id": "ON-310181",
@@ -788,26 +804,10 @@
       "start": 1790042400,
       "end": 1790413200,
       "updated": 1790012100
-    },
-    {
-      "id": "ON-309787",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Nightly Construction on QEW Toronto bound  between NORTHSHORE BLVD and FAIRVIEW STREET/PLAINS ROAD, Burlington. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.315086,
-      "lng": -79.80735,
-      "start": 1790215200,
-      "end": 1791450000,
-      "updated": 1790011680
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T04:07:10.700396+00:00",
+  "updated": "2026-09-23T04:38:13.020244+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
