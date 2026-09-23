@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-310312",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at KENNEDY RD -SCARBOROUGH, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.77606505,
+      "lng": -79.28226685,
+      "start": 1790153340,
+      "end": null,
+      "updated": 1790153340
+    },
+    {
       "id": "ON-310304",
       "province": "ON",
       "highway": "HWY 6",
@@ -783,26 +799,10 @@
       "start": 1791864000,
       "end": 1792209540,
       "updated": 1790008560
-    },
-    {
-      "id": "ON-309771",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and PORT SEVERN ROAD, Tay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.706245,
-      "lng": -79.66114,
-      "start": 1791172800,
-      "end": 1791604740,
-      "updated": 1790008140
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T08:46:18.199933+00:00",
+  "updated": "2026-09-23T09:17:18.615546+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
