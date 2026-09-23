@@ -101,7 +101,7 @@ def collect_unemployment():
                     "updated": datetime.now(timezone.utc).isoformat(),
                 })
                 print(f"  Unemployment: {unemployment}% rate")
-                record_success("unemployment", 1)
+                record_success("unemployment")
                 return
         except Exception as e:
             print(f"  Unemployment ({url}): {e}")
@@ -180,7 +180,7 @@ def collect_inflation():
                 "updated": datetime.now(timezone.utc).isoformat(),
             })
             print(f"  CPI: {headline_cpi} index (MoM {mom_change:+.2f}%)")
-            record_success("inflation", 1)
+            record_success("inflation")
             return
     except Exception as e:
         print(f"  Inflation: {e}")
@@ -244,7 +244,7 @@ def collect_trade_balance():
         if exports or imports:
             save("trade_balance", data)
             print(f"  Trade: exp ${exports}, imp ${imports}, bal ${balance}M CAD")
-            record_success("trade", 1)
+            record_success("trade")
         else:
             print("  Trade balance: no exports/imports found")
             record_failure("trade", "Zero export/import values")
@@ -325,7 +325,7 @@ def collect_pmi():
         avg = round(total / len(pmis), 1)
         status = "expansion" if avg > 50 else "contraction"
         print(f"  PMI: {avg} avg ({status})")
-        record_success("pmi", len(pmis))
+        record_success("pmi"))
     else:
         print("  PMI: no data from any source")
         record_failure("pmi", "No PMI readings collected")
@@ -400,7 +400,7 @@ def collect_oil_prices():
             "updated": datetime.now(timezone.utc).isoformat(),
         })
         print(f"  Oil: WTI ${wti}/bbl{', Brent $' + str(brent) + '/bbl' if brent else ''}")
-        record_success("oil", 1)
+        record_success("oil")
     else:
         print("  Oil prices: could not fetch")
         record_failure("oil", "No price data")
@@ -443,7 +443,7 @@ def collect_retail_sales():
                 "updated": datetime.now(timezone.utc).isoformat(),
             })
             print(f"  Retail Sales: {latest:.0f} index ({ref_date})")
-            record_success("retail", 1)
+            record_success("retail")
         else:
             print("  Retail Sales: no data found")
             record_failure("retail", "Zero or missing values")
@@ -480,7 +480,7 @@ def collect_interest_rates():
                 "updated": datetime.now(timezone.utc).isoformat(),
             })
             print(f"  Interest Rates: target {target}%, prime {prime}%")
-            record_success("rates", 1)
+            record_success("rates")
         else:
             raise ValueError("No observations")
     except Exception as e:

@@ -56,7 +56,21 @@ from datetime import date, datetime, timezone
 sys.path.insert(0, 'scripts')
 from health_tracker import record_success, record_failure
 
-CEILINGS = {'fuel': 10, 'exchange': 5, 'incidents': 1, 'news': 3, 'eia_diesel': 10}
+# Ceilings are set from each source's PUBLICATION cadence, not from how often we
+# fetch it. 'border' (CBSA) and 'us_fuel_tax' were absent entirely, so the 9
+# crossing pages and the 51 state pages had no freshness check at all — a source
+# could stop publishing and nothing would say so.
+CEILINGS = {
+    'fuel': 10,          # NRCan weekly, allow for a late print
+    'exchange': 5,       # Bank of Canada business daily
+    'incidents': 1,      # provincial feeds, near-live
+    'news': 3,           # RSS
+    'eia_diesel': 10,    # EIA weekly
+    'border': 3,         # CBSA commercial lane feed
+    'cbp_border': 3,     # CBP feed, hourly
+    'ifta': 200,         # IFTA quarterly matrix
+    'us_fuel_tax': 260,  # EIA motor fuel taxes, SEMIANNUAL
+}
 
 def obs_date(d, src):
     if src == 'fuel':
@@ -68,11 +82,20 @@ def obs_date(d, src):
     if src == 'eia_diesel':
         od = d.get('date')
         if od: return date.fromisoformat(od)
+    if src == 'us_fuel_tax':
+        od = d.get('updated')
+        if od: return date.fromisoformat(od[:10])
+    if src == 'ifta':
+        od = d.get('fetched_date')
+        if od: return date.fromisoformat(od[:10])
+    if src == 'cbp_border':
+        od = d.get('fetched_date')
+        if od: return date.fromisoformat(od[:10])
     u = d.get('updated')
     if u: return date.fromisoformat(u[:10])
     return None
 
-for src, filename in {'fuel':'fuel.json','exchange':'exchange.json','incidents':'incidents.json','news':'news.json','eia_diesel':'eia_diesel.json'}.items():
+for src, filename in {'fuel':'fuel.json','exchange':'exchange.json','incidents':'incidents.json','news':'news.json','eia_diesel':'eia_diesel.json','border':'border.json','cbp_border':'cbp_border.json','ifta':'ifta.json','us_fuel_tax':'us_fuel_tax.json'}.items():
     path = os.path.join('data', filename)
     try:
         if not os.path.exists(path):
@@ -88,7 +111,14 @@ for src, filename in {'fuel':'fuel.json','exchange':'exchange.json','incidents':
             print(f'  {src}: STALE {age}d')
         else:
             record_success(src)
-            print(f'  {src}: ok ({age}d)')
+            # Data age and source health are different facts. A source can be
+            # down while the last good figure is still fresh, and that used to be
+            # completely invisible: NRCan returned 503 for hours and health said
+            # 'ok' because yesterday's print was inside the ceiling.
+            flag = ''
+            if d.get('live_fetch_ok') is False:
+                flag = f"  <-- LIVE FETCH FAILING: {str(d.get('last_fetch_error'))[:60]}"
+            print(f'  {src}: ok ({age}d){flag}')
     except Exception as e:
         record_failure(src, str(e)); print(f'  {src}: ERROR {e}')
 print('Health recorded.')

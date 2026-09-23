@@ -141,7 +141,9 @@ def collect_weather():
 def collect_news():
     """Industry headlines from free RSS feeds with dates and categories."""
     feeds = [
-        ("Trucking Business", "https://www.thetruckingbusiness.com/feed/"),
+        # Was thetruckingbusiness.com, which is now a parked domain and
+        # returns 404 for every feed path. Replaced with a live trade feed.
+        ("Trucking Dive", "https://www.truckingdive.com/feeds/news/"),
         ("Trucking Info", "https://www.truckinginfo.com/rss/news/"),
         ("The Trucker", "https://www.thetrucker.com/feed/"),
     ]
@@ -315,6 +317,8 @@ if __name__ == "__main__":
                 return len([i for i in d.get("incidents", []) if i.get("source_url")])
             if path == "eia_diesel.json":
                 return 1 if d.get("us_national_usd_gal") else 0
+            if path == "us_fuel_tax.json":
+                return len(d.get("states", []))
             if path == "ifta.json":
                 return len(d.get("jurisdictions", []))
             if path == "cbp_border.json":
@@ -415,6 +419,8 @@ if __name__ == "__main__":
         border_obs=_latest("border.json"),
         theft_obs=theft_obs,
         cbp_border_records=_count("cbp_border.json"),
+        us_fuel_tax_records=_count("us_fuel_tax.json"),
+        us_fuel_tax_obs=_latest("us_fuel_tax.json"),
         cbp_border_obs=_latest("cbp_border.json"),
         ifta_records=_count("ifta.json"),
         ifta_obs=_latest("ifta.json"),

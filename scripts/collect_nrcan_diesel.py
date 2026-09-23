@@ -163,6 +163,12 @@ def collect():
             "print_date": pub_date,
             "source": "Natural Resources Canada weekly diesel survey",
             "location_count": len(prices),
+            # border.json already recorded this and fuel.json did not, so an
+            # NRCan outage was invisible for up to the 10-day freshness ceiling.
+            # The figure stays correct meanwhile; this only says the live fetch
+            # is not the thing that produced it.
+            "live_fetch_ok": True,
+            "last_fetch_failed": None,
         }
         
         path = os.path.join(DATA_DIR, "fuel.json")
@@ -186,9 +192,23 @@ def collect():
         return True
     except Exception as e:
         print(f"  NRCan diesel failed: {e}")
-        if not os.path.exists(os.path.join(DATA_DIR, "fuel.json")):
+        path = os.path.join(DATA_DIR, "fuel.json")
+        if not os.path.exists(path):
             raise
-        print("  Keeping last good fuel.json on disk. Staleness will be reported by coverage.")
+        # Stamp the failure onto the file we are keeping. Without this the only
+        # signal was the source's own age, which stays "fine" for ten days while
+        # NRCan is down — so an outage looked identical to a healthy week.
+        try:
+            with open(path, encoding="utf-8") as f:
+                kept = json.load(f)
+            kept["live_fetch_ok"] = False
+            kept["last_fetch_failed"] = datetime.now(timezone.utc).isoformat()
+            kept["last_fetch_error"] = str(e)[:200]
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(kept, f, indent=2, default=str)
+        except Exception:
+            pass
+        print(f"  Keeping last good fuel.json on disk (fetch failed: {e}).")
         return False
 
 

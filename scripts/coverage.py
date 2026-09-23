@@ -90,7 +90,8 @@ def compute(records, series, key, latest_obs):
 def write(fuel_records, fx_records, border_records, theft_records,
           fuel_obs=None, fx_obs=None, border_obs=None, theft_obs=None,
           cbp_border_records=0, cbp_border_obs=None,
-          ifta_records=0, ifta_obs=None):
+          ifta_records=0, ifta_obs=None,
+          us_fuel_tax_records=0, us_fuel_tax_obs=None):
     """Write the full coverage report. Called by collectors."""
     report = {
         "generated_at": now_iso(),
@@ -101,6 +102,8 @@ def write(fuel_records, fx_records, border_records, theft_records,
             "theft":  compute(theft_records,  "theft",   "incidents", theft_obs),
             "cbp_border": compute(cbp_border_records, "cbp_border", "ports", cbp_border_obs),
             "ifta": compute(ifta_records, "ifta", "jurisdictions", ifta_obs),
+            "us_fuel_tax": compute(us_fuel_tax_records, "us_fuel_tax",
+                                   "states", us_fuel_tax_obs),
         }
     }
     # CBP is a live, hourly feed rather than a surveyed series, so the historical
@@ -114,6 +117,12 @@ def write(fuel_records, fx_records, border_records, theft_records,
     # comparison is meaningful only if we keep past quarters. Until that history
     # exists the flags say so rather than implying a comparison we cannot make.
     report["categories"]["ifta"]["quantitative_field"] = "diesel_rate"
+
+    # The EIA motor fuel tax table is semiannual. Same reasoning as IFTA: without
+    # kept history there is no year-on-year comparison to claim.
+    report["categories"]["us_fuel_tax"]["quantitative_field"] = "diesel_total_state"
+    report["categories"]["us_fuel_tax"]["comparable_7d"] = False
+    report["categories"]["us_fuel_tax"]["comparable_yoy"] = False
     report["categories"]["ifta"]["comparable_7d"] = False
 
     health_path = os.path.join(ROOT, "data", "health.json")
@@ -141,7 +150,8 @@ def validate():
         raise AssertionError("coverage.json missing — no collectors ran")
     with open(COVERAGE_PATH) as f:
         report = json.load(f)
-    required = ["fuel", "fx", "border", "theft", "cbp_border", "ifta"]
+    required = ["fuel", "fx", "border", "theft", "cbp_border", "ifta",
+                "us_fuel_tax"]
     fields = ["records", "history_days", "latest_observation",
               "staleness_days", "comparable_7d", "comparable_yoy"]
     border_extras = ["quantitative_field"]

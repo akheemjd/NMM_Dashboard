@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-310613",
+      "province": "ON",
+      "highway": "HWY 28",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 28 Both Directions  between BRIDGE ST -WEST OF HWY 41, Denbigh and Renfrew Rd 514 / Shutt Rd, Hardwood Lake. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.13982,
+      "lng": -77.2747,
+      "start": 1790199960,
+      "end": null,
+      "updated": 1790199960
+    },
+    {
+      "id": "ON-310612",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at LLOYDTOWN-AURORA RD, Kettleby. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 44.00169863,
+      "lng": -79.5859344,
+      "start": 1790199840,
+      "end": null,
+      "updated": 1790199840
+    },
+    {
       "id": "ON-310601",
       "province": "ON",
       "highway": "QEW",
@@ -767,42 +799,10 @@
       "start": 1790218800,
       "end": 1790240400,
       "updated": 1790168460
-    },
-    {
-      "id": "ON-310373",
-      "province": "ON",
-      "highway": "HWY 35/115",
-      "direction": "Southbound",
-      "description": "Daily Maintenance on HWY 35/115 Southbound  between HWY 35 and 4TH ROAD, Clarington. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.060196,
-      "lng": -78.62273,
-      "start": 1790341200,
-      "end": 1790971200,
-      "updated": 1790164800
-    },
-    {
-      "id": "ON-310379",
-      "province": "ON",
-      "highway": "HWY 35/115",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 35/115 Northbound  between MAIN ST., Clarington and HWY 35, . 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.964195,
-      "lng": -78.61096,
-      "start": 1790341200,
-      "end": 1790964000,
-      "updated": 1790164680
     }
   ],
   "total": 50,
-  "updated": "2026-09-23T21:45:59.625140+00:00",
+  "updated": "2026-09-23T21:49:30.392146+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
