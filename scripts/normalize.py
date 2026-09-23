@@ -386,8 +386,21 @@ if _eia_usd is not None and fx_rate and not _eia_stale:
         "rocky_mountain": "Rocky Mountain (PADD 4)",
         "west_coast": "West Coast (PADD 5)",
     }
+    # Labels come from the collector's own district metadata, not a second map.
+    # _PADD_LABELS only knew the original five, so every district added later
+    # fell back to its raw key and shipped a page titled
+    # "new_england Diesel Price — $6.517/gal".
+    _district_labels = {
+        k: (v or {}).get("label")
+        for k, v in (raw_eia.get("districts") or {}).items()
+    }
     padds_list = [
-        {"key": k, "label": _PADD_LABELS.get(k, k), "usd_gal": f"{v:.3f}", "cpl": f"{_padds_cpl.get(k, 0):.1f}"}
+        {
+            "key": k,
+            "label": _district_labels.get(k) or _PADD_LABELS.get(k) or k.replace("_", " ").title(),
+            "usd_gal": f"{v:.3f}",
+            "cpl": f"{_padds_cpl.get(k, 0):.1f}",
+        }
         for k, v in _padds.items()
     ]
     eia = {

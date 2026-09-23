@@ -340,6 +340,13 @@ def check_us_state_pages():
     for dirpath, _, files in os.walk(base):
         if "index.html" not in files:
             continue
+        # Direct children of /us-diesel/ only. Matching on basename alone also
+        # caught /us-diesel/district/california/, which is a district page and has
+        # a different contract — it correctly does not attribute a district
+        # because it IS one.
+        rel = os.path.relpath(dirpath, base).replace("\\", "/")
+        if "/" in rel:
+            continue
         slug = os.path.basename(dirpath)
         if slug not in state_slugs:
             continue

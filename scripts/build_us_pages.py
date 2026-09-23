@@ -10,6 +10,7 @@ which already carries the CAD ¢/L conversion and the NADI.
 """
 import json
 import os
+import re
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -22,13 +23,52 @@ sys.path.insert(0, HERE)
 from build_templates import fill  # noqa: E402
 
 # PADD coverage — the states each district contains (standard EIA definitions).
-PADD_STATES = {
-    "east_coast": "East Coast (PADD 1) spans New England and the Central Atlantic — Maine, New Hampshire, Vermont, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, and the District of Columbia.",
-    "midwest": "Midwest (PADD 2) spans the industrial middle of the country — Ohio, Indiana, Illinois, Michigan, Wisconsin, Minnesota, Iowa, Missouri, North Dakota, South Dakota, Nebraska, Kansas, Kentucky, Tennessee, and Oklahoma.",
-    "gulf_coast": "Gulf Coast (PADD 3) spans Texas, New Mexico, Arkansas, Louisiana, Mississippi, and Alabama — the refining heart of the country.",
-    "rocky_mountain": "Rocky Mountain (PADD 4) spans Montana, Wyoming, Idaho, Utah, and Colorado.",
-    "west_coast": "West Coast (PADD 5) spans Washington, Oregon, California, Nevada, and Arizona.",
+# Which states sit in which district is data, not prose. It was a hardcoded map
+# with five entries; when the collector was extended to all eleven districts the
+# five new ones fell through to an empty string and shipped pages of ~1,150
+# characters with no state list at all. Deriving it means a district added
+# upstream cannot produce an empty page.
+STATE_NAMES = {
+    "AL": "Alabama", "AK": "Alaska", "AZ": "Arizona", "AR": "Arkansas",
+    "CA": "California", "CO": "Colorado", "CT": "Connecticut",
+    "DE": "Delaware", "DC": "the District of Columbia", "FL": "Florida",
+    "GA": "Georgia", "HI": "Hawaii", "ID": "Idaho", "IL": "Illinois",
+    "IN": "Indiana", "IA": "Iowa", "KS": "Kansas", "KY": "Kentucky",
+    "LA": "Louisiana", "ME": "Maine", "MD": "Maryland",
+    "MA": "Massachusetts", "MI": "Michigan", "MN": "Minnesota",
+    "MS": "Mississippi", "MO": "Missouri", "MT": "Montana",
+    "NE": "Nebraska", "NV": "Nevada", "NH": "New Hampshire",
+    "NJ": "New Jersey", "NM": "New Mexico", "NY": "New York",
+    "NC": "North Carolina", "ND": "North Dakota", "OH": "Ohio",
+    "OK": "Oklahoma", "OR": "Oregon", "PA": "Pennsylvania",
+    "RI": "Rhode Island", "SC": "South Carolina", "SD": "South Dakota",
+    "TN": "Tennessee", "TX": "Texas", "UT": "Utah", "VT": "Vermont",
+    "VA": "Virginia", "WA": "Washington", "WV": "West Virginia",
+    "WI": "Wisconsin", "WY": "Wyoming",
 }
+
+
+def _slug(k):
+    """District keys use underscores; URLs use hyphens, like the state pages."""
+    return (k or "").replace("_", "-")
+
+
+def district_states_sentence(key, label, state_padd):
+    """'Midwest (PADD 2) spans Illinois, Indiana, ... and Wisconsin.'"""
+    import collections
+    by = collections.defaultdict(list)
+    for st, k in (state_padd or {}).items():
+        by[k].append(st)
+    codes = sorted(by.get(key, []))
+    names = [STATE_NAMES.get(c, c) for c in codes]
+    if not names:
+        return ""
+    if len(names) == 1:
+        # "California spans California" reads badly.
+        return f"{label} covers {names[0]} alone."
+    return f"{label} spans " + ", ".join(names[:-1]) + f" and {names[-1]}."
+
+
 
 
 def load_json(name):
@@ -61,7 +101,7 @@ def main():
     # Overview — national figure + the five regions.
     overview = fill(us_tmpl, {
         "eia": eia,
-        "padds": padds,
+        "padds": [dict(p, key_url=_slug(p["key"])) for p in padds],
         "updated_at": updated_at,
         "updated_iso": updated_iso,
         "build_version": build_version,
@@ -73,7 +113,12 @@ def main():
 
     # Per-PADD pages.
     national_cpl = float(eia.get("us_national_cpl", 0) or 0)
-    siblings = [{"key": p["key"], "label": p["label"], "cpl": p["cpl"], "usd_gal": p["usd_gal"]}
+    _state_padd = load_json("eia_diesel.json").get("state_padd") or {}
+    # The templates link districts under /us-diesel/district/<slug>/, so every
+    # item in a LOOP needs key_url — the overview's padds list included. Missing
+    # it is a hard failure in fill(), which is the point.
+    siblings = [{"key": p["key"], "key_url": _slug(p["key"]), "label": p["label"],
+                 "cpl": p["cpl"], "usd_gal": p["usd_gal"]}
                 for p in padds]
 
     built = 0
@@ -82,6 +127,12 @@ def main():
         vs = round(cpl - national_cpl, 1)
         data = {
             "key": p["key"],
+            # Districts live under /us-diesel/district/ so they can never collide
+            # with a state page. 'california' was both the EIA district key and
+            # the California state slug, and because build_us_states.py runs after
+            # this builder it silently overwrote the district page every build.
+            # Hyphens match the state pages; the old keys used underscores.
+            "key_url": _slug(p["key"]),
             "label": p["label"],
             "cpl": p["cpl"],
             "usd_gal": p["usd_gal"],
@@ -91,7 +142,7 @@ def main():
             "vs_national_abs": f"{abs(vs):.1f}",
             "vs_national_word": "above" if vs >= 0 else "below",
             "vs_national_class": "lo" if vs < 0 else "hi",
-            "states": PADD_STATES.get(p["key"], ""),
+            "states": district_states_sentence(p["key"], p["label"], _state_padd),
             "siblings": [s for s in siblings if s["key"] != p["key"]],
             "updated_at": updated_at,
             "updated_iso": updated_iso,
@@ -99,11 +150,29 @@ def main():
         }
         html = fill(padd_tmpl, data)
         _check(html, p["key"])
-        out_dir = os.path.join(DOCS, "us-diesel", p["key"])
+        # Under district/ so a district key can never collide with a state slug.
+        out_dir = os.path.join(DOCS, "us-diesel", "district", _slug(p["key"]))
         os.makedirs(out_dir, exist_ok=True)
         with open(os.path.join(out_dir, "index.html"), "w") as f:
             f.write(html)
         built += 1
+
+    # Remove the pre-move district directories. They are no longer linked, and a
+    # page nothing points at is what check_links.py fails the build for — but do
+    # NOT touch a path that is now a state page. '/us-diesel/california/' must
+    # survive as the California STATE page; the district moved to district/.
+    state_slugs = {
+        re.sub(r"[^a-z0-9]+", "-", (s.get("name") or "").lower().replace("&", " and ")).strip("-")
+        for s in (load_json("us_fuel_tax.json").get("states") or [])
+        if s.get("name")
+    }
+    old_root = os.path.join(DOCS, "us-diesel")
+    for p in padds:
+        stale = os.path.join(old_root, p["key"])
+        if os.path.isdir(stale) and p["key"] not in state_slugs:
+            import shutil
+            shutil.rmtree(stale)
+            print(f"  removed stale district path /us-diesel/{p['key']}/")
 
     print(f"Built US diesel overview + {built} PADD pages")
 

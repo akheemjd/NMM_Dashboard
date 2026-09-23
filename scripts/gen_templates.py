@@ -1354,7 +1354,7 @@ us_body = (
   <section class="sec">
     <div class="lead"><h2>Eleven districts</h2><p>Every EIA diesel district · ¢/L CAD and $/gal</p></div>
     <div class="rows">
-    <!--LOOP:padds--><a class="r" href="/us-diesel/{{key}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:padds-->
+    <!--LOOP:padds--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:padds-->
     </div>
     <p class="note">Each region is an EIA PADD — Petroleum Administration for Defense District. The price is that region&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
     <p class="note">Each district is an EIA pricing region. The price is that district&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
@@ -1407,7 +1407,7 @@ uspadd_body = (
   <section class="sec">
     <div class="lead"><h2>The five regions</h2><p>¢/L CAD · $/gal</p></div>
     <div class="rows">
-    <!--LOOP:siblings--><a class="r" href="/us-diesel/{{key}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:siblings-->
+    <!--LOOP:siblings--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:siblings-->
     </div>
     <p class="note"><a href="/us-diesel/">← US national and all regions</a></p>
   </section>
