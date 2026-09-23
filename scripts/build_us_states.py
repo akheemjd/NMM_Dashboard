@@ -127,15 +127,18 @@ def build():
         # true and would send a carrier looking for a rate that does not exist.
         if not j:
             ifta_display = "not an IFTA jurisdiction"
+            ifta_short = "not a member"
             ifta_absent = True
         elif ifta_diesel in (0, 0.0):
             # Oregon publishes a NIL rate in the matrix. That is a published
             # value, not a gap, and a bare "$0.0000" invites the reader to think
             # the page failed to load a number.
             ifta_display = "nil"
+            ifta_short = "nil"
             ifta_absent = False
         else:
             ifta_display = money(ifta_diesel, 4)
+            ifta_short = money(ifta_diesel, 4)
             ifta_absent = False
 
         state_excise = st.get("diesel_state_excise")
@@ -296,18 +299,22 @@ def build():
         os.makedirs(outdir, exist_ok=True)
         with open(os.path.join(outdir, "index.html"), "w", encoding="utf-8") as f:
             f.write(html)
-        written.append((name, abbr, dist_label, price, state_excise, ifta_diesel))
+        written.append((name, abbr, dist_label, price, state_excise, ifta_short))
 
     # ---- the hub, so the 51 state pages are not orphans
     with open(os.path.join(TMPL, "us-states.template.html"), encoding="utf-8") as f:
         hub_tpl = f.read()
     hub_rows = []
     for name, abbr, dlabel, price, excise, ifta in written:
+        # `ifta` is already the display string. Re-running money() on it here is
+        # what left the hub showing "$0.0000" for Oregon and "not published" for
+        # Alaska after the state pages had been corrected — the two surfaces
+        # disagreed because only one of them used the shared value.
         hub_rows.append({
             "name": name,
             "url": f"/us-diesel/{slugify(name)}/",
             "district": dlabel,
-            "ifta": money(ifta, 4),
+            "ifta": ifta,
             "all_in": money(states_tax[abbr].get("diesel_all_in"), 4),
         })
     hub = fill(hub_tpl, {
