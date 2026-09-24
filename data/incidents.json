@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102762",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "University Boulevard",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Road construction at University Boulevard, At Shortcut Road and University Boulevard. Starting Mon Sep 28 until Fri Oct 30. From 7:30 AM to 5:30 PM PDT, weekdays. Shoulder closed. Last update: September 24th, 2026 at 10:24am PDT. Crosswalk installation.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.26566074,
+      "lng": -123.23536424,
+      "start": "2026-09-24T10:24:26-07:00",
+      "end": "",
+      "updated": "2026-09-24T10:24:26-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-102443",
       "province": "BC",
       "highway": {
@@ -357,8 +378,8 @@
       "updated": "2026-08-24T08:51:41-07:00"
     }
   ],
-  "total": 17,
-  "updated": "2026-09-24T16:57:06.286514+00:00",
+  "total": 18,
+  "updated": "2026-09-24T17:32:07.528925+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

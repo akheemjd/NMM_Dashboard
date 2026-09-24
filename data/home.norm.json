@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-24 16:57",
-  "updated_iso": "2026-09-24T16:57:21+00:00",
-  "build_version": "1790269041",
+  "updated_at": "2026-09-24 17:32",
+  "updated_iso": "2026-09-24T17:32:22+00:00",
+  "build_version": "1790271142",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_wait": "25 min"
   },
   "fuel": {
     "national_diesel": "269.7",
@@ -264,11 +264,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "12:34 EDT"
+      "captured_at": "13:14 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -308,7 +308,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:34 EDT"
+      "captured_at": "13:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -324,11 +324,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT"
+      "captured_at": "10:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -338,7 +338,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 CDT"
+      "captured_at": "12:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -404,18 +404,18 @@
   "theft": [],
   "news": [
     {
+      "category": "drivers",
+      "source": "The Trucker",
+      "headline": "CMC expands collaboration with Lincoln Tech\u2019s WorkforceLinc division",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/cmc-expands-collaboration-with-lincoln-techs-workforcelinc-division",
+      "why": "Driver supply and pay shape capacity and rates."
+    },
+    {
       "category": "equipment",
       "source": "The Trucker",
       "headline": "Kodiak AI, DTL Transport complete first autonomous trucking deliveries under new California DMV permit",
       "url": "https://www.thetrucker.com/trucking-news/business/kodiak-ai-dtl-transport-complete-first-autonomous-trucking-deliveries-under-new-california-dmv-permit",
       "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "drivers",
-      "source": "The Trucker",
-      "headline": "Answer the call: Carriers, drivers needed to help Wreaths Across America \u2018move the mission\u2019 for 2026",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/answer-the-call-carriers-drivers-needed-to-help-wreaths-across-america-move-the-mission-for-2026",
-      "why": "Driver supply and pay shape capacity and rates."
     }
   ],
   "theft_home_json": "[]",
