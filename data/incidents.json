@@ -1,20 +1,36 @@
 {
   "incidents": [
     {
-      "id": "ON-310655",
+      "id": "ON-310659",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at KEELE ST, Toronto. Right lane and right shoulder closed.",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.72286319,
-      "lng": -79.48147926,
-      "start": 1790209500,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.69200023,
+      "lng": -79.56896285,
+      "start": 1790210580,
       "end": null,
-      "updated": 1790209500
+      "updated": 1790210580
+    },
+    {
+      "id": "ON-310656",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 400 Southbound  at STEELES AVENUE, Vaughan. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.772891186,
+      "lng": -79.535200596,
+      "start": 1790209800,
+      "end": null,
+      "updated": 1790209800
     },
     {
       "id": "ON-310654",
@@ -783,26 +799,10 @@
       "start": 1790341200,
       "end": 1790971200,
       "updated": 1790164800
-    },
-    {
-      "id": "ON-310379",
-      "province": "ON",
-      "highway": "HWY 35/115",
-      "direction": "Northbound",
-      "description": "Daily Maintenance on HWY 35/115 Northbound  between MAIN ST., Clarington and HWY 35, . 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.964195,
-      "lng": -78.61096,
-      "start": 1790341200,
-      "end": 1790964000,
-      "updated": 1790164680
     }
   ],
   "total": 50,
-  "updated": "2026-09-24T00:28:49.758243+00:00",
+  "updated": "2026-09-24T00:56:15.506299+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
