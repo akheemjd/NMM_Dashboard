@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-24 20:07",
-  "updated_iso": "2026-09-24T20:07:28+00:00",
-  "build_version": "1790280448",
+  "updated_at": "2026-09-24 21:09",
+  "updated_iso": "2026-09-24T21:09:27+00:00",
+  "build_version": "1790284167",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min"
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "269.7",
@@ -228,29 +228,29 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4096",
+    "usd_cad": "1.4136",
     "direction": "weaker CAD",
-    "change": "+0.0032",
-    "usd_100": "140.96",
-    "usd_500": "704.80",
-    "usd_1000": "1,409.60",
-    "cad_1000": "709.42",
+    "change": "+0.0040",
+    "usd_100": "141.36",
+    "usd_500": "706.80",
+    "usd_1000": "1,413.60",
+    "cad_1000": "707.41",
     "band": "notable",
-    "band_pct": "+0.23%",
-    "obs_date": "2026-09-23",
-    "avg_30d": "1.3902",
-    "vs_baseline": "+0.0194",
+    "band_pct": "+0.28%",
+    "obs_date": "2026-09-24",
+    "avg_30d": "1.3916",
+    "vs_baseline": "+0.0220",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "+0.0149",
-    "change_7d_pct": "+1.07%",
-    "change_30d": "+0.0254",
-    "change_30d_pct": "+1.83%",
-    "change_1y": "+0.0280",
-    "change_1y_pct": "+2.03%",
-    "range_pct": "81%"
+    "change_7d": "+0.0148",
+    "change_7d_pct": "+1.06%",
+    "change_30d": "+0.0297",
+    "change_30d_pct": "+2.15%",
+    "change_1y": "+0.0303",
+    "change_1y_pct": "+2.19%",
+    "range_pct": "86%"
   },
   "incidents": {
     "none": true,
@@ -264,11 +264,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:44 EDT"
+      "captured_at": "16:46 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -308,7 +308,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:21 EDT"
+      "captured_at": "16:40 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -318,17 +318,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 MDT"
+      "captured_at": "14:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -386,16 +386,16 @@
     },
     {
       "name": "USD/CAD vs 30-day average",
-      "note": "+0.0194 vs 30-day avg 1.3902",
-      "value": "1.4096",
+      "note": "+0.0220 vs 30-day avg 1.3916",
+      "value": "1.4136",
       "value_class": "flat",
       "source": "Bank of Canada",
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
     },
     {
       "name": "Border congestion",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -431,9 +431,9 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "6.529",
-    "us_national_cpl": "243.1",
-    "nadi": "256.4",
-    "ca_us_gap": "26.6",
+    "us_national_cpl": "243.8",
+    "nadi": "256.8",
+    "ca_us_gap": "25.9",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-09-21",
@@ -450,85 +450,85 @@
       "west_coast_ex_california": 6.791
     },
     "padds_cpl": {
-      "east_coast": 233.4,
-      "new_england": 242.7,
-      "central_atlantic": 243.8,
-      "lower_atlantic": 228.6,
-      "midwest": 248.7,
-      "gulf_coast": 230.0,
-      "rocky_mountain": 236.1,
-      "west_coast": 277.6,
-      "california": 307.1,
-      "west_coast_ex_california": 252.9
+      "east_coast": 234.1,
+      "new_england": 243.4,
+      "central_atlantic": 244.4,
+      "lower_atlantic": 229.3,
+      "midwest": 249.5,
+      "gulf_coast": 230.7,
+      "rocky_mountain": 236.8,
+      "west_coast": 278.4,
+      "california": 307.9,
+      "west_coast_ex_california": 253.6
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "6.268",
-        "cpl": "233.4"
+        "cpl": "234.1"
       },
       {
         "key": "new_england",
         "label": "New England (PADD 1A)",
         "usd_gal": "6.517",
-        "cpl": "242.7"
+        "cpl": "243.4"
       },
       {
         "key": "central_atlantic",
         "label": "Central Atlantic (PADD 1B)",
         "usd_gal": "6.546",
-        "cpl": "243.8"
+        "cpl": "244.4"
       },
       {
         "key": "lower_atlantic",
         "label": "Lower Atlantic (PADD 1C)",
         "usd_gal": "6.139",
-        "cpl": "228.6"
+        "cpl": "229.3"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "6.680",
-        "cpl": "248.7"
+        "cpl": "249.5"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "6.177",
-        "cpl": "230.0"
+        "cpl": "230.7"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "6.340",
-        "cpl": "236.1"
+        "cpl": "236.8"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "7.456",
-        "cpl": "277.6"
+        "cpl": "278.4"
       },
       {
         "key": "california",
         "label": "California",
         "usd_gal": "8.246",
-        "cpl": "307.1"
+        "cpl": "307.9"
       },
       {
         "key": "west_coast_ex_california",
         "label": "West Coast excluding California",
         "usd_gal": "6.791",
-        "cpl": "252.9"
+        "cpl": "253.6"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
-    "us_change_7d": "+10.3",
+    "us_change_7d": "+11.0",
     "us_change_7d_class": "up",
-    "us_change_30d": "+36.4",
-    "nadi_change_7d": "+4.8",
+    "us_change_30d": "+37.1",
+    "nadi_change_7d": "+5.2",
     "nadi_change_7d_class": "up",
-    "nadi_change_30d": "+35.9"
+    "nadi_change_30d": "+36.3"
   }
 }
