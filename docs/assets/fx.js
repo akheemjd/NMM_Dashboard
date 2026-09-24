@@ -133,8 +133,24 @@
     }
   }
 
+  function renderUnits() {
+    // Unit LABELS follow the value. If a figure converts its unit and its label
+    // does not, the page states two units for one number — worse than not
+    // converting at all ("$7.278/gal ¢/L").
+    //
+    // data-u is "<token for CAD>|<token for USD>". No native/target logic: the
+    // label is just whichever token matches the currency on screen.
+    var nodes = document.querySelectorAll(".fxu");
+    for (var i = 0; i < nodes.length; i++) {
+      var pair = (nodes[i].getAttribute("data-u") || "").split("|");
+      if (pair.length !== 2) continue;
+      nodes[i].textContent = currency === "USD" ? pair[1] : pair[0];
+    }
+  }
+
   function render() {
     renderOptions();
+    renderUnits();
     var nodes = document.querySelectorAll(".fx");
     for (var i = 0; i < nodes.length; i++) {
       var el = nodes[i];
@@ -149,7 +165,15 @@
       }
       var out = convert(raw, from, unit, currency);
       if (out === null) continue;
-      el.textContent = format(out, from, unit, currency);
+      if (el.getAttribute("data-bare")) {
+        // The unit has its own element next to this one; adding it here doubles it.
+        var dp = decimalsFor(from, unit, currency);
+        el.textContent = out.toLocaleString("en-CA", {
+          minimumFractionDigits: dp, maximumFractionDigits: dp
+        });
+      } else {
+        el.textContent = format(out, from, unit, currency);
+      }
       el.setAttribute("data-shown", currency);
     }
   }

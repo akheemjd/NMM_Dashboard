@@ -48,7 +48,7 @@ DATA = os.path.join(ROOT, "data")
 
 # Slice the document into text we may edit and text we must not.
 SKIP = re.compile(
-    r"(<script\b.*?</script>|<style\b.*?</style>|<!--.*?-->|"
+    r"(<head\b.*?</head>|<script\b.*?</script>|<style\b.*?</style>|<!--.*?-->|"
     r"<[^>]+>)",
     re.S | re.I,
 )
@@ -66,8 +66,19 @@ FX_OPEN_TAG = re.compile(r'<span class="fx"[^>]*>', re.I)
 FX_ANY_OPEN = re.compile(r'<span class="fx"[^>]*>', re.I)
 
 
+# <head> is skipped whole. A <title> is a plain text node containing a real
+# price, so the text pass matched it and injected markup into the one place
+# search engines read most — 92 pages shipped that way.
+# Only the regions that must not be REWRITTEN. Unwrapping a marker inside a
+# script would delete the calculator's span literal.
+#
+# <head> is deliberately NOT here: reset() unwraps markers anywhere, so a bad
+# marker injected into a <title> by an earlier build self-heals on the next
+# run. It is the marking pass (SKIP, above) that skips <head>, because a title
+# is a plain text node holding a real price and would be matched again.
 SKIP_REGION = re.compile(
-    r"(<script\b.*?</script>|<style\b.*?</style>|<!--.*?-->)", re.S | re.I
+    r"(<script\b.*?</script>|<style\b.*?</style>|<!--.*?-->)",
+    re.S | re.I,
 )
 
 
@@ -213,6 +224,61 @@ def add_toggle(html):
     return html
 
 
+# A number in a value element immediately followed by a unit element.
+#
+#     <span class="n">271.0</span><span class="u">¢/L</span>
+#     <div class="v down">247.3</div><div class="s">AB · ¢/L</div>
+#
+# Group 1 = opening tag, 2 = the number, 3 = the closing tag + unit opening tag,
+# 4 = the unit text.
+PAIR = re.compile(
+    r'(<(?:div|span) class="(?:v|n)[^"]*"[^>]*>)([\d.,]+)'
+    r'(</(?:div|span)>\s*<(?:div|span) class="(?:s|u)[^"]*"[^>]*>)([^<]*)',
+    re.S,
+)
+
+
+# The unit token inside a unit element, so the label follows the value.
+UNIT_TOKEN = re.compile(r"(" + chr(0xa2) + "/L|\$/gal)")
+
+
+def mark_unit(unit_text):
+    """Wrap the unit token so fx.js can swap it. Returns the text unchanged
+    when it names no unit."""
+    def one(m):
+        tok = m.group(1)
+        cad = "¢/L"
+        usd = "$/gal"
+        both = (cad + "|" + usd) if tok == cad else (usd + "|" + cad)
+        return ('<span class="fxu" data-u="' + both + '">' + tok + '</span>')
+    return UNIT_TOKEN.sub(one, unit_text)
+
+
+def mark_pairs(html, cur_default):
+    """Mark number/unit pairs. Skipped by the later text pass, which sees the
+    inserted marker as the preceding tag.
+
+    The unit text decides both unit and currency, and a pair whose unit does not
+    name one is left alone: exchange rates and counts live in this shape too.
+    """
+    def one(m):
+        open_v, num, mid, unit = m.group(1), m.group(2), m.group(3), m.group(4)
+        if "class=\"fx\"" in open_v:
+            return m.group(0)
+        if "\u00a2/L" in unit:
+            u, c = "cpl", cur_default
+        elif "/gal" in unit:
+            u, c = "gpg", "USD"
+        else:
+            return m.group(0)          # a rate or a count, not a price
+        # data-bare: the unit is displayed by the sibling element, so the value
+        # renders as a plain number while still converting as its source unit.
+        inner = (f'<span class="fx" data-c="{c}" data-u="{u}" data-bare="1" '
+                 f'data-v="{num}">{num}</span>')
+        return open_v + inner + mid + mark_unit(unit)
+    return PAIR.sub(one, html)
+
+
 def annotate_options(seg, cur_default):
     """Annotate money-bearing <option> tags so fx.js can rewrite their labels.
 
@@ -245,6 +311,7 @@ def mark(html, rel):
     # Options first, on the whole document: their labels cannot hold markup, so
     # they are annotated with attributes and left as plain text.
     html = annotate_options(html, cur_default)
+    html = mark_pairs(html, cur_default)
     parts = SKIP.split(html)
     out = []
     n = 0
