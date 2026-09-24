@@ -285,7 +285,8 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 
 .ft { margin-top: var(--v); padding: 32px 0 40px; border-top: 1px solid var(--line); }
 .ft .wrap { display: grid; gap: 16px; }
-.ft .brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.ft .brand { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  min-width: 0; }  /* must be shrinkable: it shares the row with the toggle */
 .ft .brand .name { font-family: var(--display); font-weight: 600; font-size: 1.0625rem; color: var(--ink); text-decoration: none; }
 .ft .brand .name:hover { color: var(--signal); }
 .ft .brand .tag { font-family: var(--data); font-size: .8125rem; color: var(--muted); }
@@ -513,6 +514,10 @@ main.wrap, .hd .wrap, .nav .wrap, .ft .wrap { max-width: min(var(--maxw), 100%);
   .lane { grid-template-columns: 1fr; }
   .inp input, .inp select { min-height: 44px; }
   .calc .out { margin-top: 20px; }
+  /* The tagline is the first thing to go when the row has to share with the
+     currency toggle. The brand mark stays. */
+  .brand .tag { display: none; }
+  .fxtog button { padding: 9px 13px; min-height: 40px; }
 }
 
 /* Sponsor slot. The <!--OPTIONAL:sponsor_*--> blocks in the templates had no

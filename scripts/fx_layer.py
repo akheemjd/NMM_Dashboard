@@ -153,7 +153,9 @@ TOGGLE = (
 # there is exactly one place to change it. Authoring it into the templates would
 # mean gen_templates.py AND the hand-maintained border-trends template, which has
 # already drifted three times this month.
-NAV_END = re.compile(r'(</div>\s*</nav>)', re.I)
+# The toggle lives in the header, not the nav. Same content column, and the
+# header's space-between puts it flush right with room to spare.
+HD_END = re.compile(r'(</div>\s*</header>)', re.I)
 SCRIPT_END = re.compile(r'(<script src="/assets/nm\.js\?v=[^"]*"></script>)', re.I)
 
 
@@ -188,14 +190,14 @@ def wrap_navlinks(html):
 
 
 def add_toggle(html):
-    """Insert the currency toggle into the nav and load fx.js. Idempotent."""
+    """Insert the currency toggle into the header and load fx.js. Idempotent."""
     if 'class="fxtog"' in html:
         return html
 
-    if NAV_END.search(html):
-        html = NAV_END.sub(lambda m: TOGGLE + m.group(1), html, count=1)
+    if HD_END.search(html):
+        html = HD_END.sub(lambda m: TOGGLE + m.group(1), html, count=1)
     else:
-        # No nav to attach to: still ship the script so marked figures convert.
+        # No header to attach to: still ship the script so marked figures convert.
         pass
 
     # Load the converter after nm.js. Mirrors that tag's cache-buster rather than
