@@ -274,7 +274,14 @@ def check_sitemap():
     if extra:
         bad.append(f"{len(extra)} sitemap URL(s) have no page, e.g. {extra[:3]}")
 
-    today = datetime.date.today()
+    # Every date this checks is UTC-derived: the collectors stamp fetched_date
+    # and updated with utcnow(), and the publishers (CBP, EIA, NRCan) date their
+    # releases in their own timezone. Comparing against the LOCAL date made the
+    # guard call honest dates "future" for four hours every night — from 20:00
+    # local (UTC-4) until midnight, UTC has already rolled over. A date one day
+    # ahead of UTC is legitimate for a source east of Greenwich; two is not.
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    allowance = datetime.timedelta(days=1)
     for u in entries:
         lm = u.find(f"{ns}lastmod")
         if lm is None or not lm.text:
@@ -284,8 +291,11 @@ def check_sitemap():
         except ValueError:
             bad.append(f"unparsable lastmod {lm.text!r}")
             continue
-        if d > today:
-            bad.append(f"lastmod {d} is in the future (today {today})")
+        if d > today + allowance:
+            bad.append(
+                f"lastmod {d} is {-((today - d).days)} days ahead of UTC today "
+                f"({today}) — more than a timezone can explain"
+            )
 
     return bad
 
