@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-310664",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at JAMES SNOW PKWY, Milton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.5413216,
+      "lng": -79.8633463,
+      "start": 1790211420,
+      "end": null,
+      "updated": 1790211420
+    },
+    {
       "id": "ON-310659",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,22 +31,6 @@
       "start": 1790210580,
       "end": null,
       "updated": 1790211180
-    },
-    {
-      "id": "ON-310656",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 400 Southbound  at STEELES AVENUE, Vaughan. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.772891186,
-      "lng": -79.535200596,
-      "start": 1790209800,
-      "end": null,
-      "updated": 1790209800
     },
     {
       "id": "ON-310654",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-24T00:59:42.105208+00:00",
+  "updated": "2026-09-24T01:30:43.832078+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
