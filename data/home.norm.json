@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-24 12:22",
-  "updated_iso": "2026-09-24T12:22:18+00:00",
-  "build_version": "1790252538",
+  "updated_at": "2026-09-24 12:53",
+  "updated_iso": "2026-09-24T12:53:18+00:00",
+  "build_version": "1790254398",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "271.0",
@@ -268,7 +268,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -308,7 +308,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -318,17 +318,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:36 MDT"
+      "captured_at": "06:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 PDT"
+      "captured_at": "05:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -404,18 +404,18 @@
   "theft": [],
   "news": [
     {
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Cooking with gas? Maybe after 2 busted for stealing cargo of cooking oil",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/cooking-with-gas-maybe-after-2-busted-for-stealing-cargo-of-cooking-oil",
+      "why": "Industry movement worth tracking."
+    },
+    {
       "category": "safety",
       "source": "The Trucker",
       "headline": "NTSB makes recommendations after deadly toll plaza crash in Ohio",
       "url": "https://www.thetrucker.com/trucking-news/the-nation/ntsb-makes-recommendations-after-deadly-toll-plaza-crash-in-ohio",
       "why": "Safety rules and blitzes hit the road on specific dates."
-    },
-    {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "One injured in crash involving 3 semi-trucks",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/one-injured-in-crash-involving-3-semi-trucks",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
