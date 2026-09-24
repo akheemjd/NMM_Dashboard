@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-24 11:51",
-  "updated_iso": "2026-09-24T11:51:15+00:00",
-  "build_version": "1790250675",
+  "updated_at": "2026-09-24 12:22",
+  "updated_iso": "2026-09-24T12:22:18+00:00",
+  "build_version": "1790252538",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "271.0",
@@ -324,11 +324,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT"
+      "captured_at": "05:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -404,18 +404,18 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
+      "category": "safety",
       "source": "The Trucker",
-      "headline": "CBP rolling out Truck Cargo Test program",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/cbp-rolling-out-truck-cargo-test-program",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "NTSB makes recommendations after deadly toll plaza crash in Ohio",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/ntsb-makes-recommendations-after-deadly-toll-plaza-crash-in-ohio",
+      "why": "Safety rules and blitzes hit the road on specific dates."
     },
     {
-      "category": "drivers",
-      "source": "Trucking Info",
-      "headline": "Nussbaum, Roehl Announce Second Driver Pay Increase This Year",
-      "url": "https://www.truckinginfo.com/news/nussbaum-roehl-announce-second-driver-pay-increase-this-year",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "One injured in crash involving 3 semi-trucks",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/one-injured-in-crash-involving-3-semi-trucks",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
