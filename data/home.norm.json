@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-24 00:07",
-  "updated_iso": "2026-09-24T00:07:22+00:00",
-  "build_version": "1790208442",
+  "updated_at": "2026-09-24 00:29",
+  "updated_iso": "2026-09-24T00:29:05+00:00",
+  "build_version": "1790209745",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -254,20 +254,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 28, HWY 619",
+    "status_line": "HWY 401, HWY 28, HWY 619",
     "incidents": [
       {
-        "road": "HWY 28",
-        "what": "Collision on HWY 28 Both Directions  between HWY 41, Denbigh and Renfrew Rd 514\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at KEELE ST, Toronto. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 619",
-        "what": "Emergency Roadwork on HWY 619 Both Directions  between DILKE-NELLES RD and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MEADOWVALE ROAD, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -283,7 +283,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:56 EDT"
+      "captured_at": "20:14 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -323,17 +323,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 EDT"
+      "captured_at": "20:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
       "slug": "coutts-sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 MDT"
+      "captured_at": "18:04 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -343,7 +343,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT"
+      "captured_at": "17:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -409,8 +409,8 @@
     },
     {
       "name": "Border congestion",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "5 of 9 crossings slow",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
