@@ -1,6 +1,48 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102158",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 37A",
+        "from": "Glacier Highway",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Construction work at Highway 37A, At Windy Hill Chain-up Rest Area. Starting Tue Sep 22 until Tue Sep 29. From 8:00 AM to 5:00 PM PDT, every day. Last update: September 25th, 2026 at 4:29pm PDT. Reduced speeds to 50km/hr through the work zone.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 56.09233724,
+      "lng": -129.47988601,
+      "start": "2026-09-08T16:48:53-07:00",
+      "end": "",
+      "updated": "2026-09-25T16:29:40-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-102157",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 37",
+        "from": "Highway 37",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Utility work at Highway 37, At Bell 1 Rest Area S Access. Starting Tue Sep 22 until Tue Sep 29. From 8:00 AM to 5:00 PM PDT, every day. Last update: September 25th, 2026 at 4:28pm PDT. Reduced speeds to 50km/hr through the work zone.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 56.32788051,
+      "lng": -129.29981349,
+      "start": "2026-09-08T16:42:55-07:00",
+      "end": "",
+      "updated": "2026-09-25T16:28:40-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-102762",
       "province": "BC",
       "highway": {
@@ -378,8 +420,8 @@
       "updated": "2026-08-24T08:51:41-07:00"
     }
   ],
-  "total": 18,
-  "updated": "2026-09-25T22:28:50.892635+00:00",
+  "total": 20,
+  "updated": "2026-09-25T23:31:04.691884+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
