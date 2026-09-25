@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102832",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Highway 99",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 99, In Richmond and 27m Southeast of Cambie Road. HOV lane closed. Last update: September 25th, 2026 at 1:24pm PDT. Next update: September 25th, 2026 at 2:00pm PDT. Watch for crews on scene.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.18440243,
+      "lng": -123.10727226,
+      "start": "2026-09-25T13:24:55-07:00",
+      "end": "",
+      "updated": "2026-09-25T13:24:55-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-102831",
       "province": "BC",
       "highway": {
@@ -399,8 +420,8 @@
       "updated": "2026-08-24T08:51:41-07:00"
     }
   ],
-  "total": 19,
-  "updated": "2026-09-25T20:24:48.390546+00:00",
+  "total": 20,
+  "updated": "2026-09-25T20:27:42.172578+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
