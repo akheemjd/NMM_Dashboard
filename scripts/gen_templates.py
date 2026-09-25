@@ -154,7 +154,7 @@ def cite():
     return """
   <div class="cite">
     <div class="cl">Citing this figure</div>
-    <q id="citation">Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L national average, ten provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
+    <q id="citation">Northern Mile Canadian Diesel Index: {{fuel.national_diesel}}¢/L across ten Canadian provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
     <div class="row">
       <button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button>
       <a class="btn" href="/methodology/nmdi/">How it is calculated</a>
@@ -166,7 +166,7 @@ def cite():
 def rail():
     return """
     <div class="rail">
-      <div class="cap"><h3>The spread</h3><span class="sp">{{fuel.low_code}} <b>{{fuel.low}}</b> → {{fuel.high_code}} <b>{{fuel.high}}</b> · {{fuel.spread}}¢/L</span></div>
+      <div class="cap"><h3>Canadian diesel by province</h3><span class="sp">{{fuel.low_code}} <b>{{fuel.low}}</b> → {{fuel.high_code}} <b>{{fuel.high}}</b> · {{fuel.spread}}¢/L</span></div>
       <div class="mean-wrap"><span class="mean" style="left:{{fuel.national_pct}}%"><span class="lab">Index {{fuel.national_diesel}}</span></span></div>
       <!--LOOP:provinces--><a class="row" href="/diesel-prices/{{slug}}/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
     </div>
@@ -191,7 +191,7 @@ def chart_summary():
     return """
     <div class="chart-card">
       <div class="chart-head">
-        <h3>National diesel &mdash; where today sits</h3>
+        <h3>Canada &mdash; national diesel, where today sits</h3>
       </div>""" + _chart_stats() + """
     </div>"""
 
@@ -291,9 +291,20 @@ write("index",
   <section class="hero">
     <span class="eyebrow">Free cross-border trucking data · no account</span>
     <h1>Diesel prices in Canada and the US today</h1>
-    <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
-    <p class="stand">At 35 L/100km that is <b>{{fuel.fuel_cost_per_km}} per km</b> — the fuel half of your rate floor. <a href="/fuel-cost-calculator/">Work out your lane's full floor</a></p>
-    <div class="meta"><span>Ten provinces</span><span>NRCan survey print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+    <div class="figures">
+      <div class="fg">
+        <span class="cn">Canada</span>
+        <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
+        <span class="fsrc">NRCan weekly survey · ten provinces · print {{fuel.print_date}}</span>
+      </div>
+      <div class="fg">
+        <span class="cn">United States</span>
+        <div class="figure"><span class="n">{{eia.us_national_cpl}}</span><span class="u">¢/L</span><span class="d {{eia.us_change_7d_class}}">{{eia.us_change_7d}} · 7d</span></div>
+        <span class="fsrc">EIA weekly retail survey · priced in USD per gallon · ten districts, not states</span>
+      </div>
+    </div>
+    <p class="stand">Canada to the US: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. At 35 L/100km the Canadian figure is <b>{{fuel.fuel_cost_per_km}} per km</b> — the fuel half of your rate floor. <a href="/fuel-cost-calculator/">Work out your lane's full floor</a></p>
+    <div class="meta"><span>Ten provinces · ten districts</span><span>NRCan print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
 ''' + rail() + chart_summary() + cite() + '''
     <div class="stats">
       <a class="stat" href="/fuel-prices/"><div class="l">Cheapest</div><div class="v down">{{fuel.low}}</div><div class="s">{{fuel.low_code}} · ¢/L</div></a>
@@ -1145,7 +1156,7 @@ write("press",
     <div class="lead"><h2>How to cite us</h2></div>
     <div class="cite">
       <div class="cl">Standard citation</div>
-      <q id="citation">Northern Mile Diesel Index: {{fuel.national_diesel}}¢/L national average, ten provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
+      <q id="citation">Northern Mile Canadian Diesel Index: {{fuel.national_diesel}}¢/L across ten Canadian provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
       <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">Methodology</a></div>
     </div>
     <p class="note">Every figure on the dashboard carries its own citation in the same format. We name the primary source (Natural Resources Canada, Bank of Canada, CBSA, EIA) and the observation date — never an un-dated number.</p>

@@ -144,6 +144,19 @@ h3 { font-family: var(--display); font-weight: 500; font-size: 1.0625rem; letter
 
 /* ── Hero figure ────────────────────────────────────────────────────── */
 
+/* Two peer national figures. The homepage promised both countries in its H1 and
+   then showed only the Canadian index, unlabelled — which read as a Canada-only
+   site. Each country gets its own figure, change and source line. */
+.figures { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; margin: 0 0 18px; }
+.figures .fg { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.figures .cn { font-family: var(--data); font-size: .8125rem; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted); }
+.figures .fsrc { font-family: var(--data); font-size: .8125rem; color: var(--muted);
+  line-height: 1.35; }
+@media (max-width: 640px) {
+  /* Stacked: two number blocks side by side do not fit a phone. */
+  .figures { grid-template-columns: 1fr; gap: 14px; }
+}
 .hero { padding-top: var(--v); }
 
 .figure { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin: 0 0 10px; }
