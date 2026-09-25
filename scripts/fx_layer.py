@@ -163,10 +163,12 @@ PAGE_CURRENCY = [
 # The currency a page opens in for a first-time reader, as opposed to the source
 # currency of the figures on it (PAGE_CURRENCY above). A reader who has already
 # chosen keeps their choice — this is only the default.
+# Display default only. A shared cross-border page keeps the site default: it is
+# reached from both trees, so opening it in USD shows a Canadian reader converted
+# figures on a page whose Canadian rows come first.
 PAGE_DEFAULT = [
     (re.compile(r"^us$"), "USD"),
     (re.compile(r"^us-diesel(/|$)"), "USD"),
-    (re.compile(r"^fuel-tax-rates(/|$)"), "USD"),
     (re.compile(r"^border-wait-times/all-ports(/|$)"), "USD"),
 ]
 
@@ -236,6 +238,30 @@ def wrap_navlinks(html):
 
 CA_PATH = re.compile(r"^(ca$|ca/|diesel-prices(/|$)|fuel-prices(/|$))")
 US_PATH = re.compile(r"^(us$|us/|us-diesel(/|$))")
+
+
+# The nav and footer carry one country-specific link: "Diesel". It points at
+# /fuel-prices/ as authored, which is correct for Canada and wrong for the US tree.
+# Rewritten here rather than in the templates because the templates are shared and the
+# nav must stay authored exactly once.
+US_TREE = re.compile(r"^(us$|us/|us-diesel(/|$))")
+
+
+def set_lang(html, rel):
+    """Declare the tree's own language. US pages are not en-CA.
+
+    /us/ carried lang="en-CA" while its own JSON-LD said "inLanguage":"en-US" — the
+    page disagreed with itself, and the US tree told US readers it was Canadian.
+    """
+    lang = "en-US" if US_TREE.match(rel) else "en-CA"
+    return re.sub(r'<html lang="[^"]*"', f'<html lang="{lang}"', html, count=1)
+
+
+def point_nav_at_tree(html, rel):
+    """On a US page, send the nav's Diesel link to US diesel instead of Canadian."""
+    if not US_TREE.match(rel):
+        return html
+    return html.replace('href="/fuel-prices/"', 'href="/us-diesel/"')
 
 
 def country_switch_html(rel):
@@ -542,7 +568,10 @@ def main():
     total = 0
     for dirpath, _dirs, files in os.walk(DOCS):
         for fn in files:
-            if fn != "index.html":
+            # 404.html is the only page not named index.html. It is included here on
+            # purpose: skipping it meant the page got no chrome injection and never
+            # appeared in a guard.
+            if fn not in ("index.html", "404.html"):
                 continue
             path = os.path.join(dirpath, fn)
             rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
@@ -551,6 +580,8 @@ def main():
             html = open(path, encoding="utf-8").read()
             html, n = mark(html, rel)
             html = wrap_navlinks(html)
+            html = set_lang(html, rel)
+            html = point_nav_at_tree(html, rel)
             html = add_country_switch(html, rel)
             html = add_toggle(html, rel)
             open(path, "w", encoding="utf-8").write(html)

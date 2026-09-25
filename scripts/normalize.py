@@ -487,6 +487,11 @@ districts_meta = {
     "us_low_code": districts_data[0]["code"] if districts_data else "n/a",
     "us_low": districts_data[0]["price"] if districts_data else "n/a",
     "us_high_code": districts_data[-1]["code"] if districts_data else "n/a",
+    # The long names, for sentences. A rail row has room for three letters and no
+    # more; prose has room for "Lower Atlantic (PADD 1C)" and needs it, because
+    # nothing else on the page expands the code.
+    "us_low_name": districts_data[0]["name"] if districts_data else "n/a",
+    "us_high_name": districts_data[-1]["name"] if districts_data else "n/a",
     "us_high": districts_data[-1]["price"] if districts_data else "n/a",
     "us_spread": (f"{_us_vals[-1][1] - _us_vals[0][1]:.3f}" if _us_vals else "n/a"),
     "us_national": f"{_us_nat_f:.3f}" if _us_nat_f is not None else "n/a",
@@ -562,6 +567,7 @@ for ind in mk_indicators[:8]:
         "note": note,
         "value": str(ind.get("value", "—")),
         "value_class": cls,
+        "country_prefix": ("<span class=\"src\">Canada</span> " if ind.get("country") == "ca" else ""),
         "source": ind.get("source", ""),
         "what_it_means": ind.get("what_it_means", ""),
     })
@@ -572,6 +578,7 @@ _tot = len(border_rows)
 if _tot:
     market.append({
         "name": "Border congestion",
+"country_prefix": "",
         "note": f"{_bc} of {_tot} crossings slow",
         "value": f"{_bc}/{_tot}",
         "value_class": "flat",

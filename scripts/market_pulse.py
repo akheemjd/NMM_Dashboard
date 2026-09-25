@@ -58,6 +58,7 @@ def collect_market_pulse():
                 pulse["indicators"].append({
                     "name": "GDP Growth",
                     "label": "Monthly GDP",
+                    "country": "ca",
                     "value": f"{mom_change:+.1f}%",
                     "detail": f"${current/1000:.0f}B (chained 2017)",
                     "direction": "up" if mom_change > 0 else "down",
@@ -72,6 +73,7 @@ def collect_market_pulse():
                     pulse["indicators"].append({
                         "name": "GDP YoY",
                         "label": "Year-over-year",
+                        "country": "ca",
                         "value": f"{yoy_change:+.1f}%",
                         "direction": "up" if yoy_change > 0 else "down",
                         "source": "Statistics Canada",
@@ -92,6 +94,7 @@ def collect_market_pulse():
         pulse["indicators"].append({
             "name": "Fuel Cost",
             "label": "Fuel cost per 1,000 km",
+            "country": "ca",
             "value": f"${cost_1000km:,.0f}",
             "detail": f"At {diesel_avg:.1f}¢/L and {BURN} L/100km",
             "direction": "up" if diesel_avg > 200 else "down",
@@ -106,6 +109,7 @@ def collect_market_pulse():
             pulse["indicators"].append({
                 "name": "Fuel Spread",
                 "label": "BC vs AB diesel spread",
+                "country": "ca",
                 "value": f"{spread:.1f}¢/L",
                 "direction": "up" if spread > 20 else "down",
                 "source": "Industry surveys",

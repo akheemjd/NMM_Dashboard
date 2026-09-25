@@ -201,8 +201,8 @@ def us_part():
     <div class="rail us">
       <div class="cap"><h3>US — diesel by district</h3><span class="sp">{{us_low_code}} <b>{{us_low}}</b> → {{us_high_code}} <b>{{us_high}}</b> · ${{us_spread}}/gal</span></div>
       <div class="mean-wrap"><span class="mean" style="left:{{us_national_pct}}%"><span class="lab">US avg {{us_national}}</span></span></div>
-      <!--LOOP:districts--><a class="row" href="/us-diesel/district/{{slug}}/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val us">{{price}}</span></a><!--/LOOP:districts-->
-      <p class="railnote">Ten EIA districts, not states · EIA publishes no state-level diesel</p>
+      <!--LOOP:districts--><a class="row" href="/us-diesel/district/{{slug}}/" title="{{name}}"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val us">{{price}}</span></a><!--/LOOP:districts-->
+      <p class="railnote">Ten EIA districts, not states · EIA publishes no state-level diesel · {{us_low_code}} is {{us_low_name}}, {{us_high_code}} is {{us_high_name}}</p>
     </div>
 """
 
@@ -369,7 +369,7 @@ write("index",
     <div class="two">
       <div><h3>Exchange and market</h3><div class="rows">
         <a class="r" href="/exchange-rate/"><span class="k">USD / CAD<small>Bank of Canada</small></span><span class="v">{{fx.usd_cad}} {{fx.change}}</span></a>
-        <!--LOOP:market--><a class="r" href="/market-pulse/"><span class="k">{{name}}<small>{{note}}</small></span><span class="v {{value_class}}">{{value}}</span></a><!--/LOOP:market-->
+        <!--LOOP:market--><a class="r" href="/market-pulse/"><span class="k">{{country_prefix}}{{name}}<small>{{note}}</small></span><span class="v {{value_class}}">{{value}}</span></a><!--/LOOP:market-->
       </div></div>
       <div><h3>Industry news</h3><div class="links-list">
         <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->

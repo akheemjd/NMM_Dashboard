@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-25 19:54",
-  "updated_iso": "2026-09-25T19:54:01+00:00",
-  "build_version": "1790366041",
+  "updated_at": "2026-09-25 20:26",
+  "updated_iso": "2026-09-25T20:26:58+00:00",
+  "build_version": "1790368018",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -230,6 +230,8 @@
   "us_low_code": "LAtl",
   "us_low": "6.139",
   "us_high_code": "Cal",
+  "us_low_name": "Lower Atlantic (PADD 1C)",
+  "us_high_name": "California",
   "us_high": "8.246",
   "us_spread": "2.107",
   "us_national": "6.529",
@@ -319,29 +321,29 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4136",
+    "usd_cad": "1.4145",
     "direction": "weaker CAD",
-    "change": "+0.0040",
-    "usd_100": "141.36",
-    "usd_500": "706.80",
-    "usd_1000": "1,413.60",
-    "cad_1000": "707.41",
-    "band": "notable",
-    "band_pct": "+0.28%",
-    "obs_date": "2026-09-24",
-    "avg_30d": "1.3916",
-    "vs_baseline": "+0.0220",
+    "change": "+0.0009",
+    "usd_100": "141.45",
+    "usd_500": "707.25",
+    "usd_1000": "1,414.50",
+    "cad_1000": "706.96",
+    "band": "noise",
+    "band_pct": "+0.06%",
+    "obs_date": "2026-09-25",
+    "avg_30d": "1.3928",
+    "vs_baseline": "+0.0217",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "+0.0148",
-    "change_7d_pct": "+1.06%",
-    "change_30d": "+0.0297",
-    "change_30d_pct": "+2.15%",
-    "change_1y": "+0.0303",
-    "change_1y_pct": "+2.19%",
-    "range_pct": "86%"
+    "change_7d": "+0.0143",
+    "change_7d_pct": "+1.02%",
+    "change_30d": "+0.0269",
+    "change_30d_pct": "+1.94%",
+    "change_1y": "+0.0291",
+    "change_1y_pct": "+2.10%",
+    "range_pct": "88%"
   },
   "incidents": {
     "none": true,
@@ -359,7 +361,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:56 EDT"
+      "captured_at": "16:12 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -419,7 +421,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -448,6 +450,7 @@
       "note": "$2369B (chained 2017)",
       "value": "+0.3%",
       "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
       "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
     },
@@ -456,6 +459,7 @@
       "note": "Longer-term freight demand trend.",
       "value": "+2.0%",
       "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
       "what_it_means": "Longer-term freight demand trend."
     },
@@ -464,6 +468,7 @@
       "note": "At 268.5\u00a2/L and 35 L/100km",
       "value": "$940",
       "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "NRCan weekly diesel survey",
       "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
     },
@@ -472,19 +477,22 @@
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
       "value": "28.8\u00a2/L",
       "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Industry surveys",
       "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
     },
     {
       "name": "USD/CAD vs 30-day average",
-      "note": "+0.0220 vs 30-day avg 1.3916",
-      "value": "1.4136",
+      "note": "+0.0217 vs 30-day avg 1.3928",
+      "value": "1.4145",
       "value_class": "flat",
+      "country_prefix": "",
       "source": "Bank of Canada",
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
     },
     {
       "name": "Border congestion",
+      "country_prefix": "",
       "note": "4 of 9 crossings slow",
       "value": "4/9",
       "value_class": "flat",
@@ -495,17 +503,17 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
+      "category": "equipment",
       "source": "The Trucker",
-      "headline": "SmartSense: Cargo theft concerns continue to rise",
-      "url": "https://www.thetrucker.com/trucking-news/business/smartsense-cargo-theft-concerns-continue-to-rise",
-      "why": "Industry movement worth tracking."
+      "headline": "Jackson County begins construction on new Welcome Center with expanded truck parking",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/jackson-county-begins-construction-on-new-welcome-center-with-expanded-truck-parking",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "Alabama secures $2.5B loan for largest infrastructure project in state\u2019s history",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/alabama-secures-2-5b-loan-for-largest-infrastructure-project-in-states-history",
+      "headline": "SmartSense: Cargo theft concerns continue to rise",
+      "url": "https://www.thetrucker.com/trucking-news/business/smartsense-cargo-theft-concerns-continue-to-rise",
       "why": "Industry movement worth tracking."
     }
   ],
@@ -522,9 +530,9 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "6.529",
-    "us_national_cpl": "243.8",
+    "us_national_cpl": "244.0",
     "nadi": "256.2",
-    "ca_us_gap": "24.7",
+    "ca_us_gap": "24.5",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-09-21",
@@ -541,83 +549,83 @@
       "west_coast_ex_california": 6.791
     },
     "padds_cpl": {
-      "east_coast": 234.1,
-      "new_england": 243.4,
-      "central_atlantic": 244.4,
-      "lower_atlantic": 229.3,
-      "midwest": 249.5,
-      "gulf_coast": 230.7,
-      "rocky_mountain": 236.8,
-      "west_coast": 278.4,
-      "california": 307.9,
-      "west_coast_ex_california": 253.6
+      "east_coast": 234.2,
+      "new_england": 243.5,
+      "central_atlantic": 244.6,
+      "lower_atlantic": 229.4,
+      "midwest": 249.6,
+      "gulf_coast": 230.8,
+      "rocky_mountain": 236.9,
+      "west_coast": 278.6,
+      "california": 308.1,
+      "west_coast_ex_california": 253.8
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "6.268",
-        "cpl": "234.1"
+        "cpl": "234.2"
       },
       {
         "key": "new_england",
         "label": "New England (PADD 1A)",
         "usd_gal": "6.517",
-        "cpl": "243.4"
+        "cpl": "243.5"
       },
       {
         "key": "central_atlantic",
         "label": "Central Atlantic (PADD 1B)",
         "usd_gal": "6.546",
-        "cpl": "244.4"
+        "cpl": "244.6"
       },
       {
         "key": "lower_atlantic",
         "label": "Lower Atlantic (PADD 1C)",
         "usd_gal": "6.139",
-        "cpl": "229.3"
+        "cpl": "229.4"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "6.680",
-        "cpl": "249.5"
+        "cpl": "249.6"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "6.177",
-        "cpl": "230.7"
+        "cpl": "230.8"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "6.340",
-        "cpl": "236.8"
+        "cpl": "236.9"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "7.456",
-        "cpl": "278.4"
+        "cpl": "278.6"
       },
       {
         "key": "california",
         "label": "California",
         "usd_gal": "8.246",
-        "cpl": "307.9"
+        "cpl": "308.1"
       },
       {
         "key": "west_coast_ex_california",
         "label": "West Coast excluding California",
         "usd_gal": "6.791",
-        "cpl": "253.6"
+        "cpl": "253.8"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
-    "us_change_7d": "+11.0",
+    "us_change_7d": "+11.2",
     "us_change_7d_class": "up",
-    "us_change_30d": "+37.1",
+    "us_change_30d": "+37.3",
     "nadi_change_7d": "+4.6",
     "nadi_change_7d_class": "up",
     "nadi_change_30d": "+35.7"

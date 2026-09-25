@@ -58,6 +58,10 @@ def chrome(html):
         s = re.sub(r' is-on', "", s)
         s = re.sub(r' aria-current="true"', "", s)
         s = re.sub(r'data-curdefault="(?:CAD|USD)"', 'data-curdefault="X"', s)
+        # The nav's Diesel link resolves inside the reader's own tree, so it is
+        # /fuel-prices/ on Canadian pages and /us-diesel/ on US pages. Normalised to
+        # a token rather than ignored: the rest of the nav is still compared.
+        s = re.sub(r'href="(?:/fuel-prices/|/us-diesel/)"', 'href="<tree-diesel>"', s)
         s = re.sub(r'Updated \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC', "Updated <ts> UTC", s)
         parts.append(s)
     return hashlib.md5("".join(parts).encode()).hexdigest()
@@ -68,6 +72,9 @@ def main():
     for dirpath, _, files in os.walk(DOCS):
         if "index.html" in files:
             pages.append(os.path.join(dirpath, "index.html"))
+        # The 404 is a real page with the same chrome and belongs in the comparison.
+        if dirpath == DOCS and "404.html" in files:
+            pages.append(os.path.join(dirpath, "404.html"))
     pages.sort()
 
     if not pages:

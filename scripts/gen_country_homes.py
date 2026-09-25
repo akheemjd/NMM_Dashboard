@@ -61,7 +61,7 @@ def shared_tail():
         '      <div><h3>Exchange and market</h3><div class="rows">\n'
         '        <a class="r" href="/exchange-rate/"><span class="k">USD / CAD<small>Bank of Canada</small>'
         '</span><span class="v">{{fx.usd_cad}} {{fx.change}}</span></a>\n'
-        '        <!--LOOP:market--><a class="r" href="/market-pulse/"><span class="k">{{name}}'
+        '        <!--LOOP:market--><a class="r" href="/market-pulse/"><span class="k">{{country_prefix}}{{name}}'
         '<small>{{note}}</small></span><span class="v {{value_class}}">{{value}}</span></a><!--/LOOP:market-->\n'
         '      </div></div>\n'
         '      <div><h3>Industry news</h3><div class="links-list">\n'
@@ -106,8 +106,8 @@ write(
     '<span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>\n'
     '    <div class="meta"><span>Ten provinces</span><span>NRCan print <b>{{fuel.print_date}}</b></span>'
     '<span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>\n'
-    '    <p class="stand">Cross-border, for context: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}} than '
-    'the US average of <b>${{eia.us_national_usd_gal}}/gal</b>. <a href="/us/">US site</a></p>\n'
+    '    <p class="stand">Canada to the US: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. '
+    'The US averaged <b>${{eia.us_national_usd_gal}}/gal</b> this week. <a href="/us/">US site</a></p>\n'
     '    <div class="cite">\n'
     '      <div class="cl">Citing this figure</div>\n'
     '      <q id="citation">Northern Mile Canadian Diesel Index: {{fuel.national_diesel}}¢/L across ten '
@@ -127,8 +127,10 @@ write(
     '{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></a>\n'
     '      <a class="stat" href="/fuel-prices/"><div class="l">Spread</div><div class="v">'
     '{{fuel.spread}}</div><div class="s">{{fuel.low_code}} to {{fuel.high_code}} spread · ¢/L</div></a>\n'
-    '      <a class="stat" href="/fuel-tax-rates/"><div class="l">Fuel tax</div><div class="v">58</div>'
-    '<div class="s">IFTA jurisdictions · CAD/L</div></a>\n'
+    # nofx: a count of jurisdictions is not a price. Without this the layer marked
+    # it and the renderer produced "51.000" beside "states and DC".
+    '      <!--nofx--><a class="stat" href="/fuel-tax-rates/"><div class="l">Fuel tax</div><div class="v">58</div>'
+    '<div class="s">IFTA jurisdictions, each setting its own</div></a><!--/nofx-->\n'
     '      <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">'
     '{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · BoC</div></a>\n'
     '      <a class="stat" href="/us/"><div class="l">US diesel</div><div class="v">'
@@ -165,7 +167,7 @@ write(
         "US Diesel Prices — ${{eia.us_national_usd_gal}}/gal national | Northern Mile",
         "US on-highway diesel from the EIA weekly retail diesel survey, week ending {{eia.date}}. "
         "National average ${{eia.us_national_usd_gal}}/gal across ten districts, cheapest "
-        "{{us_low_code}} at ${{us_low}}/gal, dearest {{us_high_code}} at ${{us_high}}/gal.",
+        "{{us_low_name}} at ${{us_low}}/gal, dearest {{us_high_name}} at ${{us_high}}/gal.",
         "/us/", "og.jpg", us_ld,
     )
     + '\n  <section class="hero">\n'
@@ -176,8 +178,8 @@ write(
     '<span class="d {{eia.us_change_7d_class}}">{{eia.us_change_7d}} · 7d</span></div>\n'
     '    <div class="meta"><span>Ten EIA districts</span><span>EIA week <b>{{eia.date}}</b></span>'
     '<span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>\n'
-    '    <p class="stand">Cross-border, for context: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}} than '
-    'the Canadian average of <b>{{fuel.national_diesel}}¢/L</b>. <a href="/ca/">Canadian site</a></p>\n'
+    '    <p class="stand">Canada to the US: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. '
+    'Canada averaged <b>{{fuel.national_diesel}}¢/L</b> this week. <a href="/ca/">Canadian site</a></p>\n'
     '    <div class="cite">\n'
     '      <div class="cl">Citing this figure</div>\n'
     '      <q id="citation">US on-highway diesel: ${{eia.us_national_usd_gal}}/gal national average, EIA '
@@ -192,9 +194,12 @@ write(
     + '\n  <section class="sec">\n'
     '    <div class="lead"><h2>Where today sits</h2></div>\n'
     '    <div class="reading">\n'
-    '      <p class="note" style="margin-top:0">EIA publishes a current weekly price and a district '
-    'breakdown, not a price history, so there is no ten-year series for the US. The <a href="/ca/">'
-    'Canadian site</a> carries one because NRCan publishes one.</p>\n'
+    '      <p class="note" style="margin-top:0">US diesel is <b>${{eia.us_national_usd_gal}}/gal</b> '
+    'nationally, {{eia.us_change_7d}} on the week. The ten districts span <b>${{us_spread}}/gal</b>, '
+    'from <b>${{us_low}}/gal</b> in {{us_low_name}} to <b>${{us_high}}/gal</b> in {{us_high_name}}.</p>\n'
+    '      <p class="note">EIA publishes a current weekly price and a district breakdown, not a '
+    'price history, so there is no ten-year series for the US. The <a href="/ca/">Canadian site</a> '
+    'carries one because NRCan publishes one.</p>\n'
     '    </div>\n'
     '  </section>\n'
     '\n  <section class="sec">\n    <div class="stats">\n'
@@ -204,8 +209,10 @@ write(
     '{{us_high}}</div><div class="s">{{us_high_code}} · $/gal</div></a>\n'
     '      <a class="stat" href="/us-diesel/"><div class="l">Spread</div><div class="v">'
     '{{us_spread}}</div><div class="s">{{us_low_code}} to {{us_high_code}} spread · $/gal</div></a>\n'
-    '      <a class="stat" href="/us-diesel/states/"><div class="l">State fuel tax</div>'
-    '<div class="v">51</div><div class="s">states and DC · $/gal</div></a>\n'
+    # nofx: a count of jurisdictions is not a price. Without it the currency
+    # layer marked this 51 as dollars per gallon and the page rendered 51.000.
+    '      <!--nofx--><a class="stat" href="/us-diesel/states/"><div class="l">State fuel tax</div>'
+    '<div class="v">51</div><div class="s">states and DC, each setting its own on top of the federal rate</div></a><!--/nofx-->\n'
     '      <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">'
     '{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · BoC</div></a>\n'
     '      <a class="stat" href="/ca/"><div class="l">Canadian diesel</div><div class="v">'
@@ -295,5 +302,48 @@ write(
     )
     + foot()
 )
+
+# ══════════════════════════════════════════════════════════════ 404 ══
+# GitHub Pages serves docs/404.html for any missing path. Without it a mistyped
+# URL on a two-tree site gets an unbranded dead end instead of the choice.
+write(
+    "404",
+    head(
+        "Page not found | Northern Mile",
+        "That page does not exist. Pick Canadian or US diesel, or use the navigation.",
+        "/404.html", "og.jpg",
+        '{"@context":"https://schema.org","@type":"WebPage","name":"Page not found",'
+        '"url":"' + BASE + '/404.html"}',
+    )
+    + '''
+  <section class="hero">
+    <span class="eyebrow">404</span>
+    <h1>That page does not exist</h1>
+    <p class="stand">Nothing here. The two diesel trees are below, and everything else is in
+    the navigation.</p>
+  </section>
+
+  <section class="sec">
+    <div class="pick">
+      <a class="pickcard" href="/ca/">
+        <span class="pflag">Canada</span>
+        <span class="pval">{{fuel.national_diesel}}<em>¢/L</em></span>
+        <span class="pmeta">Ten provinces · NRCan weekly survey</span>
+        <span class="pgo">Canadian site →</span>
+      </a>
+      <a class="pickcard" href="/us/">
+        <span class="pflag">United States</span>
+        <span class="pval">{{eia.us_national_usd_gal}}<em>$/gal</em></span>
+        <span class="pmeta">Ten EIA districts</span>
+        <span class="pgo">US site →</span>
+      </a>
+    </div>
+    <p class="note">Looking for a figure you saw cited? Every number carries its source and
+    print date — <a href="/methodology/nmdi/">how it is calculated</a>.</p>
+  </section>
+'''
+    + foot()
+)
+
 
 print("  ca-home, us-home and the chooser at / written")

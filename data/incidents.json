@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102831",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Marine Drive Onramp",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 99, In West Vancouver and North of Lions Gate Bridge. Right lane blocked. Watch for traffic control. Last update: September 25th, 2026 at 1:16pm PDT. Next update: September 25th, 2026 at 2:00pm PDT. Right lane of northbound loop ramp to go west onto Marine Drive blocked.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.32670464,
+      "lng": -123.12730921,
+      "start": "2026-09-25T13:16:52-07:00",
+      "end": "",
+      "updated": "2026-09-25T13:16:52-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-102762",
       "province": "BC",
       "highway": {
@@ -378,8 +399,8 @@
       "updated": "2026-08-24T08:51:41-07:00"
     }
   ],
-  "total": 18,
-  "updated": "2026-09-25T19:53:47.091835+00:00",
+  "total": 19,
+  "updated": "2026-09-25T20:24:48.390546+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

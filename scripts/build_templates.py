@@ -169,9 +169,18 @@ def build_page(name, data):
     # worse in the generator.
     if name in ("ca-home", "us-home"):
         dir_name = name[:-len("-home")]
+    # GitHub Pages looks for docs/404.html at the root, not docs/404/index.html.
+    if name == "404":
+        out_dir = DOCS
+        out_path = os.path.join(DOCS, "404.html")
     out_dir = os.path.join(DOCS, dir_name)
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "index.html")
+    if name == "404":
+        out_path = os.path.join(DOCS, "404.html")
+        # head() emits index,follow for real pages. This one is not a real page.
+        html = html.replace('content="index,follow,max-image-preview:large"',
+                            'content="noindex,follow"')
     with open(out_path, "w") as f:
         f.write(html)
 
@@ -259,6 +268,7 @@ def build_all():
     home = page_data["index"]
     page_data["ca-home"] = {**home}
     page_data["us-home"] = {**home}
+    page_data["404"] = {**home}
 
     # Server-rendered SVG visuals (no JS). Colors come from CSS classes.
     fuel_data = page_data["fuel-prices"]

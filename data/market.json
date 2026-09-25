@@ -3,6 +3,7 @@
     {
       "name": "GDP Growth",
       "label": "Monthly GDP",
+      "country": "ca",
       "value": "+0.3%",
       "detail": "$2369B (chained 2017)",
       "direction": "up",
@@ -12,6 +13,7 @@
     {
       "name": "GDP YoY",
       "label": "Year-over-year",
+      "country": "ca",
       "value": "+2.0%",
       "direction": "up",
       "source": "Statistics Canada",
@@ -20,6 +22,7 @@
     {
       "name": "Fuel Cost",
       "label": "Fuel cost per 1,000 km",
+      "country": "ca",
       "value": "$940",
       "detail": "At 268.5\u00a2/L and 35 L/100km",
       "direction": "up",
@@ -29,6 +32,7 @@
     {
       "name": "Fuel Spread",
       "label": "BC vs AB diesel spread",
+      "country": "ca",
       "value": "28.8\u00a2/L",
       "direction": "up",
       "source": "Industry surveys",
@@ -37,8 +41,8 @@
     {
       "name": "CAD Impact",
       "label": "USD/CAD vs 30-day average",
-      "value": "1.4136",
-      "detail": "+0.0220 vs 30-day avg 1.3916",
+      "value": "1.4145",
+      "detail": "+0.0217 vs 30-day avg 1.3928",
       "direction": "up",
       "source": "Bank of Canada",
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
@@ -47,10 +51,10 @@
   "rates_snapshot": {
     "fuel_pct_of_ops": "25-35%",
     "current_diesel": 268.5,
-    "usd_cad": 1.4136,
+    "usd_cad": 1.4145,
     "note": "Rate data from DAT/Loadlink requires paid subscription. These are operating cost indicators that drive rate floors."
   },
-  "updated": "2026-09-25T19:53:45.296280+00:00",
+  "updated": "2026-09-25T20:26:57.535098+00:00",
   "note": "Public data from Statistics Canada, Bank of Canada, and industry surveys.",
   "direction_summary": "5/5 indicators trending up"
 }

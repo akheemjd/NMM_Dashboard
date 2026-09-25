@@ -399,6 +399,121 @@ def check_us_state_pages():
 
 
 
+
+def check_tree_lang():
+    """US pages declare en-US. Everything else declares en-CA.
+
+    Every page said en-CA, including /us/ — whose own JSON-LD said "inLanguage":
+    "en-US". The page disagreed with itself, and the US tree told US readers it was
+    Canadian.
+    """
+    bad = []
+    for dirpath, _dirs, files in os.walk(DOCS):
+        if "index.html" not in files:
+            continue
+        rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
+        if rel == ".":
+            rel = ""
+        html = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                    errors="replace").read()
+        m = re.search(r'<html lang="([^"]*)"', html)
+        if not m:
+            bad.append(f"/{rel}/ has no lang attribute")
+            continue
+        want = "en-US" if (rel == "us" or rel.startswith("us-diesel")) else "en-CA"
+        if m.group(1) != want:
+            bad.append(f"/{rel}/ declares {m.group(1)}, expected {want}")
+    return bad
+
+
+def check_404_page():
+    """The 404 exists, is not indexable, and offers both trees.
+
+    A missing URL used to get GitHub's unbranded default on a site whose value is
+    being a reliable lookup layer.
+    """
+    bad = []
+    path = os.path.join(DOCS, "404.html")
+    if not os.path.exists(path):
+        return ["docs/404.html was not built"]
+
+    html = open(path, encoding="utf-8", errors="replace").read()
+    if "noindex" not in html:
+        bad.append("the 404 does not carry noindex — it will be indexed")
+    for want, what in (('href="/ca/"', "the Canadian tree"),
+                       ('href="/us/"', "the US tree")):
+        if want not in html:
+            bad.append(f"the 404 does not offer {what}")
+    for want, what in (('aria-label="Country"', "country switch"),
+                       ('class="fxtog"', "currency toggle")):
+        if want not in html:
+            bad.append(f"the 404 has no {what} — it is outside the injection pass")
+    return bad
+
+
+def check_nav_per_tree():
+    """The nav's Diesel link must resolve inside the reader's own tree.
+
+    The nav is identical on every page, so its Diesel item pointed at /fuel-prices/
+    everywhere — sending a US reader to Canadian diesel on 63 pages.
+    """
+    bad = []
+    for dirpath, _dirs, files in os.walk(DOCS):
+        if "index.html" not in files:
+            continue
+        rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
+        if rel == ".":
+            rel = ""
+        if not (rel == "us" or rel.startswith("us-diesel")):
+            continue
+        html = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                    errors="replace").read()
+        nav = re.search(r'<nav class="nav".*?</nav>', html, re.S)
+        if not nav:
+            bad.append(f"/{rel}/ has no nav")
+            continue
+        m = re.search(r'<a[^>]*href="([^"]+)"[^>]*>\s*Diesel', nav.group(0))
+        if not m:
+            bad.append(f"/{rel}/ nav has no Diesel link")
+        elif not m.group(1).startswith("/us-diesel"):
+            bad.append(f"/{rel}/ nav Diesel points at {m.group(1)}")
+    return bad
+
+
+def check_cross_border_sentence():
+    """No page compares a country to its own average.
+
+    /us/ read "Canada higher than the Canadian average of 189.9¢/L" — a sentence that
+    cannot be true. The gap word was written for the old continental homepage.
+    """
+    bad = []
+    pat = re.compile(
+        r"\b(Canada|Canadian|the US|United States)\b[^.]{0,80}?"
+        r"\b(higher|lower|above|below)\b[^.]{0,90}?"
+        r"\b(Canadian|US|United States|American)\s+(?:national\s+)?average",
+        re.I)
+    for dirpath, _dirs, files in os.walk(DOCS):
+        if "index.html" not in files:
+            continue
+        rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
+        if rel == ".":
+            rel = ""
+        is_us = rel == "us" or rel.startswith("us-diesel")
+        is_ca = rel == "ca" or rel.startswith("diesel-prices") or rel == "fuel-prices"
+        if not (is_us or is_ca):
+            continue
+        text = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                    errors="replace").read()
+        text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text))
+        for m in pat.finditer(text):
+            subj = m.group(1).lower().startswith(("us", "united"))
+            ref = m.group(3).lower().startswith(("us", "united", "american"))
+            if subj == ref and (is_us != subj):
+                bad.append(f"/{rel}/ compares a country to its own average: "
+                           f"{m.group(0)[:80]}")
+    return bad
+
+
 def check_country_trees():
     """The two trees exist, the chooser reaches both, and each tree is its own.
 
@@ -744,6 +859,10 @@ CHECKS = (
     ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("country trees are separate and reachable", check_country_trees),
+        ("tree lang matches the tree", check_tree_lang),
+        ("404 exists, noindex, offers both trees", check_404_page),
+        ("nav Diesel resolves in the reader tree", check_nav_per_tree),
+        ("no country compared to its own average", check_cross_border_sentence),
 )
 
 
