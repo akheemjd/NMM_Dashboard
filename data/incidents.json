@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102819",
+      "province": "BC",
+      "highway": {
+        "name": "Other Roads",
+        "from": "United Boulevard Onramp",
+        "direction": "S",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at United Boulevard Onramp, In Coquitlam and At Lougheed Hwy Eastbound. Left lane blocked. Watch for traffic control. Last update: September 25th, 2026 at 10:25am PDT. Next update: September 25th, 2026 at 11:00am PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.23626221,
+      "lng": -122.82111,
+      "start": "2026-09-25T10:25:35-07:00",
+      "end": "",
+      "updated": "2026-09-25T10:25:35-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-102762",
       "province": "BC",
       "highway": {
@@ -378,8 +399,8 @@
       "updated": "2026-08-24T08:51:41-07:00"
     }
   ],
-  "total": 18,
-  "updated": "2026-09-25T17:18:43.421411+00:00",
+  "total": 19,
+  "updated": "2026-09-25T17:27:30.799687+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
