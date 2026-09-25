@@ -164,6 +164,11 @@ def build_page(name, data):
     # methodology goes to /methodology/nmdi/ for permanent URL
     if name == "methodology":
         dir_name = "methodology/nmdi"
+    # The country homepages publish at /ca/ and /us/ — the template names carry a
+    # -home suffix only because "ca" and "us" would collide with nothing but read
+    # worse in the generator.
+    if name in ("ca-home", "us-home"):
+        dir_name = name[:-len("-home")]
     out_dir = os.path.join(DOCS, dir_name)
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "index.html")
@@ -245,6 +250,15 @@ def build_all():
     }
     page_data["index"] = {**page_data["index"], **chart_tokens}
     page_data["fuel-prices"] = {**page_data["fuel-prices"], **chart_tokens}
+
+    # The two country homepages. Both reuse the continental homepage's data, which
+    # already carries fuel, eia, fx, provinces and the districts, so neither can
+    # drift from the other in what it can say. ca-home renders the ten-year block and
+    # so needs the chart tokens; us-home deliberately has no such block, because EIA
+    # publishes no price history.
+    home = page_data["index"]
+    page_data["ca-home"] = {**home}
+    page_data["us-home"] = {**home}
 
     # Server-rendered SVG visuals (no JS). Colors come from CSS classes.
     fuel_data = page_data["fuel-prices"]

@@ -399,47 +399,58 @@ def check_us_state_pages():
 
 
 
-def check_home_both_countries():
-    """The homepage hero must present Canada and the US as peers.
+def check_country_trees():
+    """The two trees exist, the chooser reaches both, and each tree is its own.
 
-    The H1 promises both countries, so the figures under it must deliver both.
-    When only the Canadian index appeared — unlabelled, under a heading naming two
-    countries — the page read as Canadian. On a phone the whole fold said Canada.
+    This replaced a guard asserting that / carried both national figures. / is now
+    the chooser, so that assertion correctly failed and was retired rather than
+    loosened — a guard kept past the shape it described is worse than no guard.
 
-    Two assertions, both about structure rather than wording:
+    Four assertions:
 
-      * the hero figures block names both countries
-      * the Canadian index is not labelled as if it were universal
+      * /ca/ and /us/ exist
+      * the chooser at / links to both
+      * each country homepage leads in its own country's unit
+      * neither tree's homepage shows the other country's rail
+
+    The last one is the point of the split. If /ca/ rendered the districts rail and
+    /us/ rendered the provinces, the trees would be decoration.
     """
     bad = []
-    path = os.path.join(DOCS, "index.html")
-    if not os.path.exists(path):
-        return ["index.html is missing"]
-    h = open(path, encoding="utf-8", errors="replace").read()
+    home = os.path.join(DOCS, "index.html")
+    ca = os.path.join(DOCS, "ca", "index.html")
+    us = os.path.join(DOCS, "us", "index.html")
 
-    m = re.search(r'<div class="figures">(.*?)</div>\s*<p class="stand">', h, re.S)
-    if not m:
-        bad.append("homepage hero has no .figures block — the two national "
-                   "figures are what make the page continental")
-    else:
-        block = m.group(1)
-        if "Canada" not in block:
-            bad.append("hero figures block does not name Canada")
-        if not re.search(r"United States|\bUS\b", block):
-            bad.append("hero figures block does not name the United States — the "
-                       "H1 promises both countries")
+    for label, path in (("/", home), ("/ca/", ca), ("/us/", us)):
+        if not os.path.exists(path):
+            bad.append(f"{label} was not built")
+    if bad:
+        return bad
 
-    for label in ("National diesel", "national average, ten provinces"):
-        if label in h:
-            bad.append(f"Canadian index still labelled {label!r} — say Canada")
+    h = open(home, encoding="utf-8", errors="replace").read()
+    if not re.search(r'href="/ca/"', h):
+        bad.append("/ does not link to /ca/ — the chooser has to reach both trees")
+    if not re.search(r'href="/us/"', h):
+        bad.append("/ does not link to /us/")
 
-    # The citation names the index. A reader quoting this page should carry the
-    # country with it, or the figure circulates as if it were universal.
-    m = re.search(r'<q id="citation">(.*?)</q>', h, re.S)
-    if not m:
-        bad.append("homepage has no citation block")
-    elif "Canadian" not in m.group(1):
-        bad.append("citation does not name the index as Canadian")
+    ca_h = open(ca, encoding="utf-8", errors="replace").read()
+    us_h = open(us, encoding="utf-8", errors="replace").read()
+
+    cfig = re.search(r'<div class="figure">(.*?)</div>', ca_h, re.S)
+    ufig = re.search(r'<div class="figure">(.*?)</div>', us_h, re.S)
+    if not cfig:
+        bad.append("/ca/ has no hero figure")
+    elif 'data-u="cpl"' not in cfig.group(1):
+        bad.append("/ca/ hero does not lead in cents per litre")
+    if not ufig:
+        bad.append("/us/ has no hero figure")
+    elif 'data-u="gpg"' not in ufig.group(1):
+        bad.append("/us/ hero does not lead in US dollars per gallon")
+
+    if "us-diesel/district/" in ca_h:
+        bad.append("/ca/ renders the US districts — the trees are not separate")
+    if "/diesel-prices/" in us_h:
+        bad.append("/us/ renders the Canadian provinces — the trees are not separate")
 
     return bad
 
@@ -732,7 +743,7 @@ CHECKS = (
     ("canonical URLs resolve to built pages", check_canonical_targets_resolve),
     ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
-    ("homepage presents both countries as peers", check_home_both_countries),
+    ("country trees are separate and reachable", check_country_trees),
 )
 
 

@@ -43,10 +43,20 @@
   var rateAsOf = "";
   var currency = "CAD";
 
+  // Precedence: an explicit choice the reader made, then the page's own default,
+  // then CAD. A US carrier's first visit to /us/ must not open in Canadian dollars,
+  // and a returning reader who chose USD on a Canadian page keeps their choice.
+  var pageDefault = "CAD";
   try {
-    currency = localStorage.getItem(STORE) === "USD" ? "USD" : "CAD";
+    var tog = document.querySelector(".fxtog");
+    if (tog && tog.getAttribute("data-curdefault") === "USD") pageDefault = "USD";
+  } catch (e) {}
+
+  try {
+    var stored = localStorage.getItem(STORE);
+    currency = stored === "USD" ? "USD" : (stored === "CAD" ? "CAD" : pageDefault);
   } catch (e) {
-    currency = "CAD";
+    currency = pageDefault;
   }
 
   function litresPerGallon() {

@@ -3,7 +3,7 @@
 
 Two checks, both fatal:
   1. Every built page has a byte-identical header+nav+footer, ignoring only the
-     active-state markers a page legitimately varies (class="on", aria-current).
+     active-state markers a page legitimately varies (class="on"|is-on, aria-current).
   2. No built page references the retired stylesheet or script.
 
 This is what stops the dashboard drifting back into two visual systems. It is
@@ -52,6 +52,12 @@ def chrome(html):
         s = m.group(0)
         s = re.sub(r' class="on"', "", s)
         s = re.sub(r' aria-current="page"', "", s)
+        # The country switch marks its active option differently from the nav, and
+        # the currency toggle has no active class at all. Both are injected
+        # post-build and both legitimately vary per page.
+        s = re.sub(r' is-on', "", s)
+        s = re.sub(r' aria-current="true"', "", s)
+        s = re.sub(r'data-curdefault="(?:CAD|USD)"', 'data-curdefault="X"', s)
         s = re.sub(r'Updated \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC', "Updated <ts> UTC", s)
         parts.append(s)
     return hashlib.md5("".join(parts).encode()).hexdigest()

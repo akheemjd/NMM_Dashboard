@@ -592,3 +592,34 @@ aside.sp .c:hover { text-decoration: underline; }
   font-family: var(--data); font-size: .75rem; color: var(--muted); line-height: 1.45;
 }
 @media (max-width: 900px) { .railset { grid-template-columns: 1fr; } }
+
+/* The country chooser at /. Two cards, then the cross-border figures. */
+.pick { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 22px 0 18px; }
+.pickcard {
+  display: flex; flex-direction: column; gap: 6px; padding: 20px 20px 18px;
+  background: var(--raise); border: 1px solid var(--line); border-radius: 10px;
+  text-decoration: none; transition: border-color .15s, transform .15s;
+}
+.pickcard:hover { border-color: var(--signal); transform: translateY(-1px); }
+.pickcard .pflag { font-family: var(--data); font-size: .8125rem; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+.pickcard .pval { font-size: 2.25rem; line-height: 1.05; color: var(--ink); font-variant-numeric: tabular-nums; }
+.pickcard .pval em { font-style: normal; font-size: 1rem; color: var(--muted); margin-left: 6px; }
+.pickcard .pmeta { font-size: .8125rem; color: var(--muted); line-height: 1.45; }
+.pickcard .pgo { margin-top: 8px; font-weight: 600; color: var(--signal); }
+.stat .v .u2 { font-size: .875rem; color: var(--muted); margin-left: 4px; font-weight: 400; }
+@media (max-width: 640px) { .pick { grid-template-columns: 1fr; } }
+/* one rail when a country page shows only its own */
+.railset.one { grid-template-columns: 1fr; }
+
+/* Two injected controls now share the header with the brand. Below 640px the brand
+   mark was wrapping to two lines, which reads as broken rather than tight. The
+   class is .mark, not .brand — the first version of this rule targeted .brand and
+   silently did nothing. */
+.hd .wrap { flex-wrap: nowrap; }
+.hd .mark { white-space: nowrap; }
+@media (max-width: 640px) {
+  .hd .mark span { display: none; }          /* keep the mark, drop the tagline */
+  .hd .mark b { font-size: .9375rem; white-space: nowrap; }
+  .hd .seg-opt { padding: 5px 8px; font-size: .75rem; }
+  .hd .fxtog button { padding: 5px 8px; }
+}

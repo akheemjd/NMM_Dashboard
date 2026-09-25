@@ -63,8 +63,8 @@ def country_switch(active):
         cur = ' aria-current="true"' if on else ''
         return f'<a {cls}{cur} href="{href}">{label}</a>'
     return ('<div class="seg" role="group" aria-label="Country">'
-            + opt("/fuel-prices/", "Canada", active == "ca")
-            + opt("/us-diesel/", "US", active == "us")
+            + opt("/ca/", "Canada", active == "ca")
+            + opt("/us/", "US", active == "us")
             + '</div>')
 
 
@@ -163,8 +163,8 @@ def cite():
 """
 
 
-def rail():
-    """Two rails: Canadian provinces beside US districts.
+def rail(country="both"):
+    """Rails by country. "ca", "us", or "both".
 
     Each country keeps its own unit — ¢/L for Canada, $/gal for the US — and its own
     scale. Both are scales, and a bar's length only means something against the
@@ -176,20 +176,33 @@ def rail():
     the first .val matches one row, and the block boundary is not regex-findable
     because the rail holds nested divs.
     """
+    ca_rail = ca_part()
+    us_rail = us_part()
+    if country == "ca":
+        return '<div class="railset one">' + ca_rail + "</div>"
+    if country == "us":
+        return '<div class="railset one">' + us_rail + "</div>"
+    return '<div class="railset">' + ca_rail + us_rail + "</div>"
+
+
+def ca_part():
     return """
-    <div class="railset">
     <div class="rail ca">
       <div class="cap"><h3>Canada — diesel by province</h3><span class="sp">{{fuel.low_code}} <b>{{fuel.low}}</b> → {{fuel.high_code}} <b>{{fuel.high}}</b> · {{fuel.spread}}¢/L</span></div>
       <div class="mean-wrap"><span class="mean" style="left:{{fuel.national_pct}}%"><span class="lab">Index {{fuel.national_diesel}}</span></span></div>
       <!--LOOP:provinces--><a class="row" href="/diesel-prices/{{slug}}/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
       <p class="railnote">Ten provinces · colour shows the 7-day change · NRCan weekly survey</p>
     </div>
+"""
+
+
+def us_part():
+    return """
     <div class="rail us">
       <div class="cap"><h3>US — diesel by district</h3><span class="sp">{{us_low_code}} <b>{{us_low}}</b> → {{us_high_code}} <b>{{us_high}}</b> · ${{us_spread}}/gal</span></div>
       <div class="mean-wrap"><span class="mean" style="left:{{us_national_pct}}%"><span class="lab">US avg {{us_national}}</span></span></div>
       <!--LOOP:districts--><a class="row" href="/us-diesel/district/{{slug}}/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val us">{{price}}</span></a><!--/LOOP:districts-->
       <p class="railnote">Ten EIA districts, not states · EIA publishes no state-level diesel</p>
-    </div>
     </div>
 """
 
@@ -381,7 +394,7 @@ write("fuel-prices",
       "/fuel-prices/", "og-fuel.jpg", fuel_ld, "article")
  + '''
   <section class="hero">
-''' + country_switch("ca") + '''
+''' +  '''
     <span class="eyebrow">Ten provinces · NRCan weekly survey</span>
     <h1>Diesel prices by province</h1>
     <div class="figure"><span class="n">{{fuel.national_diesel}}</span><span class="u">¢/L national</span><span class="d {{fuel.change_7d_class}}">{{fuel.change_7d}} · 7d</span></div>
@@ -1432,7 +1445,7 @@ us_body = (
       "/us-diesel/", "og.jpg", US_LD, "article")
  + '''
   <section class="hero">
-''' + country_switch("us") + '''
+''' +  '''
     <span class="eyebrow">EIA weekly retail diesel survey · week {{eia.date}}</span>
     <h1>US diesel prices</h1>
     <div class="figure"><span class="n">{{eia.us_national_usd_gal}}</span><span class="u">$/gal</span><span class="d flat">{{eia.us_national_cpl}}¢/L CAD</span></div>
@@ -1477,7 +1490,7 @@ uspadd_body = (
       "/us-diesel/district/{{key_url}}/", "og.jpg", USPADD_LD, "article")
  + '''
   <section class="hero">
-''' + country_switch("us") + '''
+''' +  '''
     <span class="eyebrow">{{label}} · EIA week {{date}}</span>
     <h1>{{label}} diesel</h1>
     <div class="figure"><span class="n">{{usd_gal}}</span><span class="u">$/gal</span><span class="d {{vs_national_class}}">{{vs_national_usd}} vs US national</span></div>

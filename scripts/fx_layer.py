@@ -152,11 +152,30 @@ PATTERNS = [
 # Which native currency a bare "$" means on which page. A US state page quotes US
 # dollars; everything Canadian quotes Canadian. Mixed pages are resolved by the
 # unit-bearing patterns above, which never consult this.
+# rel comes from os.path.relpath, so it has NO trailing slash: the US hub is
+# "us-diesel", not "us-diesel/". Anchoring on a slash silently matches nothing.
 PAGE_CURRENCY = [
-    (re.compile(r"^us-diesel/"), "USD"),
-    (re.compile(r"^border-wait-times/all-ports"), "USD"),
-    (re.compile(r"^fuel-tax-rates/"), "USD"),   # IFTA US rows; provinces are CA
+    (re.compile(r"^us-diesel(/|$)"), "USD"),
+    (re.compile(r"^border-wait-times/all-ports(/|$)"), "USD"),
+    (re.compile(r"^fuel-tax-rates(/|$)"), "USD"),   # IFTA US rows; provinces are CA
 ]
+
+# The currency a page opens in for a first-time reader, as opposed to the source
+# currency of the figures on it (PAGE_CURRENCY above). A reader who has already
+# chosen keeps their choice — this is only the default.
+PAGE_DEFAULT = [
+    (re.compile(r"^us$"), "USD"),
+    (re.compile(r"^us-diesel(/|$)"), "USD"),
+    (re.compile(r"^fuel-tax-rates(/|$)"), "USD"),
+    (re.compile(r"^border-wait-times/all-ports(/|$)"), "USD"),
+]
+
+
+def page_default_currency(rel):
+    for pat, cur in PAGE_DEFAULT:
+        if pat.match(rel):
+            return cur
+    return "CAD"
 
 
 def page_currency(rel):
@@ -168,6 +187,7 @@ def page_currency(rel):
 
 TOGGLE = (
     '<div class="fxtog" role="group" aria-label="Display currency" '
+    'data-curdefault="{default}" '
     'title="Figures convert at the live Bank of Canada rate">'
     '<button type="button" data-cur="CAD" aria-pressed="true">CAD</button>'
     '<button type="button" data-cur="USD" aria-pressed="false">USD</button>'
@@ -214,13 +234,53 @@ def wrap_navlinks(html):
     )
 
 
-def add_toggle(html):
-    """Insert the currency toggle into the header and load fx.js. Idempotent."""
+CA_PATH = re.compile(r"^(ca$|ca/|diesel-prices(/|$)|fuel-prices(/|$))")
+US_PATH = re.compile(r"^(us$|us/|us-diesel(/|$))")
+
+
+def country_switch_html(rel):
+    """Canada / US switcher, with the active option taken from the page path."""
+    ca_on = bool(CA_PATH.match(rel))
+    us_on = bool(US_PATH.match(rel))
+
+    def opt(href, label, on):
+        cls = "seg-opt is-on" if on else "seg-opt"
+        cur = ' aria-current="true"' if on else ""
+        return f'<a class="{cls}"{cur} href="{href}">{label}</a>'
+
+    return ('<div class="seg" role="group" aria-label="Country">'
+            + opt("/ca/", "Canada", ca_on)
+            + opt("/us/", "US", us_on)
+            + "</div>")
+
+
+def add_country_switch(html, rel):
+    """Insert the switcher into the header, beside the currency toggle. Idempotent.
+
+    Same placement as the toggle: the header's space-between puts the pair flush
+    right with nothing to collide with. The nav scrolls horizontally and a sticky
+    child of a scroll container overlaps, which is why neither control lives there.
+    """
+    if 'aria-label="Country"' in html:
+        return html
+    if not HD_END.search(html):
+        return html
+    return HD_END.sub(lambda m: country_switch_html(rel) + m.group(1), html, count=1)
+
+
+def add_toggle(html, rel=""):
+    """Insert the currency toggle into the header and load fx.js. Idempotent.
+
+    rel decides the default currency the page opens in. A stored choice still wins —
+    this is only what a first-time reader sees.
+    """
     if 'class="fxtog"' in html:
         return html
 
+    toggle = TOGGLE.replace("{default}", page_default_currency(rel))
+
     if HD_END.search(html):
-        html = HD_END.sub(lambda m: TOGGLE + m.group(1), html, count=1)
+        html = HD_END.sub(lambda m: toggle + m.group(1), html, count=1)
     else:
         # No header to attach to: still ship the script so marked figures convert.
         pass
@@ -491,7 +551,8 @@ def main():
             html = open(path, encoding="utf-8").read()
             html, n = mark(html, rel)
             html = wrap_navlinks(html)
-            html = add_toggle(html)
+            html = add_country_switch(html, rel)
+            html = add_toggle(html, rel)
             open(path, "w", encoding="utf-8").write(html)
             pages += 1
             total += n
