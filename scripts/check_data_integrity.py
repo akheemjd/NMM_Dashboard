@@ -397,6 +397,52 @@ def check_us_state_pages():
     return bad
 
 
+
+
+def check_home_both_countries():
+    """The homepage hero must present Canada and the US as peers.
+
+    The H1 promises both countries, so the figures under it must deliver both.
+    When only the Canadian index appeared — unlabelled, under a heading naming two
+    countries — the page read as Canadian. On a phone the whole fold said Canada.
+
+    Two assertions, both about structure rather than wording:
+
+      * the hero figures block names both countries
+      * the Canadian index is not labelled as if it were universal
+    """
+    bad = []
+    path = os.path.join(DOCS, "index.html")
+    if not os.path.exists(path):
+        return ["index.html is missing"]
+    h = open(path, encoding="utf-8", errors="replace").read()
+
+    m = re.search(r'<div class="figures">(.*?)</div>\s*<p class="stand">', h, re.S)
+    if not m:
+        bad.append("homepage hero has no .figures block — the two national "
+                   "figures are what make the page continental")
+    else:
+        block = m.group(1)
+        if "Canada" not in block:
+            bad.append("hero figures block does not name Canada")
+        if not re.search(r"United States|\bUS\b", block):
+            bad.append("hero figures block does not name the United States — the "
+                       "H1 promises both countries")
+
+    for label in ("National diesel", "national average, ten provinces"):
+        if label in h:
+            bad.append(f"Canadian index still labelled {label!r} — say Canada")
+
+    # The citation names the index. A reader quoting this page should carry the
+    # country with it, or the figure circulates as if it were universal.
+    m = re.search(r'<q id="citation">(.*?)</q>', h, re.S)
+    if not m:
+        bad.append("homepage has no citation block")
+    elif "Canadian" not in m.group(1):
+        bad.append("citation does not name the index as Canadian")
+
+    return bad
+
 def check_brand_identity():
     """The brand must describe the same geography the data covers.
 
@@ -515,6 +561,7 @@ CHECKS = (
     ("sitemap is well-formed, complete and honestly dated", check_sitemap),
     ("us state pages attribute diesel to a district", check_us_state_pages),
     ("brand identity matches the data geography", check_brand_identity),
+    ("homepage presents both countries as peers", check_home_both_countries),
 )
 
 
