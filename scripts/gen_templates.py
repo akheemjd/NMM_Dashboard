@@ -299,7 +299,7 @@ write("index",
       </div>
       <div class="fg">
         <span class="cn">United States</span>
-        <div class="figure"><span class="n">{{eia.us_national_cpl}}</span><span class="u">¢/L</span><span class="d {{eia.us_change_7d_class}}">{{eia.us_change_7d}} · 7d</span></div>
+        <div class="figure"><span class="n">{{eia.us_national_usd_gal}}</span><span class="u">$/gal</span><span class="d {{eia.us_change_7d_class}}">{{eia.us_change_7d}} · 7d</span></div>
         <span class="fsrc">EIA weekly retail survey · priced in USD per gallon · ten districts, not states</span>
       </div>
     </div>
@@ -311,7 +311,7 @@ write("index",
       <a class="stat" href="/fuel-prices/"><div class="l">Dearest</div><div class="v up">{{fuel.high}}</div><div class="s">{{fuel.high_code}} · ¢/L</div></a>
       <a class="stat" href="/fuel-prices/"><div class="l">Spread</div><div class="v">{{fuel.spread}}</div><div class="s">{{fuel.low_code}} to {{fuel.high_code}} spread · ¢/L</div></a>
       <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · BoC</div></a>
-      <a class="stat" href="/fuel-prices/"><div class="l">US diesel</div><div class="v">{{eia.us_national_cpl}}</div><div class="s">¢/L · ${{eia.us_national_usd_gal}}/gal</div></a>
+      <a class="stat" href="/fuel-prices/"><div class="l">US diesel</div><div class="v">{{eia.us_national_usd_gal}}</div><div class="s">$/gal · ten districts, not states</div></a>
       <a class="stat" href="/methodology/nmdi/"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></a>
     </div>
   </section>

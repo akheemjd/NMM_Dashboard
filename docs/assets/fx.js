@@ -55,42 +55,32 @@
 
   /* Convert a native value into the display currency. Returns a number. */
   function convert(value, fromCurrency, unit, toCurrency) {
+    // CURRENCY ONLY. A Canadian figure stays per litre and a US figure stays per
+    // gallon; converting the unit as well would state a price nobody pays.
     var v = Number(value);
     if (!isFinite(v) || !rate) return null;
-
     if (fromCurrency === toCurrency) return v;
-
-    if (fromCurrency === "CAD" && toCurrency === "USD") {
-      if (unit === "cpl") return v / 100 / rate * litresPerGallon(); // ¢/L -> $/gal
-      if (unit === "lpg") return v / rate * litresPerGallon();       // $/L -> $/gal
-      return v / rate;                                               // plain CAD -> USD
-    }
-    if (fromCurrency === "USD" && toCurrency === "CAD") {
-      if (unit === "gpg") return v * rate / litresPerGallon() * 100; // $/gal -> ¢/L
-      if (unit === "lpg") return v * rate / litresPerGallon();       // $/gal -> $/L
-      return v * rate;                                               // plain USD -> CAD
-    }
+    if (fromCurrency === "CAD" && toCurrency === "USD") return v / rate;
+    if (fromCurrency === "USD" && toCurrency === "CAD") return v * rate;
     return v;
   }
 
-  /* The unit label for a figure in the display currency. */
+  /* The unit label. The dimension is fixed by the figure's country; only the
+     currency symbol follows the toggle. */
   function unitLabel(fromCurrency, unit, toCurrency) {
-    if (fromCurrency === toCurrency) {
-      return { cpl: "¢/L", gpg: "$/gal", lpg: "$/L", cad: "", usd: "", p4: "", plain: "" }[unit] || "";
-    }
-    if (fromCurrency === "CAD" && toCurrency === "USD") {
-      return { cpl: "$/gal", lpg: "$/gal", cad: "", usd: "", p4: "", plain: "" }[unit] || "";
-    }
-    if (fromCurrency === "USD" && toCurrency === "CAD") {
-      return { gpg: "¢/L", lpg: "$/L", cad: "", usd: "", p4: "", plain: "" }[unit] || "";
-    }
-    return "";
+    var usd = toCurrency === "USD";
+    if (unit === "cpl") return "¢/L";                  // Canadian: litres, always
+    if (unit === "lpg") return usd ? "$/L" : "C$/L";    // dollars per litre
+    // US: gallons, always. "C$" because a bare $/gal conventionally reads as USD.
+    if (unit === "gpg") return usd ? "$/gal" : "C$/gal";
+    return "";                                           // p4 / plain: symbol on the value
   }
 
   function decimalsFor(fromCurrency, unit, toCurrency) {
-    var label = unitLabel(fromCurrency, unit, toCurrency);
-    if (label === "¢/L") return 1;
-    if (label === "$/gal") return 3;
+    // Follows the UNIT, not the label, so it no longer depends on which currency
+    // is selected. ¢/L is quoted to one decimal and $/gal to three.
+    if (unit === "cpl") return 1;
+    if (unit === "gpg") return 3;
     // Statutory fuel tax rates are published to four decimals and a two-decimal
     // render turns California's $0.4820 into C$0.68, losing the precision the
     // figure is quoted at.
@@ -102,10 +92,14 @@
     var label = unitLabel(fromCurrency, unit, toCurrency);
     var dp = decimalsFor(fromCurrency, unit, toCurrency);
     var n = value.toLocaleString("en-CA", { minimumFractionDigits: dp, maximumFractionDigits: dp });
-    // The dollar sign belongs to the unit label when there is one. Prefixing
-    // another rendered "$7.278 $/gal".
-    if (label) return label.charAt(0) === "$" ? "$" + n + "/" + label.slice(2) : n + label;
-    return (toCurrency === "USD" ? "US$" : "C$") + n;
+
+    // A label that carries a currency symbol puts the number after it, because
+    // "$ /gal" means "$6.529/gal" — not "6.529$/gal". "C$" is two characters, so
+    // slicing on the first one produced "9.229C$/gal".
+    if (label.indexOf("C$") === 0) return "C$" + n + label.slice(2);
+    if (label.charAt(0) === "$") return "$" + n + label.slice(1);
+    if (label) return n + label;                       // ¢/L, or a per-litre label
+    return (toCurrency === "USD" ? "US$" : "C$") + n;  // plain dollar amounts
   }
 
   function renderOptions() {

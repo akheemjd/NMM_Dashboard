@@ -63,7 +63,10 @@ ALREADY = re.compile(r'<span class="fx"', re.I)
 OPTION = re.compile(r'<option\b([^>]*)>([^<]*)</option>', re.I)
 OPT_MONEY = re.compile(r'(\d+(?:\.\d+)?)\s*¢/L|\$(\d+\.\d{3})\s*/?\s*gal|\$(\d+\.\d{4})')
 FX_OPEN_TAG = re.compile(r'<span class="fx"[^>]*>', re.I)
-FX_ANY_OPEN = re.compile(r'<span class="fx"[^>]*>', re.I)
+# Matches both the value marker (.fx) and the unit marker (.fxu). Unwrapping only
+# the value left a nested unit marker that hid the unit from mark_pairs, so the
+# value was never re-marked on a rebuild that followed a build.
+FX_ANY_OPEN = re.compile(r'<span class="fx[^"]*"[^>]*>', re.I)
 
 
 # <head> is skipped whole. A <title> is a plain text node containing a real
@@ -94,14 +97,14 @@ def reset(html):
     for every money field, with nothing in the page to show why. mark() had this
     guard; reset() did not.
     """
-    if '<span class="fx"' not in html:
+    if 'class="fx' not in html:
         return html
 
     parts = SKIP_REGION.split(html)
     for i, seg in enumerate(parts):
         if i % 2 == 1:          # a script / style / comment region
             continue
-        if '<span class="fx"' not in seg:
+        if 'class="fx' not in seg:
             continue
         out = []
         depth = 0
@@ -243,17 +246,23 @@ UNIT_TOKEN = re.compile(r"(" + chr(0xa2) + "/L|\$/gal)")
 
 
 def mark_unit(unit_text):
-    """Wrap the unit token so fx.js can swap it. Returns the text unchanged
-    when it names no unit."""
+    """Wrap a unit token whose LABEL changes with the currency.
+
+    Only per-gallon labels change, and only by their currency prefix. A ¢/L
+    label is correct in both currencies and is returned untouched — marking it
+    would flip litres to gallons on toggle, which is what the currency model
+    deliberately no longer does.
+    """
+    usd = "$/gal"
+    cad = "C" + usd
+
     def one(m):
         tok = m.group(1)
-        cad = "¢/L"
-        usd = "$/gal"
-        both = (cad + "|" + usd) if tok == cad else (usd + "|" + cad)
-        return ('<span class="fxu" data-u="' + both + '">' + tok + '</span>')
+        if tok != usd:
+            return tok          # ¢/L, or a bare ¢ — the dimension never moves
+        return ('<span class="fxu" data-u="' + cad + "|" + usd + '">' + tok + "</span>")
+
     return UNIT_TOKEN.sub(one, unit_text)
-
-
 def mark_pairs(html, cur_default):
     """Mark number/unit pairs. Skipped by the later text pass, which sees the
     inserted marker as the preceding tag.
@@ -277,6 +286,45 @@ def mark_pairs(html, cur_default):
                  f'data-v="{num}">{num}</span>')
         return open_v + inner + mid + mark_unit(unit)
     return PAIR.sub(one, html)
+
+
+RAIL_VAL = re.compile(
+    r'(<span class="val[^"]*"[^>]*>)(\d+(?:\.\d+)?)(</span>)'
+)
+RAIL_MEAN = re.compile(
+    r'(<span class="lab">Index\s+)(\d+(?:\.\d+)?)(</span>)'
+)
+# The rail heading's two endpoints: AB <b>251.8</b> -> QC <b>294.3</b>
+RAIL_CAP = re.compile(
+    r'(<span class="sp">.*?)(<b>)(\d+(?:\.\d+)?)(</b>)'
+)
+BARE_CENTS = re.compile(r'(?<![\w.])(\d+(?:\.\d+)?)\u00a2(?!/L)')
+
+
+def mark_block_figures(html, cur_default):
+    """Figures whose unit is implied by the block they sit in.
+
+    These carry no unit text and no .v/.s sibling, so neither the text pass nor
+    mark_pairs can see them. In the Canadian provinces rail and the ten-year
+    series the unit is unambiguous: cents per litre.
+    """
+    def bare(num):
+        return (f'<span class="fx" data-c="{cur_default}" data-u="cpl" '
+                f'data-bare="1" data-v="{num}">{num}</span>')
+
+    html = RAIL_VAL.sub(lambda m: m.group(1) + bare(m.group(2)) + m.group(3), html)
+    html = RAIL_MEAN.sub(lambda m: m.group(1) + bare(m.group(2)) + m.group(3), html)
+    # Two endpoints in one span, so sub repeatedly rather than once.
+    for _ in range(4):
+        new_html, n = RAIL_CAP.subn(
+            lambda m: m.group(1) + m.group(2) + bare(m.group(3)) + m.group(4), html, count=1
+        )
+        if not n:
+            break
+        html = new_html
+    # A bare cents figure: mark the number, leave the symbol in place. In USD the
+    # value converts and the symbol stays — cents per litre, in USD.
+    return BARE_CENTS.sub(lambda m: bare(m.group(1)) + "\u00a2", html)
 
 
 def annotate_options(seg, cur_default):
@@ -312,6 +360,7 @@ def mark(html, rel):
     # they are annotated with attributes and left as plain text.
     html = annotate_options(html, cur_default)
     html = mark_pairs(html, cur_default)
+    html = mark_block_figures(html, cur_default)
     parts = SKIP.split(html)
     out = []
     n = 0

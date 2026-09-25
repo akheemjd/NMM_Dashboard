@@ -223,6 +223,11 @@ def build_all():
     def _cent(v):
         return (f"{v}\u00a2" if isinstance(v, (int, float)) else "")
 
+    def _num(v):
+        # Bare value for data-v. The display token carries a trailing symbol, and
+        # data-v must be a number the currency layer can parse.
+        return (str(v) if isinstance(v, (int, float)) else "")
+
     chart_tokens = {
         "chart_data_json": chart_data_json,
         "chart_range_label": chart_range_label,
@@ -233,6 +238,10 @@ def build_all():
         "chart_low_date": chart_meta.get("low_date") or "",
         "chart_high": _cent(chart_meta.get("max")),
         "chart_high_date": chart_meta.get("high_date") or "",
+        "chart_latest_v": _num(chart_meta.get("latest")),
+        "chart_avg_v": _num(chart_meta.get("avg")),
+        "chart_low_v": _num(chart_meta.get("min")),
+        "chart_high_v": _num(chart_meta.get("max")),
     }
     page_data["index"] = {**page_data["index"], **chart_tokens}
     page_data["fuel-prices"] = {**page_data["fuel-prices"], **chart_tokens}
