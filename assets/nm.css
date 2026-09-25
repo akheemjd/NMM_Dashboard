@@ -583,3 +583,12 @@ aside.sp .c:hover { text-decoration: underline; }
 @media (max-width: 560px) {
   .fxtog button { padding: 8px 10px; min-height: 34px; }
 }
+
+/* Two rails: Canadian provinces beside US districts. Each keeps its own unit and
+   its own scale, so neither is restated in the other country's unit. */
+.railset { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.rail .railnote {
+  margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line);
+  font-family: var(--data); font-size: .75rem; color: var(--muted); line-height: 1.45;
+}
+@media (max-width: 900px) { .railset { grid-template-columns: 1fr; } }

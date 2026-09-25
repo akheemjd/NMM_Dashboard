@@ -443,6 +443,52 @@ def check_home_both_countries():
 
     return bad
 
+def check_fx_rate_agrees():
+    """The browser rate and the displayed rate must be the same number.
+
+    docs/assets/fx.json drives client-side conversion; data/fx.norm.json drives
+    every rate printed on the page. They are produced in different steps, so they
+    can drift — and a drift of a few points silently misstates every converted
+    figure without changing a single label.
+    """
+    bad = []
+    published = os.path.join(DOCS, "assets", "fx.json")
+    source = os.path.join(DATA, "fx.norm.json")
+
+    if not os.path.exists(published):
+        return ["docs/assets/fx.json is missing — the toggle would disable itself"]
+
+    try:
+        pub = json.load(open(published, encoding="utf-8")).get("usd_cad")
+    except Exception as exc:
+        return [f"docs/assets/fx.json is unreadable: {exc}"]
+
+    try:
+        src = (json.load(open(source, encoding="utf-8")).get("fx") or {}).get("usd_cad")
+    except Exception as exc:
+        return [f"data/fx.norm.json is unreadable: {exc}"]
+
+    try:
+        if pub is None or src is None or abs(float(pub) - float(src)) > 1e-6:
+            bad.append(f"toggle converts at {pub} but the page displays {src} — "
+                       f"every converted figure is wrong by "
+                       f"{abs((float(pub or 0) / float(src or 1) - 1) * 100):.2f}%")
+    except (TypeError, ValueError):
+        bad.append(f"rate values are not numeric: published={pub!r} source={src!r}")
+
+    # and the published rate must not be stale relative to the source observation
+    try:
+        pub_as_of = json.load(open(published, encoding="utf-8")).get("as_of")
+        src_obs = (json.load(open(source, encoding="utf-8")).get("fx") or {}).get("obs_date")
+        if pub_as_of and src_obs and str(pub_as_of)[:10] != str(src_obs)[:10]:
+            bad.append(f"published rate is dated {pub_as_of} but the source "
+                       f"observation is {src_obs} — a stale artifact is being served")
+    except Exception:
+        pass
+
+    return bad
+
+
 def check_brand_identity():
     """The brand must describe the same geography the data covers.
 
@@ -561,6 +607,7 @@ CHECKS = (
     ("sitemap is well-formed, complete and honestly dated", check_sitemap),
     ("us state pages attribute diesel to a district", check_us_state_pages),
     ("brand identity matches the data geography", check_brand_identity),
+    ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("homepage presents both countries as peers", check_home_both_countries),
 )
 

@@ -288,16 +288,30 @@ def mark_pairs(html, cur_default):
     return PAIR.sub(one, html)
 
 
+# Canadian rail rows: class="val", "val up" or "val down". Deliberately NOT
+# "val us" — that is the US rail and it is dollars per gallon, matched below.
 RAIL_VAL = re.compile(
-    r'(<span class="val[^"]*"[^>]*>)(\d+(?:\.\d+)?)(</span>)'
+    r'(<span class="val(?: (?:up|down))?"[^>]*>)(\d+(?:\.\d+)?)(</span>)'
 )
+RAIL_VAL_US = re.compile(
+    r'(<span class="val us"[^>]*>)(\d+(?:\.\d+)?)(</span>)'
+)
+# Canadian mean marker: "Index 268.5" — cents per litre.
 RAIL_MEAN = re.compile(
     r'(<span class="lab">Index\s+)(\d+(?:\.\d+)?)(</span>)'
 )
-# The rail heading's two endpoints: AB <b>251.8</b> -> QC <b>294.3</b>
-RAIL_CAP = re.compile(
-    r'(<span class="sp">.*?)(<b>)(\d+(?:\.\d+)?)(</b>)'
+# US mean marker: "US avg 6.529" — dollars per gallon. It looked like the Canadian
+# one but the label word differs, so it went unmarked and stayed in USD while the
+# rows beneath it converted.
+RAIL_MEAN_US = re.compile(
+    r'(<span class="lab">US avg\s+)(\d+(?:\.\d+)?)(</span>)'
 )
+# The rail heading's two endpoints. Both rails use an identical .sp, so the unit is
+# read from the caption's own trailing token: the Canadian cap ends ¢/L and the US
+# cap ends $/gal. Assuming cpl rendered the US heading as 6.1 and 8.2 while its
+# rows showed 8.678 and 11.657.
+RAIL_CAP = re.compile(r'<span class="sp">(.*?)</span>', re.S)
+CAP_ENDPOINT = re.compile(r'(<b>)(\d+(?:\.\d+)?)(</b>)')
 BARE_CENTS = re.compile(r'(?<![\w.])(\d+(?:\.\d+)?)\u00a2(?!/L)')
 
 
@@ -312,16 +326,29 @@ def mark_block_figures(html, cur_default):
         return (f'<span class="fx" data-c="{cur_default}" data-u="cpl" '
                 f'data-bare="1" data-v="{num}">{num}</span>')
 
+    def bare_us(num):
+        # EIA publishes dollars per gallon natively, so the source currency is USD
+        # and the unit stays a gallon whichever currency is on display.
+        return (f'<span class="fx" data-c="USD" data-u="gpg" '
+                f'data-bare="1" data-v="{num}">{num}</span>')
+
+    # US rows first. RAIL_VAL's pattern cannot match "val us", so order does not
+    # matter for correctness — but running the narrower rule first keeps that
+    # obvious to whoever edits this next.
+    html = RAIL_VAL_US.sub(lambda m: m.group(1) + bare_us(m.group(2)) + m.group(3), html)
     html = RAIL_VAL.sub(lambda m: m.group(1) + bare(m.group(2)) + m.group(3), html)
     html = RAIL_MEAN.sub(lambda m: m.group(1) + bare(m.group(2)) + m.group(3), html)
-    # Two endpoints in one span, so sub repeatedly rather than once.
-    for _ in range(4):
-        new_html, n = RAIL_CAP.subn(
-            lambda m: m.group(1) + m.group(2) + bare(m.group(3)) + m.group(4), html, count=1
-        )
-        if not n:
-            break
-        html = new_html
+    html = RAIL_MEAN_US.sub(lambda m: m.group(1) + bare_us(m.group(2)) + m.group(3), html)
+    # Each rail's heading carries the unit in its own trailing token, so the two
+    # endpoints are marked in whichever unit that caption declares.
+    def _cap(m):
+        inner = m.group(1)
+        fn = bare_us if "/gal" in inner else bare
+        return '<span class="sp">' + CAP_ENDPOINT.sub(
+            lambda e: e.group(1) + fn(e.group(2)) + e.group(3), inner
+        ) + "</span>"
+
+    html = RAIL_CAP.sub(_cap, html)
     # A bare cents figure: mark the number, leave the symbol in place. In USD the
     # value converts and the symbol stays — cents per litre, in USD.
     return BARE_CENTS.sub(lambda m: bare(m.group(1)) + "\u00a2", html)

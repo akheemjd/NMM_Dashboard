@@ -436,6 +436,69 @@ else:
         "source": "",
     }
 
+# ===== US DISTRICTS — the US half of the rail =====
+DISTRICT_CODES = {
+    "east_coast": "EC",
+    "new_england": "NE",
+    # "CAtl"/"LAtl", not "CA"/"LA": CA reads as California on a page that also
+    # lists California, and LA reads as Los Angeles.
+    "central_atlantic": "CAtl",
+    "lower_atlantic": "LAtl",
+    "midwest": "MW",
+    "gulf_coast": "GC",
+    "rocky_mountain": "RM",
+    "west_coast": "WC",
+    "california": "Cal",
+    "west_coast_ex_california": "WCx",
+}
+
+_us_vals = sorted((eia.get("padds_usd_gal") or {}).items(), key=lambda kv: kv[1])     if isinstance(eia.get("padds_usd_gal"), dict) else []
+
+districts_data = []
+if _us_vals:
+    _us_lo, _us_hi = _us_vals[0][1], _us_vals[-1][1]
+    _us_span = (_us_hi - _us_lo) or 1
+    for _i, (_k, _v) in enumerate(_us_vals):
+        districts_data.append({
+            "code": DISTRICT_CODES.get(_k, _k[:3].upper()),
+            "name": _district_labels.get(_k) or _PADD_LABELS.get(_k)
+                    or _k.replace("_", " ").title(),
+            "slug": _k.replace("_", "-"),
+            # 3 decimals: EIA publishes dollars per gallon to three, and a
+            # two-decimal render turns 6.139 into 6.14 and loses the tie between
+            # Lower Atlantic and Gulf Coast.
+            "price": f"{_v:.3f}",
+            "pct": round(min(max((_v - _us_lo) / _us_span * 100, 0), 100), 1),
+            "rowclass": "lo" if _i == 0 else "hi" if _i == len(_us_vals) - 1 else "",
+        })
+
+_us_nat = eia.get("us_national_usd_gal")
+_us_nat_ok = isinstance(_us_nat, (int, float)) or (
+    isinstance(_us_nat, str) and _us_nat not in ("", "n/a"))
+
+def _usf(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+_us_nat_f = _usf(_us_nat)
+districts_meta = {
+    "us_low_code": districts_data[0]["code"] if districts_data else "n/a",
+    "us_low": districts_data[0]["price"] if districts_data else "n/a",
+    "us_high_code": districts_data[-1]["code"] if districts_data else "n/a",
+    "us_high": districts_data[-1]["price"] if districts_data else "n/a",
+    "us_spread": (f"{_us_vals[-1][1] - _us_vals[0][1]:.3f}" if _us_vals else "n/a"),
+    "us_national": f"{_us_nat_f:.3f}" if _us_nat_f is not None else "n/a",
+    "us_national_pct": (round(min(max((_us_nat_f - _us_vals[0][1])
+                                     / ((_us_vals[-1][1] - _us_vals[0][1]) or 1) * 100,
+                                     0), 100), 1)
+                        if _us_nat_f is not None and _us_vals else 50.0),
+    "us_as_of": eia.get("date") or "",
+    "us_source": "EIA weekly retail diesel survey",
+    "districts": districts_data,
+}
+
 # US + NADI weekly deltas — "n/a" until 2+ weekly points exist (never a
 # fabricated zero; span_days < 7 means the series hasn't accrued a week yet).
 _eia_span = span_days("eia", "national")
@@ -588,6 +651,7 @@ home = {
     "border": border,
     "fuel": fuel,
     "provinces": provinces_data,
+    **districts_meta,
     "fx": fx,
     "incidents": incidents,
     "border_rows": border_rows,
@@ -714,7 +778,7 @@ write("market.norm", {
 })
 write("news.norm", {"news": news, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 
-write("fuel.norm", {"fuel": fuel, "fx": fx, "eia": eia, "provinces": provinces_data, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
+write("fuel.norm", {"fuel": fuel, "fx": fx, "eia": eia, "provinces": provinces_data, **districts_meta, "updated_at": ts, "updated_iso": ts_iso, "build_version": build_version})
 
 # Snapshots — idempotent, per calendar day.
 # Diesel is keyed to the NRCan print date (not the build date) so the

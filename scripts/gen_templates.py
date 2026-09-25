@@ -164,11 +164,32 @@ def cite():
 
 
 def rail():
+    """Two rails: Canadian provinces beside US districts.
+
+    Each country keeps its own unit — ¢/L for Canada, $/gal for the US — and its own
+    scale. Both are scales, and a bar's length only means something against the
+    other bars on the same axis, so combining them would mean restating the US in
+    the unit nobody there uses.
+
+    US rows carry class "val us" so the currency layer converts them as dollars per
+    gallon. Marked per row rather than by the enclosing block: a lazy scan up to
+    the first .val matches one row, and the block boundary is not regex-findable
+    because the rail holds nested divs.
+    """
     return """
-    <div class="rail">
-      <div class="cap"><h3>Canadian diesel by province</h3><span class="sp">{{fuel.low_code}} <b>{{fuel.low}}</b> → {{fuel.high_code}} <b>{{fuel.high}}</b> · {{fuel.spread}}¢/L</span></div>
+    <div class="railset">
+    <div class="rail ca">
+      <div class="cap"><h3>Canada — diesel by province</h3><span class="sp">{{fuel.low_code}} <b>{{fuel.low}}</b> → {{fuel.high_code}} <b>{{fuel.high}}</b> · {{fuel.spread}}¢/L</span></div>
       <div class="mean-wrap"><span class="mean" style="left:{{fuel.national_pct}}%"><span class="lab">Index {{fuel.national_diesel}}</span></span></div>
       <!--LOOP:provinces--><a class="row" href="/diesel-prices/{{slug}}/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val {{change_class}}">{{price}}</span></a><!--/LOOP:provinces-->
+      <p class="railnote">Ten provinces · colour shows the 7-day change · NRCan weekly survey</p>
+    </div>
+    <div class="rail us">
+      <div class="cap"><h3>US — diesel by district</h3><span class="sp">{{us_low_code}} <b>{{us_low}}</b> → {{us_high_code}} <b>{{us_high}}</b> · ${{us_spread}}/gal</span></div>
+      <div class="mean-wrap"><span class="mean" style="left:{{us_national_pct}}%"><span class="lab">US avg {{us_national}}</span></span></div>
+      <!--LOOP:districts--><a class="row" href="/us-diesel/district/{{slug}}/"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val us">{{price}}</span></a><!--/LOOP:districts-->
+      <p class="railnote">Ten EIA districts, not states · EIA publishes no state-level diesel</p>
+    </div>
     </div>
 """
 
