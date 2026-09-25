@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102788",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 99",
+        "from": "Highway 99",
+        "direction": "N",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Vehicle incident at Highway 99, 1km North of Copper Drive. Right lane blocked. Last update: September 24th, 2026 at 8:44pm PDT. Next update: September 24th, 2026 at 9:00pm PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.63287139,
+      "lng": -123.20906156,
+      "start": "2026-09-24T19:27:38-07:00",
+      "end": "",
+      "updated": "2026-09-24T20:44:21-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-102762",
       "province": "BC",
       "highway": {
@@ -378,8 +399,8 @@
       "updated": "2026-08-24T08:51:41-07:00"
     }
   ],
-  "total": 18,
-  "updated": "2026-09-25T03:21:23.726303+00:00",
+  "total": 19,
+  "updated": "2026-09-25T03:52:23.534527+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
