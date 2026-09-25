@@ -129,8 +129,8 @@ write(
     '{{fuel.spread}}</div><div class="s">{{fuel.low_code}} to {{fuel.high_code}} spread · ¢/L</div></a>\n'
     # nofx: a count of jurisdictions is not a price. Without this the layer marked
     # it and the renderer produced "51.000" beside "states and DC".
-    '      <!--nofx--><a class="stat" href="/fuel-tax-rates/"><div class="l">Fuel tax</div><div class="v">58</div>'
-    '<div class="s">IFTA jurisdictions, each setting its own</div></a><!--/nofx-->\n'
+    '      <a class="stat" href="/fuel-tax-rates/"><div class="l">Fuel tax</div><div class="v">58</div>'
+    '<div class="s">IFTA jurisdictions, each setting its own</div></a>\n'
     '      <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">'
     '{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · BoC</div></a>\n'
     '      <a class="stat" href="/us/"><div class="l">US diesel</div><div class="v">'
@@ -209,10 +209,9 @@ write(
     '{{us_high}}</div><div class="s">{{us_high_code}} · $/gal</div></a>\n'
     '      <a class="stat" href="/us-diesel/"><div class="l">Spread</div><div class="v">'
     '{{us_spread}}</div><div class="s">{{us_low_code}} to {{us_high_code}} spread · $/gal</div></a>\n'
-    # nofx: a count of jurisdictions is not a price. Without it the currency
     # layer marked this 51 as dollars per gallon and the page rendered 51.000.
-    '      <!--nofx--><a class="stat" href="/us-diesel/states/"><div class="l">State fuel tax</div>'
-    '<div class="v">51</div><div class="s">states and DC, each setting its own on top of the federal rate</div></a><!--/nofx-->\n'
+    '      <a class="stat" href="/us-diesel/states/"><div class="l">State fuel tax</div>'
+    '<div class="v">51</div><div class="s">states and DC, each setting its own on top of the federal rate</div></a>\n'
     '      <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">'
     '{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · BoC</div></a>\n'
     '      <a class="stat" href="/ca/"><div class="l">Canadian diesel</div><div class="v">'
