@@ -489,6 +489,128 @@ def check_fx_rate_agrees():
     return bad
 
 
+def check_us_pages_lead_in_gallons():
+    """US-facing pages must present US prices per gallon.
+
+    A US price is dollars per gallon. Leading with the CAD per-litre conversion is
+    what made the homepage read as Canadian; the same pattern survived on the US
+    hub, the district pages and the fuel tax page long after the homepage was
+    fixed, because the fix was applied where the complaint pointed.
+    """
+    bad = []
+    # headline figures that must be per-gallon
+    targets = []
+    hub = os.path.join(DOCS, "us-diesel", "index.html")
+    if os.path.exists(hub):
+        targets.append(("us-diesel/", hub))
+    district_root = os.path.join(DOCS, "us-diesel", "district")
+    if os.path.isdir(district_root):
+        for d in sorted(os.listdir(district_root)):
+            f = os.path.join(district_root, d, "index.html")
+            if os.path.exists(f):
+                targets.append((f"us-diesel/district/{d}/", f))
+
+    for rel, path in targets:
+        h = open(path, encoding="utf-8", errors="replace").read()
+        # the hero figure block
+        m = re.search(r'<div class="figure">(.*?)</div>', h, re.S)
+        if not m:
+            bad.append(f"{rel}: no hero figure block")
+            continue
+        block = m.group(1)
+        units = re.findall(r'data-u="(\w+)"', block)
+        if not units:
+            bad.append(f"{rel}: hero figure carries no unit marker")
+            continue
+        if units[0] != "gpg":
+            bad.append(f"{rel}: hero leads with unit {units[0]!r}, not gpg — a US "
+                       f"price must lead in dollars per gallon")
+
+    # the fuel tax page must not call a per-gallon rate per-litre
+    ftax = os.path.join(DOCS, "fuel-tax-rates", "index.html")
+    if os.path.exists(ftax):
+        h = open(ftax, encoding="utf-8", errors="replace").read()
+        # inside a rate row, "US-lic" must be preceded by a per-gallon unit
+        for m in re.finditer(r'<span class="v">(.*?)</span></div>', h, re.S):
+            row = re.sub(r"<[^>]+>", "", m.group(1))
+            if "US-lic" not in row:
+                continue
+            if "/gal" not in row:
+                bad.append(f"fuel-tax-rates/: a US-licence rate row has no per-gallon "
+                           f"unit: {row[:70]!r}")
+                break
+            if re.search(r"\d[^·]*¢/L[^·]*US-lic", row):
+                bad.append(f"fuel-tax-rates/: a US-licence rate is labelled per-litre: "
+                           f"{row[:70]!r}")
+                break
+
+    return bad
+
+
+def check_canonical_targets_resolve():
+    """Every canonical must be the page's own URL, and must resolve.
+
+    The shape of the bug: the district pages moved to /us-diesel/district/<slug>/,
+    but their <link rel=canonical> kept the old /us-diesel/<slug>/ path. For
+    California that path is the STATE page — a different page with different
+    content — so ten pages told search engines the authoritative copy was elsewhere.
+
+    check_links.py passed throughout, because it follows <a href> and a canonical is
+    a <link>.
+
+    Both halves matter: a canonical that does not resolve is a dead assertion, and
+    one that resolves to a DIFFERENT page is an active de-indexing instruction. An
+    existence check alone passes the second case, which is the one that happened.
+    """
+    bad = []
+    checked = 0
+    for dirpath, _, files in os.walk(DOCS):
+        if "index.html" not in files:
+            continue
+        h = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                 errors="replace").read()
+        rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
+        if rel == ".":
+            rel = ""
+        own = "https://dashboard.northernmilemedia.com/" + (rel + "/" if rel else "")
+        m = re.search(r'<link rel="canonical" href="([^"]+)"', h)
+        if not m:
+            bad.append(f"/{rel}/ has no canonical link")
+            continue
+        checked += 1
+        url = m.group(1).rstrip("/")
+        if url != own.rstrip("/"):
+            bad.append(f"/{rel}/ canonical is {url} but the page is at {own} — a "
+                       f"canonical must name its own page")
+            continue
+        target = url.split("dashboard.northernmilemedia.com", 1)[1].strip("/")
+        want = (os.path.join(DOCS, *target.split("/"), "index.html") if target
+                else os.path.join(DOCS, "index.html"))
+        if not os.path.exists(want):
+            bad.append(f"/{rel}/ canonical /{target}/ was not produced by this build")
+
+    # Cited page URLs. A citation promises a reader can check the figure, and the
+    # district pages cited the pre-move path — a URL that now resolves to a
+    # different page. <a href> checking never saw it because a citation is text.
+    cited = 0
+    for dirpath, _, files in os.walk(DOCS):
+        if "index.html" not in files:
+            continue
+        h = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                 errors="replace").read()
+        rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
+        for m in re.finditer(r'dashboard\.northernmilemedia\.com(/[^<\s"]*)', h):
+            u = m.group(1)
+            if u.endswith((".jpg", ".png", ".ico", ".svg", ".webp")) or "#" in u:
+                continue
+            cited += 1
+            t = u.strip("/")
+            w = (os.path.join(DOCS, *t.split("/"), "index.html") if t
+                 else os.path.join(DOCS, "index.html"))
+            if not os.path.exists(w):
+                bad.append(f"/{rel}/ cites /{t}/ which this build did not produce")
+    return bad
+
 def check_brand_identity():
     """The brand must describe the same geography the data covers.
 
@@ -607,6 +729,8 @@ CHECKS = (
     ("sitemap is well-formed, complete and honestly dated", check_sitemap),
     ("us state pages attribute diesel to a district", check_us_state_pages),
     ("brand identity matches the data geography", check_brand_identity),
+    ("canonical URLs resolve to built pages", check_canonical_targets_resolve),
+    ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("homepage presents both countries as peers", check_home_both_countries),
 )

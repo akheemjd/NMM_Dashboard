@@ -1435,7 +1435,7 @@ us_body = (
 ''' + country_switch("us") + '''
     <span class="eyebrow">EIA weekly retail diesel survey · week {{eia.date}}</span>
     <h1>US diesel prices</h1>
-    <div class="figure"><span class="n">{{eia.us_national_cpl}}</span><span class="u">¢/L CAD</span><span class="d flat">${{eia.us_national_usd_gal}}/gal</span></div>
+    <div class="figure"><span class="n">{{eia.us_national_usd_gal}}</span><span class="u">$/gal</span><span class="d flat">{{eia.us_national_cpl}}¢/L CAD</span></div>
     <div class="meta"><span>US national average</span><span>Converted at the latest Bank of Canada rate</span></div>
     <div class="cite">
       <div class="cl">Citing this figure</div>
@@ -1445,11 +1445,10 @@ us_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>Ten districts</h2><p>Every EIA diesel district · ¢/L CAD and $/gal</p></div>
+    <div class="lead"><h2>Ten districts</h2><p>Every EIA diesel district · priced in US dollars per gallon</p></div>
     <div class="rows">
-    <!--LOOP:padds--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:padds-->
+    <!--LOOP:padds--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">${{usd_gal}}/gal &nbsp; <span class="flat">{{cpl}}¢/L CAD</span></span></a><!--/LOOP:padds-->
     </div>
-    <p class="note">Each region is an EIA PADD — Petroleum Administration for Defense District. The price is that region&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
     <p class="note">Each district is an EIA pricing region. The price is that district&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
     <p class="note">EIA does not price diesel by state, so there is no state-level figure to show. The <a href="/us-diesel/states/">state pages</a> give each state&rsquo;s fuel tax and name the district its diesel figure comes from.</p>
   </section>
@@ -1469,23 +1468,23 @@ with open(os.path.join(OUT, "us-diesel.template.html"), "w") as f:
 print(f"  us-diesel                 {len(us_body):6,} bytes")
 
 # One template, rendered per PADD by build_us_pages.py.
-USPADD_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{label}} diesel prices", "/us-diesel/{{key}}/") + ','
- '{"@type":"Dataset","name":"{{label}} Diesel Prices","description":"US on-highway diesel price in {{label}}, from the EIA weekly retail diesel survey, converted to Canadian cents per litre.","url":"' + BASE + '/us-diesel/{{key}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+USPADD_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{label}} diesel prices", "/us-diesel/district/{{key_url}}/") + ','
+ '{"@type":"Dataset","name":"{{label}} Diesel Prices","description":"US on-highway diesel price in {{label}}, from the EIA weekly retail diesel survey, in US dollars per gallon, with the CAD equivalent converted at the Bank of Canada rate.","url":"' + BASE + '/us-diesel/district/{{key_url}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
 
 uspadd_body = (
  head("{{label}} Diesel Price — ${{usd_gal}}/gal | Northern Mile",
-      "{{label}} diesel is ${{usd_gal}}/gal ({{cpl}}¢/L CAD), {{vs_national_abs}}¢ {{vs_national_word}} the US national average. EIA weekly retail diesel survey, week ending {{date}}.",
-      "/us-diesel/{{key}}/", "og.jpg", USPADD_LD, "article")
+      "{{label}} diesel is ${{usd_gal}}/gal, {{vs_national_usd_abs}}/gal {{vs_national_word}} the US national average ({{cpl}}¢/L CAD at the latest Bank of Canada rate). EIA weekly retail diesel survey, week ending {{date}}.",
+      "/us-diesel/district/{{key_url}}/", "og.jpg", USPADD_LD, "article")
  + '''
   <section class="hero">
 ''' + country_switch("us") + '''
     <span class="eyebrow">{{label}} · EIA week {{date}}</span>
     <h1>{{label}} diesel</h1>
-    <div class="figure"><span class="n">{{cpl}}</span><span class="u">¢/L CAD</span><span class="d {{vs_national_class}}">{{vs_national}} vs US national</span></div>
-    <div class="meta"><span>US national <b>{{national}}</b>¢/L</span><span>Converted at the latest Bank of Canada rate</span></div>
+    <div class="figure"><span class="n">{{usd_gal}}</span><span class="u">$/gal</span><span class="d {{vs_national_class}}">{{vs_national_usd}} vs US national</span></div>
+    <div class="meta"><span>US national <b>${{national_usd}}</b>/gal</span><span>{{national}}¢/L CAD · converted at the latest Bank of Canada rate</span></div>
     <div class="cite">
       <div class="cl">Citing this figure</div>
-      <q id="citation">{{label}} diesel: ${{usd_gal}}/gal ({{cpl}}¢/L CAD), EIA weekly retail diesel survey, week ending {{date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/{{key}}/</q>
+      <q id="citation">{{label}} diesel: ${{usd_gal}}/gal ({{cpl}}¢/L CAD), EIA weekly retail diesel survey, week ending {{date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/district/{{key_url}}/</q>
       <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
     </div>
   </section>
@@ -1505,9 +1504,9 @@ uspadd_body = (
       </div>
     </section>
 
-    <div class="lead"><h2>The other districts</h2><p>¢/L CAD · $/gal</p></div>
+    <div class="lead"><h2>The other districts</h2><p>US dollars per gallon · CAD equivalent shown</p></div>
     <div class="rows">
-    <!--LOOP:siblings--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">{{cpl}}¢ &nbsp; <span class="flat">${{usd_gal}}/gal</span></span></a><!--/LOOP:siblings-->
+    <!--LOOP:siblings--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">${{usd_gal}}/gal &nbsp; <span class="flat">{{cpl}}¢/L CAD</span></span></a><!--/LOOP:siblings-->
     </div>
     <p class="note"><a href="/us-diesel/">← US national and all regions</a></p>
   </section>
@@ -1635,7 +1634,7 @@ ifta_body = (
     <div class="lead"><h2>Two rates, and why</h2></div>
     <div class="reading">
       <p>IFTA publishes a rate for <b>US-licensed</b> carriers and a separate rate for <b>Canadian-licensed</b> carriers wherever the two differ. They are columns here, not one averaged number, because a carrier filing with one licence should not be reading the other licence's rate.</p>
-      <p>Rates are set quarterly by IFTA, Inc. from each jurisdiction's own fuel tax statute, and shown in the unit that statute uses: cents per litre in Canada, and per gallon in the US. Three states also levy a separate surcharge on certain fuel types, which is shown beside the base rate rather than silently added to it.</p>
+      <p>Rates are set quarterly by IFTA, Inc. from each jurisdiction's own fuel tax statute, and shown in the unit that statute uses: dollars per litre in Canada, and dollars per gallon in the US. Three states also levy a separate surcharge on certain fuel types, which is shown beside the base rate rather than silently added to it.</p>
       <p class="note">This is the published tax rate. It is not tax advice, and it is not your filing. Your return depends on litres purchased and distance travelled in each jurisdiction.</p>
     </div>
   </section>
@@ -1643,14 +1642,14 @@ ifta_body = (
   <section class="sec">
     <div class="lead"><h2>Canadian provinces</h2><p>per litre · {{quarter}}</p></div>
     <div class="rows">
-    <!--LOOP:ca_jur--><div class="r"><span class="k">{{name}}<small>{{surcharge_note}}</small></span><span class="v">{{rates_display}}</span></div><!--/LOOP:ca_jur-->
+    <!--nofx--><!--LOOP:ca_jur--><div class="r"><span class="k">{{name}}<small>{{surcharge_note}}</small></span><span class="v">{{rates_display}}</span></div><!--/LOOP:ca_jur--><!--/nofx-->
     </div>
   </section>
 
   <section class="sec">
     <div class="lead"><h2>US states</h2><p>per gallon · {{quarter}}</p></div>
     <div class="rows">
-    <!--LOOP:us_jur--><div class="r"><span class="k">{{name}}<small>{{surcharge_note}}</small></span><span class="v">{{rates_display}}</span></div><!--/LOOP:us_jur-->
+    <!--nofx--><!--LOOP:us_jur--><div class="r"><span class="k">{{name}}<small>{{surcharge_note}}</small></span><span class="v">{{rates_display}}</span></div><!--/LOOP:us_jur--><!--/nofx-->
     </div>
     <p class="note">US rates are levied per gallon and Canadian rates per litre; both are shown in the unit the jurisdiction actually uses rather than converted, so the figure matches the statute.</p>
   </section>

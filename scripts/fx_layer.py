@@ -47,9 +47,16 @@ ASSETS = os.path.join(ROOT, "assets")
 DATA = os.path.join(ROOT, "data")
 
 # Slice the document into text we may edit and text we must not.
+#
+# The nofx comment pair is the explicit opt-out for a block whose figures must not
+# convert: a statutory rate you file at is not a price, and converting it produces
+# a number that is not the rate. It MUST come before the generic comment
+# alternative — Python's re takes the leftmost-FIRST match, not the longest, so a
+# later branch would let <!--.*?--> swallow the opening tag alone and the region
+# would not be skipped.
 SKIP = re.compile(
-    r"(<head\b.*?</head>|<script\b.*?</script>|<style\b.*?</style>|<!--.*?-->|"
-    r"<[^>]+>)",
+    r"(<head\b.*?</head>|<script\b.*?</script>|<style\b.*?</style>|"
+    r"<!--nofx-->.*?<!--/nofx-->|<!--.*?-->|<[^>]+>)",
     re.S | re.I,
 )
 
@@ -79,8 +86,12 @@ FX_ANY_OPEN = re.compile(r'<span class="fx[^"]*"[^>]*>', re.I)
 # marker injected into a <title> by an earlier build self-heals on the next
 # run. It is the marking pass (SKIP, above) that skips <head>, because a title
 # is a plain text node holding a real price and would be matched again.
+# Regions the layer must not touch. The nofx comment pair is the explicit opt-out:
+# a statutory rate you file at is not a price, and converting it produces a number
+# that is not the rate. Wrapping a block is clearer than teaching the layer to
+# recognise its contents.
 SKIP_REGION = re.compile(
-    r"(<script\b.*?</script>|<style\b.*?</style>|<!--.*?-->)",
+    r"(<script\b.*?</script>|<style\b.*?</style>|<!--nofx-->.*?<!--/nofx-->|<!--.*?-->)",
     re.S | re.I,
 )
 

@@ -143,6 +143,7 @@ def main():
 
     # Per-PADD pages.
     national_cpl = float(eia.get("us_national_cpl", 0) or 0)
+    national_usd = float(eia.get("us_national_usd_gal", 0) or 0)
     _district_states = load_json("eia_diesel.json").get("district_states") or {}
     globals()["_DISTRICT_STATES"] = _district_states
     # The templates link districts under /us-diesel/district/<slug>/, so every
@@ -155,7 +156,9 @@ def main():
     built = 0
     for p in padds:
         cpl = float(p["cpl"])
+        usd = float(p["usd_gal"])
         vs = round(cpl - national_cpl, 1)
+        vs_usd = round(usd - national_usd, 3)
         data = {
             "key": p["key"],
             # Districts live under /us-diesel/district/ so they can never collide
@@ -169,6 +172,12 @@ def main():
             "usd_gal": p["usd_gal"],
             "date": eia.get("date", ""),
             "national": f"{national_cpl:.1f}",
+            # Per-gallon counterparts. A US page leads with dollars per gallon, and
+            # a per-litre delta beside a per-gallon headline is a unit mismatch the
+            # reader has to notice for themselves.
+            "national_usd": f"{national_usd:.3f}",
+            "vs_national_usd": (f"+{vs_usd:.3f}" if vs_usd >= 0 else f"{vs_usd:.3f}"),
+            "vs_national_usd_abs": f"{abs(vs_usd):.3f}",
             "vs_national": (f"+{vs:.1f}" if vs >= 0 else f"{vs:.1f}"),
             "vs_national_abs": f"{abs(vs):.1f}",
             "vs_national_word": "above" if vs >= 0 else "below",

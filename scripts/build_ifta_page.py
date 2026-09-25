@@ -40,18 +40,22 @@ def rates_display(j):
     parts = []
     us = (j.get("us") or {}).get("diesel")
     ca = (j.get("ca") or {}).get("diesel")
+    # Each schedule keeps its own unit. The Can schedule is dollars per litre in
+    # CAD; the US schedule is dollars per gallon in USD. They are not converted
+    # into each other because a rate is what you file at, in the currency of the
+    # licence you hold — and a converted rate would not be the rate.
     if j.get("is_canadian"):
         # A Canadian province's own carriers file at the Can rate; the US rate is
         # what a US-licensed carrier pays there. Lead with Can for readability.
         if ca is not None:
-            parts.append(f"{fmt(ca)} ¢/L Can-lic")
+            parts.append(f"${fmt(ca)}/L CAD Can-lic")
         if us is not None:
-            parts.append(f"{fmt(us)} ¢/L US-lic")
+            parts.append(f"${fmt(us)}/gal USD US-lic")
     else:
         if us is not None:
-            parts.append(f"{fmt(us)} US-lic")
+            parts.append(f"${fmt(us)}/gal USD US-lic")
         if ca is not None:
-            parts.append(f"{fmt(ca)} Can-lic")
+            parts.append(f"${fmt(ca)}/L CAD Can-lic")
     return " · ".join(parts) if parts else "n/a"
 
 
