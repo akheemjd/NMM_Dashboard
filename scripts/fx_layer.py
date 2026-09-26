@@ -35,9 +35,13 @@ inside a <script> is calculator input, not page text, and rewriting it would
 corrupt the tool. This is verified by construction (the regex runs on the
 text-only segments) and guarded afterwards by check_data_integrity.py.
 """
+import sys
 import json
 import os
 import re
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from nav import replace_nav  # noqa: E402
 import sys
 from datetime import datetime, timezone
 
@@ -213,29 +217,6 @@ NAV_CLOSE = re.compile(r'(</div>\s*</nav>)', re.I)
 NAV_WRAPPED = re.compile(r'<div class="nv">', re.I)
 
 
-def wrap_navlinks(html):
-    """Wrap the nav's inner content in .nv so the toggle gets its own slot.
-
-    Idempotent: a build that runs twice must not nest another .nv.
-    """
-    if NAV_WRAPPED.search(html):
-        return html
-    m = NAV_OPEN.search(html)
-    if not m:
-        return html
-    start = m.end()
-    c = NAV_CLOSE.search(html, start)
-    if not c:
-        return html
-    return (
-        html[:start]
-        + '<div class="nv">'
-        + html[start:c.start()]
-        + "</div>"
-        + html[c.start():]
-    )
-
-
 CA_PATH = re.compile(r"^(ca$|ca/|diesel-prices(/|$)|fuel-prices(/|$))")
 US_PATH = re.compile(r"^(us$|us/|us-diesel(/|$))")
 
@@ -245,6 +226,33 @@ US_PATH = re.compile(r"^(us$|us/|us-diesel(/|$))")
 # Rewritten here rather than in the templates because the templates are shared and the
 # nav must stay authored exactly once.
 US_TREE = re.compile(r"^(us$|us/|us-diesel(/|$))")
+
+
+# Indented to match the header markup gen_templates authors, so the injected button and
+# the authored one produce byte-identical chrome. They differed by two spaces, which the
+# coherence guard reported as a page with different chrome.
+# Indented to match the header markup gen_templates authors, so the injected button
+# and the authored one produce byte-identical chrome. They differed by two spaces,
+# which the coherence guard reported as a page with different chrome.
+NAV_BTN = (chr(10) + '  <button class="navbtn" type="button" id="navbtn" '
+           'aria-expanded="false" aria-controls="drawer">'
+           '<span class="sr">Sections</span>'
+           '<span class="bars" aria-hidden="true"></span></button>')
+
+
+def add_nav_button(html):
+    """Put the drawer button in the header if the page did not author one.
+
+    The strips are hidden under 860px and the group row with them, so without this
+    button a hand-maintained template has no navigation on a phone. Injected for the
+    same reason as the country switch and the currency toggle: chrome that every page
+    needs does not belong to any one template.
+    """
+    if 'id="navbtn"' in html:
+        return html
+    if not HD_END.search(html):
+        return html
+    return HD_END.sub(lambda m: NAV_BTN + m.group(1), html, count=1)
 
 
 def set_lang(html, rel):
@@ -258,10 +266,17 @@ def set_lang(html, rel):
 
 
 def point_nav_at_tree(html, rel):
-    """On a US page, send the nav's Diesel link to US diesel instead of Canadian."""
+    """On a US page, send the nav's Diesel link to US diesel instead of Canadian.
+
+    Keyed on data-tree="diesel", not on the href. The nav strip carries a link whose
+    text is literally "Canada by province", and a blanket replacement of
+    href="/fuel-prices/" rewrote that too — pointing a US reader's Canada link at US
+    diesel. Only the element that means "this reader's diesel" is rewritten.
+    """
     if not US_TREE.match(rel):
         return html
-    return html.replace('href="/fuel-prices/"', 'href="/us-diesel/"')
+    return re.sub(r'href="/fuel-prices/"([^>]*data-tree="diesel")',
+                  r'href="/us-diesel/"\1', html)
 
 
 # The pages whose subject IS the country choice. They carry neither control, because
@@ -290,7 +305,8 @@ def point_nav_at_choice(html, rel, fn):
     """
     if not is_chooser(rel, fn):
         return html
-    return html.replace('href="/fuel-prices/"', 'href="/"')
+    return re.sub(r'href="/fuel-prices/"([^>]*data-tree="diesel")',
+                  r'href="/"\1', html).replace('href="/fuel-prices/"', 'href="/"')
 
 
 def country_switch_html(rel):
@@ -610,13 +626,14 @@ def main():
             # The chooser's own two figures are native and must stay native: no toggle
             # on the page means no way to undo a stored currency.
             html, n = (html, 0) if is_chooser(rel, fn) else mark(html, rel)
-            html = wrap_navlinks(html)
+            html = replace_nav(html, rel)
             html = set_lang(html, rel)
             html = point_nav_at_tree(html, rel)
             html = point_nav_at_choice(html, rel, fn)
             if not is_chooser(rel, fn):
                 html = add_country_switch(html, rel)
                 html = add_toggle(html, rel)
+            html = add_nav_button(html)
             open(path, "w", encoding="utf-8").write(html)
             pages += 1
             total += n

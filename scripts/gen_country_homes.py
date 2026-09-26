@@ -12,6 +12,7 @@ the three pages cannot drift apart in structure.
 
 Depends on gen_templates.write() having already placed the shared templates.
 """
+import sys
 import os
 import sys
 

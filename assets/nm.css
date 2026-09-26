@@ -84,36 +84,54 @@ a { color: inherit; }
 .mark span { font-family: var(--data); font-size: .75rem; color: var(--muted); display: none; }
 @media (min-width: 680px) { .mark span { display: inline; } }
 
-.nav { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 20; }
-/* No padding-right here. On a horizontal scroller that is space at the END of the
-   scroll content, so the sticky currency toggle parked 104px inside the content
-   column and looked like it was floating mid-nav. right:0 with no padding lands it
-   flush with the column's right edge, the same edge the header and footer use. */
-/* .wrap is a plain flex row. The links scroll inside .nv, which gives the
-   currency toggle a slot of its own beside them. Previously the toggle was a
-   sticky child of the scrolling .wrap, so it was painted on top of the links and
-   covered the tail of the nav wherever it sat. */
-.nav .wrap { display: flex; align-items: center; gap: 10px; }
-.nav .nv { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
-  flex: 1 1 auto; min-width: 0;
-  /* The box clips mid-word, which left a stray letter against the toggle. Fade
-     the clip edge so it reads as "more to scroll" rather than a broken label. */
-  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent);
-  mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
-.nav .wrap::-webkit-scrollbar { display: none; }
-.nav a {
-  flex: 0 0 auto; position: relative;
-  font-family: var(--data); font-size: .8125rem; letter-spacing: .01em;
-  color: var(--muted); text-decoration: none; white-space: nowrap;
-  padding: 14px 14px 13px;
-}
-.nav a:hover { color: var(--ink); }
-.nav a.on { color: var(--ink); }
-.nav a.on::after {
-  content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px;
-  height: 2px; background: var(--signal);
-}
+.nav { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+       background: var(--paper); position: sticky; top: 0; z-index: 20; }
+.nav .wrap { display: flex; align-items: center; gap: 2px; }
 
+/* Five groups, not thirteen peers. Each group is a link with a chevron; the group's
+   children live in the strip below, so nothing needs a hover to be discoverable. */
+.nav .ng { display: flex; align-items: center; gap: 6px; padding: 14px 15px 13px;
+  font-family: var(--body); font-size: .875rem; font-weight: 500; line-height: 1;
+  color: var(--ink-2); text-decoration: none; white-space: nowrap; position: relative; }
+.nav .ng:hover { color: var(--ink); background: var(--line-2); }
+.nav .ng.on { color: var(--signal); font-weight: 600; }
+.nav .ng.on::after { content: ""; position: absolute; left: 15px; right: 15px;
+  bottom: -1px; height: 2px; background: var(--signal); }
+.nav .chev { width: 7px; height: 7px; border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px);
+  opacity: .5; }
+
+/* The strip. One per group is emitted, the current one visible. Tinted so it reads as
+   subordinate to the group row without needing a border. */
+.strip { background: var(--wash); border-bottom: 1px solid var(--line); }
+.strip[hidden] { display: none; }
+.strip .wrap { display: flex; align-items: center; gap: 7px; padding: 9px var(--pad); }
+.strip a { font-family: var(--body); font-size: .8125rem; font-weight: 500; line-height: 1;
+  color: var(--signal); text-decoration: none; white-space: nowrap;
+  padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.72); }
+.strip a:hover { background: #fff; }
+.strip a.on { background: var(--signal); color: #fff; }
+.strip .hint { margin-left: auto; font-family: var(--data); font-size: .6875rem;
+  font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: #5f7d6c; }
+
+/* The drawer button. Hidden on desktop, where the groups are already visible. */
+.navbtn { display: none; width: 42px; height: 38px; border: 1px solid var(--line);
+  border-radius: 10px; background: var(--raise); cursor: pointer; align-items: center;
+  justify-content: center; }
+.navbtn .bars, .navbtn .bars::before, .navbtn .bars::after {
+  display: block; width: 16px; height: 1.6px; background: var(--ink); content: ""; }
+.navbtn .bars { position: relative; }
+.navbtn .bars::before { position: absolute; top: -5px; }
+.navbtn .bars::after { position: absolute; top: 5px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+@media (max-width: 860px) {
+  /* Below this the group row cannot hold five groups plus the controls, and a hover
+     menu does not exist on touch. The drawer replaces it entirely. */
+  .nav { display: none; }
+  .strip { display: none; }
+  .navbtn { display: inline-flex; }
+}
 /* ── Type ───────────────────────────────────────────────────────────── */
 
 main { padding-bottom: var(--v); }
@@ -623,3 +641,22 @@ aside.sp .c:hover { text-decoration: underline; }
   .hd .seg-opt { padding: 5px 8px; font-size: .75rem; }
   .hd .fxtog button { padding: 5px 8px; }
 }
+
+/* The drawer. Replaces the sideways-scrolling nav under 860px, where thirteen links
+   clipped mid-word against the controls. */
+.drawer { border-bottom: 1px solid var(--line); background: var(--raise); }
+.drawer[hidden] { display: none; }
+.drawer .wrap { padding-top: 4px; padding-bottom: 18px; }
+.dgrp b { display: block; font-family: var(--data); font-size: .6875rem; font-weight: 600;
+  letter-spacing: .09em; text-transform: uppercase; color: var(--muted); padding: 14px 0 6px; }
+.dgrp .dg { display: block; padding: 11px 2px; border-bottom: 1px solid var(--line-2);
+  font-family: var(--body); font-size: .9375rem; font-weight: 500; line-height: 1.2;
+  color: var(--ink); text-decoration: none; }
+.dgrp .dg.on { color: var(--signal); font-weight: 600; }
+
+/* The header's two controls were spread apart because .wrap is space-between with
+   three children, so the middle one floated to the centre. The brand takes the slack
+   instead and the controls sit together at the right, which is where a reader looks
+   for a switch and a toggle. */
+.hd .wrap { justify-content: flex-start; }
+.hd .mark { margin-right: auto; }

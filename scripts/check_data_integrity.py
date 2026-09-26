@@ -553,6 +553,43 @@ def check_chooser_is_just_the_choice():
     return bad
 
 
+
+def check_one_nav_per_page():
+    """Exactly one nav, one drawer, and at most one set of five strips per page.
+
+    head() emitted the nav pieces separately while replace_nav emitted the whole block,
+    so every page carried two of each. The coherence guard normalises the strips, so it
+    could not see the duplication — which is what a normalising guard trades away, and
+    why the shape needs its own assertion.
+    """
+    bad = []
+    for dirpath, _dirs, files in os.walk(DOCS):
+        for fn in files:
+            if fn not in ("index.html", "404.html"):
+                continue
+            if fn == "404.html" and dirpath != DOCS:
+                continue
+            rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
+            if rel == ".":
+                rel = ""
+            html = open(os.path.join(dirpath, fn), encoding="utf-8",
+                        errors="replace").read()
+            n_nav = len(re.findall(r'<nav class="nav" aria-label="Sections">', html))
+            n_strip = len(re.findall(r'<div class="strip', html))
+            n_drawer = len(re.findall(r'<div class="drawer" id="drawer"', html))
+            n_sent = html.count("<!--navstart-->")
+            where = f"/{rel}/" if rel else "/"
+            if n_nav != 1:
+                bad.append(f"{where} has {n_nav} nav elements")
+            if n_strip != 5:
+                bad.append(f"{where} has {n_strip} strips, expected 5")
+            if n_drawer != 1:
+                bad.append(f"{where} has {n_drawer} drawers")
+            if n_sent != 1:
+                bad.append(f"{where} has {n_sent} nav start markers")
+    return bad
+
+
 def check_country_trees():
     """The two trees exist, the chooser reaches both, and each tree is its own.
 
@@ -901,6 +938,7 @@ CHECKS = (
         ("tree lang matches the tree", check_tree_lang),
         ("404 exists, noindex, offers both trees", check_404_page),
         ("the chooser is just the choice", check_chooser_is_just_the_choice),
+        ("one nav, five strips, one drawer", check_one_nav_per_page),
         ("nav Diesel resolves in the reader tree", check_nav_per_tree),
         ("no country compared to its own average", check_cross_border_sentence),
 )

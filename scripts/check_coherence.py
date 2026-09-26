@@ -56,6 +56,13 @@ def chrome(html):
         # the currency toggle has no active class at all. Both are injected
         # post-build and both legitimately vary per page.
         s = re.sub(r' is-on', "", s)
+        # The nav differs per page by design: which group is current, and which of the
+        # five strips is visible. Both are normalised the way the old active link was,
+        # so the rest of the chrome is still compared.
+        s = re.sub(r'class="ng on"', 'class="ng"', s)
+        s = re.sub(r'class="strip( on)?" data-group="([A-Za-z]+)" hidden?',
+                   r'class="strip" data-group="\2"', s)
+        s = re.sub(r'class="dg on"', 'class="dg"', s)
         s = re.sub(r' aria-current="true"', "", s)
         s = re.sub(r'data-curdefault="(?:CAD|USD)"', 'data-curdefault="X"', s)
         # The front door and the 404 carry neither control, by design. Normalised to
@@ -64,9 +71,18 @@ def chrome(html):
         # Stripped, not replaced with a token: the chooser has no controls, so a token
         # only on the pages that do would leave the two forms unequal — which is what
         # the guard then reported.
+        # The three injected header elements, removed as a set. All three are added by
+        # the post-build pass anchored on the header's closing tag, so their order
+        # depends on which ran last — and on a hand-maintained template the header's own
+        # whitespace changes where that anchor falls. Position within the cluster is not
+        # a design property; everything around it still is.
         s = re.sub(r'<div class="seg" role="group" aria-label="Country">.*?</div>', '', s,
                    flags=re.S)
         s = re.sub(r'<div class="fxtog".*?</div>', '', s, flags=re.S)
+        s = re.sub(r'<button class="navbtn".*?</button>', '', s, flags=re.S)
+        # Once removed, collapse the whitespace they leave behind, or the gap itself
+        # becomes the difference.
+        s = re.sub(r'[ \t]*\n[ \t]*\n+', '\n', s)
         # The nav's Diesel link resolves inside the reader's own tree, so it is
         # /fuel-prices/ on Canadian pages and /us-diesel/ on US pages. Normalised to
         # a token rather than ignored: the rest of the nav is still compared.

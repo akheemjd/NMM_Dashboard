@@ -10,8 +10,13 @@ Run: python3 scripts/gen_templates.py
 """
 
 import json
+import sys
 import os
 import datetime
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # noqa: E402  (scripts/ is not on the path)
+from nav import (NAV_GROUPS, nav_group_for, nav_strips_html,  # noqa: E402
+                 nav_block)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "templates")
@@ -27,6 +32,8 @@ FONTS = ("https://fonts.googleapis.com/css2?"
          "family=IBM+Plex+Mono:wght@400;500&display=swap")
 
 # href, label — the one nav, in order. Every page renders this identically.
+
+
 NAV = [
     ("/", "Home"),
     ("/freight-barometer/", "Barometer"),
@@ -102,16 +109,23 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 
 <header class="hd"><div class="wrap">
   <a class="mark" href="/"><img class="logo" src="/assets/logo.png" width="32" height="32" alt=""><b>Northern Mile</b><span>North American trucking data</span></a>
+  <button class="navbtn" type="button" id="navbtn" aria-expanded="false" aria-controls="drawer"><span class="sr">Sections</span><span class="bars" aria-hidden="true"></span></button>
 </div></header>
 
-<nav class="nav" aria-label="Sections"><div class="wrap">{nav_html(canon)}</div></nav>
+{nav_block(canon)}
 
 <main class="wrap" id="main">
 """
 
 
 def foot(extra_script=""):
-    flinks = "".join(f'<a href="{h}">{l}</a>' for h, l in NAV if l != "Home")
+    # The footer keeps the flat list: it is the complete index and a footer is where a
+    # reader looks for one. Only Diesel needs the tree attribute, so the post-build
+    # pass points it into the reader's own tree.
+    flinks = "".join(
+        (f'<a href="{h}" data-tree="diesel">{l}</a>' if l == "Diesel"
+         else f'<a href="{h}">{l}</a>')
+        for h, l in NAV if l != "Home")
     # Business and legal links live in a second footer row rather than in the
     # data nav, which should stay about data. Reachability matters: a page
     # nothing links to does not exist, and check_links.py enforces that.
