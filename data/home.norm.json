@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-26 19:40",
-  "updated_iso": "2026-09-26T19:40:38+00:00",
-  "build_version": "1790451638",
+  "updated_at": "2026-09-26 20:11",
+  "updated_iso": "2026-09-26T20:11:41+00:00",
+  "build_version": "1790453501",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "20 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "268.5",
@@ -357,11 +357,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:09 EDT"
+      "captured_at": "15:56 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -401,7 +401,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:45 EDT"
+      "captured_at": "15:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -411,7 +411,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 MDT"
+      "captured_at": "14:03 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -421,7 +421,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:20 PDT"
+      "captured_at": "13:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -493,8 +493,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
