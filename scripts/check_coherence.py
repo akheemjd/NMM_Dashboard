@@ -58,10 +58,26 @@ def chrome(html):
         s = re.sub(r' is-on', "", s)
         s = re.sub(r' aria-current="true"', "", s)
         s = re.sub(r'data-curdefault="(?:CAD|USD)"', 'data-curdefault="X"', s)
+        # The front door and the 404 carry neither control, by design. Normalised to
+        # a token so the rest of the chrome is still compared. Without this the guard
+        # would push the controls back onto the chooser, which is how they got there.
+        # Stripped, not replaced with a token: the chooser has no controls, so a token
+        # only on the pages that do would leave the two forms unequal — which is what
+        # the guard then reported.
+        s = re.sub(r'<div class="seg" role="group" aria-label="Country">.*?</div>', '', s,
+                   flags=re.S)
+        s = re.sub(r'<div class="fxtog".*?</div>', '', s, flags=re.S)
         # The nav's Diesel link resolves inside the reader's own tree, so it is
         # /fuel-prices/ on Canadian pages and /us-diesel/ on US pages. Normalised to
         # a token rather than ignored: the rest of the nav is still compared.
-        s = re.sub(r'href="(?:/fuel-prices/|/us-diesel/)"', 'href="<tree-diesel>"', s)
+        # The nav's Diesel link resolves inside the reader's tree — /fuel-prices/ or
+        # /us-diesel/ — and on a page with no country it points at the choice, /. All
+        # three are the same slot, so all three normalise to one token.
+        # One token for all three forms of the nav's Diesel slot. /fuel-prices/ and
+        # /us-diesel/ inside a tree, / on a page with no country. Collapsed together
+        # because they occupy the same slot, and collapsing the root link too is
+        # harmless: it is identical on every page already.
+        s = re.sub(r'href="(?:/fuel-prices/|/us-diesel/|/)"', 'href="<root>"', s)
         s = re.sub(r'Updated \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC', "Updated <ts> UTC", s)
         parts.append(s)
     return hashlib.md5("".join(parts).encode()).hexdigest()

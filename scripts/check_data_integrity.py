@@ -444,10 +444,13 @@ def check_404_page():
                        ('href="/us/"', "the US tree")):
         if want not in html:
             bad.append(f"the 404 does not offer {what}")
-    for want, what in (('aria-label="Country"', "country switch"),
-                       ('class="fxtog"', "currency toggle")):
-        if want not in html:
-            bad.append(f"the 404 has no {what} — it is outside the injection pass")
+    # The 404 is a chooser page: it carries neither control, on purpose. Its job is
+    # the choice, and the cards are the choice.
+    for unwanted, what in (('aria-label="Country"', "country switch"),
+                           ('class="fxtog"', "currency toggle")):
+        if unwanted in html:
+            bad.append(f"the 404 carries a {what} — it is a chooser page and should "
+                       f"not duplicate the choice")
     return bad
 
 
@@ -511,6 +514,42 @@ def check_cross_border_sentence():
             if subj == ref and (is_us != subj):
                 bad.append(f"/{rel}/ compares a country to its own average: "
                            f"{m.group(0)[:80]}")
+    return bad
+
+
+
+def check_chooser_is_just_the_choice():
+    """The front door asks one question, once.
+
+    It carried a country switch and a currency toggle in the header, under a heading
+    asking which side of the border you run, above two cards that answer it. Two ways
+    to pick a country, and a currency chosen before a country — because the chrome was
+    injected uniformly and the coherence guard required it to be.
+
+    A page whose subject is the choice does not also carry the controls for it.
+    """
+    bad = []
+    path = os.path.join(DOCS, "index.html")
+    if not os.path.exists(path):
+        return ["/ was not built"]
+    html = open(path, encoding="utf-8", errors="replace").read()
+
+    if 'aria-label="Country"' in html:
+        bad.append("/ carries a country switch; the cards are the choice")
+    if 'class="fxtog"' in html:
+        bad.append("/ carries a currency toggle; there is no country chosen yet")
+    for want, what in (('href="/ca/"', "the Canadian tree"),
+                       ('href="/us/"', "the US tree")):
+        if want not in html:
+            bad.append(f"/ does not offer {what}")
+    if 'class="pickcard"' not in html:
+        bad.append("/ has no chooser cards")
+
+    # Its own figures are native and must not be convertible: there is no toggle on
+    # the page, so a stored currency would convert them with no way back.
+    hero = re.search(r'<div class="pick">.*?</div>\s*</section>', html, re.S)
+    if hero and 'class="fx"' in hero.group(0):
+        bad.append("/ marks its own figures for conversion but carries no toggle")
     return bad
 
 
@@ -861,6 +900,7 @@ CHECKS = (
     ("country trees are separate and reachable", check_country_trees),
         ("tree lang matches the tree", check_tree_lang),
         ("404 exists, noindex, offers both trees", check_404_page),
+        ("the chooser is just the choice", check_chooser_is_just_the_choice),
         ("nav Diesel resolves in the reader tree", check_nav_per_tree),
         ("no country compared to its own average", check_cross_border_sentence),
 )

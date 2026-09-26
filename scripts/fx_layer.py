@@ -264,6 +264,35 @@ def point_nav_at_tree(html, rel):
     return html.replace('href="/fuel-prices/"', 'href="/us-diesel/"')
 
 
+# The pages whose subject IS the country choice. They carry neither control, because
+# the choice on the page is the control. Everything else carries both.
+CHOOSER_PAGES = ("index.html", "404.html")
+
+
+def is_chooser(rel, fn):
+    """True for the front door and the not-found page.
+
+    Kept on PATH, not filename: every content page is index.html, so keying on the
+    filename marked the entire site as the chooser and stripped its controls and
+    markers. Only these two live directly in the docs root.
+    """
+    if fn == "404.html":
+        return True
+    return rel == "" and fn == "index.html"
+
+
+def point_nav_at_choice(html, rel, fn):
+    """On a page with no country, the nav's Diesel link goes to the choice.
+
+    It pointed at /fuel-prices/, making a neutral page silently Canadian. There is no
+    neutral diesel page to send it to, so it goes where the reader picks one — which is
+    the page itself on the chooser, and correct rather than inert on the 404.
+    """
+    if not is_chooser(rel, fn):
+        return html
+    return html.replace('href="/fuel-prices/"', 'href="/"')
+
+
 def country_switch_html(rel):
     """Canada / US switcher, with the active option taken from the page path."""
     ca_on = bool(CA_PATH.match(rel))
@@ -578,12 +607,16 @@ def main():
             if rel == ".":
                 rel = ""
             html = open(path, encoding="utf-8").read()
-            html, n = mark(html, rel)
+            # The chooser's own two figures are native and must stay native: no toggle
+            # on the page means no way to undo a stored currency.
+            html, n = (html, 0) if is_chooser(rel, fn) else mark(html, rel)
             html = wrap_navlinks(html)
             html = set_lang(html, rel)
             html = point_nav_at_tree(html, rel)
-            html = add_country_switch(html, rel)
-            html = add_toggle(html, rel)
+            html = point_nav_at_choice(html, rel, fn)
+            if not is_chooser(rel, fn):
+                html = add_country_switch(html, rel)
+                html = add_toggle(html, rel)
             open(path, "w", encoding="utf-8").write(html)
             pages += 1
             total += n
