@@ -702,6 +702,11 @@ def check_us_pages_lead_in_gallons():
     bad = []
     # headline figures that must be per-gallon
     targets = []
+    # /us/ first: it is the page the original complaint was about, and it was the one
+    # page missing from this list. The guard passed for months while not checking it.
+    home = os.path.join(DOCS, "us", "index.html")
+    if os.path.exists(home):
+        targets.append(("/us/", home))
     hub = os.path.join(DOCS, "us-diesel", "index.html")
     if os.path.exists(hub):
         targets.append(("us-diesel/", hub))

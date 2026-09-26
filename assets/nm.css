@@ -660,3 +660,10 @@ aside.sp .c:hover { text-decoration: underline; }
    for a switch and a toggle. */
 .hd .wrap { justify-content: flex-start; }
 .hd .mark { margin-right: auto; }
+
+/* The answer to the question the hero asks. The cards show each country in its own unit,
+   which is right, but it means a reader cannot compare them without doing the sum. */
+.pickgap { margin: 18px 0 0; font-family: var(--body); font-size: 1rem; line-height: 1.5;
+  color: var(--muted); }
+.pickgap b { font-family: var(--data); font-size: 1.125rem; color: var(--ink);
+  font-weight: 600; }

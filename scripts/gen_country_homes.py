@@ -109,7 +109,10 @@ write(
     '<span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>\n'
     '    <p class="stand">Canada to the US: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. '
     'The US averaged <b>${{eia.us_national_usd_gal}}/gal</b> this week. <a href="/us/">US site</a></p>\n'
-    '    <div class="cite">\n'
+    '  </section>\n'
+    + rail("ca")
+    + chart_summary()
+    + '    <div class="cite">\n'
     '      <div class="cl">Citing this figure</div>\n'
     '      <q id="citation">Northern Mile Canadian Diesel Index: {{fuel.national_diesel}}¢/L across ten '
     'Canadian provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, '
@@ -118,9 +121,6 @@ write(
     '<span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">'
     'How it is calculated</a></div>\n'
     '    </div>\n'
-    '  </section>\n'
-    + rail("ca")
-    + chart_summary()
     + '\n  <section class="sec">\n    <div class="stats">\n'
     '      <a class="stat" href="/fuel-prices/"><div class="l">Cheapest</div><div class="v down">'
     '{{fuel.low}}</div><div class="s">{{fuel.low_code}} · ¢/L</div></a>\n'
@@ -181,7 +181,9 @@ write(
     '<span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>\n'
     '    <p class="stand">Canada to the US: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. '
     'Canada averaged <b>{{fuel.national_diesel}}¢/L</b> this week. <a href="/ca/">Canadian site</a></p>\n'
-    '    <div class="cite">\n'
+    '  </section>\n'
+    + rail("us")
+    + '    <div class="cite">\n'
     '      <div class="cl">Citing this figure</div>\n'
     '      <q id="citation">US on-highway diesel: ${{eia.us_national_usd_gal}}/gal national average, EIA '
     'weekly retail diesel survey, week ending {{eia.date}}. Northern Mile Media, '
@@ -190,8 +192,6 @@ write(
     '<span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">'
     'How it is calculated</a></div>\n'
     '    </div>\n'
-    '  </section>\n'
-    + rail("us")
     + '\n  <section class="sec">\n'
     '    <div class="lead"><h2>Where today sits</h2></div>\n'
     '    <div class="reading">\n'
@@ -268,6 +268,7 @@ write(
         <span class="pgo">US site →</span>
       </a>
     </div>
+    <p class="pickgap"><b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. The two national averages on one axis.</p>
     <p class="stand">Both trees are free and need no account. The <a href="#crossborder">cross-border
     figures</a> below are the same in either one.</p>
     <div class="meta"><span>Ten provinces · ten districts</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
