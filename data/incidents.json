@@ -1,6 +1,27 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-102159",
+      "province": "BC",
+      "highway": {
+        "name": "Highway 37",
+        "from": "Highway 37",
+        "direction": "BOTH",
+        "state": "ALL_LANES_OPEN"
+      },
+      "direction": "",
+      "description": "Construction work at Highway 37, Meziadin Chain-on/Chain-off area. Starting Tue Sep 22 until Tue Sep 29. From 8:00 AM to 5:00 PM PDT, every day. Single lane alternating traffic. Expect delays. Speed Limit restriction: 50km/h. Last update: September 25th, 2026 at 4:31pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 56.07832731,
+      "lng": -129.27406172,
+      "start": "2026-09-08T16:54:28-07:00",
+      "end": "",
+      "updated": "2026-09-25T16:31:00-07:00"
+    },
+    {
       "id": "drivebc.ca/RIDE-102158",
       "province": "BC",
       "highway": {
@@ -146,27 +167,6 @@
       "start": "2026-09-14T11:25:00-07:00",
       "end": "",
       "updated": "2026-09-15T20:11:57-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-102337",
-      "province": "BC",
-      "highway": {
-        "name": "Highway 29",
-        "from": "Highway 29 N",
-        "direction": "BOTH",
-        "state": "ALL_LANES_OPEN"
-      },
-      "direction": "",
-      "description": "Road maintenance at Highway 29, 2km Northeast of Cache Creek Bridge. Starting Mon Sep 14 until Fri Sep 25. From 7:00 AM to 5:00 PM MST, weekdays. Single lane alternating traffic. Speed Limit restriction: 30. Last update: September 15th, 2026 at 8:11pm MST.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 56.28234763,
-      "lng": -121.2189082,
-      "start": "2026-09-14T11:26:52-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:11:39-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-101706",
@@ -421,7 +421,7 @@
     }
   ],
   "total": 20,
-  "updated": "2026-09-25T23:31:04.691884+00:00",
+  "updated": "2026-09-26T00:02:06.803883+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
