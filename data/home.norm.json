@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-28 19:56",
-  "updated_iso": "2026-09-28T19:56:47+00:00",
-  "build_version": "1790625407",
+  "updated_at": "2026-09-28 20:58",
+  "updated_iso": "2026-09-28T20:58:49+00:00",
+  "build_version": "1790629129",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -321,29 +321,29 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4145",
+    "usd_cad": "1.4168",
     "direction": "weaker CAD",
-    "change": "+0.0009",
-    "usd_100": "141.45",
-    "usd_500": "707.25",
-    "usd_1000": "1,414.50",
-    "cad_1000": "706.96",
+    "change": "+0.0023",
+    "usd_100": "141.68",
+    "usd_500": "708.40",
+    "usd_1000": "1,416.80",
+    "cad_1000": "705.82",
     "band": "noise",
-    "band_pct": "+0.06%",
-    "obs_date": "2026-09-25",
-    "avg_30d": "1.3928",
-    "vs_baseline": "+0.0217",
+    "band_pct": "+0.16%",
+    "obs_date": "2026-09-28",
+    "avg_30d": "1.3943",
+    "vs_baseline": "+0.0225",
     "high_52w": "1.4234",
     "high_52w_date": "2026-06-24",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "+0.0143",
-    "change_7d_pct": "+1.02%",
-    "change_30d": "+0.0269",
-    "change_30d_pct": "+1.94%",
-    "change_1y": "+0.0291",
-    "change_1y_pct": "+2.10%",
-    "range_pct": "88%"
+    "change_7d": "+0.0147",
+    "change_7d_pct": "+1.05%",
+    "change_30d": "+0.0307",
+    "change_30d_pct": "+2.21%",
+    "change_1y": "+0.0324",
+    "change_1y_pct": "+2.34%",
+    "range_pct": "91%"
   },
   "incidents": {
     "none": true,
@@ -397,11 +397,11 @@
       "name": "Lacolle Border Crossing",
       "slug": "lacolle-border-crossing",
       "sub": "Lacolle, QC \u2014 Champlain, NY \u00b7 A-15 / I-87 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:56 EDT"
+      "captured_at": "16:18 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -421,7 +421,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -431,7 +431,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 CDT"
+      "captured_at": "15:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -483,8 +483,8 @@
     },
     {
       "name": "USD/CAD vs 30-day average",
-      "note": "+0.0217 vs 30-day avg 1.3928",
-      "value": "1.4145",
+      "note": "+0.0225 vs 30-day avg 1.3943",
+      "value": "1.4168",
       "value_class": "flat",
       "country_prefix": "",
       "source": "Bank of Canada",
@@ -493,8 +493,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "5 of 9 crossings slow",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -503,18 +503,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "Trucking Info",
+      "headline": "Trimble: Taking Artificial Intelligence in Trucking Beyond Faster Tasks",
+      "url": "https://www.truckinginfo.com/news/trimble-artificial-intelligence-in-trucking-fleets-beyond-faster-tasks",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "industry",
       "source": "The Trucker",
       "headline": "PTDI Summit and CVTA Fall Conference take center stage in Dallas",
       "url": "https://www.thetrucker.com/trucking-news/business/ptdi-summit-and-cvta-fall-conference-take-center-stage-in-dallas",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "Beyond safety: Leveraging telematics data to improve insurance outcomes",
-      "url": "https://www.thetrucker.com/trucking-news/perspective/insurance-insights/beyond-safety-leveraging-telematics-data-to-improve-insurance-outcomes",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
@@ -530,9 +530,9 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "6.529",
-    "us_national_cpl": "244.0",
-    "nadi": "255.4",
-    "ca_us_gap": "22.8",
+    "us_national_cpl": "244.4",
+    "nadi": "255.6",
+    "ca_us_gap": "22.4",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-09-21",
@@ -549,85 +549,85 @@
       "west_coast_ex_california": 6.791
     },
     "padds_cpl": {
-      "east_coast": 234.2,
-      "new_england": 243.5,
-      "central_atlantic": 244.6,
-      "lower_atlantic": 229.4,
-      "midwest": 249.6,
-      "gulf_coast": 230.8,
-      "rocky_mountain": 236.9,
-      "west_coast": 278.6,
-      "california": 308.1,
-      "west_coast_ex_california": 253.8
+      "east_coast": 234.6,
+      "new_england": 243.9,
+      "central_atlantic": 245.0,
+      "lower_atlantic": 229.8,
+      "midwest": 250.0,
+      "gulf_coast": 231.2,
+      "rocky_mountain": 237.3,
+      "west_coast": 279.1,
+      "california": 308.6,
+      "west_coast_ex_california": 254.2
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "6.268",
-        "cpl": "234.2"
+        "cpl": "234.6"
       },
       {
         "key": "new_england",
         "label": "New England (PADD 1A)",
         "usd_gal": "6.517",
-        "cpl": "243.5"
+        "cpl": "243.9"
       },
       {
         "key": "central_atlantic",
         "label": "Central Atlantic (PADD 1B)",
         "usd_gal": "6.546",
-        "cpl": "244.6"
+        "cpl": "245.0"
       },
       {
         "key": "lower_atlantic",
         "label": "Lower Atlantic (PADD 1C)",
         "usd_gal": "6.139",
-        "cpl": "229.4"
+        "cpl": "229.8"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "6.680",
-        "cpl": "249.6"
+        "cpl": "250.0"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "6.177",
-        "cpl": "230.8"
+        "cpl": "231.2"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "6.340",
-        "cpl": "236.9"
+        "cpl": "237.3"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "7.456",
-        "cpl": "278.6"
+        "cpl": "279.1"
       },
       {
         "key": "california",
         "label": "California",
         "usd_gal": "8.246",
-        "cpl": "308.1"
+        "cpl": "308.6"
       },
       {
         "key": "west_coast_ex_california",
         "label": "West Coast excluding California",
         "usd_gal": "6.791",
-        "cpl": "253.8"
+        "cpl": "254.2"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
-    "us_change_7d": "+11.2",
+    "us_change_7d": "+11.6",
     "us_change_7d_class": "up",
-    "us_change_30d": "+37.3",
-    "nadi_change_7d": "+3.8",
+    "us_change_30d": "+37.7",
+    "nadi_change_7d": "+4.0",
     "nadi_change_7d_class": "up",
-    "nadi_change_30d": "+34.9"
+    "nadi_change_30d": "+35.1"
   }
 }
