@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-29 19:17",
-  "updated_iso": "2026-09-29T19:17:24+00:00",
-  "build_version": "1790709444",
+  "updated_at": "2026-09-29 19:48",
+  "updated_iso": "2026-09-29T19:48:21+00:00",
+  "build_version": "1790711301",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Lacolle Border Crossing",
-    "max_wait": "15 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "265.6",
@@ -361,7 +361,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -397,11 +397,11 @@
       "name": "Lacolle Border Crossing",
       "slug": "lacolle-border-crossing",
       "sub": "Lacolle, QC \u2014 Champlain, NY \u00b7 A-15 / I-87 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:51 EDT"
+      "captured_at": "15:13 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -421,7 +421,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -493,8 +493,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -503,18 +503,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "From motorcycles to booze, US ban on $1 billion worth of Canadian imports goes into effect",
-      "url": "https://www.thetrucker.com/trucking-news/business/from-motorcycles-to-booze-us-ban-on-1-billion-worth-of-canadian-imports-goes-into-effect",
-      "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Three generations, one road: Harold Perry builds a legacy in trucking",
-      "url": "https://www.thetrucker.com/trucking-news/trucking-life/three-generations-one-road-harold-perry-builds-a-legacy-in-trucking",
+      "headline": "New CDL training program opens doors to trucking careers in North Carolina",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/new-cdl-training-program-opens-doors-to-trucking-careers-in-north-carolina",
       "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Diesel prices take a dip",
+      "url": "https://www.thetrucker.com/trucking-news/business/diesel-prices-take-a-dip",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
