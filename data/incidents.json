@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-313074",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound ON-RAMP at GUELPH LINE, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.352021,
+      "lng": -79.803862,
+      "start": 1790725980,
+      "end": null,
+      "updated": 1790725980
+    },
+    {
       "id": "ON-313072",
       "province": "ON",
       "highway": "QEW",
@@ -385,22 +401,6 @@
       "updated": 1790699460
     },
     {
-      "id": "ON-312899",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.791344,
-      "lng": -79.53936,
-      "start": 1791165600,
-      "end": 1791543600,
-      "updated": 1790699460
-    },
-    {
       "id": "drivebc.ca/RIDE-102401",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -559,6 +559,22 @@
       "start": "2026-09-24T09:04:19-07:00",
       "end": "",
       "updated": "2026-09-24T09:04:19-07:00"
+    },
+    {
+      "id": "drivebc.ca/RIDE-102518",
+      "province": "BC",
+      "highway": "Highway 4 near Pacific Rim Highway",
+      "direction": "",
+      "description": "Tree pruning from Highway 4, Marion Creek FSR to Kennedy Lake Boat Launch. Starting Mon Sep 28 until Wed Oct 28. Expect minor delays. Watch for traffic control. Last update: September 21st, 2026 at 8:55am PDT. Vegetation Control through the area between 9am and 3pm daily. Slow down and watch for work crews.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.24262,
+      "lng": -125.36296,
+      "start": "2026-09-18T09:34:51-07:00",
+      "end": "",
+      "updated": "2026-09-21T08:55:27-07:00"
     },
     {
       "id": "drivebc.ca/RIDE-102482",
@@ -783,26 +799,10 @@
       "start": "2026-08-26T09:42:32-07:00",
       "end": "",
       "updated": "2026-09-15T20:10:37-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-101670",
-      "province": "BC",
-      "highway": "Other Roads near Chilko-Newton Road",
-      "direction": "",
-      "description": "Bridge maintenance at Chilko-Newton Road, Chilko River Siwash Bridge. Starting Mon Jul 13. Expect delays. Weight vehicle restriction: 32,000KG. Last update: September 15th, 2026 at 8:09pm PDT. Next update time Mon Oct 26.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 52.0673947,
-      "lng": -123.55472192,
-      "start": "2026-08-25T14:49:58-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:09:37-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-09-29T23:52:27.112760+00:00",
+  "updated": "2026-09-29T23:56:13.704136+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
