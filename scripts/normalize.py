@@ -561,11 +561,25 @@ for ind in mk_indicators[:8]:
     cls = "flat"
     # Build a useful one-line note
     detail = ind.get("detail", "")
+    # The FX row is the one case where the note has to come from here rather than from
+    # market.json. market_pulse writes that text on its own cron, this file computes the
+    # authoritative avg_30d on the deploy cron, and the two read the same series at
+    # different moments — so the trailing 21-observation window slides in between and the
+    # page quoted 1.3943 while fx.norm.json said 1.3957. One writer fixes it for good.
+    if "30-day average" in str(ind.get("label", "")) and fx.get("avg_30d"):
+        try:
+            _r = float(fx.get("usd_cad"))
+            _a = float(fx.get("avg_30d"))
+            detail = f"{(_r - _a):+.4f} vs 30-day avg {_a:.4f}"
+        except (TypeError, ValueError):
+            pass
     note = detail if detail else clip(ind.get("what_it_means", ""), 60)
     market.append({
         "name": ind.get("label", ind.get("name", "")),
         "note": note,
-        "value": str(ind.get("value", "—")),
+        "value": (f"{float(fx.get('usd_cad')):.4f}"
+                  if "30-day average" in str(ind.get("label", "")) and fx.get("usd_cad")
+                  else str(ind.get("value", "—"))),
         "value_class": cls,
         "country_prefix": ("<span class=\"src\">Canada</span> " if ind.get("country") == "ca" else ""),
         "source": ind.get("source", ""),

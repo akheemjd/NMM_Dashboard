@@ -147,9 +147,14 @@ def check_fx_average_agreement():
     reported a gap of +0.0002 against a true +0.0138.
     """
     norm = _load("fx.norm.json")
-    market = _load("market.json")
+    # market.norm.json, not market.json. The site is built from the .norm file that
+    # normalize writes; market.json is an intermediate written by market_pulse on a
+    # different cron. Reading the intermediate meant the guard was comparing a file nobody
+    # publishes, so it failed on drift the page never showed and would have kept failing
+    # after the real fix landed.
+    market = _load("market.norm.json")
     if norm is None or market is None:
-        return ["could not load fx.norm.json / market.json"]
+        return ["could not load fx.norm.json / market.norm.json"]
 
     fx = norm.get("fx") if isinstance(norm.get("fx"), dict) else norm
     published = str(fx.get("avg_30d") or "")
@@ -158,14 +163,18 @@ def check_fx_average_agreement():
 
     out = []
     detail = ""
-    for i in (market.get("indicators") or []):
-        if "CAD" in (i.get("name") or ""):
-            detail = str(i.get("detail") or "")
+    rows = market.get("indicators") or market.get("market") or []
+    for i in rows:
+        label = str(i.get("name") or "") + str(i.get("label") or "")
+        if "30-day average" in label:
+            # market.norm.json carries the text in `note`; market.json used `detail`
+            detail = str(i.get("note") or i.get("detail") or "")
+            break
     if not detail:
         return []
 
     if published not in detail:
-        out.append(f"market.json quotes a 30-day FX average that is not "
+        out.append(f"the published market row quotes a 30-day FX average that is not "
                    f"fx.norm.json's {published}: {detail!r}")
 
     # A one-decimal average is the specific failure that hid this for weeks.
