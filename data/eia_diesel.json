@@ -1,66 +1,66 @@
 {
-  "date": "2026-09-21",
-  "us_national_usd_gal": 6.529,
+  "date": "2026-09-28",
+  "us_national_usd_gal": 6.382,
   "padds_usd_gal": {
-    "east_coast": 6.268,
-    "new_england": 6.517,
-    "central_atlantic": 6.546,
-    "lower_atlantic": 6.139,
-    "midwest": 6.68,
-    "gulf_coast": 6.177,
-    "rocky_mountain": 6.34,
-    "west_coast": 7.456,
-    "california": 8.246,
-    "west_coast_ex_california": 6.791
+    "east_coast": 6.137,
+    "new_england": 6.51,
+    "central_atlantic": 6.531,
+    "lower_atlantic": 5.953,
+    "midwest": 6.526,
+    "gulf_coast": 5.955,
+    "rocky_mountain": 6.407,
+    "west_coast": 7.357,
+    "california": 8.181,
+    "west_coast_ex_california": 6.643
   },
   "districts": {
     "east_coast": {
-      "price_usd_gal": 6.268,
+      "price_usd_gal": 6.137,
       "label": "East Coast (PADD 1)",
       "padd": "R10"
     },
     "new_england": {
-      "price_usd_gal": 6.517,
+      "price_usd_gal": 6.51,
       "label": "New England (PADD 1A)",
       "padd": "R1X"
     },
     "central_atlantic": {
-      "price_usd_gal": 6.546,
+      "price_usd_gal": 6.531,
       "label": "Central Atlantic (PADD 1B)",
       "padd": "R1Y"
     },
     "lower_atlantic": {
-      "price_usd_gal": 6.139,
+      "price_usd_gal": 5.953,
       "label": "Lower Atlantic (PADD 1C)",
       "padd": "R1Z"
     },
     "midwest": {
-      "price_usd_gal": 6.68,
+      "price_usd_gal": 6.526,
       "label": "Midwest (PADD 2)",
       "padd": "R20"
     },
     "gulf_coast": {
-      "price_usd_gal": 6.177,
+      "price_usd_gal": 5.955,
       "label": "Gulf Coast (PADD 3)",
       "padd": "R30"
     },
     "rocky_mountain": {
-      "price_usd_gal": 6.34,
+      "price_usd_gal": 6.407,
       "label": "Rocky Mountain (PADD 4)",
       "padd": "R40"
     },
     "west_coast": {
-      "price_usd_gal": 7.456,
+      "price_usd_gal": 7.357,
       "label": "West Coast (PADD 5)",
       "padd": "R50"
     },
     "california": {
-      "price_usd_gal": 8.246,
+      "price_usd_gal": 8.181,
       "label": "California",
       "padd": "SCA"
     },
     "west_coast_ex_california": {
-      "price_usd_gal": 6.791,
+      "price_usd_gal": 6.643,
       "label": "West Coast excluding California",
       "padd": "R5XCA"
     }
@@ -221,5 +221,5 @@
   "source": "U.S. Energy Information Administration weekly retail diesel survey",
   "source_url": "https://www.eia.gov/petroleum/gasdiesel/xls/psw18vwall.xls",
   "note": "EIA publishes diesel by district, not by state. State pages show the figure for the district the state sits in, and say so.",
-  "updated": "2026-09-29T13:03:59.365892+00:00"
+  "updated": "2026-09-29T13:53:29.965124+00:00"
 }

@@ -118,97 +118,97 @@
     "range_pct": "91%"
   },
   "eia": {
-    "us_national_usd_gal": "6.529",
-    "us_national_cpl": "244.4",
-    "nadi": "255.6",
-    "ca_us_gap": "22.4",
+    "us_national_usd_gal": "6.382",
+    "us_national_cpl": "238.9",
+    "nadi": "252.8",
+    "ca_us_gap": "27.9",
     "ca_higher": true,
     "gap_word": "Canada higher",
-    "date": "2026-09-21",
+    "date": "2026-09-28",
     "padds_usd_gal": {
-      "east_coast": 6.268,
-      "new_england": 6.517,
-      "central_atlantic": 6.546,
-      "lower_atlantic": 6.139,
-      "midwest": 6.68,
-      "gulf_coast": 6.177,
-      "rocky_mountain": 6.34,
-      "west_coast": 7.456,
-      "california": 8.246,
-      "west_coast_ex_california": 6.791
+      "east_coast": 6.137,
+      "new_england": 6.51,
+      "central_atlantic": 6.531,
+      "lower_atlantic": 5.953,
+      "midwest": 6.526,
+      "gulf_coast": 5.955,
+      "rocky_mountain": 6.407,
+      "west_coast": 7.357,
+      "california": 8.181,
+      "west_coast_ex_california": 6.643
     },
     "padds_cpl": {
-      "east_coast": 234.6,
-      "new_england": 243.9,
-      "central_atlantic": 245.0,
-      "lower_atlantic": 229.8,
-      "midwest": 250.0,
-      "gulf_coast": 231.2,
-      "rocky_mountain": 237.3,
-      "west_coast": 279.1,
-      "california": 308.6,
-      "west_coast_ex_california": 254.2
+      "east_coast": 229.7,
+      "new_england": 243.7,
+      "central_atlantic": 244.4,
+      "lower_atlantic": 222.8,
+      "midwest": 244.3,
+      "gulf_coast": 222.9,
+      "rocky_mountain": 239.8,
+      "west_coast": 275.4,
+      "california": 306.2,
+      "west_coast_ex_california": 248.6
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
-        "usd_gal": "6.268",
-        "cpl": "234.6"
+        "usd_gal": "6.137",
+        "cpl": "229.7"
       },
       {
         "key": "new_england",
         "label": "New England (PADD 1A)",
-        "usd_gal": "6.517",
-        "cpl": "243.9"
+        "usd_gal": "6.510",
+        "cpl": "243.7"
       },
       {
         "key": "central_atlantic",
         "label": "Central Atlantic (PADD 1B)",
-        "usd_gal": "6.546",
-        "cpl": "245.0"
+        "usd_gal": "6.531",
+        "cpl": "244.4"
       },
       {
         "key": "lower_atlantic",
         "label": "Lower Atlantic (PADD 1C)",
-        "usd_gal": "6.139",
-        "cpl": "229.8"
+        "usd_gal": "5.953",
+        "cpl": "222.8"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
-        "usd_gal": "6.680",
-        "cpl": "250.0"
+        "usd_gal": "6.526",
+        "cpl": "244.3"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
-        "usd_gal": "6.177",
-        "cpl": "231.2"
+        "usd_gal": "5.955",
+        "cpl": "222.9"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
-        "usd_gal": "6.340",
-        "cpl": "237.3"
+        "usd_gal": "6.407",
+        "cpl": "239.8"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
-        "usd_gal": "7.456",
-        "cpl": "279.1"
+        "usd_gal": "7.357",
+        "cpl": "275.4"
       },
       {
         "key": "california",
         "label": "California",
-        "usd_gal": "8.246",
-        "cpl": "308.6"
+        "usd_gal": "8.181",
+        "cpl": "306.2"
       },
       {
         "key": "west_coast_ex_california",
         "label": "West Coast excluding California",
-        "usd_gal": "6.791",
-        "cpl": "254.2"
+        "usd_gal": "6.643",
+        "cpl": "248.6"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
@@ -342,22 +342,22 @@
     }
   ],
   "us_low_code": "LAtl",
-  "us_low": "6.139",
+  "us_low": "5.953",
   "us_high_code": "Cal",
   "us_low_name": "Lower Atlantic (PADD 1C)",
   "us_high_name": "California",
-  "us_high": "8.246",
-  "us_spread": "2.107",
-  "us_national": "6.529",
-  "us_national_pct": 18.5,
-  "us_as_of": "2026-09-21",
+  "us_high": "8.181",
+  "us_spread": "2.228",
+  "us_national": "6.382",
+  "us_national_pct": 19.3,
+  "us_as_of": "2026-09-28",
   "us_source": "EIA weekly retail diesel survey",
   "districts": [
     {
       "code": "LAtl",
       "name": "Lower Atlantic (PADD 1C)",
       "slug": "lower-atlantic",
-      "price": "6.139",
+      "price": "5.953",
       "pct": 0.0,
       "rowclass": "lo"
     },
@@ -365,76 +365,76 @@
       "code": "GC",
       "name": "Gulf Coast (PADD 3)",
       "slug": "gulf-coast",
-      "price": "6.177",
-      "pct": 1.8,
+      "price": "5.955",
+      "pct": 0.1,
       "rowclass": ""
     },
     {
       "code": "EC",
       "name": "East Coast (PADD 1)",
       "slug": "east-coast",
-      "price": "6.268",
-      "pct": 6.1,
+      "price": "6.137",
+      "pct": 8.3,
       "rowclass": ""
     },
     {
       "code": "RM",
       "name": "Rocky Mountain (PADD 4)",
       "slug": "rocky-mountain",
-      "price": "6.340",
-      "pct": 9.5,
+      "price": "6.407",
+      "pct": 20.4,
       "rowclass": ""
     },
     {
       "code": "NE",
       "name": "New England (PADD 1A)",
       "slug": "new-england",
-      "price": "6.517",
-      "pct": 17.9,
-      "rowclass": ""
-    },
-    {
-      "code": "CAtl",
-      "name": "Central Atlantic (PADD 1B)",
-      "slug": "central-atlantic",
-      "price": "6.546",
-      "pct": 19.3,
+      "price": "6.510",
+      "pct": 25.0,
       "rowclass": ""
     },
     {
       "code": "MW",
       "name": "Midwest (PADD 2)",
       "slug": "midwest",
-      "price": "6.680",
+      "price": "6.526",
       "pct": 25.7,
+      "rowclass": ""
+    },
+    {
+      "code": "CAtl",
+      "name": "Central Atlantic (PADD 1B)",
+      "slug": "central-atlantic",
+      "price": "6.531",
+      "pct": 25.9,
       "rowclass": ""
     },
     {
       "code": "WCx",
       "name": "West Coast excluding California",
       "slug": "west-coast-ex-california",
-      "price": "6.791",
-      "pct": 30.9,
+      "price": "6.643",
+      "pct": 31.0,
       "rowclass": ""
     },
     {
       "code": "WC",
       "name": "West Coast (PADD 5)",
       "slug": "west-coast",
-      "price": "7.456",
-      "pct": 62.5,
+      "price": "7.357",
+      "pct": 63.0,
       "rowclass": ""
     },
     {
       "code": "Cal",
       "name": "California",
       "slug": "california",
-      "price": "8.246",
+      "price": "8.181",
       "pct": 100.0,
       "rowclass": "hi"
     }
   ],
-  "updated_at": "2026-09-29 13:52",
-  "updated_iso": "2026-09-29T13:52:50+00:00",
-  "build_version": "1790689970"
+  "updated_at": "2026-09-29 13:53",
+  "updated_iso": "2026-09-29T13:53:42+00:00",
+  "build_version": "1790690022"
 }
