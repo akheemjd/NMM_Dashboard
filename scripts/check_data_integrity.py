@@ -23,6 +23,7 @@ Run: python scripts/check_data_integrity.py
 Exit 0 = clean, 1 = violation.
 """
 
+import datetime
 import json
 import os
 import pathlib
@@ -53,20 +54,37 @@ def _load(name):
         return None
 
 
-def check_lookback_not_latest():
-    """A lookback has to compare against something older than the newest point."""
+def check_history_is_fresh():
+    """Every tracked series must have a recent observation, checked per series.
+
+    This is the check that would have caught a genuine print-date stall: if NRCan's feed
+    stops advancing its date, normalize() keeps writing observations onto the SAME date
+    (snapshot overwrites the newest by design so revisions propagate) and the history
+    silently collapses a week of prints into one row.
+
+    Per series, not the max across them. The first version took the newest of all pairs,
+    so a stalled diesel print was invisible whenever FX was current — which defeats the
+    point. eia/national is legitimately older than the rest because EIA publishes with a
+    lag, so each source carries its own bound.
+    """
+    BOUND_DAYS = {
+        "diesel": 10,   # NRCan weekly, printed Tuesdays
+        "fx": 5,        # Bank of Canada, daily on business days
+        "eia": 10,      # EIA weekly, published with a lag
+        "nadi": 10,
+    }
     bad = []
     for series, key in PAIRS:
-        now = history.latest(series, key)
-        if now is None:
+        pts = history._points(series, key)
+        if not pts:
+            bad.append(f"{series}/{key} has no observations")
             continue
-        for n in (7, 30):
-            then = history.value_at(series, key, n)
-            if then is not None and then == now:
-                bad.append(f"{series}/{key} {n}d returned the newest value "
-                           f"({now}) as its own comparator")
+        age = (datetime.date.today() - pts[-1][0]).days
+        bound = BOUND_DAYS.get(series, 10)
+        if age > bound:
+            bad.append(f"{series}/{key} newest is {pts[-1][0]}, {age} days old "
+                       f"(bound {bound}) — the print date has stalled")
     return bad
-
 
 def check_chart_matches_headline():
     """The chart's latest point must equal the published national average."""
@@ -927,7 +945,7 @@ def check_fx_markers():
 CHECKS = (
     ("every og:image resolves to a built file", check_og_images_exist),
     ("the currency layer is complete and non-nesting", check_fx_markers),
-    ("lookback never returns the newest point", check_lookback_not_latest),
+        ("history is fresh", check_history_is_fresh),
     ("chart headline agrees with the cited average", check_chart_matches_headline),
     ("spread uses the ten-province definition", check_spread_definition),
     ("one 30-day FX average across the site", check_fx_average_agreement),
