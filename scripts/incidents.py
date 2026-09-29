@@ -7,6 +7,32 @@ import json, os, urllib.request
 from datetime import datetime, timezone
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _env(name):
+    """Read a setting from the environment or the repo .env.
+
+    The deploy cron runs in a fresh shell with no exports, so .env is the source of truth.
+    Same reasoning as ghost_publish._load_dotenv.
+    """
+    v = os.environ.get(name)
+    if v:
+        return v.strip()
+    path = os.path.join(ROOT, ".env")
+    if not os.path.exists(path):
+        return ""
+    for line in open(path, encoding="utf-8"):
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, val = line.split("=", 1)
+        if k.strip() == name:
+            return val.strip()
+    return ""
+
+
+ON511_KEY = _env("NMM_ON511_API_KEY")
 
 def fetch_json(url, timeout=15):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -15,39 +41,46 @@ def fetch_json(url, timeout=15):
 def collect_incidents():
     incidents = []
 
-    # Ontario 511
-    try:
-        data = fetch_json("https://511on.ca/api/v2/get/event?format=json")
-        for ev in data:
-            # Filter to trucking-relevant: closures, construction, collisions
-            etype = (ev.get("EventType") or "").lower()
-            subtype = (ev.get("EventSubType") or "").lower()
-            desc = (ev.get("Description") or "")
+    # Ontario 511 — requires a developer key.
+    if not ON511_KEY:
+        print("  ON 511: NMM_ON511_API_KEY is not set — Ontario incidents will be missing. "
+              "Get a free key at https://511on.ca/developers/resources")
+    else:
+        try:
+            data = fetch_json("https://511on.ca/api/v2/get/event?format=json"
+                              f"&key={ON511_KEY}")
+            if isinstance(data, dict) and data.get("error"):
+                raise RuntimeError(data["error"])
+            for ev in data:
+                # Filter to trucking-relevant: closures, construction, collisions
+                etype = (ev.get("EventType") or "").lower()
+                subtype = (ev.get("EventSubType") or "").lower()
+                desc = (ev.get("Description") or "")
 
-            # Only keep incidents that affect trucking
-            relevant = any(w in etype or w in subtype or w in desc.lower()
-                         for w in ["closure", "collision", "accident", "construction",
-                                   "incident", "hazard", "roadwork", "emergency"])
+                # Only keep incidents that affect trucking
+                relevant = any(w in etype or w in subtype or w in desc.lower()
+                             for w in ["closure", "collision", "accident", "construction",
+                                       "incident", "hazard", "roadwork", "emergency"])
 
-            if relevant and ev.get("Latitude") and ev.get("Longitude"):
-                incidents.append({
-                    "id": f"ON-{ev['ID']}",
-                    "province": "ON",
-                    "highway": ev.get("RoadwayName", ""),
-                    "direction": ev.get("DirectionOfTravel", ""),
-                    "description": desc,
-                    "event_type": etype,
-                    "severity": ev.get("Severity", ""),
-                    "closure": ev.get("IsFullClosure", False),
-                    "lanes": ev.get("LanesAffected", ""),
-                    "lat": float(ev["Latitude"]),
-                    "lng": float(ev["Longitude"]),
-                    "start": ev.get("StartDate"),
-                    "end": ev.get("PlannedEndDate"),
-                    "updated": ev.get("LastUpdated"),
-                })
-    except Exception as e:
-        print(f"  ON 511: {e}")
+                if relevant and ev.get("Latitude") and ev.get("Longitude"):
+                    incidents.append({
+                        "id": f"ON-{ev['ID']}",
+                        "province": "ON",
+                        "highway": ev.get("RoadwayName", ""),
+                        "direction": ev.get("DirectionOfTravel", ""),
+                        "description": desc,
+                        "event_type": etype,
+                        "severity": ev.get("Severity", ""),
+                        "closure": ev.get("IsFullClosure", False),
+                        "lanes": ev.get("LanesAffected", ""),
+                        "lat": float(ev["Latitude"]),
+                        "lng": float(ev["Longitude"]),
+                        "start": ev.get("StartDate"),
+                        "end": ev.get("PlannedEndDate"),
+                        "updated": ev.get("LastUpdated"),
+                    })
+        except Exception as e:
+            print(f"  ON 511: {e}")
 
     # BC DriveBC
     try:
