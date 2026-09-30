@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-314210",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at CARLINGVIEW DRIVE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.68125746,
+      "lng": -79.57522487,
+      "start": 1790777760,
+      "end": null,
+      "updated": 1790777760
+    },
+    {
+      "id": "ON-314197",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 11 Northbound  at HURONIA ROAD, Severn. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 44.647512,
+      "lng": -79.41895,
+      "start": 1790776860,
+      "end": null,
+      "updated": 1790776860
+    },
+    {
+      "id": "ON-314195",
+      "province": "ON",
+      "highway": "HWY 10",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 10 Northbound  between Road 120 and Road 120, Markdale. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.29487,
+      "lng": -80.60865,
+      "start": 1790856000,
+      "end": 1790888400,
+      "updated": 1790776080
+    },
+    {
       "id": "ON-314171",
       "province": "ON",
       "highway": "HWY 11",
@@ -47,22 +95,6 @@
       "start": 1790775480,
       "end": null,
       "updated": 1790775480
-    },
-    {
-      "id": "ON-314166",
-      "province": "ON",
-      "highway": "HWY 144",
-      "direction": "Both Directions",
-      "description": "Disabled Vehicle on HWY 144 Both Directions  at CPR S-CARTIER-10521, Cartier. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 46.625151587,
-      "lng": -81.453181046,
-      "start": 1790775360,
-      "end": null,
-      "updated": 1790775360
     },
     {
       "id": "ON-314164",
@@ -383,38 +415,6 @@
       "start": 1791165600,
       "end": 1791540000,
       "updated": 1790701980
-    },
-    {
-      "id": "ON-312914",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Westbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Westbound On-ramp at REGIONAL ROAD 57/BOWMANVILLE AVE, Clarington. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.98148,
-      "lng": -78.74343,
-      "start": 1791165600,
-      "end": 1791540000,
-      "updated": 1790701740
-    },
-    {
-      "id": "ON-312915",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at DARLINGTON CLARKE TOWNLINE, Clarington. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.00081,
-      "lng": -78.66665,
-      "start": 1791165600,
-      "end": 1791540000,
-      "updated": 1790701560
     },
     {
       "id": "drivebc.ca/RIDE-102851",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T13:55:34.308255+00:00",
+  "updated": "2026-09-30T14:26:34.875507+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

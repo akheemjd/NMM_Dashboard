@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-30 13:55",
-  "updated_iso": "2026-09-30T13:55:48+00:00",
-  "build_version": "1790776548",
+  "updated_at": "2026-09-30 14:26",
+  "updated_iso": "2026-09-30T14:26:48+00:00",
+  "build_version": "1790778408",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 9,
+    "active_count": 10,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 144",
+    "status_line": "HWY 401, HWY 11",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Northbound  at SHOREVIEW DRIVE, Severn. Left lane\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at CARLINGVIEW DRIVE, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Southbound  at AGNEW RD, Severn. Left lane closed.",
+        "what": "Highway Maintenance on HWY 11 Northbound  at HURONIA ROAD, Severn. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT"
+      "captured_at": "10:08 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 MDT"
+      "captured_at": "08:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -526,9 +526,9 @@
     },
     {
       "category": "equipment",
-      "source": "The Trucker",
-      "headline": "Inflation cooled slightly last month even as consumers stepped up spending",
-      "url": "https://www.thetrucker.com/trucking-news/business/inflation-cooled-slightly-last-month-even-as-consumers-stepped-up-spending",
+      "source": "Trucking Dive",
+      "headline": "Trucking fleets repurpose diesel tractors with swappable electric batteries",
+      "url": "https://www.truckingdive.com/news/trucking-fleets-repurpose-diesel-tractors-with-swappable-electric-batteries/831480/",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
