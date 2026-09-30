@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-30 00:58",
-  "updated_iso": "2026-09-30T00:58:41+00:00",
-  "build_version": "1790729921",
+  "updated_at": "2026-09-30 01:29",
+  "updated_iso": "2026-09-30T01:29:32+00:00",
+  "build_version": "1790731772",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 4,
+    "active_count": 6,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, HWY 7",
+    "status_line": "HWY 144, HWY 401, HWY 427, QEW",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Right\u2026",
+        "road": "HWY 144",
+        "what": "Other on HWY 144 Both Directions  at CPR S-CARTIER-10521, Cartier. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound ON-RAMP at GUELPH LINE, Burlington. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at DUFFERIN STREET, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -376,7 +376,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 EDT"
+      "captured_at": "21:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT"
+      "captured_at": "18:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -460,6 +460,24 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2372B (chained 2017)",
+      "value": "-0.0%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Longer-term freight demand trend."
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 265.6\u00a2/L and 35 L/100km",
