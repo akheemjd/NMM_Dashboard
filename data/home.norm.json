@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-30 12:38",
-  "updated_iso": "2026-09-30T12:38:30+00:00",
-  "build_version": "1790771910",
+  "updated_at": "2026-09-30 12:40",
+  "updated_iso": "2026-09-30T12:40:05+00:00",
+  "build_version": "1790772005",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,17 +347,10 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 3,
+    "active_count": 1,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 3, HWY 401",
+    "status_line": "HWY 3",
     "incidents": [
-      {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound RAMP at EASTGATE/CAWTHRA,\u2026",
-        "severity_label": "Collision",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
       {
         "road": "HWY 3",
         "what": "Disabled Vehicle on HWY 3 Eastbound  at Roundabout, Windsor. Lane closed.",
@@ -416,7 +409,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -426,17 +419,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 MDT"
+      "captured_at": "06:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 PDT"
+      "captured_at": "05:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:06 CDT"
+      "captured_at": "07:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -518,18 +511,18 @@
   "theft": [],
   "news": [
     {
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "CBP gets 450 pounds of cocaine headed for Canada",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/cbp-gets-450-pounds-of-cocaine-headed-for-canada",
+      "why": "Industry movement worth tracking."
+    },
+    {
       "category": "drivers",
       "source": "The Trucker",
       "headline": "Driver shortage and turnover outpace economic concerns in 2026 Carrier Survey",
       "url": "https://www.thetrucker.com/trucking-news/business/driver-shortage-and-turnover-outpace-economic-concerns-in-2026-carrier-survey",
       "why": "Driver supply and pay shape capacity and rates."
-    },
-    {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "New CDL training program opens doors to trucking careers in North Carolina",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/new-cdl-training-program-opens-doors-to-trucking-careers-in-north-carolina",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
