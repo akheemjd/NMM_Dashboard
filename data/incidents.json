@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-313079",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at NORTH OF 401 BEFORE SHEPPARD, Toronto. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.72174659,
+      "lng": -79.52240528,
+      "start": 1790727120,
+      "end": null,
+      "updated": 1790727120
+    },
+    {
       "id": "ON-313077",
       "province": "ON",
       "highway": "HWY 404",
@@ -383,22 +399,6 @@
       "start": 1791165600,
       "end": 1791540000,
       "updated": 1790701320
-    },
-    {
-      "id": "ON-312969",
-      "province": "ON",
-      "highway": "HWY 406",
-      "direction": "Northbound",
-      "description": "Nightly Maintenance on HWY 406 Northbound  between MCGUIRE STREET / RACE STREET and ST. PAUL STREET WEST / BURGOYNE BRIDGE, St. Catharines. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.153824,
-      "lng": -79.24412,
-      "start": 1791241200,
-      "end": 1791284400,
-      "updated": 1790699520
     },
     {
       "id": "drivebc.ca/RIDE-102401",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T00:08:18.869635+00:00",
+  "updated": "2026-09-30T00:17:16.482589+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
