@@ -1,38 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-314235",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Collision on HWY 404 Northbound  at SHEPPARD AVE, Toronto. 4 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "4 left lanes closed",
-      "lat": 43.78176629,
-      "lng": -79.34052528,
-      "start": 1790783040,
-      "end": null,
-      "updated": 1790783100
-    },
-    {
-      "id": "ON-314233",
-      "province": "ON",
-      "highway": "HWY 71",
-      "direction": "Both Directions",
-      "description": "Special Event on HWY 71 Both Directions  at W JCT HWY 11, Emo. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 48.643333898,
-      "lng": -93.915982682,
-      "start": 1790782740,
-      "end": null,
-      "updated": 1790782740
-    },
-    {
       "id": "ON-314229",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -49,22 +17,6 @@
       "updated": 1790781960
     },
     {
-      "id": "ON-314223",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at DIXON RD, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.70752137,
-      "lng": -79.55527932,
-      "start": 1790781360,
-      "end": null,
-      "updated": 1790781360
-    },
-    {
       "id": "ON-314221",
       "province": "ON",
       "highway": "HWY 17",
@@ -79,22 +31,6 @@
       "start": 1790781120,
       "end": null,
       "updated": 1790781120
-    },
-    {
-      "id": "ON-314217",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 403 MISSISSAUGA Westbound  at HWY 5 / DUNDAS STREET, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.51195024,
-      "lng": -79.69314879,
-      "start": 1790779560,
-      "end": null,
-      "updated": 1790779560
     },
     {
       "id": "ON-314197",
@@ -415,6 +351,70 @@
       "start": 1791165600,
       "end": 1791540000,
       "updated": 1790702160
+    },
+    {
+      "id": "ON-312908",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Westbound On-ramp at REGIONAL ROAD 57/BOWMANVILLE AVE, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.98148,
+      "lng": -78.74343,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790701980
+    },
+    {
+      "id": "ON-312914",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Westbound On-ramp at REGIONAL ROAD 57/BOWMANVILLE AVE, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.98148,
+      "lng": -78.74343,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790701740
+    },
+    {
+      "id": "ON-312915",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at DARLINGTON CLARKE TOWNLINE, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.00081,
+      "lng": -78.66665,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790701560
+    },
+    {
+      "id": "ON-312916",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound Off-ramp at DARLINGTON CLARKE TOWNLINE, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.00081,
+      "lng": -78.66665,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790701320
     },
     {
       "id": "drivebc.ca/RIDE-102851",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T15:59:36.836122+00:00",
+  "updated": "2026-09-30T16:30:45.770035+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
