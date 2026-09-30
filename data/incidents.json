@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-313097",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at SB EXIT 189 Lake Joseph Rd, south of Mactier, Mactier. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 45.086213852,
-      "lng": -79.78543039,
-      "start": 1790733540,
-      "end": null,
-      "updated": 1790733540
-    },
-    {
       "id": "ON-313072",
       "province": "ON",
       "highway": "QEW",
@@ -47,22 +31,6 @@
       "start": 1790725980,
       "end": null,
       "updated": 1790730840
-    },
-    {
-      "id": "ON-313068",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 7 Both Directions  at HEIGHTS RD, Reaboro. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.29853,
-      "lng": -78.60669,
-      "start": 1790724780,
-      "end": null,
-      "updated": 1790724780
     },
     {
       "id": "ON-313047",
@@ -397,6 +365,38 @@
       "lat": 43.791344,
       "lng": -79.53936,
       "start": 1791165600,
+      "end": 1791543600,
+      "updated": 1790699460
+    },
+    {
+      "id": "ON-312902",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Collector between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790699460
+    },
+    {
+      "id": "ON-312905",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between LANGSTAFF ROAD and BASS PRO MILLS DRIVE, Vaughan. 4 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "4 Alternating Lane(s)",
+      "lat": 43.809307,
+      "lng": -79.54362,
+      "start": 1791162000,
       "end": 1791543600,
       "updated": 1790699460
     },
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T02:31:17.616521+00:00",
+  "updated": "2026-09-30T03:02:31.798214+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
