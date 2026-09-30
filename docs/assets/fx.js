@@ -52,12 +52,24 @@
     if (tog && tog.getAttribute("data-curdefault") === "USD") pageDefault = "USD";
   } catch (e) {}
 
-  try {
-    var stored = localStorage.getItem(STORE);
-    currency = stored === "USD" ? "USD" : (stored === "CAD" ? "CAD" : pageDefault);
-  } catch (e) {
-    currency = pageDefault;
-  }
+    // A pinned page wins over everything, including a stored choice. The US tree
+    // carries no toggle, so if a stored CAD could convert these figures the reader
+    // would have no control on the page to undo it.
+    var pinned = "";
+    try {
+      pinned = document.documentElement.getAttribute("data-curfixed") || "";
+    } catch (e) {}
+
+    if (pinned === "USD" || pinned === "CAD") {
+      currency = pinned;
+    } else {
+      try {
+        var stored = localStorage.getItem(STORE);
+        currency = stored === "USD" ? "USD" : (stored === "CAD" ? "CAD" : pageDefault);
+      } catch (e) {
+        currency = pageDefault;
+      }
+    }
 
   function litresPerGallon() {
     return LITRES_PER_GALLON;

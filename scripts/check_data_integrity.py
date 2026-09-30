@@ -189,6 +189,60 @@ def check_fx_average_agreement():
     return out
 
 
+
+def check_us_tree_has_no_controls():
+    """The US tree carries no country switch and no currency toggle, and is pinned to USD.
+
+    A reader on the US tree is already on the US side, and those pages price in US dollars
+    per gallon by rule. The switch and the toggle asked a question the page had answered.
+
+    The pin is the load-bearing half. fx.js resolves currency as stored choice, then page
+    default, then CAD. Without data-curfixed a reader who once chose CAD would see the US
+    tree converted, with no toggle on the page to undo it.
+    """
+    import os
+    docs = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+    out = []
+    checked = 0
+
+    for dirpath, _dirs, files in os.walk(docs):
+        for fname in files:
+            if not fname.endswith(".html"):
+                continue
+            path = os.path.join(dirpath, fname)
+            rel = os.path.relpath(path, docs).replace("\\", "/")
+            if rel == "index.html":
+                rel = ""
+            elif rel.endswith("/index.html"):
+                rel = rel[:-len("/index.html")]
+            else:
+                rel = rel[:-len(".html")]
+            page = "/" + rel + "/" if rel else "/"
+            top = rel.split("/")[0] if rel else ""
+
+            # The front door and the 404 have no country, so no controls either.
+            # rel has had .html stripped by this point, so the 404 arrives as "404".
+            if top in ("", "404"):
+                continue
+
+            html = open(path, encoding="utf-8", errors="replace").read()
+
+            if top in ("us", "us-diesel"):
+                checked += 1
+                if 'class="seg"' in html:
+                    out.append(f"{page} carries the country switch")
+                if "fxtog" in html:
+                    out.append(f"{page} carries the currency toggle")
+                if 'data-curfixed="USD"' not in html:
+                    out.append(f"{page} is not pinned to USD")
+            elif 'class="seg"' not in html:
+                out.append(f"{page} lost the country switch it should have")
+
+    if not checked:
+        out.append("found no US pages to check — the walk is looking in the wrong place")
+    return out
+
+
 def check_jsonld_valid():
     """Every built page's JSON-LD must parse.
 
@@ -973,6 +1027,7 @@ CHECKS = (
         ("one nav, five strips, one drawer", check_one_nav_per_page),
         ("nav Diesel resolves in the reader tree", check_nav_per_tree),
         ("no country compared to its own average", check_cross_border_sentence),
+    ("US tree carries no controls and is pinned to USD", check_us_tree_has_no_controls),
 )
 
 

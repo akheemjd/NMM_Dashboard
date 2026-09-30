@@ -364,6 +364,27 @@ def point_nav_at_tree(html, rel):
 CHOOSER_PAGES = ("index.html", "404.html")
 
 
+def is_us_tree(rel):
+    """True for pages on the US side of the two trees.
+
+    /us/ and every /us-diesel/ page, including the 51 state pages and the 10 district pages.
+    These price in US dollars per gallon by rule, so a country switch asks a question the
+    page has answered and a currency toggle offers a unit the reader did not come for.
+    """
+    return rel == "us" or rel == "us-diesel" or rel.startswith("us-diesel/")
+
+
+def pin_currency(html, rel, code):
+    """Fix a page's display currency, whatever the reader has stored.
+
+    fx.js reads this before the stored choice. Without it, stripping the toggle would leave
+    a reader who once chose CAD looking at the US tree in Canadian dollars with no way back.
+    """
+    if "data-curfixed=" in html:
+        return html
+    return re.sub(r"<html\b([^>]*)>", rf'<html\1 data-curfixed="{code}">', html, count=1)
+
+
 def is_chooser(rel, fn):
     """True for the front door and the not-found page.
 
@@ -711,8 +732,15 @@ def main():
             html = point_nav_at_tree(html, rel)
             html = point_nav_at_choice(html, rel, fn)
             if not is_chooser(rel, fn):
-                html = add_country_switch(html, rel)
-                html = add_toggle(html, rel)
+                # The US tree carries no country switch and no currency toggle: it is
+                # already on the US side and already priced in US dollars per gallon,
+                # so both ask a question the page has answered. The chooser is native
+                # for the same reason.
+                if is_us_tree(rel):
+                    html = pin_currency(html, rel, "USD")
+                else:
+                    html = add_country_switch(html, rel)
+                    html = add_toggle(html, rel)
             html = add_nav_button(html)
             html = add_freshness(html, rel)
             open(path, "w", encoding="utf-8").write(html)
