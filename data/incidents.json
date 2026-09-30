@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-314392",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MORNINGSIDE AVE, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.79650834,
+      "lng": -79.19703139,
+      "start": 1790810100,
+      "end": null,
+      "updated": 1790810100,
+      "scheduled": false
+    },
+    {
       "id": "ON-314360",
       "province": "ON",
       "highway": "HWY 401",
@@ -943,23 +960,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-312909",
-      "province": "ON",
-      "highway": "HWY 418",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 418 Southbound Off-ramp at REGIONAL HIGHWAY 2, Clarington. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.91408,
-      "lng": -78.75521,
-      "start": 1791165600,
-      "end": 1791540000,
-      "updated": 1790702640,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-09-30T23:13:56.684737+00:00",
+  "updated": "2026-09-30T23:32:00.282599+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
