@@ -300,6 +300,67 @@ def check_incidents_names_its_coverage():
 
     return out
 
+
+def check_scheduled_work_is_not_live():
+    """No future-dated closure may appear in the active incident list.
+
+    INCIDENTS is the amber "unplanned, happening now" layer and ROADWORK is the blue
+    "planned" one. Caltrans is entirely permit-scheduled, so adding it put planned October
+    work on a live-closure map. The lists are read out of the built page rather than from the
+    source data, because the page is what a reader sees.
+    """
+    import datetime
+    import json
+    import os
+    import re
+    docs = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+    path = os.path.join(docs, "road-incidents", "index.html")
+    if not os.path.exists(path):
+        return ["/road-incidents/ is missing"]
+
+    html = open(path, encoding="utf-8", errors="replace").read()
+    out = []
+    today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
+
+    m = re.search(r"window\.INCIDENTS\s*=\s*(\[.*?\]);", html, re.S)
+    if not m:
+        return ["/road-incidents/ has no INCIDENTS data"]
+    try:
+        active = json.loads(m.group(1))
+    except ValueError as e:
+        return [f"INCIDENTS does not parse: {e}"]
+
+    # An active entry must not be one that has not started yet.
+    future = []
+    for i in active:
+        start = str(i.get("start_date") or "")[:10]
+        if start and start > today:
+            future.append((i.get("road", "?"), start))
+    if future:
+        sample = ", ".join(f"{r} from {d}" for r, d in future[:3])
+        out.append(f"{len(future)} future-dated closures are in the active incident list: {sample}")
+
+    m2 = re.search(r"window\.ROADWORK\s*=\s*(\[.*?\]);", html, re.S)
+    if not m2:
+        out.append("/road-incidents/ has no ROADWORK data")
+        return out
+    try:
+        roadwork = json.loads(m2.group(1))
+    except ValueError as e:
+        out.append(f"ROADWORK does not parse: {e}")
+        return out
+
+    if not roadwork:
+        out.append("/road-incidents/ has an empty scheduled roadwork list")
+    else:
+        blank = [i for i in roadwork if not str(i.get("when") or "").strip()]
+        if blank:
+            out.append(f"{len(blank)} scheduled entries have no date, so a reader cannot "
+                       f"tell when the work happens")
+
+    return out
+
+
 def check_jsonld_valid():
     """Every built page's JSON-LD must parse.
 
@@ -1086,6 +1147,7 @@ CHECKS = (
         ("no country compared to its own average", check_cross_border_sentence),
     ("no page carries a control and every page is pinned", check_us_tree_has_no_controls),
     ("incidents page names its coverage", check_incidents_names_its_coverage),
+    ("scheduled work is not drawn as live", check_scheduled_work_is_not_live),
 )
 
 

@@ -52,6 +52,11 @@ CALTRANS_DISTRICTS = {
 CALTRANS_URL = "https://cwwp2.dot.ca.gov/data/d{d}/lcs/lcsStatusD{d}.xml"
 
 
+def _today():
+    """Today as an ISO date string, for comparing against Caltrans' date fields."""
+    return datetime.now(timezone.utc).date().isoformat()
+
+
 def _tag(rec, name):
     """First value of a tag, stripped, or ''."""
     m = re.search(rf"<{name}>([^<]*)</{name}>", rec)
@@ -99,7 +104,16 @@ def _caltrans_district(district, label):
         if county:
             highway = f"{route} in {county} County"
 
+        start_d = _tag(rec, "closureStartDate")
+        end_d = _tag(rec, "closureEndDate")
+        # LCS is a permit schedule. A closure that has not opened yet is planned work, not a
+        # live incident, and the page draws those two things differently.
+        scheduled = bool(start_d) and start_d > _today()
+
         out.append({
+            "scheduled": scheduled,
+            "start_date": start_d,
+            "end_date": end_d,
             "id": f"CA-{_tag(rec, 'index')}",
             "province": "CA",
             "region_label": label,
@@ -253,6 +267,18 @@ def collect_incidents():
         except Exception as e:
             print(f"  Caltrans D{_d}: {e}")
 
+    # Every source gets the same scheduled/active decision, so one rule runs the split.
+    _today_s = _today()
+    for _i in incidents:
+        if _i.get("scheduled") is None:
+            _st = _i.get("start")
+            if isinstance(_st, (int, float)) and _st > 0:
+                _i["scheduled"] = datetime.fromtimestamp(_st, timezone.utc).date().isoformat() > _today_s
+            elif isinstance(_st, str) and len(_st) >= 10 and _st[:4].isdigit():
+                _i["scheduled"] = _st[:10] > _today_s
+            else:
+                _i["scheduled"] = False
+
     # Normalize timestamps and sort
     for i in incidents:
         ts = i.get("updated")
@@ -299,7 +325,9 @@ def collect_incidents():
     for i in incidents:
         by_prov[i.get("province", "?")] = by_prov.get(i.get("province", "?"), 0) + 1
     parts = ", ".join(f"{k} {v}" for k, v in sorted(by_prov.items())) or "none"
-    print(f"  Incidents: {len(incidents)} road events ({parts})")
+    _sched = sum(1 for i in incidents if i.get("scheduled"))
+    print(f"  Incidents: {len(incidents)} road events ({parts}) "
+          f"- {_sched} scheduled, {len(incidents) - _sched} active")
 
 if __name__ == "__main__":
     collect_incidents()

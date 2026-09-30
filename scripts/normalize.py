@@ -734,6 +734,12 @@ inc_json = []
 _seen_region = {}
 _inc_kept = []
 for _i in raw_inc.get("incidents", []):
+    # Scheduled work belongs in the blue list, not the amber one. The map legend draws them
+    # differently, so putting planned lane closures in INCIDENTS shows a reader a future
+    # closure as though it were live. Caltrans is entirely permit-scheduled work, which is
+    # how this surfaced.
+    if _i.get("scheduled"):
+        continue
     _r = _i.get("province", "?")
     _seen_region[_r] = _seen_region.get(_r, 0) + 1
     if _seen_region[_r] <= 25:
@@ -766,6 +772,45 @@ for i in _inc_kept:
     })
 
 coming_roadwork = []
+_region_rw = {}
+for _i in raw_inc.get("incidents", []):
+    if not _i.get("scheduled"):
+        continue
+    _r = _i.get("province", "?")
+    _region_rw[_r] = _region_rw.get(_r, 0) + 1
+    if _region_rw[_r] > 25:
+        continue
+    _hwy = _i.get("highway", "")
+    if isinstance(_hwy, dict):
+        _hwy = _hwy.get("name", "")
+    # Caltrans gives ISO dates, the 511 feeds give epoch seconds. fmt_ts handles both, and
+    # without it every 511 entry landed in the blue list with a blank "when".
+    def _when(datestr, stamp):
+        """One date format for the whole list.
+
+        The 511 feeds carry epochs and fmt_ts renders them "Oct 05 11:00". Caltrans carries
+        ISO dates, which rendered as "2026-10-04". Two formats in one list read as two
+        systems, so the ISO date is put through the same renderer.
+        """
+        if datestr:
+            try:
+                return fmt_ts(datetime.fromisoformat(str(datestr)[:10]).replace(
+                    tzinfo=timezone.utc).timestamp())
+            except (ValueError, TypeError):
+                return str(datestr)[:10]
+        return fmt_ts(stamp)
+
+    _sd = _when(_i.get("start_date"), _i.get("start", 0))
+    _ed = _when(_i.get("end_date"), _i.get("end", 0))
+    coming_roadwork.append({
+        "road": str(_hwy),
+        "what": clip(_i.get("description", ""), 55),
+        "when": _sd + ((" to " + _ed) if _ed and _ed != _sd else ""),
+        "lanes": _i.get("lanes", ""),
+        "lat": _i.get("lat"),
+        "lng": _i.get("lng"),
+        "region": _r,
+    })
 for i in raw_sorted:
     start = i.get("start", 0) or 0
     if not isinstance(start,(int,float)) or start < now_ts: continue
