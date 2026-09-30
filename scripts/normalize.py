@@ -534,7 +534,14 @@ import time
 now_ts = int(time.time())
 raw_sorted = sorted(raw_inc.get("incidents", []), key=lambda x: int(x.get("start", 0)) if isinstance(x.get("start"), (int,float)) else 0, reverse=True)
 incidents_raw = raw_sorted
-incidents_active = [i for i in incidents_raw if i.get("event_type","") in ("accidentsandincidents","closures")]
+# A whitelist of two magic strings silently dropped every Californian incident the first
+# time Caltrans was added. Match on the words, not on one source's exact spelling.
+_ACTIVE_WORDS = ("accident", "collision", "closure", "incident", "hazard")
+incidents_active = [
+    i for i in incidents_raw
+    if any(w in (i.get("event_type", "") + " " + i.get("description", "")).lower()
+           for w in _ACTIVE_WORDS)
+]
 incidents_list = []
 for i in incidents_active[:2]:  # home shows 2 collisions/closures
     sev = i.get("severity","")
@@ -721,7 +728,18 @@ def fmt_ts(ts):
 
 # Build raw incidents JSON array for the map
 inc_json = []
-for i in raw_inc.get("incidents", [])[:50]:
+# Per region, not one global cut. The collector already caps each source at 25, and slicing
+# the merged list to 50 let Ontario's fresher timestamps crowd British Columbia down to 2 of
+# 50. A cap that lets one source starve another is the same bug as the one in the collector.
+_seen_region = {}
+_inc_kept = []
+for _i in raw_inc.get("incidents", []):
+    _r = _i.get("province", "?")
+    _seen_region[_r] = _seen_region.get(_r, 0) + 1
+    if _seen_region[_r] <= 25:
+        _inc_kept.append(_i)
+
+for i in _inc_kept:
     sev = i.get("severity", "").lower()
     if sev in ("closed", "closure"): sc = "closed"
     elif sev in ("heavy", "major", "high"): sc = "heavy"

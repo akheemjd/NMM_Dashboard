@@ -245,6 +245,61 @@ def check_us_tree_has_no_controls():
     return out
 
 
+
+def check_incidents_names_its_coverage():
+    """The incidents page must name its coverage AND carry incidents from each region.
+
+    It read "the freight corridors we monitor" while listing only Ontario and BC events, and
+    a reader on a US lane had no way to know none of them were American.
+
+    The first version of this check only looked for the words Ontario, British Columbia and
+    California. My own coverage sentence supplied them, so it passed while zero Californian
+    incidents were reaching the map - an event_type whitelist in normalize.py matched two
+    exact 511 strings and dropped every Caltrans record. A guard satisfiable by the label it
+    checks is not a guard, so this parses the built data instead.
+    """
+    import json
+    import os
+    import re
+    docs = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+    path = os.path.join(docs, "road-incidents", "index.html")
+    if not os.path.exists(path):
+        return ["/road-incidents/ is missing"]
+
+    html = open(path, encoding="utf-8", errors="replace").read()
+    out = []
+
+    for must in ("Ontario", "British Columbia", "California"):
+        if must not in html:
+            out.append(f"/road-incidents/ does not name {must} in its coverage")
+    if "not yet coast to coast" not in html:
+        out.append("/road-incidents/ does not say its coverage is incomplete")
+
+    m = re.search(r"window\.INCIDENTS\s*=\s*(\[.*?\]);", html, re.S)
+    if not m:
+        out.append("/road-incidents/ has no INCIDENTS data on the page")
+        return out
+    try:
+        data = json.loads(m.group(1))
+    except ValueError as e:
+        out.append(f"/road-incidents/ INCIDENTS does not parse: {e}")
+        return out
+
+    if not data:
+        out.append("/road-incidents/ INCIDENTS is empty")
+        return out
+
+    roads = [str(d.get("road", "")) for d in data]
+    ontario = [r for r in roads if "HWY" in r.upper()]
+    california = [r for r in roads if r.startswith(("SR-", "I-", "US-", "Route ", "CA-"))]
+    bc = [r for r in roads if r not in ontario and r not in california]
+
+    for label, group in (("Ontario", ontario), ("California", california), ("British Columbia", bc)):
+        if not group:
+            out.append(f"/road-incidents/ names {label} but carries no {label} incidents")
+
+    return out
+
 def check_jsonld_valid():
     """Every built page's JSON-LD must parse.
 
@@ -1030,6 +1085,7 @@ CHECKS = (
         ("nav Diesel resolves in the reader tree", check_nav_per_tree),
         ("no country compared to its own average", check_cross_border_sentence),
     ("no page carries a control and every page is pinned", check_us_tree_has_no_controls),
+    ("incidents page names its coverage", check_incidents_names_its_coverage),
 )
 
 

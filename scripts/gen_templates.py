@@ -910,6 +910,7 @@ INCIDENTS_MAP = '''
     <span class="eyebrow">Freight corridor closures</span>
     <h1>Road incidents</h1>
     <p class="stand">Closures and major collisions on the freight corridors we monitor. Click a pin or a row for detail.</p>
+    <p class="note">Currently Ontario, British Columbia, and three California districts: Central Valley, San Diego and Imperial, and Orange County and Los Angeles. We publish every source that is free and needs no key. Caltrans serves only some of its districts, and other state 511 services publish behind keys we do not hold, so this page is not yet coast to coast.</p>
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 '''

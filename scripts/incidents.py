@@ -3,7 +3,7 @@
 Ontario 511 and BC DriveBC provide free, open incident data.
 """
 
-import json, os, urllib.request
+import json, os, re, urllib.request
 from datetime import datetime, timezone
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
@@ -37,6 +37,90 @@ ON511_KEY = _env("NMM_ON511_API_KEY")
 def fetch_json(url, timeout=15):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     return json.loads(urllib.request.urlopen(req, timeout=timeout).read())
+
+
+
+# ── California ───────────────────────────────────────────────────────────────────────────
+# Caltrans Lane Closure System. Free, no key, XML. Only some districts serve their feed;
+# districts 1 to 9 return HTTP 500. These three are the ones that answer, and they happen to
+# be the freight corridors.
+CALTRANS_DISTRICTS = {
+    10: "Central Valley",
+    11: "San Diego and Imperial",
+    12: "Orange County and Los Angeles",
+}
+CALTRANS_URL = "https://cwwp2.dot.ca.gov/data/d{d}/lcs/lcsStatusD{d}.xml"
+
+
+def _tag(rec, name):
+    """First value of a tag, stripped, or ''."""
+    m = re.search(rf"<{name}>([^<]*)</{name}>", rec)
+    return (m.group(1) or "").strip() if m else ""
+
+
+def _caltrans_district(district, label):
+    """Trucking-relevant closures from one Caltrans district."""
+    import re as _re
+    url = CALTRANS_URL.format(d=district)
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    xml = urllib.request.urlopen(req, timeout=45).read().decode("utf-8", "replace")
+
+    out = []
+    for rec in _re.findall(r"<lcs>(.*?)</lcs>", xml, _re.S):
+        kind = _tag(rec, "typeOfClosure")
+        # A full closure stops the lane. Standard lane work mostly does not, so it is not
+        # freight news. Alternating lanes is a hold, which is.
+        if kind not in ("Full", "Alternating Lanes"):
+            continue
+        lat_s, lng_s = _tag(rec, "beginLatitude"), _tag(rec, "beginLongitude")
+        if not lat_s or not lng_s:
+            continue
+        try:
+            lat, lng = float(lat_s), float(lng_s)
+        except ValueError:
+            continue
+
+        route = _tag(rec, "beginRoute")
+        suffix = _tag(rec, "beginRouteSuffix")
+        where = _tag(rec, "beginLocationName")
+        place = _tag(rec, "beginNearbyPlace")
+        county = _tag(rec, "beginCounty")
+        work = _tag(rec, "typeOfWork")
+        lanes = _tag(rec, "lanesClosed")
+        total = _tag(rec, "totalExistingLanes")
+
+        desc = f"{where} near {place}" if where and place and where != place else (where or place)
+        if work:
+            desc = f"{desc}. {work}." if desc else f"{work}."
+        if lanes and total:
+            desc = f"{desc} {lanes} of {total} lanes closed.".strip()
+
+        highway = f"{route}{suffix} County" if county else route
+        if county:
+            highway = f"{route} in {county} County"
+
+        out.append({
+            "id": f"CA-{_tag(rec, 'index')}",
+            "province": "CA",
+            "region_label": label,
+            "highway": highway,
+            "direction": _tag(rec, "travelFlowDirection"),
+            "description": desc,
+            # The downstream whitelist in normalize.py was written against the 511
+            # vocabulary, so a source that invents its own words is silently dropped. The
+            # first California build produced 25 incidents that never reached the page
+            # because of this. One vocabulary, named in one place.
+            "event_type": "closures" if kind == "Full" else "accidentsandincidents",
+            "severity": "",
+            "closure": kind == "Full",
+            "lanes": f"{lanes} of {total}" if lanes and total else lanes,
+            "lat": lat,
+            "lng": lng,
+            "start": _tag(rec, "closureStartDate"),
+            "end": _tag(rec, "closureEndDate"),
+            "updated": _tag(rec, "recordDate"),
+        })
+    return out
 
 
 def _coords(geo):
@@ -160,6 +244,15 @@ def collect_incidents():
     except Exception as e:
         print(f"  BC DriveBC: {e}")
 
+    # California — three Caltrans districts, free and unkeyed.
+    for _d, _label in CALTRANS_DISTRICTS.items():
+        try:
+            got = _caltrans_district(_d, _label)
+            incidents.extend(got)
+            print(f"  Caltrans D{_d} ({_label}): {len(got)} closures")
+        except Exception as e:
+            print(f"  Caltrans D{_d}: {e}")
+
     # Normalize timestamps and sort
     for i in incidents:
         ts = i.get("updated")
@@ -199,7 +292,7 @@ def collect_incidents():
             "incidents": incidents,
             "total": len(incidents),
             "updated": datetime.now(timezone.utc).isoformat(),
-            "sources": ["Ontario 511", "BC DriveBC"],
+            "sources": ["Ontario 511", "BC DriveBC", "Caltrans LCS"],
         }, f, indent=2, default=str)
 
     by_prov = {}
