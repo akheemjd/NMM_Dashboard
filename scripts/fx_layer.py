@@ -408,7 +408,8 @@ def pin_currency(html, rel, code):
     a reader who once chose CAD looking at the US tree in Canadian dollars with no way back.
     """
     if "data-curfixed=" in html:
-        return html
+        # Replace rather than skip: a page previously pinned USD may now need CAD.
+        return re.sub(r'data-curfixed="[A-Z]{3}"', f'data-curfixed="{code}"', html, count=1)
     return re.sub(r"<html\b([^>]*)>", rf'<html\1 data-curfixed="{code}">', html, count=1)
 
 
@@ -763,15 +764,11 @@ def main():
                 # already on the US side and already priced in US dollars per gallon,
                 # so both ask a question the page has answered. The chooser is native
                 # for the same reason.
-                if is_us_tree(rel):
-                    html = pin_currency(html, rel, "USD")
-                elif has_no_controls(rel):
-                    # Nothing on the page to convert, so the toggle would do nothing and
-                    # the switch would duplicate the nav. Absent, not present-but-hidden.
-                    pass
-                else:
-                    html = add_country_switch(html, rel)
-                    html = add_toggle(html, rel)
+                # No page carries a country switch or a currency toggle any more. Both are
+                # removed everywhere, so every page is pinned instead: the US tree to USD,
+                # everything else to CAD. Without the pin, a reader who once chose USD would
+                # have these pages converted for them with no control left to undo it.
+                html = pin_currency(html, rel, "USD" if is_us_tree(rel) else "CAD")
             html = add_nav_button(html)
             html = add_freshness(html, rel)
             open(path, "w", encoding="utf-8").write(html)

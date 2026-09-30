@@ -227,36 +227,18 @@ def check_us_tree_has_no_controls():
 
             html = open(path, encoding="utf-8", errors="replace").read()
 
-            # Families with nothing to convert: a control there does nothing when pressed.
-            # Measured, not assumed - each carries zero marked convertible figures.
-            no_controls = set((
-                "advertise", "border-trends", "contact", "exchange-rate",
-                "fuel-tax-rates", "industry-news", "road-incidents",
-            ))
-            in_border_tree = top == "border-wait-times"
-
-            if top in ("us", "us-diesel"):
-                checked += 1
-                if 'class="seg"' in html:
-                    out.append(f"{page} carries the country switch")
-                if "fxtog" in html:
-                    out.append(f"{page} carries the currency toggle")
-                if 'data-curfixed="USD"' not in html:
-                    out.append(f"{page} is not pinned to USD")
-            elif top in no_controls or in_border_tree:
-                checked += 1
-                if 'class="seg"' in html:
-                    out.append(f"{page} has nothing to convert but carries a country switch")
-                if "fxtog" in html:
-                    out.append(f"{page} has nothing to convert but carries a currency toggle")
-            else:
-                # A page with figures to convert must keep BOTH controls. Checking only
-                # the country switch let a stripped currency toggle pass silently - the
-                # negative test caught that gap, not the guard.
-                if 'class="seg"' not in html:
-                    out.append(f"{page} lost the country switch it should have")
-                if "fxtog" not in html:
-                    out.append(f"{page} has figures to convert but lost the currency toggle")
+            # No page carries a control any more. Every page is pinned instead, because
+            # the toggle WAS the only way to undo a stored currency choice - strip it and a
+            # reader who once chose USD would have Canadian pages converted for them with no
+            # way back. The pin is what makes removing the control safe.
+            checked += 1
+            if 'class="seg"' in html:
+                out.append(f"{page} still carries the country switch")
+            if "fxtog" in html:
+                out.append(f"{page} still carries the currency toggle")
+            want = "USD" if top in ("us", "us-diesel") else "CAD"
+            if f'data-curfixed="{want}"' not in html:
+                out.append(f"{page} is not pinned to {want}")
 
     if not checked:
         out.append("found no US pages to check — the walk is looking in the wrong place")
@@ -1047,7 +1029,7 @@ CHECKS = (
         ("one nav, five strips, one drawer", check_one_nav_per_page),
         ("nav Diesel resolves in the reader tree", check_nav_per_tree),
         ("no country compared to its own average", check_cross_border_sentence),
-    ("controls appear only where they do something", check_us_tree_has_no_controls),
+    ("no page carries a control and every page is pinned", check_us_tree_has_no_controls),
 )
 
 
