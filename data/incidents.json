@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-314277",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at BURLINGTON SKYWAY, Burlington. 1 right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane closed",
+      "lat": 43.29814811,
+      "lng": -79.7971592,
+      "start": 1790792880,
+      "end": null,
+      "updated": 1790792880
+    },
+    {
+      "id": "ON-314274",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 89 Both Directions  between 5th Line EHS and 7th Line EHS, Rosemont. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.11228,
+      "lng": -80.04092,
+      "start": 1790792220,
+      "end": null,
+      "updated": 1790792220
+    },
+    {
       "id": "ON-314270",
       "province": "ON",
       "highway": "HWY 6",
@@ -31,22 +63,6 @@
       "start": 1790790900,
       "end": null,
       "updated": 1790790900
-    },
-    {
-      "id": "ON-314264",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at LIVERPOOL ROAD, Pickering. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.83039326,
-      "lng": -79.08828721,
-      "start": 1790789400,
-      "end": null,
-      "updated": 1790789400
     },
     {
       "id": "drivebc.ca/RIDE-103001",
@@ -159,22 +175,6 @@
       "start": 1790775240,
       "end": null,
       "updated": 1790775240
-    },
-    {
-      "id": "ON-314128",
-      "province": "ON",
-      "highway": "HWY 89",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 89 Both Directions  between County Road 18 / Airport Road and 7th Line EHS, Rosemont. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.11542,
-      "lng": -80.02714,
-      "start": 1790773620,
-      "end": null,
-      "updated": 1790773620
     },
     {
       "id": "ON-314118",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T18:03:40.627320+00:00",
+  "updated": "2026-09-30T18:34:40.300704+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-30 18:03",
-  "updated_iso": "2026-09-30T18:03:54+00:00",
-  "build_version": "1790791434",
+  "updated_at": "2026-09-30 18:34",
+  "updated_iso": "2026-09-30T18:34:55+00:00",
+  "build_version": "1790793295",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 5,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -349,18 +349,18 @@
     "none": false,
     "active_count": 8,
     "gauge_class": "warn",
-    "status_line": "HWY 427, HWY 401, HWY 403 , HWY 17",
+    "status_line": "QEW, HWY 89, HWY 427, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Southbound EXPRESS at DUNDAS STREET, Toronto. Right\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at BURLINGTON SKYWAY, Burlington. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at LIVERPOOL ROAD, Pickering.\u2026",
+        "road": "HWY 89",
+        "what": "Collision on HWY 89 Both Directions  between 5th Line EHS and 7th Line EHS,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -422,11 +422,11 @@
       "name": "Coutts-Sweetgrass",
       "slug": "coutts-sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:20 MDT"
+      "captured_at": "12:10 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:40 PDT"
+      "captured_at": "11:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "5 of 9 crossings slow",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -525,11 +525,11 @@
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "WEX launches Verified Vendors, connecting customers to OTR solutions",
-      "url": "https://www.thetrucker.com/trucking-news/business/wex-launches-verified-vendors-connecting-customers-to-otr-solutions",
-      "why": "Industry movement worth tracking."
+      "category": "equipment",
+      "source": "Trucking Dive",
+      "headline": "Businessman allegedly bilked trucking investors of $105.9M",
+      "url": "https://www.truckingdive.com/news/businessman-allegedly-bilked-trucking-investors-of-1059m/831705/",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
