@@ -1,37 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-314361",
+      "id": "ON-314366",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound RAMP at WESTNEY ROAD, Ajax. Right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.84819685,
-      "lng": -79.04333274,
-      "start": 1790804040,
+      "lat": 43.78085209,
+      "lng": -79.25477778,
+      "start": 1790804520,
       "end": null,
-      "updated": 1790804040,
+      "updated": 1790804520,
       "scheduled": false
     },
     {
-      "id": "ON-314342",
+      "id": "ON-314363",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at WESTNEY ROAD, Ajax. 3 right lanes closed.",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "3 right lanes closed",
-      "lat": 43.84906194,
-      "lng": -79.04025259,
-      "start": 1790802060,
+      "lanes": "left lane closed",
+      "lat": 43.76343241,
+      "lng": -79.38732453,
+      "start": 1790804280,
       "end": null,
-      "updated": 1790803800,
+      "updated": 1790804280,
       "scheduled": false
     },
     {
@@ -151,23 +151,6 @@
       "start": 1790800620,
       "end": null,
       "updated": 1790800620,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314316",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at APPLEBY LINE, Burlington. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.37851401,
-      "lng": -79.77426007,
-      "start": 1790798820,
-      "end": null,
-      "updated": 1790798820,
       "scheduled": false
     },
     {
@@ -960,6 +943,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-312986",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Daily Construction on HWY 401 Westbound  between HWY 35/115 and LIBERTY ST, Clarington. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.902897,
+      "lng": -78.62546,
+      "start": 1791205200,
+      "end": 1791561600,
+      "updated": 1790709840,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-09-30T21:40:53.893824+00:00",
+  "updated": "2026-09-30T21:54:40.624259+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
