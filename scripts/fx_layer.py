@@ -234,6 +234,86 @@ US_TREE = re.compile(r"^(us$|us/|us-diesel(/|$))")
 # Indented to match the header markup gen_templates authors, so the injected button
 # and the authored one produce byte-identical chrome. They differed by two spaces,
 # which the coherence guard reported as a page with different chrome.
+# ── Freshness ────────────────────────────────────────────────────────────────────────────
+# A rebuild time answers "when did this page last build". A reader needs "when is this data
+# from". Those are different questions and only the second one tells them whether to trust
+# the number.
+_FRESH_CACHE = {}
+
+
+def _data(path):
+    """Read a data file once per run."""
+    import json as _json
+    if path not in _FRESH_CACHE:
+        fp = os.path.join(ROOT, "data", path)
+        try:
+            _FRESH_CACHE[path] = _json.load(open(fp, encoding="utf-8"))
+        except Exception:
+            _FRESH_CACHE[path] = {}
+    return _FRESH_CACHE[path]
+
+
+def _day(stamp):
+    """First ten characters of a timestamp, or ''."""
+    return str(stamp)[:10] if stamp else ""
+
+
+def _freshness(rel):
+    """The statement this page owes its reader, or None."""
+    r = "/" + rel.strip("/") + "/" if rel else "/"
+
+    if r.startswith("/border-wait-times/"):
+        # Live data, so the fetch time IS the observation. Saying so removes the ambiguity
+        # that made a rebuild stamp read as "built recently, from unknown data".
+        return "Live CBP and CBSA waits, captured as built"
+
+    if r == "/border-trends/":
+        return "CBSA archive — historical, not live"
+
+    if r == "/exchange-rate/":
+        d = _day(_data("exchange.json").get("observation_date"))
+        return f"Bank of Canada observation {d}" if d else None
+
+    if r == "/fuel-tax-rates/":
+        q = _data("ifta.json").get("quarter")
+        return f"IFTA {q} matrix" if q else None
+
+    if r == "/industry-news/":
+        d = _day(_data("news.json").get("updated"))
+        return f"Feeds collected {d}" if d else None
+
+    if r == "/road-incidents/":
+        d = _day(_data("incidents.json").get("updated"))
+        return f"511 feeds collected {d}" if d else None
+
+    if r == "/market-pulse/":
+        d = _day(_data("market.json").get("updated"))
+        return f"Indicators collected {d}" if d else None
+
+    return None
+
+
+META_RE = re.compile(r'(<div class="meta">)(.*?)(</div>)', re.S)
+
+
+def add_freshness(html, rel):
+    """Append the observation statement to the page's meta line.
+
+    Skipped when the page already carries a stated data date in its body, so a page that
+    names its NRCan print or EIA week ending is left alone.
+    """
+    stmt = _freshness(rel)
+    if not stmt:
+        return html
+    if "data-freshness" in html:
+        return html
+    m = META_RE.search(html)
+    if not m:
+        return html
+    span = f'<span data-freshness>{stmt}</span>'
+    return html[:m.end(2)] + span + html[m.end(2):]
+
+
 NAV_BTN = (chr(10) + '  <button class="navbtn" type="button" id="navbtn" '
            'aria-expanded="false" aria-controls="drawer">'
            '<span class="sr">Sections</span>'
@@ -634,6 +714,7 @@ def main():
                 html = add_country_switch(html, rel)
                 html = add_toggle(html, rel)
             html = add_nav_button(html)
+            html = add_freshness(html, rel)
             open(path, "w", encoding="utf-8").write(html)
             pages += 1
             total += n
