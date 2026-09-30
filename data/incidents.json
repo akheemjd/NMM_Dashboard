@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-313129",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at RENFORTH, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.6659913,
-      "lng": -79.5996896,
-      "start": 1790737560,
-      "end": null,
-      "updated": 1790737560
-    },
-    {
       "id": "ON-313072",
       "province": "ON",
       "highway": "QEW",
@@ -398,6 +382,22 @@
       "lng": -79.53936,
       "start": 1791165600,
       "end": 1791540000,
+      "updated": 1790699460
+    },
+    {
+      "id": "ON-312905",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between LANGSTAFF ROAD and BASS PRO MILLS DRIVE, Vaughan. 4 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "4 Alternating Lane(s)",
+      "lat": 43.809307,
+      "lng": -79.54362,
+      "start": 1791162000,
+      "end": 1791543600,
       "updated": 1790699460
     },
     {
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T03:33:18.619335+00:00",
+  "updated": "2026-09-30T04:04:19.920838+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
