@@ -364,6 +364,33 @@ def point_nav_at_tree(html, rel):
 CHOOSER_PAGES = ("index.html", "404.html")
 
 
+
+# Families where the controls do nothing. Measured, not guessed: each of these carries zero
+# marked convertible figures. Waits are minutes, a tax RATE is not a price and never converts,
+# and an exchange rate is the thing doing the converting rather than a figure to convert.
+NO_CONTROL_FAMILIES = (
+    "border-wait-times",
+    "border-trends",
+    "exchange-rate",
+    "fuel-tax-rates",
+    "road-incidents",
+    "industry-news",
+    "advertise",
+    "contact",
+)
+# A family with a tree of its own: every page under it, not just the index.
+NO_CONTROL_PREFIXES = ("border-wait-times/",)
+
+
+def has_no_controls(rel):
+    """True when neither control would do anything useful on this page."""
+    if is_us_tree(rel):
+        return True
+    if rel in NO_CONTROL_FAMILIES:
+        return True
+    return any(rel.startswith(pref) for pref in NO_CONTROL_PREFIXES)
+
+
 def is_us_tree(rel):
     """True for pages on the US side of the two trees.
 
@@ -738,6 +765,10 @@ def main():
                 # for the same reason.
                 if is_us_tree(rel):
                     html = pin_currency(html, rel, "USD")
+                elif has_no_controls(rel):
+                    # Nothing on the page to convert, so the toggle would do nothing and
+                    # the switch would duplicate the nav. Absent, not present-but-hidden.
+                    pass
                 else:
                     html = add_country_switch(html, rel)
                     html = add_toggle(html, rel)

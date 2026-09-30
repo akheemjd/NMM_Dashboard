@@ -227,6 +227,14 @@ def check_us_tree_has_no_controls():
 
             html = open(path, encoding="utf-8", errors="replace").read()
 
+            # Families with nothing to convert: a control there does nothing when pressed.
+            # Measured, not assumed - each carries zero marked convertible figures.
+            no_controls = set((
+                "advertise", "border-trends", "contact", "exchange-rate",
+                "fuel-tax-rates", "industry-news", "road-incidents",
+            ))
+            in_border_tree = top == "border-wait-times"
+
             if top in ("us", "us-diesel"):
                 checked += 1
                 if 'class="seg"' in html:
@@ -235,8 +243,20 @@ def check_us_tree_has_no_controls():
                     out.append(f"{page} carries the currency toggle")
                 if 'data-curfixed="USD"' not in html:
                     out.append(f"{page} is not pinned to USD")
-            elif 'class="seg"' not in html:
-                out.append(f"{page} lost the country switch it should have")
+            elif top in no_controls or in_border_tree:
+                checked += 1
+                if 'class="seg"' in html:
+                    out.append(f"{page} has nothing to convert but carries a country switch")
+                if "fxtog" in html:
+                    out.append(f"{page} has nothing to convert but carries a currency toggle")
+            else:
+                # A page with figures to convert must keep BOTH controls. Checking only
+                # the country switch let a stripped currency toggle pass silently - the
+                # negative test caught that gap, not the guard.
+                if 'class="seg"' not in html:
+                    out.append(f"{page} lost the country switch it should have")
+                if "fxtog" not in html:
+                    out.append(f"{page} has figures to convert but lost the currency toggle")
 
     if not checked:
         out.append("found no US pages to check — the walk is looking in the wrong place")
@@ -1027,7 +1047,7 @@ CHECKS = (
         ("one nav, five strips, one drawer", check_one_nav_per_page),
         ("nav Diesel resolves in the reader tree", check_nav_per_tree),
         ("no country compared to its own average", check_cross_border_sentence),
-    ("US tree carries no controls and is pinned to USD", check_us_tree_has_no_controls),
+    ("controls appear only where they do something", check_us_tree_has_no_controls),
 )
 
 
