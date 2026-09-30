@@ -33,22 +33,6 @@
       "updated": 1790797200
     },
     {
-      "id": "ON-314286",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound EXPRESS at BURNHAMTHORPE ROAD, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.6455796,
-      "lng": -79.56314768,
-      "start": 1790794260,
-      "end": null,
-      "updated": 1790796240
-    },
-    {
       "id": "ON-314298",
       "province": "ON",
       "highway": "HWY 618",
@@ -858,6 +842,22 @@
       "updated": 1790705880
     },
     {
+      "id": "ON-312917",
+      "province": "ON",
+      "highway": "HWY 418",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 418 Southbound On-ramp at REGIONAL HIGHWAY 2, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.91408,
+      "lng": -78.75521,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790703240
+    },
+    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1227,7 +1227,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-09-30T19:46:38.986594+00:00",
+  "updated": "2026-09-30T19:48:44.576159+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
