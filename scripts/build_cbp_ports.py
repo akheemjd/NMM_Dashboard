@@ -49,24 +49,76 @@ def lane_summary(port, key):
     return " · ".join(bits)
 
 
-def row(port):
+def base_label(port):
+    """The name a reader sees before any disambiguation."""
     name = port.get("port_name") or ""
     crossing = port.get("crossing_name") or ""
     # CBP repeats the port name as the crossing name for single-crossing ports
     # (Pembina, Sumas). Printing "Pembina Pembina" reads like a bug.
-    suffix = f" — {crossing}" if crossing and crossing != name else ""
-    # Two Naco, Arizona ports exist (260301 and 260305) and CBP gives
-    # neither a crossing name, so both rendered as a bare "Naco": the page
-    # showed 84 rows for 85 ports and one port had no row of its own.
-    if not suffix and port.get("port_number"):
-        suffix = f" — port {port['port_number']}"
+    return f"{name} — {crossing}" if crossing and crossing != name else name
+
+
+def label_plan(ports):
+    """Decide, across every row, which labels actually need disambiguating.
+
+    Only collisions get a suffix. The old code appended " — port <number>" to any row
+    without a crossing name, so Fort Hancock read "Fort Hancock — port l24501" even though
+    nothing else on the page said Fort Hancock. That hid a database key in a reader's label
+    for no reason.
+    """
+    counts = {}
+    for p in ports:
+        counts[base_label(p)] = counts.get(base_label(p), 0) + 1
+
+    plan = {}
+    for p in ports:
+        label = base_label(p)
+        if counts.get(label, 0) < 2:
+            plan[p.get("port_number")] = ""
+            continue
+        # A real collision. The state is what separates Gateway, TX from Brownsville's
+        # Gateway crossing, so try that first.
+        st = (p.get("us_state") or "").strip()
+        plan[p.get("port_number")] = f" — {st}" if st else " — (unnamed crossing)"
+
+    # A state that does not separate them is no separation. Both Naco records are in AZ with
+    # no crossing name, so "Naco — AZ" appeared twice and told the reader nothing. CBP tracks
+    # them as two rows reporting different waits, so keep both and number them rather than
+    # dropping one or printing a port code.
+    seen = {}
+    for p in ports:
+        key = base_label(p) + plan.get(p.get("port_number"), "")
+        seen[key] = seen.get(key, 0) + 1
+    for p in ports:
+        key = base_label(p) + plan.get(p.get("port_number"), "")
+        if seen.get(key, 0) > 1:
+            n = plan.get("_n_" + str(key), 0) + 1
+            plan["_n_" + str(key)] = n
+            plan[p.get("port_number")] = (plan.get(p.get("port_number"), "") +
+                                          f" ({n} of {seen[key]})")
+    return plan
+
+
+def row(port, plan=None):
+    name = port.get("port_name") or ""
+    crossing = port.get("crossing_name") or ""
+    suffix = (plan or {}).get(port.get("port_number"), "")
+    base = base_label(port)
+    # Same name, same state, no crossing name to tell them apart - which is exactly the two
+    # Naco records. Say so in plain words instead of printing a CBP port code, which reads
+    # as a data leak rather than a border crossing.
+    if suffix == " — (unnamed crossing)":
+        suffix = f" — {port.get('us_state') or ''} (unnamed crossing)".replace("  ", " ")
     juris = ""
     if port.get("us_state") and port.get("ca_province"):
         juris = f" · {port['us_state']}–{port['ca_province']}"
         if port.get("ca_city"):
             juris += f" → {port['ca_city']}"
     return {
-        "port_name": name,
+        # base_label carries the crossing name. Returning the bare port_name here dropped
+        # every crossing from the page - Brownsville rendered four times with no B&M, no
+        # Gateway - which is worse than the port codes I was replacing.
+        "port_name": base,
         "crossing_suffix": suffix,
         "jurisdiction": juris,
         "commercial_display": lane_summary(port, "commercial"),
@@ -91,13 +143,17 @@ def main():
 
     reported = [p for p in ports if p.get("commercial_reported")]
 
+    # One plan across every port, so a collision between two rows of the same border is
+    # caught the same way as one across borders.
+    _plan = label_plan(list(ca) + list(mx))
+
     page_data = {
         "port_count": str(len(ports)),
         "ca_count": str(len(ca)),
         "mx_count": str(len(mx)),
         "reported_count": str(len(reported)),
-        "ca_ports": [row(p) for p in ca],
-        "mx_ports": [row(p) for p in mx],
+        "ca_ports": [row(p, _plan) for p in ca],
+        "mx_ports": [row(p, _plan) for p in mx],
     }
     # Page-level chrome values the shared head/foot expect.
     border = load_json("border.norm")

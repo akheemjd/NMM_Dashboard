@@ -361,6 +361,48 @@ def check_scheduled_work_is_not_live():
     return out
 
 
+
+def check_port_labels_are_reader_facing():
+    """No CBP port code in a reader's label, and no two labels alike.
+
+    The build appended " — port <number>" to any port without a crossing name, so readers saw
+    "Fort Hancock — port l24501". That fixed a real problem - two Naco rows both rendered as
+    a bare "Naco" - by exposing a database key instead of solving it.
+
+    Both halves are asserted here because the second is why the first existed. Dropping the
+    code without keeping the labels distinct would bring the original bug back.
+    """
+    import os
+    import re
+    docs = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+    path = os.path.join(docs, "border-wait-times", "all-ports", "index.html")
+    if not os.path.exists(path):
+        return ["/border-wait-times/all-ports/ is missing"]
+
+    html = open(path, encoding="utf-8", errors="replace").read()
+    m = re.search(r"<main\b.*?</main>", html, re.S)
+    body = m.group(0) if m else html
+    text = " ".join(re.sub(r"<[^>]+>", " ", body).split())
+
+    out = []
+    codes = re.findall(r"port\s+[0-9lL]?[0-9]{4,5}\b", text)
+    if codes:
+        out.append(f"{len(codes)} CBP port code(s) shown to readers, e.g. {codes[:3]}")
+
+    # the list is rendered as rows; collect the crossing names and look for repeats
+    names = re.findall(r'class="k"[^>]*>(.*?)<', body, re.S)
+    seen = {}
+    for n in names:
+        n = " ".join(re.sub(r"<[^>]+>", " ", n).split())
+        if n:
+            seen[n] = seen.get(n, 0) + 1
+    dupes = [n for n, c in seen.items() if c > 1]
+    if dupes:
+        out.append(f"{len(dupes)} crossing label(s) appear twice: {dupes[:4]}")
+
+    return out
+
+
 def check_jsonld_valid():
     """Every built page's JSON-LD must parse.
 
@@ -1148,6 +1190,7 @@ CHECKS = (
     ("no page carries a control and every page is pinned", check_us_tree_has_no_controls),
     ("incidents page names its coverage", check_incidents_names_its_coverage),
     ("scheduled work is not drawn as live", check_scheduled_work_is_not_live),
+    ("port labels are reader-facing and distinct", check_port_labels_are_reader_facing),
 )
 
 
