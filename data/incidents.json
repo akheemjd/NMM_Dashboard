@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-314308",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at MAVIS ROAD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.619976,
+      "lng": -79.709223,
+      "start": 1790797620,
+      "end": null,
+      "updated": 1790797620
+    },
+    {
       "id": "ON-314299",
       "province": "ON",
       "highway": "HWY 401",
@@ -65,22 +81,6 @@
       "updated": 1790795520
     },
     {
-      "id": "ON-314291",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at MEADOWVALE ROAD, Toronto. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.7991599,
-      "lng": -79.166169,
-      "start": 1790794920,
-      "end": null,
-      "updated": 1790794920
-    },
-    {
       "id": "ON-314283",
       "province": "ON",
       "highway": "HWY 7",
@@ -111,22 +111,6 @@
       "start": 1790793360,
       "end": null,
       "updated": 1790793360
-    },
-    {
-      "id": "ON-314278",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound ON-RAMP at HWY 7, Vaughan. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.771035,
-      "lng": -79.635129,
-      "start": 1790793120,
-      "end": null,
-      "updated": 1790793120
     },
     {
       "id": "ON-314274",
@@ -858,6 +842,22 @@
       "updated": 1790703240
     },
     {
+      "id": "ON-312911",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 17 Westbound  between Pioneer St W, Markstay and Pioneer St W, Markstay, Markstay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.495205,
+      "lng": -80.56086,
+      "start": 1791201600,
+      "end": 1791540000,
+      "updated": 1790703060
+    },
+    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1227,7 +1227,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-09-30T19:48:44.576159+00:00",
+  "updated": "2026-09-30T20:07:53.544021+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
