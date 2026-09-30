@@ -188,23 +188,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-314274",
-      "province": "ON",
-      "highway": "HWY 89",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 89 Both Directions  between 5th Line EHS and 7th Line EHS, Rosemont. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.11228,
-      "lng": -80.04092,
-      "start": 1790792220,
-      "end": null,
-      "updated": 1790792220,
-      "scheduled": false
-    },
-    {
       "id": "ON-314270",
       "province": "ON",
       "highway": "HWY 6",
@@ -239,23 +222,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-314229",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 403 MISSISSAUGA Eastbound ON-RAMP at HWY 5 / DUNDAS STREET, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.513311803,
-      "lng": -79.693129063,
-      "start": 1790781960,
-      "end": null,
-      "updated": 1790781960,
-      "scheduled": false
-    },
-    {
       "id": "ON-314221",
       "province": "ON",
       "highway": "HWY 17",
@@ -270,23 +236,6 @@
       "start": 1790781120,
       "end": null,
       "updated": 1790781120,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314197",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 11 Northbound  at HURONIA ROAD, Severn. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.647512,
-      "lng": -79.41895,
-      "start": 1790776860,
-      "end": null,
-      "updated": 1790776860,
       "scheduled": false
     },
     {
@@ -960,6 +909,57 @@
       "scheduled": true
     },
     {
+      "id": "ON-312937",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 400 Northbound  between GEORGIAN BAY RD - CROOKED BAY RD IC 168 OP and GEORGIAN BAY RD - CROOKED BAY RD IC 168 OP, Port Severn. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.918243,
+      "lng": -79.77505,
+      "start": 1791201600,
+      "end": 1791550800,
+      "updated": 1790705880,
+      "scheduled": true
+    },
+    {
+      "id": "ON-312917",
+      "province": "ON",
+      "highway": "HWY 418",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 418 Southbound On-ramp at REGIONAL HIGHWAY 2, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.91408,
+      "lng": -78.75521,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790703240,
+      "scheduled": true
+    },
+    {
+      "id": "ON-312911",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 17 Westbound  between Pioneer St W, Markstay and Pioneer St W, Markstay, Markstay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.495205,
+      "lng": -80.56086,
+      "start": 1791201600,
+      "end": 1791540000,
+      "updated": 1790703060,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-09-30T22:11:56.483388+00:00",
+  "updated": "2026-09-30T22:43:01.319586+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
