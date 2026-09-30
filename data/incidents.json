@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-314128",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 89 Both Directions  between County Road 18 / Airport Road and 7th Line EHS, Rosemont. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.11542,
+      "lng": -80.02714,
+      "start": 1790773620,
+      "end": null,
+      "updated": 1790773620
+    },
+    {
+      "id": "ON-314118",
+      "province": "ON",
+      "highway": "HWY 622",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 622 Northbound  at HYDRO GENERATING STA ENT (W), Atikokan. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 48.8397224,
+      "lng": -91.5737319,
+      "start": 1790773320,
+      "end": null,
+      "updated": 1790773320
+    },
+    {
+      "id": "ON-314107",
+      "province": "ON",
+      "highway": "HWY 622",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 622 Southbound  at WESTHAWK RD (E), Ignace. Lane and SOUTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and SOUTH shoulder closed",
+      "lat": 49.384394611,
+      "lng": -92.195389468,
+      "start": 1790773080,
+      "end": null,
+      "updated": 1790773080
+    },
+    {
       "id": "ON-314019",
       "province": "ON",
       "highway": "HWY 17",
@@ -351,54 +399,6 @@
       "start": 1791165600,
       "end": 1791540000,
       "updated": 1790699460
-    },
-    {
-      "id": "ON-312905",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 400 Northbound Express between LANGSTAFF ROAD and BASS PRO MILLS DRIVE, Vaughan. 4 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "4 Alternating Lane(s)",
-      "lat": 43.809307,
-      "lng": -79.54362,
-      "start": 1791162000,
-      "end": 1791543600,
-      "updated": 1790699460
-    },
-    {
-      "id": "ON-312897",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 400 Southbound  between MAJOR MACKENZIE DRIVE and BASS PRO MILLS DRIVE, Vaughan. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.846935,
-      "lng": -79.54861,
-      "start": 1791162000,
-      "end": 1791536400,
-      "updated": 1790699400
-    },
-    {
-      "id": "ON-312900",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 400 Southbound Express between BASS PRO MILLS DRIVE and HIGHWAY 7, Vaughan. 4 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "4 Alternating Lane(s)",
-      "lat": 43.82064,
-      "lng": -79.5456,
-      "start": 1791162000,
-      "end": 1791536400,
-      "updated": 1790699400
     },
     {
       "id": "drivebc.ca/RIDE-102401",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T12:53:32.307040+00:00",
+  "updated": "2026-09-30T13:24:33.363810+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

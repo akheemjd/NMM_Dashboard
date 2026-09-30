@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-30 12:54",
-  "updated_iso": "2026-09-30T12:54:41+00:00",
-  "build_version": "1790772881",
+  "updated_at": "2026-09-30 13:24",
+  "updated_iso": "2026-09-30T13:24:47+00:00",
+  "build_version": "1790774687",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,13 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 1,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 17",
+    "status_line": "HWY 89, HWY 622, HWY 17",
     "incidents": [
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Eastbound  at Dead Otter Lake-Lake Superior Prov Park,\u2026",
+        "road": "HWY 89",
+        "what": "Collision on HWY 89 Both Directions  between County Road 18 / Airport Road and\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      },
+      {
+        "road": "HWY 622",
+        "what": "Highway Maintenance on HWY 622 Northbound  at HYDRO GENERATING STA ENT (W),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -409,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "08:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -429,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -439,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT"
+      "captured_at": "08:08 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -518,11 +525,11 @@
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "industry",
+      "category": "equipment",
       "source": "The Trucker",
-      "headline": "Two found guilty in California in cargo theft case",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/two-found-guilty-in-california-in-cargo-theft-case",
-      "why": "Industry movement worth tracking."
+      "headline": "Trucking company owner indicted for wire fraud and money laundering",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucking-company-owner-indicted-for-wire-fraud-and-money-laundering",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
