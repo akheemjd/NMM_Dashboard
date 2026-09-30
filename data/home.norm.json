@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-30 06:08",
-  "updated_iso": "2026-09-30T06:08:35+00:00",
-  "build_version": "1790748515",
+  "updated_at": "2026-09-30 06:39",
+  "updated_iso": "2026-09-30T06:39:52+00:00",
+  "build_version": "1790750392",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -346,11 +346,19 @@
     "range_pct": "94%"
   },
   "incidents": {
-    "none": true,
-    "active_count": 0,
-    "gauge_class": "good",
-    "status_line": "all corridors clear",
-    "incidents": []
+    "none": false,
+    "active_count": 1,
+    "gauge_class": "warn",
+    "status_line": "HWY 401",
+    "incidents": [
+      {
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound  at WESTNEY RD, Ajax. 1 right lane and\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      }
+    ]
   },
   "border_rows": [
     {
@@ -401,7 +409,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 EDT"
+      "captured_at": "02:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -411,7 +419,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 MDT"
+      "captured_at": "00:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -421,7 +429,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 PDT"
+      "captured_at": "23:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -445,24 +453,6 @@
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "-0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 265.6\u00a2/L and 35 L/100km",
