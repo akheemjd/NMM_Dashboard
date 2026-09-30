@@ -399,12 +399,17 @@ if _eia_usd is not None and fx_rate and not _eia_stale:
             "key": k,
             "label": _district_labels.get(k) or _PADD_LABELS.get(k) or k.replace("_", " ").title(),
             "usd_gal": f"{v:.3f}",
+            # The CAD equivalent per GALLON. A US price stays per gallon in either
+            # currency; the cpl value below is for the calculator's arithmetic only and
+            # must not be shown as though it were the price.
+            "cad_gal": f"{v * fx_rate:.3f}",
             "cpl": f"{_padds_cpl.get(k, 0):.1f}",
         }
         for k, v in _padds.items()
     ]
     eia = {
         "us_national_usd_gal": f"{_eia_usd:.3f}",
+        "us_national_cad_gal": f"{_eia_usd * fx_rate:.3f}",
         "us_national_cpl": f"{_eia_cpl:.1f}",
         "nadi": f"{_nadi:.1f}",
         "ca_us_gap": f"{_gap:.1f}",

@@ -152,8 +152,10 @@ def main():
     # The templates link districts under /us-diesel/district/<slug>/, so every
     # item in a LOOP needs key_url — the overview's padds list included. Missing
     # it is a hard failure in fill(), which is the point.
+    # cad_gal must be carried through. A US price is per gallon in either currency, and the
+    # district templates now render C$<cad_gal>/gal rather than a cents-per-litre figure.
     siblings = [{"key": p["key"], "key_url": _slug(p["key"]), "label": p["label"],
-                 "cpl": p["cpl"], "usd_gal": p["usd_gal"]}
+                 "cpl": p["cpl"], "usd_gal": p["usd_gal"], "cad_gal": p.get("cad_gal", "")}
                 for p in padds]
 
     built = 0
@@ -173,12 +175,18 @@ def main():
             "label": p["label"],
             "cpl": p["cpl"],
             "usd_gal": p["usd_gal"],
+            # The district's own hero, citation and meta all render the CAD equivalent per
+            # gallon. Without this the page cannot build, which is how it was caught.
+            "cad_gal": p.get("cad_gal", ""),
             "date": eia.get("date", ""),
             "national": f"{national_cpl:.1f}",
             # Per-gallon counterparts. A US page leads with dollars per gallon, and
             # a per-litre delta beside a per-gallon headline is a unit mismatch the
             # reader has to notice for themselves.
             "national_usd": f"{national_usd:.3f}",
+            # The national figure in CAD is still a price per GALLON. It used to be shown
+            # here as a cents-per-litre number, which is the Canadian unit on a US figure.
+            "national_cad_gal": eia.get("us_national_cad_gal", ""),
             "vs_national_usd": (f"+{vs_usd:.3f}" if vs_usd >= 0 else f"{vs_usd:.3f}"),
             "vs_national_usd_abs": f"{abs(vs_usd):.3f}",
             "vs_national": (f"+{vs:.1f}" if vs >= 0 else f"{vs:.1f}"),

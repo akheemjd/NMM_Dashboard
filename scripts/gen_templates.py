@@ -446,11 +446,11 @@ write("fuel-prices",
     <div class="lead"><h2>North American diesel</h2><p>The cross-border index, and the gap Canadian carriers watch.</p></div>
     <div class="stats">
       <div class="stat"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · <span class="{{eia.nadi_change_7d_class}}">{{eia.nadi_change_7d}} 7d</span></div></div>
-      <div class="stat"><div class="l">US national</div><div class="v">{{eia.us_national_cpl}}</div><div class="s">¢/L · <span class="{{eia.us_change_7d_class}}">{{eia.us_change_7d}} 7d</span> · ${{eia.us_national_usd_gal}}/gal</div></div>
+      <div class="stat"><div class="l">US national</div><div class="v">{{eia.us_national_usd_gal}}</div><div class="s">$/gal · <span class="{{eia.us_change_7d_class}}">{{eia.us_change_7d}} 7d</span> · C${{eia.us_national_cad_gal}}/gal</div></div>
       <div class="stat"><div class="l">Canada vs US</div><div class="v">{{eia.ca_us_gap}}</div><div class="s">¢/L · {{eia.gap_word}}</div></div>
     </div>
     <div class="rows">
-    <!--LOOP:eia.padds_list--><div class="r"><span class="k">{{label}}<small>US PADD region</small></span><span class="v">{{cpl}} ¢/L · ${{usd_gal}}/gal</span></div><!--/LOOP:eia.padds_list-->
+    <!--LOOP:eia.padds_list--><div class="r"><span class="k">{{label}}<small>US PADD region</small></span><span class="v">${{usd_gal}}/gal · C${{cad_gal}}/gal</span></div><!--/LOOP:eia.padds_list-->
     </div>
     <p class="note">US figures are the EIA weekly retail diesel survey (ultra-low sulfur, on-highway), converted from USD per gallon at the Bank of Canada rate ({{fx.usd_cad}}). The North American index is the mean of the Canadian NMDI and the US national average — each country counts once. <a href="/methodology/nmdi/">Methodology</a></p>
   </section>
@@ -696,8 +696,8 @@ write("fuel-cost-calculator",
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
         <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
         <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}" data-code="{{code}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
-        <option value="{{eia.us_national_cpl}}" data-name="US national average" data-code="US">US national average — {{eia.us_national_cpl}}¢/L</option>
-        <!--LOOP:eia.padds_list--><option value="{{cpl}}" data-name="{{label}}" data-code="{{key}}">{{label}} — {{cpl}}¢/L</option><!--/LOOP:eia.padds_list-->
+        <option value="{{eia.us_national_cpl}}" data-name="US national average" data-code="US">US national average — ${{eia.us_national_usd_gal}}/gal</option>
+        <!--LOOP:eia.padds_list--><option value="{{cpl}}" data-name="{{label}}" data-code="{{key}}">{{label}} — ${{usd_gal}}/gal</option><!--/LOOP:eia.padds_list-->
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
       <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
@@ -1455,18 +1455,18 @@ US_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("US diesel prices
 
 us_body = (
  head("US Diesel Prices — ${{eia.us_national_usd_gal}}/gal | Northern Mile",
-      "US on-highway diesel, national average ${{eia.us_national_usd_gal}}/gal ({{eia.us_national_cpl}}¢/L CAD) plus five regional prices. EIA weekly retail diesel survey, converted at the latest Bank of Canada rate.",
+      "US on-highway diesel, national average ${{eia.us_national_usd_gal}}/gal (C${{eia.us_national_cad_gal}}/gal) plus five regional prices. EIA weekly retail diesel survey, converted at the latest Bank of Canada rate.",
       "/us-diesel/", "og.jpg", US_LD, "article")
  + '''
   <section class="hero">
 ''' +  '''
     <span class="eyebrow">EIA weekly retail diesel survey · week {{eia.date}}</span>
     <h1>US diesel prices</h1>
-    <div class="figure"><span class="n">{{eia.us_national_usd_gal}}</span><span class="u">$/gal</span><span class="d flat">{{eia.us_national_cpl}}¢/L CAD</span></div>
+    <div class="figure"><span class="n">{{eia.us_national_usd_gal}}</span><span class="u">$/gal</span><span class="d flat">C${{eia.us_national_cad_gal}}/gal</span></div>
     <div class="meta"><span>US national average</span><span>Converted at the latest Bank of Canada rate</span></div>
     <div class="cite">
       <div class="cl">Citing this figure</div>
-      <q id="citation">US on-highway diesel: ${{eia.us_national_usd_gal}}/gal national average ({{eia.us_national_cpl}}¢/L CAD), EIA weekly retail diesel survey, week ending {{eia.date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/</q>
+      <q id="citation">US on-highway diesel: ${{eia.us_national_usd_gal}}/gal national average (C${{eia.us_national_cad_gal}}/gal), EIA weekly retail diesel survey, week ending {{eia.date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/</q>
       <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
     </div>
   </section>
@@ -1474,7 +1474,7 @@ us_body = (
   <section class="sec">
     <div class="lead"><h2>Ten districts</h2><p>Every EIA diesel district · priced in US dollars per gallon</p></div>
     <div class="rows">
-    <!--LOOP:padds--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">${{usd_gal}}/gal &nbsp; <span class="flat">{{cpl}}¢/L CAD</span></span></a><!--/LOOP:padds-->
+    <!--LOOP:padds--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">${{usd_gal}}/gal &nbsp; <span class="flat">C${{cad_gal}}/gal</span></span></a><!--/LOOP:padds-->
     </div>
     <p class="note">Each district is an EIA pricing region. The price is that district&rsquo;s observation from the EIA weekly retail diesel survey, converted from US dollars per gallon at the latest Bank of Canada USD/CAD rate (1 US gallon = 3.785411784 L).</p>
     <p class="note">EIA does not price diesel by state, so there is no state-level figure to show. The <a href="/us-diesel/states/">state pages</a> give each state&rsquo;s fuel tax and name the district its diesel figure comes from.</p>
@@ -1500,7 +1500,7 @@ USPADD_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{label}} di
 
 uspadd_body = (
  head("{{label}} Diesel Price — ${{usd_gal}}/gal | Northern Mile",
-      "{{label}} diesel is ${{usd_gal}}/gal, {{vs_national_usd_abs}}/gal {{vs_national_word}} the US national average ({{cpl}}¢/L CAD at the latest Bank of Canada rate). EIA weekly retail diesel survey, week ending {{date}}.",
+      "{{label}} diesel is ${{usd_gal}}/gal, {{vs_national_usd_abs}}/gal {{vs_national_word}} the US national average (C${{cad_gal}}/gal at the latest Bank of Canada rate). EIA weekly retail diesel survey, week ending {{date}}.",
       "/us-diesel/district/{{key_url}}/", "og.jpg", USPADD_LD, "article")
  + '''
   <section class="hero">
@@ -1511,7 +1511,7 @@ uspadd_body = (
     <div class="meta"><span>US national <b>${{national_usd}}</b>/gal</span><span>{{national}}¢/L CAD · converted at the latest Bank of Canada rate</span></div>
     <div class="cite">
       <div class="cl">Citing this figure</div>
-      <q id="citation">{{label}} diesel: ${{usd_gal}}/gal ({{cpl}}¢/L CAD), EIA weekly retail diesel survey, week ending {{date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/district/{{key_url}}/</q>
+      <q id="citation">{{label}} diesel: ${{usd_gal}}/gal (C${{cad_gal}}/gal), EIA weekly retail diesel survey, week ending {{date}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/district/{{key_url}}/</q>
       <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">How it is calculated</a></div>
     </div>
   </section>
@@ -1533,7 +1533,7 @@ uspadd_body = (
 
     <div class="lead"><h2>The other districts</h2><p>US dollars per gallon · CAD equivalent shown</p></div>
     <div class="rows">
-    <!--LOOP:siblings--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">${{usd_gal}}/gal &nbsp; <span class="flat">{{cpl}}¢/L CAD</span></span></a><!--/LOOP:siblings-->
+    <!--LOOP:siblings--><a class="r" href="/us-diesel/district/{{key_url}}/"><span class="k">{{label}}</span><span class="v">${{usd_gal}}/gal &nbsp; <span class="flat">C${{cad_gal}}/gal</span></span></a><!--/LOOP:siblings-->
     </div>
     <p class="note"><a href="/us-diesel/">← US national and all regions</a></p>
   </section>
