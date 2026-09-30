@@ -784,7 +784,8 @@ if rates.get("usd_cad"):
 _gdp = next((m["value"] for m in market if m["name"] == "Monthly GDP"), None)
 if _gdp:
     _wr.append(f"GDP moving {_gdp} last month")
-weekly_read = ("The week in one line: " + ", ".join(_wr) + ".") if _wr else ""
+# Sits under "<h2>The week in one line</h2>", so it must not begin with those words.
+weekly_read = (", ".join(_wr) + ".") if _wr else ""
 
 write("market.norm", {
     "market": market,

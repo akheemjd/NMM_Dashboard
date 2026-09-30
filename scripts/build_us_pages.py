@@ -93,10 +93,13 @@ def district_states_sentence(key, label, district_states):
     names = [STATE_NAMES.get(c, c) for c in codes]
     if not names:
         return ""
+    # The sentence sits under "<h2>What X covers</h2>", so it must not repeat the heading.
+    # "California covers California alone" under "What California covers" said it twice.
     if len(names) == 1:
-        # "California spans California" reads badly.
-        return f"{label} covers {names[0]} alone."
-    return f"{label} spans " + ", ".join(names[:-1]) + f" and {names[-1]}."
+        return f"{names[0]} alone."
+    if len(names) == 2:
+        return f"{names[0]} and {names[1]}."
+    return ", ".join(names[:-1]) + f" and {names[-1]}."
 
 
 
