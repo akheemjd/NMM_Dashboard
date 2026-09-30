@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-314299",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at WEST OF HWY 409, Toronto. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.70412874,
-      "lng": -79.55872688,
-      "start": 1790796360,
-      "end": null,
-      "updated": 1790799480,
-      "scheduled": false
-    },
-    {
       "id": "ON-314319",
       "province": "ON",
       "highway": "QEW",
@@ -960,6 +943,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-312911",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 17 Westbound  between Pioneer St W, Markstay and Pioneer St W, Markstay, Markstay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.495205,
+      "lng": -80.56086,
+      "start": 1791201600,
+      "end": 1791540000,
+      "updated": 1790703060,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-09-30T20:24:38.147531+00:00",
+  "updated": "2026-09-30T20:38:56.226015+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
