@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-313077",
+      "id": "ON-313082",
       "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 404 Southbound RAMP at FINCH AVE, Toronto. 1 centre lane closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.79684208,
-      "lng": -79.34470651,
-      "start": 1790726520,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.74265249,
+      "lng": -79.4233205,
+      "start": 1790729400,
       "end": null,
-      "updated": 1790726520
-    },
-    {
-      "id": "ON-313076",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Southbound",
-      "description": "Collision on HWY 6 Southbound  at HWY 5/CLAPPISONS CORNERS, Hamilton. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.312214,
-      "lng": -79.917726,
-      "start": 1790726100,
-      "end": null,
-      "updated": 1790726100
+      "updated": 1790729400
     },
     {
       "id": "ON-313072",
@@ -79,22 +63,6 @@
       "start": 1790724780,
       "end": null,
       "updated": 1790724780
-    },
-    {
-      "id": "ON-313062",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at ERIN MILLS PKWY/SOUTHDOWN ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.52200467,
-      "lng": -79.64991321,
-      "start": 1790723940,
-      "end": null,
-      "updated": 1790723940
     },
     {
       "id": "ON-313047",
@@ -399,6 +367,38 @@
       "start": 1791241200,
       "end": 1791284400,
       "updated": 1790699520
+    },
+    {
+      "id": "ON-312898",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between BASS PRO MILLS DRIVE and MAJOR MACKENZIE DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.82064,
+      "lng": -79.5456,
+      "start": 1791165600,
+      "end": 1791543600,
+      "updated": 1790699460
+    },
+    {
+      "id": "ON-312899",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1791165600,
+      "end": 1791543600,
+      "updated": 1790699460
     },
     {
       "id": "drivebc.ca/RIDE-102401",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T00:27:15.461877+00:00",
+  "updated": "2026-09-30T00:58:26.886037+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
