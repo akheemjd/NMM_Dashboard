@@ -1,6 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-314235",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Collision on HWY 404 Northbound  at SHEPPARD AVE, Toronto. 4 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "4 left lanes closed",
+      "lat": 43.78176629,
+      "lng": -79.34052528,
+      "start": 1790783040,
+      "end": null,
+      "updated": 1790783100
+    },
+    {
+      "id": "ON-314233",
+      "province": "ON",
+      "highway": "HWY 71",
+      "direction": "Both Directions",
+      "description": "Special Event on HWY 71 Both Directions  at W JCT HWY 11, Emo. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 48.643333898,
+      "lng": -93.915982682,
+      "start": 1790782740,
+      "end": null,
+      "updated": 1790782740
+    },
+    {
       "id": "ON-314229",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -49,22 +81,6 @@
       "updated": 1790781120
     },
     {
-      "id": "ON-314219",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at WINSTON CHURCHILL BLVD, Oakville. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.50712565,
-      "lng": -79.66614852,
-      "start": 1790780820,
-      "end": null,
-      "updated": 1790780820
-    },
-    {
       "id": "ON-314217",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -79,22 +95,6 @@
       "start": 1790779560,
       "end": null,
       "updated": 1790779560
-    },
-    {
-      "id": "ON-314216",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 404 Northbound  at FINCH AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.79518786,
-      "lng": -79.34344722,
-      "start": 1790779500,
-      "end": null,
-      "updated": 1790779500
     },
     {
       "id": "ON-314197",
@@ -129,22 +129,6 @@
       "updated": 1790776080
     },
     {
-      "id": "ON-314171",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 11 Northbound  at SHOREVIEW DRIVE, Severn. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 44.738017383,
-      "lng": -79.354067173,
-      "start": 1790775540,
-      "end": null,
-      "updated": 1790775540
-    },
-    {
       "id": "drivebc.ca/RIDE-102950",
       "province": "BC",
       "highway": "Highway 97B near Highway 97B NE",
@@ -159,22 +143,6 @@
       "start": "2026-09-29T07:01:26-07:00",
       "end": "",
       "updated": "2026-09-30T06:38:58-07:00"
-    },
-    {
-      "id": "ON-314170",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 11 Southbound  at AGNEW RD, Severn. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 44.728208,
-      "lng": -79.369775,
-      "start": 1790775480,
-      "end": null,
-      "updated": 1790775480
     },
     {
       "id": "ON-314164",
@@ -239,22 +207,6 @@
       "start": 1790773080,
       "end": null,
       "updated": 1790773080
-    },
-    {
-      "id": "ON-314019",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 17 Eastbound  at Dead Otter Lake-Lake Superior Prov Park, Algoma. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 47.641198228,
-      "lng": -84.816770051,
-      "start": 1790771820,
-      "end": null,
-      "updated": 1790771820
     },
     {
       "id": "ON-313047",
@@ -415,6 +367,54 @@
       "start": 1791201600,
       "end": 1791540000,
       "updated": 1790703060
+    },
+    {
+      "id": "ON-312909",
+      "province": "ON",
+      "highway": "HWY 418",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 418 Southbound Off-ramp at REGIONAL HIGHWAY 2, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.91408,
+      "lng": -78.75521,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790702640
+    },
+    {
+      "id": "ON-312907",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at ENFIELD RD, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.96423,
+      "lng": -78.81192,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790702340
+    },
+    {
+      "id": "ON-312910",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Westbound Off-ramp at ENFIELD RD, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.96423,
+      "lng": -78.81192,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790702160
     },
     {
       "id": "drivebc.ca/RIDE-102851",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T15:28:36.262133+00:00",
+  "updated": "2026-09-30T15:59:36.836122+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

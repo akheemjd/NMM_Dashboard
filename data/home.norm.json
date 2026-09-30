@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-30 15:28",
-  "updated_iso": "2026-09-30T15:28:52+00:00",
-  "build_version": "1790782132",
+  "updated_at": "2026-09-30 15:59",
+  "updated_iso": "2026-09-30T15:59:58+00:00",
+  "build_version": "1790783998",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 14,
+    "active_count": 11,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 401, HWY 17, QEW",
+    "status_line": "HWY 404, HWY 71, HWY 403 , HWY 401",
     "incidents": [
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Highway Maintenance on HWY 403 MISSISSAUGA Eastbound ON-RAMP at HWY 5 / DUNDAS\u2026",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Northbound  at SHEPPARD AVE, Toronto. 4 left lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at DIXON RD, Toronto. Right lane closed.",
+        "road": "HWY 71",
+        "what": "Special Event on HWY 71 Both Directions  at W JCT HWY 11, Emo. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:08 EDT"
+      "captured_at": "11:31 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:46 EDT"
+      "captured_at": "11:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 PDT"
+      "captured_at": "08:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "4 of 9 crossings slow",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -525,11 +525,11 @@
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "industry",
-      "source": "Trucking Dive",
-      "headline": "Amazon rolls out new capabilities for bulky package shippers",
-      "url": "https://www.truckingdive.com/news/amazon-rolls-out-new-capabilities-for-bulky-package-shippers/831769/",
-      "why": "Industry movement worth tracking."
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "Trucker Path expands Reserved Parking Network",
+      "url": "https://www.thetrucker.com/trucking-news/business/trucker-path-expands-reserved-parking-network",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
