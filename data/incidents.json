@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-313090",
-      "province": "ON",
-      "highway": "HWY 144",
-      "direction": "Both Directions",
-      "description": "Other on HWY 144 Both Directions  at CPR S-CARTIER-10521, Cartier. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 46.625351587,
-      "lng": -81.452981046,
-      "start": 1790731440,
-      "end": null,
-      "updated": 1790731440
-    },
-    {
       "id": "ON-313088",
       "province": "ON",
       "highway": "HWY 401",
@@ -31,22 +15,6 @@
       "start": 1790731020,
       "end": null,
       "updated": 1790731020
-    },
-    {
-      "id": "ON-313087",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 427 Southbound EXPRESS at BLOOR STREET, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.63593567,
-      "lng": -79.55969839,
-      "start": 1790730960,
-      "end": null,
-      "updated": 1790730960
     },
     {
       "id": "ON-313072",
@@ -399,6 +367,38 @@
       "start": 1791241200,
       "end": 1791284400,
       "updated": 1790699520
+    },
+    {
+      "id": "ON-312898",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between BASS PRO MILLS DRIVE and MAJOR MACKENZIE DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.82064,
+      "lng": -79.5456,
+      "start": 1791165600,
+      "end": 1791543600,
+      "updated": 1790699460
+    },
+    {
+      "id": "ON-312899",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Express between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1791165600,
+      "end": 1791543600,
+      "updated": 1790699460
     },
     {
       "id": "drivebc.ca/RIDE-102401",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T01:29:16.585243+00:00",
+  "updated": "2026-09-30T02:00:17.067805+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"

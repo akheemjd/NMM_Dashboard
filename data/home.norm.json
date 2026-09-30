@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-30 01:29",
-  "updated_iso": "2026-09-30T01:29:32+00:00",
-  "build_version": "1790731772",
+  "updated_at": "2026-09-30 02:00",
+  "updated_iso": "2026-09-30T02:00:32+00:00",
+  "build_version": "1790733632",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 6,
+    "active_count": 4,
     "gauge_class": "warn",
-    "status_line": "HWY 144, HWY 401, HWY 427, QEW",
+    "status_line": "HWY 401, QEW, HWY 7",
     "incidents": [
       {
-        "road": "HWY 144",
-        "what": "Other on HWY 144 Both Directions  at CPR S-CARTIER-10521, Cartier. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at DUFFERIN STREET, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at DUFFERIN STREET, Toronto. Left\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound ON-RAMP at GUELPH LINE, Burlington. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:00 PDT"
+      "captured_at": "18:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 CDT"
+      "captured_at": "20:26 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
