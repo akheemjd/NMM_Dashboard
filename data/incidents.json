@@ -1,22 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-313218",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at WESTNEY RD, Ajax. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.846472,
-      "lng": -79.054025,
-      "start": 1790748900,
-      "end": null,
-      "updated": 1790748900
-    },
-    {
       "id": "ON-313047",
       "province": "ON",
       "highway": "HWY 11",
@@ -396,6 +380,22 @@
       "lanes": "3 Alternating Lane(s)",
       "lat": 43.846935,
       "lng": -79.54861,
+      "start": 1791162000,
+      "end": 1791536400,
+      "updated": 1790699400
+    },
+    {
+      "id": "ON-312900",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 400 Southbound Express between BASS PRO MILLS DRIVE and HIGHWAY 7, Vaughan. 4 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "4 Alternating Lane(s)",
+      "lat": 43.82064,
+      "lng": -79.5456,
       "start": 1791162000,
       "end": 1791536400,
       "updated": 1790699400
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T06:39:37.358762+00:00",
+  "updated": "2026-09-30T07:11:51.837629+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
