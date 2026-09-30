@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-30 07:12",
-  "updated_iso": "2026-09-30T07:12:07+00:00",
-  "build_version": "1790752327",
+  "updated_at": "2026-09-30 07:43",
+  "updated_iso": "2026-09-30T07:43:38+00:00",
+  "build_version": "1790754218",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -346,11 +346,19 @@
     "range_pct": "94%"
   },
   "incidents": {
-    "none": true,
-    "active_count": 0,
-    "gauge_class": "good",
-    "status_line": "all corridors clear",
-    "incidents": []
+    "none": false,
+    "active_count": 1,
+    "gauge_class": "warn",
+    "status_line": "HWY 401",
+    "incidents": [
+      {
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS RAMP at 404/DVP, Toronto. Right\u2026",
+        "severity_label": "Collision",
+        "severity_class": "ok",
+        "url": "/road-incidents/"
+      }
+    ]
   },
   "border_rows": [
     {
@@ -361,7 +369,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT"
+      "captured_at": "03:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -417,11 +425,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:00 PDT"
+      "captured_at": "00:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -431,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 CDT"
+      "captured_at": "02:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

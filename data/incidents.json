@@ -1,6 +1,22 @@
 {
   "incidents": [
     {
+      "id": "ON-313219",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS RAMP at 404/DVP, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.76691296,
+      "lng": -79.343212,
+      "start": 1790754000,
+      "end": null,
+      "updated": 1790754000
+    },
+    {
       "id": "ON-313047",
       "province": "ON",
       "highway": "HWY 11",
@@ -380,22 +396,6 @@
       "lanes": "3 Alternating Lane(s)",
       "lat": 43.846935,
       "lng": -79.54861,
-      "start": 1791162000,
-      "end": 1791536400,
-      "updated": 1790699400
-    },
-    {
-      "id": "ON-312900",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 400 Southbound Express between BASS PRO MILLS DRIVE and HIGHWAY 7, Vaughan. 4 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "4 Alternating Lane(s)",
-      "lat": 43.82064,
-      "lng": -79.5456,
       "start": 1791162000,
       "end": 1791536400,
       "updated": 1790699400
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T07:11:51.837629+00:00",
+  "updated": "2026-09-30T07:43:24.310110+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
