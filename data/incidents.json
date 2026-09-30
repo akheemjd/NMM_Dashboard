@@ -1,6 +1,54 @@
 {
   "incidents": [
     {
+      "id": "ON-314258",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at DIXIE ROAD, Mississauga. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.59659275,
+      "lng": -79.56882047,
+      "start": 1790788440,
+      "end": null,
+      "updated": 1790788440
+    },
+    {
+      "id": "drivebc.ca/RIDE-103001",
+      "province": "BC",
+      "highway": "Highway 52 near Highway 52 N",
+      "direction": "",
+      "description": "Paving operations from Highway 52, 48km North of Tumbler Ridge and 70km Southwest of Dawson Creek. Starting Thu Oct 1 until Fri Oct 2. From 6:30 AM to 6:30 PM MST, Thursday and Friday. Last update: September 30th, 2026 at 10:10am MST. Slow down and each for crews and equipment, follow direction of traffic control personnel.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 55.40681,
+      "lng": -120.80968,
+      "start": "2026-09-30T10:10:25-07:00",
+      "end": "",
+      "updated": "2026-09-30T10:10:25-07:00"
+    },
+    {
+      "id": "ON-314255",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 HAMILTON Eastbound RAMP at WATERDOWN ROAD, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.31015831,
+      "lng": -79.86129096,
+      "start": 1790788020,
+      "end": null,
+      "updated": 1790788020
+    },
+    {
       "id": "ON-314229",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -127,22 +175,6 @@
       "start": 1790773320,
       "end": null,
       "updated": 1790773320
-    },
-    {
-      "id": "ON-314107",
-      "province": "ON",
-      "highway": "HWY 622",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 622 Southbound  at WESTHAWK RD (E), Ignace. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 49.384394611,
-      "lng": -92.195389468,
-      "start": 1790773080,
-      "end": null,
-      "updated": 1790773080
     },
     {
       "id": "ON-313047",
@@ -399,22 +431,6 @@
       "start": 1791165600,
       "end": 1791540000,
       "updated": 1790701560
-    },
-    {
-      "id": "ON-312916",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Eastbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Eastbound Off-ramp at DARLINGTON CLARKE TOWNLINE, Clarington. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.00081,
-      "lng": -78.66665,
-      "start": 1791165600,
-      "end": 1791540000,
-      "updated": 1790701320
     },
     {
       "id": "drivebc.ca/RIDE-102851",
@@ -783,26 +799,10 @@
       "start": "2026-08-25T11:37:06-07:00",
       "end": "",
       "updated": "2026-09-15T20:09:20-07:00"
-    },
-    {
-      "id": "drivebc.ca/RIDE-101655",
-      "province": "BC",
-      "highway": "Highway 97",
-      "direction": "",
-      "description": "Utility work from Highway 97, 19km Southeast of Clinton and Loon Lake Rd to 70 Mile House. Starting Mon Aug 17. Watch for traffic control. Last update: September 15th, 2026 at 8:09pm PDT. Next update time Wed Sep 30 at 12:00 PM PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.96757,
-      "lng": -121.45912,
-      "start": "2026-08-25T11:44:16-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:09:16-07:00"
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T16:30:45.770035+00:00",
+  "updated": "2026-09-30T17:30:39.520071+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
