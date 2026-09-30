@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-30 04:04",
-  "updated_iso": "2026-09-30T04:04:35+00:00",
-  "build_version": "1790741075",
+  "updated_at": "2026-09-30 04:35",
+  "updated_iso": "2026-09-30T04:35:36+00:00",
+  "build_version": "1790742936",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "265.6",
@@ -347,20 +347,13 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 2,
+    "active_count": 1,
     "gauge_class": "warn",
-    "status_line": "QEW",
+    "status_line": "HWY 401",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound ON-RAMP at GUELPH LINE, Burlington. All lanes\u2026",
-        "severity_label": "Collision",
-        "severity_class": "ok",
-        "url": "/road-incidents/"
-      },
-      {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at GUELPH LINE, Burlington. 2 right lanes\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at STEVENSON ROAD, Oshawa. 2 left lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +409,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 EDT"
+      "captured_at": "00:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -426,17 +419,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 MDT"
+      "captured_at": "22:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT"
+      "captured_at": "21:20 PDT"
     },
     {
       "name": "Emerson-Pembina",

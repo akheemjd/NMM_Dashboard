@@ -1,36 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-313072",
+      "id": "ON-313170",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at GUELPH LINE, Burlington. 2 right lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at STEVENSON ROAD, Oshawa. 2 left lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.35203927,
-      "lng": -79.80373392,
-      "start": 1790725680,
+      "lanes": "2 left lanes closed",
+      "lat": 43.8764985,
+      "lng": -78.8756219,
+      "start": 1790741640,
       "end": null,
-      "updated": 1790730840
-    },
-    {
-      "id": "ON-313074",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound ON-RAMP at GUELPH LINE, Burlington. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.352021,
-      "lng": -79.803862,
-      "start": 1790725980,
-      "end": null,
-      "updated": 1790730840
+      "updated": 1790741640
     },
     {
       "id": "ON-313047",
@@ -399,6 +383,22 @@
       "start": 1791162000,
       "end": 1791543600,
       "updated": 1790699460
+    },
+    {
+      "id": "ON-312897",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 400 Southbound  between MAJOR MACKENZIE DRIVE and BASS PRO MILLS DRIVE, Vaughan. 3 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "3 Alternating Lane(s)",
+      "lat": 43.846935,
+      "lng": -79.54861,
+      "start": 1791162000,
+      "end": 1791536400,
+      "updated": 1790699400
     },
     {
       "id": "drivebc.ca/RIDE-102401",
@@ -802,7 +802,7 @@
     }
   ],
   "total": 50,
-  "updated": "2026-09-30T04:04:19.920838+00:00",
+  "updated": "2026-09-30T04:35:21.471037+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC"
