@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-314445",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at REGIONAL ROAD 25, Milton. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.527885,
+      "lng": -79.9058779,
+      "start": 1790832540,
+      "end": null,
+      "updated": 1790832540,
+      "scheduled": false
+    },
+    {
       "id": "ON-314438",
       "province": "ON",
       "highway": "HWY 24",
@@ -943,23 +960,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-312910",
-      "province": "ON",
-      "highway": "HWY 407 ETR",
-      "direction": "Westbound",
-      "description": "Nightly Maintenance on HWY 407 ETR Westbound Off-ramp at ENFIELD RD, Clarington. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 43.96423,
-      "lng": -78.81192,
-      "start": 1791165600,
-      "end": 1791540000,
-      "updated": 1790702160,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T05:28:07.944265+00:00",
+  "updated": "2026-10-01T05:34:06.833662+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
