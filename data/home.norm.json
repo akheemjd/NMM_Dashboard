@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-01 07:32",
-  "updated_iso": "2026-10-01T07:32:27+00:00",
-  "build_version": "1790839947",
+  "updated_at": "2026-10-01 08:03",
+  "updated_iso": "2026-10-01T08:03:23+00:00",
+  "build_version": "1790841803",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 30,
+    "active_count": 32,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 24",
+    "status_line": "HWY 401, QEW",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at REGIONAL ROAD 25, Milton. All lanes\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound ON-RAMP at REGIONAL ROAD 25, Milton. All lanes\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound HOV at BRONTE ROAD, Oakville. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:12 EDT"
+      "captured_at": "03:42 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "00:20 PDT"
+      "captured_at": "00:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
