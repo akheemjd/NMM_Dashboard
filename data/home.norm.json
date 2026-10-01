@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-01 14:47",
-  "updated_iso": "2026-10-01T14:47:39+00:00",
-  "build_version": "1790866059",
+  "updated_at": "2026-10-01 15:18",
+  "updated_iso": "2026-10-01T15:18:59+00:00",
+  "build_version": "1790867939",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 38,
+    "active_count": 34,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 401, HWY 17, HWY 11",
+    "status_line": "HWY 556, HWY 409, HWY 17, HWY 11",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Southbound EXPRESS at SHEPPARD AVE, Toronto. 2 left\u2026",
+        "road": "HWY 556",
+        "what": "Highway Maintenance on HWY 556 Westbound  at BELLEVUE VALLEY RD-AWERES TWP (N),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound EXPRESS at HWY 400, Toronto. Left shoulder and\u2026",
+        "road": "HWY 409",
+        "what": "Highway Maintenance on HWY 409 Eastbound RAMP at ATTWELL DRIVE, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -376,7 +376,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:06 EDT"
+      "captured_at": "10:45 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 MDT"
+      "captured_at": "08:45 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:20 PDT"
+      "captured_at": "08:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -460,24 +460,6 @@
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "-0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.1\u00a2/L and 35 L/100km",
@@ -518,17 +500,17 @@
   "theft": [],
   "news": [
     {
+      "category": "regulations",
+      "source": "The Trucker",
+      "headline": "Red Simpson combined the Bakersfield Sound with trucker country: Part 2",
+      "url": "https://www.thetrucker.com/trucking-news/perspective/rhythm-of-the-road-by-kris-rutherford/red-simpson-combined-the-bakersfield-sound-with-trucker-country-part-2",
+      "why": "Rules change compliance cost and driver hours."
+    },
+    {
       "category": "equipment",
       "source": "Trucking Dive",
       "headline": "Circle Logistics targets food and beverage shippers in reefer LTL service expansion",
       "url": "https://www.truckingdive.com/news/circle-logistics-targets-food-and-beverage-shippers-in-reefer-ltl-service-e/831436/",
-      "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "Semi-truck overturns on Interstate 70 in Missouri",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/semi-truck-overturns-on-interstate-70-in-missouri",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
