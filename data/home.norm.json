@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-01 11:41",
-  "updated_iso": "2026-10-01T11:41:29+00:00",
-  "build_version": "1790854889",
+  "updated_at": "2026-10-01 12:12",
+  "updated_iso": "2026-10-01T12:12:30+00:00",
+  "build_version": "1790856750",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,21 +347,21 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 27,
+    "active_count": 31,
     "gauge_class": "warn",
-    "status_line": "HWY 400, SR-4 in , I-5 in S",
+    "status_line": "HWY 401, QEW",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at SOUTH OF FINCH, Toronto. 2 right lanes and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at MORNINGSIDE AVE, Toronto. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "SR-4 in Alpine County",
-        "what": "Silver Mountain (historical). Drainage Work. All of 2 lanes closed.",
-        "severity_label": "Closed",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  at Union Rd, London. All lanes closed.",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:20 PDT"
+      "captured_at": "05:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
+      "category": "safety",
+      "source": "The Trucker",
+      "headline": "Fatigue blamed for rollover crash in New York",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/fatigue-blamed-for-rollover-crash-in-new-york",
+      "why": "Safety rules and blitzes hit the road on specific dates."
+    },
+    {
       "category": "equipment",
       "source": "The Trucker",
       "headline": "Operation Saturday Night Fever: Four-state crackdown puts 78 truck drivers out of service",
       "url": "https://www.thetrucker.com/trucking-news/the-nation/operation-saturday-night-fever-four-state-crackdown-puts-78-truck-drivers-out-of-service",
       "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "Flanagan-White merges with Zipp Express",
-      "url": "https://www.thetrucker.com/trucking-news/business/flanagan-white-merges-with-zipp-express",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
