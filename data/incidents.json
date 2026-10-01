@@ -1,37 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-314450",
+      "id": "ON-314451",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering. 2 left lanes closed.",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 427 Northbound  at HWY 401, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.83731548,
-      "lng": -79.07273129,
-      "start": 1790841360,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.67220467,
+      "lng": -79.57728764,
+      "start": 1790843280,
       "end": null,
-      "updated": 1790841360,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314449",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound HOV at BRONTE ROAD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.4090109,
-      "lng": -79.7416423,
-      "start": 1790840040,
-      "end": null,
-      "updated": 1790840040,
+      "updated": 1790843280,
       "scheduled": false
     },
     {
@@ -960,6 +943,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-312917",
+      "province": "ON",
+      "highway": "HWY 418",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 418 Southbound On-ramp at REGIONAL HIGHWAY 2, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.91408,
+      "lng": -78.75521,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790703240,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T08:03:08.894871+00:00",
+  "updated": "2026-10-01T08:34:09.352780+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
