@@ -1,13 +1,13 @@
 {
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Emerson-Pembina",
+    "max_wait": "20 min"
   },
   "border_rows": [
     {
@@ -58,7 +58,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:45 EDT"
+      "captured_at": "22:44 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -78,17 +78,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 PDT"
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
       "slug": "emerson-pembina",
       "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:54 CDT"
+      "captured_at": "21:21 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -150,7 +150,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:45 EDT"
+      "captured_at": "22:44 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -170,17 +170,17 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:00 PDT"
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
       "slug": "emerson-pembina",
       "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:54 CDT"
+      "captured_at": "21:21 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -193,8 +193,8 @@
       "captured_at": "18:15 EDT"
     }
   ],
-  "updated_at": "2026-10-01 02:20",
-  "updated_iso": "2026-10-01T02:20:20+00:00",
-  "build_version": "1790821220",
-  "captured_at": "2026-10-01 02:20"
+  "updated_at": "2026-10-01 02:52",
+  "updated_iso": "2026-10-01T02:52:08+00:00",
+  "build_version": "1790823128",
+  "captured_at": "2026-10-01 02:52"
 }
