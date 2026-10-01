@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-01 13:14",
-  "updated_iso": "2026-10-01T13:14:31+00:00",
-  "build_version": "1790860471",
+  "updated_at": "2026-10-01 13:45",
+  "updated_iso": "2026-10-01T13:45:32+00:00",
+  "build_version": "1790862332",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 38,
     "gauge_class": "warn",
-    "status_line": "HWY 622, HWY 404, HWY 69",
+    "status_line": "HWY 401, HWY 11, HWY 403 ",
     "incidents": [
       {
-        "road": "HWY 622",
-        "what": "Highway Maintenance on HWY 622 Southbound  at LOAD CHECK PULLOVER S ENT (W),\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at WESTON ROAD, Toronto. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 622",
-        "what": "Highway Maintenance on HWY 622 Northbound  at GRAVEL RD (W), Atikokan. Lane and\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Southbound  at NICHOLS LINE, Severn. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:00 PDT"
+      "captured_at": "06:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:55 CDT"
+      "captured_at": "08:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -519,17 +519,17 @@
   "news": [
     {
       "category": "equipment",
+      "source": "Trucking Dive",
+      "headline": "Circle Logistics targets food and beverage shippers in reefer LTL service expansion",
+      "url": "https://www.truckingdive.com/news/circle-logistics-targets-food-and-beverage-shippers-in-reefer-ltl-service-e/831436/",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
+      "category": "equipment",
       "source": "The Trucker",
       "headline": "Semi-truck overturns on Interstate 70 in Missouri",
       "url": "https://www.thetrucker.com/trucking-news/the-nation/semi-truck-overturns-on-interstate-70-in-missouri",
       "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "regulations",
-      "source": "The Trucker",
-      "headline": "High gas prices are spurring states to waive taxes and regulations amid midterm election",
-      "url": "https://www.thetrucker.com/trucking-news/business/high-gas-prices-are-spurring-states-to-waive-taxes-and-regulations-amid-midterm-election",
-      "why": "Rules change compliance cost and driver hours."
     }
   ],
   "theft_home_json": "[]",
