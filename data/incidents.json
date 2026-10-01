@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-314454",
+      "id": "ON-314456",
       "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Westbound",
-      "description": "Collision on HWY 409 Westbound  at KIPLING AVE/BELFIELD ROAD, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.70428436,
-      "lng": -79.56342833,
-      "start": 1790844780,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.6520701,
+      "lng": -79.627282,
+      "start": 1790846100,
       "end": null,
-      "updated": 1790844780,
+      "updated": 1790846100,
       "scheduled": false
     },
     {
@@ -569,23 +569,6 @@
       "updated": "2026-10-01"
     },
     {
-      "id": "ON-314438",
-      "province": "ON",
-      "highway": "HWY 24",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 24 Both Directions  between Blue Lake Road, St George and German School Road, Osborne Corners. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.238120773,
-      "lng": -80.289150775,
-      "start": 1790825280,
-      "end": null,
-      "updated": 1790825280,
-      "scheduled": false
-    },
-    {
       "id": "ON-314414",
       "province": "ON",
       "highway": "HWY 401",
@@ -957,6 +940,23 @@
       "start": 1791165600,
       "end": 1791540000,
       "updated": 1790703240,
+      "scheduled": true
+    },
+    {
+      "id": "ON-312911",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 17 Westbound  between Pioneer St W, Markstay and Pioneer St W, Markstay, Markstay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 46.495205,
+      "lng": -80.56086,
+      "start": 1791201600,
+      "end": 1791540000,
+      "updated": 1790703060,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T09:05:12.429466+00:00",
+  "updated": "2026-10-01T09:36:11.741720+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
