@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-01 19:29",
-  "updated_iso": "2026-10-01T19:29:41+00:00",
-  "build_version": "1790882981",
+  "updated_at": "2026-10-01 20:00",
+  "updated_iso": "2026-10-01T20:00:44+00:00",
+  "build_version": "1790884844",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "25 min"
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "261.1",
@@ -347,7 +347,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 36,
+    "active_count": 34,
     "gauge_class": "warn",
     "status_line": "HWY 35/1, QEW, HWY 401",
     "incidents": [
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:41 EDT"
+      "captured_at": "15:54 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 EDT"
+      "captured_at": "15:46 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 MDT"
+      "captured_at": "13:22 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
