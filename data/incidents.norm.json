@@ -1,9 +1,9 @@
 {
   "incidents": {
     "none": false,
-    "active_count": 29,
+    "active_count": 30,
     "gauge_class": "warn",
-    "status_line": "HWY 35/1, HWY 403 , HWY 404, I-5 in S",
+    "status_line": "HWY 35/1, HWY 404, HWY 409",
     "incidents": [
       {
         "road": "HWY 35/115",
@@ -13,16 +13,34 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound  at HWY 407, Mississauga. 1\u2026",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Southbound  at MAJOR MACKENZIE DRIVE, Markham-Richmondhill\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
     ]
   },
-  "incidents_json": "[{\"lat\": 43.883252, \"lng\": -79.379787, \"road\": \"HWY 404\", \"direction\": \"Southbound\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Collision on HWY 404 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Markham-Richmo\", \"event_type\": \"Collision\", \"lanes\": \"All lanes closed\", \"closed\": true, \"province\": \"ON\", \"clearance\": \"Oct 01 18:52\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 43.52757993, \"lng\": -79.72183943, \"road\": \"HWY 403 MISSISSAUGA\", \"direction\": \"Eastbound\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound  at HWY 407, Mississauga. 1 ri\", \"event_type\": \"Collision\", \"lanes\": \"1 right lane closed\", \"closed\": false, \"province\": \"ON\", \"clearance\": \"Oct 01 20:46\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.73316066, \"lng\": -121.16167553, \"road\": \"Highway 16 near Slim Creek Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge construction at Highway 16, At Slim Creek Bridge. Starting Wed Sep 23 unt\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 23 13:22\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.8826, \"lng\": -119.53615, \"road\": \"Westside Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Special event from Westside Road. Starting Tue Sep 29. Last update: October 1st,\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 29 07:18\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 50.89168, \"lng\": -119.51582, \"road\": \"Highway 1 near Trans-Canada Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Falling rock from Highway 1, At Des Fosses Road to Monte Creek Junction. Startin\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 15 15:27\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 51.84053, \"lng\": -118.61636, \"road\": \"Highway 23 near Highway 23 N\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Shoulder maintenance from Highway 23, Between Bigmouth FSR and Mica Creek Villag\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Oct 01 06:23\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.5839, \"lng\": -121.3224, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.5813, \"lng\": -121.3236, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.58254, \"lng\": -121.321928, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.582693, \"lng\": -121.323741, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.021153, \"lng\": -121.358552, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway Construction. 1, 2 of 3 lanes \", \"event_type\": \"Collision\", \"lanes\": \"1, 2 of 3\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Sep 30 00:00\", \"end_time\": \"Oct 01 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.021153, \"lng\": -121.358552, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway Construction. 1, 2 of 3 lanes \", \"event_type\": \"Collision\", \"lanes\": \"1, 2 of 3\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Oct 01 00:00\", \"end_time\": \"Oct 02 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.115746, \"lng\": -121.397665, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes closed.\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Sep 30 00:00\", \"end_time\": \"Oct 01 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.115746, \"lng\": -121.397665, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes closed.\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Oct 01 00:00\", \"end_time\": \"Oct 02 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.254747, \"lng\": -121.44807, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"San Joaquin/Sacramento County Line near Thornton. Highway Construction. 1 of 2 l\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Sep 30 00:00\", \"end_time\": \"Oct 01 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.254747, \"lng\": -121.44807, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"San Joaquin/Sacramento County Line near Thornton. Highway Construction. 1 of 2 l\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Oct 01 00:00\", \"end_time\": \"Oct 02 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.27589, \"lng\": -121.23433, \"road\": \"Highway 3\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road construction from Highway 3, Sunshine Valley to Manning Park Resort. Starti\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 25 16:23\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.93047, \"lng\": -125.18496, \"road\": \"Highway 19A near Island Highway S\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Utility work from Highway 19A, McGimpsey Rd to Seawave Rd. Starting Mon Oct 12 u\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 25 10:14\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 51.78579, \"lng\": -119.32135, \"road\": \"Highway 5 near Avola Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge maintenance from Highway 5, At Avola Overhead Bridge to At Avola Bridge. \", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 11:11\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 51.78582, \"lng\": -119.32122, \"road\": \"Highway 5 near Avola Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Mowing from Highway 5, At Avola Overhead Bridge to At Blue River Bridge. Startin\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 11:02\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.26566074, \"lng\": -123.23536424, \"road\": \"Other Roads near University Boulevard\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road construction at University Boulevard, At Shortcut Road and University Boule\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 10:24\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.26605, \"lng\": -124.73685, \"road\": \"Highway 4 near Alberni Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Tree pruning from Highway 4, Elkford Rd to Loon Lake Main. Starting Wed Oct 7 un\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 09:04\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.24262, \"lng\": -125.36296, \"road\": \"Highway 4 near Pacific Rim Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Tree pruning from Highway 4, Marion Creek FSR to Kennedy Lake Boat Launch. Start\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 18 09:34\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.12271, \"lng\": -122.09722, \"road\": \"Highway 1 near Vedder River Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Shoulder maintenance from Highway 1, In Abbotsford and At Vedder Canal Bridge to\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 17 09:54\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 48.52427, \"lng\": -123.55551, \"road\": \"Highway 1 near Trans-Canada Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Utility work from Highway 1, 100m South of Aspen Road to At Malahat Frtg. Starti\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 16 15:46\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 56.22144, \"lng\": -121.44297, \"road\": \"Highway 29 near Halfway River Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road maintenance from Highway 29 to Upper Cache Road. Starting Mon Sep 14 until \", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 14 11:24\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 56.24166011, \"lng\": -121.40050704, \"road\": \"Highway 29 near Highway 29 N\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work at Highway 29, Upper Cache Rd. Starting Mon Aug 31 until Fri O\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 16:22\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 58.10620571, \"lng\": -122.71542863, \"road\": \"Highway 97 near Adsett Creek Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge maintenance at Highway 97, In NRRM and At Adsett Creek Bridge. Starting W\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 01 14:14\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 52.87166, \"lng\": -122.4334, \"road\": \"Other Roads near Durrell Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work from Durrell Road, 17km South of Quesnel and Highway 97 to At \", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 25 14:41\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.22249, \"lng\": -122.43058, \"road\": \"Highway 97\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road maintenance from Highway 97, 34km North of Quesnel to 25km Northeast of Que\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 09:21\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 52.85978896, \"lng\": -122.25893057, \"road\": \"Other Roads near Quesnel-Hydraulic Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work at Quesnel-Hydraulic Road, 25km Southeast of Quesnel. Starting\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 09:48\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.17908, \"lng\": -122.50301, \"road\": \"Other Roads near Olson Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road maintenance from Olson Road, At Olson Road and Quesnel-Hixon Road to At Hig\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 24 08:42\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.22254049, \"lng\": -122.430664, \"road\": \"Highway 97\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work at Highway 97, 34km North of Quesnel and Olsen Rd intersection\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 12:26\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.22268, \"lng\": -122.43087, \"road\": \"Highway 97\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work from Highway 97, 34km North of Quesnel to In Quesnel. Starting\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 09:42\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 52.0673947, \"lng\": -123.55472192, \"road\": \"Other Roads near Chilko-Newton Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge maintenance at Chilko-Newton Road, Chilko River Siwash Bridge. Starting M\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 25 14:49\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 51.22682, \"lng\": -121.63007, \"road\": \"Other Roads near Big Bar Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road maintenance from Big Bar Road, At Big Bar Road and Hooke Road to At 3100 Fo\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 25 11:37\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 50.96757, \"lng\": -121.45912, \"road\": \"Highway 97\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Utility work from Highway 97, 19km Southeast of Clinton and Loon Lake Rd to 70 M\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 25 11:44\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}]",
+  "incidents_json": "[{\"lat\": 43.88309846, \"lng\": -79.38001372, \"road\": \"HWY 404\", \"direction\": \"Southbound\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Collision on HWY 404 Southbound  at MAJOR MACKENZIE DRIVE, Markham-Richmondhill \", \"event_type\": \"Collision\", \"lanes\": \"right lane closed\", \"closed\": false, \"province\": \"ON\", \"clearance\": \"Oct 01 21:48\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 43.69892212, \"lng\": -79.57415474, \"road\": \"HWY 409\", \"direction\": \"Eastbound\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Collision on HWY 409 Eastbound  at MARTIN GROVE ROAD, Toronto. Right lane closed\", \"event_type\": \"Collision\", \"lanes\": \"right lane closed\", \"closed\": false, \"province\": \"ON\", \"clearance\": \"Oct 01 21:43\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 43.883252, \"lng\": -79.379787, \"road\": \"HWY 404\", \"direction\": \"Southbound\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Collision on HWY 404 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Markham-Richmo\", \"event_type\": \"Collision\", \"lanes\": \"All lanes closed\", \"closed\": true, \"province\": \"ON\", \"clearance\": \"Oct 01 18:52\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.73316066, \"lng\": -121.16167553, \"road\": \"Highway 16 near Slim Creek Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge construction at Highway 16, At Slim Creek Bridge. Starting Wed Sep 23 unt\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 23 13:22\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.8826, \"lng\": -119.53615, \"road\": \"Westside Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Special event from Westside Road. Starting Tue Sep 29. Last update: October 1st,\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 29 07:18\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 50.89168, \"lng\": -119.51582, \"road\": \"Highway 1 near Trans-Canada Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Falling rock from Highway 1, At Des Fosses Road to Monte Creek Junction. Startin\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 15 15:27\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 51.84053, \"lng\": -118.61636, \"road\": \"Highway 23 near Highway 23 N\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Shoulder maintenance from Highway 23, Between Bigmouth FSR and Mica Creek Villag\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Oct 01 06:23\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.5839, \"lng\": -121.3224, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.5813, \"lng\": -121.3236, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.58254, \"lng\": -121.321928, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 37.582693, \"lng\": -121.323741, \"road\": \"I-5 in Stanislaus County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Route 5 near Westley. Rest Area Work. All of 1 lanes closed.\", \"event_type\": \"Closures\", \"lanes\": \"All of 1\", \"closed\": true, \"province\": \"CA\", \"clearance\": \"Jul 08 00:00\", \"end_time\": \"Oct 30 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.021153, \"lng\": -121.358552, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway Construction. 1, 2 of 3 lanes \", \"event_type\": \"Collision\", \"lanes\": \"1, 2 of 3\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Sep 30 00:00\", \"end_time\": \"Oct 01 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.021153, \"lng\": -121.358552, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway Construction. 1, 2 of 3 lanes \", \"event_type\": \"Collision\", \"lanes\": \"1, 2 of 3\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Oct 01 00:00\", \"end_time\": \"Oct 02 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.115746, \"lng\": -121.397665, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes closed.\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Sep 30 00:00\", \"end_time\": \"Oct 01 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.115746, \"lng\": -121.397665, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"North\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes closed.\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Oct 01 00:00\", \"end_time\": \"Oct 02 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.254747, \"lng\": -121.44807, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"San Joaquin/Sacramento County Line near Thornton. Highway Construction. 1 of 2 l\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Sep 30 00:00\", \"end_time\": \"Oct 01 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 38.254747, \"lng\": -121.44807, \"road\": \"I-5 in San Joaquin County\", \"direction\": \"South\", \"severity_class\": \"mod\", \"severity_label\": \"Collision\", \"what\": \"San Joaquin/Sacramento County Line near Thornton. Highway Construction. 1 of 2 l\", \"event_type\": \"Collision\", \"lanes\": \"1 of 2\", \"closed\": false, \"province\": \"CA\", \"clearance\": \"Oct 01 00:00\", \"end_time\": \"Oct 02 00:00\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.27589, \"lng\": -121.23433, \"road\": \"Highway 3\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road construction from Highway 3, Sunshine Valley to Manning Park Resort. Starti\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 25 16:23\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.93047, \"lng\": -125.18496, \"road\": \"Highway 19A near Island Highway S\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Utility work from Highway 19A, McGimpsey Rd to Seawave Rd. Starting Mon Oct 12 u\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 25 10:14\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.38684, \"lng\": -121.47055, \"road\": \"Highway 7 near Lougheed Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Tree pruning from Highway 7, In Hope and Haig Scale to At Chawathil Road. Starti\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 15:18\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 51.78579, \"lng\": -119.32135, \"road\": \"Highway 5 near Avola Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge maintenance from Highway 5, At Avola Overhead Bridge to At Avola Bridge. \", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 11:11\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 51.78582, \"lng\": -119.32122, \"road\": \"Highway 5 near Avola Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Mowing from Highway 5, At Avola Overhead Bridge to At Blue River Bridge. Startin\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 11:02\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.26566074, \"lng\": -123.23536424, \"road\": \"Other Roads near University Boulevard\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road construction at University Boulevard, At Shortcut Road and University Boule\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 10:24\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.26605, \"lng\": -124.73685, \"road\": \"Highway 4 near Alberni Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Tree pruning from Highway 4, Elkford Rd to Loon Lake Main. Starting Wed Oct 7 un\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 24 09:04\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 48.60163, \"lng\": -123.5351, \"road\": \"Highway 1 near Trans-Canada Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Utility work from Highway 1, Mill Bay Rd to Bamberton Rd. Starting Tue Sep 29 un\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 22 13:25\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.24262, \"lng\": -125.36296, \"road\": \"Highway 4 near Pacific Rim Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Tree pruning from Highway 4, Marion Creek FSR to Kennedy Lake Boat Launch. Start\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 18 09:34\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 49.12271, \"lng\": -122.09722, \"road\": \"Highway 1 near Vedder River Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Shoulder maintenance from Highway 1, In Abbotsford and At Vedder Canal Bridge to\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 17 09:54\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 48.52427, \"lng\": -123.55551, \"road\": \"Highway 1 near Trans-Canada Highway\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Utility work from Highway 1, 100m South of Aspen Road to At Malahat Frtg. Starti\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 16 15:46\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 56.22144, \"lng\": -121.44297, \"road\": \"Highway 29 near Halfway River Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road maintenance from Highway 29 to Upper Cache Road. Starting Mon Sep 14 until \", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 14 11:24\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 56.24166011, \"lng\": -121.40050704, \"road\": \"Highway 29 near Highway 29 N\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work at Highway 29, Upper Cache Rd. Starting Mon Aug 31 until Fri O\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 16:22\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 58.10620571, \"lng\": -122.71542863, \"road\": \"Highway 97 near Adsett Creek Bridge\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge maintenance at Highway 97, In NRRM and At Adsett Creek Bridge. Starting W\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Sep 01 14:14\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 52.87166, \"lng\": -122.4334, \"road\": \"Other Roads near Durrell Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work from Durrell Road, 17km South of Quesnel and Highway 97 to At \", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 25 14:41\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.22249, \"lng\": -122.43058, \"road\": \"Highway 97\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road maintenance from Highway 97, 34km North of Quesnel to 25km Northeast of Que\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 09:21\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 52.85978896, \"lng\": -122.25893057, \"road\": \"Other Roads near Quesnel-Hydraulic Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work at Quesnel-Hydraulic Road, 25km Southeast of Quesnel. Starting\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 09:48\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.17908, \"lng\": -122.50301, \"road\": \"Other Roads near Olson Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Road maintenance from Olson Road, At Olson Road and Quesnel-Hixon Road to At Hig\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 24 08:42\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.22254049, \"lng\": -122.430664, \"road\": \"Highway 97\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work at Highway 97, 34km North of Quesnel and Olsen Rd intersection\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 12:26\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 53.22268, \"lng\": -122.43087, \"road\": \"Highway 97\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Construction work from Highway 97, 34km North of Quesnel to In Quesnel. Starting\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 26 09:42\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}, {\"lat\": 52.0673947, \"lng\": -123.55472192, \"road\": \"Other Roads near Chilko-Newton Road\", \"direction\": \"\", \"severity_class\": \"mod\", \"severity_label\": \"Minor\", \"what\": \"Bridge maintenance at Chilko-Newton Road, Chilko River Siwash Bridge. Starting M\", \"event_type\": \"Construction\", \"lanes\": \"\", \"closed\": false, \"province\": \"BC\", \"clearance\": \"Aug 25 14:49\", \"end_time\": \"\", \"detour\": \"\", \"source_url\": \"\"}]",
   "coming_roadwork": [
+    {
+      "road": "HWY 401",
+      "what": "Nightly Construction on HWY 401 Westbound  between\u2026",
+      "when": "Oct 06 01:00 to Oct 16 12:00",
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.72298,
+      "lng": -75.52493,
+      "region": "ON"
+    },
+    {
+      "road": "HWY 401",
+      "what": "Daily Construction on HWY 401 Westbound  between\u2026",
+      "when": "Oct 14 11:00 to Oct 16 23:00",
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.85741,
+      "lng": -75.33026,
+      "region": "ON"
+    },
     {
       "road": "HWY 401",
       "what": "Nightly Engineering Investigation on HWY 401 Westbound\u2026",
@@ -204,166 +222,147 @@
       "region": "ON"
     },
     {
+      "road": "I-5 in San Joaquin County",
+      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
+      "when": "Oct 04 00:00 to Oct 05 00:00",
+      "lanes": "1, 2 of 3",
+      "lat": 38.021153,
+      "lng": -121.358552,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
+      "when": "Oct 05 00:00 to Oct 06 00:00",
+      "lanes": "1, 2 of 3",
+      "lat": 38.021153,
+      "lng": -121.358552,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
+      "when": "Oct 06 00:00 to Oct 07 00:00",
+      "lanes": "1, 2 of 3",
+      "lat": 38.021153,
+      "lng": -121.358552,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
+      "when": "Oct 07 00:00 to Oct 08 00:00",
+      "lanes": "1, 2 of 3",
+      "lat": 38.021153,
+      "lng": -121.358552,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
+      "when": "Oct 02 00:00 to Oct 03 00:00",
+      "lanes": "1, 2 of 3",
+      "lat": 38.021153,
+      "lng": -121.358552,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
+      "when": "Oct 04 00:00 to Oct 05 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.115746,
+      "lng": -121.397665,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
+      "when": "Oct 05 00:00 to Oct 06 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.115746,
+      "lng": -121.397665,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
+      "when": "Oct 06 00:00 to Oct 07 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.115746,
+      "lng": -121.397665,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
+      "when": "Oct 07 00:00 to Oct 08 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.115746,
+      "lng": -121.397665,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
+      "when": "Oct 02 00:00 to Oct 03 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.115746,
+      "lng": -121.397665,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
+      "when": "Oct 04 00:00 to Oct 05 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.254747,
+      "lng": -121.44807,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
+      "when": "Oct 05 00:00 to Oct 06 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.254747,
+      "lng": -121.44807,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
+      "when": "Oct 06 00:00 to Oct 07 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.254747,
+      "lng": -121.44807,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
+      "when": "Oct 07 00:00 to Oct 08 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.254747,
+      "lng": -121.44807,
+      "region": "CA"
+    },
+    {
+      "road": "I-5 in San Joaquin County",
+      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
+      "when": "Oct 02 00:00 to Oct 03 00:00",
+      "lanes": "1 of 2",
+      "lat": 38.254747,
+      "lng": -121.44807,
+      "region": "CA"
+    },
+    {
       "road": "HWY 401",
-      "what": "Nightly Construction on HWY 401 Westbound Collector\u2026",
-      "when": "Oct 06 01:00 to Oct 09 10:00",
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.797832,
-      "lng": -79.18734,
-      "region": "ON"
-    },
-    {
-      "road": "HWY 400",
-      "what": "Nightly Construction on HWY 400 Northbound On-ramp at\u2026",
-      "when": "Oct 07 01:00 to Oct 08 09:00",
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.380066,
-      "lng": -79.7109,
-      "region": "ON"
-    },
-    {
-      "road": "HWY 400",
-      "what": "Nightly Engineering Investigation on HWY 400\u2026",
-      "when": "Oct 03 03:00 to Oct 03 09:00",
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.20029,
-      "lng": -79.65491,
-      "region": "ON"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
-      "when": "Oct 04 00:00 to Oct 05 00:00",
-      "lanes": "1, 2 of 3",
-      "lat": 38.021153,
-      "lng": -121.358552,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
-      "when": "Oct 05 00:00 to Oct 06 00:00",
-      "lanes": "1, 2 of 3",
-      "lat": 38.021153,
-      "lng": -121.358552,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
-      "when": "Oct 06 00:00 to Oct 07 00:00",
-      "lanes": "1, 2 of 3",
-      "lat": 38.021153,
-      "lng": -121.358552,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
-      "when": "Oct 07 00:00 to Oct 08 00:00",
-      "lanes": "1, 2 of 3",
-      "lat": 38.021153,
-      "lng": -121.358552,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Hammer Lane Under-Crossing near Stockton. Highway\u2026",
-      "when": "Oct 02 00:00 to Oct 03 00:00",
-      "lanes": "1, 2 of 3",
-      "lat": 38.021153,
-      "lng": -121.358552,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
-      "when": "Oct 04 00:00 to Oct 05 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.115746,
-      "lng": -121.397665,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
-      "when": "Oct 05 00:00 to Oct 06 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.115746,
-      "lng": -121.397665,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
-      "when": "Oct 06 00:00 to Oct 07 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.115746,
-      "lng": -121.397665,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
-      "when": "Oct 07 00:00 to Oct 08 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.115746,
-      "lng": -121.397665,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes\u2026",
-      "when": "Oct 02 00:00 to Oct 03 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.115746,
-      "lng": -121.397665,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
-      "when": "Oct 04 00:00 to Oct 05 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.254747,
-      "lng": -121.44807,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
-      "when": "Oct 05 00:00 to Oct 06 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.254747,
-      "lng": -121.44807,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
-      "when": "Oct 06 00:00 to Oct 07 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.254747,
-      "lng": -121.44807,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
-      "when": "Oct 07 00:00 to Oct 08 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.254747,
-      "lng": -121.44807,
-      "region": "CA"
-    },
-    {
-      "road": "I-5 in San Joaquin County",
-      "what": "San Joaquin/Sacramento County Line near Thornton.\u2026",
-      "when": "Oct 02 00:00 to Oct 03 00:00",
-      "lanes": "1 of 2",
-      "lat": 38.254747,
-      "lng": -121.44807,
-      "region": "CA"
+      "what": "Daily Construction on HWY 401 Westbound  between\u2026",
+      "when": "Oct 14 - Oct 16",
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.85741,
+      "lng": -75.33026
     },
     {
       "road": "HWY 3",
@@ -380,14 +379,6 @@
       "lanes": "1 Right Lane(s)",
       "lat": 42.100132,
       "lng": -82.73495
-    },
-    {
-      "road": "HWY 400",
-      "what": "Nightly Construction on HWY 400 Northbound On-ramp at\u2026",
-      "when": "Oct 07 - Oct 08",
-      "lanes": "ALL LANES CLOSED",
-      "lat": 44.380066,
-      "lng": -79.7109
     },
     {
       "road": "HWY 417",
@@ -407,11 +398,11 @@
     },
     {
       "road": "HWY 401",
-      "what": "Nightly Construction on HWY 401 Westbound Collector\u2026",
-      "when": "Oct 06 - Oct 09",
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.797832,
-      "lng": -79.18734
+      "what": "Nightly Construction on HWY 401 Westbound  between\u2026",
+      "when": "Oct 06 - Oct 16",
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.72298,
+      "lng": -75.52493
     },
     {
       "road": "HWY 417",
@@ -518,14 +509,6 @@
       "lng": -82.75658
     },
     {
-      "road": "HWY 400",
-      "what": "Nightly Engineering Investigation on HWY 400\u2026",
-      "when": "Oct 03 - Oct 03",
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.20029,
-      "lng": -79.65491
-    },
-    {
       "road": "HWY 10",
       "what": "Nightly Construction on HWY 10 Northbound  between\u2026",
       "when": "Oct 03 - Oct 03",
@@ -550,8 +533,8 @@
       "lng": -78.84643
     }
   ],
-  "roadwork_json": "[{\"road\": \"HWY 401\", \"what\": \"Nightly Engineering Investigation on HWY 401 Westbound\\u2026\", \"when\": \"Oct 04 23:00 to Oct 09 10:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.27491, \"lng\": -76.87793, \"region\": \"ON\"}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between ST.\\u2026\", \"when\": \"Oct 05 23:00 to Oct 08 09:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.303, \"lng\": -75.07993, \"region\": \"ON\"}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 05 23:00 to Oct 06 09:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.31326, \"lng\": -75.24176, \"region\": \"ON\"}, {\"road\": \"HWY 15\", \"what\": \"Nightly Construction on HWY 15 Northbound  between\\u2026\", \"when\": \"Oct 05 00:00 to Oct 08 12:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842, \"region\": \"ON\"}, {\"road\": \"HWY 15\", \"what\": \"Daily Construction on HWY 15 Northbound  between PERTH\\u2026\", \"when\": \"Oct 05 11:00 to Oct 08 19:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842, \"region\": \"ON\"}, {\"road\": \"HWY 7\", \"what\": \"Nightly Construction on HWY 7 Eastbound  between Krug\\u2026\", \"when\": \"Oct 05 01:00 to Oct 09 09:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.454113, \"lng\": -80.46817, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Daily Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 05 12:00 to Oct 09 19:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.050625, \"lng\": -80.82185, \"region\": \"ON\"}, {\"road\": \"HWY 417\", \"what\": \"Daily Maintenance on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 06 12:00 to Oct 08 19:30\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.49462, \"lng\": -74.61291, \"region\": \"ON\"}, {\"road\": \"HWY 60\", \"what\": \"Daily Engineering Investigation on HWY 60 Eastbound \\u2026\", \"when\": \"Oct 05 11:30 to Oct 09 19:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.51872, \"lng\": -76.95096, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Westbound  between Belle\\u2026\", \"when\": \"Oct 03 11:00 to Oct 08 22:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.119934, \"lng\": -82.75658, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 04 23:00 to Oct 08 15:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.59945, \"lng\": -75.70122, \"region\": \"ON\"}, {\"road\": \"HWY 10\", \"what\": \"Nightly Construction on HWY 10 Northbound  between\\u2026\", \"when\": \"Oct 03 01:00 to Oct 03 13:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.91916, \"lng\": -80.07717, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 05 11:00 to Oct 08 22:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Westbound  between\\u2026\", \"when\": \"Oct 08 11:00 to Oct 08 22:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.076183, \"lng\": -82.706795, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 08 11:00 to Oct 08 22:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 02 00:00 to Oct 02 10:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.883717, \"lng\": -78.84643, \"region\": \"ON\"}, {\"road\": \"HWY 35/115\", \"what\": \"Nightly Moving Maintenance Closure on HWY 35/115\\u2026\", \"when\": \"Oct 06 03:00 to Oct 08 09:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.90284, \"lng\": -78.62562, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 02 11:00 to Oct 02 21:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.775696, \"lng\": -81.05121, \"region\": \"ON\"}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Southbound  between\\u2026\", \"when\": \"Oct 05 00:00 to Oct 09 09:30\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.996376, \"lng\": -79.3966, \"region\": \"ON\"}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Northbound  between\\u2026\", \"when\": \"Oct 04 23:00 to Oct 09 09:00\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.940132, \"lng\": -79.389725, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Westbound Collector\\u2026\", \"when\": \"Oct 06 01:00 to Oct 09 10:00\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.797832, \"lng\": -79.18734, \"region\": \"ON\"}, {\"road\": \"HWY 400\", \"what\": \"Nightly Construction on HWY 400 Northbound On-ramp at\\u2026\", \"when\": \"Oct 07 01:00 to Oct 08 09:00\", \"lanes\": \"ALL LANES CLOSED\", \"lat\": 44.380066, \"lng\": -79.7109, \"region\": \"ON\"}, {\"road\": \"HWY 400\", \"what\": \"Nightly Engineering Investigation on HWY 400\\u2026\", \"when\": \"Oct 03 03:00 to Oct 03 09:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 44.20029, \"lng\": -79.65491, \"region\": \"ON\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 04 00:00 to Oct 05 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 05 00:00 to Oct 06 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 06 00:00 to Oct 07 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 07 00:00 to Oct 08 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 02 00:00 to Oct 03 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 04 00:00 to Oct 05 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 05 00:00 to Oct 06 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 06 00:00 to Oct 07 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 07 00:00 to Oct 08 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 02 00:00 to Oct 03 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 04 00:00 to Oct 05 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 05 00:00 to Oct 06 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 06 00:00 to Oct 07 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 07 00:00 to Oct 08 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 02 00:00 to Oct 03 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Westbound  between\\u2026\", \"when\": \"Oct 08 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.076183, \"lng\": -82.706795}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 08 - Oct 08\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495}, {\"road\": \"HWY 400\", \"what\": \"Nightly Construction on HWY 400 Northbound On-ramp at\\u2026\", \"when\": \"Oct 07 - Oct 08\", \"lanes\": \"ALL LANES CLOSED\", \"lat\": 44.380066, \"lng\": -79.7109}, {\"road\": \"HWY 417\", \"what\": \"Daily Maintenance on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 06 - Oct 08\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.49462, \"lng\": -74.61291}, {\"road\": \"HWY 35/115\", \"what\": \"Nightly Moving Maintenance Closure on HWY 35/115\\u2026\", \"when\": \"Oct 06 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.90284, \"lng\": -78.62562}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Westbound Collector\\u2026\", \"when\": \"Oct 06 - Oct 09\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.797832, \"lng\": -79.18734}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between ST.\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.303, \"lng\": -75.07993}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 05 - Oct 06\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.31326, \"lng\": -75.24176}, {\"road\": \"HWY 401\", \"what\": \"Daily Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.050625, \"lng\": -80.82185}, {\"road\": \"HWY 60\", \"what\": \"Daily Engineering Investigation on HWY 60 Eastbound \\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.51872, \"lng\": -76.95096}, {\"road\": \"HWY 15\", \"what\": \"Daily Construction on HWY 15 Northbound  between PERTH\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495}, {\"road\": \"HWY 7\", \"what\": \"Nightly Construction on HWY 7 Eastbound  between Krug\\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.454113, \"lng\": -80.46817}, {\"road\": \"HWY 15\", \"what\": \"Nightly Construction on HWY 15 Northbound  between\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Southbound  between\\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.996376, \"lng\": -79.3966}, {\"road\": \"HWY 401\", \"what\": \"Nightly Engineering Investigation on HWY 401 Westbound\\u2026\", \"when\": \"Oct 04 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.27491, \"lng\": -76.87793}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 04 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.59945, \"lng\": -75.70122}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Northbound  between\\u2026\", \"when\": \"Oct 04 - Oct 09\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.940132, \"lng\": -79.389725}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Westbound  between Belle\\u2026\", \"when\": \"Oct 03 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.119934, \"lng\": -82.75658}, {\"road\": \"HWY 400\", \"what\": \"Nightly Engineering Investigation on HWY 400\\u2026\", \"when\": \"Oct 03 - Oct 03\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 44.20029, \"lng\": -79.65491}, {\"road\": \"HWY 10\", \"what\": \"Nightly Construction on HWY 10 Northbound  between\\u2026\", \"when\": \"Oct 03 - Oct 03\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.91916, \"lng\": -80.07717}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 02 - Oct 02\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.775696, \"lng\": -81.05121}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 02 - Oct 02\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.883717, \"lng\": -78.84643}]",
-  "updated_at": "2026-10-01 21:34",
-  "updated_iso": "2026-10-01T21:34:48+00:00",
-  "build_version": "1790890488"
+  "roadwork_json": "[{\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 06 01:00 to Oct 16 12:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 44.72298, \"lng\": -75.52493, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Daily Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 14 11:00 to Oct 16 23:00\", \"lanes\": \"1 Left Lane(s)\", \"lat\": 44.85741, \"lng\": -75.33026, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Nightly Engineering Investigation on HWY 401 Westbound\\u2026\", \"when\": \"Oct 04 23:00 to Oct 09 10:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.27491, \"lng\": -76.87793, \"region\": \"ON\"}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between ST.\\u2026\", \"when\": \"Oct 05 23:00 to Oct 08 09:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.303, \"lng\": -75.07993, \"region\": \"ON\"}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 05 23:00 to Oct 06 09:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.31326, \"lng\": -75.24176, \"region\": \"ON\"}, {\"road\": \"HWY 15\", \"what\": \"Nightly Construction on HWY 15 Northbound  between\\u2026\", \"when\": \"Oct 05 00:00 to Oct 08 12:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842, \"region\": \"ON\"}, {\"road\": \"HWY 15\", \"what\": \"Daily Construction on HWY 15 Northbound  between PERTH\\u2026\", \"when\": \"Oct 05 11:00 to Oct 08 19:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842, \"region\": \"ON\"}, {\"road\": \"HWY 7\", \"what\": \"Nightly Construction on HWY 7 Eastbound  between Krug\\u2026\", \"when\": \"Oct 05 01:00 to Oct 09 09:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.454113, \"lng\": -80.46817, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Daily Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 05 12:00 to Oct 09 19:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.050625, \"lng\": -80.82185, \"region\": \"ON\"}, {\"road\": \"HWY 417\", \"what\": \"Daily Maintenance on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 06 12:00 to Oct 08 19:30\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.49462, \"lng\": -74.61291, \"region\": \"ON\"}, {\"road\": \"HWY 60\", \"what\": \"Daily Engineering Investigation on HWY 60 Eastbound \\u2026\", \"when\": \"Oct 05 11:30 to Oct 09 19:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.51872, \"lng\": -76.95096, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Westbound  between Belle\\u2026\", \"when\": \"Oct 03 11:00 to Oct 08 22:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.119934, \"lng\": -82.75658, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 04 23:00 to Oct 08 15:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.59945, \"lng\": -75.70122, \"region\": \"ON\"}, {\"road\": \"HWY 10\", \"what\": \"Nightly Construction on HWY 10 Northbound  between\\u2026\", \"when\": \"Oct 03 01:00 to Oct 03 13:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.91916, \"lng\": -80.07717, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 05 11:00 to Oct 08 22:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Westbound  between\\u2026\", \"when\": \"Oct 08 11:00 to Oct 08 22:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.076183, \"lng\": -82.706795, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 08 11:00 to Oct 08 22:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495, \"region\": \"ON\"}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 02 00:00 to Oct 02 10:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.883717, \"lng\": -78.84643, \"region\": \"ON\"}, {\"road\": \"HWY 35/115\", \"what\": \"Nightly Moving Maintenance Closure on HWY 35/115\\u2026\", \"when\": \"Oct 06 03:00 to Oct 08 09:00\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.90284, \"lng\": -78.62562, \"region\": \"ON\"}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 02 11:00 to Oct 02 21:00\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.775696, \"lng\": -81.05121, \"region\": \"ON\"}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Southbound  between\\u2026\", \"when\": \"Oct 05 00:00 to Oct 09 09:30\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.996376, \"lng\": -79.3966, \"region\": \"ON\"}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Northbound  between\\u2026\", \"when\": \"Oct 04 23:00 to Oct 09 09:00\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.940132, \"lng\": -79.389725, \"region\": \"ON\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 04 00:00 to Oct 05 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 05 00:00 to Oct 06 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 06 00:00 to Oct 07 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 07 00:00 to Oct 08 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Hammer Lane Under-Crossing near Stockton. Highway\\u2026\", \"when\": \"Oct 02 00:00 to Oct 03 00:00\", \"lanes\": \"1, 2 of 3\", \"lat\": 38.021153, \"lng\": -121.358552, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 04 00:00 to Oct 05 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 05 00:00 to Oct 06 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 06 00:00 to Oct 07 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 07 00:00 to Oct 08 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"Route 12 near Lodi. Highway Construction. 1 of 2 lanes\\u2026\", \"when\": \"Oct 02 00:00 to Oct 03 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.115746, \"lng\": -121.397665, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 04 00:00 to Oct 05 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 05 00:00 to Oct 06 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 06 00:00 to Oct 07 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 07 00:00 to Oct 08 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"I-5 in San Joaquin County\", \"what\": \"San Joaquin/Sacramento County Line near Thornton.\\u2026\", \"when\": \"Oct 02 00:00 to Oct 03 00:00\", \"lanes\": \"1 of 2\", \"lat\": 38.254747, \"lng\": -121.44807, \"region\": \"CA\"}, {\"road\": \"HWY 401\", \"what\": \"Daily Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 14 - Oct 16\", \"lanes\": \"1 Left Lane(s)\", \"lat\": 44.85741, \"lng\": -75.33026}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Westbound  between\\u2026\", \"when\": \"Oct 08 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.076183, \"lng\": -82.706795}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 08 - Oct 08\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495}, {\"road\": \"HWY 417\", \"what\": \"Daily Maintenance on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 06 - Oct 08\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.49462, \"lng\": -74.61291}, {\"road\": \"HWY 35/115\", \"what\": \"Nightly Moving Maintenance Closure on HWY 35/115\\u2026\", \"when\": \"Oct 06 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.90284, \"lng\": -78.62562}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 06 - Oct 16\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 44.72298, \"lng\": -75.52493}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between ST.\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.303, \"lng\": -75.07993}, {\"road\": \"HWY 417\", \"what\": \"Nightly Construction on HWY 417 Eastbound  between\\u2026\", \"when\": \"Oct 05 - Oct 06\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 45.31326, \"lng\": -75.24176}, {\"road\": \"HWY 401\", \"what\": \"Daily Construction on HWY 401 Westbound  between\\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.050625, \"lng\": -80.82185}, {\"road\": \"HWY 60\", \"what\": \"Daily Engineering Investigation on HWY 60 Eastbound \\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.51872, \"lng\": -76.95096}, {\"road\": \"HWY 15\", \"what\": \"Daily Construction on HWY 15 Northbound  between PERTH\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.100132, \"lng\": -82.73495}, {\"road\": \"HWY 7\", \"what\": \"Nightly Construction on HWY 7 Eastbound  between Krug\\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.454113, \"lng\": -80.46817}, {\"road\": \"HWY 15\", \"what\": \"Nightly Construction on HWY 15 Northbound  between\\u2026\", \"when\": \"Oct 05 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 45.03812, \"lng\": -76.05842}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Southbound  between\\u2026\", \"when\": \"Oct 05 - Oct 09\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.996376, \"lng\": -79.3966}, {\"road\": \"HWY 401\", \"what\": \"Nightly Engineering Investigation on HWY 401 Westbound\\u2026\", \"when\": \"Oct 04 - Oct 09\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.27491, \"lng\": -76.87793}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 04 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 44.59945, \"lng\": -75.70122}, {\"road\": \"HWY 404\", \"what\": \"Nightly Construction on HWY 404 Northbound  between\\u2026\", \"when\": \"Oct 04 - Oct 09\", \"lanes\": \"2 Alternating Lane(s)\", \"lat\": 43.940132, \"lng\": -79.389725}, {\"road\": \"HWY 3\", \"what\": \"Daily Construction on HWY 3 Westbound  between Belle\\u2026\", \"when\": \"Oct 03 - Oct 08\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 42.119934, \"lng\": -82.75658}, {\"road\": \"HWY 10\", \"what\": \"Nightly Construction on HWY 10 Northbound  between\\u2026\", \"when\": \"Oct 03 - Oct 03\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.91916, \"lng\": -80.07717}, {\"road\": \"HWY 3\", \"what\": \"Continuous Construction on HWY 3 Eastbound  between\\u2026\", \"when\": \"Oct 02 - Oct 02\", \"lanes\": \"1 Right Lane(s)\", \"lat\": 42.775696, \"lng\": -81.05121}, {\"road\": \"HWY 401\", \"what\": \"Nightly Construction on HWY 401 Eastbound  between\\u2026\", \"when\": \"Oct 02 - Oct 02\", \"lanes\": \"1 Alternating Lane(s)\", \"lat\": 43.883717, \"lng\": -78.84643}]",
+  "updated_at": "2026-10-01 22:05",
+  "updated_iso": "2026-10-01T22:05:45+00:00",
+  "build_version": "1790892345"
 }
