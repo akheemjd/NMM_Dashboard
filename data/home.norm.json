@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-01 12:12",
-  "updated_iso": "2026-10-01T12:12:30+00:00",
-  "build_version": "1790856750",
+  "updated_at": "2026-10-01 12:43",
+  "updated_iso": "2026-10-01T12:43:32+00:00",
+  "build_version": "1790858612",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "261.1",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 30,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW",
+    "status_line": "HWY 410, HWY 404, HWY 69, HWY 401",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at MORNINGSIDE AVE, Toronto. 1\u2026",
+        "road": "HWY 410",
+        "what": "Collision on HWY 410 Southbound COLLECTOR RAMP at DERRY ROAD, Mississauga.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound  at Union Rd, London. All lanes closed.",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Northbound  at YORK MILLS ROAD, Toronto. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:20 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 MDT"
+      "captured_at": "06:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:00 PDT"
+      "captured_at": "05:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 CDT"
+      "captured_at": "07:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
-      "category": "safety",
-      "source": "The Trucker",
-      "headline": "Fatigue blamed for rollover crash in New York",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/fatigue-blamed-for-rollover-crash-in-new-york",
-      "why": "Safety rules and blitzes hit the road on specific dates."
-    },
-    {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Operation Saturday Night Fever: Four-state crackdown puts 78 truck drivers out of service",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/operation-saturday-night-fever-four-state-crackdown-puts-78-truck-drivers-out-of-service",
+      "headline": "Semi-truck overturns on Interstate 70 in Missouri",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/semi-truck-overturns-on-interstate-70-in-missouri",
       "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
+      "category": "regulations",
+      "source": "The Trucker",
+      "headline": "High gas prices are spurring states to waive taxes and regulations amid midterm election",
+      "url": "https://www.thetrucker.com/trucking-news/business/high-gas-prices-are-spurring-states-to-waive-taxes-and-regulations-amid-midterm-election",
+      "why": "Rules change compliance cost and driver hours."
     }
   ],
   "theft_home_json": "[]",
