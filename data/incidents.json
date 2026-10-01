@@ -18,40 +18,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-314436",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at KIPLING AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.70077773,
-      "lng": -79.56167724,
-      "start": 1790824620,
-      "end": null,
-      "updated": 1790824620,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314432",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.20045992,
-      "lng": -79.65473612,
-      "start": 1790823060,
-      "end": null,
-      "updated": 1790823120,
-      "scheduled": false
-    },
-    {
       "id": "ON-314426",
       "province": "ON",
       "highway": "HWY 655",
@@ -750,10 +716,10 @@
       "updated": "2026-09-30"
     },
     {
-      "scheduled": false,
-      "start_date": "2026-09-29",
-      "end_date": "2026-09-30",
-      "id": "CA-C5HB-0017-2026-09-29-21:01:00",
+      "scheduled": true,
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-08",
+      "id": "CA-C5HB-0016-2026-10-07-21:01:00",
       "province": "CA",
       "region_label": "Central Valley",
       "highway": "I-5 in San Joaquin County",
@@ -765,8 +731,8 @@
       "lanes": "1 of 2",
       "lat": 38.254747,
       "lng": -121.44807,
-      "start": "2026-09-29",
-      "end": "2026-09-30",
+      "start": "2026-10-07",
+      "end": "2026-10-08",
       "updated": "2026-09-30"
     },
     {
@@ -957,6 +923,40 @@
       "start": 1791201600,
       "end": 1791540000,
       "updated": 1790703060,
+      "scheduled": true
+    },
+    {
+      "id": "ON-312909",
+      "province": "ON",
+      "highway": "HWY 418",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 418 Southbound Off-ramp at REGIONAL HIGHWAY 2, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.91408,
+      "lng": -78.75521,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790702640,
+      "scheduled": true
+    },
+    {
+      "id": "ON-312907",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 407 ETR Eastbound On-ramp at ENFIELD RD, Clarington. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.96423,
+      "lng": -78.81192,
+      "start": 1791165600,
+      "end": 1791540000,
+      "updated": 1790702340,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T03:54:04.818617+00:00",
+  "updated": "2026-10-01T04:25:08.169829+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
