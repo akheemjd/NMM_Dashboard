@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-314466",
+      "id": "ON-314474",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at KENNEDY RD -SCARBOROUGH, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at SOUTH OF STEELES , Toronto. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.77496258,
-      "lng": -79.28476557,
-      "start": 1790850780,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.7678676,
+      "lng": -79.5336278,
+      "start": 1790852520,
       "end": null,
-      "updated": 1790850780,
+      "updated": 1790852820,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314468",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at ISLINGTON AVE, Toronto. 2 centre lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 centre lanes closed",
+      "lat": 43.71055526,
+      "lng": -79.54649025,
+      "start": 1790851680,
+      "end": null,
+      "updated": 1790851680,
       "scheduled": false
     },
     {
@@ -943,23 +960,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-312911",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Nightly Engineering Investigation on HWY 17 Westbound  between Pioneer St W, Markstay and Pioneer St W, Markstay, Markstay. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 46.495205,
-      "lng": -80.56086,
-      "start": 1791201600,
-      "end": 1791540000,
-      "updated": 1790703060,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T10:39:12.409542+00:00",
+  "updated": "2026-10-01T11:10:14.282279+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
