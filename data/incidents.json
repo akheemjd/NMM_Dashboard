@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-314756",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Collision on HWY 404 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Markham-Richmondhill . All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.883252,
+      "lng": -79.379787,
+      "start": 1790880720,
+      "end": null,
+      "updated": 1790888940,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314814",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 401 Westbound  between Switzerville Rd and Switzerville Rd, Napanee. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.27491,
+      "lng": -76.87793,
+      "start": 1791154800,
+      "end": 1791540000,
+      "updated": 1790888580,
+      "scheduled": true
+    },
+    {
       "id": "ON-314812",
       "province": "ON",
       "highway": "HWY 417",
@@ -205,23 +239,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-314756",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Markham-Richmondhill . Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.883252,
-      "lng": -79.379787,
-      "start": 1790880720,
-      "end": null,
-      "updated": 1790880720,
-      "scheduled": false
-    },
-    {
       "id": "ON-314752",
       "province": "ON",
       "highway": "HWY 3",
@@ -409,23 +426,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-314728",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound Collector between ROUGE RIVER and PORT UNION ROAD, Toronto. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.804493,
-      "lng": -79.13439,
-      "start": 1791165600,
-      "end": 1791540000,
-      "updated": 1790869620,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-102708",
       "province": "BC",
       "highway": "Highway 16 near Slim Creek Bridge",
@@ -457,40 +457,6 @@
       "start": "2026-09-29T07:18:21-07:00",
       "end": "",
       "updated": "2026-10-01T06:43:36-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102952",
-      "province": "BC",
-      "highway": "Highway 6",
-      "direction": "",
-      "description": "Special event from Highway 6, In Coldstream to Highway 97, In Vernon. Starting Tue Sep 29. Last update: October 1st, 2026 at 6:43am PDT. Watch for falling rock.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.24146,
-      "lng": -119.22959,
-      "start": "2026-09-29T07:10:17-07:00",
-      "end": "",
-      "updated": "2026-10-01T06:43:28-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102946",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Special event from Highway 1, In Sicamous to Highway 97A,. Starting Tue Sep 29. Last update: October 1st, 2026 at 6:42am PDT. Watch for falling rock.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.83812,
-      "lng": -118.97671,
-      "start": "2026-09-29T06:57:40-07:00",
-      "end": "",
-      "updated": "2026-10-01T06:42:58-07:00",
       "scheduled": false
     },
     {
@@ -1130,6 +1096,23 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-102518",
+      "province": "BC",
+      "highway": "Highway 4 near Pacific Rim Highway",
+      "direction": "",
+      "description": "Tree pruning from Highway 4, Marion Creek FSR to Kennedy Lake Boat Launch. Starting Mon Sep 28 until Wed Oct 28. Expect minor delays. Watch for traffic control. Last update: September 21st, 2026 at 8:55am PDT. Vegetation Control through the area between 9am and 3pm daily. Slow down and watch for work crews.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.24262,
+      "lng": -125.36296,
+      "start": "2026-09-18T09:34:51-07:00",
+      "end": "",
+      "updated": "2026-09-21T08:55:27-07:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102482",
       "province": "BC",
       "highway": "Highway 1 near Vedder River Bridge",
@@ -1349,10 +1332,27 @@
       "end": "",
       "updated": "2026-09-15T20:09:20-07:00",
       "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-101655",
+      "province": "BC",
+      "highway": "Highway 97",
+      "direction": "",
+      "description": "Utility work from Highway 97, 19km Southeast of Clinton and Loon Lake Rd to 70 Mile House. Starting Mon Aug 17. Watch for traffic control. Last update: September 15th, 2026 at 8:09pm PDT. Next update time Wed Sep 30 at 12:00 PM PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.96757,
+      "lng": -121.45912,
+      "start": "2026-08-25T11:44:16-07:00",
+      "end": "",
+      "updated": "2026-09-15T20:09:16-07:00",
+      "scheduled": false
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T21:03:32.217494+00:00",
+  "updated": "2026-10-01T21:34:34.513972+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
