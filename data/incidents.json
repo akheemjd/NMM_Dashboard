@@ -1,20 +1,54 @@
 {
   "incidents": [
     {
-      "id": "ON-314397",
+      "id": "ON-314283",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 7 Both Directions  between TOWNLINE RD W and RAMSAY CONCESSION RD 5A, Carleton Place. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.13037,
+      "lng": -76.16985,
+      "start": 1790793420,
+      "end": null,
+      "updated": 1790813220,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314326",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 7 Both Directions  between TATLOCK RD (CR 9) / SCOTCH CORNERS RD, Mccreary'S and TOWNLINE RD W, Carleton Place. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 45.11756,
+      "lng": -76.21542,
+      "start": 1790800620,
+      "end": null,
+      "updated": 1790813220,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314400",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at SALEM ROAD, Ajax. Right lane and right shoulder closed.",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.855511723,
-      "lng": -79.010088444,
-      "start": 1790811660,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.76327209,
+      "lng": -79.38728169,
+      "start": 1790812380,
       "end": null,
-      "updated": 1790811660,
+      "updated": 1790812560,
       "scheduled": false
     },
     {
@@ -154,23 +188,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-314326",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 7 Both Directions  between TATLOCK RD (CR 9) / SCOTCH CORNERS RD, Mccreary'S and TOWNLINE RD W, Carleton Place. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.11756,
-      "lng": -76.21542,
-      "start": 1790800620,
-      "end": null,
-      "updated": 1790800620,
-      "scheduled": false
-    },
-    {
       "id": "ON-314298",
       "province": "ON",
       "highway": "HWY 618",
@@ -203,23 +220,6 @@
       "end": 1791309600,
       "updated": 1790795520,
       "scheduled": true
-    },
-    {
-      "id": "ON-314283",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 7 Both Directions  between TOWNLINE RD W and RAMSAY CONCESSION RD 5A, Carleton Place. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.13037,
-      "lng": -76.16985,
-      "start": 1790793420,
-      "end": null,
-      "updated": 1790793420,
-      "scheduled": false
     },
     {
       "id": "ON-314270",
@@ -287,7 +287,7 @@
       "start": 1790856000,
       "end": 1790888400,
       "updated": 1790776080,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "drivebc.ca/RIDE-102950",
@@ -544,7 +544,7 @@
       "updated": "2026-09-30"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-01",
       "end_date": "2026-10-02",
       "id": "CA-C5HB-0005-2026-10-01-20:01:00",
@@ -684,7 +684,7 @@
       "updated": "2026-09-30"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-01",
       "end_date": "2026-10-02",
       "id": "CA-C5HB-0010-2026-10-01-20:01:00",
@@ -838,7 +838,7 @@
       "start": 1790857800,
       "end": 1790886600,
       "updated": 1790722440,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-313009",
@@ -906,7 +906,7 @@
       "start": 1790812800,
       "end": 1791455400,
       "updated": 1790710380,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-312986",
@@ -991,6 +991,23 @@
       "start": "2026-09-25T10:14:44-07:00",
       "end": "",
       "updated": "2026-09-25T10:14:44-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-102777",
+      "province": "BC",
+      "highway": "Highway 7 near Lougheed Highway",
+      "direction": "",
+      "description": "Tree pruning from Highway 7, In Hope and Haig Scale to At Chawathil Road. Starting Mon Sep 28 until Fri Oct 30. All day, weekdays. Single lane alternating traffic. Watch for traffic control. Last update: September 24th, 2026 at 3:19pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.38684,
+      "lng": -121.47055,
+      "start": "2026-09-24T15:18:28-07:00",
+      "end": "",
+      "updated": "2026-09-24T15:19:46-07:00",
       "scheduled": false
     },
     {
@@ -1198,23 +1215,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-101425",
-      "province": "BC",
-      "highway": "Other Roads near Peaceview Road",
-      "direction": "",
-      "description": "Road maintenance from Peaceview Road, 4km East of Taylor to 5km East of Taylor. Starting Mon Aug 17 until Wed Sep 30. From 7:00 AM to 5:00 PM MST, weekdays. Single lane alternating traffic. Expect minor delays. Last update: September 15th, 2026 at 8:11pm MST.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 56.15249,
-      "lng": -120.63578,
-      "start": "2026-08-17T14:17:30-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:11:49-07:00",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-101669",
       "province": "BC",
       "highway": "Other Roads near Durrell Road",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-09-30T23:44:59.184052+00:00",
+  "updated": "2026-10-01T00:16:00.732712+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
