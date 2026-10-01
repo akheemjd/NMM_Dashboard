@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-314839",
+      "id": "ON-314859",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at HENRY ST, Whitby. Both shoulders and 3 lanes closed.",
+      "highway": "RED HILL CREEK EXPRESSWAY",
+      "direction": "Northbound",
+      "description": "Collision on RED HILL CREEK EXPRESSWAY Northbound RAMP at QEW, Hamilton. 2 left lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "both shoulders and 3 lanes closed",
-      "lat": 43.86650154,
-      "lng": -78.94169624,
-      "start": 1790892900,
+      "lanes": "2 left lanes closed",
+      "lat": 43.2473995,
+      "lng": -79.76089926,
+      "start": 1790896080,
       "end": null,
-      "updated": 1790895240,
+      "updated": 1790897100,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314865",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at BROCK ROAD, Pickering. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.8435,
+      "lng": -79.060294,
+      "start": 1790896740,
+      "end": null,
+      "updated": 1790896860,
       "scheduled": false
     },
     {
@@ -101,23 +118,6 @@
       "end": 1792152000,
       "updated": 1790891280,
       "scheduled": true
-    },
-    {
-      "id": "ON-314832",
-      "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 409 Eastbound  at MARTIN GROVE ROAD, Toronto. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.69892212,
-      "lng": -79.57415474,
-      "start": 1790890980,
-      "end": null,
-      "updated": 1790890980,
-      "scheduled": false
     },
     {
       "id": "ON-314826",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T23:07:31.420466+00:00",
+  "updated": "2026-10-01T23:38:31.663017+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
