@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-01 15:18",
-  "updated_iso": "2026-10-01T15:18:59+00:00",
-  "build_version": "1790867939",
+  "updated_at": "2026-10-01 15:50",
+  "updated_iso": "2026-10-01T15:50:38+00:00",
+  "build_version": "1790869838",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "20 min"
+    "max_wait": "25 min"
   },
   "fuel": {
     "national_diesel": "261.1",
@@ -347,21 +347,21 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 34,
+    "active_count": 48,
     "gauge_class": "warn",
-    "status_line": "HWY 556, HWY 409, HWY 17, HWY 11",
+    "status_line": "HWY 93, HWY 11",
     "incidents": [
       {
-        "road": "HWY 556",
-        "what": "Highway Maintenance on HWY 556 Westbound  at BELLEVUE VALLEY RD-AWERES TWP (N),\u2026",
-        "severity_label": "Collision",
+        "road": "HWY 93",
+        "what": "Daily Moving Maintenance Closure on HWY 93 Northbound  between HWY 400,\u2026",
+        "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 409",
-        "what": "Highway Maintenance on HWY 409 Eastbound RAMP at ATTWELL DRIVE, Toronto. Right\u2026",
-        "severity_label": "Collision",
+        "road": "HWY 11",
+        "what": "Daily Moving Maintenance Closure on HWY 11 Northbound  between LACLIE STREET,\u2026",
+        "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "20 min",
+      "wait": "25 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:45 EDT"
+      "captured_at": "11:34 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT"
+      "captured_at": "11:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:45 MDT"
+      "captured_at": "09:17 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:00 PDT"
+      "captured_at": "08:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 CDT"
+      "captured_at": "10:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -460,6 +460,24 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2372B (chained 2017)",
+      "value": "-0.0%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Longer-term freight demand trend."
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.1\u00a2/L and 35 L/100km",
