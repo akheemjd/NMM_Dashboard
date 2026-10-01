@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-01 20:00",
-  "updated_iso": "2026-10-01T20:00:44+00:00",
-  "build_version": "1790884844",
+  "updated_at": "2026-10-01 20:31",
+  "updated_iso": "2026-10-01T20:31:58+00:00",
+  "build_version": "1790886718",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -321,35 +321,35 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4188",
+    "usd_cad": "1.4243",
     "direction": "weaker CAD",
-    "change": "+0.0020",
-    "usd_100": "141.88",
-    "usd_500": "709.40",
-    "usd_1000": "1,418.80",
-    "cad_1000": "704.82",
-    "band": "noise",
-    "band_pct": "+0.14%",
-    "obs_date": "2026-09-29",
-    "avg_30d": "1.3957",
-    "vs_baseline": "+0.0231",
-    "high_52w": "1.4234",
-    "high_52w_date": "2026-06-24",
+    "change": "+0.0055",
+    "usd_100": "142.43",
+    "usd_500": "712.15",
+    "usd_1000": "1,424.30",
+    "cad_1000": "702.10",
+    "band": "notable",
+    "band_pct": "+0.39%",
+    "obs_date": "2026-10-01",
+    "avg_30d": "1.3975",
+    "vs_baseline": "+0.0268",
+    "high_52w": "1.4243",
+    "high_52w_date": "2026-10-01",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "+0.0124",
-    "change_7d_pct": "+0.88%",
-    "change_30d": "+0.0300",
-    "change_30d_pct": "+2.16%",
-    "change_1y": "+0.0340",
-    "change_1y_pct": "+2.46%",
-    "range_pct": "94%"
+    "change_7d": "+0.0147",
+    "change_7d_pct": "+1.04%",
+    "change_30d": "+0.0377",
+    "change_30d_pct": "+2.72%",
+    "change_1y": "+0.0439",
+    "change_1y_pct": "+3.18%",
+    "range_pct": "100%"
   },
   "incidents": {
     "none": false,
-    "active_count": 34,
+    "active_count": 32,
     "gauge_class": "warn",
-    "status_line": "HWY 35/1, QEW, HWY 401",
+    "status_line": "HWY 35/1, HWY 401, HWY 404",
     "incidents": [
       {
         "road": "HWY 35/115",
@@ -359,9 +359,9 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Nightly Moving Maintenance Closure on QEW Fort Erie Bound  between GARDEN CITY\u2026",
-        "severity_label": "Minor",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BAYVIEW AVE, Toronto. Left\u2026",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -461,24 +461,6 @@
   ],
   "market": [
     {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "-0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
-    },
-    {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.1\u00a2/L and 35 L/100km",
       "value": "$914",
@@ -498,8 +480,8 @@
     },
     {
       "name": "USD/CAD vs 30-day average",
-      "note": "+0.0231 vs 30-day avg 1.3957",
-      "value": "1.4188",
+      "note": "+0.0268 vs 30-day avg 1.3975",
+      "value": "1.4243",
       "value_class": "flat",
       "country_prefix": "",
       "source": "Bank of Canada",
@@ -518,18 +500,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "International launches modern e-commerce site for commercial vehicle parts, Fleetrite.com",
+      "url": "https://www.thetrucker.com/trucking-news/business/international-launches-modern-e-commerce-site-for-commercial-vehicle-parts-fleetrite-com",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "industry",
       "source": "The Trucker",
       "headline": "ATG Seabrook earns first DTNA Elite Support certification",
       "url": "https://www.thetrucker.com/trucking-news/business/atg-seabrook-earns-first-dtna-elite-support-certification",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "safety",
-      "source": "The Trucker",
-      "headline": "TCA Fleet Safety Award applications now open",
-      "url": "https://www.thetrucker.com/trucking-news/business/tca-fleet-safety-award-applications-now-open",
-      "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
   "theft_home_json": "[]",
@@ -545,10 +527,10 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "6.382",
-    "us_national_cad_gal": "9.055",
-    "us_national_cpl": "239.2",
-    "nadi": "250.2",
-    "ca_us_gap": "21.9",
+    "us_national_cad_gal": "9.090",
+    "us_national_cpl": "240.1",
+    "nadi": "250.6",
+    "ca_us_gap": "21.0",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-09-28",
@@ -565,87 +547,87 @@
       "west_coast_ex_california": 6.643
     },
     "padds_cpl": {
-      "east_coast": 230.0,
-      "new_england": 244.0,
-      "central_atlantic": 244.8,
-      "lower_atlantic": 223.1,
-      "midwest": 244.6,
-      "gulf_coast": 223.2,
-      "rocky_mountain": 240.1,
-      "west_coast": 275.7,
-      "california": 306.6,
-      "west_coast_ex_california": 249.0
+      "east_coast": 230.9,
+      "new_england": 244.9,
+      "central_atlantic": 245.7,
+      "lower_atlantic": 224.0,
+      "midwest": 245.5,
+      "gulf_coast": 224.1,
+      "rocky_mountain": 241.1,
+      "west_coast": 276.8,
+      "california": 307.8,
+      "west_coast_ex_california": 249.9
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "6.137",
-        "cad_gal": "8.707",
-        "cpl": "230.0"
+        "cad_gal": "8.741",
+        "cpl": "230.9"
       },
       {
         "key": "new_england",
         "label": "New England (PADD 1A)",
         "usd_gal": "6.510",
-        "cad_gal": "9.236",
-        "cpl": "244.0"
+        "cad_gal": "9.272",
+        "cpl": "244.9"
       },
       {
         "key": "central_atlantic",
         "label": "Central Atlantic (PADD 1B)",
         "usd_gal": "6.531",
-        "cad_gal": "9.266",
-        "cpl": "244.8"
+        "cad_gal": "9.302",
+        "cpl": "245.7"
       },
       {
         "key": "lower_atlantic",
         "label": "Lower Atlantic (PADD 1C)",
         "usd_gal": "5.953",
-        "cad_gal": "8.446",
-        "cpl": "223.1"
+        "cad_gal": "8.479",
+        "cpl": "224.0"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "6.526",
-        "cad_gal": "9.259",
-        "cpl": "244.6"
+        "cad_gal": "9.295",
+        "cpl": "245.5"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "5.955",
-        "cad_gal": "8.449",
-        "cpl": "223.2"
+        "cad_gal": "8.482",
+        "cpl": "224.1"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "6.407",
-        "cad_gal": "9.090",
-        "cpl": "240.1"
+        "cad_gal": "9.125",
+        "cpl": "241.1"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "7.357",
-        "cad_gal": "10.438",
-        "cpl": "275.7"
+        "cad_gal": "10.479",
+        "cpl": "276.8"
       },
       {
         "key": "california",
         "label": "California",
         "usd_gal": "8.181",
-        "cad_gal": "11.607",
-        "cpl": "306.6"
+        "cad_gal": "11.652",
+        "cpl": "307.8"
       },
       {
         "key": "west_coast_ex_california",
         "label": "West Coast excluding California",
         "usd_gal": "6.643",
-        "cad_gal": "9.425",
-        "cpl": "249.0"
+        "cad_gal": "9.462",
+        "cpl": "249.9"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
