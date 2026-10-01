@@ -1,37 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-314844",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at APPLEBY LINE, Burlington. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.38102569,
-      "lng": -79.77215975,
-      "start": 1790893560,
-      "end": null,
-      "updated": 1790893560,
-      "scheduled": false
-    },
-    {
       "id": "ON-314839",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at HENRY ST, Whitby. Both shoulders and left lane closed.",
+      "description": "Collision on HWY 401 Eastbound  at HENRY ST, Whitby. Both shoulders and 3 lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "both shoulders and left lane closed",
+      "lanes": "both shoulders and 3 lanes closed",
       "lat": 43.86650154,
       "lng": -78.94169624,
       "start": 1790892900,
       "end": null,
-      "updated": 1790893440,
+      "updated": 1790895240,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314851",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound HOV at WALKERS LINE, Burlington. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.366303485,
+      "lng": -79.788293839,
+      "start": 1790894280,
+      "end": null,
+      "updated": 1790894280,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T22:36:33.256696+00:00",
+  "updated": "2026-10-01T23:07:31.420466+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
