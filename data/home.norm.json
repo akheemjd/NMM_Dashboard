@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-01 15:50",
-  "updated_iso": "2026-10-01T15:50:38+00:00",
-  "build_version": "1790869838",
+  "updated_at": "2026-10-01 16:21",
+  "updated_iso": "2026-10-01T16:21:39+00:00",
+  "build_version": "1790871699",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "25 min"
+    "max_wait": "40 min"
   },
   "fuel": {
     "national_diesel": "261.1",
@@ -349,7 +349,7 @@
     "none": false,
     "active_count": 48,
     "gauge_class": "warn",
-    "status_line": "HWY 93, HWY 11",
+    "status_line": "HWY 93, HWY 89, HWY 26",
     "incidents": [
       {
         "road": "HWY 93",
@@ -359,8 +359,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Daily Moving Maintenance Closure on HWY 11 Northbound  between LACLIE STREET,\u2026",
+        "road": "HWY 93",
+        "what": "Daily Moving Maintenance Closure on HWY 93 Southbound  between HWY 12/ANGELA\u2026",
         "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "25 min",
+      "wait": "40 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "11:34 EDT"
+      "captured_at": "12:07 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT"
+      "captured_at": "09:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Federal grants target freight bottlenecks with $426 million investment",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/federal-grants-target-freight-bottlenecks-with-426-million-investment",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "regulations",
       "source": "The Trucker",
       "headline": "Red Simpson combined the Bakersfield Sound with trucker country: Part 2",
       "url": "https://www.thetrucker.com/trucking-news/perspective/rhythm-of-the-road-by-kris-rutherford/red-simpson-combined-the-bakersfield-sound-with-trucker-country-part-2",
       "why": "Rules change compliance cost and driver hours."
-    },
-    {
-      "category": "equipment",
-      "source": "Trucking Dive",
-      "headline": "Circle Logistics targets food and beverage shippers in reefer LTL service expansion",
-      "url": "https://www.truckingdive.com/news/circle-logistics-targets-food-and-beverage-shippers-in-reefer-ltl-service-e/831436/",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
