@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-314915",
+      "id": "ON-314917",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Allen Road Express to Collector, Toronto. Left shoulder and left lane closed.",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BRIMLEY ROAD, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.73040965,
-      "lng": -79.44417322,
-      "start": 1790918100,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.77953397,
+      "lng": -79.26501858,
+      "start": 1790919300,
       "end": null,
-      "updated": 1790918100,
+      "updated": 1790919300,
       "scheduled": false
     },
     {
@@ -32,23 +32,6 @@
       "start": 1790916540,
       "end": null,
       "updated": 1790916540,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314913",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.73273172,
-      "lng": -79.43874035,
-      "start": 1790915340,
-      "end": null,
-      "updated": 1790915340,
       "scheduled": false
     },
     {
@@ -475,6 +458,23 @@
       "end": 1790974800,
       "updated": 1790875320,
       "scheduled": false
+    },
+    {
+      "id": "ON-314705",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 404 Southbound  between VANDORF SIDEROAD, Aurora and STOUFFVILLE ROAD, Stouffville-Richmondhill. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.996376,
+      "lng": -79.3966,
+      "start": 1791158400,
+      "end": 1791538200,
+      "updated": 1790870940,
+      "scheduled": true
     },
     {
       "id": "drivebc.ca/RIDE-102708",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T05:21:42.062347+00:00",
+  "updated": "2026-10-02T05:40:44.478668+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
