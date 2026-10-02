@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-02 21:58",
-  "updated_iso": "2026-10-02T21:58:21+00:00",
-  "build_version": "1790978301",
+  "updated_at": "2026-10-02 22:29",
+  "updated_iso": "2026-10-02T22:29:26+00:00",
+  "build_version": "1790980166",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "261.4",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 33,
+    "active_count": 31,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 40, HWY 17, HWY 404",
+    "status_line": "HWY 40, HWY 17, HWY 404, HWY 401",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Disabled Vehicle on HWY 11 Northbound  at LINE 2/GOLF COURSE RD, Oro Medonte.\u2026",
+        "road": "HWY 40",
+        "what": "Collision on HWY 40 Both Directions  between Bush Line, Dover Centre and Robin\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 40",
-        "what": "Collision on HWY 40 Both Directions  between Bush Line, Dover Centre and Robin\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Both Directions  at TWILIGHT RD, Montreal River. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -376,7 +376,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 EDT"
+      "captured_at": "18:17 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,17 +426,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 MDT"
+      "captured_at": "16:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT"
+      "captured_at": "15:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
