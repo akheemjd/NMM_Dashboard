@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-314910",
+      "id": "ON-314913",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at HWY 427, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.669641035,
-      "lng": -79.588319063,
-      "start": 1790914200,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.73273172,
+      "lng": -79.43874035,
+      "start": 1790915340,
       "end": null,
-      "updated": 1790914200,
+      "updated": 1790915340,
       "scheduled": false
     },
     {
@@ -52,40 +52,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-314907",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at HARMONY ROAD, Oshawa. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.88720057,
-      "lng": -78.82666467,
-      "start": 1790912880,
-      "end": null,
-      "updated": 1790912880,
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-103069",
-      "province": "BC",
-      "highway": "Highway 99 near Stanley Park Causeway",
-      "direction": "",
-      "description": "Vehicle incident at Highway 99, In Vancouver and 170m North of Lost Lagoon Road. Right lane closed. Last update: October 1st, 2026 at 8:15pm PDT. Next update: October 1st, 2026 at 9:15pm PDT.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.29747881,
-      "lng": -123.13693909,
-      "start": "2026-10-01T20:15:25-07:00",
-      "end": "",
-      "updated": "2026-10-01T20:15:25-07:00",
-      "scheduled": false
-    },
-    {
       "id": "ON-314897",
       "province": "ON",
       "highway": "HWY 125",
@@ -101,23 +67,6 @@
       "end": 1791237600,
       "updated": 1790907180,
       "scheduled": true
-    },
-    {
-      "id": "ON-314894",
-      "province": "ON",
-      "highway": "HWY 562",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 562 Both Directions  at YOUNG ST, Thornloe. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 47.667507313,
-      "lng": -79.760410714,
-      "start": 1790905800,
-      "end": null,
-      "updated": 1790905860,
-      "scheduled": false
     },
     {
       "id": "drivebc.ca/RIDE-103061",
@@ -491,6 +440,40 @@
       "start": 1790899200,
       "end": 1790935200,
       "updated": 1790878560,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314741",
+      "province": "ON",
+      "highway": "HWY 35/115",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 35/115 Northbound  between HWY 401, Clarington and HWY 35, . 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.90284,
+      "lng": -78.62562,
+      "start": 1791255600,
+      "end": 1791450000,
+      "updated": 1790878380,
+      "scheduled": true
+    },
+    {
+      "id": "ON-314723",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 3 Eastbound  between Penhale Road and Springwater Road, Orwell. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.775696,
+      "lng": -81.05121,
+      "start": 1790938800,
+      "end": 1790974800,
+      "updated": 1790875320,
       "scheduled": false
     },
     {
@@ -1164,6 +1147,23 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-102650",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Utility work from Highway 1, Mill Bay Rd to Bamberton Rd. Starting Tue Sep 29 until Fri Oct 9. From 9:00 PM to 5:00 AM PDT the next day, every day. Right lane closed. Watch for traffic control. Last update: September 22nd, 2026 at 1:34pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 48.60163,
+      "lng": -123.5351,
+      "start": "2026-09-22T13:25:27-07:00",
+      "end": "",
+      "updated": "2026-09-22T13:34:06-07:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102518",
       "province": "BC",
       "highway": "Highway 4 near Pacific Rim Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T04:19:42.371563+00:00",
+  "updated": "2026-10-02T04:50:39.454446+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
