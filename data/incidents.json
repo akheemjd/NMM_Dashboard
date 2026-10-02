@@ -1,54 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-314859",
-      "province": "ON",
-      "highway": "RED HILL CREEK EXPRESSWAY",
-      "direction": "Northbound",
-      "description": "Collision on RED HILL CREEK EXPRESSWAY Northbound RAMP at QEW, Hamilton. 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 left lanes closed",
-      "lat": 43.2473995,
-      "lng": -79.76089926,
-      "start": 1790896080,
-      "end": null,
-      "updated": 1790897100,
-      "scheduled": false
-    },
-    {
       "id": "ON-314865",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at BROCK ROAD, Pickering. 2 right lanes and right shoulder closed.",
+      "description": "Collision on HWY 401 Eastbound  at BROCK ROAD, Pickering. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
+      "lanes": "1 right lane and right shoulder closed",
       "lat": 43.8435,
       "lng": -79.060294,
       "start": 1790896740,
       "end": null,
-      "updated": 1790896860,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314851",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound HOV at WALKERS LINE, Burlington. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.366303485,
-      "lng": -79.788293839,
-      "start": 1790894280,
-      "end": null,
-      "updated": 1790894280,
+      "updated": 1790899080,
       "scheduled": false
     },
     {
@@ -423,7 +389,7 @@
       "start": 1790899200,
       "end": 1790935200,
       "updated": 1790878560,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-314741",
@@ -457,7 +423,7 @@
       "start": 1790938800,
       "end": 1790974800,
       "updated": 1790875320,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-314705",
@@ -474,6 +440,40 @@
       "start": 1791158400,
       "end": 1791538200,
       "updated": 1790870940,
+      "scheduled": true
+    },
+    {
+      "id": "ON-314707",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 404 Northbound  between STOUFFVILLE ROAD, Stouffville-Richmondhill and AURORA ROAD, Whitchurch-Stouffville. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.940132,
+      "lng": -79.389725,
+      "start": 1791154800,
+      "end": 1791536400,
+      "updated": 1790870580,
+      "scheduled": true
+    },
+    {
+      "id": "ON-314757",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 401 Westbound Collector between CONLINS ROAD and CONLINS ROAD, Toronto. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.797832,
+      "lng": -79.18734,
+      "start": 1791248400,
+      "end": 1791540000,
+      "updated": 1790870400,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-01T23:39:33.624276+00:00",
+  "updated": "2026-10-02T00:10:32.030213+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
