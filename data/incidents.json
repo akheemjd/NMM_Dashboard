@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-315184",
+      "id": "ON-315190",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Neilson Express to Collector, Toronto. All lanes closed.",
+      "description": "Collision on HWY 401 Eastbound TRANSFER at Kennedy Collector to Express, Toronto. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.79193486,
-      "lng": -79.21989199,
-      "start": 1790964300,
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.77786681,
+      "lng": -79.2706301,
+      "start": 1790966340,
       "end": null,
-      "updated": 1790964300,
+      "updated": 1790966340,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315186",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 404 Northbound  at FINCH AVE, Toronto. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.79518786,
+      "lng": -79.34344722,
+      "start": 1790965140,
+      "end": null,
+      "updated": 1790965140,
       "scheduled": false
     },
     {
@@ -50,23 +67,6 @@
       "end": 1791626400,
       "updated": 1790964000,
       "scheduled": true
-    },
-    {
-      "id": "ON-315173",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7854924,
-      "lng": -79.2351519,
-      "start": 1790963400,
-      "end": null,
-      "updated": 1790963400,
-      "scheduled": false
     },
     {
       "id": "ON-315174",
@@ -169,23 +169,6 @@
       "end": 1791399600,
       "updated": 1790962620,
       "scheduled": true
-    },
-    {
-      "id": "ON-315146",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound  at HWY 52, Hamilton. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.20117559,
-      "lng": -80.04450381,
-      "start": 1790960520,
-      "end": null,
-      "updated": 1790960940,
-      "scheduled": false
     },
     {
       "id": "ON-314954",
@@ -424,6 +407,23 @@
       "end": 1791583200,
       "updated": 1790944500,
       "scheduled": false
+    },
+    {
+      "id": "ON-315033",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Continuous Construction on QEW Fort Erie Bound Off-ramp at MISSISSAUGA ROAD, Mississauga. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.55226,
+      "lng": -79.61367,
+      "start": 1791431940,
+      "end": 1791450000,
+      "updated": 1790936280,
+      "scheduled": true
     },
     {
       "id": "drivebc.ca/RIDE-101116",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T18:20:58.137904+00:00",
+  "updated": "2026-10-02T18:52:01.963185+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
