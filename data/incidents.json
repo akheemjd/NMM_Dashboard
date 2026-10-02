@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-314917",
+      "id": "drivebc.ca/RIDE-101116",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Construction work from Highway 1, In Sicamous and Old Sicamous Road to In Sicamous and Solsqua-Sicamous Road. Starting Wed Aug 19. Watch for traffic control. Last update: October 1st, 2026 at 11:20pm PDT. Road Closed 9AM-3PM PT Mon-Sat. Alternate routes Highway 97A and 97B. Single lane alternating traffic Mon-Sat 8PM-6AM. Local access to Old Sicamous Rd/Old Spallumcheen Rd at top of hour during closure. No thru-traffic.",
+      "event_type": "construction",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.83972,
+      "lng": -118.98434,
+      "start": "2026-08-06T11:31:38-07:00",
+      "end": "",
+      "updated": "2026-10-01T23:20:12-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "ON-314918",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BRIMLEY ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.77953397,
-      "lng": -79.26501858,
-      "start": 1790919300,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.74265249,
+      "lng": -79.4233205,
+      "start": 1790920260,
       "end": null,
-      "updated": 1790919300,
+      "updated": 1790920260,
       "scheduled": false
     },
     {
@@ -1147,23 +1164,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-102650",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Utility work from Highway 1, Mill Bay Rd to Bamberton Rd. Starting Tue Sep 29 until Fri Oct 9. From 9:00 PM to 5:00 AM PDT the next day, every day. Right lane closed. Watch for traffic control. Last update: September 22nd, 2026 at 1:34pm PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 48.60163,
-      "lng": -123.5351,
-      "start": "2026-09-22T13:25:27-07:00",
-      "end": "",
-      "updated": "2026-09-22T13:34:06-07:00",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-102518",
       "province": "BC",
       "highway": "Highway 4 near Pacific Rim Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T05:52:41.909591+00:00",
+  "updated": "2026-10-02T06:23:54.762583+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
