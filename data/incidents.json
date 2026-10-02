@@ -1,40 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-314937",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at CREDITVIEW RD., Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.57158919,
-      "lng": -79.67464757,
-      "start": 1790931660,
-      "end": null,
-      "updated": 1790936640,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314955",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at WEST MALL/EVANS AVE, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.60675586,
-      "lng": -79.55747493,
-      "start": 1790936640,
-      "end": null,
-      "updated": 1790936640,
-      "scheduled": false
-    },
-    {
       "id": "ON-314954",
       "province": "ON",
       "highway": "HWY 403 HAMILTON",
@@ -994,6 +960,40 @@
       "scheduled": false
     },
     {
+      "id": "ON-314705",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Nightly Construction on HWY 404 Southbound  between VANDORF SIDEROAD, Aurora and STOUFFVILLE ROAD, Stouffville-Richmondhill. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.996376,
+      "lng": -79.3966,
+      "start": 1791158400,
+      "end": 1791538200,
+      "updated": 1790870940,
+      "scheduled": true
+    },
+    {
+      "id": "ON-314707",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 404 Northbound  between STOUFFVILLE ROAD, Stouffville-Richmondhill and AURORA ROAD, Whitchurch-Stouffville. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.940132,
+      "lng": -79.389725,
+      "start": 1791154800,
+      "end": 1791536400,
+      "updated": 1790870580,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-102708",
       "province": "BC",
       "highway": "Highway 16 near Slim Creek Bridge",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T10:35:51.416298+00:00",
+  "updated": "2026-10-02T11:06:50.654669+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
