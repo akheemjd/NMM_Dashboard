@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-02 21:27",
-  "updated_iso": "2026-10-02T21:27:21+00:00",
-  "build_version": "1790976441",
+  "updated_at": "2026-10-02 21:58",
+  "updated_iso": "2026-10-02T21:58:21+00:00",
+  "build_version": "1790978301",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "261.4",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 33,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , HWY 401",
+    "status_line": "HWY 11, HWY 40, HWY 17, HWY 404",
     "incidents": [
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Disabled Vehicle on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington.\u2026",
+        "road": "HWY 11",
+        "what": "Disabled Vehicle on HWY 11 Northbound  at LINE 2/GOLF COURSE RD, Oro Medonte.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound  at REGIONAL ROAD 25, Milton. Right lane\u2026",
+        "road": "HWY 40",
+        "what": "Collision on HWY 40 Both Directions  between Bush Line, Dover Centre and Robin\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:45 EDT"
+      "captured_at": "17:33 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 PDT"
+      "captured_at": "14:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
