@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315338",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BRIMLEY ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.779739,
+      "lng": -79.2638,
+      "start": 1790984400,
+      "end": null,
+      "updated": 1790984400,
+      "scheduled": false
+    },
+    {
       "id": "ON-315328",
       "province": "ON",
       "highway": "HWY 401",
@@ -135,23 +152,6 @@
       "end": 1791586800,
       "updated": 1790977140,
       "scheduled": true
-    },
-    {
-      "id": "ON-315289",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound  at 407, Markham. 2 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.83898503,
-      "lng": -79.36860317,
-      "start": 1790976420,
-      "end": null,
-      "updated": 1790976780,
-      "scheduled": false
     },
     {
       "id": "ON-315275",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T23:31:25.756767+00:00",
+  "updated": "2026-10-02T23:46:12.998208+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
