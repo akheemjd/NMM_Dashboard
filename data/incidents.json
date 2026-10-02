@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-314915",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound TRANSFER at Allen Road Express to Collector, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.73040965,
+      "lng": -79.44417322,
+      "start": 1790918100,
+      "end": null,
+      "updated": 1790918100,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314914",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.55233005,
+      "lng": -79.61354776,
+      "start": 1790916540,
+      "end": null,
+      "updated": 1790916540,
+      "scheduled": false
+    },
+    {
       "id": "ON-314913",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,40 +49,6 @@
       "start": 1790915340,
       "end": null,
       "updated": 1790915340,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314909",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS RAMP at ALLEN ROAD/YORKDALE ROAD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.73314172,
-      "lng": -79.4390709,
-      "start": 1790914140,
-      "end": null,
-      "updated": 1790914140,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314908",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at ALLEN/YORKDALE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.73354479,
-      "lng": -79.43860083,
-      "start": 1790913900,
-      "end": null,
-      "updated": 1790913900,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T04:50:39.454446+00:00",
+  "updated": "2026-10-02T05:21:42.062347+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
