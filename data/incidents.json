@@ -1,6 +1,57 @@
 {
   "incidents": [
     {
+      "id": "ON-314920",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at YONGE ST, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.75346694,
+      "lng": -79.40817931,
+      "start": 1790923800,
+      "end": null,
+      "updated": 1790923800,
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-103066",
+      "province": "BC",
+      "highway": "Highway 16",
+      "direction": "",
+      "description": "Vehicle incident at Highway 16, 459m Southwest of Braucher Road. Single lane alternating traffic. Open to traffic. Watch for traffic control. Last update: October 1st, 2026 at 11:45pm PDT. Next update: October 2nd, 2026 at 6:00am PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 55.17851226,
+      "lng": -127.72941754,
+      "start": "2026-10-01T16:06:51-07:00",
+      "end": "",
+      "updated": "2026-10-01T23:45:49-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "ON-314919",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at KIRBY ROAD, Vaughan. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.88391657,
+      "lng": -79.55729547,
+      "start": 1790922240,
+      "end": null,
+      "updated": 1790922240,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-101116",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -15,23 +66,6 @@
       "start": "2026-08-06T11:31:38-07:00",
       "end": "",
       "updated": "2026-10-01T23:20:12-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-314918",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at AVENUE ROAD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.74265249,
-      "lng": -79.4233205,
-      "start": 1790920260,
-      "end": null,
-      "updated": 1790920260,
       "scheduled": false
     },
     {
@@ -135,23 +169,6 @@
       "end": 1792191600,
       "updated": 1790890500,
       "scheduled": true
-    },
-    {
-      "id": "ON-314756",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Markham-Richmondhill . All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.883252,
-      "lng": -79.379787,
-      "start": 1790880720,
-      "end": null,
-      "updated": 1790888940,
-      "scheduled": false
     },
     {
       "id": "ON-314814",
@@ -1079,23 +1096,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-102777",
-      "province": "BC",
-      "highway": "Highway 7 near Lougheed Highway",
-      "direction": "",
-      "description": "Tree pruning from Highway 7, In Hope and Haig Scale to At Chawathil Road. Starting Mon Sep 28 until Fri Oct 30. All day, weekdays. Single lane alternating traffic. Watch for traffic control. Last update: September 24th, 2026 at 3:19pm PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.38684,
-      "lng": -121.47055,
-      "start": "2026-09-24T15:18:28-07:00",
-      "end": "",
-      "updated": "2026-09-24T15:19:46-07:00",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-102767",
       "province": "BC",
       "highway": "Highway 5 near Avola Bridge",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T06:23:54.762583+00:00",
+  "updated": "2026-10-02T06:55:57.068570+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
