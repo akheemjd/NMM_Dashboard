@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-314972",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound EXPRESS at HWY 404, Toronto. Left shoulder and 2 left lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 2 left lanes closed",
+      "lat": 43.76764399,
+      "lng": -79.33825128,
+      "start": 1790940180,
+      "end": null,
+      "updated": 1790941020,
+      "scheduled": false
+    },
+    {
       "id": "ON-314975",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,23 +32,6 @@
       "start": 1790940600,
       "end": null,
       "updated": 1790940600,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314972",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at HWY 404, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.76764399,
-      "lng": -79.33825128,
-      "start": 1790940180,
-      "end": null,
-      "updated": 1790940180,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T11:37:49.138767+00:00",
+  "updated": "2026-10-02T11:42:51.283764+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
