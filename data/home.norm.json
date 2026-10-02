@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-02 12:09",
-  "updated_iso": "2026-10-02T12:09:07+00:00",
-  "build_version": "1790942947",
+  "updated_at": "2026-10-02 12:40",
+  "updated_iso": "2026-10-02T12:40:07+00:00",
+  "build_version": "1790944807",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 34,
+    "active_count": 33,
     "gauge_class": "warn",
-    "status_line": "HWY 35/1, HWY 11, QEW, HWY 7",
+    "status_line": "HWY 7, HWY 404, HWY 400, HWY 401",
     "incidents": [
       {
-        "road": "HWY 35/115",
-        "what": "Nightly Moving Maintenance Closure on HWY 35/115 Northbound  between HWY 401,\u2026",
-        "severity_label": "Minor",
+        "road": "HWY 7",
+        "what": "Collision on HWY 7 Eastbound  at Ottawa Street, Kitchener. Lane closed.",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Both Directions  at KANICHEE MINE RD(W), Temagami. All\u2026",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Northbound RAMP at 16TH AVE, Markham-Richmondhill . Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -376,7 +376,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "08:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 MDT"
+      "captured_at": "06:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT"
+      "captured_at": "05:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 CDT"
+      "captured_at": "07:16 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -520,16 +520,16 @@
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "Idaho police respond to fatality involving 18-wheeler",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/idaho-police-respond-to-fatality-involving-18-wheeler",
+      "headline": "Oil prices ease after call for diesel reserves release",
+      "url": "https://www.thetrucker.com/trucking-news/business/oil-prices-ease-after-call-for-diesel-reserves-release",
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "equipment",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "International launches modern e-commerce site for commercial vehicle parts, Fleetrite.com",
-      "url": "https://www.thetrucker.com/trucking-news/business/international-launches-modern-e-commerce-site-for-commercial-vehicle-parts-fleetrite-com",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "Idaho police respond to fatality involving 18-wheeler",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/idaho-police-respond-to-fatality-involving-18-wheeler",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
