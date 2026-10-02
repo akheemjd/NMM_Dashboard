@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-02 23:00",
-  "updated_iso": "2026-10-02T23:00:27+00:00",
-  "build_version": "1790982027",
+  "updated_at": "2026-10-02 23:31",
+  "updated_iso": "2026-10-02T23:31:41+00:00",
+  "build_version": "1790983901",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_wait": "25 min"
   },
   "fuel": {
     "national_diesel": "261.4",
@@ -349,11 +349,11 @@
     "none": false,
     "active_count": 32,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 40, HWY 17, HWY 404",
+    "status_line": "HWY 401, HWY 40, HWY 17, HWY 404",
     "incidents": [
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at McCOWAN ROAD, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "25 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "18:17 EDT"
+      "captured_at": "19:17 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 PDT"
+      "captured_at": "16:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 CDT"
+      "captured_at": "18:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -460,24 +460,6 @@
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "-0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.4\u00a2/L and 35 L/100km",
