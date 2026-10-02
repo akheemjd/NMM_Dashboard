@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-02 19:23",
-  "updated_iso": "2026-10-02T19:23:15+00:00",
-  "build_version": "1790968995",
+  "updated_at": "2026-10-02 19:54",
+  "updated_iso": "2026-10-02T19:54:17+00:00",
+  "build_version": "1790970857",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -347,21 +347,21 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 34,
+    "active_count": 30,
     "gauge_class": "warn",
-    "status_line": "HWY 401",
+    "status_line": "HWY 401, HWY 8, HWY 417",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Continuous Maintenance on HWY 401 Westbound  between WESTNEY ROAD, Ajax and\u2026",
-        "severity_label": "Minor",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at RENFORTH DR, Toronto. 1 right\u2026",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Nightly Maintenance on HWY 401 Eastbound Collector between LIVERPOOL ROAD and\u2026",
-        "severity_label": "Minor",
+        "road": "HWY 8",
+        "what": "Collision on HWY 8 Eastbound  at VANIER DRIVE, Hamilton. All lanes closed.",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -376,7 +376,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:49 EDT"
+      "captured_at": "15:31 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 MDT"
+      "captured_at": "13:44 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:00 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 CDT"
+      "captured_at": "14:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
