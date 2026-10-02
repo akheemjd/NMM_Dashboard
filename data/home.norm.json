@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-02 02:45",
-  "updated_iso": "2026-10-02T02:45:55+00:00",
-  "build_version": "1790909155",
+  "updated_at": "2026-10-02 03:17",
+  "updated_iso": "2026-10-02T03:17:09+00:00",
+  "build_version": "1790911029",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,9 +347,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 32,
+    "active_count": 30,
     "gauge_class": "warn",
-    "status_line": "HWY 35/1, HWY 404, QEW, HWY 401",
+    "status_line": "HWY 35/1, QEW, HWY 562, HWY 404",
     "incidents": [
       {
         "road": "HWY 35/115",
@@ -359,8 +359,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Northbound RAMP at DAVIS DRIVE, Newmarket. Right lane and\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. 2 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:45 EDT"
+      "captured_at": "22:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:20 PDT"
+      "captured_at": "20:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -460,24 +460,6 @@
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "-0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.1\u00a2/L and 35 L/100km",
