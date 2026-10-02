@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315166",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.19425,
+      "lng": -75.72434,
+      "start": 1791172800,
+      "end": 1791604740,
+      "updated": 1790962980,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315167",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Northbound",
+      "description": "Continuous Construction on HWY 416 Northbound  between L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville and CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.02925,
+      "lng": -75.62597,
+      "start": 1791172800,
+      "end": 1791604740,
+      "updated": 1790962980,
+      "scheduled": true
+    },
+    {
       "id": "ON-315165",
       "province": "ON",
       "highway": "HWY 401",
@@ -960,40 +994,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-314826",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Daily Construction on HWY 401 Westbound  between CARMAN RD (IC 738)/SD&G CR 1 - Iroquois and CARMAN RD (IC 738)/SD&G CR 1 - Iroquois, Iroquois. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.85741,
-      "lng": -75.33026,
-      "start": 1791975600,
-      "end": 1792191600,
-      "updated": 1790890500,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315038",
-      "province": "ON",
-      "highway": "HWY 89",
-      "direction": "Eastbound",
-      "description": "Nightly Engineering Investigation on HWY 89 Eastbound  between SIMCOE ROAD 27/KING STREET/COOKSTOWN and HWY 400, Essa. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.18989,
-      "lng": -79.70145,
-      "start": 1791327600,
-      "end": 1791536400,
-      "updated": 1790889300,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-102708",
       "province": "BC",
       "highway": "Highway 16 near Slim Creek Bridge",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T17:45:00.622047+00:00",
+  "updated": "2026-10-02T17:50:08.891358+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
