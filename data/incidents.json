@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315123",
+      "id": "ON-315138",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
+      "highway": "HWY 410",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 410 Southbound RAMP at 401, Mississauga. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.64848042,
-      "lng": -79.63784681,
-      "start": 1790956800,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.6391343,
+      "lng": -79.66155132,
+      "start": 1790959440,
       "end": null,
-      "updated": 1790956800,
+      "updated": 1790959440,
       "scheduled": false
     },
     {
@@ -84,23 +84,6 @@
       "end": 1791561600,
       "updated": 1790956260,
       "scheduled": true
-    },
-    {
-      "id": "ON-315068",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Highway Maintenance on QEW Fort Erie bound ON-RAMP at WINSTON CHURCHILL BLVD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.509481,
-      "lng": -79.664,
-      "start": 1790950080,
-      "end": null,
-      "updated": 1790950080,
-      "scheduled": false
     },
     {
       "id": "ON-315052",
@@ -994,6 +977,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315039",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 89 Westbound  between HWY 400 and SIMCOE ROAD 27/KING STREET/COOKSTOWN, Essa. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.19973,
+      "lng": -79.65732,
+      "start": 1791342000,
+      "end": 1791536400,
+      "updated": 1790889000,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-102708",
       "province": "BC",
       "highway": "Highway 16 near Slim Creek Bridge",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T16:16:55.378603+00:00",
+  "updated": "2026-10-02T16:47:58.845039+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
