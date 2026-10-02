@@ -18,23 +18,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-314914",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.55233005,
-      "lng": -79.61354776,
-      "start": 1790916540,
-      "end": null,
-      "updated": 1790916540,
-      "scheduled": false
-    },
-    {
       "id": "ON-314897",
       "province": "ON",
       "highway": "HWY 125",
@@ -474,6 +457,23 @@
       "start": 1791158400,
       "end": 1791538200,
       "updated": 1790870940,
+      "scheduled": true
+    },
+    {
+      "id": "ON-314707",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 404 Northbound  between STOUFFVILLE ROAD, Stouffville-Richmondhill and AURORA ROAD, Whitchurch-Stouffville. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.940132,
+      "lng": -79.389725,
+      "start": 1791154800,
+      "end": 1791536400,
+      "updated": 1790870580,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T05:40:44.478668+00:00",
+  "updated": "2026-10-02T05:52:41.909591+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
