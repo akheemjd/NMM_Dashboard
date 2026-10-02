@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315321",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.20045992,
+      "lng": -79.65473612,
+      "start": 1790980980,
+      "end": null,
+      "updated": 1790980980,
+      "scheduled": false
+    },
+    {
       "id": "ON-315310",
       "province": "ON",
       "highway": "HWY 40",
@@ -406,23 +423,6 @@
       "start": 1791198000,
       "end": 1791241200,
       "updated": 1790968260,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315182",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.13216,
-      "lng": -76.12006,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964060,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T22:29:09.463395+00:00",
+  "updated": "2026-10-02T23:00:11.929162+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
