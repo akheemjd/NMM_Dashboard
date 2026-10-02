@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-314947",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.79363237,
+      "lng": -79.21586112,
+      "start": 1790934600,
+      "end": null,
+      "updated": 1790934600,
+      "scheduled": false
+    },
+    {
+      "id": "ON-314946",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.69200023,
+      "lng": -79.56896285,
+      "start": 1790934540,
+      "end": null,
+      "updated": 1790934540,
+      "scheduled": false
+    },
+    {
       "id": "ON-314941",
       "province": "ON",
       "highway": "HWY 400",
@@ -960,40 +994,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-314740",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 401 Eastbound  between RITSON ROAD and HARMONY ROAD, Oshawa. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.883717,
-      "lng": -78.84643,
-      "start": 1790899200,
-      "end": 1790935200,
-      "updated": 1790878560,
-      "scheduled": false
-    },
-    {
-      "id": "ON-314741",
-      "province": "ON",
-      "highway": "HWY 35/115",
-      "direction": "Northbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 35/115 Northbound  between HWY 401, Clarington and HWY 35, . 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.90284,
-      "lng": -78.62562,
-      "start": 1791255600,
-      "end": 1791450000,
-      "updated": 1790878380,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-102708",
       "province": "BC",
       "highway": "Highway 16 near Slim Creek Bridge",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T09:33:57.881131+00:00",
+  "updated": "2026-10-02T10:04:47.678110+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

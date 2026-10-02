@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-02 09:34",
-  "updated_iso": "2026-10-02T09:34:12+00:00",
-  "build_version": "1790933652",
+  "updated_at": "2026-10-02 10:05",
+  "updated_iso": "2026-10-02T10:05:02+00:00",
+  "build_version": "1790935502",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 33,
+    "active_count": 34,
     "gauge_class": "warn",
-    "status_line": "HWY 35/1, HWY 400, QEW, HWY 403 ",
+    "status_line": "HWY 401, HWY 400, QEW",
     "incidents": [
       {
-        "road": "HWY 35/115",
-        "what": "Nightly Moving Maintenance Closure on HWY 35/115 Northbound  between HWY 401,\u2026",
-        "severity_label": "Minor",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Right\u2026",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Northbound RAMP at HWY 89/SIMCOE ROAD 89, Innisfil.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  at DIXON RD/MARTIN GROVE RD, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:20 PDT"
+      "captured_at": "02:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
