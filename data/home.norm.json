@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-02 11:07",
-  "updated_iso": "2026-10-02T11:07:05+00:00",
-  "build_version": "1790939225",
+  "updated_at": "2026-10-02 11:38",
+  "updated_iso": "2026-10-02T11:38:05+00:00",
+  "build_version": "1790941085",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "30 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "261.1",
@@ -347,9 +347,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 34,
     "gauge_class": "warn",
-    "status_line": "HWY 35/1, HWY 403 , HWY 401",
+    "status_line": "HWY 35/1, HWY 401",
     "incidents": [
       {
         "road": "HWY 35/115",
@@ -359,8 +359,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Collision on HWY 403 HAMILTON Westbound  at YORK BLVD, Hamilton. 2 right lanes\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Left shoulder\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT"
+      "captured_at": "07:29 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "30 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT"
+      "captured_at": "04:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
