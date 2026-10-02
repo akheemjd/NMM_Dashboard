@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315092",
+      "id": "ON-315098",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 400 Northbound ON-RAMP at HWY 9/DAVIS DR, Kettleby. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.69381372,
-      "lng": -79.56746367,
-      "start": 1790953740,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.030737,
+      "lng": -79.593924,
+      "start": 1790954580,
       "end": null,
-      "updated": 1790953740,
+      "updated": 1790954580,
       "scheduled": false
     },
     {
@@ -84,23 +84,6 @@
       "end": 1791493200,
       "updated": 1790949000,
       "scheduled": true
-    },
-    {
-      "id": "ON-315049",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 17 Eastbound  at RALEIGH LAKE RD-ILSLEY TWP, Ignace. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 49.474950269,
-      "lng": -91.941930291,
-      "start": 1790948880,
-      "end": null,
-      "updated": 1790948880,
-      "scheduled": false
     },
     {
       "id": "ON-315078",
@@ -994,6 +977,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-314814",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 401 Westbound  between Switzerville Rd and Switzerville Rd, Napanee. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.27491,
+      "lng": -76.87793,
+      "start": 1791154800,
+      "end": 1791540000,
+      "updated": 1790888580,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-102708",
       "province": "BC",
       "highway": "Highway 16 near Slim Creek Bridge",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T15:14:59.623400+00:00",
+  "updated": "2026-10-02T15:46:00.474416+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
