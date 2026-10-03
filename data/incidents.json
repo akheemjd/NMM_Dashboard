@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-315388",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound EXPRESS at DUNDAS STREET, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.62833109,
-      "lng": -79.55690389,
-      "start": 1790997780,
-      "end": null,
-      "updated": 1790997780,
-      "scheduled": false
-    },
-    {
       "id": "ON-315362",
       "province": "ON",
       "highway": "HWY 11",
@@ -31,24 +14,7 @@
       "lng": -79.675244,
       "start": 1790989140,
       "end": null,
-      "updated": 1790989140,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315295",
-      "province": "ON",
-      "highway": "HWY 40",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 40 Both Directions  between Bush Line, Dover Centre and Robin Line, Wallaceburg. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 42.51825,
-      "lng": -82.32704,
-      "start": 1790977500,
-      "end": null,
-      "updated": 1790987520,
+      "updated": 1790999340,
       "scheduled": false
     },
     {
@@ -135,23 +101,6 @@
       "end": 1791586800,
       "updated": 1790977140,
       "scheduled": true
-    },
-    {
-      "id": "ON-315275",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound ON-RAMP at KINGSTON RD, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.7962663,
-      "lng": -79.1549106,
-      "start": 1790974800,
-      "end": null,
-      "updated": 1790974800,
-      "scheduled": false
     },
     {
       "id": "ON-315263",
@@ -423,6 +372,57 @@
       "start": 1791241200,
       "end": 1791626400,
       "updated": 1790964000,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315174",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 401 Westbound  between MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault and UPPER CANADA RD (IC 758), Morrisburg. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.04695,
+      "lng": -74.90655,
+      "start": 1791457200,
+      "end": 1791498600,
+      "updated": 1790963340,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315175",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 401 Eastbound  between UPPER CANADA RD (IC 758), Morrisburg and MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.95339,
+      "lng": -75.10947,
+      "start": 1791457200,
+      "end": 1791498600,
+      "updated": 1790963280,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315166",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.19425,
+      "lng": -75.72434,
+      "start": 1791172800,
+      "end": 1791604740,
+      "updated": 1790962980,
       "scheduled": true
     },
     {
@@ -846,10 +846,10 @@
       "updated": "2026-10-02"
     },
     {
-      "scheduled": false,
-      "start_date": "2026-10-01",
-      "end_date": "2026-10-02",
-      "id": "CA-C5HB-0019-2026-10-01-21:01:00",
+      "scheduled": true,
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-10",
+      "id": "CA-C5HB-0018-2026-10-09-21:01:00",
       "province": "CA",
       "region_label": "Central Valley",
       "highway": "I-5 in San Joaquin County",
@@ -861,8 +861,8 @@
       "lanes": "1 of 2",
       "lat": 38.254747,
       "lng": -121.44807,
-      "start": "2026-10-01",
-      "end": "2026-10-02",
+      "start": "2026-10-09",
+      "end": "2026-10-10",
       "updated": "2026-10-02"
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T03:42:27.655064+00:00",
+  "updated": "2026-10-03T04:14:17.547127+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
