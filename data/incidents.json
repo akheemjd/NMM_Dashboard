@@ -1,6 +1,57 @@
 {
   "incidents": [
     {
+      "id": "ON-315362",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New Liskeard. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 47.5299847,
+      "lng": -79.675244,
+      "start": 1790989140,
+      "end": null,
+      "updated": 1790989140,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315358",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at DUFFERIN STREET, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.72803927,
+      "lng": -79.45798094,
+      "start": 1790987880,
+      "end": null,
+      "updated": 1790987880,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315295",
+      "province": "ON",
+      "highway": "HWY 40",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 40 Both Directions  between Bush Line, Dover Centre and Robin Line, Wallaceburg. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 42.51825,
+      "lng": -82.32704,
+      "start": 1790977500,
+      "end": null,
+      "updated": 1790987520,
+      "scheduled": false
+    },
+    {
       "id": "ON-315352",
       "province": "ON",
       "highway": "QEW",
@@ -103,23 +154,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315295",
-      "province": "ON",
-      "highway": "HWY 40",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 40 Both Directions  between Bush Line, Dover Centre and Robin Line, Wallaceburg. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 42.51825,
-      "lng": -82.32704,
-      "start": 1790977500,
-      "end": null,
-      "updated": 1790977500,
-      "scheduled": false
-    },
-    {
       "id": "ON-315293",
       "province": "ON",
       "highway": "HWY 17",
@@ -168,23 +202,6 @@
       "start": 1790974800,
       "end": null,
       "updated": 1790974800,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315270",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 17 Eastbound  at SEC HWY 647 (N) - TO BLUE LAKE PROV PARK, Vermillion Bay. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 49.8602602,
-      "lng": -93.3898113,
-      "start": 1790974260,
-      "end": null,
-      "updated": 1790974260,
       "scheduled": false
     },
     {
@@ -406,23 +423,6 @@
       "start": 1791205200,
       "end": 1791237600,
       "updated": 1790968620,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.17644,
-      "lng": -74.409,
-      "start": 1791198000,
-      "end": 1791241200,
-      "updated": 1790968260,
       "scheduled": true
     },
     {
@@ -1011,6 +1011,23 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-102906",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Utility work at Highway 1, 23km West of Kamloops and At Rodeo Drive. Starting Fri Oct 9 until Fri Oct 9. From 9:30 AM to 3:30 PM PDT, Friday. Right lane closed. Watch for traffic control. Last update: September 28th, 2026 at 8:44am PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.69373586,
+      "lng": -120.58759544,
+      "start": "2026-09-28T08:44:06-07:00",
+      "end": "",
+      "updated": "2026-09-28T08:44:06-07:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102903",
       "province": "BC",
       "highway": "Highway 97",
@@ -1059,23 +1076,6 @@
       "start": "2026-09-25T10:14:44-07:00",
       "end": "",
       "updated": "2026-09-25T10:14:44-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102783",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Construction work from Highway 1, In Hope and 393m West of Silverhope Underpass (Flood-Hope Road) to In Hope and 554m Southwest of Old Hope-Princeton Highway. Starting Mon Sep 28 until Fri Oct 2. From 6:00 AM to 6:00 PM PDT, Monday to Saturday. Shoulder closed. Speed Limit restriction: 60 km/h. Last update: September 24th, 2026 at 3:52pm PDT. Demobilization of equipment.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.3644,
-      "lng": -121.48349,
-      "start": "2026-09-24T15:52:19-07:00",
-      "end": "",
-      "updated": "2026-09-24T15:52:19-07:00",
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T00:35:10.949732+00:00",
+  "updated": "2026-10-03T01:06:13.521543+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
