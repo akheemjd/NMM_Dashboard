@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-03 11:28",
-  "updated_iso": "2026-10-03T11:28:41+00:00",
-  "build_version": "1791026921",
+  "updated_at": "2026-10-03 11:51",
+  "updated_iso": "2026-10-03T11:51:41+00:00",
+  "build_version": "1791028301",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 29,
+    "active_count": 30,
     "gauge_class": "warn",
-    "status_line": "HWY 404, HWY 11, I-5 in S",
+    "status_line": "HWY 401, HWY 404, HWY 11",
     "incidents": [
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound HOV at FINCH AVE, Toronto. All lanes closed.",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at WARDEN AVE, Toronto. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound  at FINCH AVE, Toronto. 2 lanes and right\u2026",
+        "what": "Collision on HWY 404 Southbound HOV at FINCH AVE, Toronto. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:00 PDT"
+      "captured_at": "04:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -460,24 +460,6 @@
     }
   ],
   "market": [
-    {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "-0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
-    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.4\u00a2/L and 35 L/100km",

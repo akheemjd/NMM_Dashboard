@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315362",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New Liskeard. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 47.5299847,
+      "lng": -79.675244,
+      "start": 1790989140,
+      "end": null,
+      "updated": 1791027660,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315428",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at WARDEN AVE, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.77061118,
+      "lng": -79.3042853,
+      "start": 1791027540,
+      "end": null,
+      "updated": 1791027540,
+      "scheduled": false
+    },
+    {
       "id": "ON-315414",
       "province": "ON",
       "highway": "HWY 404",
@@ -67,23 +101,6 @@
       "end": 1791504000,
       "updated": 1791021000,
       "scheduled": true
-    },
-    {
-      "id": "ON-315362",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New Liskeard. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 47.5299847,
-      "lng": -79.675244,
-      "start": 1790989140,
-      "end": null,
-      "updated": 1791014400,
-      "scheduled": false
     },
     {
       "scheduled": false,
@@ -926,23 +943,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315181",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 7 Eastbound  between MISSISSIPPI RD /LAKE PARK RD and MCNEELY AVE/CR 29, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.12311,
-      "lng": -76.14104,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964000,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T11:28:27.338962+00:00",
+  "updated": "2026-10-03T11:51:27.888735+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
