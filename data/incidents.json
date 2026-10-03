@@ -1,40 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-315408",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Other on HWY 401 Westbound RAMP at THICKSON ROAD, Whitby. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.87032637,
-      "lng": -78.90272701,
-      "start": 1791017280,
-      "end": null,
-      "updated": 1791017280,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315407",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at HWY 410, Mississauga. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.6393672,
-      "lng": -79.661377,
-      "start": 1791015420,
-      "end": null,
-      "updated": 1791015420,
-      "scheduled": false
-    },
-    {
       "id": "ON-315362",
       "province": "ON",
       "highway": "HWY 11",
@@ -926,6 +892,40 @@
       "scheduled": true
     },
     {
+      "id": "ON-315175",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 401 Eastbound  between UPPER CANADA RD (IC 758), Morrisburg and MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.95339,
+      "lng": -75.10947,
+      "start": 1791457200,
+      "end": 1791498600,
+      "updated": 1790963280,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315166",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.19425,
+      "lng": -75.72434,
+      "start": 1791172800,
+      "end": 1791604740,
+      "updated": 1790962980,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T08:53:21.631927+00:00",
+  "updated": "2026-10-03T09:24:23.030739+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
