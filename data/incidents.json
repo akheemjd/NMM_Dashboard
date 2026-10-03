@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315293",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 17 Both Directions  at TWILIGHT RD, Montreal River. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 47.242251305,
+      "lng": -84.642535715,
+      "start": 1790977320,
+      "end": null,
+      "updated": 1790992800,
+      "scheduled": false
+    },
+    {
       "id": "ON-315368",
       "province": "ON",
       "highway": "HWY 400",
@@ -15,40 +32,6 @@
       "start": 1790991180,
       "end": null,
       "updated": 1790991180,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315367",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.72997534,
-      "lng": -79.44901142,
-      "start": 1790990940,
-      "end": null,
-      "updated": 1790990940,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315364",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at HWY 6 SOUTH, Puslinch. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.45298184,
-      "lng": -80.12453177,
-      "start": 1790989800,
-      "end": null,
-      "updated": 1790989800,
       "scheduled": false
     },
     {
@@ -152,23 +135,6 @@
       "end": 1792209540,
       "updated": 1790978280,
       "scheduled": true
-    },
-    {
-      "id": "ON-315293",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 17 Both Directions  at TWILIGHT RD, Montreal River. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 47.242251305,
-      "lng": -84.642535715,
-      "start": 1790977320,
-      "end": null,
-      "updated": 1790977320,
-      "scheduled": false
     },
     {
       "id": "ON-315292",
@@ -423,6 +389,40 @@
       "start": 1791205200,
       "end": 1791237600,
       "updated": 1790968620,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.17644,
+      "lng": -74.409,
+      "start": 1791198000,
+      "end": 1791241200,
+      "updated": 1790968260,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315182",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.13216,
+      "lng": -76.12006,
+      "start": 1791241200,
+      "end": 1791626400,
+      "updated": 1790964060,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T01:37:18.481043+00:00",
+  "updated": "2026-10-03T02:09:13.954209+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
