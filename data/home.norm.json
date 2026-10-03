@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-03 06:49",
-  "updated_iso": "2026-10-03T06:49:32+00:00",
-  "build_version": "1791010172",
+  "updated_at": "2026-10-03 07:20",
+  "updated_iso": "2026-10-03T07:20:34+00:00",
+  "build_version": "1791012034",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 28,
+    "active_count": 29,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 11, I-5 in S",
+    "status_line": "HWY 401, QEW, HWY 11, I-5 in S",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at FRUITLAND ROAD, Hamilton. 2 right lanes and\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at LAKE RIDGE ROAD, Whitby. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at FRUITLAND ROAD, Hamilton. 2 right lanes and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:20 PDT"
+      "captured_at": "00:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
