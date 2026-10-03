@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315480",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound  at FINCH AVENUE, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.75460869,
+      "lng": -79.53057719,
+      "start": 1791038820,
+      "end": null,
+      "updated": 1791038820,
+      "scheduled": false
+    },
+    {
       "id": "ON-315477",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -32,23 +49,6 @@
       "start": 1791035880,
       "end": null,
       "updated": 1791037320,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315473",
-      "province": "ON",
-      "highway": "HWY 407",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 407 Eastbound  at HARMONY RD N, Oshawa. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.98223,
-      "lng": -78.868965,
-      "start": 1791036900,
-      "end": null,
-      "updated": 1791036900,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T14:34:29.309803+00:00",
+  "updated": "2026-10-03T15:05:34.412809+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
