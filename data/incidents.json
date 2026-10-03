@@ -35,23 +35,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315414",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound  at FINCH AVE, Toronto. 2 lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 lanes and right shoulder closed",
-      "lat": 43.7949496,
-      "lng": -79.3437899,
-      "start": 1791024780,
-      "end": null,
-      "updated": 1791025560,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-102401",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -66,23 +49,6 @@
       "start": "2026-09-15T15:27:19-07:00",
       "end": "",
       "updated": "2026-10-03T04:04:04-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-315415",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Southbound",
-      "description": "Collision on HWY 404 Southbound HOV at FINCH AVE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.79492835,
-      "lng": -79.34370522,
-      "start": 1791025200,
-      "end": null,
-      "updated": 1791025200,
       "scheduled": false
     },
     {
@@ -943,6 +909,40 @@
       "scheduled": true
     },
     {
+      "id": "ON-315181",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 7 Eastbound  between MISSISSIPPI RD /LAKE PARK RD and MCNEELY AVE/CR 29, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.12311,
+      "lng": -76.14104,
+      "start": 1791241200,
+      "end": 1791626400,
+      "updated": 1790964000,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315174",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 401 Westbound  between MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault and UPPER CANADA RD (IC 758), Morrisburg. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.04695,
+      "lng": -74.90655,
+      "start": 1791457200,
+      "end": 1791498600,
+      "updated": 1790963340,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T11:51:27.888735+00:00",
+  "updated": "2026-10-03T11:59:29.483977+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-03 11:51",
-  "updated_iso": "2026-10-03T11:51:41+00:00",
-  "build_version": "1791028301",
+  "updated_at": "2026-10-03 11:59",
+  "updated_iso": "2026-10-03T11:59:44+00:00",
+  "build_version": "1791028784",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,9 +347,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 30,
+    "active_count": 28,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 404, HWY 11",
+    "status_line": "HWY 401, HWY 11, I-5 in S",
     "incidents": [
       {
         "road": "HWY 401",
@@ -359,8 +359,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound HOV at FINCH AVE, Toronto. All lanes closed.",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -460,6 +460,24 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2372B (chained 2017)",
+      "value": "-0.0%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Longer-term freight demand trend."
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.4\u00a2/L and 35 L/100km",
