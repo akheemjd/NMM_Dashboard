@@ -1,21 +1,21 @@
 {
   "incidents": [
     {
-      "id": "ON-315631",
+      "id": "ON-315634",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at FORD DRIVE, Oakville. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Daily Maintenance on HWY 17 Eastbound  between SIMON ST (N) - WALKER LAKE RD (S) and ONTARIO ST (S), Schreiber. 1 Right Lane(s).",
+      "event_type": "roadwork",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.4945712,
-      "lng": -79.6738943,
-      "start": 1791066060,
-      "end": null,
-      "updated": 1791066060,
-      "scheduled": false
+      "lanes": "1 Right Lane(s)",
+      "lat": 48.81493,
+      "lng": -87.27033,
+      "start": 1791198000,
+      "end": 1792188000,
+      "updated": 1791066660,
+      "scheduled": true
     },
     {
       "id": "ON-315613",
@@ -32,23 +32,6 @@
       "start": 1791064380,
       "end": null,
       "updated": 1791064980,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315598",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 403 HAMILTON Westbound  at YORK BLVD, Hamilton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.28407869,
-      "lng": -79.89515305,
-      "start": 1791060660,
-      "end": null,
-      "updated": 1791060660,
       "scheduled": false
     },
     {
@@ -926,6 +909,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.17644,
+      "lng": -74.409,
+      "start": 1791198000,
+      "end": 1791241200,
+      "updated": 1790968260,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T22:24:41.896436+00:00",
+  "updated": "2026-10-03T22:56:48.141436+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

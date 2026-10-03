@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-03 22:24",
-  "updated_iso": "2026-10-03T22:24:57+00:00",
-  "build_version": "1791066297",
+  "updated_at": "2026-10-03 22:57",
+  "updated_iso": "2026-10-03T22:57:06+00:00",
+  "build_version": "1791068226",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 30,
+    "active_count": 28,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 410, HWY 403 , HWY 11",
+    "status_line": "HWY 410, HWY 11, I-5 in S",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at FORD DRIVE, Oakville. Left shoulder and\u2026",
+        "road": "HWY 410",
+        "what": "Vehicle Fire on HWY 410 Northbound RAMP at STEELES AVE, Brampton. 2 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 410",
-        "what": "Vehicle Fire on HWY 410 Northbound RAMP at STEELES AVE, Brampton. 2 right lanes\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:45 EDT"
+      "captured_at": "18:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -426,17 +426,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 MDT"
+      "captured_at": "16:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:00 PDT"
+      "captured_at": "15:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
