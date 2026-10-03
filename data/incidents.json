@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315414",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Collision on HWY 404 Southbound  at FINCH AVE, Toronto. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.7949496,
+      "lng": -79.3437899,
+      "start": 1791024780,
+      "end": null,
+      "updated": 1791024780,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315413",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. Left shoulder and 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.6520701,
+      "lng": -79.627282,
+      "start": 1791024240,
+      "end": null,
+      "updated": 1791024240,
+      "scheduled": false
+    },
+    {
       "id": "ON-315410",
       "province": "ON",
       "highway": "HWY 115",
@@ -892,40 +926,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315174",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 401 Westbound  between MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault and UPPER CANADA RD (IC 758), Morrisburg. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.04695,
-      "lng": -74.90655,
-      "start": 1791457200,
-      "end": 1791498600,
-      "updated": 1790963340,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315175",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 401 Eastbound  between UPPER CANADA RD (IC 758), Morrisburg and MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 44.95339,
-      "lng": -75.10947,
-      "start": 1791457200,
-      "end": 1791498600,
-      "updated": 1790963280,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T10:26:24.171074+00:00",
+  "updated": "2026-10-03T10:57:23.620788+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
