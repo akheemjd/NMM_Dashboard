@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315546",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 HAMILTON Eastbound  at KING ROAD, Burlington. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.32747777,
+      "lng": -79.84362835,
+      "start": 1791050940,
+      "end": null,
+      "updated": 1791050940,
+      "scheduled": false
+    },
+    {
       "id": "ON-315535",
       "province": "ON",
       "highway": "HWY 404",
@@ -32,23 +49,6 @@
       "start": 1791049140,
       "end": null,
       "updated": 1791049140,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315530",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound  at MAVIS ROAD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.58581024,
-      "lng": -79.66006297,
-      "start": 1791048780,
-      "end": null,
-      "updated": 1791048780,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T18:12:36.811708+00:00",
+  "updated": "2026-10-03T18:43:38.264890+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
