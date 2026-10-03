@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315410",
+      "province": "ON",
+      "highway": "HWY 115",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 115 Northbound Off-ramp at PETERBOROUGH RD 10, Peterborough. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.18586,
+      "lng": -78.46284,
+      "start": 1791198000,
+      "end": 1791504000,
+      "updated": 1791021000,
+      "scheduled": true
+    },
+    {
       "id": "ON-315362",
       "province": "ON",
       "highway": "HWY 11",
@@ -909,23 +926,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315166",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Continuous Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.19425,
-      "lng": -75.72434,
-      "start": 1791172800,
-      "end": 1791604740,
-      "updated": 1790962980,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T09:24:23.030739+00:00",
+  "updated": "2026-10-03T10:26:24.171074+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
