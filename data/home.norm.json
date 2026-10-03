@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-03 21:22",
-  "updated_iso": "2026-10-03T21:22:10+00:00",
-  "build_version": "1791062530",
+  "updated_at": "2026-10-03 21:53",
+  "updated_iso": "2026-10-03T21:53:55+00:00",
+  "build_version": "1791064435",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 32,
+    "active_count": 30,
     "gauge_class": "warn",
-    "status_line": "HWY 410, HWY 401, HWY 17, HWY 403 ",
+    "status_line": "HWY 401, HWY 17, HWY 403 , HWY 11",
     "incidents": [
       {
-        "road": "HWY 410",
-        "what": "Disabled Vehicle on HWY 410 Southbound  at CLARK BLVD, Brampton. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Debris on HWY 401 Westbound COLLECTOR at LESLIE STREET, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at REGIONAL ROAD 25, Milton. Left shoulder and\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Both Directions  at ROYAL LAKE RD (N) - EWART TWP, Kenora.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:00 PDT"
+      "captured_at": "14:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 CDT"
+      "captured_at": "16:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -460,6 +460,24 @@
     }
   ],
   "market": [
+    {
+      "name": "Monthly GDP",
+      "note": "$2372B (chained 2017)",
+      "value": "-0.0%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "Year-over-year",
+      "note": "Longer-term freight demand trend.",
+      "value": "+1.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Longer-term freight demand trend."
+    },
     {
       "name": "Fuel cost per 1,000 km",
       "note": "At 261.4\u00a2/L and 35 L/100km",
