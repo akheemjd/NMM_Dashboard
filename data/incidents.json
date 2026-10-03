@@ -18,23 +18,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315428",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at WARDEN AVE, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.77061118,
-      "lng": -79.3042853,
-      "start": 1791027540,
-      "end": null,
-      "updated": 1791027540,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-102401",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315175",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 401 Eastbound  between UPPER CANADA RD (IC 758), Morrisburg and MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.95339,
+      "lng": -75.10947,
+      "start": 1791457200,
+      "end": 1791498600,
+      "updated": 1790963280,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T12:30:29.527803+00:00",
+  "updated": "2026-10-03T13:01:28.761996+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
