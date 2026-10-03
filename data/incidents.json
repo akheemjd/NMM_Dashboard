@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315535",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 404 Northbound RAMP at ELGIN MILLS ROAD, Stouffville-Richmondhill. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.899840558,
+      "lng": -79.382228851,
+      "start": 1791050220,
+      "end": null,
+      "updated": 1791050220,
+      "scheduled": false
+    },
+    {
       "id": "ON-315531",
       "province": "ON",
       "highway": "HWY 401",
@@ -32,23 +49,6 @@
       "start": 1791048780,
       "end": null,
       "updated": 1791048780,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315528",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 427 Southbound RAMP at FINCH AVENUE, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.73593513,
-      "lng": -79.62851061,
-      "start": 1791048480,
-      "end": null,
-      "updated": 1791048480,
       "scheduled": false
     },
     {
@@ -100,23 +100,6 @@
       "start": 1790989140,
       "end": null,
       "updated": 1791041640,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315477",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at UPPER MIDDLE ROAD, Oakville. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.50064742,
-      "lng": -79.67658992,
-      "start": 1791037620,
-      "end": null,
-      "updated": 1791040320,
       "scheduled": false
     },
     {
@@ -926,6 +909,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315209",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.42033,
+      "lng": -76.34854,
+      "start": 1791205200,
+      "end": 1791237600,
+      "updated": 1790968620,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T17:53:40.680415+00:00",
+  "updated": "2026-10-03T18:12:36.811708+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
