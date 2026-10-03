@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315640",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at NIKOLA TESLA, Hamilton. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.2548886,
+      "lng": -79.76536572,
+      "start": 1791068280,
+      "end": null,
+      "updated": 1791068280,
+      "scheduled": false
+    },
+    {
       "id": "ON-315634",
       "province": "ON",
       "highway": "HWY 17",
@@ -16,23 +33,6 @@
       "end": 1792188000,
       "updated": 1791066660,
       "scheduled": true
-    },
-    {
-      "id": "ON-315613",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Vehicle Fire on HWY 410 Northbound RAMP at STEELES AVE, Brampton. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.68520216,
-      "lng": -79.70937552,
-      "start": 1791064380,
-      "end": null,
-      "updated": 1791064980,
-      "scheduled": false
     },
     {
       "id": "ON-315362",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T22:56:48.141436+00:00",
+  "updated": "2026-10-03T23:28:47.981008+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
