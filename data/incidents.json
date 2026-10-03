@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-315396",
+      "id": "ON-315400",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at MARKHAM ROAD, Toronto. 1 right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound RAMP at WESTNEY ROAD, Ajax. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.78553567,
-      "lng": -79.23618335,
-      "start": 1791002100,
+      "lanes": "left lane closed",
+      "lat": 43.85020677,
+      "lng": -79.03785473,
+      "start": 1791005940,
       "end": null,
-      "updated": 1791004320,
+      "updated": 1791005940,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315399",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at RENFORTH, Toronto. 1 left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 left lane closed",
+      "lat": 43.66709941,
+      "lng": -79.59592849,
+      "start": 1791005580,
+      "end": null,
+      "updated": 1791005580,
       "scheduled": false
     },
     {
@@ -406,23 +423,6 @@
       "start": 1791241200,
       "end": 1791626400,
       "updated": 1790964000,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315174",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 401 Westbound  between MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault and UPPER CANADA RD (IC 758), Morrisburg. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.04695,
-      "lng": -74.90655,
-      "start": 1791457200,
-      "end": 1791498600,
-      "updated": 1790963340,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T05:16:16.336258+00:00",
+  "updated": "2026-10-03T05:47:17.263106+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
