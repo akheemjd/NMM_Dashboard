@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315343",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Collision on HWY 11 Both Directions  at SHERRIFF AV(E), North Bay. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 46.332045637,
+      "lng": -79.466046981,
+      "start": 1790985540,
+      "end": null,
+      "updated": 1790985540,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315340",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Vehicle Fire on HWY 404 Northbound  at 407, Markham. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.839323,
+      "lng": -79.368159,
+      "start": 1790985060,
+      "end": null,
+      "updated": 1790985240,
+      "scheduled": false
+    },
+    {
       "id": "ON-315338",
       "province": "ON",
       "highway": "HWY 401",
@@ -389,40 +423,6 @@
       "start": 1791205200,
       "end": 1791237600,
       "updated": 1790968800,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315209",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.42033,
-      "lng": -76.34854,
-      "start": 1791205200,
-      "end": 1791237600,
-      "updated": 1790968620,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.17644,
-      "lng": -74.409,
-      "start": 1791198000,
-      "end": 1791241200,
-      "updated": 1790968260,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-02T23:46:12.998208+00:00",
+  "updated": "2026-10-03T00:03:23.029864+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
