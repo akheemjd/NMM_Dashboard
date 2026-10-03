@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315518",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 404 Southbound RAMP at FINCH AVE, Toronto. Centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "centre lane closed",
+      "lat": 43.79684208,
+      "lng": -79.34470651,
+      "start": 1791046200,
+      "end": null,
+      "updated": 1791046200,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315515",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.59655811,
+      "lng": -79.56909452,
+      "start": 1791045840,
+      "end": null,
+      "updated": 1791045840,
+      "scheduled": false
+    },
+    {
       "id": "ON-315513",
       "province": "ON",
       "highway": "HWY 417",
@@ -66,23 +100,6 @@
       "start": 1790989140,
       "end": null,
       "updated": 1791041640,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315492",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Southbound",
-      "description": "Collision on HWY 11 Southbound  at MEYER'S RD, Nipigon. Lane and SOUTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and SOUTH shoulder closed",
-      "lat": 48.744381566,
-      "lng": -88.580732663,
-      "start": 1791041400,
-      "end": null,
-      "updated": 1791041400,
       "scheduled": false
     },
     {
@@ -909,23 +926,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315209",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.42033,
-      "lng": -76.34854,
-      "start": 1791205200,
-      "end": 1791237600,
-      "updated": 1790968620,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1011,6 +1011,23 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-102906",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Utility work at Highway 1, 23km West of Kamloops and At Rodeo Drive. Starting Fri Oct 9 until Fri Oct 9. From 9:30 AM to 3:30 PM PDT, Friday. Right lane closed. Watch for traffic control. Last update: September 28th, 2026 at 8:44am PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.69373586,
+      "lng": -120.58759544,
+      "start": "2026-09-28T08:44:06-07:00",
+      "end": "",
+      "updated": "2026-09-28T08:44:06-07:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1025,6 +1042,23 @@
       "start": "2026-09-25T16:23:22-07:00",
       "end": "",
       "updated": "2026-09-25T16:23:22-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-102844",
+      "province": "BC",
+      "highway": "Highway 1 near Douglas Street",
+      "direction": "",
+      "description": "Utility work from Highway 1, In Saanich and 22m North of Saanich Road to In Saanich and At Carey Road. Starting Mon Oct 5 until Wed Oct 7. From 10:00 PM to 6:00 AM PDT the next day, Monday and Tuesday. Right lane closed. Last update: September 25th, 2026 at 3:30pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 48.45301,
+      "lng": -123.37547,
+      "start": "2026-09-25T15:30:56-07:00",
+      "end": "",
+      "updated": "2026-09-25T15:30:56-07:00",
       "scheduled": false
     },
     {
@@ -1315,44 +1349,10 @@
       "end": "",
       "updated": "2026-09-15T20:10:40-07:00",
       "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-101705",
-      "province": "BC",
-      "highway": "Highway 97",
-      "direction": "",
-      "description": "Construction work from Highway 97, 34km North of Quesnel to In Quesnel. Starting Mon Jul 20 until Fri Oct 16. Single lane alternating traffic. Watch for traffic control. Last update: September 15th, 2026 at 8:10pm PDT. Widening, drainage improvements and construction of the northbound left turn lane at the Highway 97-Olson Road intersection in addition to culvert replacement .",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 53.22268,
-      "lng": -122.43087,
-      "start": "2026-08-26T09:42:32-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:10:37-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-101670",
-      "province": "BC",
-      "highway": "Other Roads near Chilko-Newton Road",
-      "direction": "",
-      "description": "Bridge maintenance at Chilko-Newton Road, Chilko River Siwash Bridge. Starting Mon Jul 13. Expect delays. Weight vehicle restriction: 32,000KG. Last update: September 15th, 2026 at 8:09pm PDT. Next update time Mon Oct 26.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 52.0673947,
-      "lng": -123.55472192,
-      "start": "2026-08-25T14:49:58-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:09:37-07:00",
-      "scheduled": false
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T16:39:35.807730+00:00",
+  "updated": "2026-10-03T17:10:32.864199+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
