@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-315546",
+      "id": "ON-315563",
       "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound  at KING ROAD, Burlington. 2 right lanes closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at WARDEN AVE, Toronto. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes closed",
-      "lat": 43.32747777,
-      "lng": -79.84362835,
-      "start": 1791050940,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.77061118,
+      "lng": -79.3042853,
+      "start": 1791054300,
       "end": null,
-      "updated": 1791050940,
+      "updated": 1791054300,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315564",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at WHITES ROAD, Pickering. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.8164089,
+      "lng": -79.1143787,
+      "start": 1791054240,
+      "end": null,
+      "updated": 1791054240,
       "scheduled": false
     },
     {
@@ -32,23 +49,6 @@
       "start": 1791050220,
       "end": null,
       "updated": 1791050220,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315531",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound  at HWY 427, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.669641035,
-      "lng": -79.588319063,
-      "start": 1791049140,
-      "end": null,
-      "updated": 1791049140,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T18:43:38.264890+00:00",
+  "updated": "2026-10-03T19:14:37.196916+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
