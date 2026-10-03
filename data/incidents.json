@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315477",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Westbound RAMP at UPPER MIDDLE ROAD, Oakville. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.50064742,
+      "lng": -79.67658992,
+      "start": 1791037620,
+      "end": null,
+      "updated": 1791037620,
+      "scheduled": false
+    },
+    {
       "id": "ON-315469",
       "province": "ON",
       "highway": "HWY 401",
@@ -14,7 +31,24 @@
       "lng": -79.4180828,
       "start": 1791035880,
       "end": null,
-      "updated": 1791035880,
+      "updated": 1791037320,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315473",
+      "province": "ON",
+      "highway": "HWY 407",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 407 Eastbound  at HARMONY RD N, Oshawa. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.98223,
+      "lng": -78.868965,
+      "start": 1791036900,
+      "end": null,
+      "updated": 1791036900,
       "scheduled": false
     },
     {
@@ -892,40 +926,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315181",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 7 Eastbound  between MISSISSIPPI RD /LAKE PARK RD and MCNEELY AVE/CR 29, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.12311,
-      "lng": -76.14104,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964000,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315174",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Continuous Construction on HWY 401 Westbound  between MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault and UPPER CANADA RD (IC 758), Morrisburg. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.04695,
-      "lng": -74.90655,
-      "start": 1791457200,
-      "end": 1791498600,
-      "updated": 1790963340,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T14:03:32.656253+00:00",
+  "updated": "2026-10-03T14:34:29.309803+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
