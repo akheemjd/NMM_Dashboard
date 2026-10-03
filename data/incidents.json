@@ -1,37 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315403",
+      "id": "ON-315404",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at LAKE RIDGE ROAD, Whitby. Left shoulder and left lane closed.",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound ON-RAMP at BURNHAMTHORPE ROAD, Toronto. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.8624737,
-      "lng": -78.9828152,
-      "start": 1791010440,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.645914,
+      "lng": -79.564112,
+      "start": 1791012180,
       "end": null,
-      "updated": 1791011460,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315402",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at FRUITLAND ROAD, Hamilton. 2 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.23163198,
-      "lng": -79.69663107,
-      "start": 1791008040,
-      "end": null,
-      "updated": 1791008040,
+      "updated": 1791012180,
       "scheduled": false
     },
     {
@@ -926,6 +909,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315175",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 401 Eastbound  between UPPER CANADA RD (IC 758), Morrisburg and MOULINETTE RD (IC 778)/South Stormont CR 35 - Long Sault, Long Sault. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 44.95339,
+      "lng": -75.10947,
+      "start": 1791457200,
+      "end": 1791498600,
+      "updated": 1790963280,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T07:20:20.191178+00:00",
+  "updated": "2026-10-03T07:51:19.655784+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
