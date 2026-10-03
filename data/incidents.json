@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315408",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Other on HWY 401 Westbound RAMP at THICKSON ROAD, Whitby. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.87032637,
+      "lng": -78.90272701,
+      "start": 1791017280,
+      "end": null,
+      "updated": 1791017280,
+      "scheduled": false
+    },
+    {
       "id": "ON-315407",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,23 +32,6 @@
       "start": 1791015420,
       "end": null,
       "updated": 1791015420,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315406",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at 401, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.71416751,
-      "lng": -79.51573698,
-      "start": 1791015000,
-      "end": null,
-      "updated": 1791015000,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T08:22:23.170388+00:00",
+  "updated": "2026-10-03T08:53:21.631927+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
