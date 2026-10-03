@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315396",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at MARKHAM ROAD, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.78553567,
+      "lng": -79.23618335,
+      "start": 1791002100,
+      "end": null,
+      "updated": 1791002160,
+      "scheduled": false
+    },
+    {
       "id": "ON-315362",
       "province": "ON",
       "highway": "HWY 11",
@@ -406,23 +423,6 @@
       "start": 1791457200,
       "end": 1791498600,
       "updated": 1790963280,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315166",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Continuous Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.19425,
-      "lng": -75.72434,
-      "start": 1791172800,
-      "end": 1791604740,
-      "updated": 1790962980,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T04:14:17.547127+00:00",
+  "updated": "2026-10-03T04:45:18.804412+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
