@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315362",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New Liskeard. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 47.5299847,
+      "lng": -79.675244,
+      "start": 1790989140,
+      "end": null,
+      "updated": 1791070020,
+      "scheduled": false
+    },
+    {
       "id": "ON-315640",
       "province": "ON",
       "highway": "QEW",
@@ -33,23 +50,6 @@
       "end": 1792188000,
       "updated": 1791066660,
       "scheduled": true
-    },
-    {
-      "id": "ON-315362",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Both Directions",
-      "description": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New Liskeard. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 47.5299847,
-      "lng": -79.675244,
-      "start": 1790989140,
-      "end": null,
-      "updated": 1791055920,
-      "scheduled": false
     },
     {
       "id": "ON-315513",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T23:28:47.981008+00:00",
+  "updated": "2026-10-03T23:55:53.196463+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
