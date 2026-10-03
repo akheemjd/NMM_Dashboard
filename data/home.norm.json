@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-03 01:06",
-  "updated_iso": "2026-10-03T01:06:29+00:00",
-  "build_version": "1790989589",
+  "updated_at": "2026-10-03 01:37",
+  "updated_iso": "2026-10-03T01:37:36+00:00",
+  "build_version": "1790991456",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "heavy_count": 2,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -349,18 +349,18 @@
     "none": false,
     "active_count": 33,
     "gauge_class": "warn",
-    "status_line": "HWY 11, HWY 401, QEW, HWY 404",
+    "status_line": "HWY 400, HWY 401, HWY 11",
     "incidents": [
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Southbound  at LLOYDTOWN-AURORA RD, Kettleby. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at DUFFERIN STREET, Toronto. 1\u2026",
+        "what": "Collision on HWY 401 Westbound EXPRESS at ALLEN ROAD, Toronto. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:50 EDT"
+      "captured_at": "21:26 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT"
+      "captured_at": "18:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
