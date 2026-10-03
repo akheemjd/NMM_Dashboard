@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315457",
+      "id": "ON-315469",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at BROCK ROAD, Pickering. Right lane closed.",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at YONGE STREET, Toronto. 1 right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.83731548,
-      "lng": -79.07273129,
-      "start": 1791032760,
+      "lanes": "1 right lane closed",
+      "lat": 43.74614005,
+      "lng": -79.4180828,
+      "start": 1791035880,
       "end": null,
-      "updated": 1791032760,
+      "updated": 1791035880,
       "scheduled": false
     },
     {
@@ -32,23 +32,6 @@
       "start": 1790989140,
       "end": null,
       "updated": 1791027660,
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102401",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Falling rock from Highway 1, At Des Fosses Road to Monte Creek Junction. Starting Tue Sep 15. Last update: October 3rd, 2026 at 4:04am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.89168,
-      "lng": -119.51582,
-      "start": "2026-09-15T15:27:19-07:00",
-      "end": "",
-      "updated": "2026-10-03T04:04:04-07:00",
       "scheduled": false
     },
     {
@@ -1349,10 +1332,27 @@
       "end": "",
       "updated": "2026-09-15T20:10:45-07:00",
       "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-101715",
+      "province": "BC",
+      "highway": "Highway 97",
+      "direction": "",
+      "description": "Construction work at Highway 97, 34km North of Quesnel and Olsen Rd intersection. Starting Mon Aug 17 until Fri Oct 16. From 7:00 AM to 7:00 PM PDT, Monday to Saturday. Last update: September 15th, 2026 at 8:10pm PDT. Intersection improvements. Intermittent lane closures in both directions. Speed reduction in place. Watch for traffic control.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 53.22254049,
+      "lng": -122.430664,
+      "start": "2026-08-26T12:26:04-07:00",
+      "end": "",
+      "updated": "2026-09-15T20:10:40-07:00",
+      "scheduled": false
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T13:32:30.173570+00:00",
+  "updated": "2026-10-03T14:03:32.656253+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
