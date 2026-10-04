@@ -1,20 +1,54 @@
 {
   "incidents": [
     {
-      "id": "ON-315844",
+      "id": "drivebc.ca/RIDE-103172",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Vehicle stall at Highway 1, In Surrey and 2km East of 176 Street Underpass. Right lane blocked. Last update: October 4th, 2026 at 2:57pm PDT. Next update: October 4th, 2026 at 3:45pm PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.17671196,
+      "lng": -122.71557254,
+      "start": "2026-10-04T14:57:20-07:00",
+      "end": "",
+      "updated": "2026-10-04T14:57:20-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "ON-315851",
       "province": "ON",
       "highway": "HWY 622",
       "direction": "Both Directions",
-      "description": "Debris on HWY 622 Both Directions  at RAZOR WEST RD (E), Ignace. All lanes closed.",
+      "description": "Debris on HWY 622 Both Directions  at PIT RD (W), Atikokan. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 49.4367534,
-      "lng": -92.1177049,
-      "start": 1791148920,
+      "lat": 49.161684977,
+      "lng": -92.242368908,
+      "start": 1791150840,
       "end": null,
-      "updated": 1791148920,
+      "updated": 1791150840,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315849",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.76343241,
+      "lng": -79.38732453,
+      "start": 1791150660,
+      "end": null,
+      "updated": 1791150660,
       "scheduled": false
     },
     {
@@ -926,23 +960,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315182",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.13216,
-      "lng": -76.12006,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964060,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1059,23 +1076,6 @@
       "start": "2026-09-25T16:23:22-07:00",
       "end": "",
       "updated": "2026-09-25T16:23:22-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102844",
-      "province": "BC",
-      "highway": "Highway 1 near Douglas Street",
-      "direction": "",
-      "description": "Utility work from Highway 1, In Saanich and 22m North of Saanich Road to In Saanich and At Carey Road. Starting Mon Oct 5 until Wed Oct 7. From 10:00 PM to 6:00 AM PDT the next day, Monday and Tuesday. Right lane closed. Last update: September 25th, 2026 at 3:30pm PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 48.45301,
-      "lng": -123.37547,
-      "start": "2026-09-25T15:30:56-07:00",
-      "end": "",
-      "updated": "2026-09-25T15:30:56-07:00",
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T21:47:22.732319+00:00",
+  "updated": "2026-10-04T22:18:23.399170+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
