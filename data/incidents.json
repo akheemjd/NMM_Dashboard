@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315671",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 427 Northbound HOV at REXDALE BLVD / DERRY ROAD, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.718447,
+      "lng": -79.62027,
+      "start": 1791078900,
+      "end": null,
+      "updated": 1791078900,
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-103150",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway E",
+      "direction": "",
+      "description": "Utility work from Highway 1, In Revelstoke and 10m East of Alpine Lane W to In Revelstoke and 270m East of Alpine Lane W and Trans-Canada Highway E. Starting Mon Oct 19 until Fri Oct 30. From 8:00 AM to 4:00 PM PDT, weekdays. Single lane alternating traffic. Last update: October 3rd, 2026 at 6:41pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.99983,
+      "lng": -118.18702,
+      "start": "2026-10-03T18:08:50-07:00",
+      "end": "",
+      "updated": "2026-10-03T18:41:34-07:00",
+      "scheduled": false
+    },
+    {
       "id": "ON-315660",
       "province": "ON",
       "highway": "HWY 8",
@@ -909,23 +943,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315209",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.42033,
-      "lng": -76.34854,
-      "start": 1791205200,
-      "end": 1791237600,
-      "updated": 1790968620,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1008,23 +1025,6 @@
       "start": "2026-09-29T07:18:21-07:00",
       "end": "",
       "updated": "2026-10-01T06:43:36-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102906",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Utility work at Highway 1, 23km West of Kamloops and At Rodeo Drive. Starting Fri Oct 9 until Fri Oct 9. From 9:30 AM to 3:30 PM PDT, Friday. Right lane closed. Watch for traffic control. Last update: September 28th, 2026 at 8:44am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.69373586,
-      "lng": -120.58759544,
-      "start": "2026-09-28T08:44:06-07:00",
-      "end": "",
-      "updated": "2026-09-28T08:44:06-07:00",
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T01:34:56.801096+00:00",
+  "updated": "2026-10-04T02:06:52.838761+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
