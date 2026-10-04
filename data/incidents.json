@@ -1,37 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315834",
+      "id": "ON-315838",
       "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 417 Westbound  between RICHMOND RD (IC 130)/BAYSHORE DR and MOODIE DR (IC 134), Ottawa. 1 centre lane closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound EXPRESS at BAYVIEW AVE, Toronto. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 45.34548,
-      "lng": -75.80572,
-      "start": 1791145500,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.76578554,
+      "lng": -79.37145586,
+      "start": 1791147660,
       "end": null,
-      "updated": 1791145500,
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-103170",
-      "province": "BC",
-      "highway": "Highway 5",
-      "direction": "",
-      "description": "Vehicle incident at Highway 5, 3km Southeast of Lost Creek Road. Closed. Assessment in progress. Last update: October 4th, 2026 at 1:08pm PDT. Next update: October 4th, 2026 at 3:00pm PDT.",
-      "event_type": "incident",
-      "severity": "MAJOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.59339048,
-      "lng": -119.86807789,
-      "start": "2026-10-04T13:08:02-07:00",
-      "end": "",
-      "updated": "2026-10-04T13:08:52-07:00",
+      "updated": 1791147660,
       "scheduled": false
     },
     {
@@ -1079,6 +1062,23 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-102844",
+      "province": "BC",
+      "highway": "Highway 1 near Douglas Street",
+      "direction": "",
+      "description": "Utility work from Highway 1, In Saanich and 22m North of Saanich Road to In Saanich and At Carey Road. Starting Mon Oct 5 until Wed Oct 7. From 10:00 PM to 6:00 AM PDT the next day, Monday and Tuesday. Right lane closed. Last update: September 25th, 2026 at 3:30pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 48.45301,
+      "lng": -123.37547,
+      "start": "2026-09-25T15:30:56-07:00",
+      "end": "",
+      "updated": "2026-09-25T15:30:56-07:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102818",
       "province": "BC",
       "highway": "Highway 19A near Island Highway S",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T20:45:21.301475+00:00",
+  "updated": "2026-10-04T21:16:20.533597+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
