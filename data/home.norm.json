@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-04 16:06",
-  "updated_iso": "2026-10-04T16:06:26+00:00",
-  "build_version": "1791129986",
+  "updated_at": "2026-10-04 16:37",
+  "updated_iso": "2026-10-04T16:37:29+00:00",
+  "build_version": "1791131849",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 29,
+    "active_count": 28,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 427",
+    "status_line": "HWY 427, I-5 in S",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Avenue Road Express to\u2026",
+        "road": "HWY 427",
+        "what": "Collision on HWY 427 Northbound COLLECTOR at RATHBURN ROAD, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 427",
-        "what": "Collision on HWY 427 Northbound COLLECTOR at RATHBURN ROAD, Toronto. Right lane\u2026",
+        "what": "Collision on HWY 427 Northbound RAMP at HWY 401, Toronto. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -376,7 +376,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT"
+      "captured_at": "12:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT"
+      "captured_at": "09:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:59 CDT"
+      "captured_at": "11:15 CDT"
     },
     {
       "name": "Thousand Islands Bridge",

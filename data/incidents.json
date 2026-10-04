@@ -18,23 +18,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315757",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound TRANSFER at Avenue Road Express to Collector, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.7484044,
-      "lng": -79.41603355,
-      "start": 1791129480,
-      "end": null,
-      "updated": 1791129480,
-      "scheduled": false
-    },
-    {
       "id": "ON-315735",
       "province": "ON",
       "highway": "HWY 427",
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315209",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.42033,
+      "lng": -76.34854,
+      "start": 1791205200,
+      "end": 1791237600,
+      "updated": 1790968620,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T16:06:12.296162+00:00",
+  "updated": "2026-10-04T16:37:15.029071+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
