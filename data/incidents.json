@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-315710",
+      "id": "ON-315711",
       "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at EASTPORT DRIVE, Hamilton. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound  at HWY 427, Toronto. 2 right lanes and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.28856651,
-      "lng": -79.79107166,
-      "start": 1791108300,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.669641035,
+      "lng": -79.588319063,
+      "start": 1791110100,
       "end": null,
-      "updated": 1791108300,
+      "updated": 1791110340,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315712",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Collision on HWY 400 Northbound RAMP at MAJOR MACKENZIE DRIVE, Vaughan. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.8449152,
+      "lng": -79.5473568,
+      "start": 1791110160,
+      "end": null,
+      "updated": 1791110160,
       "scheduled": false
     },
     {
@@ -926,23 +943,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315209",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.42033,
-      "lng": -76.34854,
-      "start": 1791205200,
-      "end": 1791237600,
-      "updated": 1790968620,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T10:25:00.913239+00:00",
+  "updated": "2026-10-04T10:56:02.435911+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

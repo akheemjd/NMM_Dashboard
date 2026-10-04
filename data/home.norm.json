@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-04 10:25",
-  "updated_iso": "2026-10-04T10:25:15+00:00",
-  "build_version": "1791109515",
+  "updated_at": "2026-10-04 10:56",
+  "updated_iso": "2026-10-04T10:56:17+00:00",
+  "build_version": "1791111377",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 28,
+    "active_count": 29,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 11, HWY 427, I-5 in S",
+    "status_line": "HWY 400, HWY 401, HWY 11, HWY 427",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound RAMP at EASTPORT DRIVE, Hamilton. Right\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound RAMP at MAJOR MACKENZIE DRIVE, Vaughan. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound  at HWY 427, Toronto. 2 right lanes and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:00 PDT"
+      "captured_at": "03:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "One person killed in head-on crash with semi-truck in Idaho",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/one-person-killed-in-head-on-crash-with-semi-truck-in-idaho",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "regulations",
       "source": "The Trucker",
       "headline": "Environmental groups sue Trump administration over eased vehicle fuel economy rules",
       "url": "https://www.thetrucker.com/trucking-news/business/environmental-groups-sue-trump-administration-over-eased-vehicle-fuel-economy-rules",
       "why": "Rules change compliance cost and driver hours."
-    },
-    {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "A gut punch in Ohio: Nearly 1,400 laid off at Navistar factory just days before Trump rally",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/a-gut-punch-in-ohio-nearly-1400-laid-off-at-navistar-factory-just-days-before-trump-rally",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
