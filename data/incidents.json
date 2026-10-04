@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-315674",
+      "id": "ON-315686",
       "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 17 Eastbound  at Vermillion River Bridge, Whitefish, Whitefish. Right lane and right shoulder closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at TRAFALGAR ROAD, Oakville. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 46.39954176,
-      "lng": -81.314089355,
-      "start": 1791080760,
+      "lat": 43.4613874,
+      "lng": -79.68390353,
+      "start": 1791086220,
       "end": null,
-      "updated": 1791084120,
+      "updated": 1791086220,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315685",
+      "province": "ON",
+      "highway": "HWY 600",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 600 Eastbound  at FRED'S RD (S) - DEWART-TOVELL TWP BDY RD, Rainy River. Lane and EAST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and EAST shoulder closed",
+      "lat": 48.942604674,
+      "lng": -94.228973284,
+      "start": 1791085860,
+      "end": null,
+      "updated": 1791085860,
       "scheduled": false
     },
     {
@@ -926,23 +943,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315209",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.42033,
-      "lng": -76.34854,
-      "start": 1791205200,
-      "end": 1791237600,
-      "updated": 1790968620,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T03:41:52.081821+00:00",
+  "updated": "2026-10-04T04:12:50.844173+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
