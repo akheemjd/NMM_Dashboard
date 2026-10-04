@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-103170",
+      "province": "BC",
+      "highway": "Highway 5",
+      "direction": "",
+      "description": "Vehicle incident at Highway 5, 3km Southeast of Lost Creek Road. Closed. Assessment in progress. Last update: October 4th, 2026 at 1:08pm PDT. Next update: October 4th, 2026 at 3:00pm PDT.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 51.59339048,
+      "lng": -119.86807789,
+      "start": "2026-10-04T13:08:02-07:00",
+      "end": "",
+      "updated": "2026-10-04T13:08:52-07:00",
+      "scheduled": false
+    },
+    {
       "id": "ON-315813",
       "province": "ON",
       "highway": "QEW",
@@ -15,40 +32,6 @@
       "start": 1791141120,
       "end": null,
       "updated": 1791142200,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315807",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 left lane closed",
-      "lat": 43.29851876,
-      "lng": -79.79709653,
-      "start": 1791139440,
-      "end": null,
-      "updated": 1791142140,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315810",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at CARLINGVIEW DRIVE, Toronto. 3 right lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 right lanes closed",
-      "lat": 43.68125746,
-      "lng": -79.57522487,
-      "start": 1791140580,
-      "end": null,
-      "updated": 1791141360,
       "scheduled": false
     },
     {
@@ -943,6 +926,40 @@
       "scheduled": true
     },
     {
+      "id": "ON-315209",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.42033,
+      "lng": -76.34854,
+      "start": 1791205200,
+      "end": 1791237600,
+      "updated": 1790968620,
+      "scheduled": true
+    },
+    {
+      "id": "ON-315205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.17644,
+      "lng": -74.409,
+      "start": 1791198000,
+      "end": 1791241200,
+      "updated": 1790968260,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1059,23 +1076,6 @@
       "start": "2026-09-25T16:23:22-07:00",
       "end": "",
       "updated": "2026-09-25T16:23:22-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102844",
-      "province": "BC",
-      "highway": "Highway 1 near Douglas Street",
-      "direction": "",
-      "description": "Utility work from Highway 1, In Saanich and 22m North of Saanich Road to In Saanich and At Carey Road. Starting Mon Oct 5 until Wed Oct 7. From 10:00 PM to 6:00 AM PDT the next day, Monday and Tuesday. Right lane closed. Last update: September 25th, 2026 at 3:30pm PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 48.45301,
-      "lng": -123.37547,
-      "start": "2026-09-25T15:30:56-07:00",
-      "end": "",
-      "updated": "2026-09-25T15:30:56-07:00",
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T19:43:17.296236+00:00",
+  "updated": "2026-10-04T20:14:15.814130+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
