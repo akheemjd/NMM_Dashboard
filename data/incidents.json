@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315700",
+      "province": "ON",
+      "highway": "HWY 8",
+      "direction": "Westbound",
+      "description": "Collision on HWY 8 Westbound  at WOODHILL ROAD/KIRKWALL ROAD/COUNTY ROAD 52, Hamilton. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.304467,
+      "lng": -80.13786,
+      "start": 1791095280,
+      "end": null,
+      "updated": 1791095280,
+      "scheduled": false
+    },
+    {
       "id": "ON-315685",
       "province": "ON",
       "highway": "HWY 600",
@@ -926,23 +943,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.17644,
-      "lng": -74.409,
-      "start": 1791198000,
-      "end": 1791241200,
-      "updated": 1790968260,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T05:57:57.532797+00:00",
+  "updated": "2026-10-04T06:47:56.573682+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
