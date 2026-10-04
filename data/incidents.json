@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315706",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Vehicle Fire on QEW Fort Erie bound RAMP at HWY 403 BURLINGTON, Burlington. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.3396623,
+      "lng": -79.82737141,
+      "start": 1791101280,
+      "end": null,
+      "updated": 1791101520,
+      "scheduled": false
+    },
+    {
       "id": "ON-315703",
       "province": "ON",
       "highway": "HWY 427",
@@ -18,23 +35,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315704",
-      "province": "ON",
-      "highway": "HWY 407",
-      "direction": "Westbound",
-      "description": "Collision on HWY 407 Westbound RAMP at HWY 412, Whitby. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.95194,
-      "lng": -79.003212,
-      "start": 1791099000,
-      "end": null,
-      "updated": 1791099000,
-      "scheduled": false
-    },
-    {
       "id": "ON-315362",
       "province": "ON",
       "highway": "HWY 11",
@@ -49,23 +49,6 @@
       "start": 1790989140,
       "end": null,
       "updated": 1791098220,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315702",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.76327209,
-      "lng": -79.38728169,
-      "start": 1791097380,
-      "end": null,
-      "updated": 1791097380,
       "scheduled": false
     },
     {
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315212",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 417 Westbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.42033,
+      "lng": -76.34854,
+      "start": 1791205200,
+      "end": 1791237600,
+      "updated": 1790968800,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T07:49:56.036153+00:00",
+  "updated": "2026-10-04T08:20:56.623936+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
