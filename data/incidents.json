@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315859",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Disabled Vehicle on HWY 404 Southbound HOV at 407, Markham. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.83896644,
+      "lng": -79.36859748,
+      "start": 1791153540,
+      "end": null,
+      "updated": 1791153540,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315858",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at HWY 410, Mississauga. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.6377769,
+      "lng": -79.6649683,
+      "start": 1791153120,
+      "end": null,
+      "updated": 1791153120,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103172",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -15,40 +49,6 @@
       "start": "2026-10-04T14:57:20-07:00",
       "end": "",
       "updated": "2026-10-04T14:57:20-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-315851",
-      "province": "ON",
-      "highway": "HWY 622",
-      "direction": "Both Directions",
-      "description": "Debris on HWY 622 Both Directions  at PIT RD (W), Atikokan. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 49.161684977,
-      "lng": -92.242368908,
-      "start": 1791150840,
-      "end": null,
-      "updated": 1791150840,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315849",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.76343241,
-      "lng": -79.38732453,
-      "start": 1791150660,
-      "end": null,
-      "updated": 1791150660,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T22:18:23.399170+00:00",
+  "updated": "2026-10-04T22:49:22.502813+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
