@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315654",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at SOUTH OF SHEPPARD, Toronto. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 43.73163807,
+      "lng": -79.52539007,
+      "start": 1791073380,
+      "end": null,
+      "updated": 1791073380,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315651",
+      "province": "ON",
+      "highway": "HWY 17",
+      "direction": "Westbound",
+      "description": "Collision on HWY 17 Westbound  at TWILIGHT RD, Montreal River. Lane and WEST shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and WEST shoulder closed",
+      "lat": 47.242251305,
+      "lng": -84.642535715,
+      "start": 1791073140,
+      "end": null,
+      "updated": 1791073140,
+      "scheduled": false
+    },
+    {
       "id": "ON-315362",
       "province": "ON",
       "highway": "HWY 11",
@@ -166,7 +200,7 @@
       "updated": "2026-10-03"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-04",
       "end_date": "2026-10-05",
       "id": "CA-C5HB-0001-2026-10-04-20:01:00",
@@ -286,7 +320,7 @@
       "updated": "2026-10-03"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-04",
       "end_date": "2026-10-05",
       "id": "CA-C5HB-0007-2026-10-04-21:01:00",
@@ -406,7 +440,7 @@
       "updated": "2026-10-03"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-04",
       "end_date": "2026-10-05",
       "id": "CA-C5HB-0013-2026-10-04-21:01:00",
@@ -526,7 +560,7 @@
       "updated": "2026-10-03"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-04",
       "end_date": "2026-10-05",
       "id": "CA-C5HB-0019-2026-10-04-20:01:00",
@@ -889,40 +923,6 @@
       "start": 1791205200,
       "end": 1791237600,
       "updated": 1790968620,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.17644,
-      "lng": -74.409,
-      "start": 1791198000,
-      "end": 1791241200,
-      "updated": 1790968260,
-      "scheduled": true
-    },
-    {
-      "id": "ON-315182",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.13216,
-      "lng": -76.12006,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964060,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T23:59:48.788652+00:00",
+  "updated": "2026-10-04T00:30:53.621204+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
