@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315834",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 417 Westbound  between RICHMOND RD (IC 130)/BAYSHORE DR and MOODIE DR (IC 134), Ottawa. 1 centre lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 centre lane closed",
+      "lat": 45.34548,
+      "lng": -75.80572,
+      "start": 1791145500,
+      "end": null,
+      "updated": 1791145500,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103170",
       "province": "BC",
       "highway": "Highway 5",
@@ -15,23 +32,6 @@
       "start": "2026-10-04T13:08:02-07:00",
       "end": "",
       "updated": "2026-10-04T13:08:52-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-315813",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.55233005,
-      "lng": -79.61354776,
-      "start": 1791141120,
-      "end": null,
-      "updated": 1791142200,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T20:14:15.814130+00:00",
+  "updated": "2026-10-04T20:45:21.301475+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
