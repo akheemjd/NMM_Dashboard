@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315686",
+      "id": "ON-315691",
       "province": "ON",
       "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at TRAFALGAR ROAD, Oakville. Right lane and right shoulder closed.",
+      "direction": "Toronto Bound",
+      "description": "Highway Maintenance on QEW Toronto bound  at BRONTE ROAD, Oakville. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane and right shoulder closed",
-      "lat": 43.4613874,
-      "lng": -79.68390353,
-      "start": 1791086220,
+      "lat": 43.40941762,
+      "lng": -79.74117822,
+      "start": 1791088380,
       "end": null,
-      "updated": 1791086220,
+      "updated": 1791088380,
       "scheduled": false
     },
     {
@@ -66,23 +66,6 @@
       "start": "2026-10-03T18:08:50-07:00",
       "end": "",
       "updated": "2026-10-03T18:41:34-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-315651",
-      "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Collision on HWY 17 Westbound  at TWILIGHT RD, Montreal River. Lane and WEST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 47.242251305,
-      "lng": -84.642535715,
-      "start": 1791073140,
-      "end": null,
-      "updated": 1791073140,
       "scheduled": false
     },
     {
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315209",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.42033,
+      "lng": -76.34854,
+      "start": 1791205200,
+      "end": 1791237600,
+      "updated": 1790968620,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T04:12:50.844173+00:00",
+  "updated": "2026-10-04T04:43:51.993379+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
