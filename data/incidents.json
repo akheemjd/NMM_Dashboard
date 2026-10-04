@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315671",
+      "id": "ON-315674",
       "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 427 Northbound HOV at REXDALE BLVD / DERRY ROAD, Toronto. All lanes closed.",
+      "highway": "HWY 17",
+      "direction": "Eastbound",
+      "description": "Vehicle Fire on HWY 17 Eastbound  at Vermillion River Bridge, Whitefish, Whitefish. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 43.718447,
-      "lng": -79.62027,
-      "start": 1791078900,
+      "lat": 46.39954176,
+      "lng": -81.314089355,
+      "start": 1791080760,
       "end": null,
-      "updated": 1791078900,
+      "updated": 1791080760,
       "scheduled": false
     },
     {
@@ -32,23 +32,6 @@
       "start": "2026-10-03T18:08:50-07:00",
       "end": "",
       "updated": "2026-10-03T18:41:34-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-315660",
-      "province": "ON",
-      "highway": "HWY 8",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 8 Eastbound  at Fairway Road, Kitchener. Lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane closed",
-      "lat": 43.425480312,
-      "lng": -80.433632162,
-      "start": 1791075780,
-      "end": null,
-      "updated": 1791075780,
       "scheduled": false
     },
     {
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315209",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 417 Eastbound  between MADAWASKA RIVER BRIDGE and MADAWASKA RIVER BRIDGE, Arnprior. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.42033,
+      "lng": -76.34854,
+      "start": 1791205200,
+      "end": 1791237600,
+      "updated": 1790968620,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T02:06:52.838761+00:00",
+  "updated": "2026-10-04T02:38:54.669179+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
