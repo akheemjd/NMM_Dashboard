@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315720",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 427 Northbound RAMP at REXDALE BLVD / DERRY ROAD, Toronto. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.71598781,
+      "lng": -79.6183466,
+      "start": 1791120120,
+      "end": null,
+      "updated": 1791120120,
+      "scheduled": false
+    },
+    {
       "id": "ON-315703",
       "province": "ON",
       "highway": "HWY 427",
@@ -926,23 +943,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315182",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.13216,
-      "lng": -76.12006,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964060,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T13:00:02.839351+00:00",
+  "updated": "2026-10-04T13:31:06.576499+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
