@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315707",
+      "id": "ON-315708",
       "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Vehicle Fire on HWY 403 HAMILTON Westbound ON-RAMP at BRANT STREET, Burlington. All lanes closed.",
+      "highway": "HWY 11",
+      "direction": "Both Directions",
+      "description": "Highway Maintenance on HWY 11 Both Directions  at N JCT HWY 65 AND HWY 11, New Liskeard. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 43.342207,
-      "lng": -79.82338,
-      "start": 1791104700,
+      "lat": 47.5301847,
+      "lng": -79.675044,
+      "start": 1791107220,
       "end": null,
-      "updated": 1791104700,
+      "updated": 1791107220,
       "scheduled": false
     },
     {
@@ -32,23 +32,6 @@
       "start": 1791098940,
       "end": null,
       "updated": 1791101940,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315706",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Vehicle Fire on QEW Fort Erie bound RAMP at HWY 403 BURLINGTON, Burlington. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.3396623,
-      "lng": -79.82737141,
-      "start": 1791101280,
-      "end": null,
-      "updated": 1791101520,
       "scheduled": false
     },
     {
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.17644,
+      "lng": -74.409,
+      "start": 1791198000,
+      "end": 1791241200,
+      "updated": 1790968260,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T09:22:59.204640+00:00",
+  "updated": "2026-10-04T09:53:58.748420+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
