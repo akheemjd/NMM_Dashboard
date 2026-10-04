@@ -18,23 +18,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315640",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at NIKOLA TESLA, Hamilton. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.2548886,
-      "lng": -79.76536572,
-      "start": 1791068280,
-      "end": null,
-      "updated": 1791068280,
-      "scheduled": false
-    },
-    {
       "id": "ON-315634",
       "province": "ON",
       "highway": "HWY 17",
@@ -926,6 +909,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315182",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.13216,
+      "lng": -76.12006,
+      "start": 1791241200,
+      "end": 1791626400,
+      "updated": 1790964060,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-03T23:55:53.196463+00:00",
+  "updated": "2026-10-03T23:59:48.788652+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
