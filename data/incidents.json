@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315710",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound RAMP at EASTPORT DRIVE, Hamilton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.28856651,
+      "lng": -79.79107166,
+      "start": 1791108300,
+      "end": null,
+      "updated": 1791108300,
+      "scheduled": false
+    },
+    {
       "id": "ON-315708",
       "province": "ON",
       "highway": "HWY 11",
@@ -926,23 +943,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-315205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.17644,
-      "lng": -74.409,
-      "start": 1791198000,
-      "end": 1791241200,
-      "updated": 1790968260,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T09:53:58.748420+00:00",
+  "updated": "2026-10-04T10:25:00.913239+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
