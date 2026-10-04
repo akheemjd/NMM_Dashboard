@@ -1,37 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315838",
+      "id": "ON-315844",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound EXPRESS at BAYVIEW AVE, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.76578554,
-      "lng": -79.37145586,
-      "start": 1791147660,
-      "end": null,
-      "updated": 1791147660,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315808",
-      "province": "ON",
-      "highway": "HWY 40",
+      "highway": "HWY 622",
       "direction": "Both Directions",
-      "description": "Collision on HWY 40 Both Directions  between Whitebread Line and Stewart Line, Wallaceburg. All lanes closed.",
+      "description": "Debris on HWY 622 Both Directions  at RAZOR WEST RD (E), Ignace. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 42.6308,
-      "lng": -82.4309,
-      "start": 1791140340,
+      "lat": 49.4367534,
+      "lng": -92.1177049,
+      "start": 1791148920,
       "end": null,
-      "updated": 1791140340,
+      "updated": 1791148920,
       "scheduled": false
     },
     {
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-315182",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.13216,
+      "lng": -76.12006,
+      "start": 1791241200,
+      "end": 1791626400,
+      "updated": 1790964060,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T21:16:20.533597+00:00",
+  "updated": "2026-10-04T21:47:22.732319+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
