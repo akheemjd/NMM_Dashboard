@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315713",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound HOV at EASTGATE/CAWTHRA, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.61367589,
+      "lng": -79.63180839,
+      "start": 1791112800,
+      "end": null,
+      "updated": 1791112800,
+      "scheduled": false
+    },
+    {
       "id": "ON-315711",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,23 +32,6 @@
       "start": 1791110100,
       "end": null,
       "updated": 1791110340,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315712",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Collision on HWY 400 Northbound RAMP at MAJOR MACKENZIE DRIVE, Vaughan. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.8449152,
-      "lng": -79.5473568,
-      "start": 1791110160,
-      "end": null,
-      "updated": 1791110160,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T10:56:02.435911+00:00",
+  "updated": "2026-10-04T11:27:01.880748+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
