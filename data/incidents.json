@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-315869",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at NEILSON ROAD, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.793914,
-      "lng": -79.2160235,
-      "start": 1791155760,
-      "end": null,
-      "updated": 1791155760,
-      "scheduled": false
-    },
-    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -118,7 +101,7 @@
       "updated": "2026-10-04"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-05",
       "end_date": "2026-10-06",
       "id": "CA-C5HB-0002-2026-10-05-20:01:00",
@@ -238,7 +221,7 @@
       "updated": "2026-10-04"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-05",
       "end_date": "2026-10-06",
       "id": "CA-C5HB-0008-2026-10-05-20:01:00",
@@ -358,7 +341,7 @@
       "updated": "2026-10-04"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-05",
       "end_date": "2026-10-06",
       "id": "CA-C5HB-0014-2026-10-05-21:01:00",
@@ -478,7 +461,7 @@
       "updated": "2026-10-04"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-05",
       "end_date": "2026-10-06",
       "id": "CA-C5HB-0020-2026-10-05-20:01:00",
@@ -549,7 +532,7 @@
       "start": 1791198000,
       "end": 1792188000,
       "updated": 1791066660,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315513",
@@ -583,7 +566,7 @@
       "start": 1791208800,
       "end": 1791225000,
       "updated": 1791044820,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315410",
@@ -600,7 +583,7 @@
       "start": 1791198000,
       "end": 1791504000,
       "updated": 1791021000,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315310",
@@ -617,7 +600,7 @@
       "start": 1791198000,
       "end": 1791579600,
       "updated": 1790979420,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315309",
@@ -634,7 +617,7 @@
       "start": 1791198000,
       "end": 1794373140,
       "updated": 1790978760,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315305",
@@ -651,7 +634,7 @@
       "start": 1791198000,
       "end": 1794027540,
       "updated": 1790978520,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315304",
@@ -668,7 +651,7 @@
       "start": 1791172800,
       "end": 1792209540,
       "updated": 1790978280,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315292",
@@ -685,7 +668,7 @@
       "start": 1791199800,
       "end": 1791586800,
       "updated": 1790977140,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315263",
@@ -702,7 +685,7 @@
       "start": 1791198000,
       "end": 1791673200,
       "updated": 1790973480,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315229",
@@ -719,7 +702,7 @@
       "start": 1791208800,
       "end": 1791223200,
       "updated": 1790970180,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315227",
@@ -889,7 +872,7 @@
       "start": 1791205200,
       "end": 1791237600,
       "updated": 1790968800,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315209",
@@ -906,7 +889,7 @@
       "start": 1791205200,
       "end": 1791237600,
       "updated": 1790968620,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315205",
@@ -923,7 +906,7 @@
       "start": 1791198000,
       "end": 1791241200,
       "updated": 1790968260,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-315182",
@@ -940,7 +923,24 @@
       "start": 1791241200,
       "end": 1791626400,
       "updated": 1790964060,
-      "scheduled": true
+      "scheduled": false
+    },
+    {
+      "id": "ON-315181",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 7 Eastbound  between MISSISSIPPI RD /LAKE PARK RD and MCNEELY AVE/CR 29, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.12311,
+      "lng": -76.14104,
+      "start": 1791241200,
+      "end": 1791626400,
+      "updated": 1790964000,
+      "scheduled": false
     },
     {
       "id": "drivebc.ca/RIDE-103061",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-04T23:51:23.786156+00:00",
+  "updated": "2026-10-05T00:04:27.678847+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
