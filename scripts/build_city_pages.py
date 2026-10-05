@@ -35,7 +35,12 @@ from normalize_provinces import PROVINCE_NAMES, SLUGS  # noqa: E402
 MIN_PROSE_CHARS = 400  # ~60 words; below this the page is thin
 
 # Only these provinces have a dedicated in-depth page to link back to.
-DEDICATED_PAGE_PROVINCES = {"AB", "ON"}
+# Provinces whose /diesel-prices/<prov>/ page is written by build_provinces.py from
+# content/provinces/<code>.html. build_city_pages still builds the CITY pages beneath
+# each province, but it must not also emit a province page: it runs after
+# build_provinces.py and its thinner template overwrote all eight of the new ones,
+# dropping them back from ~450 words to ~180 with no prose.
+DEDICATED_PAGE_PROVINCES = {"ON", "AB", "BC", "SK", "MB", "QC", "NB", "NS", "PE", "NL"}
 
 
 def slugify(s):

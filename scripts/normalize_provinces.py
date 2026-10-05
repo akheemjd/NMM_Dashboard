@@ -39,7 +39,7 @@ except ImportError:  # collector predates the accent fix
     CITY_PROVINCE_NORM = {_norm(k): v for k, v in CITY_PROVINCE.items()}
 
 # Provinces that get a page. Start small; add codes as prose is written.
-PROVINCE_PAGES = ["ON", "AB"]
+PROVINCE_PAGES = ["ON", "AB", "BC", "SK", "MB", "QC", "NB", "NS", "PE", "NL"]
 
 PROVINCE_NAMES = {
     "BC": "British Columbia",
@@ -159,11 +159,13 @@ def build_province(code, city_prices, national, print_date, build_version, fuel=
         [(c, p) for c, p in city_prices.items() if CITY_PROVINCE_NORM.get(_norm(c)) == code],
         key=lambda x: x[1],
     )
-    if len(cities) < MIN_CITIES:
-        raise ValueError(
-            f"{code}: {len(cities)} survey cities, need at least {MIN_CITIES} "
-            f"for a spread to mean anything"
-        )
+    # A spread needs three points to mean anything, but a PAGE does not need a
+    # spread. This used to refuse the page outright, which left Manitoba and Prince
+    # Edward Island without editorial pages: Manitoba surveys two cities, PE one.
+    # Their prose says so, so the page builds and the spread simply means less.
+    has_spread = len(cities) >= MIN_CITIES
+    if not has_spread:
+        print(f"  {code}: {len(cities)} survey cities - building without a spread")
 
     prices = [p for _, p in cities]
     prov_mean = round(sum(prices) / len(prices), 1)
@@ -208,6 +210,11 @@ def build_province(code, city_prices, national, print_date, build_version, fuel=
         "spread": f"{spread:.1f}",
         "us": _us,
         "has_us": bool(_us),
+        # A two-city "spread" is not a spread. The template says so instead of printing one.
+        "has_spread": has_spread,
+        "thin_survey": ("" if has_spread else
+                        f"{len(cities)} survey cit"
+                        + ("y" if len(cities) == 1 else "ies")),
         "print_date": print_date,
         "build_version": build_version,
         "cities": rows,

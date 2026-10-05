@@ -17,12 +17,12 @@
 <meta property="og:url" content="https://dashboard.northernmilemedia.com/diesel-prices/quebec/">
 <meta property="og:image" content="https://dashboard.northernmilemedia.com/og-fuel.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="build" content="2026-10-05T22:18:00+00:00">
+<meta name="build" content="2026-10-05T22:25:36+00:00">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/nm.css?v=1791238680">
+<link rel="stylesheet" href="/assets/nm.css?v=20261005222537">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Quebec diesel prices"}]},{"@type":"Dataset","name":"Quebec Diesel Prices","description":"Retail diesel prices across 10 Quebec survey cities, from the Natural Resources Canada weekly retail survey.","url":"https://dashboard.northernmilemedia.com/diesel-prices/quebec/","creator":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Quebec, Canada"},"variableMeasured":{"@type":"PropertyValue","name":"Retail diesel price","unitText":"Canadian cents per litre"},"dateModified":"2026-10-05T22:18:00+00:00"}]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dashboard","item":"https://dashboard.northernmilemedia.com/"},{"@type":"ListItem","position":2,"name":"Quebec diesel prices"}]},{"@type":"Dataset","name":"Quebec Diesel Prices","description":"Retail diesel prices across 10 Quebec survey cities, from the NRCan weekly survey.","url":"https://dashboard.northernmilemedia.com/diesel-prices/quebec/","creator":{"@id":"https://northernmilemedia.com/#org"},"isAccessibleForFree":true,"spatialCoverage":{"@type":"Place","name":"Quebec, Canada"},"dateModified":"2026-10-05T22:25:36+00:00"}]}
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
@@ -43,9 +43,18 @@
   <section class="hero">
     <span class="eyebrow">Quebec · 10 survey cities</span>
     <h1>Quebec diesel prices</h1>
-    <div class="figure"><span class="n"><span class="fx" data-c="CAD" data-u="cpl" data-bare="1" data-v="291.4">291.4</span></span><span class="u">¢/L</span><span class="d hi">+30.5 vs national</span></div>
+    <div class="figure"><span class="n"><span class="fx" data-c="CAD" data-u="cpl" data-bare="1" data-v="291.4">291.4</span></span><span class="u">¢/L</span><span class="d up">+30.5 vs national</span></div>
     <div class="meta"><span>NRCan survey print <b>Tue, 29 Sep 2026</b></span><span>National index <b>260.9</b>¢/L</span></div>
-    <p class="stand">The Quebec average is the unweighted mean of its 10 survey cities. <a href="/fuel-cost-calculator/">Work out a trip</a></p>
+    
+        <div class="lead"><h2>Across the line</h2></div>
+        <p class="stand">Diesel crosses the border, but the number does not. The Canadian side is published per litre and the American side per gallon.</p>
+        <div class="rows">
+          <div class="r"><span class="k">Quebec<small> · Canadian side</small></span><span class="v"><span class="fx" data-c="CAD" data-u="cpl" data-v="291.4">291.4¢/L</span></span></div>
+          <div class="r"><span class="k">New England<small> · the US district next door</small></span><span class="v">C<span class="fx" data-c="USD" data-u="gpg" data-v="9.279">$9.279/gal</span></span></div>
+        </div>
+        <p class="note">The American figure is the EIA weekly retail survey &mdash; <span class="fx" data-c="USD" data-u="gpg" data-v="6.510">$6.510/gal</span> this week &mdash; shown the way an American carrier reads it, with the Canadian-dollar equivalent beside it. A gallon is not a litre, so these two lines measure the same fuel in different units and the cents will never match. What does compare is the market: a load crossing at New England buys its fuel somewhere else.</p>
+    
+
     <div class="cite">
       <div class="cl">Citing this figure</div>
       <q id="citation">Quebec diesel: <span class="fx" data-c="CAD" data-u="cpl" data-v="291.4">291.4¢/L</span> provincial average across 10 survey cities, NRCan weekly survey print Tue, 29 Sep 2026. Northern Mile Media, dashboard.northernmilemedia.com/diesel-prices/quebec/</q>
@@ -54,22 +63,48 @@
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>Every Quebec survey city</h2><p>¢/L · distance from the provincial mean</p></div>
-    <div class="rows">
-    <a class="r" href="/diesel-prices/quebec/chicoutimi/"><span class="k">Chicoutimi</span><span class="v">289.2 &nbsp; <span class="lo">-2.2</span></span></a><a class="r" href="/diesel-prices/quebec/drummondville/"><span class="k">Drummondville</span><span class="v">289.4 &nbsp; <span class="lo">-2.0</span></span></a><a class="r" href="/diesel-prices/quebec/quebec/"><span class="k">Quebec</span><span class="v">289.8 &nbsp; <span class="lo">-1.6</span></span></a><a class="r" href="/diesel-prices/quebec/rimouski/"><span class="k">Rimouski</span><span class="v">290.1 &nbsp; <span class="lo">-1.3</span></span></a><a class="r" href="/diesel-prices/quebec/gaspe/"><span class="k">Gaspé</span><span class="v">290.3 &nbsp; <span class="lo">-1.1</span></span></a><a class="r" href="/diesel-prices/quebec/gatineau/"><span class="k">Gatineau</span><span class="v">292.0 &nbsp; <span class="hi">+0.6</span></span></a><a class="r" href="/diesel-prices/quebec/montreal/"><span class="k">Montreal</span><span class="v">292.2 &nbsp; <span class="hi">+0.8</span></span></a><a class="r" href="/diesel-prices/quebec/sherbrooke/"><span class="k">Sherbrooke</span><span class="v">292.2 &nbsp; <span class="hi">+0.8</span></span></a><a class="r" href="/diesel-prices/quebec/trois-rivieres/"><span class="k">Trois-Rivières</span><span class="v">293.9 &nbsp; <span class="hi">+2.5</span></span></a><a class="r" href="/diesel-prices/quebec/val-d-or/"><span class="k">Val d'Or</span><span class="v">295.4 &nbsp; <span class="hi">+4.0</span></span></a>
+    <div class="lead"><h2>What drives Quebec prices</h2></div>
+    <div class="reading">
+<p>Quebec pays more for diesel than any other province in the Natural Resources Canada survey.
+In the print dated 29 September 2026 the province averaged 291.4 cents per litre, 30.5 cents
+above the national index of 260.9. That is not a rounding difference or a seasonal spike. It
+has held across prints.</p>
+
+<p>Quebec's tax stack is a large part of it. The province applies a fuel tax and the Quebec
+sales tax on top, a different structure from the one most provinces use, and the combined
+effective rate is among the highest in the country. Tax is the one part of the pump price a
+carrier can plan around, because it does not move with the crude market.</p>
+
+<p>The survey covers ten Quebec cities and the internal spread is narrower than Ontario's,
+which tells you something about how the province is supplied. Montreal and Quebec City anchor
+the St Lawrence corridor with the Lévis refinery between them, and most of the province's
+population sits along that line. Gatineau is close to the Ontario border and to Ottawa's
+supply, while Chicoutimi, Rimouski and Gaspé are at the end of long hauls, and Val-d'Or and
+Trois-Rivières sit between.</p>
+
+<p>For a cross-border carrier this is the number to compare against Ontario rather than against
+Canada. A load from Toronto to Montreal crosses a fuel market boundary that matters more than
+the provincial line suggests.</p>
     </div>
-    <p class="note">Every price is an NRCan survey observation from the print dated Tue, 29 Sep 2026. This page rebuilds every 30 minutes, but the survey figure holds until the next weekly print.</p>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>Quebec survey cities</h2><p>¢/L · distance from the provincial mean</p></div>
+    <div class="rows">
+    <a class="r" href="/diesel-prices/quebec/chicoutimi/"><span class="k">Chicoutimi</span><span class="v">289.2 &nbsp; <span class="down">-2.2</span></span></a><a class="r" href="/diesel-prices/quebec/drummondville/"><span class="k">Drummondville</span><span class="v">289.4 &nbsp; <span class="down">-2.0</span></span></a><a class="r" href="/diesel-prices/quebec/quebec/"><span class="k">Quebec</span><span class="v">289.8 &nbsp; <span class="down">-1.6</span></span></a><a class="r" href="/diesel-prices/quebec/rimouski/"><span class="k">Rimouski</span><span class="v">290.1 &nbsp; <span class="down">-1.3</span></span></a><a class="r" href="/diesel-prices/quebec/gaspe/"><span class="k">Gaspé</span><span class="v">290.3 &nbsp; <span class="down">-1.1</span></span></a><a class="r" href="/diesel-prices/quebec/gatineau/"><span class="k">Gatineau</span><span class="v">292.0 &nbsp; <span class="up">+0.6</span></span></a><a class="r" href="/diesel-prices/quebec/montreal/"><span class="k">Montreal</span><span class="v">292.2 &nbsp; <span class="up">+0.8</span></span></a><a class="r" href="/diesel-prices/quebec/sherbrooke/"><span class="k">Sherbrooke</span><span class="v">292.2 &nbsp; <span class="up">+0.8</span></span></a><a class="r" href="/diesel-prices/quebec/trois-rivieres/"><span class="k">Trois-Rivières</span><span class="v">293.9 &nbsp; <span class="up">+2.5</span></span></a><a class="r" href="/diesel-prices/quebec/val-d-or/"><span class="k">Val d'Or</span><span class="v">295.4 &nbsp; <span class="up">+4.0</span></span></a>
+    </div>
+    <p class="note">Every price is an NRCan survey observation from the print dated Tue, 29 Sep 2026. The provincial figure is the unweighted mean of these 10 cities, the same figure that enters the <a href="/methodology/nmdi/">Northern Mile Diesel Index</a>. Prices include all federal and provincial fuel, carbon, and sales taxes.</p>
   </section>
 
   <section class="sub" aria-labelledby="brief">
     <div class="e">The Northern Mile Brief</div>
     <h2 id="brief">Quebec diesel, every week</h2>
-    <p>Where Quebec and the rest of Canada moved, and what it means for cost per kilometre. One email on Wednesday mornings.</p>
+    <p>Where Quebec diesel moved, what the border looked like, and what it means for cost per kilometre. One email on Wednesday mornings.</p>
     <a class="sub-btn" href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a>
     <div class="fine">One email a week. Unsubscribe any time.</div>
   </section>
 
-  <p class="note"><a href="/fuel-prices/">← All ten provinces</a> · <a href="/methodology/nmdi/">Methodology</a></p>
+  <p class="note"><a href="/fuel-prices/">← All ten provinces</a></p>
 
 </main>
 
@@ -77,9 +112,9 @@
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live North American trucking data</span></div>
   <nav class="flinks" aria-label="Footer"><a href="/freight-barometer/">Barometer</a><a href="/fuel-prices/" data-tree="diesel">Diesel</a><a href="/fuel-cost-calculator/">Calculator</a><a href="/border-wait-times/">Border</a><a href="/fuel-tax-rates/">Fuel tax</a><a href="/border-trends/">Trends</a><a href="/exchange-rate/">Exchange</a><a href="/road-incidents/">Incidents</a><a href="/market-pulse/">Market</a><a href="/industry-news/">News</a><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a></nav>
   <nav class="flinks biz" aria-label="Company"><a href="/advertise/">Advertise</a><a href="/contact/">Contact</a></nav>
-  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-10-05 22:18 UTC</span></div>
+  <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-10-05 22:25 UTC</span></div>
 </div></footer>
 
-<script src="/assets/nm.js?v=1791238680"></script>
+<script src="/assets/nm.js?v=20261005222537"></script>
 </body>
 </html>
