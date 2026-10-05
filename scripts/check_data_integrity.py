@@ -802,10 +802,15 @@ def check_cross_border_sentence():
     cannot be true. The gap word was written for the old continental homepage.
     """
     bad = []
+    # NOT [^.] - that dies on the decimal point in every real price, so a sentence like
+    # "Canada runs 12.4 cents higher than the Canadian national average" could never
+    # match. This guard has therefore never fired on a sentence the site actually writes.
+    # Allow a decimal, still stop at a sentence end.
+    _sep = r"(?:[^.!?]|\.(?=\d))"
     pat = re.compile(
-        r"\b(Canada|Canadian|the US|United States)\b[^.]{0,80}?"
-        r"\b(higher|lower|above|below)\b[^.]{0,90}?"
-        r"\b(Canadian|US|United States|American)\s+(?:national\s+)?average",
+        r"(Canada|Canadian|US|United States|American)" + _sep + r"{0,80}?"
+        r"(higher|lower|above|below|more|less|cheaper|dearer)" + _sep + r"{0,90}?"
+        r"(Canadian|US|United States|American)\s+(?:national\s+)?average",
         re.I)
     for dirpath, _dirs, files in os.walk(DOCS):
         if "index.html" not in files:
@@ -821,9 +826,12 @@ def check_cross_border_sentence():
                     errors="replace").read()
         text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text))
         for m in pat.finditer(text):
-            subj = m.group(1).lower().startswith(("us", "united"))
+            subj = m.group(1).lower().startswith(("us", "united", "american"))
             ref = m.group(3).lower().startswith(("us", "united", "american"))
-            if subj == ref and (is_us != subj):
+            # Any sentence comparing a country to its own average is nonsense. The old
+            # condition also required the page to belong to the OTHER country, which let the
+            # mirrored defect through: a US page comparing the US to the US average.
+            if subj == ref:
                 bad.append(f"/{rel}/ compares a country to its own average: "
                            f"{m.group(0)[:80]}")
     return bad
