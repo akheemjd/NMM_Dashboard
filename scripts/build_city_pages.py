@@ -43,6 +43,56 @@ MIN_PROSE_CHARS = 400  # ~60 words; below this the page is thin
 DEDICATED_PAGE_PROVINCES = {"ON", "AB", "BC", "SK", "MB", "QC", "NB", "NS", "PE", "NL"}
 
 
+# Which EIA district answers for a Canadian province. Diesel is priced by district in the
+# United States, so a city compares against the district across from it, not against the US
+# national figure.
+US_DISTRICT_FOR_PROVINCE = {
+    "BC": "West Coast (PADD 5)",
+    "AB": "Rocky Mountain (PADD 4)",
+    "SK": "Rocky Mountain (PADD 4)",
+    "MB": "Rocky Mountain (PADD 4)",
+    "ON": "Central Atlantic (PADD 1B)",
+    "QC": "New England (PADD 1A)",
+    "NB": "New England (PADD 1A)",
+    "NS": "New England (PADD 1A)",
+    "PE": "New England (PADD 1A)",
+    "NL": "New England (PADD 1A)",
+    "YT": "Rocky Mountain (PADD 4)",
+    "NT": "Rocky Mountain (PADD 4)",
+    "NU": "Rocky Mountain (PADD 4)",
+}
+
+
+def us_district_for(prov_code):
+    """The EIA district block for a province, or None.
+
+    Reads fuel.norm.json, not fuel.json: the EIA block is assembled during normalization, so
+    the raw file does not carry it at all. Reading the wrong file found nothing and rendered
+    the whole block empty on the province pages once already.
+    """
+    label = US_DISTRICT_FOR_PROVINCE.get(prov_code)
+    if not label:
+        return None
+    try:
+        with open(os.path.join(DATA, "fuel.norm.json")) as f:
+            eia = (json.load(f).get("eia") or {})
+    except Exception:
+        return None
+    for d in eia.get("padds_list") or []:
+        if d.get("label") != label:
+            continue
+        cad_gal, usd_gal = d.get("cad_gal"), d.get("usd_gal")
+        if not cad_gal or not usd_gal:
+            return None
+        return {
+            "label": label,
+            "label_short": label.split(" (")[0],
+            "usd_gal": usd_gal,
+            "cad_gal": cad_gal,
+        }
+    return None
+
+
 def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
@@ -136,6 +186,7 @@ def main():
             seen_slugs[slug] = code
 
             vs_national = round(float(sib["price"]) - national, 1)
+            _us = us_district_for(code)
             data = {
                 "name": city,
                 "slug": slug,
@@ -157,6 +208,10 @@ def main():
                 "build_version": build_version,
                 "prose": load_prose(slug),
                 "siblings": siblings,
+                # The American side. Without this a Canadian city page said nothing at all
+                # about the market across the border while the US tree ran 0.2:1 the other way.
+                "us": _us,
+                "has_us": bool(_us),
             }
 
             html = fill(template, data)
