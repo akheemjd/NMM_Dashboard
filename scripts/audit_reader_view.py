@@ -50,7 +50,7 @@ OBS_DATE = re.compile(
     r"|as of\s*<?b?>?\s*\d{4}-\d{2}-\d{2}"
     r"|observation\s*<?b?>?\s*\d{4}-\d{2}-\d{2}"
     r"|(?:quarter|Q)\s*[1-4]Q?\s*20\d{2}"
-    r"|\d{4}-\d{2}-\d{2}(?=[^<]{0,40}(?:survey|print|week|observed|as of))"
+    r"|\b\d{4}-\d{2}-\d{2}\b(?=[^<]{0,40}(?:survey|print|week|observed|as of))"
     r"|<b>[A-Z][a-z]{2},?\s+\d{1,2}\s+[A-Z][a-z]{2}\s+\d{4}</b>", re.I)
 REBUILT = re.compile(r"Rebuilt\s*<b>", re.I)
 

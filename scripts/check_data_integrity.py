@@ -808,9 +808,9 @@ def check_cross_border_sentence():
     # Allow a decimal, still stop at a sentence end.
     _sep = r"(?:[^.!?]|\.(?=\d))"
     pat = re.compile(
-        r"(Canada|Canadian|US|United States|American)" + _sep + r"{0,80}?"
-        r"(higher|lower|above|below|more|less|cheaper|dearer)" + _sep + r"{0,90}?"
-        r"(Canadian|US|United States|American)\s+(?:national\s+)?average",
+        r"\b(Canada|Canadian|US|United States|American)\b" + _sep + r"{0,80}?"
+        r"\b(higher|lower|above|below|more|less|cheaper|dearer)\b" + _sep + r"{0,90}?"
+        r"\b(Canadian|US|United States|American)\s+(?:national\s+)?average",
         re.I)
     for dirpath, _dirs, files in os.walk(DOCS):
         if "index.html" not in files:
