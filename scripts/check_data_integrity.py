@@ -403,6 +403,76 @@ def check_port_labels_are_reader_facing():
     return out
 
 
+
+def check_brief_dates_are_real():
+    """The brief's dated figures must carry dates, and the status block must not cry CRITICAL.
+
+    A wrong key in build_weekly_brief.py turned the EIA diesel date into "n/a", which made the
+    blog pipeline drop the US number from a US-versus-Canada comparison. Another set of wrong
+    keys, plus a 999 sentinel for unparseable stamps, marked three live sources CRITICAL in the
+    same block. The content pipeline reads this file with no way to tell a real absence from a
+    lookup miss, so the check belongs here.
+    """
+    import glob
+    import os
+    import re
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    briefs = sorted(glob.glob(os.path.join(root, "content", "briefs", "brief_*.md")))
+    if not briefs:
+        return ["no brief found in content/briefs/"]
+
+    text = open(briefs[-1], encoding="utf-8", errors="replace").read()
+    out = []
+
+    # 1. a figure the brief presents as dated must carry a date
+    undated = [l.strip() for l in text.splitlines()
+               if re.search(r"\bon\s+n/?a\b", l, re.I)]
+    if undated:
+        out.append(f"{len(undated)} brief figure(s) carry no date, e.g. {undated[0][:70]}")
+
+    # 2. no source we are actively collecting may read as Unknown or MISSING
+    rows = re.findall(r"^\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([A-Z]+)\s*\|", text, re.M)
+    rows = [(a, b, c) for a, b, c in rows if c in ("FRESH", "STALE", "CRITICAL", "UNKNOWN")]
+    if not rows:
+        out.append("the brief has no DATA STATUS table")
+    else:
+        broken = [(a.strip(), c) for a, b, c in rows
+                  if c in ("CRITICAL", "UNKNOWN") and a.strip() not in ("", "Source")]
+        # CRITICAL is legitimate when a source is genuinely stale, so only flag the case the
+        # block was actually wrong about: a source whose raw file carries a recent stamp.
+        for name, status in broken:
+            slug = {"NRCan Diesel": "fuel.json", "Bank of Canada FX": "exchange.json",
+                    "CBSA Border": "border.json", "RSS News": "news.json",
+                    "Incidents": "incidents.json"}.get(name)
+            if not slug:
+                continue
+            path = os.path.join(root, "data", slug)
+            if not os.path.exists(path):
+                continue
+            import json as _json
+            try:
+                d = _json.load(open(path, encoding="utf-8"))
+            except Exception:
+                continue
+            stamp = (d.get("observation_date") or d.get("updated") or d.get("print_date") or "")
+            if not stamp:
+                continue
+            age_days = None
+            from datetime import datetime, timezone
+            for fmt in ("%Y-%m-%d", "%a, %d %b %Y"):
+                try:
+                    dt = datetime.strptime(str(stamp).strip()[:len(fmt) + 6]
+                                           if fmt == "%Y-%m-%d" else str(stamp).strip(), fmt).date()
+                    age_days = (datetime.now(timezone.utc).date() - dt).days
+                    break
+                except Exception:
+                    continue
+            if age_days is not None and age_days <= 7:
+                out.append(f"brief marks {name} {status} but {slug} is {age_days} day(s) old")
+
+    return out
+
+
 def check_jsonld_valid():
     """Every built page's JSON-LD must parse.
 
@@ -1191,6 +1261,7 @@ CHECKS = (
     ("incidents page names its coverage", check_incidents_names_its_coverage),
     ("scheduled work is not drawn as live", check_scheduled_work_is_not_live),
     ("port labels are reader-facing and distinct", check_port_labels_are_reader_facing),
+    ("brief dates are real and not cried CRITICAL", check_brief_dates_are_real),
 )
 
 
