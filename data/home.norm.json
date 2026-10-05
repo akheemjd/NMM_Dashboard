@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-05 14:54",
-  "updated_iso": "2026-10-05T14:54:01+00:00",
-  "build_version": "1791212041",
+  "updated_at": "2026-10-05 15:25",
+  "updated_iso": "2026-10-05T15:25:04+00:00",
+  "build_version": "1791213904",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,21 +347,21 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 34,
     "gauge_class": "warn",
-    "status_line": "HWY 16, HWY 17, HWY 11, HWY 401",
+    "status_line": "HWY 407 , HWY 401",
     "incidents": [
       {
-        "road": "HWY 16",
-        "what": "Collision on HWY 16 Southbound RAMP at HWY 401, Johnstown. All lanes closed.",
-        "severity_label": "Collision",
+        "road": "HWY 407 ETR",
+        "what": "Nightly Moving Maintenance Closure on HWY 407 ETR Eastbound Off-ramp at BALDWIN\u2026",
+        "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Highway Maintenance on HWY 17 Westbound  at TAGGART LAKE RD, MATTAWA, Mattawa.\u2026",
-        "severity_label": "Collision",
+        "road": "HWY 407 ETR",
+        "what": "Nightly Moving Maintenance Closure on HWY 407 ETR Westbound Off-ramp at BALDWIN\u2026",
+        "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:01 EDT"
+      "captured_at": "10:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT"
+      "captured_at": "08:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
-      "source": "Trucking Dive",
-      "headline": "IMC Logistics orders 50 Tesla Semis",
-      "url": "https://www.truckingdive.com/news/imc-logistics-orders-50-tesla-semis/831898/",
-      "why": "Industry movement worth tracking."
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "Mack and Volvo recall over 4000 trucks over safety concerns",
+      "url": "https://www.thetrucker.com/trucking-news/business/mack-and-volvo-recall-over-4000-trucks-over-safety-concerns",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Transportation unemployment rates up slightly in September",
-      "url": "https://www.thetrucker.com/trucking-news/business/transportation-unemployment-rates-up-slightly-in-september",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "industry",
+      "source": "Trucking Dive",
+      "headline": "CH Robinson to buy RXO for $5.8B, combining 3PL heavyweights",
+      "url": "https://www.truckingdive.com/news/ch-robinson-to-buy-rxo-for-58b-combining-3pl-heavyweights/832137/",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
