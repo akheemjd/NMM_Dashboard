@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-315889",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Southbound",
-      "description": "Disabled Vehicle on HWY 410 Southbound  at HWY 403, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.63796299,
-      "lng": -79.65908126,
-      "start": 1791161160,
-      "end": null,
-      "updated": 1791161160,
-      "scheduled": false
-    },
-    {
       "id": "ON-315887",
       "province": "ON",
       "highway": "HWY 401",
@@ -32,23 +15,6 @@
       "start": 1791160980,
       "end": null,
       "updated": 1791160980,
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-103172",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Vehicle stall at Highway 1, In Surrey and 2km East of 176 Street Underpass. Right lane blocked. Last update: October 4th, 2026 at 5:17pm PDT. Next update: October 4th, 2026 at 6:00pm PDT.",
-      "event_type": "incident",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.17671196,
-      "lng": -122.71557254,
-      "start": "2026-10-04T14:57:20-07:00",
-      "end": "",
-      "updated": "2026-10-04T17:17:20-07:00",
       "scheduled": false
     },
     {
@@ -960,6 +926,23 @@
       "scheduled": false
     },
     {
+      "id": "ON-315205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.17644,
+      "lng": -74.409,
+      "start": 1791198000,
+      "end": 1791241200,
+      "updated": 1790968260,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1042,6 +1025,23 @@
       "start": "2026-09-29T07:18:21-07:00",
       "end": "",
       "updated": "2026-10-01T06:43:36-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-102906",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Utility work at Highway 1, 23km West of Kamloops and At Rodeo Drive. Starting Fri Oct 9 until Fri Oct 9. From 9:30 AM to 3:30 PM PDT, Friday. Right lane closed. Watch for traffic control. Last update: September 28th, 2026 at 8:44am PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.69373586,
+      "lng": -120.58759544,
+      "start": "2026-09-28T08:44:06-07:00",
+      "end": "",
+      "updated": "2026-09-28T08:44:06-07:00",
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T00:53:28.031209+00:00",
+  "updated": "2026-10-05T01:24:23.227200+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
