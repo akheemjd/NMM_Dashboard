@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-316080",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at NEILSON ROAD, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.79355406,
+      "lng": -79.21547232,
+      "start": 1791223620,
+      "end": null,
+      "updated": 1791223620,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103217",
       "province": "BC",
       "highway": "Highway 97 near Highway 97 S",
@@ -596,23 +613,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315954",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between ESCOTT - ROCKPORT RD, Gananoque and LARUE MILLS RD, Mallorytown. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.40013,
-      "lng": -75.94215,
-      "start": 1791331200,
-      "end": 1791453600,
-      "updated": 1791201720,
-      "scheduled": true
-    },
-    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -1130,6 +1130,23 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-103059",
+      "province": "BC",
+      "highway": "Highway 11",
+      "direction": "",
+      "description": "Utility work from Highway 11, In Abbotsford and At Hazelwood Avenue to In Abbotsford and At Valley Road. Starting Thu Oct 15 until Fri Oct 16. Right lane closed. Last update: October 1st, 2026 at 3:13pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.06372,
+      "lng": -122.28624,
+      "start": "2026-10-01T15:13:28-07:00",
+      "end": "",
+      "updated": "2026-10-01T15:13:28-07:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102708",
       "province": "BC",
       "highway": "Highway 16 near Slim Creek Bridge",
@@ -1332,27 +1349,10 @@
       "end": "",
       "updated": "2026-09-15T20:12:03-07:00",
       "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-101931",
-      "province": "BC",
-      "highway": "Highway 97 near Adsett Creek Bridge",
-      "direction": "",
-      "description": "Bridge maintenance at Highway 97, In NRRM and At Adsett Creek Bridge. Starting Wed Sep 2 until Thu Oct 15. Single lane alternating traffic. Watch for traffic control. Last update: September 15th, 2026 at 8:12pm MST.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 58.10620571,
-      "lng": -122.71542863,
-      "start": "2026-09-01T14:14:15-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:12:00-07:00",
-      "scheduled": false
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T17:59:51.432141+00:00",
+  "updated": "2026-10-05T18:10:56.808663+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
