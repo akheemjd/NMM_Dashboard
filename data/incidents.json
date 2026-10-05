@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-315908",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.58355731,
+      "lng": -79.58300598,
+      "start": 1791171180,
+      "end": null,
+      "updated": 1791171180,
+      "scheduled": false
+    },
+    {
+      "id": "ON-315907",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound RAMP at HWY 6 SOUTH, Puslinch. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.4547279,
+      "lng": -80.1225968,
+      "start": 1791170880,
+      "end": null,
+      "updated": 1791170880,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103179",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -926,40 +960,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.17644,
-      "lng": -74.409,
-      "start": 1791198000,
-      "end": 1791241200,
-      "updated": 1790968260,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315182",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.13216,
-      "lng": -76.12006,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964060,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T03:28:51.922856+00:00",
+  "updated": "2026-10-05T04:00:28.451254+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
