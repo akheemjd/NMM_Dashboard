@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-316183",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.75460869,
+      "lng": -79.53057719,
+      "start": 1791239100,
+      "end": null,
+      "updated": 1791240660,
+      "scheduled": false
+    },
+    {
       "id": "ON-316184",
       "province": "ON",
       "highway": "HWY 401",
@@ -35,23 +52,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-316183",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.75460869,
-      "lng": -79.53057719,
-      "start": 1791239100,
-      "end": null,
-      "updated": 1791239100,
-      "scheduled": false
-    },
-    {
       "id": "ON-316175",
       "province": "ON",
       "highway": "HWY 7",
@@ -67,23 +67,6 @@
       "end": 1791536400,
       "updated": 1791238320,
       "scheduled": true
-    },
-    {
-      "id": "ON-316174",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at SOUTH OF SHEPPARD, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.73163807,
-      "lng": -79.52539007,
-      "start": 1791238260,
-      "end": null,
-      "updated": 1791238260,
-      "scheduled": false
     },
     {
       "id": "ON-316173",
@@ -542,6 +525,23 @@
       "start": 1791198000,
       "end": 1794873600,
       "updated": 1791215880,
+      "scheduled": false
+    },
+    {
+      "id": "ON-316043",
+      "province": "ON",
+      "highway": "HWY 579",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 579 Northbound  between CLUTE TWP RD C 6-7 and LAKE LOUISE RD, Cochrane. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 49.123997,
+      "lng": -81.074326,
+      "start": 1791198000,
+      "end": 1794873600,
+      "updated": 1791215220,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T22:30:07.072820+00:00",
+  "updated": "2026-10-05T23:00:56.864831+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
