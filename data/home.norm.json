@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-05 11:46",
-  "updated_iso": "2026-10-05T11:46:56+00:00",
-  "build_version": "1791200816",
+  "updated_at": "2026-10-05 12:09",
+  "updated_iso": "2026-10-05T12:09:00+00:00",
+  "build_version": "1791202140",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 28,
+    "active_count": 27,
     "gauge_class": "warn",
     "status_line": "QEW, HWY 401, I-5 in S",
     "incidents": [
       {
         "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1 right lane\u2026",
+        "what": "Collision on QEW Fort Erie bound  at HWY 427, Toronto. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Fort Erie bound  at HWY 427, Toronto. Right lane and right\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at ETOBICOKE CREEK, Mississauga. 1 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:45 EDT"
+      "captured_at": "07:45 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:20 PDT"
+      "captured_at": "04:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 CDT"
+      "captured_at": "06:58 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Major oil exporters agree to keep production steady in November",
+      "url": "https://www.thetrucker.com/trucking-news/business/major-oil-exporters-agree-to-keep-production-steady-in-november",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "industry",
       "source": "The Trucker",
       "headline": "Indiana enforcement officials place nearly 700 vehicles out of service in 30-day stretch",
       "url": "https://www.thetrucker.com/trucking-news/the-nation/indiana-cved-places-nearly-700-vehicles-out-of-service-in-30-day-stretch",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "New York police respond to semi-truck crash with bus",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/new-york-police-respond-to-semi-truck-crash-with-bus",
-      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
