@@ -516,6 +516,27 @@ PAIR = re.compile(
 UNIT_TOKEN = re.compile(r"(" + chr(0xa2) + "/L|\$/gal)")
 
 
+
+def outside_head(html, fn):
+    """Run a marking pass on every region except <head>.
+
+    mark() consults SKIP, which skips the head. mark_pairs, mark_unit and
+    mark_block_figures were written later and did not, so they injected currency markers into
+    meta descriptions: 77 diesel-prices pages shipped a <span> inside a content attribute,
+    which is what search engines and social cards read.
+
+    The head is passed through untouched rather than masked and restored, so any failure
+    leaves the original bytes in place.
+    """
+    parts, last = [], 0
+    for m in re.finditer(r"<head\b.*?</head>", html, re.S | re.I):
+        parts.append(fn(html[last:m.start()]))
+        parts.append(m.group(0))
+        last = m.end()
+    parts.append(fn(html[last:]))
+    return "".join(parts)
+
+
 def mark_unit(unit_text):
     """Wrap a unit token whose LABEL changes with the currency.
 
@@ -657,8 +678,8 @@ def mark(html, rel):
     # Options first, on the whole document: their labels cannot hold markup, so
     # they are annotated with attributes and left as plain text.
     html = annotate_options(html, cur_default)
-    html = mark_pairs(html, cur_default)
-    html = mark_block_figures(html, cur_default)
+    html = outside_head(html, lambda h: mark_pairs(h, cur_default))
+    html = outside_head(html, lambda h: mark_block_figures(h, cur_default))
     parts = SKIP.split(html)
     out = []
     n = 0

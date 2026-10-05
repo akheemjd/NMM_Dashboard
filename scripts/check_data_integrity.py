@@ -473,6 +473,7 @@ def check_brief_dates_are_real():
     return out
 
 
+
 def check_jsonld_valid():
     """Every built page's JSON-LD must parse.
 

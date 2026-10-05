@@ -93,7 +93,65 @@ def _slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
-def build_province(code, city_prices, national, print_date, build_version):
+
+# Which EIA district sits across the line from each province. Geography, not a ranking: EIA
+# publishes districts rather than states, so the nearest one is the only honest comparison.
+US_DISTRICT_FOR_PROVINCE = {
+    "BC": "West Coast (PADD 5)",
+    "AB": "Rocky Mountain (PADD 4)",
+    "SK": "Rocky Mountain (PADD 4)",
+    "MB": "Rocky Mountain (PADD 4)",
+    "ON": "Central Atlantic (PADD 1B)",
+    "QC": "New England (PADD 1A)",
+    "NB": "New England (PADD 1A)",
+    "NS": "New England (PADD 1A)",
+    "PE": "New England (PADD 1A)",
+    "NL": "New England (PADD 1A)",
+    "NT": "Rocky Mountain (PADD 4)",
+    "YT": "West Coast (PADD 5)",
+    "NU": "Rocky Mountain (PADD 4)",
+}
+
+
+def us_side(code, fuel):
+    """The US district across the line, as a render block or None.
+
+    Returns the price in C$/gal, because a US price stays per gallon in either currency.
+
+    Reads eia from fuel.norm.json, not fuel.json: the EIA block is assembled during
+    normalization, so fuel.json does not carry it at all and reading the raw file found
+    nothing and rendered the whole block empty.
+    """
+    label = US_DISTRICT_FOR_PROVINCE.get(code)
+    if not label:
+        return None
+    eia = (fuel or {}).get("eia") or {}
+    if not eia:
+        try:
+            with open(os.path.join(DATA, "fuel.norm.json")) as f:
+                eia = (json.load(f).get("eia") or {})
+        except Exception:
+            eia = {}
+    for d in eia.get("padds_list") or []:
+        if d.get("label") != label:
+            continue
+        cad_gal = d.get("cad_gal")
+        usd_gal = d.get("usd_gal")
+        if not cad_gal or not usd_gal:
+            return None
+        return {
+            "label": label,
+            "label_short": label.split(" (")[0],
+            "usd_gal": usd_gal,
+            "cad_gal": cad_gal,
+            # how far apart the two are, in the page's own unit
+            "gap_cpl": d.get("cpl") or d.get("cpl_cad") or "",
+            "us_spread": "",
+        }
+    return None
+
+
+def build_province(code, city_prices, national, print_date, build_version, fuel=None):
     """Assemble one province's render block."""
     name = PROVINCE_NAMES[code]
 
@@ -130,6 +188,8 @@ def build_province(code, city_prices, national, print_date, build_version):
             }
         )
 
+    _us = us_side(code, fuel)
+
     return {
         "code": code,
         "name": name,
@@ -146,6 +206,8 @@ def build_province(code, city_prices, national, print_date, build_version):
         "high_city": high_city,
         "high_price": f"{high_price:.1f}",
         "spread": f"{spread:.1f}",
+        "us": _us,
+        "has_us": bool(_us),
         "print_date": print_date,
         "build_version": build_version,
         "cities": rows,
@@ -185,7 +247,7 @@ def main():
     for code in PROVINCE_PAGES:
         if code not in PROVINCE_NAMES:
             raise ValueError(f"{code} is not an index province")
-        blk = build_province(code, city_prices, national, print_date, build_version)
+        blk = build_province(code, city_prices, national, print_date, build_version, fuel)
         blk["updated_at"] = updated_at
         blk["updated_iso"] = updated_iso
         out[code] = blk
