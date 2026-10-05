@@ -1,37 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315916",
+      "id": "ON-315920",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Forest Fire on HWY 401 Eastbound COLLECTOR RAMP at ISLINGTON AVE, Toronto. All lanes closed.",
+      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS RAMP at 404/DVP, Toronto. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": true,
       "lanes": "All lanes closed",
-      "lat": 43.7089653,
-      "lng": -79.5506716,
-      "start": 1791178500,
+      "lat": 43.76691296,
+      "lng": -79.343212,
+      "start": 1791181740,
       "end": null,
-      "updated": 1791178980,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315917",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at GARDEN CITY SKYWAY, St. Catharines. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.16718726,
-      "lng": -79.19346889,
-      "start": 1791178920,
-      "end": null,
-      "updated": 1791178920,
+      "updated": 1791181740,
       "scheduled": false
     },
     {
@@ -960,6 +943,23 @@
       "scheduled": false
     },
     {
+      "id": "ON-315205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.17644,
+      "lng": -74.409,
+      "start": 1791198000,
+      "end": 1791241200,
+      "updated": 1790968260,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T06:04:45.731700+00:00",
+  "updated": "2026-10-05T06:36:32.860811+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
