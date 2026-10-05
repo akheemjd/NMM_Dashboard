@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-05 13:51",
-  "updated_iso": "2026-10-05T13:51:57+00:00",
-  "build_version": "1791208317",
+  "updated_at": "2026-10-05 14:23",
+  "updated_iso": "2026-10-05T14:23:01+00:00",
+  "build_version": "1791210181",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 35,
+    "active_count": 37,
     "gauge_class": "warn",
-    "status_line": "HWY 410, HWY 11, HWY 404, QEW",
+    "status_line": "HWY 404, HWY 401, HWY 16, HWY 17",
     "incidents": [
       {
-        "road": "HWY 410",
-        "what": "Collision on HWY 410 Southbound HOV at COURTNEY PARK DRIVE, Mississauga. All\u2026",
+        "road": "HWY 404",
+        "what": "Collision on HWY 404 Northbound  at FINCH AVE, Toronto. 2 left lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 11",
-        "what": "Collision on HWY 11 Southbound  at COX RD - Gravenhurst, Gravenhurst. Lane and\u2026",
+        "road": "HWY 401",
+        "what": "Highway Maintenance on HWY 401 Eastbound EXPRESS at AVENUE ROAD, Toronto. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:00 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
+      "category": "industry",
+      "source": "Trucking Dive",
+      "headline": "IMC Logistics orders 50 Tesla Semis",
+      "url": "https://www.truckingdive.com/news/imc-logistics-orders-50-tesla-semis/831898/",
+      "why": "Industry movement worth tracking."
+    },
+    {
       "category": "markets",
       "source": "The Trucker",
       "headline": "Transportation unemployment rates up slightly in September",
       "url": "https://www.thetrucker.com/trucking-news/business/transportation-unemployment-rates-up-slightly-in-september",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "industry",
-      "source": "Trucking Dive",
-      "headline": "Manufacturing expands in September, but uncertainty weighs on sentiment",
-      "url": "https://www.truckingdive.com/news/manufacturing-expands-september-uncertainty-PMI/831926/",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
