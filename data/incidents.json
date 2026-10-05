@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-316135",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 26 Westbound  between LOCKE AVE and BAY SANDS DRIVE, Clearview. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.42583,
+      "lng": -80.09732,
+      "start": 1791327600,
+      "end": 1791370800,
+      "updated": 1791231780,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316134",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 26 Eastbound  between MOSLEY STREET/SIMCOE ROAD 92 and LOCKE AVE, Clearview. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 44.46677,
+      "lng": -80.1075,
+      "start": 1791327600,
+      "end": 1791370800,
+      "updated": 1791231600,
+      "scheduled": true
+    },
+    {
       "id": "ON-316123",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,23 +49,6 @@
       "start": 1791230280,
       "end": null,
       "updated": 1791230280,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316122",
-      "province": "ON",
-      "highway": "HWY 540",
-      "direction": "Eastbound",
-      "description": "Debris on HWY 540 Eastbound  at BIDWELL RD-BIDWELL TWP, Honora. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 45.883137895,
-      "lng": -82.104190553,
-      "start": 1791230220,
-      "end": null,
-      "updated": 1791230220,
       "scheduled": false
     },
     {
@@ -594,23 +611,6 @@
       "end": "",
       "updated": "2026-10-05T06:52:35-07:00",
       "scheduled": false
-    },
-    {
-      "id": "ON-316004",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Daily Maintenance on HWY 401 Westbound  between HENRY ST and HWY 412, Whitby. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.86657,
-      "lng": -78.94179,
-      "start": 1791462600,
-      "end": 1791482400,
-      "updated": 1791207660,
-      "scheduled": true
     },
     {
       "scheduled": false,
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T20:03:54.471198+00:00",
+  "updated": "2026-10-05T20:34:53.857742+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
