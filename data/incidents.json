@@ -1,37 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-315912",
-      "province": "ON",
-      "highway": "HWY 405",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 405 Eastbound  at QEW, Niagara-On-The-Lake. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.15235016,
-      "lng": -79.15173721,
-      "start": 1791174420,
-      "end": null,
-      "updated": 1791174420,
-      "scheduled": false
-    },
-    {
-      "id": "ON-315907",
+      "id": "ON-315914",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound RAMP at HWY 6 SOUTH, Puslinch. All lanes closed.",
+      "description": "Disabled Vehicle on HWY 401 Westbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.4547279,
-      "lng": -80.1225968,
-      "start": 1791170880,
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.69190015,
+      "lng": -79.56942445,
+      "start": 1791175620,
       "end": null,
-      "updated": 1791170880,
+      "updated": 1791175620,
       "scheduled": false
     },
     {
@@ -960,6 +943,23 @@
       "scheduled": false
     },
     {
+      "id": "ON-315205",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 45.17644,
+      "lng": -74.409,
+      "start": 1791198000,
+      "end": 1791241200,
+      "updated": 1790968260,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T04:31:29.726124+00:00",
+  "updated": "2026-10-05T05:02:33.901452+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
