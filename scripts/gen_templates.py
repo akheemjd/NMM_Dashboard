@@ -1242,9 +1242,9 @@ prov_body = (
         <p class="stand">Diesel crosses the border, but the number does not. The Canadian side is published per litre and the American side per gallon.</p>
         <div class="rows">
           <div class="r"><span class="k">{{name}}<small> · Canadian side</small></span><span class="v">{{price}}¢/L</span></div>
-          <div class="r"><span class="k">{{us.label_short}}<small> · the US district next door</small></span><span class="v">C${{us.cad_gal}}/gal</span></div>
+          <div class="r"><span class="k">{{us.label_short}}<small> · the US district next door</small></span><span class="v">${{us.usd_gal}}/gal</span></div>
         </div>
-        <p class="note">The American figure is the EIA weekly retail survey &mdash; ${{us.usd_gal}}/gal this week &mdash; shown the way an American carrier reads it, with the Canadian-dollar equivalent beside it. A gallon is not a litre, so these two lines measure the same fuel in different units and the cents will never match. What does compare is the market: a load crossing at {{us.label_short}} buys its fuel somewhere else.</p>
+        <p class="note">The American figure is the EIA weekly retail survey &mdash; published as ${{us.usd_gal}}/gal this week &mdash; shown the way an American carrier reads it, with the Canadian-dollar equivalent beside it. A gallon is not a litre, so these two lines measure the same fuel in different units and the cents will never match. What does compare is the market: a load crossing at {{us.label_short}} buys its fuel somewhere else.</p>
     <!--/IF:has_us-->
 
     <div class="cite">
