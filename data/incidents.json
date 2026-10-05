@@ -1,20 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-315936",
+      "id": "drivebc.ca/RIDE-103182",
+      "province": "BC",
+      "highway": "Highway 99",
+      "direction": "",
+      "description": "Vehicle incident at Highway 99, In Richmond and 5km South of Number 5 Road. Left lane blocked. Last update: October 5th, 2026 at 4:06am PDT. Next update: October 5th, 2026 at 5:00am PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.13373761,
+      "lng": -123.08689114,
+      "start": "2026-10-05T04:06:20-07:00",
+      "end": "",
+      "updated": "2026-10-05T04:06:33-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "ON-315937",
       "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound RAMP at STEELES AVE, Brampton. Centre lane closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at BAYVIEW AVE, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "centre lane closed",
-      "lat": 43.68520216,
-      "lng": -79.70937552,
-      "start": 1791196860,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.76297558,
+      "lng": -79.38691646,
+      "start": 1791197040,
       "end": null,
-      "updated": 1791196860,
+      "updated": 1791197040,
       "scheduled": false
     },
     {
@@ -1045,23 +1062,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-102906",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Utility work at Highway 1, 23km West of Kamloops and At Rodeo Drive. Starting Fri Oct 9 until Fri Oct 9. From 9:30 AM to 3:30 PM PDT, Friday. Right lane closed. Watch for traffic control. Last update: September 28th, 2026 at 8:44am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.69373586,
-      "lng": -120.58759544,
-      "start": "2026-09-28T08:44:06-07:00",
-      "end": "",
-      "updated": "2026-09-28T08:44:06-07:00",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-102851",
       "province": "BC",
       "highway": "Highway 3",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T10:44:38.541897+00:00",
+  "updated": "2026-10-05T11:15:39.085130+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
