@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-05 21:06",
-  "updated_iso": "2026-10-05T21:06:10+00:00",
-  "build_version": "1791234370",
+  "updated_at": "2026-10-05 22:01",
+  "updated_iso": "2026-10-05T22:01:10+00:00",
+  "build_version": "1791237670",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "260.9",
@@ -347,9 +347,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 30,
     "gauge_class": "warn",
-    "status_line": "HWY 412, HWY 407 , HWY 401",
+    "status_line": "HWY 412, HWY 407 ",
     "incidents": [
       {
         "road": "HWY 412",
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:56 EDT"
+      "captured_at": "17:46 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -426,17 +426,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 MDT"
+      "captured_at": "15:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT"
+      "captured_at": "14:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
