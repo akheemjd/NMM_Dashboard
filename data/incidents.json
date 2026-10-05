@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315924",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 403 HAMILTON Eastbound  at HWY 6 SOUTH - GARNER ROAD, Hamilton. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.21172108,
+      "lng": -79.96819496,
+      "start": 1791191100,
+      "end": null,
+      "updated": 1791191100,
+      "scheduled": false
+    },
+    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -943,23 +960,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315182",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.13216,
-      "lng": -76.12006,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964060,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T08:40:37.008959+00:00",
+  "updated": "2026-10-05T09:11:38.102906+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
