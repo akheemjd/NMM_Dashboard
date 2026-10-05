@@ -329,7 +329,12 @@ def generate_brief(today_override=None):
     if eia.get("us_national_usd_gal"):
         econ_signals.append({
             "signal": "US Diesel (EIA)",
-            "value": f"${eia['us_national_usd_gal']}/gal on {eia.get('effective_date', 'n/a')}",
+            # The source key is "date", not "effective_date". Reading the wrong one fell back
+            # to "n/a", so the brief carried an undated US figure and the blog pipeline
+            # correctly refused to use it - which dropped the US number out of a
+            # Canada-versus-US post. Accept either key rather than trusting one spelling.
+            "value": (f"${eia['us_national_usd_gal']}/gal on "
+                      f"{eia.get('date') or eia.get('effective_date') or 'n/a'}"),
             "trucking_impact": "Cross-border rate negotiation leverage",
         })
     
