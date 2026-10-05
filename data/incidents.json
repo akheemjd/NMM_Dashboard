@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-103172",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Vehicle stall at Highway 1, In Surrey and 2km East of 176 Street Underpass. Right lane blocked. Last update: October 4th, 2026 at 5:17pm PDT. Next update: October 4th, 2026 at 6:00pm PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.17671196,
+      "lng": -122.71557254,
+      "start": "2026-10-04T14:57:20-07:00",
+      "end": "",
+      "updated": "2026-10-04T17:17:20-07:00",
+      "scheduled": false
+    },
+    {
+      "id": "ON-315881",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 3 Eastbound  between Penhale Road and Springwater Road, Orwell. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.775696,
+      "lng": -81.05121,
+      "start": 1791198000,
+      "end": 1791234000,
+      "updated": 1791158940,
+      "scheduled": false
+    },
+    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -926,23 +960,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315181",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 7 Eastbound  between MISSISSIPPI RD /LAKE PARK RD and MCNEELY AVE/CR 29, Carleton Place. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.12311,
-      "lng": -76.14104,
-      "start": 1791241200,
-      "end": 1791626400,
-      "updated": 1790964000,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1025,23 +1042,6 @@
       "start": "2026-09-29T07:18:21-07:00",
       "end": "",
       "updated": "2026-10-01T06:43:36-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102906",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Utility work at Highway 1, 23km West of Kamloops and At Rodeo Drive. Starting Fri Oct 9 until Fri Oct 9. From 9:30 AM to 3:30 PM PDT, Friday. Right lane closed. Watch for traffic control. Last update: September 28th, 2026 at 8:44am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.69373586,
-      "lng": -120.58759544,
-      "start": "2026-09-28T08:44:06-07:00",
-      "end": "",
-      "updated": "2026-09-28T08:44:06-07:00",
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T00:04:27.678847+00:00",
+  "updated": "2026-10-05T00:22:26.768743+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
