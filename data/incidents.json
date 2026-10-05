@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-316183",
+      "id": "ON-316189",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at FINCH AVENUE, Toronto. 1 right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at BATHURST STREET, Toronto. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.75460869,
-      "lng": -79.53057719,
-      "start": 1791239100,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.73625682,
+      "lng": -79.43391576,
+      "start": 1791241440,
       "end": null,
-      "updated": 1791240660,
+      "updated": 1791241440,
       "scheduled": false
     },
     {
@@ -542,23 +542,6 @@
       "start": 1791198000,
       "end": 1794873600,
       "updated": 1791215220,
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-103197",
-      "province": "BC",
-      "highway": "Other Roads near turning lane",
-      "direction": "",
-      "description": "Ditch maintenance from turning lane to Highway 1, In Golden. Starting Mon Oct 5 until Mon Oct 5. From 7:30 AM to 4:00 PM MDT, Monday to Thursday. Right lane closed. Expect minor delays. Last update: October 5th, 2026 at 7:55am MDT. Ditch maintenance in progress. Use caution when passing crew and equipment working.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.28715,
-      "lng": -116.8245,
-      "start": "2026-10-05T06:55:47-07:00",
-      "end": "",
-      "updated": "2026-10-05T06:55:47-07:00",
       "scheduled": false
     },
     {
@@ -1349,10 +1332,27 @@
       "end": "",
       "updated": "2026-09-15T20:12:03-07:00",
       "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-101931",
+      "province": "BC",
+      "highway": "Highway 97 near Adsett Creek Bridge",
+      "direction": "",
+      "description": "Bridge maintenance at Highway 97, In NRRM and At Adsett Creek Bridge. Starting Wed Sep 2 until Thu Oct 15. Single lane alternating traffic. Watch for traffic control. Last update: September 15th, 2026 at 8:12pm MST.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 58.10620571,
+      "lng": -122.71542863,
+      "start": "2026-09-01T14:14:15-07:00",
+      "end": "",
+      "updated": "2026-09-15T20:12:00-07:00",
+      "scheduled": false
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T23:00:56.864831+00:00",
+  "updated": "2026-10-05T23:14:59.748303+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
