@@ -16,12 +16,22 @@ concurrency:
 
 jobs:
   deploy:
+    # A stalled Pages deployment currently burns the full default timeout - the runs that get
+    # cancelled sit at exactly 905 to 907 seconds - which keeps the slot busy and emails an
+    # alarming "Run failed" that is really just a kill. Fail in five minutes instead, so a
+    # stall costs one tick rather than half a slot.
+    timeout-minutes: 8
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # The repo is 97 MB of pack, almost all of it built docs committed every half hour, and
+      # this workflow only ever needs the current tree to upload docs/. A full clone pulls the
+      # entire history for nothing.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
