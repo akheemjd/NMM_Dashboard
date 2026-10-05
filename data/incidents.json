@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-315914",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound  at DIXON RD/MARTIN GROVE RD, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.69190015,
-      "lng": -79.56942445,
-      "start": 1791175620,
-      "end": null,
-      "updated": 1791175620,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103179",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -960,6 +943,23 @@
       "scheduled": false
     },
     {
+      "id": "ON-315182",
+      "province": "ON",
+      "highway": "HWY 7",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 7 Westbound  between MCNEELY AVE/CR 29 and MISSISSIPPI RD /LAKE PARK RD, Carleton Place. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.13216,
+      "lng": -76.12006,
+      "start": 1791241200,
+      "end": 1791626400,
+      "updated": 1790964060,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T05:02:33.901452+00:00",
+  "updated": "2026-10-05T05:33:33.602972+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
