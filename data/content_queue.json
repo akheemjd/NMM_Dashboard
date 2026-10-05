@@ -1,14 +1,28 @@
 {
-  "_comment": "Topic bank for the NMM blog pipeline. The scheduler pulls the next unused topic per pillar. Add topics to 'queues'; completed topics are moved to 'completed' automatically.",
+  "_comment": "Topic bank for the NMM blog pipeline. The scheduler pulls the next unused topic per pillar. Add topics to 'queues'; completed topics are moved to 'completed' automatically. Continental queue: topics must cover both countries. A Canadian-only queue produces Canadian-only posts, which is what happened for the first nine.",
   "version": 1,
   "queues": {
     "market": [
+      {
+        "id": "market-us-canada-diesel-gap",
+        "title": "Canadian diesel versus American diesel right now",
+        "keyword": "canada us diesel price comparison",
+        "angle": "EIA US national against NRCan Canadian average, converted properly.",
+        "source": "EIA + NRCan"
+      },
       {
         "id": "market-diesel-national-week",
         "title": "Canada's national diesel average this week",
         "keyword": "canada diesel price this week",
         "angle": "National average plus the three provinces moving most against it.",
         "source": "NRCan weekly diesel survey"
+      },
+      {
+        "id": "market-week-ahead",
+        "title": "The week ahead for North American freight",
+        "keyword": "canada us trucking fuel costs",
+        "angle": "Where fuel, currency and border conditions are pointed on both sides of the line. Canadian and American figures side by side, in each country's own units.",
+        "source": "Dashboard composite"
       },
       {
         "id": "market-fx-fuel-cost",
@@ -18,6 +32,13 @@
         "source": "Bank of Canada Valet API"
       },
       {
+        "id": "market-us-diesel-week",
+        "title": "The US diesel week: what moved and where",
+        "keyword": "us diesel prices this week",
+        "angle": "The EIA weekly retail diesel survey, district by district, and what the spread between the cheapest and dearest PADD costs a long-haul operator. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "US Energy Information Administration"
+      },
+      {
         "id": "market-border-week",
         "title": "Where the border was slow this week",
         "keyword": "canada us border wait times",
@@ -25,18 +46,11 @@
         "source": "CBSA border wait times"
       },
       {
-        "id": "market-us-canada-diesel-gap",
-        "title": "Canadian diesel versus American diesel right now",
-        "keyword": "canada us diesel price comparison",
-        "angle": "EIA US national against NRCan Canadian average, converted properly.",
-        "source": "EIA + NRCan"
-      },
-      {
-        "id": "market-week-ahead",
-        "title": "The week ahead for Canadian freight",
-        "keyword": "canadian trucking fuel costs",
-        "angle": "Where fuel, currency, and border conditions are pointed.",
-        "source": "Dashboard composite"
+        "id": "market-us-canada-border-week",
+        "title": "The border week: Canadian and American crossings compared",
+        "keyword": "us canada border wait times",
+        "angle": "Both directions, both sides. Where the queues were, and which crossings recovered. CBP for the American ports, CBSA for the Canadian ones. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "CBP and CBSA"
       },
       {
         "id": "market-prairie-diesel",
@@ -44,6 +58,13 @@
         "keyword": "alberta saskatchewan diesel price",
         "angle": "AB/SK/MB against the national index and why the gap persists.",
         "source": "NRCan weekly diesel survey"
+      },
+      {
+        "id": "market-loonie-for-us-carriers",
+        "title": "What the exchange rate does to a US carrier running into Ontario",
+        "keyword": "usd cad exchange rate for trucking",
+        "angle": "The loonie, from the American side. What a US operator's fuel, tolls and loading costs do when the rate moves a cent. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "Bank of Canada"
       },
       {
         "id": "market-atlantic-diesel",
@@ -55,11 +76,25 @@
     ],
     "deep": [
       {
+        "id": "deep-regional-freight",
+        "title": "Which regions carry the freight burden",
+        "keyword": "north american freight corridor data",
+        "angle": "The corridors that move the most freight, Canadian provinces and American districts together, and what each one is actually for.",
+        "source": "NRCan + CBSA"
+      },
+      {
         "id": "deep-provincial-spread",
         "title": "The provincial diesel gap, mapped",
         "keyword": "diesel price by province canada",
         "angle": "Full provincial ranking plus the tax and logistics reasons behind the spread.",
         "source": "NRCan weekly diesel survey"
+      },
+      {
+        "id": "deep-us-district-spread",
+        "title": "The American diesel map: ten districts, one country",
+        "keyword": "us diesel prices by state and region",
+        "angle": "Why EIA publishes districts and not states, what each district covers, and what the spread between them means for routing a load. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "EIA weekly retail diesel survey"
       },
       {
         "id": "deep-cost-per-km",
@@ -69,11 +104,25 @@
         "source": "NRCan + fuel cost calculator"
       },
       {
+        "id": "deep-us-fuel-tax-map",
+        "title": "American fuel tax, state by state",
+        "keyword": "us fuel tax by state for trucking",
+        "angle": "Every state's diesel rate, the federal rate on top, and the arithmetic of what a state line costs a 300-gallon fill. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "EIA motor fuel tax"
+      },
+      {
         "id": "deep-crossing-deep-dive",
         "title": "One crossing, examined properly",
         "keyword": "ambassador bridge wait times",
         "angle": "Average, P75 and P90 waits at a single crossing including hourly pattern.",
         "source": "CBSA border history"
+      },
+      {
+        "id": "deep-mexican-border-ports",
+        "title": "The southern border: the crossings American freight uses",
+        "keyword": "us mexico border crossing wait times",
+        "angle": "CBP's Mexican-border ports, which ones carry commercial traffic, and which report delays at all. The other half of the border nobody writes about. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "CBP border wait times"
       },
       {
         "id": "deep-excise-tax",
@@ -83,18 +132,18 @@
         "source": "Finance Canada + NRCan"
       },
       {
+        "id": "deep-ifta-two-countries",
+        "title": "IFTA is one agreement and two systems",
+        "keyword": "ifta fuel tax us and canada",
+        "angle": "The same agreement, filed differently on each side, and the jurisdiction rates side by side so a cross-border carrier can see both. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "IFTA tax matrix"
+      },
+      {
         "id": "deep-seasonal-diesel",
         "title": "Diesel seasonality: when prices actually move",
         "keyword": "diesel price trends canada seasonal",
         "angle": "Historical pattern from the 2016-onward series, month by month.",
         "source": "NRCan historical series"
-      },
-      {
-        "id": "deep-regional-freight",
-        "title": "Which provinces carry the freight burden",
-        "keyword": "canadian freight corridor data",
-        "angle": "Diesel consumption geography against crossing volumes.",
-        "source": "NRCan + CBSA"
       },
       {
         "id": "deep-city-level-costs",
@@ -106,6 +155,13 @@
     ],
     "rules": [
       {
+        "id": "rules-fmcsa-hours",
+        "title": "Hours of service: the American rule, in plain language",
+        "keyword": "fmcsa hours of service rules",
+        "angle": "The federal driving limit, the break, the reset, and how it differs from the Canadian rule a cross-border driver has to satisfy as well. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "FMCSA"
+      },
+      {
         "id": "rules-driver-inc",
         "title": "Driver Inc: what the crackdown actually changes",
         "keyword": "driver inc rules canada",
@@ -113,11 +169,25 @@
         "source": "CRA guidance + industry reporting"
       },
       {
+        "id": "rules-us-eld",
+        "title": "The US ELD mandate: what an inspector actually checks",
+        "keyword": "eld mandate us trucking",
+        "angle": "The federal device rule, the exemptions, and the roadside reality. Set against the Canadian mandate for operators running both. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "FMCSA"
+      },
+      {
         "id": "rules-ifta",
-        "title": "IFTA filing: the mistakes that trigger audits",
-        "keyword": "ifta filing deadlines canada",
-        "angle": "Quarterly deadlines plus the record-keeping failures auditors look for.",
+        "title": "IFTA filing: the mistakes that trigger an audit",
+        "keyword": "ifta filing mistakes audit",
+        "angle": "One agreement, two systems. What gets a carrier audited, on either side of the border.",
         "source": "IFTA Inc. + provincial guidance"
+      },
+      {
+        "id": "rules-cbp-entry",
+        "title": "CBP entry: the American paperwork that holds a load",
+        "keyword": "cbp entry filing for trucking",
+        "angle": "What US Customs wants before a truck reaches the booth, and the mistakes that park it. The American counterpart to the CBSA side. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
+        "source": "US Customs and Border Protection"
       },
       {
         "id": "rules-psb-cra",
