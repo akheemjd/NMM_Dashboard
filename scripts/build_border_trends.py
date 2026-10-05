@@ -67,6 +67,51 @@ def percentile(values, p):
     return round(s[f] * (c - k) + s[c] * (k - f), 1)
 
 
+
+# Which CBP port answers for each crossing in the CBSA history. Keyed on the trend crossing id,
+# because the two agencies name the same place differently: the CBSA archive says
+# "coutts-sweetgrass" and CBP lists the port as Sweetgrass, in Montana, with Coutts as the
+# Canadian side.
+CBP_PORT_FOR_CROSSING = {
+    "coutts-sweetgrass": ("Sweetgrass", ""),
+    "emerson-pembina": ("Pembina", ""),
+    "fort-erie-buffalo": ("Buffalo/Niagara Falls", "Peace Bridge"),
+    "lacolle-champlain": ("Champlain", ""),
+    "lansdowne-alexandria": ("Alexandria Bay", "Thousand Islands Bridge"),
+    "pacific-blaine": ("Blaine", "Pacific Highway"),
+    "queenston-lewiston": ("Buffalo/Niagara Falls", "Lewiston Bridge"),
+    "sarnia-port-huron": ("Port Huron", "Bluewater Bridge"),
+    "windsor-detroit": ("Detroit", "Ambassador Bridge"),
+}
+
+
+def us_side(crossing_id, cbp):
+    """The current CBP commercial wait for a crossing, or None.
+
+    CBP publishes no archive, so this is a reading and not a trend. It is returned with its
+    capture stamp so the page can say when it was taken, and with `reported` False when CBP
+    has no figure - which is not the same as a zero-minute wait.
+    """
+    target = CBP_PORT_FOR_CROSSING.get(crossing_id)
+    if not target:
+        return None
+    port_name, crossing_name = target
+    for port in (cbp or {}).get("ports", []):
+        if (port.get("port_name") or "") != port_name:
+            continue
+        if crossing_name and (port.get("crossing_name") or "") != crossing_name:
+            continue
+        delay = port.get("commercial_delay")
+        return {
+            "label": crossing_name or port_name,
+            "reported": bool(port.get("commercial_reported")) and delay is not None,
+            "delay": delay if delay is not None else "",
+            "captured": ((port.get("agency_date") or "") + " " +
+                         (port.get("agency_time") or "")).strip(),
+        }
+    return None
+
+
 def analyze_crossing(rows, crossing_id):
     """Statistics for one crossing across all historical observations."""
     delays = [r["delay_minutes"] for r in rows if r["crossing_id"] == crossing_id]
@@ -166,11 +211,22 @@ def build_table_rows(trends):
         p75 = stats["p75"]
         p90 = stats["p90"]
         cls = severity_class(avg)
+        # The American side. CBP publishes a current reading and keeps no public archive, so
+        # this is today's commercial wait, not a percentile. When CBP has no figure the cell
+        # says so - an unreported wait is not a zero-minute wait.
+        us = stats.get("us") or {}
+        if us.get("reported"):
+            us_cell = f'{us["delay"]} min'
+        elif us:
+            us_cell = "not reported"
+        else:
+            us_cell = "&mdash;"
         rows_html += f'''      <tr class="{cls}">
         <td><strong>{name}</strong></td>
         <td>{avg} min</td>
         <td>{p75} min</td>
         <td>{p90} min</td>
+        <td>{us_cell}</td>
         <td>{stats["observations"]} records</td>
         <td>{stats["days_covered"]} days</td>
       </tr>\n'''
@@ -219,9 +275,14 @@ def main():
     total_observations = 0
     max_delay_by_crossing = {}
 
+    cbp = load_json("cbp_border.json")
+    us_count = 0
     for cid, crecs in crossings.items():
         stats = analyze_crossing(rows, cid)
         if stats:
+            stats["us"] = us_side(cid, cbp)
+            if stats["us"]:
+                us_count += 1
             trends["crossings"][cid] = stats
             total_days.update(r["date"] for r in crecs)
             total_observations += stats["observations"]
@@ -240,7 +301,8 @@ def main():
     out_data = os.path.join(DATA, "border_trends.json")
     with open(out_data, "w") as f:
         json.dump(trends, f, indent=2)
-    print(f"  data/border_trends.json written ({crossings_count} crossings, {total_observations} obs)")
+    print(f"  data/border_trends.json written ({crossings_count} crossings, "
+          f"{total_observations} obs, {us_count} with a CBP reading)")
 
     # Render HTML page
     template_path = os.path.join(TMPL, "border-trends.template.html")
@@ -321,6 +383,20 @@ def main():
     }
 
     html = fill(template, data)
+
+    # fill() resolves {{tokens}} and <!--LOOP:--> and nothing else, so this placeholder
+    # passed straight through for the life of the page: the table shipped with a header and an
+    # empty body while build_table_rows() computed rows every run. Substitute it here, and fail
+    # loudly if it survives.
+    if "BORDERTRENDS_TABLE_ROWS" in html:
+        html = html.replace("<!-- BORDERTRENDS_TABLE_ROWS -->", table_rows)
+    if "BORDERTRENDS_TABLE_ROWS" in html:
+        raise ValueError("border-trends: the table row placeholder was not substituted")
+
+    # A table with no rows is the failure this page already shipped once.
+    _body = re.search(r"<tbody>(.*?)</tbody>", html, re.S)
+    if not _body or "<tr" not in _body.group(1):
+        raise ValueError("border-trends: the crossings table has no rows")
 
     leftover = [t for t in ("{{", "<!--LOOP:", "<!--IF:") if t in html]
     # fill() raises on tokens the DATA does not satisfy, but is silent about

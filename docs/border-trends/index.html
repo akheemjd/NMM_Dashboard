@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-CA" data-curfixed="CAD">
+<html lang="en-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -27,7 +27,7 @@
   </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/nm.css?v=1791237674">
+<link rel="stylesheet" href="/assets/nm.css?v=1791238608">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDXR7ERL80"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NDXR7ERL80');</script>
 </head>
@@ -39,18 +39,18 @@
   <button class="navbtn" type="button" id="navbtn" aria-expanded="false" aria-controls="drawer"><span class="sr">Sections</span><span class="bars" aria-hidden="true"></span></button>
 </div></header>
 
-<!--navstart--><nav class="nav" aria-label="Sections"><div class="wrap"><a href="/fuel-prices/" class="ng" data-tree="diesel">Diesel<span class="chev" aria-hidden="true"></span></a><a href="/border-wait-times/" class="ng on" aria-current="true">Border<span class="chev" aria-hidden="true"></span></a><a href="/fuel-cost-calculator/" class="ng">Cost<span class="chev" aria-hidden="true"></span></a><a href="/freight-barometer/" class="ng">Market<span class="chev" aria-hidden="true"></span></a><a href="/methodology/nmdi/" class="ng">About<span class="chev" aria-hidden="true"></span></a></div></nav><div class="strip" data-group="Diesel" hidden><div class="wrap"><a href="/fuel-prices/">Canada by province</a><a href="/us-diesel/">US by district</a><a href="/us-diesel/states/">US by state</a><span class="hint">Diesel</span></div></div><div class="strip on" data-group="Border"><div class="wrap"><a href="/border-wait-times/">Wait times</a><a href="/border-wait-times/all-ports/">All 85 ports</a><a href="/border-trends/">Trends</a><span class="hint">Border</span></div></div><div class="strip" data-group="Cost" hidden><div class="wrap"><a href="/fuel-cost-calculator/">Trip calculator</a><a href="/fuel-tax-rates/">Fuel tax</a><span class="hint">Cost</span></div></div><div class="strip" data-group="Market" hidden><div class="wrap"><a href="/freight-barometer/">Freight barometer</a><a href="/market-pulse/">Market pulse</a><a href="/exchange-rate/">Exchange rate</a><a href="/road-incidents/">Road incidents</a><a href="/industry-news/">Industry news</a><span class="hint">Market</span></div></div><div class="strip" data-group="About" hidden><div class="wrap"><a href="/methodology/nmdi/">Methodology</a><a href="/press/">Press</a><a href="/contact/">Contact</a><span class="hint">About</span></div></div><div class="drawer" id="drawer" hidden><div class="wrap"><div class="dgrp"><b>Diesel</b><a class="dg" href="/fuel-prices/" data-tree="diesel">Canada by province</a><a class="dg" href="/us-diesel/">US by district</a><a class="dg" href="/us-diesel/states/">US by state</a></div><div class="dgrp"><b>Border</b><a class="dg" href="/border-wait-times/">Wait times</a><a class="dg" href="/border-wait-times/all-ports/">All 85 ports</a><a class="dg on" href="/border-trends/">Trends</a></div><div class="dgrp"><b>Cost</b><a class="dg" href="/fuel-cost-calculator/">Trip calculator</a><a class="dg" href="/fuel-tax-rates/">Fuel tax</a></div><div class="dgrp"><b>Market</b><a class="dg" href="/freight-barometer/">Freight barometer</a><a class="dg" href="/market-pulse/">Market pulse</a><a class="dg" href="/exchange-rate/">Exchange rate</a><a class="dg" href="/road-incidents/">Road incidents</a><a class="dg" href="/industry-news/">Industry news</a></div><div class="dgrp"><b>About</b><a class="dg" href="/methodology/nmdi/">Methodology</a><a class="dg" href="/press/">Press</a><a class="dg" href="/contact/">Contact</a></div><div class="dgrp"><b>More</b><a class="dg" href="/advertise/">Advertise</a><a class="dg" href="/contact/">Contact</a></div></div></div><!--navend-->
+<nav class="nav" aria-label="Sections"><div class="wrap"><a href="/border-wait-times/">Border</a><a href="/border-trends/">Trends</a></div></nav>
 
 <main class="wrap" id="main">
 
   <section class="hero">
     <span class="eyebrow">9 crossings · 56 days</span>
     <h1>Border wait time trends</h1>
-    <p>Average, 75th percentile, and 90th percentile for each Canada–US crossing based on CBSA records. The P90 shows what the top 10% of waits look like — that's the risk you carry.</p>
-    <div class="meta"><span>History ends <b>2026-10-05 22:01</b> UTC</span><span>504 observations</span><span data-freshness>CBSA archive — historical, not live</span></div>
+    <p>Average, 75th percentile, and 90th percentile for each Canada–US crossing, from the CBSA archive. The P90 shows what the top 10% of waits look like — that is the risk you carry.</p>
+    <p class="note">The last column is the American side and it measures something different: the current CBP commercial wait, taken today and stated in each port's own time. CBSA publishes a history, which is what the percentiles are built from. CBP publishes only the reading now, so the two are not averaged and should not be read as a single figure.</p>
+    <div class="meta"><span>History ends <b>2026-10-05 22:01</b> UTC</span><span>504 observations</span></div>
   </section>
 
-  <section class="sec">
   <section class="sec">
     <div class="reading">
       <p>Border wait times vary by time of day, day of week, and which port you're using. This page aggregates every CBSA record we've collected into typical patterns so you can plan your crossing rather than guessing.</p>
@@ -60,14 +60,96 @@
     </div>
   </section>
 
+  <section class="sec">
     <div class="lead"><h2>All crossings</h2></div>
     <div class="table-wrap">
       <table class="data-table">
         <thead>
-          <tr><th>Crossing</th><th>Average</th><th>P75</th><th>P90</th><th>Observations</th><th>Days covered</th></tr>
+          <tr><th>Crossing</th><th>Average</th><th>P75</th><th>P90</th><th>US now <small>CBP</small></th><th>Observations</th><th>Days covered</th></tr>
         </thead>
         <tbody>
-<!-- BORDERTRENDS_TABLE_ROWS -->
+      <tr class="mention">
+        <td><strong>Pacific Highway</strong></td>
+        <td>10 min</td>
+        <td>11.2 min</td>
+        <td>20.0 min</td>
+        <td>0 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="mention">
+        <td><strong>Queenston–Lewiston</strong></td>
+        <td>9 min</td>
+        <td>14.0 min</td>
+        <td>27.0 min</td>
+        <td>4 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="mention">
+        <td><strong>Fort Erie–Buffalo</strong></td>
+        <td>7 min</td>
+        <td>13.0 min</td>
+        <td>13.0 min</td>
+        <td>3 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="mention">
+        <td><strong>Ambassador Bridge</strong></td>
+        <td>5 min</td>
+        <td>5.0 min</td>
+        <td>17.5 min</td>
+        <td>15 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="normal">
+        <td><strong>Blue Water Bridge</strong></td>
+        <td>3 min</td>
+        <td>0.0 min</td>
+        <td>10.0 min</td>
+        <td>11 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="normal">
+        <td><strong>Lacolle–Champlain</strong></td>
+        <td>2 min</td>
+        <td>0.0 min</td>
+        <td>0.0 min</td>
+        <td>0 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="normal">
+        <td><strong>Coutts–Sweetgrass</strong></td>
+        <td>1 min</td>
+        <td>0.0 min</td>
+        <td>0.0 min</td>
+        <td>20 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="normal">
+        <td><strong>Emerson–Pembina</strong></td>
+        <td>1 min</td>
+        <td>0.0 min</td>
+        <td>0.0 min</td>
+        <td>22 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+      <tr class="normal">
+        <td><strong>Lansdowne–Alexandria</strong></td>
+        <td>0 min</td>
+        <td>0.0 min</td>
+        <td>0.0 min</td>
+        <td>0 min</td>
+        <td>56 records</td>
+        <td>56 days</td>
+      </tr>
+
         </tbody>
       </table>
     </div>
@@ -90,6 +172,6 @@
   <div class="bottom"><span>&copy; 2026 Northern Mile Media</span><a href="https://www.northernmilemedia.com/subscribe/" data-portal="signup">Subscribe free</a><span>Updated 2026-10-05 22:01 UTC</span></div>
 </div></footer>
 
-<script src="/assets/nm.js?v=1791237674"></script>
+<script src="/assets/nm.js?v=1791238608"></script>
 </body>
 </html>
