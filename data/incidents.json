@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-316084",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound TRANSFER at Dixie Express to Collector, Mississauga. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.65890567,
+      "lng": -79.61351106,
+      "start": 1791224160,
+      "end": null,
+      "updated": 1791228480,
+      "scheduled": false
+    },
+    {
       "id": "ON-316095",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,23 +32,6 @@
       "start": 1791225720,
       "end": null,
       "updated": 1791225720,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316084",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at Dixie Express to Collector, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.65890567,
-      "lng": -79.61351106,
-      "start": 1791224160,
-      "end": null,
-      "updated": 1791225600,
       "scheduled": false
     },
     {
@@ -134,23 +134,6 @@
       "start": "2026-10-05T10:33:41-07:00",
       "end": "",
       "updated": "2026-10-05T10:33:41-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-316011",
-      "province": "ON",
-      "highway": "HWY 16",
-      "direction": "Southbound",
-      "description": "Collision on HWY 16 Southbound RAMP at HWY 401, Johnstown. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 44.7529379,
-      "lng": -75.4795882,
-      "start": 1791208440,
-      "end": null,
-      "updated": 1791221580,
       "scheduled": false
     },
     {
@@ -611,6 +594,23 @@
       "end": 1791536400,
       "updated": 1791206940,
       "scheduled": true
+    },
+    {
+      "id": "ON-315980",
+      "province": "ON",
+      "highway": "HWY 89",
+      "direction": "Eastbound",
+      "description": "Nightly Engineering Investigation on HWY 89 Eastbound  between SIMCOE ROAD 27/KING STREET/COOKSTOWN and HWY 400, Essa. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.18989,
+      "lng": -79.70145,
+      "start": 1791241200,
+      "end": 1791277200,
+      "updated": 1791204840,
+      "scheduled": false
     },
     {
       "scheduled": false,
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T19:01:50.270910+00:00",
+  "updated": "2026-10-05T19:32:51.001459+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
