@@ -1,21 +1,38 @@
 {
   "incidents": [
     {
-      "id": "ON-316195",
+      "id": "ON-316198",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Disabled Vehicle on HWY 400 Northbound  at KING TWP RD 16, King. Right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.6480224,
-      "lng": -79.6369554,
-      "start": 1791243660,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.95719717,
+      "lng": -79.57471695,
+      "start": 1791244080,
       "end": null,
-      "updated": 1791243660,
+      "updated": 1791244080,
       "scheduled": false
+    },
+    {
+      "id": "ON-316199",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 417 Westbound On-ramp at MOODIE DR (IC 134), Ottawa. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 45.33849,
+      "lng": -75.84131,
+      "start": 1791255600,
+      "end": 1791277200,
+      "updated": 1791244020,
+      "scheduled": true
     },
     {
       "id": "ON-316184",
@@ -526,23 +543,6 @@
       "end": 1794873600,
       "updated": 1791215220,
       "scheduled": false
-    },
-    {
-      "id": "ON-316039",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between HALLECKS RD, Brockville and HWY 416 (IC 721A), Prescott. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.55394,
-      "lng": -75.76044,
-      "start": 1791370800,
-      "end": 1791414000,
-      "updated": 1791214980,
-      "scheduled": true
     },
     {
       "id": "drivebc.ca/RIDE-103194",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T23:44:27.773663+00:00",
+  "updated": "2026-10-05T23:53:07.911137+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-05 23:44",
-  "updated_iso": "2026-10-05T23:44:41+00:00",
-  "build_version": "1791243881",
+  "updated_at": "2026-10-05 23:53",
+  "updated_iso": "2026-10-05T23:53:21+00:00",
+  "build_version": "1791244401",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "25 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "260.9",
@@ -349,11 +349,11 @@
     "none": false,
     "active_count": 28,
     "gauge_class": "warn",
-    "status_line": "HWY 401, I-5 in S",
+    "status_line": "HWY 400, HWY 401, I-5 in S",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at DIXIE ROAD, Mississauga. 1\u2026",
+        "road": "HWY 400",
+        "what": "Disabled Vehicle on HWY 400 Northbound  at KING TWP RD 16, King. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:20 PDT"
+      "captured_at": "16:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "2 of 9 crossings slow",
+      "value": "2/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
