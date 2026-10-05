@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-315925",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 44.20017116,
+      "lng": -79.65478443,
+      "start": 1791191520,
+      "end": null,
+      "updated": 1791191520,
+      "scheduled": false
+    },
+    {
       "id": "ON-315924",
       "province": "ON",
       "highway": "HWY 403 HAMILTON",
@@ -943,23 +960,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-315205",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Continuous Maintenance on HWY 401 Eastbound  between 3RD LINE RD , Bainsville and CURRY HILL RD (IC 825)/4th Line Rd (SD&G CR 23), Curry Hill. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 45.17644,
-      "lng": -74.409,
-      "start": 1791198000,
-      "end": 1791241200,
-      "updated": 1790968260,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103061",
       "province": "BC",
       "highway": "Highway 7 near Lougheed Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-05T09:11:38.102906+00:00",
+  "updated": "2026-10-05T09:42:36.018138+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

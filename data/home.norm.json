@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-05 09:11",
-  "updated_iso": "2026-10-05T09:11:51+00:00",
-  "build_version": "1791191511",
+  "updated_at": "2026-10-05 09:42",
+  "updated_iso": "2026-10-05T09:42:52+00:00",
+  "build_version": "1791193372",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -347,21 +347,21 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 26,
+    "active_count": 27,
     "gauge_class": "warn",
-    "status_line": "HWY 403 , I-5 in S",
+    "status_line": "HWY 400, HWY 403 , I-5 in S",
     "incidents": [
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Collision on HWY 403 HAMILTON Eastbound  at HWY 6 SOUTH - GARNER ROAD,\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "I-5 in Stanislaus County",
-        "what": "Route 5 near Westley. Rest Area Work. All of 1 lanes closed.",
-        "severity_label": "Closed",
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Eastbound  at HWY 6 SOUTH - GARNER ROAD,\u2026",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 MDT"
+      "captured_at": "03:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:00 PDT"
+      "captured_at": "02:20 PDT"
     },
     {
       "name": "Emerson-Pembina",
