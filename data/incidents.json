@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-316209",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound  at HWY 409, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.697205899,
+      "lng": -79.607491493,
+      "start": 1791246960,
+      "end": null,
+      "updated": 1791246960,
+      "scheduled": false
+    },
+    {
       "id": "ON-316208",
       "province": "ON",
       "highway": "HWY 401",
@@ -525,23 +542,6 @@
       "start": 1791198000,
       "end": 1794873600,
       "updated": 1791215880,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316043",
-      "province": "ON",
-      "highway": "HWY 579",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 579 Northbound  between CLUTE TWP RD C 6-7 and LAKE LOUISE RD, Cochrane. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 49.123997,
-      "lng": -81.074326,
-      "start": 1791198000,
-      "end": 1794873600,
-      "updated": 1791215220,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-06T00:34:50.347490+00:00",
+  "updated": "2026-10-06T00:42:18.456412+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
