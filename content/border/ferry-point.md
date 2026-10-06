@@ -1,0 +1,5 @@
+Ferry Point is the smallest of the three Calais-area crossings and the one most likely to be without a current commercial reading. That is not a fault in the data. A port this size does not always have a truck in the commercial lane when CBP takes its reading, so it reports nothing rather than reporting zero, and this site shows it as not reported rather than guessing.
+
+What that means in practice is that a driver should not read an absent figure as a clear lane. It means nobody was measuring at that moment. The three Calais ports are within minutes of each other and any one of them can be the right answer on a given morning, which makes the absence of a number on one of them a reason to check the other two rather than a reason to relax.
+
+The approach is a side street rather than a highway, and the port handles the traffic you would expect of a small river crossing between two towns that have been trading across this bridge for generations. For a carrier running eastern Maine and southern New Brunswick, knowing it exists is worth more than any single reading.

@@ -1,0 +1,5 @@
+Houlton is the busiest commercial crossing in Maine, and it carries an outsized share of the province's freight for a port this far north. US Route 1 meets New Brunswick Route 95 here, which puts the crossing on the direct line between the Maritimes and the American northeast. A load out of Moncton or Saint John heading for Boston does not detour to Houlton; it goes through it.
+
+The practical detail for a carrier is that this is a commercial port with a small town on either side. Houlton, Maine and Woodstock, New Brunswick are both under ten minutes from the booth, so a driver who clears in good time has fuel, food and parking immediately available. A driver who does not has neither, and no second crossing close enough to matter. The nearest alternative is nearly two hours east at Calais or nearly three west at Jackman.
+
+That distance is the thing to plan around. When the commercial lane backs up here there is no practical diversion, and the wait is measured in hours rather than minutes. Check the current figure before you commit to the route rather than after.

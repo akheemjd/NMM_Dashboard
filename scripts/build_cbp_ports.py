@@ -12,6 +12,7 @@ the agency never made, on the exact page a driver would use to decide whether to
 roll. check_data_integrity.py asserts the underlying distinction too.
 """
 import json
+import re
 import os
 import sys
 
@@ -25,6 +26,25 @@ sys.path.insert(0, HERE)
 from build_templates import fill, load_json  # noqa: E402
 
 SLUG = "all-ports"
+
+
+# Crossings that already have a page under the name CBSA gives them. The two agencies name
+# the same bridge differently - CBP says "Champlain" where CBSA says "Lacolle", CBP says
+# "Sweetgrass" where CBSA says "Coutts-Sweetgrass" - so slugify(CBP label) does not find the
+# page that exists. This maps the CBP label to the slug already on disk.
+CBSA_NAMED_PAGE = {
+    "Bluewater Bridge": "blue-water-bridge",
+    "Sweetgrass": "coutts-sweetgrass",
+    "Pembina": "emerson-pembina",
+    "Champlain": "lacolle-border-crossing",
+    "Pacific Highway": "pacific-highway-crossing",
+    "Lewiston Bridge": "queenston-lewiston-bridge",
+}
+
+
+def slugify(s):
+    """Same rule build_border_pages.py uses, so the two agree on a port URL."""
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
 def delay_text(minutes):
@@ -114,11 +134,25 @@ def row(port, plan=None):
         juris = f" · {port['us_state']}–{port['ca_province']}"
         if port.get("ca_city"):
             juris += f" → {port['ca_city']}"
+    # Link to the port's own page when one exists. The Mexican-border ports have no page, and
+    # a link to a page that was never built is worse than plain text in what is meant to be
+    # the index of the border.
+    # build_border_pages.py writes these pages at slugify(label). CBP's own slug field
+    # is region-prefixed - "detroit-ambassador-bridge" for the page "ambassador-bridge" -
+    # so looking up the CBP slug found no directory and the list linked to nothing.
+    # The label, not base: base is the PORT name ("Calais") while the page was built from
+    # the crossing label ("Ferry Point"), and Calais covers three separate crossings.
+    _label = port.get("label") or base
+    _slug = CBSA_NAMED_PAGE.get(_label) or slugify(_label)
+    _built = bool(_slug) and os.path.isdir(os.path.join(DOCS, "border-wait-times", _slug))
+
     return {
         # base_label carries the crossing name. Returning the bare port_name here dropped
         # every crossing from the page - Brownsville rendered four times with no B&M, no
         # Gateway - which is worse than the port codes I was replacing.
-        "port_name": base,
+        "port_name": (f'<a href="/border-wait-times/{_slug}/">{base}</a>'
+                      if _built else base),
+        "_built": _built,
         "crossing_suffix": suffix,
         "jurisdiction": juris,
         "commercial_display": lane_summary(port, "commercial"),

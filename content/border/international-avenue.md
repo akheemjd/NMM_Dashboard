@@ -1,0 +1,5 @@
+International Avenue is the downtown Calais crossing, and it is one of three CBP ports that share this small stretch of the St Croix River. Ferry Point and Milltown sit within a few minutes of it, so the three are best understood together rather than as separate destinations. A driver who finds one backed up is usually closer to another of them than to any fuel stop.
+
+For commercial traffic the distinction matters. International Avenue is the one on the direct route through town, which makes it the default for anything that is not specifically routed elsewhere, and the two smaller ports are the overflow. A dispatcher running the Maritimes to Maine should know all three by name rather than treating Calais as a single option.
+
+The river crossing itself is short and the town is compact on both sides. That is convenient when it works and it is the reason there is no room for a queue when it does not: the approaches are town streets, not highway lanes, and a backup here is a backup on somebody's main street. Expect the numbers to move quickly in both directions.
