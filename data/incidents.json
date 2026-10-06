@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-316241",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Collision on HWY 427 Northbound  at HWY 409, Toronto. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.700533,
-      "lng": -79.609201,
-      "start": 1791265860,
-      "end": null,
-      "updated": 1791265860,
-      "scheduled": false
-    },
-    {
       "id": "ON-316199",
       "province": "ON",
       "highway": "HWY 417",
@@ -542,6 +525,23 @@
       "start": 1791943200,
       "end": 1792231200,
       "updated": 1791213780,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316035",
+      "province": "ON",
+      "highway": "HWY 412",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 412 Southbound Off-ramp at TRUCK INSPECTION STATION, Whitby. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.923584,
+      "lng": -78.99858,
+      "start": 1791943200,
+      "end": 1792231200,
+      "updated": 1791213660,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-06T06:01:07.640379+00:00",
+  "updated": "2026-10-06T07:01:09.565187+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
