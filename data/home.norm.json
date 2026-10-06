@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-06 20:00",
-  "updated_iso": "2026-10-06T20:00:49+00:00",
-  "build_version": "1791316849",
+  "updated_at": "2026-10-06 21:00",
+  "updated_iso": "2026-10-06T21:00:46+00:00",
+  "build_version": "1791320446",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "260.5",
@@ -321,35 +321,35 @@
     }
   ],
   "fx": {
-    "usd_cad": "1.4254",
-    "direction": "weaker CAD",
-    "change": "+0.0008",
-    "usd_100": "142.54",
-    "usd_500": "712.70",
-    "usd_1000": "1,425.40",
-    "cad_1000": "701.56",
-    "band": "noise",
-    "band_pct": "+0.06%",
-    "obs_date": "2026-10-05",
-    "avg_30d": "1.4011",
-    "vs_baseline": "+0.0243",
+    "usd_cad": "1.4226",
+    "direction": "stronger CAD",
+    "change": "-0.0028",
+    "usd_100": "142.26",
+    "usd_500": "711.30",
+    "usd_1000": "1,422.60",
+    "cad_1000": "702.94",
+    "band": "notable",
+    "band_pct": "-0.20%",
+    "obs_date": "2026-10-06",
+    "avg_30d": "1.4031",
+    "vs_baseline": "+0.0195",
     "high_52w": "1.4254",
     "high_52w_date": "2026-10-05",
     "low_52w": "1.3515",
     "low_52w_date": "2026-01-29",
-    "change_7d": "+0.0109",
-    "change_7d_pct": "+0.77%",
-    "change_30d": "+0.0391",
-    "change_30d_pct": "+2.82%",
-    "change_1y": "+0.0494",
-    "change_1y_pct": "+3.59%",
-    "range_pct": "100%"
+    "change_7d": "+0.0058",
+    "change_7d_pct": "+0.41%",
+    "change_30d": "+0.0437",
+    "change_30d_pct": "+3.17%",
+    "change_1y": "+0.0429",
+    "change_1y_pct": "+3.11%",
+    "range_pct": "96%"
   },
   "incidents": {
     "none": false,
-    "active_count": 33,
+    "active_count": 35,
     "gauge_class": "warn",
-    "status_line": "HWY 400, HWY 410, NIKOLA T",
+    "status_line": "HWY 400, HWY 401, QEW",
     "incidents": [
       {
         "road": "HWY 400",
@@ -376,7 +376,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "16:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:30 EDT"
+      "captured_at": "16:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -426,17 +426,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 MDT"
+      "captured_at": "14:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 PDT"
+      "captured_at": "13:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -498,8 +498,8 @@
     },
     {
       "name": "USD/CAD vs 30-day average",
-      "note": "+0.0243 vs 30-day avg 1.4011",
-      "value": "1.4254",
+      "note": "+0.0195 vs 30-day avg 1.4031",
+      "value": "1.4226",
       "value_class": "flat",
       "country_prefix": "",
       "source": "Bank of Canada",
@@ -518,17 +518,17 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
+      "category": "drivers",
       "source": "The Trucker",
-      "headline": "Clearly now available on the Geotab Marketplace",
-      "url": "https://www.thetrucker.com/trucking-news/business/clearly-now-available-on-the-geotab-marketplace",
-      "why": "Industry movement worth tracking."
+      "headline": "Pre-employment screening: What drivers and carriers need to know",
+      "url": "https://www.thetrucker.com/trucking-news/perspective/ask-the-attorney-by-brad-klepper/pre-employment-screening-what-drivers-and-carriers-need-to-know",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "Class 8 preliminary net orders up in September",
-      "url": "https://www.thetrucker.com/trucking-news/business/class-8-preliminary-net-orders-up-in-september",
+      "headline": "Clearly now available on the Geotab Marketplace",
+      "url": "https://www.thetrucker.com/trucking-news/business/clearly-now-available-on-the-geotab-marketplace",
       "why": "Industry movement worth tracking."
     }
   ],
@@ -545,10 +545,10 @@
   "sponsor_news": null,
   "eia": {
     "us_national_usd_gal": "6.199",
-    "us_national_cad_gal": "8.836",
-    "us_national_cpl": "233.4",
-    "nadi": "247.0",
-    "ca_us_gap": "27.1",
+    "us_national_cad_gal": "8.819",
+    "us_national_cpl": "233.0",
+    "nadi": "246.7",
+    "ca_us_gap": "27.5",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "date": "2026-10-05",
@@ -565,87 +565,87 @@
       "west_coast_ex_california": 6.49
     },
     "padds_cpl": {
-      "east_coast": 224.1,
-      "new_england": 243.9,
-      "central_atlantic": 244.2,
-      "lower_atlantic": 214.6,
-      "midwest": 236.7,
-      "gulf_coast": 219.1,
-      "rocky_mountain": 236.0,
-      "west_coast": 272.2,
-      "california": 304.3,
-      "west_coast_ex_california": 244.4
+      "east_coast": 223.6,
+      "new_england": 243.4,
+      "central_atlantic": 243.7,
+      "lower_atlantic": 214.2,
+      "midwest": 236.2,
+      "gulf_coast": 218.7,
+      "rocky_mountain": 235.5,
+      "west_coast": 271.7,
+      "california": 303.7,
+      "west_coast_ex_california": 243.9
     },
     "padds_list": [
       {
         "key": "east_coast",
         "label": "East Coast (PADD 1)",
         "usd_gal": "5.951",
-        "cad_gal": "8.483",
-        "cpl": "224.1"
+        "cad_gal": "8.466",
+        "cpl": "223.6"
       },
       {
         "key": "new_england",
         "label": "New England (PADD 1A)",
         "usd_gal": "6.476",
-        "cad_gal": "9.231",
-        "cpl": "243.9"
+        "cad_gal": "9.213",
+        "cpl": "243.4"
       },
       {
         "key": "central_atlantic",
         "label": "Central Atlantic (PADD 1B)",
         "usd_gal": "6.485",
-        "cad_gal": "9.244",
-        "cpl": "244.2"
+        "cad_gal": "9.226",
+        "cpl": "243.7"
       },
       {
         "key": "lower_atlantic",
         "label": "Lower Atlantic (PADD 1C)",
         "usd_gal": "5.699",
-        "cad_gal": "8.123",
-        "cpl": "214.6"
+        "cad_gal": "8.107",
+        "cpl": "214.2"
       },
       {
         "key": "midwest",
         "label": "Midwest (PADD 2)",
         "usd_gal": "6.286",
-        "cad_gal": "8.960",
-        "cpl": "236.7"
+        "cad_gal": "8.942",
+        "cpl": "236.2"
       },
       {
         "key": "gulf_coast",
         "label": "Gulf Coast (PADD 3)",
         "usd_gal": "5.819",
-        "cad_gal": "8.294",
-        "cpl": "219.1"
+        "cad_gal": "8.278",
+        "cpl": "218.7"
       },
       {
         "key": "rocky_mountain",
         "label": "Rocky Mountain (PADD 4)",
         "usd_gal": "6.267",
-        "cad_gal": "8.933",
-        "cpl": "236.0"
+        "cad_gal": "8.915",
+        "cpl": "235.5"
       },
       {
         "key": "west_coast",
         "label": "West Coast (PADD 5)",
         "usd_gal": "7.229",
-        "cad_gal": "10.304",
-        "cpl": "272.2"
+        "cad_gal": "10.284",
+        "cpl": "271.7"
       },
       {
         "key": "california",
         "label": "California",
         "usd_gal": "8.082",
-        "cad_gal": "11.520",
-        "cpl": "304.3"
+        "cad_gal": "11.497",
+        "cpl": "303.7"
       },
       {
         "key": "west_coast_ex_california",
         "label": "West Coast excluding California",
         "usd_gal": "6.490",
-        "cad_gal": "9.251",
-        "cpl": "244.4"
+        "cad_gal": "9.233",
+        "cpl": "243.9"
       }
     ],
     "source": "U.S. Energy Information Administration weekly retail diesel survey",
