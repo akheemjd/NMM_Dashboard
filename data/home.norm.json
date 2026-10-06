@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-06 10:00",
-  "updated_iso": "2026-10-06T10:00:31+00:00",
-  "build_version": "1791280831",
+  "updated_at": "2026-10-06 11:00",
+  "updated_iso": "2026-10-06T11:00:31+00:00",
+  "build_version": "1791284431",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,21 +347,21 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 29,
+    "active_count": 32,
     "gauge_class": "warn",
-    "status_line": "HWY 412, HWY 407 ",
+    "status_line": "HWY 400, QEW",
     "incidents": [
       {
-        "road": "HWY 412",
-        "what": "Nightly Moving Maintenance Closure on HWY 412 Northbound Off-ramp at TRUCK\u2026",
-        "severity_label": "Minor",
+        "road": "HWY 400",
+        "what": "Vehicle Fire on HWY 400 Southbound  at HWY 93/PENETANGUISHENE RD/SIMCOE ROAD 9,\u2026",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 412",
-        "what": "Nightly Moving Maintenance Closure on HWY 412 Southbound Off-ramp at TRUCK\u2026",
-        "severity_label": "Minor",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound RAMP at FINCH AVENUE, Toronto. Both shoulders\u2026",
+        "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -376,7 +376,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT"
+      "captured_at": "06:15 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 MDT"
+      "captured_at": "04:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 PDT"
+      "captured_at": "03:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,18 +518,18 @@
   "theft": [],
   "news": [
     {
+      "category": "equipment",
+      "source": "Trucking Info",
+      "headline": "Trucker Path Expands Reserved Parking Network",
+      "url": "https://www.truckinginfo.com/news/trucker-path-expands-reserved-parking-network",
+      "why": "Equipment cost and availability shape fleet economics."
+    },
+    {
       "category": "markets",
       "source": "The Trucker",
       "headline": "XPO opens two new service centers in key freight markets",
       "url": "https://www.thetrucker.com/trucking-news/business/xpo-opens-two-new-service-centers-in-key-freight-markets",
       "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "Trimble announces inaugural Momentum Award winners",
-      "url": "https://www.thetrucker.com/trucking-news/business/trimble-announces-inaugural-momentum-award-winners",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
