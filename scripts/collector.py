@@ -401,8 +401,37 @@ if __name__ == "__main__":
         from border_history import record_run
         b = _json.load(open(_os.path.join(DATA, "border.json")))
         record_run(b.get("crossings", []))
-    except Exception:
-        pass
+    except Exception as e:
+        # Was a bare `pass`. A silently-broken archive is worse than a loud one: an archive
+        # exists to accumulate daily and a gap cannot be backfilled.
+        print(f"  Border history (CBSA) failed: {e}")
+
+    # The American side. CBP publishes only the current reading - that is what they publish,
+    # not what we keep. The Canadian archive is deep because this runs; CBP was fetched on the
+    # same account and thrown away. One call per run starts a trend that cannot be started
+    # retroactively.
+    try:
+        from border_history import record_run as _record_us
+        _cbp = _json.load(open(_os.path.join(DATA, "cbp_border.json")))
+        _us_rows = []
+        for _port in _cbp.get("ports", []):
+            _d = _port.get("commercial_delay")
+            if _d is None or not _port.get("commercial_reported"):
+                continue
+            _slug = (_port.get("slug") or _port.get("label") or "").strip()
+            if not _slug:
+                continue
+            _us_rows.append({
+                "id": "us-" + _slug.replace(" ", "-").lower(),
+                "delay_minutes": _d,
+                "captured_utc": (_port.get("agency_date", "") + " " +
+                                 _port.get("agency_time", "")).strip(),
+            })
+        if _us_rows:
+            _record_us(_us_rows)
+            print(f"  Border history (CBP): {len(_us_rows)} reading(s) archived")
+    except Exception as e:
+        print(f"  Border history (CBP) failed: {e}")
 
     # Theft uses theft.json, not incidents.json
     theft_recs = _count("theft.json")

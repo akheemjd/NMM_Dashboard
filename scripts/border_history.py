@@ -57,8 +57,11 @@ def span_days(crossing_id=None):
     dates = set()
     with open(STORE) as f:
         for line in f:
-            parts = line.strip().split(",")
-            if len(parts) >= 2:
+            line = line.strip()
+            if not line or line.startswith("date,"):
+                continue          # the header is not a date; parsing it raised every time
+            parts = line.split(",")
+            if len(parts) >= 2 and parts[0] and parts[1]:
                 cid, d = parts[1], parts[0]
                 if crossing_id is None or cid == crossing_id:
                     dates.add(d)
