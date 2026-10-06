@@ -136,6 +136,14 @@ def reader_label(text):
         t = t[0].upper() + t[1:]
 
     t = t.replace(" - SSM", " - Sault Ste. Marie").replace("SSM", "Sault Ste. Marie")
+
+    # Runs last, after SSM has expanded. "Sault Ste. Marie — <x> Sault Ste. Marie" is one town
+    # named twice; the left half is the port and the right the crossing, and here they agree.
+    if " — " in t:
+        _lhs, _rhs = t.split(" — ", 1)
+        if _lhs.strip().lower() and _lhs.strip().lower() in _rhs.strip().lower():
+            t = _rhs.strip()
+
     t = re.sub(r"\s{2,}", " ", t).strip()
     return t
 
