@@ -1,37 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-316205",
+      "id": "ON-316208",
       "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Southbound",
-      "description": "Debris on HWY 410 Southbound HOV at 407, Brampton. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.66848067,
-      "lng": -79.69996883,
-      "start": 1791246300,
-      "end": null,
-      "updated": 1791246300,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316201",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound RAMP at BRONTE ROAD, Oakville. Right lane and right shoulder closed.",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR at KENNEDY RD -SCARBOROUGH, Toronto. Centre lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.41325013,
-      "lng": -79.73744222,
-      "start": 1791245100,
+      "lanes": "centre lane closed",
+      "lat": 43.77471905,
+      "lng": -79.28433085,
+      "start": 1791246660,
       "end": null,
-      "updated": 1791245100,
+      "updated": 1791246660,
       "scheduled": false
     },
     {
@@ -542,6 +525,23 @@
       "start": 1791198000,
       "end": 1794873600,
       "updated": 1791215880,
+      "scheduled": false
+    },
+    {
+      "id": "ON-316043",
+      "province": "ON",
+      "highway": "HWY 579",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 579 Northbound  between CLUTE TWP RD C 6-7 and LAKE LOUISE RD, Cochrane. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 49.123997,
+      "lng": -81.074326,
+      "start": 1791198000,
+      "end": 1794873600,
+      "updated": 1791215220,
       "scheduled": false
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-06T00:27:50.111695+00:00",
+  "updated": "2026-10-06T00:34:50.347490+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
