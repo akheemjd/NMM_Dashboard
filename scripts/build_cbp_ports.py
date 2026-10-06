@@ -69,6 +69,77 @@ def lane_summary(port, key):
     return " · ".join(bits)
 
 
+# CBP's feed carries a handful of labels that were never written for a reader: names in caps,
+# a port repeated inside its own crossing name, and one administrative suffix. A rule kept
+# catching some and missing others, so the specific cases are named outright and the rules
+# below only handle what is left.
+LABEL_FIX = {
+    "BOTA CARGO FACILITY — BRIDGE OF AMERICAS CARGO FACILITY":
+        "Bridge of the Americas Cargo Facility",
+    "Bridge of the Americas (BOTA)": "Bridge of the Americas",
+    "Bridge of the Americas Port of Entry": "Bridge of the Americas",
+    "ROMA TEXAS": "Roma",
+    "YSLETA": "Ysleta",
+    "International Bridge - SSM": "International Bridge - Sault Ste. Marie",
+}
+
+
+def reader_label(text):
+    """Turn a feed label into something a driver would recognise.
+
+    CBP sends some port names in caps and repeats the port inside its own crossing name. Neither
+    is wrong at the source; both read badly on a page.
+    """
+    if not text:
+        return text
+    t = text.strip()
+    if t in LABEL_FIX:
+        return LABEL_FIX[t]
+
+    # drop the administrative suffix - the page already says which port this is
+    t = re.sub(r"\s+Port of Entry\s*$", "", t, flags=re.I)
+    t = re.sub(r"\s+PORT OF ENTRY\s*$", "", t)
+
+    # a state name inside a row that already shows the state
+    t = re.sub(r"\s+(TEXAS|CALIFORNIA|ARIZONA|NEW MEXICO)\s*$", "", t, flags=re.I)
+
+    # "BOTA CARGO FACILITY — BRIDGE OF AMERICAS CARGO FACILITY" is one place named twice
+    if "—" in t or " - " in t:
+        parts = [x.strip() for x in re.split(r"\s+[—-]\s+", t)]
+        if len(parts) == 2:
+            a, b = parts
+            _a = a.lower().replace(" ", "")
+            _b = b.lower().replace(" ", "")
+            # CBP uses BOTA as its own short form, so the halves do not match
+            # by substring and need the alias named.
+            _alias = (("bota" in _a and "bridgeoftheamericas" in _b) or
+                      ("bota" in _b and "bridgeoftheamericas" in _a))
+            if _alias or _a in _b or _b in _a:
+                t = b if len(b) >= len(a) else a
+
+    # all caps, but leave true initialisms and single letters alone
+    if t.isupper() and len(t) > 4:
+        small = {"of", "the", "and", "at", "on", "in", "del", "de", "la", "las", "los", "el"}
+        words = []
+        for w in t.split():
+            lw = w.lower()
+            if lw in small:
+                words.append(lw)
+            elif lw in ("i", "ii", "iii"):
+                words.append(w.upper())
+            elif lw in ("bota", "ssm", "roma"):
+                # short forms and place names, not initialisms
+                words.append(w.capitalize())
+            else:
+                words.append(w.capitalize())
+        t = " ".join(words)
+        t = t[0].upper() + t[1:]
+
+    t = t.replace(" - SSM", " - Sault Ste. Marie").replace("SSM", "Sault Ste. Marie")
+    t = re.sub(r"\s{2,}", " ", t).strip()
+    return t
+
+
 def base_label(port):
     """The name a reader sees before any disambiguation."""
     name = port.get("port_name") or ""
@@ -123,7 +194,7 @@ def row(port, plan=None):
     name = port.get("port_name") or ""
     crossing = port.get("crossing_name") or ""
     suffix = (plan or {}).get(port.get("port_number"), "")
-    base = base_label(port)
+    base = reader_label(base_label(port))
     # Same name, same state, no crossing name to tell them apart - which is exactly the two
     # Naco records. Say so in plain words instead of printing a CBP port code, which reads
     # as a data leak rather than a border crossing.
@@ -181,13 +252,33 @@ def main():
     # caught the same way as one across borders.
     _plan = label_plan(list(ca) + list(mx))
 
+    # One row per crossing. CBP sends a port and its lanes as separate records, so the same
+    # bridge arrives twice under different labels - bare "Ysleta" and "El Paso - Ysleta" - and a
+    # reader comparing waits has no way to know they are one place. It reads as two crossings
+    # and halves the apparent traffic on each.
+    def dedupe(rows):
+        best, order = {}, []
+        for r in rows:
+            key = re.sub(r"[^a-z0-9]+", " ", r["port_name"].lower()).strip()
+            if key not in best:
+                best[key] = r
+                order.append(key)
+                continue
+            # the row with a published delay is the one worth showing
+            if "not reported" in best[key].get("commercial_display", "") and                "not reported" not in r.get("commercial_display", ""):
+                best[key] = r
+        return [best[k] for k in order]
+
+    _ca_rows = dedupe([row(p, _plan) for p in ca])
+    _mx_rows = dedupe([row(p, _plan) for p in mx])
+
     page_data = {
-        "port_count": str(len(ports)),
-        "ca_count": str(len(ca)),
-        "mx_count": str(len(mx)),
+        "port_count": str(len(_ca_rows) + len(_mx_rows)),
+        "ca_count": str(len(_ca_rows)),
+        "mx_count": str(len(_mx_rows)),
         "reported_count": str(len(reported)),
-        "ca_ports": [row(p, _plan) for p in ca],
-        "mx_ports": [row(p, _plan) for p in mx],
+        "ca_ports": _ca_rows,
+        "mx_ports": _mx_rows,
     }
     # Page-level chrome values the shared head/foot expect.
     border = load_json("border.norm")
@@ -211,7 +302,7 @@ def main():
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(html)
 
-    print(f"  all-ports: {len(ports)} ports ({len(ca)} CA, {len(mx)} MX), "
+    print(f"  all-ports: {len(_ca_rows) + len(_mx_rows)} crossings ({len(_ca_rows)} CA, {len(_mx_rows)} MX), "
           f"{len(reported)} with a published commercial delay, {len(html):,} bytes")
     return 0
 

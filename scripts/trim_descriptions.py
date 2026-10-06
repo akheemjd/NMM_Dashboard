@@ -53,6 +53,7 @@ def main():
         return 0
 
     changed = []
+    total = 0
     longest_before = 0
     for root, _dirs, files in os.walk(DOCS):
         if os.sep + "assets" in root or "index.html" not in files:
@@ -63,7 +64,8 @@ def main():
         head = html[:head_end] if head_end > 0 else html
 
         def sub(m):
-            nonlocal longest_before
+            nonlocal longest_before, total
+            total += 1
             original = m.group(2)
             longest_before = max(longest_before, len(original))
             new, did = trim(original)
@@ -92,7 +94,7 @@ def main():
         return 0
 
     if changed:
-        print(f"DESCTRIM: trimmed {len(changed)} of 170 descriptions to <= {LIMIT} chars")
+        print(f"DESCTRIM: trimmed {len(changed)} of {total} descriptions to <= {LIMIT} chars")
         for rel, a, b in changed[:6]:
             print(f"  {a:>4} -> {b:>4}  {rel}")
     else:
