@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-316246",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at BROCK ROAD, Pickering. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.839847225,
-      "lng": -79.068287015,
-      "start": 1791276900,
-      "end": null,
-      "updated": 1791276900,
-      "scheduled": false
-    },
-    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -518,23 +501,6 @@
       "updated": "2026-10-06"
     },
     {
-      "id": "ON-316199",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 417 Westbound On-ramp at MOODIE DR (IC 134), Ottawa. ALL LANES CLOSED.",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "ALL LANES CLOSED",
-      "lat": 45.33849,
-      "lng": -75.84131,
-      "start": 1791255600,
-      "end": 1791277200,
-      "updated": 1791244020,
-      "scheduled": false
-    },
-    {
       "id": "ON-316175",
       "province": "ON",
       "highway": "HWY 7",
@@ -549,23 +515,6 @@
       "start": 1791248400,
       "end": 1791536400,
       "updated": 1791238320,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316173",
-      "province": "ON",
-      "highway": "HWY 85",
-      "direction": "Southbound",
-      "description": "Continuous Construction on HWY 85 Southbound  between WELLINGTON ST UP IC-KITCHENER and HWY 7 IC-VICTORIA ST-KITCHENER, Kitchener. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.46543,
-      "lng": -80.47163,
-      "start": 1791252000,
-      "end": 1791277200,
-      "updated": 1791238080,
       "scheduled": false
     },
     {
@@ -1045,6 +994,57 @@
       "scheduled": true
     },
     {
+      "id": "ON-316035",
+      "province": "ON",
+      "highway": "HWY 412",
+      "direction": "Southbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 412 Southbound Off-ramp at TRUCK INSPECTION STATION, Whitby. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.923584,
+      "lng": -78.99858,
+      "start": 1791943200,
+      "end": 1792231200,
+      "updated": 1791213660,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316033",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Westbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 407 ETR Westbound On-ramp at THICKSON RD, Whitby. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.951527,
+      "lng": -78.94085,
+      "start": 1791943200,
+      "end": 1792231200,
+      "updated": 1791213600,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316026",
+      "province": "ON",
+      "highway": "HWY 407 ETR",
+      "direction": "Eastbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 407 ETR Eastbound Off-ramp at BALDWIN ST S, Whitby. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.947556,
+      "lng": -78.95987,
+      "start": 1791943200,
+      "end": 1792231200,
+      "updated": 1791212460,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103194",
       "province": "BC",
       "highway": "Highway 30",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-06T09:01:12.119386+00:00",
+  "updated": "2026-10-06T10:00:15.625222+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
