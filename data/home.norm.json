@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-06 02:01",
-  "updated_iso": "2026-10-06T02:01:21+00:00",
-  "build_version": "1791252081",
+  "updated_at": "2026-10-06 03:01",
+  "updated_iso": "2026-10-06T03:01:21+00:00",
+  "build_version": "1791255681",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "20 min"
   },
   "fuel": {
     "national_diesel": "260.9",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 28,
+    "active_count": 27,
     "gauge_class": "warn",
-    "status_line": "HWY 401, I-5 in S",
+    "status_line": "HWY 400, QEW, I-5 in S",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at WARDEN AVE, Toronto. Left shoulder\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at HWY 26/ BAYFIELD STREET, Barrie. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at KENNEDY RD -SCARBOROUGH, Toronto.\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound RAMP at HWY 10/HURONTARIO, Mississauga. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT"
+      "captured_at": "22:54 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT"
+      "captured_at": "19:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
