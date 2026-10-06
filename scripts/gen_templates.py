@@ -51,7 +51,7 @@ NAV = [
 ]
 
 ORG_LD = ('{"@type":"Organization","@id":"' + ORG_URL + '/#org","name":"Northern Mile Media",'
-          '"url":"' + ORG_URL + '/","description":"Canadian trucking and fuel data publication."}')
+          '"url":"' + ORG_URL + '/","description":"North American trucking and fuel data, published from primary sources."}')
 
 
 def nav_html(active):
@@ -744,7 +744,7 @@ write("border-wait-times",
       '{"@type":"Dataset","name":"Canada-US Commercial Border Wait Times","description":"Commercial lane wait times at Canada-United States border crossings, from the Canada Border Services Agency feed.","url":"' + BASE + '/border-wait-times/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}', "article")
  + '''
   <section class="hero">
-    <span class="eyebrow">{{agency}} commercial lanes</span>
+    <span class="eyebrow">CBSA and CBP commercial lanes</span>
     <h1>Border wait times</h1>
     <p class="stand">Busiest right now: <b>{{border.max_name}}</b> at <b>{{border.max_wait}}</b> — wait is idle time, and the faster crossing is usually the cheaper crossing. Polled every 30 minutes from CBSA's own capture times.</p>
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
@@ -879,7 +879,7 @@ write("market-pulse",
 # ═══ News ═════════════════════════════════════════════════════════════
 write("industry-news",
  head("Trucking Industry News, Canada and the US | Northern Mile",
-      "Headlines we are reading in Canadian trucking and freight, alongside live diesel prices and border wait times.",
+      "Headlines we are reading in North American trucking and freight, alongside live diesel prices and border wait times.",
       "/industry-news/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Industry news","/industry-news/") + ']}', "article")
  + '''
@@ -1575,7 +1575,7 @@ border_body = (
       "/border-wait-times/{{slug}}/", "og.jpg", BORDER_LD, "article")
  + '''
   <section class="hero">
-    <span class="eyebrow">{{agency}} commercial lanes</span>
+    <span class="eyebrow">CBSA and CBP commercial lanes</span>
     <h1>{{name}}</h1>
     <div class="figure"><span class="n">{{wait}}</span><span class="u">wait</span><span class="d {{status_class}}">{{status_label}}</span></div>
     <div class="meta"><span>{{sub}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
@@ -1589,7 +1589,7 @@ border_body = (
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>All crossings</h2><p>commercial lane wait · {{agency}}</p></div>
+    <div class="lead"><h2>All crossings</h2><p>commercial lane wait · CBSA and CBP</p></div>
     <div class="rows">
     <!--LOOP:siblings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}</span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></a><!--/LOOP:siblings-->
     </div>

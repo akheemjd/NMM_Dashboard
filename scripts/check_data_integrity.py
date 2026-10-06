@@ -1155,6 +1155,8 @@ def check_brand_identity():
         "Canadian trucking data",   # identity, not geography
         "Canadian Carriers",        # advertise page
         "Citable Canadian",         # press page
+        "Canadian trucking and fuel data publication",  # Organization schema, 189 pages
+        "Canadian trucking data publication",
     ]
     counts = {b: 0 for b in banned}
     foot_tags = {}
