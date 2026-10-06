@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-316383",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at 4TH LINE, Innisfil. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 44.23700292,
-      "lng": -79.66674307,
-      "start": 1791302040,
-      "end": null,
-      "updated": 1791302040,
-      "scheduled": false
-    },
-    {
       "id": "ON-316381",
       "province": "ON",
       "highway": "HWY 400",
@@ -86,7 +69,7 @@
       "scheduled": true
     },
     {
-      "id": "ON-316359",
+      "id": "ON-316389",
       "province": "ON",
       "highway": "HWY 400",
       "direction": "Southbound",
@@ -98,7 +81,7 @@
       "lat": 44.12397,
       "lng": -79.63706,
       "start": 1791943200,
-      "end": 1792227600,
+      "end": 1792918800,
       "updated": 1791297600,
       "scheduled": true
     },
@@ -423,6 +406,23 @@
       "start": 1791892800,
       "end": 1792177200,
       "updated": 1791286140,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316293",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Nightly Construction on QEW Fort Erie Bound  between EASTPORT DRIVE and NIKOLA TESLA, Hamilton. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.29301,
+      "lng": -79.79402,
+      "start": 1791500400,
+      "end": 1791536400,
+      "updated": 1791279960,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-06T16:00:26.315694+00:00",
+  "updated": "2026-10-06T17:00:26.853001+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
