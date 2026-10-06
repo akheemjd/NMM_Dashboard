@@ -188,6 +188,11 @@ def severity_class(avg):
         return "normal"
 
 
+# A trend needs more than one day. The CBP rows started accumulating today, so they are in the
+# archive and not in the table: a P90 of a single reading is not a percentile, it is that
+# reading wearing a percentile's clothes.
+MIN_TREND_DAYS = 7
+
 CROSSING_NAMES = {
     "coutts-sweetgrass": "Coutts–Sweetgrass",
     "emerson-pembina": "Emerson–Pembina",
@@ -201,11 +206,38 @@ CROSSING_NAMES = {
 }
 
 
+# Each row in the trends table links to the crossing's own page. The trend id is the CBSA
+# archive's key, and it does not always match the page name: the archive says
+# "lacolle-champlain" and the page is "lacolle-border-crossing", the archive says
+# "queenston-lewiston" and the page is "queenston-lewiston-bridge". Without this map four of the
+# nine rows would link to a 404.
+TREND_PAGE_SLUG = {
+    "coutts-sweetgrass": "coutts-sweetgrass",
+    "emerson-pembina": "emerson-pembina",
+    "fort-erie-buffalo": "peace-bridge",
+    "lacolle-champlain": "lacolle-border-crossing",
+    "lansdowne-alexandria": "thousand-islands-bridge",
+    "pacific-blaine": "pacific-highway-crossing",
+    "queenston-lewiston": "queenston-lewiston-bridge",
+    "sarnia-port-huron": "blue-water-bridge",
+    "windsor-detroit": "ambassador-bridge",
+}
+
+
+def slugify_name(name):
+    """Same rule build_border_pages.py writes these pages with."""
+    import re as _re
+    return _re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
+
+
 def build_table_rows(trends):
     """Generate table rows for summary table."""
     rows_html = ""
     crossings_list = sorted(trends["crossings"].items(), key=lambda x: -x[1]["avg_delay"])
     for cid, stats in crossings_list:
+        # Skip anything without enough history behind it to describe a trend.
+        if stats.get("days_covered", 0) < MIN_TREND_DAYS:
+            continue
         name = CROSSING_NAMES.get(cid, cid.replace("-", " ").title())
         avg = stats["avg_delay"]
         p75 = stats["p75"]
@@ -221,8 +253,12 @@ def build_table_rows(trends):
             us_cell = "not reported"
         else:
             us_cell = "&mdash;"
+        # Link the crossing to its own page. Every crossing in this table has one, and a table
+        # of nine crossings that linked to none of them was a dead end for the reader and for a
+        # crawler alike.
+        _slug = "border-wait-times/" + TREND_PAGE_SLUG.get(cid, slugify_name(name))
         rows_html += f'''      <tr class="{cls}">
-        <td><strong>{name}</strong></td>
+        <td><strong><a href="/{_slug}/">{name}</a></strong></td>
         <td>{avg} min</td>
         <td>{p75} min</td>
         <td>{p90} min</td>

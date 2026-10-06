@@ -1074,6 +1074,38 @@ def check_us_pages_lead_in_gallons():
     return bad
 
 
+def check_internal_links_resolve():
+    """Every internal link in a page body must land on a page that exists.
+
+    Written after two separate link faults in one session: the port list carried slugs it never
+    used, and the trends table grew 37 rows pointing at pages nobody had built. Both shipped
+    because nothing checked. canonical was covered; href was not.
+    """
+    import os
+    import re as _re
+    docs = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+    bad = []
+    for dirpath, _d, files in os.walk(docs):
+        if os.sep + "assets" in dirpath or "index.html" not in files:
+            continue
+        rel_dir = os.path.relpath(dirpath, docs).replace(os.sep, "/")
+        html = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                    errors="replace").read()
+        m = _re.search(r"<main\b.*?</main>", html, _re.S)
+        body = m.group(0) if m else html
+        for href in set(_re.findall(r'href="(/[^"#?]*)"', body)):
+            if href.startswith("/assets/") or href.endswith((".xml", ".txt", ".json", ".js", ".css")):
+                continue
+            target = href.strip("/")
+            if not target:
+                continue
+            if not (os.path.exists(os.path.join(docs, target, "index.html")) or
+                    os.path.exists(os.path.join(docs, target)) or
+                    os.path.exists(os.path.join(docs, target + ".html"))):
+                bad.append(f"/{rel_dir}/ links to {href} which was never built")
+    return bad[:6]
+
+
 def check_canonical_targets_resolve():
     """Every canonical must be the page's own URL, and must resolve.
 
@@ -1259,6 +1291,7 @@ CHECKS = (
     ("us state pages attribute diesel to a district", check_us_state_pages),
     ("brand identity matches the data geography", check_brand_identity),
     ("canonical URLs resolve to built pages", check_canonical_targets_resolve),
+    ("internal links resolve to built pages", check_internal_links_resolve),
     ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("country trees are separate and reachable", check_country_trees),
