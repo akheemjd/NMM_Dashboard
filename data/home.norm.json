@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-07 13:01",
-  "updated_iso": "2026-10-07T13:01:08+00:00",
-  "build_version": "1791378068",
+  "updated_at": "2026-10-07 14:01",
+  "updated_iso": "2026-10-07T14:01:10+00:00",
+  "build_version": "1791381670",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "260.5",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 35,
     "gauge_class": "warn",
-    "status_line": "HWY 401",
+    "status_line": "HWY 401, HWY 17, HWY 622",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound ON-RAMP at TRAFALGAR ROAD, Halton-Milton.\u2026",
+        "what": "Collision on HWY 401 Westbound  at GUELPH LINE, Milton. Both shoulders and 2\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Highway Maintenance on HWY 401 Eastbound EXPRESS at BRIMLEY ROAD, Toronto. 1\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at LESLIE STREET, Toronto. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT"
+      "captured_at": "09:06 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -416,7 +416,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT"
+      "captured_at": "09:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT"
+      "captured_at": "06:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -446,7 +446,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT"
+      "captured_at": "08:38 CDT"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -519,17 +519,17 @@
   "news": [
     {
       "category": "industry",
-      "source": "The Trucker",
-      "headline": "Georgia Ports Authority says Savannah has record September",
-      "url": "https://www.thetrucker.com/trucking-news/business/georgia-ports-authority-says-savannah-has-record-september",
+      "source": "Trucking Dive",
+      "headline": "Trump orders expanded use of tax-free dyed diesel",
+      "url": "https://www.truckingdive.com/news/trump-orders-expanded-use-of-tax-free-dyed-diesel/832293/",
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "drivers",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "TAT takes driver appreciation on the road",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/tat-takes-driver-appreciation-on-the-road",
-      "why": "Driver supply and pay shape capacity and rates."
+      "headline": "Police issue 32 tickets in New York Hard Hat operation",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/police-issue-32-tickets-in-new-york-hard-hat-operation",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
