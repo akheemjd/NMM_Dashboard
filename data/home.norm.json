@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-07 14:01",
-  "updated_iso": "2026-10-07T14:01:10+00:00",
-  "build_version": "1791381670",
+  "updated_at": "2026-10-07 15:01",
+  "updated_iso": "2026-10-07T15:01:20+00:00",
+  "build_version": "1791385280",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "15 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min"
   },
   "fuel": {
     "national_diesel": "260.5",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 35,
+    "active_count": 33,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 17, HWY 622",
+    "status_line": "HWY 401, HWY 9",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at GUELPH LINE, Milton. Both shoulders and 2\u2026",
+        "what": "Collision on HWY 401 Eastbound  at HWY 6 SOUTH, Puslinch. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at LESLIE STREET, Toronto. Left\u2026",
+        "road": "HWY 9",
+        "what": "Collision on HWY 9 Both Directions  between CALEDON KING TOWNLINE/BOUNDARY\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:06 EDT"
+      "captured_at": "10:01 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -426,7 +426,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:30 MDT"
+      "captured_at": "08:15 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT"
+      "captured_at": "07:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,17 +518,17 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
-      "source": "Trucking Dive",
-      "headline": "Trump orders expanded use of tax-free dyed diesel",
-      "url": "https://www.truckingdive.com/news/trump-orders-expanded-use-of-tax-free-dyed-diesel/832293/",
-      "why": "Industry movement worth tracking."
+      "category": "regulations",
+      "source": "The Trucker",
+      "headline": "FDA action clears major hurdle for DOT oral fluid drug testing",
+      "url": "https://www.thetrucker.com/trucking-news/business/fda-action-clears-major-hurdle-for-dot-oral-fluid-drug-testing",
+      "why": "Rules change compliance cost and driver hours."
     },
     {
       "category": "industry",
-      "source": "The Trucker",
-      "headline": "Police issue 32 tickets in New York Hard Hat operation",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/police-issue-32-tickets-in-new-york-hard-hat-operation",
+      "source": "Trucking Dive",
+      "headline": "Family-owned Weaver Bros. of Alaska sells off majority stake in business",
+      "url": "https://www.truckingdive.com/news/family-owned-weaver-bros-of-alaska-sells-off-majority-stake-in-business/831542/",
       "why": "Industry movement worth tracking."
     }
   ],
