@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-316585",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MARKHAM ROAD, Toronto. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.78533038,
+      "lng": -79.23509759,
+      "start": 1791348420,
+      "end": null,
+      "updated": 1791348420,
+      "scheduled": false
+    },
+    {
+      "id": "ON-316583",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Emergency Roadwork on HWY 401 Eastbound TRANSFER at 400 Collector to Express, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.71829004,
+      "lng": -79.50052254,
+      "start": 1791346860,
+      "end": null,
+      "updated": 1791346860,
+      "scheduled": false
+    },
+    {
       "id": "ON-316578",
       "province": "ON",
       "highway": "HWY 401",
@@ -67,23 +101,6 @@
       "end": 1791493200,
       "updated": 1791341940,
       "scheduled": true
-    },
-    {
-      "id": "ON-316573",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 403 MISSISSAUGA Eastbound  at HWY 5 / DUNDAS STREET, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.51225661,
-      "lng": -79.69322025,
-      "start": 1791340980,
-      "end": null,
-      "updated": 1791340980,
-      "scheduled": false
     },
     {
       "id": "ON-316564",
@@ -426,23 +443,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-316347",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Construction on HWY 400 Southbound Express between BASS PRO MILLS DRIVE and HIGHWAY 7, Vaughan. 4 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "4 Alternating Lane(s)",
-      "lat": 43.82064,
-      "lng": -79.5456,
-      "start": 1791939600,
-      "end": 1792227600,
-      "updated": 1791296640,
-      "scheduled": true
-    },
-    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -684,26 +684,6 @@
     },
     {
       "scheduled": false,
-      "start_date": "2026-10-05",
-      "end_date": "2026-10-06",
-      "id": "CA-C5HB-0014-2026-10-05-21:01:00",
-      "province": "CA",
-      "region_label": "Central Valley",
-      "highway": "I-5 in San Joaquin County",
-      "direction": "South",
-      "description": "San Joaquin/Sacramento County Line near Thornton. Highway Construction. 1 of 2 lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "",
-      "closure": false,
-      "lanes": "1 of 2",
-      "lat": 38.254747,
-      "lng": -121.44807,
-      "start": "2026-10-05",
-      "end": "2026-10-06",
-      "updated": "2026-10-06"
-    },
-    {
-      "scheduled": false,
       "start_date": "2026-10-06",
       "end_date": "2026-10-07",
       "id": "CA-C5HB-0015-2026-10-06-21:01:00",
@@ -940,6 +920,26 @@
       "lng": -121.397665,
       "start": "2026-10-07",
       "end": "2026-10-08",
+      "updated": "2026-10-06"
+    },
+    {
+      "scheduled": true,
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-09",
+      "id": "CA-C5HB-0035-2026-10-08-20:01:00",
+      "province": "CA",
+      "region_label": "Central Valley",
+      "highway": "I-5 in San Joaquin County",
+      "direction": "South",
+      "description": "Route 5 near Lodi. Highway Construction. All of 1 lanes closed.",
+      "event_type": "closures",
+      "severity": "",
+      "closure": true,
+      "lanes": "All of 1",
+      "lat": 38.115746,
+      "lng": -121.397665,
+      "start": "2026-10-08",
+      "end": "2026-10-09",
       "updated": "2026-10-06"
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-07T04:00:44.731572+00:00",
+  "updated": "2026-10-07T05:00:45.388016+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
