@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-316597",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at Burnham St (IC 472)/CR 18, Cobourg. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.98011,
+      "lng": -78.19625,
+      "start": 1791360840,
+      "end": null,
+      "updated": 1791360840,
+      "scheduled": false
+    },
+    {
       "id": "ON-316596",
       "province": "ON",
       "highway": "HWY 69",
@@ -15,23 +32,6 @@
       "start": 1791359580,
       "end": null,
       "updated": 1791359580,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316595",
-      "province": "ON",
-      "highway": "HWY 406",
-      "direction": "Northbound",
-      "description": "Highway Maintenance on HWY 406 Northbound  at WESTCHESTER AVE, St. Catharines. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.1579476,
-      "lng": -79.23596847,
-      "start": 1791357000,
-      "end": null,
-      "updated": 1791357000,
       "scheduled": false
     },
     {
@@ -84,23 +84,6 @@
       "end": 1793485800,
       "updated": 1791349620,
       "scheduled": true
-    },
-    {
-      "id": "ON-316583",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Emergency Roadwork on HWY 401 Eastbound TRANSFER at 400 Collector to Express, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.71829004,
-      "lng": -79.50052254,
-      "start": 1791346860,
-      "end": null,
-      "updated": 1791346860,
-      "scheduled": false
     },
     {
       "scheduled": false,
@@ -943,6 +926,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-316354",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Nightly Engineering Investigation on HWY 11 Northbound  between LINE 5 and LINE 11, Oro Medonte. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.466145,
+      "lng": -79.56479,
+      "start": 1791936000,
+      "end": 1792148400,
+      "updated": 1791297360,
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-103217",
       "province": "BC",
       "highway": "Highway 97 near Highway 97 S",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-07T08:00:48.991361+00:00",
+  "updated": "2026-10-07T09:00:46.615636+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
