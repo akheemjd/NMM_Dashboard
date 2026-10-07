@@ -1,54 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-316526",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Vehicle Fire on HWY 400 Southbound  at SOUTH OF SHEPPARD, Toronto. Left shoulder and 3 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 3 left lanes closed",
-      "lat": 43.73163807,
-      "lng": -79.52539007,
-      "start": 1791326340,
-      "end": null,
-      "updated": 1791327300,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316528",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Vehicle Fire on HWY 400 Northbound  at 401, Toronto. 5 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "5 left lanes closed",
-      "lat": 43.71416751,
-      "lng": -79.51573698,
-      "start": 1791326460,
-      "end": null,
-      "updated": 1791326460,
-      "scheduled": false
-    },
-    {
-      "id": "ON-316509",
+      "id": "ON-316538",
       "province": "ON",
       "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at DIXIE ROAD, Mississauga. 2 right lanes and right shoulder closed.",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at BURLINGTON SKYWAY, Burlington. 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "2 right lanes and right shoulder closed",
-      "lat": 43.59655811,
-      "lng": -79.56909452,
-      "start": 1791323760,
+      "lanes": "1 left lane closed",
+      "lat": 43.29851876,
+      "lng": -79.79709653,
+      "start": 1791329940,
       "end": null,
-      "updated": 1791325980,
+      "updated": 1791329940,
+      "scheduled": false
+    },
+    {
+      "id": "ON-316534",
+      "province": "ON",
+      "highway": "HWY 35/115",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on HWY 35/115 Southbound  at 6TH ROAD/TAUNTON ROAD, Clarington. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.992929,
+      "lng": -78.610814,
+      "start": 1791328560,
+      "end": null,
+      "updated": 1791328560,
       "scheduled": false
     },
     {
@@ -69,23 +52,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-316524",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at CHRISTIE ST / LAKEVIEW AVE, Grimsby. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.19862652,
-      "lng": -79.56126025,
-      "start": 1791325800,
-      "end": null,
-      "updated": 1791325800,
-      "scheduled": false
-    },
-    {
       "id": "ON-316455",
       "province": "ON",
       "highway": "HWY 417",
@@ -100,7 +66,7 @@
       "start": 1791342000,
       "end": 1791363600,
       "updated": 1791314160,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-316445",
@@ -117,7 +83,7 @@
       "start": 1791414000,
       "end": 1791536400,
       "updated": 1791312780,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-316436",
@@ -134,7 +100,7 @@
       "start": 1791334800,
       "end": 1791374400,
       "updated": 1791311280,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-316424",
@@ -219,7 +185,7 @@
       "start": 1791370800,
       "end": 1791374400,
       "updated": 1791300960,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-316418",
@@ -287,7 +253,7 @@
       "start": 1791338400,
       "end": 1791363600,
       "updated": 1791297420,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-316375",
@@ -426,6 +392,40 @@
       "scheduled": true
     },
     {
+      "id": "ON-316352",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 400 Southbound Collector between LANGSTAFF ROAD and LANGSTAFF ROAD, Vaughan. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.809307,
+      "lng": -79.54362,
+      "start": 1792465200,
+      "end": 1792486800,
+      "updated": 1791296640,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316353",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Collector between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1791943200,
+      "end": 1792231200,
+      "updated": 1791296640,
+      "scheduled": true
+    },
+    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -546,7 +546,7 @@
       "updated": "2026-10-06"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-07",
       "end_date": "2026-10-08",
       "id": "CA-C5HB-0004-2026-10-07-20:01:00",
@@ -646,7 +646,7 @@
       "updated": "2026-10-06"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-07",
       "end_date": "2026-10-08",
       "id": "CA-C5HB-0010-2026-10-07-20:01:00",
@@ -746,7 +746,7 @@
       "updated": "2026-10-06"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-07",
       "end_date": "2026-10-08",
       "id": "CA-C5HB-0016-2026-10-07-21:01:00",
@@ -846,7 +846,7 @@
       "updated": "2026-10-06"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-07",
       "end_date": "2026-10-08",
       "id": "CA-C5HB-0022-2026-10-07-20:01:00",
@@ -906,7 +906,7 @@
       "updated": "2026-10-06"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-07",
       "end_date": "2026-10-08",
       "id": "CA-C5HB-0028-2026-10-07-20:01:00",
@@ -1008,23 +1008,6 @@
       "start": "2026-08-26T09:42:32-07:00",
       "end": "",
       "updated": "2026-10-05T09:16:26-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-103210",
-      "province": "BC",
-      "highway": "Highway 97",
-      "direction": "",
-      "description": "Special event at Highway 97, 3km Northwest of Cache Creek. Starting Tue Oct 6 until Tue Oct 6. From 9:00 AM to 4:00 PM PDT, Tuesday. Single lane alternating traffic. Watch for traffic control. Last update: October 5th, 2026 at 9:14am PDT. Environmental Cleanup.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.82553163,
-      "lng": -121.3505967,
-      "start": "2026-10-05T09:14:35-07:00",
-      "end": "",
-      "updated": "2026-10-05T09:14:35-07:00",
       "scheduled": false
     },
     {
@@ -1266,6 +1249,23 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-102650",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Utility work from Highway 1, Mill Bay Rd to Bamberton Rd. Starting Tue Sep 29 until Fri Oct 9. From 9:00 PM to 5:00 AM PDT the next day, every day. Right lane closed. Watch for traffic control. Last update: September 22nd, 2026 at 1:34pm PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 48.60163,
+      "lng": -123.5351,
+      "start": "2026-09-22T13:25:27-07:00",
+      "end": "",
+      "updated": "2026-09-22T13:34:06-07:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102518",
       "province": "BC",
       "highway": "Highway 4 near Pacific Rim Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-06T23:00:34.743525+00:00",
+  "updated": "2026-10-07T00:00:37.088000+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
