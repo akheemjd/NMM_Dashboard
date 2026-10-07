@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-316573",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Eastbound",
+      "description": "Vehicle Fire on HWY 403 MISSISSAUGA Eastbound  at HWY 5 / DUNDAS STREET, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.51225661,
+      "lng": -79.69322025,
+      "start": 1791340980,
+      "end": null,
+      "updated": 1791340980,
+      "scheduled": false
+    },
+    {
       "id": "ON-316564",
       "province": "ON",
       "highway": "HWY 401",
@@ -35,23 +52,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-316556",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at HWY 410, Mississauga. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.6393672,
-      "lng": -79.661377,
-      "start": 1791336180,
-      "end": null,
-      "updated": 1791336180,
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103292",
       "province": "BC",
       "highway": "Highway 6 near Needles Ferry",
@@ -66,23 +66,6 @@
       "start": "2026-10-06T18:21:56-07:00",
       "end": "",
       "updated": "2026-10-06T18:21:56-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-316534",
-      "province": "ON",
-      "highway": "HWY 35/115",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 35/115 Southbound  at 6TH ROAD/TAUNTON ROAD, Clarington. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.992929,
-      "lng": -78.610814,
-      "start": 1791328560,
-      "end": null,
-      "updated": 1791328560,
       "scheduled": false
     },
     {
@@ -439,6 +422,23 @@
       "lng": -79.54362,
       "start": 1792465200,
       "end": 1792486800,
+      "updated": 1791296640,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316353",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Nightly Construction on HWY 400 Northbound Collector between HIGHWAY 7 and LANGSTAFF ROAD, Vaughan. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.791344,
+      "lng": -79.53936,
+      "start": 1791943200,
+      "end": 1792231200,
       "updated": 1791296640,
       "scheduled": true
     },
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-07T02:00:40.903342+00:00",
+  "updated": "2026-10-07T03:00:40.302972+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
