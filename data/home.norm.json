@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-07 19:01",
-  "updated_iso": "2026-10-07T19:01:18+00:00",
-  "build_version": "1791399678",
+  "updated_at": "2026-10-07 20:01",
+  "updated_iso": "2026-10-07T20:01:46+00:00",
+  "build_version": "1791403306",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Coutts-Sweetgrass",
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "259.6",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 28,
+    "active_count": 29,
     "gauge_class": "warn",
-    "status_line": "HWY 401, QEW, I-5 in S",
+    "status_line": "HWY 17, HWY 85, QEW, HWY 400",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound TRANSFER at Neilson Express to Collector,\u2026",
+        "road": "HWY 17",
+        "what": "Collision on HWY 17 Westbound  at BURRITTS RD-CAMERON TWP RD L 1-35 C B,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at Provincial Road, Windsor. 2 right lanes\u2026",
+        "road": "HWY 85",
+        "what": "Collision on HWY 85 Southbound  at UNIVERSITY AV UP IC-KITCHENER, Waterloo.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -372,11 +372,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT"
+      "captured_at": "15:06 EDT"
     },
     {
       "name": "Blue Water Bridge",
@@ -416,17 +416,17 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 EDT"
+      "captured_at": "15:15 EDT"
     },
     {
       "name": "Coutts-Sweetgrass",
       "slug": "coutts-sweetgrass",
       "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 MDT"
+      "captured_at": "13:44 MDT"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -436,7 +436,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT"
+      "captured_at": "12:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -508,8 +508,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "",
-      "note": "3 of 9 crossings slow",
-      "value": "3/9",
+      "note": "5 of 9 crossings slow",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
