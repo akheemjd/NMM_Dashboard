@@ -1,0 +1,39 @@
+# Line endings.
+#
+# This repo builds on Windows and deploys through GitHub Pages on Linux. Without this file, Git
+# falls back to core.autocrlf=true, which means every text file is CRLF in the working tree and LF
+# in the repository, and every generator in scripts/ rewrites its output file on every run.
+#
+# That combination produced a false alarm that cost a deploy: templates/404.template.html was
+# reported modified by `git status` while its bytes were identical to HEAD once line endings were
+# normalised, and deploy.sh's source-tree guard refuses to deploy on a dirty tree. Every other run
+# that day passed, so it looked intermittent. See the guard's own comment in deploy.sh.
+#
+# eol=lf keeps the working tree LF, so a file written by Python on Windows matches the repository
+# instead of being converted twice. text=auto lets Git decide what is text - it will not touch
+# binaries, and anything that looks binary is left alone.
+
+* text=auto eol=lf
+
+# Never rewrite, never normalise. These are bytes we generate or consume, and a stray conversion
+# would corrupt them silently rather than fail loudly.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.pdf   binary
+*.zip   binary
+*.gz    binary
+
+# Fonts and data assets the site serves verbatim.
+*.csv   text eol=lf
+*.json  text eol=lf
+*.xml   text eol=lf
+*.svg   text eol=lf
+
+# Shell scripts run on the Linux runner. They must be LF or bash fails on a stray CR.
+*.sh    text eol=lf
