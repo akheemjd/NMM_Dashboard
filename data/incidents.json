@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-317028",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound HOV at LLOYDTOWN-AURORA RD, Kettleby. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 44.001379,
+      "lng": -79.586062,
+      "start": 1791430440,
+      "end": null,
+      "updated": 1791430440,
+      "scheduled": false
+    },
+    {
+      "id": "ON-317027",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at MISSISSAUGA ROAD, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.55233005,
+      "lng": -79.61354776,
+      "start": 1791429300,
+      "end": null,
+      "updated": 1791429300,
+      "scheduled": false
+    },
+    {
       "id": "ON-317024",
       "province": "ON",
       "highway": "HWY 11",
@@ -15,23 +49,6 @@
       "start": 1791428220,
       "end": null,
       "updated": 1791428220,
-      "scheduled": false
-    },
-    {
-      "id": "ON-317023",
-      "province": "ON",
-      "highway": "HWY 403 MISSISSAUGA",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 MISSISSAUGA Eastbound COLLECTOR RAMP at SOUTH OF HWY 401, Mississauga. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.63623,
-      "lng": -79.65358,
-      "start": 1791427680,
-      "end": null,
-      "updated": 1791427680,
       "scheduled": false
     },
     {
@@ -477,23 +494,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-316816",
-      "province": "ON",
-      "highway": "HWY 26",
-      "direction": "Eastbound",
-      "description": "Continuous Construction on HWY 26 Eastbound  between Meaford Townline / The Blue Mountains, Meaford and Blue Mountain Drive, Collingwood. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.576912,
-      "lng": -80.503235,
-      "start": 1791457200,
-      "end": 1791496800,
-      "updated": 1791394080,
-      "scheduled": false
-    },
-    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-10-30",
@@ -614,26 +614,6 @@
       "updated": "2026-10-07"
     },
     {
-      "scheduled": false,
-      "start_date": "2026-10-06",
-      "end_date": "2026-10-07",
-      "id": "CA-C5HB-0003-2026-10-06-20:01:00",
-      "province": "CA",
-      "region_label": "Central Valley",
-      "highway": "I-5 in San Joaquin County",
-      "direction": "North",
-      "description": "Hammer Lane Under-Crossing near Stockton. Highway Construction. 1, 2 of 3 lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "",
-      "closure": false,
-      "lanes": "1, 2 of 3",
-      "lat": 38.021153,
-      "lng": -121.358552,
-      "start": "2026-10-06",
-      "end": "2026-10-07",
-      "updated": "2026-10-07"
-    },
-    {
       "scheduled": true,
       "start_date": "2026-10-13",
       "end_date": "2026-10-14",
@@ -671,6 +651,26 @@
       "lng": -121.358552,
       "start": "2026-10-07",
       "end": "2026-10-08",
+      "updated": "2026-10-07"
+    },
+    {
+      "scheduled": true,
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-15",
+      "id": "CA-C5HB-0004-2026-10-14-20:01:00",
+      "province": "CA",
+      "region_label": "Central Valley",
+      "highway": "I-5 in San Joaquin County",
+      "direction": "North",
+      "description": "Hammer Lane Under-Crossing near Stockton. Highway Construction. 1, 2 of 3 lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "",
+      "closure": false,
+      "lanes": "1, 2 of 3",
+      "lat": 38.021153,
+      "lng": -121.358552,
+      "start": "2026-10-14",
+      "end": "2026-10-15",
       "updated": "2026-10-07"
     },
     {
@@ -754,26 +754,6 @@
       "updated": "2026-10-07"
     },
     {
-      "scheduled": false,
-      "start_date": "2026-10-06",
-      "end_date": "2026-10-07",
-      "id": "CA-C5HB-0009-2026-10-06-20:01:00",
-      "province": "CA",
-      "region_label": "Central Valley",
-      "highway": "I-5 in San Joaquin County",
-      "direction": "North",
-      "description": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "",
-      "closure": false,
-      "lanes": "1 of 2",
-      "lat": 38.115746,
-      "lng": -121.397665,
-      "start": "2026-10-06",
-      "end": "2026-10-07",
-      "updated": "2026-10-07"
-    },
-    {
       "scheduled": true,
       "start_date": "2026-10-13",
       "end_date": "2026-10-14",
@@ -811,6 +791,26 @@
       "lng": -121.397665,
       "start": "2026-10-07",
       "end": "2026-10-08",
+      "updated": "2026-10-07"
+    },
+    {
+      "scheduled": true,
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-15",
+      "id": "CA-C5HB-0010-2026-10-14-20:01:00",
+      "province": "CA",
+      "region_label": "Central Valley",
+      "highway": "I-5 in San Joaquin County",
+      "direction": "North",
+      "description": "Route 12 near Lodi. Highway Construction. 1 of 2 lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "",
+      "closure": false,
+      "lanes": "1 of 2",
+      "lat": 38.115746,
+      "lng": -121.397665,
+      "start": "2026-10-14",
+      "end": "2026-10-15",
       "updated": "2026-10-07"
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-08T03:00:20.818724+00:00",
+  "updated": "2026-10-08T04:00:20.904616+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
