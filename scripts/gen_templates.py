@@ -164,11 +164,24 @@ def sponsor(key):
             f'  <!--/OPTIONAL:{key}-->\n')
 
 
-def cite():
-    return """
+def cite(custom=None):
+    """The provenance surface. Every page that publishes a figure says where it came from.
+
+    The default is the Canadian diesel index, which is what most pages carry. A page publishing
+    something else - a US state's diesel, a border wait, an exchange rate - passes its own, because
+    a citation naming the wrong figure is worse than no citation.
+
+    Pass a plain string. Tokens must stay as {{tokens}} for the fill engine, so do not build the
+    argument with an f-string - the braces collapse and an unresolved token reaches the page.
+    """
+    if custom is None:
+        custom = ("Northern Mile Canadian Diesel Index: {{fuel.national_diesel}}¢/L across ten "
+                  "Canadian provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile "
+                  "Media, dashboard.northernmilemedia.com/methodology/nmdi/")
+    return f"""
   <div class="cite">
     <div class="cl">Citing this figure</div>
-    <q id="citation">Northern Mile Canadian Diesel Index: {{fuel.national_diesel}}¢/L across ten Canadian provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
+    <q id="citation">{custom}</q>
     <div class="row">
       <button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button>
       <a class="btn" href="/methodology/nmdi/">How it is calculated</a>
@@ -511,7 +524,8 @@ write("freight-barometer",
     <div class="lead"><h2>Cite this</h2></div>
     <p class="note"><q>Northern Mile freight barometer, {{updated_at}} UTC — Canadian diesel {{fuel.national_diesel}}¢/L, US diesel ${{eia.us_national_usd_gal}}/gal, North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}.</q> <a href="/methodology/nmdi/">Methodology</a> · <a href="/fuel-prices/">Prices by province</a></p>
   </section>
-''' + sponsor("sponsor_market") + subscribe("The week in one email",
+''' + cite(
+        'Northern Mile freight barometer: Canadian and US diesel, border waits and the US dollar, as published {{updated_at}} UTC. Northern Mile Media, dashboard.northernmilemedia.com/freight-barometer/') + sponsor("sponsor_market") + subscribe("The week in one email",
    "Diesel, the border, and one argument worth your time. Wednesday mornings.") + foot())
 
 # ═══ Calculator ═══════════════════════════════════════════════════════
@@ -729,7 +743,8 @@ write("fuel-cost-calculator",
       <p class="note">Rate floor = fuel per mile + your fixed operating cost per mile. Below this number, the load loses money. Excludes tolls and deadhead. <a href="/fuel-prices/">See prices by province</a></p>
     </div>
   </div>
-''' + sponsor("sponsor_calc") + subscribe("Know before you fill",
+''' + cite(
+        'Northern Mile fuel cost calculator: computed in-page from the NRCan weekly diesel survey, the EIA weekly diesel survey and the Bank of Canada exchange rate. Northern Mile Media, dashboard.northernmilemedia.com/fuel-cost-calculator/') + sponsor("sponsor_calc") + subscribe("Know before you fill",
    "Where diesel moved this week, which crossings backed up, and what it does to cost per kilometre. One email on Wednesday mornings.") + '''
   <section class="sec">
     <div class="lead"><h2>How this is worked out</h2><p>Plain arithmetic, no hidden assumptions.</p></div>
@@ -768,7 +783,8 @@ write("border-wait-times",
   </div>
   <p class="note">Each crossing shows both directions. <b>Into Canada</b> is the Canada Border Services Agency (CBSA) commercial lane feed. <b>Into the US</b> is the US Customs and Border Protection (CBP) feed. Each agency measures only the traffic entering its own country, so the two queues are separate and often differ. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
   <p class="note">Looking for the US-bound direction, or the Mexican border? We publish every port the US Customs and Border Protection feed carries — <a href="/border-wait-times/all-ports/">every US land border crossing</a>, including the commercial and FAST lanes.</p>
-''' + sponsor("sponsor_border") + subscribe("Border and diesel, weekly",
+''' + cite(
+        'Northern Mile border waits: commercial lane waits from the CBSA and US Customs and Border Protection feeds, each captured at its own source. Northern Mile Media, dashboard.northernmilemedia.com/border-wait-times/') + sponsor("sponsor_border") + subscribe("Border and diesel, weekly",
    "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + '''
   <section class="sec">
     <div class="lead"><h2>Reading these numbers</h2></div>
@@ -795,7 +811,8 @@ write("exchange-rate",
     <div class="cite"><div class="cl">What this is</div><q>The Bank of Canada publishes one USD/CAD observation per business day. It is not a continuous market rate and it is not the rate your bank will give you. It is the reference figure, and it is the one worth quoting.</q></div>
     <p class="stand">A rising rate means a weaker loonie — US freight pays more in CAD, but US parts and equipment cost more. A falling rate is the reverse. <a href="/fuel-cost-calculator/">Work out what a lane costs</a></p>
   </section>
-''' + sponsor("sponsor_fx") + '''
+''' + cite(
+        'Northern Mile USD/CAD: Bank of Canada daily observation, as published {{updated_at}} UTC. Northern Mile Media, dashboard.northernmilemedia.com/exchange-rate/') + sponsor("sponsor_fx") + '''
   <section class="sec">
     <div class="lead"><h2>Where today sits</h2><p>Today against the past 52 weeks.</p></div>
     <div class="viz-card">
@@ -886,7 +903,8 @@ write("market-pulse",
   <!--LOOP:market--><div class="r"><span class="k">{{name}}<small>{{what_it_means}} · {{source}}</small></span><span class="v {{value_class}}">{{value}}</span></div><!--/LOOP:market-->
   </div>
   <p class="note">These indicators mix cost signals and demand signals, which move in opposite directions for a carrier. A rising number is not automatically good news and we do not colour them as though it were. <a href="/methodology/nmdi/">How the numbers are sourced</a></p>
-''' + sponsor("sponsor_market") + subscribe("What moved, and what it cost",
+''' + cite(
+        'Northern Mile market indicators: US diesel {{us_diesel}} per gallon, USD/CAD {{usd_cad}}. Statistics Canada, the US Energy Information Administration and the Bank of Canada. Northern Mile Media, dashboard.northernmilemedia.com/market-pulse/') + sponsor("sponsor_market") + subscribe("What moved, and what it cost",
    "Diesel, the border, freight demand, and one argument worth your time. Wednesday mornings.") + foot())
 
 # ═══ News ═════════════════════════════════════════════════════════════
@@ -1133,7 +1151,8 @@ write("road-incidents",
  + INCIDENTS_ROADWORK
  + subscribe("Corridors and costs",
    "Which corridors closed, where diesel moved, and what it did to the week. One email on Wednesday mornings.")
- + foot(INCIDENTS_JS))
+ + cite(
+        'Northern Mile road incidents: live provincial 511 and Caltrans feeds, as collected {{updated_at}} UTC, coordinates as published by each agency. Northern Mile Media, dashboard.northernmilemedia.com/road-incidents/') + foot(INCIDENTS_JS))
 
 print("incidents done")
 
@@ -1183,6 +1202,8 @@ write("methodology",
 
     <h2 style="margin-top:32px">Corrections policy</h2>
     <p class="note" style="margin-top:8px">Errors in the underlying NRCan data are corrected when NRCan publishes a revision. Errors in computation are corrected immediately and logged above. A corrected figure is never retroactively substituted; the new value appears with the correction date and both values are recorded.</p>
+    <h2 style="margin-top:32px">Where these figures appear</h2>
+    <p class="note" style="margin-top:8px">The index is the national figure on the <a href="/fuel-prices/">diesel page</a>, broken out <a href="/fuel-prices/">by province</a> and compared against <a href="/us-diesel/">US districts</a>, where the same survey is priced per gallon. The exchange rate used for every cross-border conversion is on the <a href="/exchange-rate/">exchange page</a>. The weekly brief reports the two surveyed territories alongside the ten index provinces, which is why they appear there and not in the national figure.</p>
     <p class="note" style="margin-top:24px">Questions: <a href="mailto:northernmilemedia@gmail.com">northernmilemedia@gmail.com</a></p>
   </section>
 ''' + foot())
@@ -1334,7 +1355,7 @@ write("advertise",
   <section class="sec">
     <div class="lead"><h2>Who this suits</h2></div>
     <div class="reading">
-      <p>Fuel cards, factoring, insurance, ELD and compliance software, load boards, and truck stop operators. Anything a Canadian carrier buys with the money it just saved on diesel.</p>
+      <p>Fuel cards, factoring, insurance, ELD and compliance software, load boards, and truck stop operators. Anything a North American carrier buys with the money it just saved on diesel.</p>
       <p>If you sell to carriers and you want to be the name they saw first, get in while the rate reflects that the list is young.</p>
     </div>
   </section>
@@ -1343,6 +1364,7 @@ write("advertise",
     <div class="lead"><h2>Talk to us</h2></div>
     <div class="reading">
       <p>Email <a href="mailto:northernmilemedia@gmail.com?subject=Sponsorship">northernmilemedia@gmail.com</a> with what you sell and which placement you are considering. You will get a reply from a person, and a rate you can hold us to.</p>
+      <p>If you want to see what you would be sponsoring before you write, all of it is public: the <a href="/fuel-prices/">weekly diesel print</a>, the <a href="/border-wait-times/">live border waits</a> and the <a href="/market-pulse/">market indicators</a> are the three surfaces sponsors ask about most, and the <a href="/methodology/nmdi/">methodology page</a> shows where every figure comes from.</p>
     </div>
   </section>
 ''' + foot())
@@ -1610,7 +1632,8 @@ border_body = (
     <p class="note"><a href="/border-wait-times/">← All border wait times</a></p>
   </section>
 ''' + subscribe("Border and diesel, weekly",
-   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + foot())
+   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + cite(
+        'Northern Mile border wait: {{name}}, {{wait}}, {{direction}}. {{agency}}. Northern Mile Media, dashboard.northernmilemedia.com/border-wait-times/{{slug}}/') + foot())
 
 with open(os.path.join(OUT, "border-crossing.template.html"), "w") as f:
     f.write(border_body)
@@ -1662,7 +1685,8 @@ cbp_ports_body = (
     <p class="note">Mexico publishes no southbound figures, so only the US-bound direction exists for these ports.</p>
   </section>
 ''' + subscribe("Border and diesel, weekly",
-   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + foot())
+   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + cite(
+        'Northern Mile border waits: {{port_count}} ports, {{ca_count}} on the Canadian border and {{mx_count}} on the Mexican. CBSA and US Customs and Border Protection feeds. Northern Mile Media, dashboard.northernmilemedia.com/border-wait-times/all-ports/') + foot())
 
 with open(os.path.join(OUT, "cbp-ports.template.html"), "w") as f:
     f.write(cbp_ports_body)
@@ -1715,8 +1739,17 @@ ifta_body = (
     </div>
     <p class="note">US rates are levied per gallon and Canadian rates per litre; both are shown in the unit the jurisdiction actually uses rather than converted, so the figure matches the statute.</p>
   </section>
+
+  <section class="sec">
+    <div class="lead"><h2>What to do with this</h2></div>
+    <div class="reading">
+      <p>A fuel tax rate is one input to what a lane costs. The pump price is the other, and it is tracked weekly <a href="/fuel-prices/">by province</a> and <a href="/us-diesel/">by US district</a>. The two go together with distance in the <a href="/fuel-cost-calculator/">fuel cost calculator</a>.</p>
+      <p>Where these rates come from, and how a wrong one gets corrected, is on the <a href="/methodology/nmdi/">methodology page</a>.</p>
+    </div>
+  </section>
 ''' + subscribe("Border and diesel, weekly",
-   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + foot())
+   "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + cite(
+        'Northern Mile IFTA fuel tax rates: {{jurisdiction_count}} jurisdictions for {{quarter}}, published by IFTA, Inc. Northern Mile Media, dashboard.northernmilemedia.com/fuel-tax-rates/') + foot())
 
 with open(os.path.join(OUT, "ifta-rates.template.html"), "w") as f:
     f.write(ifta_body)
@@ -1806,7 +1839,8 @@ us_state_body = (
     </div>
   </section>
 ''' + subscribe("Diesel, border and tax, weekly",
-   "What fuel, the border and the dollar did to cost per mile this week. One email on Wednesday mornings.") + foot())
+   "What fuel, the border and the dollar did to cost per mile this week. One email on Wednesday mornings.") + cite(
+        'Northern Mile US diesel by state: {{state_name}}, EIA weekly retail diesel survey, week ending {{diesel_week}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/') + foot())
 
 with open(os.path.join(OUT, "us-state.template.html"), "w") as f:
     f.write(us_state_body)
@@ -1851,7 +1885,8 @@ us_states_body = (
     <p class="note">All-in is state excise plus other state fees plus the {{federal}} federal rate. IFTA is the rate a US-licensed carrier files for that state.</p>
   </section>
 ''' + subscribe("Diesel, border and tax, weekly",
-   "What fuel, the border and the dollar did to cost per mile this week. One email on Wednesday mornings.") + foot())
+   "What fuel, the border and the dollar did to cost per mile this week. One email on Wednesday mornings.") + cite(
+        'Northern Mile US diesel by state: {{state_count}} states across {{district_count}} EIA districts, week ending {{diesel_week}}. Northern Mile Media, dashboard.northernmilemedia.com/us-diesel/states/') + foot())
 
 with open(os.path.join(OUT, "us-states.template.html"), "w") as f:
     f.write(us_states_body)

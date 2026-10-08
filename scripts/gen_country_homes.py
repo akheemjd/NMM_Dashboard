@@ -20,6 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 import gen_templates as G  # noqa: E402  (import runs its generation, by design)
+import json
 
 rail = G.rail
 chart_summary = G.chart_summary
@@ -242,6 +243,21 @@ chooser_ld = (
     '"dateModified":"{{updated_iso}}"}]}'
 )
 
+# The chooser names the crossing count. It must be read, not typed: this said 85 while the page it
+# links to said 81, and nothing caught it because the number sat inside a string. CBP sends a port
+# and its lanes as separate records, so the feed's rows are fewer crossings than they look, and the
+# count moves. {{port_count}} is resolved inside build_cbp_ports.py with its own fill context, so
+# this asks the same function that builds the page rather than reading the raw feed and guessing.
+import build_cbp_ports as _cbp
+
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data",
+                       "cbp_border.json"), encoding="utf-8") as _f:
+    _CBP_PORTS = json.load(_f).get("ports") or []
+if not _CBP_PORTS:
+    raise SystemExit("gen_country_homes: cbp_border.json carries no ports - run the collector first")
+_PORT_CA, _PORT_MX = _cbp.crossings_split(_CBP_PORTS)
+_PORT_COUNT = len(_PORT_CA) + len(_PORT_MX)
+
 write(
     "index",
     head(
@@ -287,7 +303,7 @@ write(
       <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">{{fx.usd_cad}}</div>
         <div class="s">{{fx.direction}} {{fx.change}} · Bank of Canada</div></a>
       <a class="stat" href="/border-wait-times/"><div class="l">Border crossings</div>
-        <div class="v">85<span class="u2">ports</span></div>
+        <div class="v">''' + str(_PORT_COUNT) + '''<span class="u2">ports</span></div>
         <div class="s">CBP and CBSA commercial waits</div></a>
       <a class="stat" href="/fuel-tax-rates/"><div class="l">Fuel tax</div><div class="v">58<span class="u2">jurisdictions</span></div>
         <div class="s">IFTA rates, both carrier schedules</div></a>
@@ -295,6 +311,15 @@ write(
         <div class="s">Work out a lane and a rate floor</div></a>
     </div>
   </section>
+
+  <div class="cite">
+    <div class="cl">Citing this figure</div>
+    <q id="citation">Northern Mile North American diesel: Canadian {{fuel.national_diesel}}¢/L across ten provinces (NRCan weekly survey, print {{fuel.print_date}}) and US ${{eia.us_national_usd_gal}}/gal across ten EIA districts (week ending {{eia.date}}). Northern Mile Media, dashboard.northernmilemedia.com/</q>
+    <div class="row">
+      <button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button>
+      <a class="btn" href="/methodology/nmdi/">How it is calculated</a>
+    </div>
+  </div>
 '''
     + shared_tail()
     + subscribe(

@@ -1074,6 +1074,43 @@ def check_us_pages_lead_in_gallons():
     return bad
 
 
+def check_citation_coverage():
+    """Every page that publishes one of our figures says where it came from.
+
+    The block was missing from seventeen templates - most of the US state pages and all of the
+    border crossing pages, which are exactly the pages where a reader wants to know whether a
+    number is CBSA's or CBP's. It is not decoration; it is the provenance claim the site is built on.
+
+    Exempt, with reasons, so a deliberate omission does not read as a regression:
+      /methodology/nmdi/   this is where the Copy citation button sends the reader
+      /advertise/          sells sponsorship, publishes no figure
+      /contact/            how to reach us, publishes no figure
+      /industry-news/      cites other outlets' headlines, not a number of ours
+    """
+    import os
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    docs = os.path.join(root, "docs")
+    exempt = {"/methodology/nmdi/", "/advertise/", "/contact/", "/industry-news/"}
+    missing = []
+    total = 0
+    for dirpath, _d, files in os.walk(docs):
+        if os.sep + "assets" in dirpath or "index.html" not in files:
+            continue
+        rel = os.path.relpath(dirpath, docs).replace(os.sep, "/")
+        url = "/" if rel == "." else f"/{rel}/"
+        if url in exempt:
+            continue
+        total += 1
+        html = open(os.path.join(dirpath, "index.html"), encoding="utf-8", errors="replace").read()
+        if 'data-copy="citation"' not in html:
+            missing.append(url)
+    if missing:
+        return [f"{u} publishes a figure but carries no citation" for u in missing[:5]]
+    if total < 150:
+        return [f"only {total} pages checked - the walk is not finding the built tree"]
+    return []
+
+
 def check_territories_not_called_provinces():
     """Ten provinces. A count that says otherwise, or a territory inside a provincial rank.
 
@@ -1384,6 +1421,7 @@ CHECKS = (
     ("no page names a country twice around the gap", check_no_doubled_country),
     ("signed percentages are one decimal and never signed zero", check_percent_format),
     ("territories are never called provinces", check_territories_not_called_provinces),
+    ("every figure-publishing page carries a citation", check_citation_coverage),
     ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("country trees are separate and reachable", check_country_trees),

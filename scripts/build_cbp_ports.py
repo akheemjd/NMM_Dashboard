@@ -240,46 +240,53 @@ def row(port, plan=None):
     }
 
 
+def dedupe(rows):
+    """One row per crossing.
+
+    CBP sends a port and its lanes as separate records, so the same bridge arrives twice under
+    different labels - bare "Ysleta" and "El Paso - Ysleta" - and a reader comparing waits has no
+    way to know they are one place. It reads as two crossings and halves the apparent traffic on
+    each. The row carrying a published delay wins.
+    """
+    best, order = {}, []
+    for r in rows:
+        key = re.sub(r"[^a-z0-9]+", " ", r["port_name"].lower()).strip()
+        if key not in best:
+            best[key] = r
+            order.append(key)
+            continue
+        # the row with a published delay is the one worth showing
+        if "not reported" in best[key].get("commercial_display", "") and \
+                "not reported" not in r.get("commercial_display", ""):
+            best[key] = r
+    return [best[k] for k in order]
+
+
+def crossings_split(ports):
+    """(canadian_rows, mexican_rows), deduped.
+
+    The single source of the reader-facing crossing counts. The all-ports page and the chooser both
+    read them from here, so a number on one can never disagree with the other - which is exactly
+    what happened when the chooser's count was typed.
+    """
+    ca = [p for p in ports if p.get("border") == "Canadian Border"]
+    mx = [p for p in ports if p.get("border") == "Mexican Border"]
+    ca.sort(key=lambda p: ((p.get("us_state") or "zz"), (p.get("port_name") or ""),
+                           (p.get("crossing_name") or "")))
+    mx.sort(key=lambda p: ((p.get("port_name") or ""), (p.get("crossing_name") or "")))
+    plan = label_plan(list(ca) + list(mx))
+    return dedupe([row(p, plan) for p in ca]), dedupe([row(p, plan) for p in mx])
+
+
 def main():
     cbp = load_json("cbp_border")
     ports = cbp.get("ports") or []
     if not ports:
         raise SystemExit("cbp_border.json carries no ports — run the collector first")
 
-    ca = [p for p in ports if p.get("border") == "Canadian Border"]
-    mx = [p for p in ports if p.get("border") == "Mexican Border"]
-
-    # Sort by jurisdiction then name so the list is scannable, and so unknown
-    # jurisdictions group at the end rather than interleaving.
-    ca.sort(key=lambda p: ((p.get("us_state") or "zz"), (p.get("port_name") or ""),
-                           (p.get("crossing_name") or "")))
-    mx.sort(key=lambda p: ((p.get("port_name") or ""), (p.get("crossing_name") or "")))
-
     reported = [p for p in ports if p.get("commercial_reported")]
 
-    # One plan across every port, so a collision between two rows of the same border is
-    # caught the same way as one across borders.
-    _plan = label_plan(list(ca) + list(mx))
-
-    # One row per crossing. CBP sends a port and its lanes as separate records, so the same
-    # bridge arrives twice under different labels - bare "Ysleta" and "El Paso - Ysleta" - and a
-    # reader comparing waits has no way to know they are one place. It reads as two crossings
-    # and halves the apparent traffic on each.
-    def dedupe(rows):
-        best, order = {}, []
-        for r in rows:
-            key = re.sub(r"[^a-z0-9]+", " ", r["port_name"].lower()).strip()
-            if key not in best:
-                best[key] = r
-                order.append(key)
-                continue
-            # the row with a published delay is the one worth showing
-            if "not reported" in best[key].get("commercial_display", "") and                "not reported" not in r.get("commercial_display", ""):
-                best[key] = r
-        return [best[k] for k in order]
-
-    _ca_rows = dedupe([row(p, _plan) for p in ca])
-    _mx_rows = dedupe([row(p, _plan) for p in mx])
+    _ca_rows, _mx_rows = crossings_split(ports)
 
     page_data = {
         "port_count": str(len(_ca_rows) + len(_mx_rows)),
