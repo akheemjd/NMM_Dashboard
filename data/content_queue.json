@@ -231,6 +231,124 @@
         "angle": "What inspectors check and the common malfunction violations.",
         "source": "Transport Canada + CVSA"
       }
+    ],
+    "lanes": [
+      {
+        "title": "What a lane actually costs: distance, fuel and the two numbers carriers forget",
+        "keyword": "trucking cost per mile by lane",
+        "angle": "Heavy data, simplified: use the 331 distances between 23 North American cities. Lead with the cost of one real lane, then show the parts. Fuel is the visible cost and the smaller one on a short lane.",
+        "figures": [
+          "distances",
+          "fuel",
+          "us_fuel_tax"
+        ],
+        "id": "lanes-what-a-lane-actually-costs-distance-fuel-and-the"
+      },
+      {
+        "title": "Toronto to Chicago: the busiest cross-border lane, priced out",
+        "keyword": "toronto to chicago trucking cost",
+        "angle": "A single lane in full: kilometres, litres burned, fuel tax paid at each border, and what changes when the loonie moves. One lane teaches the method; readers apply it to their own.",
+        "figures": [
+          "distances",
+          "fuel",
+          "exchange",
+          "us_fuel_tax"
+        ],
+        "id": "lanes-toronto-to-chicago-the-busiest-cross-border-lane"
+      },
+      {
+        "title": "The 401, I-10 and I-80: where fuel tax actually changes under the wheels",
+        "keyword": "fuel tax by state for trucking routes",
+        "angle": "A truck crosses five tax jurisdictions on one run. Show the rate changes along real corridors from ifta and us_fuel_tax, not as a table but as a run. Heavy data, simplified.",
+        "figures": [
+          "ifta",
+          "us_fuel_tax",
+          "distances"
+        ],
+        "id": "lanes-the-401-i-10-and-i-80-where-fuel-tax-actually-ch"
+      },
+      {
+        "title": "Why the longest lane is not the most expensive one",
+        "keyword": "most expensive trucking lane north america",
+        "angle": "Rank lanes by cost and by distance and the orders disagree. Toll roads, mountain grades and waiting at the border do more than kilometres. Uses distances and border history.",
+        "figures": [
+          "distances",
+          "border",
+          "fuel"
+        ],
+        "id": "lanes-why-the-longest-lane-is-not-the-most-expensive-o"
+      }
+    ],
+    "macro": [
+      {
+        "title": "Freight demand is an economic number before it is a trucking number",
+        "keyword": "freight demand indicator canada us",
+        "angle": "GDP growth means more freight moving. Lead with what one month of GDP means for a carrier's load board, then the figure. Uses the StatCan and BLS readings already on the market page.",
+        "figures": [
+          "market"
+        ],
+        "id": "macro-freight-demand-is-an-economic-number-before-it-i"
+      },
+      {
+        "title": "Fuel as a share of operating cost: the number that decides your margin",
+        "keyword": "fuel percentage of trucking operating cost",
+        "angle": "Fuel is roughly a third of cost per mile and the only third that moves weekly. Show the share, then what a 10 cent move does to a rate. Heavy data, simplified.",
+        "figures": [
+          "market",
+          "fuel"
+        ],
+        "id": "macro-fuel-as-a-share-of-operating-cost-the-number-tha"
+      },
+      {
+        "title": "What a weaker loonie does to a cross-border carrier, line by line",
+        "keyword": "usd cad exchange rate trucking costs",
+        "angle": "A weaker CAD helps exports and hurts equipment and parts. Take one carrier's cost lines and move the rate. Uses the Bank of Canada series.",
+        "figures": [
+          "exchange",
+          "market"
+        ],
+        "id": "macro-what-a-weaker-loonie-does-to-a-cross-border-carr"
+      }
+    ],
+    "ops": [
+      {
+        "title": "Cargo theft: what gets taken, and where loads go missing",
+        "keyword": "cargo theft trucking canada us",
+        "angle": "Electronics, food, building materials, clothing, auto parts, in that order, is what the theft data says gets targeted. Lead with what a driver does about it at a truck stop, then the ranking.",
+        "figures": [
+          "theft"
+        ],
+        "id": "ops-cargo-theft-what-gets-taken-and-where-loads-go-m"
+      },
+      {
+        "title": "Detention: the unpaid hour that decides whether a lane works",
+        "keyword": "detention pay trucking canada",
+        "angle": "A lane that looks profitable at 400 km can lose money at the dock. Explain the arithmetic of a waiting hour, and what the border wait data says a real wait looks like.",
+        "figures": [
+          "border",
+          "distances"
+        ],
+        "id": "ops-detention-the-unpaid-hour-that-decides-whether-a"
+      },
+      {
+        "title": "IFTA across 58 jurisdictions: the filing mistakes that trigger an audit",
+        "keyword": "ifta filing mistakes audit",
+        "angle": "Fifty-eight jurisdictions, one return, and the errors that draw attention. Heavy data, simplified: the rate table with the three mistakes beside it.",
+        "figures": [
+          "ifta",
+          "us_fuel_tax"
+        ],
+        "id": "ops-ifta-across-58-jurisdictions-the-filing-mistakes"
+      },
+      {
+        "title": "Inspections, out-of-service rates and what a roadside stop really costs",
+        "keyword": "truck inspection out of service rate",
+        "angle": "A failed inspection costs the day, and the rate that follows you is public. Say what is checked and what it costs, without inventing figures the sources do not publish.",
+        "figures": [
+          "incidents"
+        ],
+        "id": "ops-inspections-out-of-service-rates-and-what-a-road"
+      }
     ]
   },
   "completed": [
@@ -293,5 +411,14 @@
     "market": "2026-10-05",
     "deep": "2026-10-07",
     "rules": "2026-10-02"
-  }
+  },
+  "pillar_order": [
+    "market",
+    "deep",
+    "rules",
+    "lanes",
+    "macro",
+    "ops"
+  ],
+  "_diversification_note": "Pillars by subject, not by angle. market/deep/rules are fuel questions; lanes/macro/ops are not. Added 2026-10-08 after measuring that 92.6% of pages and 5 of 10 posts were diesel or border. Every new topic is grounded in a dataset already on disk."
 }

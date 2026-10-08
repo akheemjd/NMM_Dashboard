@@ -28,10 +28,21 @@ PILLAR_BY_WEEKDAY = {
     4: "rules",    # Friday
 }
 
+# Alternates each week so lanes/macro/ops get Monday, Wednesday and Friday on the weeks the
+# fuel pillars do not.
+PILLAR_BY_WEEKDAY_ALT = {
+    0: "lanes",
+    2: "macro",
+    4: "ops",
+}
+
 PILLAR_LABELS = {
     "market": "Market Pulse",
     "deep": "Deep Dive",
     "rules": "Rules & Money",
+    "lanes": "Lanes & Corridors",
+    "macro": "The Economy",
+    "ops": "Running the Truck",
 }
 
 PILLAR_BRIEF = {
@@ -50,6 +61,22 @@ PILLAR_BRIEF = {
         "State the rule, then show the arithmetic of compliance versus penalty. "
         "Use dashboard data where it connects, but the regulation is the spine. "
         "This is the blog's strongest performing category — be concrete and specific."
+    ),
+    "lanes": (
+        "Corridor economics. 1,000-1,600 words. Take one real lane and price it out: distance, "
+        "fuel burned, tax paid at each jurisdiction, drive time. The lane teaches the method and "
+        "the reader applies it to their own. Numbers from the distances and fuel-tax datasets, "
+        "stated plainly."
+    ),
+    "macro": (
+        "The economy read as freight demand. 900-1,400 words. GDP, the currency, fuel as a share "
+        "of operating cost. Lead with what the figure means for a load board, then show the "
+        "figure. No forecasts — report what the published series says and what it implies."
+    ),
+    "ops": (
+        "Running the truck. 1,000-1,500 words. Detention, cabotage, cargo theft, inspections, "
+        "IFTA filing. Operational and specific: what a driver or an owner-operator actually does "
+        "differently. Where a number is not published, say so rather than estimating."
     ),
 }
 
@@ -71,6 +98,19 @@ def save_queue(q):
 
 def completed_ids(q):
     return {c["id"] for c in q.get("completed", [])}
+
+
+def pillar_for_today(today=None):
+    """The pillar due today, cycling through all six across a fortnight.
+
+    Before this the rotation named only market/deep/rules, so lanes/macro/ops could never be
+    picked and a 43-topic queue would have stalled at 32.
+    """
+    import datetime as _dt
+    d = today or _dt.date.today()
+    weekday = d.weekday()
+    table = PILLAR_BY_WEEKDAY_ALT if d.isocalendar()[1] % 2 else PILLAR_BY_WEEKDAY
+    return table.get(weekday)
 
 
 def next_topic(pillar, q=None):
@@ -115,7 +155,8 @@ def mark_complete(topic_id, when=None, title=None):
 
 def assignment_for(day, q=None):
     """Return the pillar assignment for a given date, or None on a non-publishing day."""
-    pillar = PILLAR_BY_WEEKDAY.get(day.weekday())
+    # same fortnightly rotation the live run uses, so the forecast is honest
+    pillar = pillar_for_today(day)
     if not pillar:
         return None
     topic = next_topic(pillar, q)
@@ -147,7 +188,8 @@ def queue_status(q=None):
 
 def main():
     ap = argparse.ArgumentParser(description="NMM content planner")
-    ap.add_argument("--pillar", choices=list(PILLAR_BY_WEEKDAY.values()),
+    # every pillar, not just the three the weekday table names
+    ap.add_argument("--pillar", choices=list(PILLAR_LABELS),
                     help="Force a pillar instead of using today's weekday")
     ap.add_argument("--peek", type=int, metavar="N", help="Show the next N publishing days")
     ap.add_argument("--complete", metavar="TOPIC_ID", help="Mark a topic as published")
