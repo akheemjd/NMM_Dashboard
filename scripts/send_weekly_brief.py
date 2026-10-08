@@ -39,7 +39,7 @@ from ghost_publish import (  # noqa: E402
     api_call, markdown_to_html, slugify, find_post_by_slug, upload_image,
     lint_markdown, _load_dotenv,
 )
-from weekly_brief import build_brief  # noqa: E402
+from weekly_brief import build_brief_parts  # noqa: E402
 
 
 def resolve_newsletter(default="default-newsletter"):
@@ -154,7 +154,7 @@ def brief_hero():
         return None
 
 
-def build_payload(title, subtitle, markdown, slug, status, published_at=None):
+def build_payload(title, subtitle, markdown, slug, status, published_at=None, subject=None):
     """Body only. The newsletter link does NOT belong here."""
     return {
         "title": title,
@@ -163,7 +163,9 @@ def build_payload(title, subtitle, markdown, slug, status, published_at=None):
         "status": status,
         "custom_excerpt": subtitle,
         "meta_description": subtitle,
-        "email_subject": title,
+        # The subject names the week's biggest move. The title stays fixed because the slug,
+        # and with it the double-send guard, is built from it.
+        "email_subject": subject or title,
     }
 
 
@@ -177,9 +179,10 @@ def main(argv=None):
                     help="Schedule instead, e.g. 2026-09-23T06:00:00.000Z")
     args = ap.parse_args(argv)
 
-    title, subtitle, markdown = build_brief(
+    parts = build_brief_parts(
         recent_posts=None if args.dry_run else recent_posts()
     )
+    title, subtitle, markdown, subject = parts["title"], parts["subtitle"], parts["markdown"], parts["subject"]
     slug = slugify(title)
     nl_slug = None if args.dry_run else resolve_newsletter()
 
@@ -187,7 +190,8 @@ def main(argv=None):
         print("=== DRY RUN — no API calls made ===")
         print(f"title:      {title}")
         print(f"slug:       {slug}")
-        print(f"subject:    {title}")
+        print(f"subject:    {subject}")
+        print(f"preview:    {subtitle}")
         print(f"newsletter: {resolve_newsletter()} (would be sent as a query param)")
         print()
         print(markdown)
@@ -222,7 +226,7 @@ def main(argv=None):
         return 1
 
     print("\n[1/3] creating draft (a draft can never email anyone)...")
-    payload = build_payload(title, subtitle, markdown, slug, "draft")
+    payload = build_payload(title, subtitle, markdown, slug, "draft", subject=subject)
     hero = brief_hero()
     if hero:
         payload["feature_image"] = hero
@@ -259,7 +263,7 @@ def main(argv=None):
     # The newsletter MUST ride as a query param on the publish call.
     if args.schedule:
         q = f"posts/{pid}/?source=html&newsletter={nl_slug}&email_segment=all"
-        upd = build_payload(title, subtitle, markdown, slug, "scheduled", args.schedule)
+        upd = build_payload(title, subtitle, markdown, slug, "scheduled", args.schedule, subject=subject)
         print(f"\n[3/3] scheduling with ?newsletter={nl_slug} ...")
         r2 = api_call("PUT", q, {"posts": [dict(upd, updated_at=post.get("updated_at"))]})
         p2 = (r2.get("posts") or [{}])[0]
@@ -269,7 +273,7 @@ def main(argv=None):
         return 0
 
     q = f"posts/{pid}/?source=html&newsletter={nl_slug}&email_segment=all"
-    upd = build_payload(title, subtitle, markdown, slug, "published")
+    upd = build_payload(title, subtitle, markdown, slug, "published", subject=subject)
     print(f"\n[3/3] publishing with ?newsletter={nl_slug} (this dispatches the email)...")
     r2 = api_call("PUT", q, {"posts": [dict(upd, updated_at=post.get("updated_at"))]})
     p2 = (r2.get("posts") or [{}])[0]
