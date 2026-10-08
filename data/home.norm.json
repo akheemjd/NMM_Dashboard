@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-08 13:45",
-  "updated_iso": "2026-10-08T13:45:19+00:00",
-  "build_version": "1791467119",
+  "updated_at": "2026-10-08 14:01",
+  "updated_iso": "2026-10-08T14:01:08+00:00",
+  "build_version": "1791468068",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "30 min"
   },
   "fuel": {
     "national_diesel": "259.6",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 39,
+    "active_count": 41,
     "gauge_class": "warn",
-    "status_line": "QEW, HWY 400, HWY 401, HWY 10",
+    "status_line": "HWY 417, HWY 17, HWY 403 , HWY 10",
     "incidents": [
       {
-        "road": "QEW",
-        "what": "Highway Maintenance on QEW Fort Erie bound ON-RAMP at FORD DRIVE, Oakville. All\u2026",
+        "road": "HWY 417",
+        "what": "Collision on HWY 417 Westbound  at PARKDALE AVE (IC 122), Ottawa. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound RAMP at 401 WEST COLL, Toronto. All lanes\u2026",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Eastbound  at LAKESHORE RD - LAHONTAN TWP,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -432,11 +432,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "06:20 PDT"
+      "captured_at": "06:40 PDT"
     },
     {
       "name": "Emerson-Pembina",
@@ -518,17 +518,17 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "Teen killed in motorcycle crash with semi-truck in Arkansas",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/teen-killed-in-motorcycle-crash-with-semi-truck-in-arkansas",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "markets",
+      "source": "Trucking Dive",
+      "headline": "STG Logistics names former UPS Freight leader CEO in leadership overhaul",
+      "url": "https://www.truckingdive.com/news/stg-logistics-names-former-ups-freight-leader-ceo-in-leadership-overhaul/832332/",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
       "category": "equipment",
       "source": "The Trucker",
-      "headline": "Trump\u2019s executive order on dyed diesel will offer little relief, farmers and truckers say",
-      "url": "https://www.thetrucker.com/trucking-news/business/trumps-executive-order-on-dyed-diesel-will-offer-little-relief-farmers-and-truckers-say",
+      "headline": "Teen killed in motorcycle crash with semi-truck in Arkansas",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/teen-killed-in-motorcycle-crash-with-semi-truck-in-arkansas",
       "why": "Equipment cost and availability shape fleet economics."
     }
   ],
