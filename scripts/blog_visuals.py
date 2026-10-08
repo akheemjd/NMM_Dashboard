@@ -376,7 +376,8 @@ def _finalize(fig, ax):
 # ══════════════════════════════════════════════════════════════
 
 def ranked_bars(labels, values, title=None, subtitle=None, source=None,
-                unit="", highlight=None, average=None, force=None):
+                unit="", highlight=None, average=None, force=None,
+                average_label=None):
     """Horizontal ranking chart, sorted ascending.
 
     ENCODING IS CHOSEN BY THE DATA, and this matters for honesty:
@@ -472,7 +473,10 @@ def ranked_bars(labels, values, title=None, subtitle=None, source=None,
                    zorder=2, alpha=0.55)
         # Label rides the top of the line with a paper-coloured pad, so it
         # needs no collision maths and cannot orphan itself below the plot.
-        ax.text(average, len(labs) - 0.30, f"avg {average:,.1f}{unit}",
+        # "avg 259.6" reads as the mean of whatever bars are on the chart. When the line
+        # is not the mean of the bars - the ten-province index drawn through twelve
+        # jurisdictions - the caller supplies the wording.
+        ax.text(average, len(labs) - 0.30, average_label or f"avg {average:,.1f}{unit}",
                 fontproperties=body_font(11.5, weight=500),
                 color=INK2, va="bottom", ha="center", zorder=6,
                 bbox=dict(boxstyle="round,pad=0.30", fc=PAPER, ec="none"))
@@ -1000,7 +1004,7 @@ def _demo():
               249.9, 247.3, 244.1, 243.1, 213.8]
 
     f = ranked_bars(provs, prices,
-                    title="Diesel by province",
+                    title="Diesel by province and territory",
                     subtitle="Cents per litre, week of September 15",
                     source="Natural Resources Canada weekly diesel survey",
                     unit="c", average=267.1)

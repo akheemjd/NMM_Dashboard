@@ -5,16 +5,16 @@ date: 2026-09-21
 category: Market Pulse
 tags: [diesel prices, canadian trucking, fuel costs]
 keyword: "canada diesel price this week"
-description: "The national diesel average is 267.1 cents a litre. The 82.5 cent gap between Quebec and the Northwest Territories is the number that moves your margin."
+description: "The national diesel average is 267.1 cents a litre. The 53.2 cent gap between Quebec and Alberta is the number that moves your margin."
 ---
 
-# Canada's diesel average is 267.1. The 82.5 cent spread matters more.
+# Canada's diesel average is 267.1. The 53.2 cent spread matters more.
 
 Canada's national diesel average is 267.1 cents a litre. That comes from the NRCan weekly survey printed Tuesday, 15 September.
 
 It is also the least useful number in this post.
 
-The figure that moves your margin is the gap between the cheapest and the most expensive province. Right now that gap is 82.5 cents. Quebec pays 296.3 at the pump. Northwest Territories pays 213.8. Same fuel, same country, same week.
+The figure that moves your margin is the gap between the cheapest and the most expensive province. Right now that gap is 53.2 cents. Quebec pays 296.3 at the pump. Alberta pays 243.1. Same fuel, same country, same week.
 
 If you run long haul, you already know this in your bones. You also know the spread is not evenly distributed. It clusters.
 
@@ -30,7 +30,7 @@ Notice the shape of it. Six provinces above the national number, six below. The 
 
 {{figure:provincial-spread}}
 
-That is 72 locations surveyed across 12 provinces. The national average is a real measurement, not an estimate. It is just an average of a country where the cost of fuel is genuinely different depending on where you park.
+That is 72 locations surveyed across ten provinces and two territories. The national average is a real measurement, not an estimate. It is just an average of a country where the cost of fuel is genuinely different depending on where you park.
 
 For an owner-operator, the practical read is simple. If your lanes keep you east, your fuel cost base is higher than the national figure suggests. If your lanes keep you west, it is lower. Plan your fills accordingly.
 
@@ -66,7 +66,7 @@ If you are reading this a few days later, the pump has already moved. That is no
 
 Three things worth acting on.
 
-Check the provincial spread before you plan fills on a long run. The difference between a fill in Alberta and a fill in Quebec is 82.5 cents a litre, and that is a real number on a real invoice.
+Check the provincial spread before you plan fills on a long run. The difference between a fill in Alberta and a fill in Quebec is 53.2 cents a litre, and that is a real number on a real invoice.
 
 Watch the exchange rate if you cross-border. At 1.4002 the loonie is soft, and that changes what fuel costs you on the US side.
 

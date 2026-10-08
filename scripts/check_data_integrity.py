@@ -1074,6 +1074,46 @@ def check_us_pages_lead_in_gallons():
     return bad
 
 
+def check_territories_not_called_provinces():
+    """Ten provinces. A count that says otherwise, or a territory inside a provincial rank.
+
+    Canada has ten provinces and three territories. NRCan surveys twelve jurisdictions: the ten
+    provinces plus Yukon and the Northwest Territories. Nunavut is not surveyed. Wherever those
+    two appear, they are territories, and a rank that includes them is not a provincial rank.
+
+    Both shapes have shipped. The live post read "72 locations surveyed across 12 provinces",
+    and an earlier draft read "the gap between Quebec and the Northwest Territories", which
+    fix_spread.py was written to remove.
+    """
+    import os
+    import re as _re
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    docs = os.path.join(root, "docs")
+    terr = r"(?:Yukon|Northwest Territories|NWT|Nunavut|Whitehorse|Yellowknife|Iqaluit)"
+    count = _re.compile(r"\b(\d+)\s+provinces\b", _re.I)
+    as_prov = _re.compile(rf"\b{terr}\b(?:\s+\w+){{0,3}}?\s+(?:province|provincial)\b"
+                          rf"|\b(?:province|provincial)\s+(?:of\s+)?{terr}\b", _re.I)
+    bad = []
+    for base, files in ((docs, None), (os.path.join(root, "content", "blog-posts"), ".md")):
+        for dirpath, _d, names in os.walk(base):
+            if os.sep + "assets" in dirpath:
+                continue
+            for nm in names:
+                if files and not nm.endswith(files):
+                    continue
+                if not files and nm != "index.html":
+                    continue
+                path = os.path.join(dirpath, nm)
+                t = open(path, encoding="utf-8", errors="replace").read()
+                rel = os.path.relpath(path, root).replace(os.sep, "/")
+                for m in count.finditer(t):
+                    if m.group(1) != "10":
+                        bad.append(f"{rel} says {m.group(0)!r}")
+                for m in as_prov.finditer(t):
+                    bad.append(f"{rel} calls a territory a province: {m.group(0)!r}")
+    return bad[:5]
+
+
 def check_percent_format():
     """Signed percentages show one decimal, and a rounded zero carries no sign.
 
@@ -1343,6 +1383,7 @@ CHECKS = (
     ("internal links resolve to built pages", check_internal_links_resolve),
     ("no page names a country twice around the gap", check_no_doubled_country),
     ("signed percentages are one decimal and never signed zero", check_percent_format),
+    ("territories are never called provinces", check_territories_not_called_provinces),
     ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("country trees are separate and reachable", check_country_trees),

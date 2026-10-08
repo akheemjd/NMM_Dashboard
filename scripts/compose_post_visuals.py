@@ -66,14 +66,54 @@ PROVINCE_SHORT = {
 INDEX_PROVINCES = ["AB", "BC", "MB", "NB", "NL", "NS", "ON", "PE", "QC", "SK"]
 
 
-def province_prices(fuel, short=True):
-    """[(display_name, price)] for every province that has a price."""
+def _prices(fuel, only, short):
     names = PROVINCE_SHORT if short else PROVINCE_NAMES
     out = []
     for code, info in (fuel.get("provinces") or {}).items():
+        if only is not None and code not in only:
+            continue
         if isinstance(info, dict) and info.get("diesel") is not None:
             out.append((names.get(code, code), float(info["diesel"])))
     return out
+
+
+def province_prices(fuel, short=True):
+    """[(display_name, price)] for the ten provinces the national index is built from.
+
+    Named for what it returns. It used to return every jurisdiction in fuel.json, which
+    includes Yukon and the Northwest Territories, so a chart could show twelve bars under the
+    label "by province" with the ten-province index drawn through the middle of them.
+    """
+    return _prices(fuel, INDEX_PROVINCES, short)
+
+
+def jurisdiction_prices(fuel, short=True):
+    """[(display_name, price)] for all twelve surveyed jurisdictions.
+
+    Ten provinces plus Yukon and the Northwest Territories. Nunavut is not surveyed.
+
+    Anything drawn from this must say "province and territory" in its title. Two of the twelve
+    are not provinces, and a rank that includes them is not a provincial rank.
+    """
+    return _prices(fuel, None, short)
+
+
+TERRITORIES = {"Yukon", "Northwest Territories", "Nunavut"}
+
+
+def assert_title_matches_labels(title, labels):
+    """A chart that plots a territory must not be titled as a provincial chart.
+
+    This is the fault that shipped: a figure titled "Diesel by province" with twelve bars, two
+    of which are Yukon and the Northwest Territories, and the ten-province index drawn through
+    the middle of them. A generated title is not reviewed by anyone, so it is checked here.
+    """
+    plotted = [l for l in labels if l in TERRITORIES]
+    if plotted and "territor" not in (title or "").lower():
+        raise ValueError(
+            f"chart title {title!r} covers {plotted} - a territory is not a province; "
+            f"the title must say province and territory"
+        )
 
 
 def national_average(fuel):
@@ -88,23 +128,31 @@ def national_average(fuel):
 # whose data is present and keeps whatever renders.
 
 def fig_provincial_ranked(fuel):
-    rows = province_prices(fuel)
+    # Twelve jurisdictions, so the title and the caption say province and territory.
+    rows = jurisdiction_prices(fuel)
     if len(rows) < 4:
         return None
+    assert_title_matches_labels("Diesel by province and territory", [r[0] for r in rows])
     rows.sort(key=lambda r: -r[1])
     nat = national_average(fuel)
     date = fuel.get("print_date", "")
     f = bv.ranked_bars(
         [r[0] for r in rows], [r[1] for r in rows],
-        title="Diesel by province",
+        title="Diesel by province and territory",
         subtitle=f"Cents per litre, NRCan print {date}" if date else "Cents per litre",
         source="Natural Resources Canada weekly diesel survey",
         unit="\u00a2", average=nat,
+        # The line is the ten-province index, not the mean of these twelve bars, and the
+        # default "avg" label would say otherwise.
+        average_label=(f"ten-province index {nat:,.1f}\u00a2" if nat is not None else None),
     )
     if not f:
         return None
+    # The figure key stays "provincial-spread" - live posts reference {{figure:provincial-spread}}
+    # and renaming it would break them. It is an internal key, not reader-facing.
     return ("provincial-spread", f,
-            "Provincial diesel prices against the national index, per the NRCan weekly survey.")
+            "Diesel prices by province and territory, against the ten-province national index, "
+            "per the NRCan weekly survey.")
 
 
 def fig_diesel_trend(fuel):
