@@ -188,23 +188,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-317175",
-      "province": "ON",
-      "highway": "HWY 17A",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on HWY 17A Eastbound  at SEC HWY 658 - REDDITT RD (N)-TO OPP & MTO PAT, Kenora. Lane and EAST shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and EAST shoulder closed",
-      "lat": 49.800269404,
-      "lng": -94.487848173,
-      "start": 1791470700,
-      "end": null,
-      "updated": 1791470700,
-      "scheduled": false
-    },
-    {
       "id": "ON-317180",
       "province": "ON",
       "highway": "HWY 93",
@@ -473,6 +456,23 @@
       "lng": -79.65732,
       "start": 1793577600,
       "end": 1794049200,
+      "updated": 1791469860,
+      "scheduled": true
+    },
+    {
+      "id": "ON-317194",
+      "province": "ON",
+      "highway": "HWY 93",
+      "direction": "Northbound",
+      "description": "Nightly Moving Maintenance Closure on HWY 93 Northbound  between HWY 400, Springwater and HWY 12/ANGELA SCHMIDT FOSTER ROAD, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.552452,
+      "lng": -79.74547,
+      "start": 1793581200,
+      "end": 1794052800,
       "updated": 1791469860,
       "scheduled": true
     },
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-08T16:18:13.537204+00:00",
+  "updated": "2026-10-08T16:22:53.079497+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
