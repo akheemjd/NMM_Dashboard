@@ -127,6 +127,25 @@ def national_average(fuel):
 # Each returns (name, figure, caption) or None. The composer runs the ones
 # whose data is present and keeps whatever renders.
 
+# ── Nine published charts still print the old title. Left deliberately. ──
+#
+# Before 2026-10-08 this function titled its output "Diesel by province" while plotting twelve
+# jurisdictions, and drew the ten-province index through the middle of them. The title, the line
+# label and the caption are fixed above; the nine PNGs already uploaded to Ghost under
+# visuals/<post>/provincial-spread.png still carry the old title, and they were left that way on
+# purpose.
+#
+# Do not "fix" them by re-rendering. The only data available to redraw from is
+# data/history/series.csv, which disagrees with what those posts say: for the print covered by
+# canada-diesel-price-this-week-september-2026 the archive holds Quebec 296.8 and Alberta 246.2
+# while the post's own prose - and the chart currently on it - say 296.3 and 243.1. NRCan revises
+# prices after publication and the archive was backfilled, so the two diverged. Redrawing would put
+# numbers on a published chart that contradict the sentences beside it, which is the exact fault
+# (two different spreads for the same week) that fix_spread.py was written to remove.
+#
+# Everything published from 2026-10-10 onward carries the correct title automatically.
+
+
 def fig_provincial_ranked(fuel):
     # Twelve jurisdictions, so the title and the caption say province and territory.
     rows = jurisdiction_prices(fuel)
