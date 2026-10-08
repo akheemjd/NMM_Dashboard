@@ -524,6 +524,15 @@ write("freight-barometer",
     <div class="lead"><h2>Cite this</h2></div>
     <p class="note"><q>Northern Mile freight barometer, {{updated_at}} UTC — Canadian diesel {{fuel.national_diesel}}¢/L, US diesel ${{eia.us_national_usd_gal}}/gal, North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}.</q> <a href="/methodology/nmdi/">Methodology</a> · <a href="/fuel-prices/">Prices by province</a></p>
   </section>
+
+  <section class="sec">
+    <div class="lead"><h2>How to read this page</h2></div>
+    <div class="reading">
+      <p>Every figure here carries its own date and its own unit, and they do not all move on the same clock. Diesel steps once a week, on the NRCan and EIA survey prints. The dollar moves every business day. Border waits change through the day. A barometer that looks flat can still be hiding a week's fuel move, and one number moving does not mean the others did.</p>
+      <p>The North American index is the one figure that pools both countries: the Canadian ten-province average and the US national average, each counted once at equal weight. It is a way to see the continent at a glance, not a price anyone pays. Nothing is bought at the index.</p>
+      <p>Direction is stated rather than implied. Where a figure is a level and not a movement, it says so instead of showing an arrow that means nothing.</p>
+    </div>
+  </section>
 ''' + cite(
         'Northern Mile freight barometer: Canadian and US diesel, border waits and the US dollar, as published {{updated_at}} UTC. Northern Mile Media, dashboard.northernmilemedia.com/freight-barometer/') + sponsor("sponsor_market") + subscribe("The week in one email",
    "Diesel, the border, and one argument worth your time. Wednesday mornings.") + foot())
@@ -1149,6 +1158,17 @@ write("road-incidents",
  + INCIDENTS_BODY
  + sponsor("sponsor_incidents")
  + INCIDENTS_ROADWORK
+ + '''
+  <section class="sec">
+    <div class="lead"><h2>What a closure costs</h2></div>
+    <div class="reading">
+      <p>A lane closure is not a delay, it is a decision. A single-lane night closure on a corridor carrying thousands of trucks a day moves the queue rather than removing it, and the cost lands as driver hours against a driving limit, not as a line on an invoice.</p>
+      <p>Read the type before the location. <b>Closures</b> are the ones that reroute you. <b>Roadwork</b> is scheduled and usually carries a date range, so it belongs in planning rather than in today's decision. This page separates the two and invents neither: both come straight from the agency's own feed, with the coordinates the agency published.</p>
+      <p>Coverage is honest about its edges. Ontario, British Columbia and three California districts serve open feeds. Other states publish behind keys we do not hold, and Caltrans serves only some of its districts. Where a source is missing it is missing from the page, not estimated into it.</p>
+    </div>
+  </section>
+
+'''
  + subscribe("Corridors and costs",
    "Which corridors closed, where diesel moved, and what it did to the week. One email on Wednesday mornings.")
  + cite(
@@ -1394,7 +1414,13 @@ write("contact",
 
   <section class="sec">
     <div class="reading">
-      <p>Northern Mile Media is an independent Canadian publication. It is not owned by, funded by, or affiliated with any carrier, broker, fuel retailer or industry association. Nobody pays for a number on this site.</p>
+      <p>Northern Mile Media is an independent publication covering North American trucking. It is not owned by, funded by, or affiliated with any carrier, broker, fuel retailer or industry association. Nobody pays for a number on this site.</p>
+      <p>That is the whole business model and it is worth stating plainly: a figure here is published because a government agency published it, and it is corrected in public when it is wrong. Nothing on the dashboard is sponsored into existence, and no sponsor sees a number before you do.</p>
+      <h3 style="margin-top:28px">What we will answer</h3>
+      <p>If a number looks wrong, say which page and which figure and we will trace it to the source and tell you what we find, including when the answer is that we are right. Corrections are logged with the date and both values, never quietly swapped.</p>
+      <p>If you want the method behind a figure rather than the figure, the <a href="/methodology/nmdi/">methodology page</a> carries every source, the roll-up arithmetic, and a dated revision history of everything that has changed. The <a href="/press/">press page</a> has a copy-paste citation for any figure on the site.</p>
+      <h3 style="margin-top:28px">What we will not do</h3>
+      <p>We will not sell a rate forecast, an exclusive number, or a favourable reading. If you need a figure we do not publish, the honest answer is that we do not have it, not that we will make one.</p>
     </div>
   </section>
 ''' + foot())
@@ -1595,7 +1621,17 @@ uspadd_body = (
     <p class="note"><a href="/us-diesel/">← US national and all regions</a></p>
   </section>
 ''' + subscribe("{{label}} diesel, every week",
-   "Where {{label}} and the rest of North America moved, and what it means for a cross-border carrier's week. One email on Wednesday mornings.") + foot())
+   "Where {{label}} and the rest of North America moved, and what it means for a cross-border carrier's week. One email on Wednesday mornings.") + '''
+  <section class="sec">
+    <div class="lead"><h2>What moves the {{label}} figure</h2></div>
+    <div class="reading">
+      <p>{{label}} averages {{usd_gal}} a gallon this week, {{vs_national_word}} the US national figure by {{vs_national_usd_abs}}. That spread is not weather and it is not one refinery outage. District prices separate on three things that stay put: the state fuel taxes the pump has to carry, the distance the fuel travels from the nearest refinery or import terminal, and how much of the local demand is trucks rather than cars.</p>
+      <p>The EIA surveys retail pumps, so {{usd_gal}} already includes every federal, state and local tax plus whatever margin the retailer is taking. It is a delivered retail price, not a wholesale rack price, and it is not your invoice.</p>
+      <p>It is also why this is a district and not a state. The EIA publishes ten districts and no state-level diesel series, so a state inside {{label}} carries the district reading with its own tax position shown beside it, rather than a survey of that state alone.</p>
+    </div>
+  </section>
+
+''' + foot())
 
 with open(os.path.join(OUT, "us-padd.template.html"), "w") as f:
     f.write(uspadd_body)

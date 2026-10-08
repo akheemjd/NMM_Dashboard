@@ -16,19 +16,18 @@ concurrency:
 
 jobs:
   deploy:
-    # A stalled Pages deployment currently burns the full default timeout - the runs that get
-    # cancelled sit at exactly 905 to 907 seconds - which keeps the slot busy and emails an
-    # alarming "Run failed" that is really just a kill. Fail in five minutes instead, so a
-    # stall costs one tick rather than half a slot.
+    # A stalled Pages deployment burns the full default timeout - the runs that get cancelled sit
+    # at exactly 905 to 907 seconds - which keeps the slot busy and emails an alarming "Run failed"
+    # that is really just a kill. Fail in eight minutes instead, so a stall costs one tick.
     timeout-minutes: 8
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy_retry.outputs.page_url || steps.deploy.outputs.page_url || 'https://dashboard.northernmilemedia.com/' }}
     runs-on: ubuntu-latest
     steps:
-      # The repo is 97 MB of pack, almost all of it built docs committed every half hour, and
-      # this workflow only ever needs the current tree to upload docs/. A full clone pulls the
-      # entire history for nothing.
+      # The repo is 97 MB of pack, almost all of it built docs committed every hour, and this
+      # workflow only ever needs the current tree to upload docs/. A full clone pulls the entire
+      # history for nothing.
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -36,6 +35,31 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
+
+      # deploy-pages fails transiently. On 2026-10-08 two runs failed with the job's own
+      # conclusion set to failure - not a cancellation - in about 20 seconds, with every earlier
+      # step green, and a re-trigger cleared it both times. Left alone, the site sits on the
+      # previous build until the next hourly tick, and nothing notices: the push succeeded, so the
+      # deploy script reports success.
+      #
+      # continue-on-error so the retry can run, then the last step re-raises if both attempts
+      # failed. A transient failure costs 45 seconds instead of an hour of stale data.
       - name: Deploy
         id: deploy
         uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Settle before retry
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 45
+
+      - name: Deploy (retry)
+        id: deploy_retry
+        if: steps.deploy.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+
+      - name: Fail the run if both attempts failed
+        if: steps.deploy.outcome == 'failure' && steps.deploy_retry.outcome == 'failure'
+        run: |
+          echo "::error::deploy-pages failed twice. The push landed but Pages did not publish."
+          exit 1
