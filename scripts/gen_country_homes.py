@@ -246,8 +246,8 @@ write(
     head(
         "Diesel Prices in Canada and the US — pick your side | Northern Mile",
         "Canadian diesel {{fuel.national_diesel}}¢/L across ten provinces, US diesel "
-        "${{eia.us_national_usd_gal}}/gal across ten districts. Canada is {{eia.ca_us_gap}}¢/L "
-        "{{eia.gap_word}}. Pick your side of the border, or read the cross-border figures first.",
+        "${{eia.us_national_usd_gal}}/gal across ten districts. {{eia.gap_clause}}. "
+        "Pick your side of the border, or read the cross-border figures first.",
         "/", "og.jpg", chooser_ld,
     )
     + '''

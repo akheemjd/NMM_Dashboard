@@ -1074,6 +1074,29 @@ def check_us_pages_lead_in_gallons():
     return bad
 
 
+def check_no_doubled_country():
+    """No page may name the same country twice around the gap figure.
+
+    The homepage published "Canada is 26.1¢/L Canada higher" in its meta and OG descriptions,
+    where the template wrote a country and then a token that already began with one. It is
+    visible in search results and social cards, which is the worst place for it.
+    """
+    import os
+    import re as _re
+    docs = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+    pat = _re.compile(r"\b(Canada|the US|US)\s+is\s+-?[\d.]+\s*\u00a2/L\s+(Canada|the US|US)\b")
+    bad = []
+    for dirpath, _d, files in os.walk(docs):
+        if os.sep + "assets" in dirpath or "index.html" not in files:
+            continue
+        html = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                    errors="replace").read()
+        for m in pat.finditer(html):
+            rel = os.path.relpath(dirpath, docs).replace(os.sep, "/")
+            bad.append(f"/{rel}/ says {m.group(0)!r}")
+    return bad[:5]
+
+
 def check_internal_links_resolve():
     """Every internal link in a page body must land on a page that exists.
 
@@ -1292,6 +1315,7 @@ CHECKS = (
     ("brand identity matches the data geography", check_brand_identity),
     ("canonical URLs resolve to built pages", check_canonical_targets_resolve),
     ("internal links resolve to built pages", check_internal_links_resolve),
+    ("no page names a country twice around the gap", check_no_doubled_country),
     ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("country trees are separate and reachable", check_country_trees),

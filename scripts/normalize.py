@@ -419,6 +419,16 @@ if _eia_usd is not None and fx_rate and not _eia_stale:
         # used to prepend its own "Canada", which rendered "with Canada Canada
         # higher by" on /us-diesel/.
         "gap_word": "Canada higher" if _gap > 0 else ("the US higher" if _gap < 0 else "level with"),
+        # The whole clause, for sentences that name the country themselves. This sentence has
+        # now doubled twice: a template that writes "Canada is X¢/L {{gap_word}}" says the
+        # country twice, because gap_word already begins with one. A complete clause cannot be
+        # composed wrong. It also names whichever country actually leads, rather than assuming
+        # Canada, and handles the tie.
+        "gap_clause": (
+            f"Canada is {abs(_gap):.1f}¢/L higher" if _gap > 0
+            else f"The US is {abs(_gap):.1f}¢/L higher" if _gap < 0
+            else "The two national averages are level"
+        ),
         "date": raw_eia.get("date", ""),
         "padds_usd_gal": _padds,
         "padds_cpl": _padds_cpl,
