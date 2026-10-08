@@ -18,6 +18,7 @@ DATA = os.path.expanduser("~/northern-mile-dashboard/data")
 
 # ── Materiality band classification ──
 import yaml
+import fmt
 _thresh_path = os.path.join(os.path.dirname(DATA), "config", "thresholds.yaml")
 with open(_thresh_path) as tf:
     thresh = yaml.safe_load(tf)
@@ -301,7 +302,7 @@ try: _fx_pct = float(_fx_pct)
 except: _fx_pct = 0.0
 _apct = abs(_fx_pct)
 fx["band"] = "noise" if _apct < 0.2 else "notable" if _apct < 0.5 else "material" if _apct < 1.0 else "alert"
-fx["band_pct"] = f"{_fx_pct:+.2f}%"
+fx["band_pct"] = fmt.pct(_fx_pct)
 
 # FX context gauges — from exchange.json history. Windows are in business days.
 EMPTY = "—"
@@ -315,7 +316,7 @@ def _delta(n):
     if len(_pairs) > n:
         base = _pairs[-1 - n][1]
         d = _pairs[-1][1] - base
-        return f"{d:+.4f}", f"{d / base * 100:+.2f}%"
+        return f"{d:+.4f}", fmt.pct(d / base * 100)
     return EMPTY, EMPTY
 
 if _pairs:

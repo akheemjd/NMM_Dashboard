@@ -12,6 +12,7 @@ import os
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+import fmt
 
 
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -321,7 +322,7 @@ def generate_brief(today_override=None):
     if fx_info.get("current"):
         econ_signals.append({
             "signal": "CAD/USD",
-            "value": f'{fx_info["current"]} ({fx_info["direction"]}, {fx_info["change_pct"]:+.2f}%)',
+            "value": f'{fx_info["current"]} ({fx_info["direction"]}, {fmt.pct(fx_info["change_pct"])})',
             "trucking_impact": f"{'CAD weakening hurts fuel purchasing power' if fx_info['change_pct'] > 0 else 'CAD strength softens pump pressure'} against crude priced in USD",
         })
     

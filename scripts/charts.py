@@ -6,6 +6,7 @@ assets/nm.css (fill/stroke via custom properties), not hardcoded here."""
 
 import re
 from collections import Counter
+import fmt
 
 
 def _num(v):
@@ -244,10 +245,10 @@ def fx_change_bars_svg(history):
         out.append(f'<text class="viz-lab" x="{LH - 6}" y="{y + 3.5}" text-anchor="end">{label}</text>')
         if pct < 0:
             out.append(f'<rect class="viz-bar down" x="{center - bw:.1f}" y="{y - 8}" width="{bw:.1f}" height="16" rx="3"/>')
-            out.append(f'<text class="viz-val" x="{center - bw - 6:.1f}" y="{y + 3.5}" text-anchor="end">{pct:+.2f}%</text>')
+            out.append(f'<text class="viz-val" x="{center - bw - 6:.1f}" y="{y + 3.5}" text-anchor="end">{fmt.pct(pct)}</text>')
         else:
             out.append(f'<rect class="viz-bar up" x="{center:.1f}" y="{y - 8}" width="{bw:.1f}" height="16" rx="3"/>')
-            out.append(f'<text class="viz-val" x="{center + bw + 6:.1f}" y="{y + 3.5}">{pct:+.2f}%</text>')
+            out.append(f'<text class="viz-val" x="{center + bw + 6:.1f}" y="{y + 3.5}">{fmt.pct(pct)}</text>')
         y += ROW
     out.append("</svg>")
     return "".join(out)

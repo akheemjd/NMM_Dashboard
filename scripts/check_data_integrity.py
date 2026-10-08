@@ -1074,6 +1074,32 @@ def check_us_pages_lead_in_gallons():
     return bad
 
 
+def check_percent_format():
+    """Signed percentages show one decimal, and a rounded zero carries no sign.
+
+    The site published "-0.0%" on six pages. It told a reader the figure had moved when it had
+    not, and it came from choosing the sign before rounding: the value really was negative, so
+    the sign was right, and then the decimal rounded away and left the sign attached to nothing.
+    """
+    import os
+    import re as _re
+    docs = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+    zero = _re.compile(r"[+\u2212-]0\.0%")
+    deep = _re.compile(r"[+\u2212-]\d+\.\d{2,}%")
+    bad = []
+    for dirpath, _d, files in os.walk(docs):
+        if os.sep + "assets" in dirpath or "index.html" not in files:
+            continue
+        html = open(os.path.join(dirpath, "index.html"), encoding="utf-8",
+                    errors="replace").read()
+        rel = os.path.relpath(dirpath, docs).replace(os.sep, "/")
+        for m in zero.finditer(html):
+            bad.append(f"/{rel}/ shows a signed zero: {m.group(0)}")
+        for m in deep.finditer(html):
+            bad.append(f"/{rel}/ shows more than one decimal: {m.group(0)}")
+    return bad[:5]
+
+
 def check_no_doubled_country():
     """No page may name the same country twice around the gap figure.
 
@@ -1316,6 +1342,7 @@ CHECKS = (
     ("canonical URLs resolve to built pages", check_canonical_targets_resolve),
     ("internal links resolve to built pages", check_internal_links_resolve),
     ("no page names a country twice around the gap", check_no_doubled_country),
+    ("signed percentages are one decimal and never signed zero", check_percent_format),
     ("US pages lead with US gallons", check_us_pages_lead_in_gallons),
     ("toggle rate matches the displayed rate", check_fx_rate_agrees),
     ("country trees are separate and reachable", check_country_trees),

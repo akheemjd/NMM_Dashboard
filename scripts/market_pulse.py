@@ -2,6 +2,7 @@ import urllib.request, io, zipfile, csv, json, os, sys
 from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from history import span_days, average, average_obs
+import fmt
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
@@ -59,7 +60,7 @@ def collect_market_pulse():
                     "name": "GDP Growth",
                     "label": "Monthly GDP",
                     "country": "ca",
-                    "value": f"{mom_change:+.1f}%",
+                    "value": fmt.pct(mom_change),
                     "detail": f"${current/1000:.0f}B (chained 2017)",
                     "direction": "up" if mom_change > 0 else "down",
                     "source": "Statistics Canada",
@@ -74,7 +75,7 @@ def collect_market_pulse():
                         "name": "GDP YoY",
                         "label": "Year-over-year",
                         "country": "ca",
-                        "value": f"{yoy_change:+.1f}%",
+                        "value": fmt.pct(yoy_change),
                         "direction": "up" if yoy_change > 0 else "down",
                         "source": "Statistics Canada",
                         "what_it_means": "Longer-term freight demand trend."
