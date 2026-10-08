@@ -25,7 +25,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #F2B9
 .home-template .gh-header-title{font-weight:700!important;font-size:clamp(38px,5vw,62px)!important;line-height:1.04!important;letter-spacing:-.02em!important;color:#1F2421!important;max-width:13ch;text-align:left!important;margin:0!important}
 .nm-dek{font-family:'Source Serif 4',Georgia,serif;font-size:21px;line-height:1.55;color:#3A413D;margin:22px 0 0;max-width:34em}
 .home-template .gh-header .gh-form{margin:28px 0 0!important;max-width:520px;width:100%;background:transparent!important;box-shadow:none!important;padding:0!important;display:flex;gap:10px;flex-wrap:wrap}
-.home-template .gh-header .gh-form-input{flex:1 1 240px;min-height:52px;border-radius:999px!important;border:1px solid #C5CCC7!important;background:#FFFFFF!important;padding:0 20px!important;font-family:'Overpass',sans-serif;font-size:16px;color:#1F2421!important}
+.home-template .gh-header .gh-form-input{position:static!important;inset:auto!important;width:auto!important;flex:1 1 240px;min-height:52px;border-radius:999px!important;border:1px solid #C5CCC7!important;background:#FFFFFF!important;padding:0 20px!important;font-family:'Overpass',sans-serif;font-size:16px;color:#1F2421!important}
 .home-template .gh-header .gh-form .gh-button{min-height:52px;padding:0 24px!important;position:static!important}
 .home-template .gh-header .gh-form p{display:none}
 .nm-sign{background:#0E5A3B;color:#FFFFFF;border-radius:18px;box-shadow:inset 0 0 0 7px #0E5A3B,inset 0 0 0 9px rgba(255,255,255,.92);padding:34px 40px 30px;font-family:'Overpass',sans-serif}
@@ -82,7 +82,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #F2B9
 .gh-footer-signup-header{font-weight:700!important;font-size:34px!important;color:#FFFFFF!important;letter-spacing:-.01em}
 .gh-footer-signup-subhead{font-family:'Source Serif 4',Georgia,serif!important;font-size:19px!important;color:#C9D1CC!important;opacity:1!important}
 .gh-footer-signup .gh-form{background:transparent!important;box-shadow:none!important;display:flex;gap:10px;flex-wrap:wrap;max-width:560px;margin-left:auto;margin-right:auto}
-.gh-footer-signup .gh-form-input{flex:1 1 220px;min-height:52px;border-radius:999px!important;border:0!important;background:#FFFFFF!important;padding:0 20px!important;color:#1F2421!important}
+.gh-footer-signup .gh-form-input{position:static!important;inset:auto!important;width:auto!important;flex:1 1 220px;min-height:52px;border-radius:999px!important;border:0!important;background:#FFFFFF!important;padding:0 20px!important;color:#1F2421!important}
 .gh-footer-signup .gh-form .gh-button{min-height:52px;position:static!important;background:#FFFFFF!important;color:#1F2421!important}
 .gh-footer-bar{font-family:'Overpass',sans-serif;color:#5B635E;border-color:#DADFDB!important}
 .gh-footer-bar a{color:#0E5A3B}
