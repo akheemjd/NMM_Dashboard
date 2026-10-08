@@ -25,6 +25,7 @@ from collect_us_fuel_tax import collect_us_fuel_tax
 from theft_incidents import collect_theft_incidents
 from collect_eia_diesel import collect_eia_diesel
 from health_tracker import record_success, record_failure
+import time
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
@@ -49,9 +50,33 @@ def fetch_json(url, timeout=15):
     req = urllib.request.Request(url, headers={"User-Agent": "NorthernMileDashboard/1.0"})
     return json.loads(urllib.request.urlopen(req, timeout=timeout).read())
 
-def fetch_text(url, timeout=15):
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; NorthernMileDashboard/1.0)"})
-    return urllib.request.urlopen(req, timeout=timeout).read().decode("utf-8", errors="replace")
+def fetch_text(url, timeout=15, attempts=3):
+    """Fetch a feed as text, retrying past an intermittent block.
+
+    Truck News 403s on most requests and answers on a retry with identical headers - measured, same
+    URL and same UA, 403 then 200. It is bot protection with an intermittent allow, not a
+    user-agent gate: the bare bot UA, a Mozilla-compatible bot UA and a full browser UA all 403 on
+    the first attempt. A single attempt therefore records a working feed as permanently broken and
+    logs a 403 on every run.
+
+    A browser-shaped UA with a feed Accept, and up to `attempts` tries with a short backoff. The
+    other three feeds answer 200 to every UA tested, so nothing changes for them.
+    """
+    req = urllib.request.Request(url, headers={
+        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                       "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"),
+        "Accept": "application/rss+xml, application/xml, text/xml, */*;q=0.1",
+        "Accept-Language": "en-CA,en;q=0.9",
+    })
+    last = None
+    for i in range(max(1, attempts)):
+        try:
+            return urllib.request.urlopen(req, timeout=timeout).read().decode("utf-8", errors="replace")
+        except Exception as e:
+            last = e
+            if i < attempts - 1:
+                time.sleep(2 * (i + 1))
+    raise last
 
 def save(name, data):
     path = os.path.join(DATA_DIR, f"{name}.json")
