@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-08 22:01",
-  "updated_iso": "2026-10-08T22:01:09+00:00",
-  "build_version": "1791496869",
+  "updated_at": "2026-10-08 23:06",
+  "updated_iso": "2026-10-08T23:06:10+00:00",
+  "build_version": "1791500770",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 31,
+    "active_count": 29,
     "gauge_class": "warn",
-    "status_line": "HWY 58, HWY 401, HWY 403 ",
+    "status_line": "HWY 401, HWY 94",
     "incidents": [
       {
-        "road": "HWY 58",
-        "what": "Disabled Vehicle on HWY 58 Northbound  at THOROLD TUNNEL, Thorold. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at WESTON ROAD, Toronto. Left shoulder\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at HWY 400, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -376,9 +376,9 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:07 EDT",
+      "captured_at": "18:51 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -391,7 +391,7 @@
       "url": "/border-wait-times/",
       "captured_at": "17:15 EDT",
       "route": "Sarnia, ON \u2014 Port Huron, MI",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -404,7 +404,7 @@
       "url": "/border-wait-times/",
       "captured_at": "18:40 EDT",
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
-      "us_wait": "4 min",
+      "us_wait": "3 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:37 EDT",
+      "captured_at": "18:45 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "us_wait": "No delay",
       "us_status_class": "ok"
@@ -441,7 +441,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 MDT",
+      "captured_at": "16:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "us_wait": "5 min",
       "us_status_class": "mod"
@@ -454,10 +454,10 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT",
+      "captured_at": "15:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Emerson-Pembina",
@@ -469,8 +469,8 @@
       "url": "/border-wait-times/",
       "captured_at": "16:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Thousand Islands Bridge",
