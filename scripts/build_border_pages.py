@@ -86,6 +86,7 @@ def main():
         "wait": c.get("wait", ""),
         "status_label": c.get("status_label", ""),
         "status_class": c.get("status_class", ""),
+        "dir_short": "into Canada",
     } for c in crossings]
 
     # ---- the American side ----
@@ -134,6 +135,7 @@ def main():
     siblings = siblings + [{
         "slug": u["slug"], "name": u["name"], "wait": u["wait"],
         "status_label": u["status_label"], "status_class": u["status_class"],
+        "dir_short": "into the US",
     } for u in us_ports]
 
     seen = {}
@@ -154,6 +156,11 @@ def main():
             "status_class": c.get("status_class", ""),
             "sub": c.get("sub", ""),
             "agency": "CBSA",
+            # CBSA measures only traffic entering Canada. Say so, and give the CBP figure
+            # for the other direction where the same crossing has one.
+            "direction": "Into Canada",
+            "direction_lc": "into Canada",
+            "other_dir": f"Into the US: {c.get('us_wait') or 'not reported'} · CBP",
             "prose": load_prose(slug),
             "siblings": [s for s in siblings if s["slug"] != slug],
             "updated_at": updated_at,
@@ -184,6 +191,9 @@ def main():
             "status_class": u["status_class"],
             "sub": u["sub"],
             "agency": "CBP",
+            "direction": "Into the US",
+            "direction_lc": "into the US",
+            "other_dir": "Into Canada: CBSA publishes no figure for this port",
             "prose": load_prose(slug),
             "siblings": [x for x in siblings if x["slug"] != slug],
             "updated_at": updated_at,

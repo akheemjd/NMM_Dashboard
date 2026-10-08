@@ -251,6 +251,43 @@ RECIPES = [
 
 # ── Composer ───────────────────────────────────────────────────
 
+def topic_hero_stat(topic_id, keyword, fuel, exchange, border):
+    """The hero figure for a post that did not pass --stat-value.
+
+    Every hero used to fall back to the national diesel average, so a border post, an FX
+    post and an IFTA post all led with the same number and the blog feed read as one card
+    repeated. The fallback now follows the subject. Returns (value, label, source) or None,
+    and None still falls through to the national average.
+    """
+    text = f"{topic_id or ''} {keyword or ''}".lower().replace("-", " ")
+
+    if any(w in text for w in ("border", "crossing", "wait time")):
+        rows = [(c.get("name", "?"), c.get("delay_minutes"))
+                for c in (border.get("crossings") or [])
+                if c.get("commercial") and c.get("delay_minutes") is not None]
+        if rows:
+            name, mins = max(rows, key=lambda r: r[1])
+            if mins > 0:
+                return (f"{mins:.0f} min", f"longest commercial wait, {name}",
+                        "CBSA border wait times")
+            return (f"{len(rows)}/{len(rows)}", "crossings with no delay",
+                    "CBSA border wait times")
+
+    if any(w in text for w in ("exchange", "loonie", "currency", "usd cad", "fx ")):
+        rate = exchange.get("current")
+        if rate:
+            return (f"{float(rate):.4f}", "USD/CAD, Bank of Canada",
+                    "Bank of Canada")
+
+    if any(w in text for w in ("by province", "provincial", "province spread", "spread")):
+        prices = [p for _n, p in province_prices(fuel) if p]
+        if len(prices) >= 2:
+            return (f"{max(prices) - min(prices):.1f}\u00a2/L",
+                    "gap between the dearest and cheapest province",
+                    "Natural Resources Canada weekly diesel survey")
+    return None
+
+
 def compose(topic_id, headline, keyword=None, eyebrow=None,
             stat_value=None, stat_label=None, source=None, upload=True,
             max_figures=3):
@@ -278,6 +315,11 @@ def compose(topic_id, headline, keyword=None, eyebrow=None,
     }
 
     # ── Hero (always) ──
+    if not stat_value:
+        picked = topic_hero_stat(topic_id, keyword, fuel, exchange, border)
+        if picked:
+            stat_value, stat_label, source = picked[0], stat_label or picked[1], source or picked[2]
+            print(f"  hero stat from topic: {stat_value} ({stat_label})")
     if not stat_value:
         nat = national_average(fuel)
         if nat:

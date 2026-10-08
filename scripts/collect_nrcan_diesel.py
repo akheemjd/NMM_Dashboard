@@ -6,6 +6,21 @@ Runs: every 30 min via collector pipeline."""
 import json, os, sys, urllib.request, xml.etree.ElementTree as ET
 import unicodedata
 from datetime import datetime, timezone
+from decimal import Decimal, ROUND_HALF_UP
+
+
+def cents_mean_1dp(cents):
+    """Mean of city prices in cents/L, rounded half-up to one decimal.
+
+    Two modules averaged the same NRCan cities and disagreed on the last digit: this one
+    averaged dollars and multiplied by 100, normalize_provinces averaged cents, and Python's
+    float rounding sent an exact .x5 one way in each. New Brunswick printed 267.0 on the
+    province bar chart and 267.1 on its own page (Nova Scotia 268.4 against 268.3). Both now
+    call this, from the same cents values, with decimal rounding that cannot drift.
+    """
+    vals = [Decimal(str(round(float(c), 1))) for c in cents]
+    mean = sum(vals) / Decimal(len(vals))
+    return float(mean.quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
@@ -126,8 +141,7 @@ def compute_provincial(prices):
     # Compute averages and convert to cents/L
     result = {}
     for prov, vals in provinces.items():
-        avg_dollars = sum(vals) / len(vals)
-        avg_cents = round(avg_dollars * 100, 1)
+        avg_cents = cents_mean_1dp([v * 100 for v in vals])
         result[prov] = {
             "diesel": avg_cents,
             "gasoline": None,  # separate feed for gasoline
@@ -143,7 +157,7 @@ def compute_provincial(prices):
     if len(indexed) != len(INDEX_PROVINCES):
         missing = [p for p in INDEX_PROVINCES if p not in result]
         raise ValueError(f"NMDI requires all 10 index provinces, missing: {missing}")
-    national_avg = round(sum(indexed) / len(indexed), 1)
+    national_avg = cents_mean_1dp(indexed)
     
     return result, national_avg
 

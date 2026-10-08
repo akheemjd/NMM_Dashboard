@@ -73,12 +73,12 @@ def collect_market_pulse():
                     yoy_change = round((current - yoy_val) / yoy_val * 100, 1) if yoy_val else 0
                     pulse["indicators"].append({
                         "name": "GDP YoY",
-                        "label": "Year-over-year",
+                        "label": "GDP, year over year",
                         "country": "ca",
                         "value": fmt.pct(yoy_change),
                         "direction": "up" if yoy_change > 0 else "down",
                         "source": "Statistics Canada",
-                        "what_it_means": "Longer-term freight demand trend."
+                        "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
                     })
     except Exception as e:
         print(f"  GDP: {e}")
@@ -113,11 +113,49 @@ def collect_market_pulse():
                 "country": "ca",
                 "value": f"{spread:.1f}¢/L",
                 "direction": "up" if spread > 20 else "down",
-                "source": "Industry surveys",
+                "source": "NRCan weekly diesel survey",
                 "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
             })
     except Exception as e:
         print(f"  Fuel pulse: {e}")
+
+    # 2b. The US side of the same two cost signals. The pulse was all-Canadian (StatCan GDP,
+    # NRCan cost, a BC/AB spread) on a dashboard that covers both countries.
+    try:
+        with open(os.path.join(DATA_DIR, "eia_diesel.json")) as f:
+            eia = json.load(f)
+        us_avg = eia.get("us_national_usd_gal")
+        if us_avg:
+            MPG = 6.5  # loaded class 8 highway
+            cost_1000mi = 1000 / MPG * float(us_avg)
+            pulse["indicators"].append({
+                "name": "US Fuel Cost",
+                "label": "Fuel cost per 1,000 miles",
+                "country": "us",
+                "value": f"${cost_1000mi:,.0f}",
+                "detail": f"At ${float(us_avg):.3f}/gal and {MPG} mpg",
+                "direction": "flat",  # a level, not a trend: no weekly history behind it
+                "source": "EIA weekly retail diesel survey",
+                "what_it_means": "Per-1,000-mile fuel cost at the US national average. Used directly in rate quotes."
+            })
+        districts = {k: v for k, v in (eia.get("districts") or {}).items()
+                     if v.get("price_usd_gal")}
+        if len(districts) >= 2:
+            lo = min(districts.values(), key=lambda d: d["price_usd_gal"])
+            hi = max(districts.values(), key=lambda d: d["price_usd_gal"])
+            gap = hi["price_usd_gal"] - lo["price_usd_gal"]
+            short = lambda d: d.get("label", "").split(" (")[0]
+            pulse["indicators"].append({
+                "name": "US Fuel Spread",
+                "label": f"{short(hi)} vs {short(lo)} diesel spread",
+                "country": "us",
+                "value": f"${gap:.3f}/gal",
+                "direction": "flat",
+                "source": "EIA weekly retail diesel survey",
+                "what_it_means": f"The gap between the dearest and cheapest EIA district. Fuel where {short(lo)} prices it."
+            })
+    except Exception as e:
+        print(f"  US fuel pulse: {e}")
 
     # 3. Exchange rate impact
     try:

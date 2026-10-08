@@ -85,33 +85,46 @@ def build_fuel_card():
 
 
 def build_home_card():
+    """The homepage share card. Both countries and the rate between them.
+
+    It used to read "Canadian trucking data" over the Canadian index and USD/CAD only, on
+    the share image of a dashboard that covers Canada and the US.
+    """
     with open(os.path.join(DATA, "fuel.json")) as f:
         fuel = json.load(f)
     with open(os.path.join(DATA, "exchange.json")) as f:
         fx = json.load(f)
+    try:
+        with open(os.path.join(DATA, "eia_diesel.json")) as f:
+            eia = json.load(f)
+    except (OSError, ValueError):
+        eia = {}
 
     img = Image.new("RGB", (W, H), PAPER)
     d = ImageDraw.Draw(img)
 
     d.text((70, 70), "NORTHERN MILE", font=font("display-bold", 28), fill=SIGNAL)
-    d.text((70, 115), "Canadian trucking data, published daily",
+    d.text((70, 115), "North American trucking data, published daily",
            font=font("body", 32), fill=MUTED)
 
-    d.text((70, 215), f"{fuel['diesel_national_avg']:.1f}",
-           font=font("number", 96), fill=INK)
-    d.text((70, 330), "NMDI  ·  cents per litre",
-           font=font("body", 26), fill=MUTED)
+    cols = [(f"{fuel['diesel_national_avg']:.1f}", "Canada  ·  ¢/L")]
+    if eia.get("us_national_usd_gal"):
+        cols.append((f"{float(eia['us_national_usd_gal']):.3f}", "US  ·  $/gal"))
+    cols.append((f"{fx['current']:.4f}", "USD/CAD  ·  BoC"))
+    step = (W - 140) // len(cols)
+    for i, (num, lab) in enumerate(cols):
+        x = 70 + i * step
+        d.text((x, 215), num, font=font("number", 80), fill=INK)
+        d.text((x, 320), lab, font=font("body", 26), fill=MUTED)
 
-    d.text((640, 215), f"{fx['current']:.4f}",
-           font=font("number", 96), fill=INK)
-    d.text((640, 330), "USD/CAD  ·  Bank of Canada",
-           font=font("body", 26), fill=MUTED)
-
-    d.text((70, 440), "Diesel  ·  Border waits  ·  Exchange  ·  Cargo theft",
+    d.text((70, 440), "Diesel  ·  Border waits  ·  Exchange  ·  Fuel tax  ·  Incidents",
            font=font("body", 30), fill=INK)
 
-    d.text((70, 545), f"NRCan survey {fuel.get('print_date','')}  ·  BoC {fx.get('observation_date','')}",
-           font=font("body", 22), fill=MUTED)
+    stamp = f"NRCan {fuel.get('print_date','')}"
+    if eia.get("date"):
+        stamp += f"  ·  EIA week {eia['date']}"
+    stamp += f"  ·  BoC {fx.get('observation_date','')}"
+    d.text((70, 545), stamp, font=font("body", 22), fill=MUTED)
     d.text((70, 578), "dashboard.northernmilemedia.com",
            font=font("bold", 24), fill=SIGNAL)
 

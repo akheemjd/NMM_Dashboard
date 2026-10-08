@@ -244,6 +244,38 @@ border = {
     "max_wait": f"{max_d} min" if max_d > 0 else "No delay",
 }
 
+# US-bound waits for the same nine crossings. CBSA's feed only measures traffic entering
+# Canada; the US-bound queue is CBP's. Without this the cards showed one direction and
+# never said which. Keyed by our crossing id -> CBP port number.
+CBP_FOR_CROSSING = {
+    "windsor-detroit": "380001",       # Detroit, Ambassador Bridge
+    "sarnia-port-huron": "380201",     # Port Huron, Bluewater Bridge
+    "fort-erie-buffalo": "090101",     # Buffalo/Niagara Falls, Peace Bridge
+    "queenston-lewiston": "090104",    # Buffalo/Niagara Falls, Lewiston Bridge
+    "lacolle-champlain": "071201",     # Champlain
+    "lansdowne-alexandria": "070801",  # Alexandria Bay, Thousand Islands Bridge
+    "coutts-sweetgrass": "331001",     # Sweetgrass
+    "pacific-blaine": "300401",        # Blaine, Pacific Highway
+    "emerson-pembina": "340101",       # Pembina
+}
+try:
+    _cbp_ports = {p.get("port_number"): p for p in (load("cbp_border.json") or {}).get("ports", [])}
+except Exception:
+    _cbp_ports = {}
+
+
+def _us_bound(crossing_id):
+    """(text, css class) for the US-bound commercial wait. Unreported is never zero."""
+    p = _cbp_ports.get(CBP_FOR_CROSSING.get(crossing_id, ""))
+    if not p:
+        return "not reported", "na"
+    d = p.get("commercial_delay")
+    if not p.get("commercial_reported") or d is None:
+        return "not reported", "na"
+    d = int(d)
+    return (f"{d} min" if d > 0 else "No delay"), ("heavy" if d > 15 else "mod" if d > 0 else "ok")
+
+
 # Crossing rows for border page (crossings loop) + home page
 border_rows = []
 crossings_for_page = []
@@ -269,7 +301,9 @@ for c in crossings[:12]:
         "status_class": cls,
         "url": "/border-wait-times/",
         "captured_at": cap_ts,
+        "route": c.get("route", ""),
     }
+    item["us_wait"], item["us_status_class"] = _us_bound(c.get("id", ""))
     border_rows.append(item)
     crossings_for_page.append(item)
 
@@ -532,8 +566,23 @@ _nadi_d30 = delta("nadi", "national", 30) if _nadi_span >= 30 else None
 def _cl(d):
     return "flat" if d is None else ("up" if d > 0 else ("down" if d < 0 else "flat"))
 
-eia["us_change_7d"] = _fmt_delta(_us_d7)
-eia["us_change_7d_class"] = _cl(_us_d7)
+# The US weekly change, in $/gal to match the US price beside it. Read from EIA's own
+# previous week. Falls back to the CAD ¢/L series, labelled as such, if that is missing.
+_prev = (raw_eia.get("previous_week") or {}) if isinstance(raw_eia, dict) else {}
+try:
+    _us_usd_d7 = round(float(raw_eia["us_national_usd_gal"]) - float(_prev["us_national_usd_gal"]), 3)
+except (KeyError, TypeError, ValueError):
+    _us_usd_d7 = None
+if _us_usd_d7 is not None:
+    eia["us_change_7d"] = "0.000" if _us_usd_d7 == 0 else f"{_us_usd_d7:+.3f}"
+    eia["us_change_7d_class"] = _cl(_us_usd_d7)
+    eia["us_change_7d_words"] = ("unchanged" if _us_usd_d7 == 0 else
+                                 f"{'up' if _us_usd_d7 > 0 else 'down'} ${abs(_us_usd_d7):.3f}/gal")
+else:
+    eia["us_change_7d"] = _fmt_delta(_us_d7) + ("¢/L CAD" if _us_d7 is not None else "")
+    eia["us_change_7d_class"] = _cl(_us_d7)
+    eia["us_change_7d_words"] = ("with no weekly change on record" if _us_d7 is None else
+                                 f"{'up' if _us_d7 > 0 else 'down'} {abs(_us_d7):.1f}¢/L in Canadian terms")
 eia["us_change_30d"] = _fmt_delta(_us_d30)
 eia["nadi_change_7d"] = _fmt_delta(_nadi_d7)
 eia["nadi_change_7d_class"] = _cl(_nadi_d7)
@@ -604,7 +653,8 @@ for ind in mk_indicators[:8]:
                   if "30-day average" in str(ind.get("label", "")) and fx.get("usd_cad")
                   else str(ind.get("value", "—"))),
         "value_class": cls,
-        "country_prefix": ("<span class=\"src\">Canada</span> " if ind.get("country") == "ca" else ""),
+        "country_prefix": {"ca": "<span class=\"src\">Canada</span> ",
+                           "us": "<span class=\"src\">US</span> "}.get(ind.get("country"), ""),
         "source": ind.get("source", ""),
         "what_it_means": ind.get("what_it_means", ""),
     })
@@ -614,9 +664,9 @@ _bc = border.get("heavy_count", 0) + border.get("moderate_count", 0)
 _tot = len(border_rows)
 if _tot:
     market.append({
-        "name": "Border congestion",
+        "name": "Border congestion, into Canada",
 "country_prefix": "",
-        "note": f"{_bc} of {_tot} crossings slow",
+        "note": f"{_bc} of {_tot} crossings slow, Canada-bound",
         "value": f"{_bc}/{_tot}",
         "value_class": "flat",
         "source": "CBSA commercial lane feed",
@@ -856,13 +906,23 @@ rates = raw_market.get("rates_snapshot", {})
 
 # Weekly read — a short deterministic summary of the current signals.
 _wr = []
+# Both countries, named. This line used to read "diesel at 259.6¢/L ... GDP moving 0.0%"
+# with no country on either figure, on a dashboard that covers Canada and the US.
 if rates.get("current_diesel"):
-    _wr.append(f"diesel at {rates.get('current_diesel')}¢/L")
+    _wr.append(f"Canadian diesel at {rates.get('current_diesel')}¢/L")
+try:
+    with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                           "data", "eia_diesel.json"), encoding="utf-8") as _f:
+        _us = json.load(_f).get("us_national_usd_gal")
+    if _us:
+        _wr.append(f"US diesel at ${float(_us):.3f}/gal")
+except Exception:
+    pass
 if rates.get("usd_cad"):
     _wr.append(f"the loonie at {rates.get('usd_cad')}")
 _gdp = next((m["value"] for m in market if m["name"] == "Monthly GDP"), None)
 if _gdp:
-    _wr.append(f"GDP moving {_gdp} last month")
+    _wr.append(f"Canadian GDP moving {_gdp} last month")
 # Sits under "<h2>The week in one line</h2>", so it must not begin with those words.
 weekly_read = (", ".join(_wr) + ".") if _wr else ""
 
@@ -872,6 +932,8 @@ write("market.norm", {
     "weekly_read": weekly_read,
     "fuel_pct_of_ops": rates.get("fuel_pct_of_ops", "25-35%"),
     "current_diesel": rates.get("current_diesel", "—"),
+    "us_diesel": (f"{float(raw_eia['us_national_usd_gal']):.3f}"
+                  if isinstance(raw_eia, dict) and raw_eia.get("us_national_usd_gal") else "—"),
     "usd_cad": rates.get("usd_cad", "—"),
     "updated_at": ts,
     "updated_iso": ts_iso,

@@ -25,7 +25,7 @@ ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "data")
 
 sys.path.insert(0, HERE)
-from collect_nrcan_diesel import CITY_PROVINCE  # noqa: E402
+from collect_nrcan_diesel import CITY_PROVINCE, cents_mean_1dp  # noqa: E402
 
 # Accent-safe lookup, same approach as the collector.
 try:
@@ -168,7 +168,7 @@ def build_province(code, city_prices, national, print_date, build_version, fuel=
         print(f"  {code}: {len(cities)} survey cities - building without a spread")
 
     prices = [p for _, p in cities]
-    prov_mean = round(sum(prices) / len(prices), 1)
+    prov_mean = cents_mean_1dp(prices)
     low_city, low_price = cities[0]
     high_city, high_price = cities[-1]
     spread = round(high_price - low_price, 1)

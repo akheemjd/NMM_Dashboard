@@ -411,6 +411,11 @@ def options_from_frontmatter(fm, default_status=None):
 
     if fm.get("slug"):
         opts["slug"] = fm["slug"]
+    # The search title. The visible headline is written for a dispatcher; the keyword-led
+    # version goes here, where Google and social cards read it. Without it Ghost falls
+    # back to the headline, which is what pushed keyword prefixes into the headlines.
+    if fm.get("seo_title") or fm.get("meta_title"):
+        opts["meta_title"] = str(fm.get("seo_title") or fm.get("meta_title"))[:60]
     if fm.get("description") or fm.get("meta_description"):
         desc = fm.get("description") or fm.get("meta_description")
         opts["meta_description"] = str(desc)[:160]
@@ -475,6 +480,12 @@ def upload_image(path, purpose="image"):
         "svg": "image/svg+xml",
     }.get(ext, "application/octet-stream")
 
+    # Ghost keeps the uploaded filename in the public URL. The homepage cover went up as a
+    # raw Midjourney prompt ("akheemjd_a_publication_cover_for_a_ghost.org_blog_site...").
+    # Send a short slug instead, whatever the file on disk is called.
+    upload_name = re.sub(r"[^a-z0-9]+", "-", path.stem.lower()).strip("-")[:60].rstrip("-")
+    upload_name = f"{upload_name or 'nmm-image'}.{ext}"
+
     url = f"{GHOST_SITE}/ghost/api/admin/images/upload/"
     headers = {"Authorization": f"Ghost {make_jwt()}"}
 
@@ -486,7 +497,7 @@ def upload_image(path, purpose="image"):
                 resp = requests.post(
                     url,
                     headers=headers,
-                    files={"file": (path.name, fh, mime)},
+                    files={"file": (upload_name, fh, mime)},
                     data={"purpose": purpose, "ref": path.stem},
                     timeout=60,
                 )

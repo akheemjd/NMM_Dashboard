@@ -146,17 +146,24 @@ def collect_news():
         ("Trucking Dive", "https://www.truckingdive.com/feeds/news/"),
         ("Trucking Info", "https://www.truckinginfo.com/rss/news/"),
         ("The Trucker", "https://www.thetrucker.com/feed/"),
+        # The three above are American trade press, so every headline on a page titled
+        # "Canada and the US" came from one side. Truck News is the Canadian trade feed.
+        ("Truck News", "https://www.trucknews.com/feed/"),
     ]
 
     # Category keyword mapping
+    # Category keyword mapping. The first match labels the headline, so the specific
+    # categories come first and the broad ones last. Matching is on whole words: as
+    # substrings, "truck" put every story in equipment ("Teen killed in motorcycle crash
+    # with semi-truck" was filed as equipment) and "rate" matched "corporate".
     categories = {
-        "regulations": ["regulation", "compliance", "fmcsa", "dot", "hours of service", "eld", "mandate", "rule", "law", "legislation", "mto", "transport canada", "cbsa"],
-        "markets": ["rate", "freight", "spot", "contract", "pricing", "volume", "demand", "capacity", "import", "export", "trade", "economy"],
-        "equipment": ["truck", "trailer", "engine", "electric", "ev", "autonomous", "safety system", "maintenance", "tire", "part"],
-        "business": ["merger", "acquisition", "earnings", "revenue", "profit", "ipo", "invest", "ceo", "cfo", "president", "appoints", "names", "layoff", "expansion"],
-        "technology": ["software", "platform", "digital", "automation", "telematics", "gps", "tracking", "visibility", "ai ", "artificial intelligence"],
-        "drivers": ["driver", "recruitment", "retention", "wage", "shortage", "training", "workforce", "labour"],
-        "safety": ["safety", "crash", "accident", "collision", "inspection", "cvsa", "blitz", "brake"],
+        "safety": ["safety", "crash", "crashes", "killed", "fatal", "accident", "collision", "inspection", "cvsa", "blitz", "brake", "hurricane", "storm", "wildfire"],
+        "regulations": ["regulation", "regulations", "compliance", "fmcsa", "dot", "hours of service", "hos", "eld", "mandate", "rule", "rules", "law", "legislation", "mto", "transport canada", "cbsa", "executive order", "tariff", "tariffs"],
+        "business": ["merger", "acquisition", "acquires", "earnings", "revenue", "profit", "ipo", "invest", "investment", "ceo", "cfo", "president", "appoints", "names", "layoff", "layoffs", "expansion", "stake", "sells", "grows"],
+        "drivers": ["driver", "drivers", "recruitment", "retention", "wage", "wages", "pay", "shortage", "training", "workforce", "labour", "labor"],
+        "technology": ["software", "platform", "digital", "automation", "telematics", "gps", "tracking", "visibility", "ai", "artificial intelligence", "driverless", "autonomous"],
+        "markets": ["rate", "rates", "freight", "spot", "contract", "pricing", "volume", "demand", "capacity", "import", "export", "trade", "economy", "diesel", "index"],
+        "equipment": ["trailer", "trailers", "engine", "electric", "ev", "evs", "tractor", "tractors", "chassis", "maintenance", "tire", "tires", "parts", "warranty", "coverage"],
     }
     # Canadian signal keywords for flag_canadian
     canada_words = [
@@ -197,7 +204,7 @@ def collect_news():
                 title_lower = title.lower()
                 matched = []
                 for cat, keywords in categories.items():
-                    if any(kw in title_lower for kw in keywords):
+                    if any(re.search(r"\b" + re.escape(kw) + r"\b", title_lower) for kw in keywords):
                         matched.append(cat)
                 if not matched:
                     matched = ["industry"]

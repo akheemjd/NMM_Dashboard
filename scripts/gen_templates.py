@@ -216,7 +216,7 @@ def us_part():
       <div class="cap"><h3>US — diesel by district</h3><span class="sp">{{us_low_code}} <b>{{us_low}}</b> → {{us_high_code}} <b>{{us_high}}</b> · ${{us_spread}}/gal</span></div>
       <div class="mean-wrap"><span class="mean" style="left:{{us_national_pct}}%"><span class="lab">US avg {{us_national}}</span></span></div>
       <!--LOOP:districts--><a class="row" href="/us-diesel/district/{{slug}}/" title="{{name}}"><span class="code">{{code}}</span><span class="track"><span class="fill" style="width:{{pct}}%"></span><span class="dot" style="left:{{pct}}%"></span></span><span class="val us">{{price}}</span></a><!--/LOOP:districts-->
-      <p class="railnote">Ten EIA districts, not states · EIA publishes no state-level diesel · {{us_low_code}} is {{us_low_name}}, {{us_high_code}} is {{us_high_name}}</p>
+      <p class="railnote">Ten EIA districts, not states · EIA publishes no state-level diesel · {{us_low_code}} is {{us_low_name}}, {{us_high_code}} is {{us_high_name}}, WCx is the West Coast without California</p>
     </div>
 """
 
@@ -368,8 +368,8 @@ write("index",
     <div class="lead"><h2>On the road</h2><p>What is in front of you right now.</p></div>
     <div class="two">
       <div><h3>Border crossings</h3><div class="rows">
-      <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{name}}<small>{{status_label}}</small></span><span class="v">{{wait}}</span></a><!--/LOOP:border_rows-->
-      </div><p class="note">Each wait carries CBSA's own capture time, not our fetch time. <a href="/border-wait-times/">All crossings</a></p></div>
+      <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{name}}<small>{{route}}</small></span><span class="v"><span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span><span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span></span></a><!--/LOOP:border_rows-->
+      </div><p class="note">Commercial lanes. Into Canada is CBSA's figure, into the US is CBP's, each with the agency's own capture time. <a href="/border-wait-times/">All crossings</a></p></div>
       <div><h3>Road incidents</h3>
       <!--IF:incidents.none--><div class="empty"><b>Corridors clear</b>No major closures or collisions on the corridors we monitor.</div><!--/IF:incidents.none-->
       <div class="links-list">
@@ -392,7 +392,7 @@ write("index",
     <p class="note">Diesel prices include all federal and provincial fuel, carbon, and sales taxes. <a href="/fuel-cost-calculator/">Work out what a run costs</a></p>
   </section>
 ''' + subscribe("One email, Wednesday mornings",
-   "What moved in Canadian diesel, at the border, and in freight demand, with every figure dated and linked back to this dashboard. Written for people who move freight, not for people who write about it.")
+   "What moved in diesel on both sides of the border, at the crossings, and in freight demand, with every figure dated and linked back to this dashboard. Written for people who move freight, not for people who write about it.")
  + foot())
 
 # ═══ Fuel prices ══════════════════════════════════════════════════════
@@ -443,7 +443,7 @@ write("fuel-prices",
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>North American diesel</h2><p>The cross-border index, and the gap Canadian carriers watch.</p></div>
+    <div class="lead"><h2>North American diesel</h2><p>The cross-border index, and the gap carriers on both sides watch.</p></div>
     <div class="stats">
       <div class="stat"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · <span class="{{eia.nadi_change_7d_class}}">{{eia.nadi_change_7d}} 7d</span></div></div>
       <div class="stat"><div class="l">US national</div><div class="v">{{eia.us_national_usd_gal}}</div><div class="s">$/gal · <span class="{{eia.us_change_7d_class}}">{{eia.us_change_7d}} 7d</span> · C${{eia.us_national_cad_gal}}/gal</div></div>
@@ -483,7 +483,7 @@ write("fuel-prices",
 # ═══ Freight Barometer ═══════════════════════════════════════════════════
 write("freight-barometer",
  head("Freight Barometer — This Week's Cross-Border Numbers | Northern Mile",
-      "The weekly cross-border snapshot: Canadian diesel {{fuel.national_diesel}}¢/L, the North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}, and the busiest border crossing. Every figure dated and sourced.",
+      "The weekly cross-border snapshot: Canadian diesel {{fuel.national_diesel}}¢/L, US diesel ${{eia.us_national_usd_gal}}/gal, the North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}, and the busiest border crossing. Every figure dated and sourced.",
       "/freight-barometer/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Freight barometer","/freight-barometer/") + ']}', "article")
  + '''
@@ -496,9 +496,10 @@ write("freight-barometer",
 
   <div class="stats">
     <a class="stat" href="/methodology/nmdi/"><div class="l">Canadian diesel</div><div class="v">{{fuel.national_diesel}}</div><div class="s">¢/L · ten provinces · NRCan print {{fuel.print_date}}</div></a>
+    <a class="stat" href="/us/"><div class="l">US diesel</div><div class="v">{{eia.us_national_usd_gal}}</div><div class="s">$/gal · ten EIA districts · week {{eia.date}}</div></a>
     <a class="stat" href="/fuel-prices/"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></a>
     <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · Bank of Canada</div></a>
-    <a class="stat" href="/border-wait-times/"><div class="l">Busiest crossing</div><div class="v">{{border.max_wait}}</div><div class="s">{{border.max_name}} · CBSA</div></a>
+    <a class="stat" href="/border-wait-times/"><div class="l">Busiest crossing</div><div class="v">{{border.max_wait}}</div><div class="s">{{border.max_name}} · into Canada · CBSA</div></a>
   </div>
 
   <section class="sec">
@@ -508,7 +509,7 @@ write("freight-barometer",
 
   <section class="sec">
     <div class="lead"><h2>Cite this</h2></div>
-    <p class="note"><q>Northern Mile freight barometer, {{updated_at}} UTC — Canadian diesel {{fuel.national_diesel}}¢/L, North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}.</q> <a href="/methodology/nmdi/">Methodology</a> · <a href="/fuel-prices/">Prices by province</a></p>
+    <p class="note"><q>Northern Mile freight barometer, {{updated_at}} UTC — Canadian diesel {{fuel.national_diesel}}¢/L, US diesel ${{eia.us_national_usd_gal}}/gal, North American index {{eia.nadi}}¢/L, USD/CAD {{fx.usd_cad}}.</q> <a href="/methodology/nmdi/">Methodology</a> · <a href="/fuel-prices/">Prices by province</a></p>
   </section>
 ''' + sponsor("sponsor_market") + subscribe("The week in one email",
    "Diesel, the border, and one argument worth your time. Wednesday mornings.") + foot())
@@ -633,12 +634,18 @@ with open(os.path.join(HERE, "..", "data", "distances.json")) as _df:
 
 CALCJS = '''<script>
 (function(){"use strict";var $=function(i){return document.getElementById(i);};
-var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost"),origin=$("origin"),dest=$("dest");
+var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("customwrap"),opcost=$("opcost"),origin=$("origin"),dest=$("dest"),units=$("units");
+// Units. The arithmetic stays metric; US mode converts what the reader types (miles, mpg)
+// on the way in and gallons on the way out. KM_MI is exact; 235.214583 converts mpg (US
+// gallon) to L/100km and back.
+var KM_MI=1.609344,MPG_L100=235.214583,L_GAL=3.785411784;
+function isUS(){return units&&units.value==="us";}
+function relabel(){$("distU").textContent=isUS()?"mi":"km";$("burnU").textContent=isUS()?"mpg":"L/100km";}
 var CITIES=__CITIES__;
 var DISTANCES=__DIST__,US_PADD=__PADD__,CODES=__CODES__;
 function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n].p]=g[CITIES[n].p]||[]).push(n);});Object.keys(g).sort().forEach(function(p){var og=document.createElement("optgroup");og.label=(p==="US"?"United States":p);g[p].sort().forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;og.appendChild(o);});sel.appendChild(og);});}
 function hav(a,b){var R=6371,dLa=(b.la-a.la)*Math.PI/180,dLn=(b.ln-a.ln)*Math.PI/180,la1=a.la*Math.PI/180,la2=b.la*Math.PI/180;var h=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLn/2)*Math.sin(dLn/2);return 2*R*Math.asin(Math.sqrt(h));}
-function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){var ca=CODES[origin.value],cb=CODES[dest.value],km=(ca&&cb)?(DISTANCES[ca+"-"+cb]||DISTANCES[cb+"-"+ca]||0):0;dist.value=km?km:Math.round(hav(o,d)*1.25);$("distHint").textContent="Auto: "+origin.value+" → "+dest.value+" = "+dist.value+" km";var t=(o.p==="US")?(US_PADD[origin.value]||"US"):o.p;for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===t){prov.value=prov.options[i].value;break;}}}calc();}
+function lane(){var o=CITIES[origin.value],d=CITIES[dest.value];if(o&&d&&origin.value!==dest.value){var ca=CODES[origin.value],cb=CODES[dest.value],km=(ca&&cb)?(DISTANCES[ca+"-"+cb]||DISTANCES[cb+"-"+ca]||0):0;var kmv=km?km:Math.round(hav(o,d)*1.25);dist.value=isUS()?Math.round(kmv/KM_MI):kmv;$("distHint").textContent="Auto: "+origin.value+" → "+dest.value+" = "+dist.value+(isUS()?" mi":" km");var t=(o.p==="US")?(US_PADD[origin.value]||"US"):o.p;for(var i=0;i<prov.options.length;i++){if(prov.options[i].getAttribute("data-code")===t){prov.value=prov.options[i].value;break;}}}calc();}
 function money(v){return "$"+v.toLocaleString("en-CA",{minimumFractionDigits:2,maximumFractionDigits:2});}
 // Emit a marked span instead of flat text so the currency toggle can
 // re-render these. The calculator computes in CAD natively (every fuel
@@ -649,9 +656,10 @@ function fxs(v,unit){
 }
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
 var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
+if(isUS()){d=d*KM_MI;b=b>0?MPG_L100/b:NaN;}
 if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice","rOpMi","rFloor"].forEach(function(i){$(i).textContent="\\u2014";});return;}
 var litres=d/100*b,total=litres*(cents/100),perMi=total/d*1.609344,floor=perMi+op;
-$("rLitres").textContent=litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L";
+$("rLitres").textContent=isUS()?((litres/L_GAL).toLocaleString("en-US",{maximumFractionDigits:1})+" gal"):(litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L");
 $("rTotal").innerHTML=fxs(total,"plain");
 $("rPerKm").innerHTML=fxs(total/d,"plain")+" /km";
 $("rPerMi").innerHTML=fxs(perMi,"plain")+" /mi";
@@ -665,6 +673,10 @@ $("rPrice").innerHTML=fxs(cents,"cpl")+" · "+(isC?"your price":o.getAttribute("
 if(window.NMFX&&window.NMFX.ready&&window.NMFX.ready()){try{window.NMFX.render();}catch(e){}}
 }
 [dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
+if(units){units.addEventListener("change",function(){var d=parseFloat(dist.value),b=parseFloat(burn.value);
+if(isUS()){if(d>0)dist.value=Math.round(d/KM_MI);if(b>0)burn.value=(MPG_L100/b).toFixed(1);}
+else{if(d>0)dist.value=Math.round(d*KM_MI);if(b>0)burn.value=(MPG_L100/b).toFixed(1);}
+relabel();calc();});}
 // fx.js calls this after the reader switches currency, so the results
 // re-render in the new one. Without it the toggle would convert the static
 // page and leave the calculator showing stale CAD.
@@ -679,20 +691,21 @@ calc();})();
 
 write("fuel-cost-calculator",
  head("Truck Fuel Cost Calculator — Rate Floor + Trip Cost | Northern Mile",
-      "Work out your rate floor and trip fuel cost using current Canadian prices. Set fuel consumption and fixed operating cost, pick a province, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print {{fuel.print_date}}.",
+      "Work out your rate floor and trip fuel cost using current Canadian and US diesel prices, in kilometres or miles. Set fuel consumption and fixed operating cost, pick a province or EIA district, and see cost per trip, per mile, and the minimum rate you should charge. Prices from the NRCan weekly survey, print {{fuel.print_date}}, and EIA, week {{eia.date}}.",
       "/fuel-cost-calculator/", "og.jpg", calc_ld)
  + '''
   <section class="hero">
-    <span class="eyebrow">Prices from NRCan survey print {{fuel.print_date}}</span>
+    <span class="eyebrow">NRCan print {{fuel.print_date}} · EIA week {{eia.date}}</span>
     <h1>Truck fuel cost calculator</h1>
-    <p class="stand">What a run costs in diesel, using this week's Canadian prices and your own consumption figure. Change any field and the result updates.</p>
+    <p class="stand">What a run costs in diesel, using this week's Canadian and US prices and your own consumption figure. Work in kilometres or miles. Change any field and the result updates.</p>
   </section>
 
   <div class="calc">
     <div>
       <div class="fld"><label for="origin">Lane</label><div class="lane"><div class="inp"><select id="origin"><option value="">From — pick a city</option></select></div><div class="inp"><select id="dest"><option value="">To — pick a city</option></select></div></div><p class="hint">Pick a Canadian or US lane and the distance and fuel price fill in automatically — real road distance where we have it, an estimate otherwise. US lanes use their EIA region price (excludes Canadian carbon tax).</p></div>
-      <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit">km</span></div><p class="hint" id="distHint">Pick a lane above and this fills in automatically — or type the distance you know.</p></div>
-      <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
+      <div class="fld"><label for="units">Units</label><div class="inp"><select id="units"><option value="metric">Kilometres · L/100km</option><option value="us">Miles · miles per gallon</option></select></div></div>
+      <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit" id="distU">km</span></div><p class="hint" id="distHint">Pick a lane above and this fills in automatically — or type the distance you know.</p></div>
+      <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit" id="burnU">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
         <option value="{{fuel.national_diesel}}" data-name="National average">National average — {{fuel.national_diesel}}¢/L</option>
         <!--LOOP:provinces--><option value="{{price}}" data-name="{{name}}" data-code="{{code}}">{{name}} — {{price}}¢/L</option><!--/LOOP:provinces-->
@@ -709,7 +722,7 @@ write("fuel-cost-calculator",
         <div class="r"><span class="k">Fuel per mile</span><span class="v" id="rPerMi">—</span></div>
         <div class="r"><span class="k">Operating per mile</span><span class="v" id="rOpMi">—</span></div>
         <div class="r"><span class="k">Trip fuel cost</span><span class="v" id="rTotal">—</span></div>
-        <div class="r"><span class="k">Litres burned</span><span class="v" id="rLitres">—</span></div>
+        <div class="r"><span class="k">Fuel burned</span><span class="v" id="rLitres">—</span></div>
         <div class="r"><span class="k">Cost per kilometre</span><span class="v" id="rPerKm">—</span></div>
         <div class="r"><span class="k">Price used</span><span class="v" id="rPrice">—</span></div>
       </div>
@@ -746,15 +759,15 @@ write("border-wait-times",
   <section class="hero">
     <span class="eyebrow">CBSA and CBP commercial lanes</span>
     <h1>Border wait times</h1>
-    <p class="stand">Busiest right now: <b>{{border.max_name}}</b> at <b>{{border.max_wait}}</b> — wait is idle time, and the faster crossing is usually the cheaper crossing. Polled every 30 minutes from CBSA's own capture times.</p>
+    <p class="stand">Busiest into Canada right now: <b>{{border.max_name}}</b> at <b>{{border.max_wait}}</b> — wait is idle time, and the faster crossing is usually the cheaper crossing. Polled every 30 minutes from CBSA's own capture times.</p>
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
   <div class="rows">
-  <!--LOOP:crossings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></a><!--/LOOP:crossings-->
+  <!--LOOP:crossings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v"><span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span><span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span></span></a><!--/LOOP:crossings-->
   </div>
-  <p class="note">Source: Canada Border Services Agency commercial lane feed. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
-  <p class="note">Looking for the US-bound direction, or the Mexican border? We publish every port the US Customs and Border Protection feed carries — <a href="/border-wait-times/all-ports/">all 85 land border crossings</a>, including the commercial and FAST lanes.</p>
+  <p class="note">Each crossing shows both directions. <b>Into Canada</b> is the Canada Border Services Agency (CBSA) commercial lane feed. <b>Into the US</b> is the US Customs and Border Protection (CBP) feed. Each agency measures only the traffic entering its own country, so the two queues are separate and often differ. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
+  <p class="note">Looking for the US-bound direction, or the Mexican border? We publish every port the US Customs and Border Protection feed carries — <a href="/border-wait-times/all-ports/">every US land border crossing</a>, including the commercial and FAST lanes.</p>
 ''' + sponsor("sponsor_border") + subscribe("Border and diesel, weekly",
    "Which crossings backed up, where diesel moved, and what both did to cost per kilometre. One email on Wednesday mornings.") + '''
   <section class="sec">
@@ -848,7 +861,7 @@ write("exchange-rate",
 # ═══ Market ═══════════════════════════════════════════════════════════
 write("market-pulse",
  head("Freight Market Pulse | Northern Mile",
-      "Freight demand and cost signals for Canadian carriers, alongside diesel at {{current_diesel}}¢/L and USD/CAD at {{usd_cad}}.",
+      "Freight demand and cost signals for carriers in Canada and the US, alongside Canadian diesel at {{current_diesel}}¢/L and USD/CAD at {{usd_cad}}.",
       "/market-pulse/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Market pulse","/market-pulse/") + ']}', "article")
  + '''
@@ -856,7 +869,7 @@ write("market-pulse",
     <span class="eyebrow">Freight demand signals</span>
     <h1>Market pulse</h1>
     <p class="stand">{{direction_summary}}</p>
-    <div class="meta"><span>Diesel <b>{{current_diesel}}</b>¢/L</span><span>USD/CAD <b>{{usd_cad}}</b></span><span>Fuel <b>{{fuel_pct_of_ops}}</b> of operating cost</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+    <div class="meta"><span>Canadian diesel <b>{{current_diesel}}</b>¢/L</span><span>US diesel <b>${{us_diesel}}</b>/gal</span><span>USD/CAD <b>{{usd_cad}}</b></span><span>Fuel <b>{{fuel_pct_of_ops}}</b> of operating cost</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
   <section class="sec">
@@ -865,8 +878,8 @@ write("market-pulse",
   </section>
 
   <section class="sec">
-    <div class="lead"><h2>What's ahead</h2></div>
-    <p class="note">The federal diesel excise (4¢/L, suspended since 20 April) returns on <b>8 September 2026</b> — expect the national average to step up that week. Diesel prices update every Tuesday when NRCan publishes a new survey print.</p>
+    <div class="lead"><h2>When the numbers move</h2></div>
+    <p class="note">Canadian diesel updates on Tuesdays, when NRCan publishes its weekly survey. US diesel updates on Mondays, when EIA publishes its weekly retail survey. The Bank of Canada posts USD/CAD every business day.</p>
   </section>
 
   <div class="rows">
@@ -891,7 +904,7 @@ write("industry-news",
   </section>
 
   <div class="links-list">
-  <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}<small class="why">{{why}} · via {{source}}</small></a><!--/LOOP:news-->
+  <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}<small class="why">via {{source}}</small></a><!--/LOOP:news-->
   </div>
   <p class="note">Each headline links to the outlet that reported it — we do not rewrite their work. The "why it matters" line is our read on what it means for a Canadian carrier. An empty or short list means the feeds were quiet, not that nothing happened.</p>
 ''' + sponsor("sponsor_news") + subscribe("The week in one email",
@@ -1105,7 +1118,7 @@ INCIDENTS_JS = '''<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 # Build incidents head with the extra leaflet stylesheet folded in.
 _inc_head = head(
     "Road Incidents & Closures, Canada and the US | Northern Mile",
-    "Live closures and major collisions on Canadian freight corridors, on an interactive map. Click any incident for detail and the source report.",
+    "Live closures and major collisions on freight corridors in Ontario, British Columbia and California, on an interactive map. Click any incident for detail and the source report.",
     "/road-incidents/", "og.jpg",
     '{"@context":"https://schema.org","@graph":[' + crumb("Road incidents","/road-incidents/") + ']}', "article")
 _inc_head = _inc_head.replace('<link rel="stylesheet" href="/assets/nm.css',
@@ -1179,7 +1192,7 @@ print("methodology done")
 # ═══ Press ═════════════════════════════════════════════════════════════
 write("press",
  head("Press & Data — Citable North American Trucking Figures | Northern Mile",
-      "For journalists: citable Canadian fuel, exchange-rate, and border-wait figures with sources and dates attached. Story angles, how to cite us, and press contact.",
+      "For journalists: citable Canadian and US diesel, exchange-rate, and border-wait figures with sources and dates attached. Story angles, how to cite us, and press contact.",
       "/press/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Press & data", "/press/") + ',' +
       '{"@type":"WebPage","name":"Press & Data","description":"Citable North American trucking data for journalists, from Northern Mile Media.","url":"' + BASE + '/press/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
@@ -1195,7 +1208,8 @@ write("press",
     <div class="rows">
       <div class="r"><span class="k">The Canada–US diesel gap<small>Canada vs the US national average, in cents per litre</small></span><span class="v">{{eia.ca_us_gap}}¢/L · {{eia.gap_word}}</span></div>
       <div class="r"><span class="k">North American Diesel Index<small>the mean of both countries — each counts once</small></span><span class="v">{{eia.nadi}}¢/L</span></div>
-      <div class="r"><span class="k">National diesel, weekly move<small>NRCan weekly survey, ten provinces</small></span><span class="v">{{fuel.national_diesel}}¢/L · {{fuel.change_7d}} 7d</span></div>
+      <div class="r"><span class="k">Canadian diesel, weekly move<small>NRCan weekly survey, ten provinces</small></span><span class="v">{{fuel.national_diesel}}¢/L · {{fuel.change_7d}} 7d</span></div>
+      <div class="r"><span class="k">US diesel, weekly move<small>EIA weekly retail survey, ten districts</small></span><span class="v">${{eia.us_national_usd_gal}}/gal · {{eia.us_change_7d}} 7d</span></div>
       <div class="r"><span class="k">USD/CAD<small>Bank of Canada daily observation</small></span><span class="v">{{fx.usd_cad}}</span></div>
       <div class="r"><span class="k">Rate floor<small>fuel + fixed operating cost, per mile</small></span><span class="v"><a href="/fuel-cost-calculator/">Calculator</a></span></div>
     </div>
@@ -1276,7 +1290,7 @@ prov_body = (
 
 write("advertise",
  head("Advertise — Reach North American Carriers | Northern Mile",
-      "Sponsor the pages Canadian carriers check before they buy fuel. Founding rates for the first sponsors, with no audience number we cannot stand behind.",
+      "Sponsor the pages carriers in Canada and the US check before they buy fuel. Founding rates for the first sponsors, with no audience number we cannot stand behind.",
       "/advertise/", "og.jpg",
       '{"@context":"https://schema.org","@graph":[' + crumb("Advertise", "/advertise/") + ',' +
       '{"@type":"WebPage","name":"Advertise","description":"Sponsorship and founding rates for Northern Mile Media.","url":"' + BASE + '/advertise/","creator":{"@id":"' + ORG_URL + '/#org"}}]}', "article")
@@ -1284,7 +1298,7 @@ write("advertise",
   <section class="hero">
     <span class="eyebrow">For sponsors</span>
     <h1>Advertise</h1>
-    <p class="stand">Northern Mile reaches Canadian carriers, owner-operators and fleet managers at the moment they check fuel, border and currency data. The list is new and small. That is what a founding rate is for.</p>
+    <p class="stand">Northern Mile reaches carriers, owner-operators and fleet managers in Canada and the US at the moment they check fuel, border and currency data. The list is new and small. That is what a founding rate is for.</p>
   </section>
 
   <section class="sec">
@@ -1567,18 +1581,18 @@ print(f"  us-padd                  {len(uspadd_body):6,} bytes")
 
 # One template, rendered per crossing by build_border_pages.py.
 BORDER_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("{{name}} border wait", "/border-wait-times/{{slug}}/") + ','
- '{"@type":"Dataset","name":"{{name}} Commercial Border Wait","description":"Commercial lane wait time at {{name}}, from the Canada Border Services Agency feed.","url":"' + BASE + '/border-wait-times/{{slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+ '{"@type":"Dataset","name":"{{name}} Commercial Border Wait","description":"Commercial lane wait time {{direction_lc}} at {{name}}, from the {{agency}} feed.","url":"' + BASE + '/border-wait-times/{{slug}}/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
 
 border_body = (
  head("{{name}} Border Wait — {{wait}} | Northern Mile",
-      "{{name}} commercial lane wait is {{wait}} ({{status_label}}) right now, from the {{agency}} feed. {{sub}}",
+      "{{name}} commercial lane wait {{direction_lc}} is {{wait}} ({{status_label}}) right now, from the {{agency}} feed. {{sub}}",
       "/border-wait-times/{{slug}}/", "og.jpg", BORDER_LD, "article")
  + '''
   <section class="hero">
-    <span class="eyebrow">CBSA and CBP commercial lanes</span>
+    <span class="eyebrow">{{direction}} · {{agency}} commercial lanes</span>
     <h1>{{name}}</h1>
-    <div class="figure"><span class="n">{{wait}}</span><span class="u">wait</span><span class="d {{status_class}}">{{status_label}}</span></div>
-    <div class="meta"><span>{{sub}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
+    <div class="figure"><span class="n">{{wait}}</span><span class="u">wait {{direction_lc}}</span><span class="d {{status_class}}">{{status_label}}</span></div>
+    <div class="meta"><span>{{sub}}</span><span>{{other_dir}}</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
   <section class="sec">
@@ -1591,7 +1605,7 @@ border_body = (
   <section class="sec">
     <div class="lead"><h2>All crossings</h2><p>commercial lane wait · CBSA and CBP</p></div>
     <div class="rows">
-    <!--LOOP:siblings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}</span><span class="v">{{wait}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></a><!--/LOOP:siblings-->
+    <!--LOOP:siblings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}</span><span class="v">{{wait}} {{dir_short}} &nbsp; <span class="{{status_class}}">{{status_label}}</span></span></a><!--/LOOP:siblings-->
     </div>
     <p class="note"><a href="/border-wait-times/">← All border wait times</a></p>
   </section>
@@ -1611,10 +1625,10 @@ print(f"  border-crossing           {len(border_body):6,} bytes")
 # must render differently from a port that measured zero. {{reported}} drives an
 # IF block so "not reported" is visible rather than an implied zero.
 CBP_LD = ('{"@context":"https://schema.org","@graph":[' + crumb("All border crossings", "/border-wait-times/all-ports/") + ','
- '{"@type":"Dataset","name":"North American Land Border Ports","description":"Every US land border port published by U.S. Customs and Border Protection, with commercial, passenger and pedestrian lane waits. 85 ports across the Canadian and Mexican borders.","url":"' + BASE + '/border-wait-times/all-ports/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
+ '{"@type":"Dataset","name":"North American Land Border Ports","description":"Every US land border port published by U.S. Customs and Border Protection, with commercial, passenger and pedestrian lane waits, across the Canadian and Mexican borders.","url":"' + BASE + '/border-wait-times/all-ports/","creator":{"@id":"' + ORG_URL + '/#org"},"isAccessibleForFree":true,"dateModified":"{{updated_iso}}"}]}')
 
 cbp_ports_body = (
- head("All Border Crossings — 85 US Land Ports | Northern Mile",
+ head("All Border Crossings — {{port_count}} US Land Ports | Northern Mile",
       "Every land border port U.S. Customs and Border Protection publishes, with commercial truck, passenger and pedestrian lane waits. Both the Canadian and Mexican borders, refreshed from the CBP feed.",
       "/border-wait-times/all-ports/", "og.jpg", CBP_LD, "article")
  + '''

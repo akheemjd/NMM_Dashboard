@@ -2,7 +2,7 @@
 
 **Cadence:** 3 posts/week (Mon / Wed / Fri)
 **Started:** September 2026
-**Goal:** Rank for Canadian trucking search terms and grow newsletter subscribers
+**Goal:** Rank for North American trucking search terms, Canadian and US equally, and grow newsletter subscribers
 
 ---
 
@@ -68,7 +68,10 @@ a diesel price, almost nobody explains the CRA's PSB test in plain language.
    CBSA, EIA. Never "according to reports".
 3. **Link to 3–5 dashboard pages.** There are 98 to choose from. Deep links
    (a specific city or crossing) beat generic ones.
-4. **Primary keyword** in the title, first 100 words, one H2, and the closing paragraph.
+4. **Primary keyword** in the SEO title (`seo_title:` in frontmatter, ≤60 chars, becomes
+   Ghost's meta title), the slug, first 100 words, one H2, and the closing paragraph.
+   The visible headline is plain English and leads with the finding. Never
+   "keyword phrase: rest of headline".
 5. **Soft CTA** at the end pointing back to the dashboard. No hard sells.
 6. **Voice:** dispatcher talking to a trucker. Short sentences. No AI-speak.
 7. **The dashboard links back.** Every post should be reachable from the dashboard,

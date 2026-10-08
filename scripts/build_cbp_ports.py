@@ -63,7 +63,8 @@ def lane_summary(port, key):
     fast = block.get("fast") or {}
     bits = [delay_text(std.get("delay"))]
     if std.get("lanes_open"):
-        bits.append(f"{std['lanes_open']} lanes")
+        n = std["lanes_open"]
+        bits.append(f"{n} lane" if str(n) == "1" else f"{n} lanes")
     if fast.get("delay") is not None:
         bits.append(f"FAST {delay_text(fast['delay'])}")
     return " · ".join(bits)

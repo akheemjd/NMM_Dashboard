@@ -32,7 +32,7 @@ NAV_GROUPS = [
     ]),
     ("Border", "/border-wait-times/", "", [
         ("/border-wait-times/", "Wait times", "Nine crossings, CBSA capture times"),
-        ("/border-wait-times/all-ports/", "All 85 ports", "CBP commercial lanes"),
+        ("/border-wait-times/all-ports/", "All US ports", "CBP commercial lanes, both borders"),
         ("/border-trends/", "Trends", "Where waits have moved"),
     ]),
     ("Cost", "/fuel-cost-calculator/", "", [
@@ -120,8 +120,8 @@ def nav_drawer_html(canon):
             out.append(f'<a class="{cls}" href="{h}"{dt}>{l}</a>')
         out.append("</div>")
     out.append('<div class="dgrp"><b>More</b>'
-               '<a class="dg" href="/advertise/">Advertise</a>'
-               '<a class="dg" href="/contact/">Contact</a></div>')
+               '<a class="dg" href="/advertise/">Advertise</a></div>')
+    # Contact already sits under About; listing it again under More read as a duplicate.
     out.append("</div></div>")
     return "".join(out)
 

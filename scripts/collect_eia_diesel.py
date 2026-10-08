@@ -168,16 +168,31 @@ def parse(xls_bytes):
     if values["us_national"] is None:
         raise ValueError("latest row has no national price")
 
+    # The week before, read from the same sheet, so the US weekly change can be shown in
+    # the unit the US price is shown in. It used to be derived from a CAD cents-per-litre
+    # series, which printed "-6.8 · 7d" beside a $/gal price.
+    prev = None
+    for r in range(row - 1, 2, -1):
+        pv = _value(sh, r, 1)
+        if pv is not None:
+            pdt = xlrd.xldate_as_datetime(float(sh.cell_value(r, 0)), wb.datemode)
+            if 5 <= (dt - pdt).days <= 9:
+                prev = {"date": pdt.date().isoformat(), "us_national_usd_gal": pv}
+            break
+    values["_prev"] = prev
+
     return dt.date().isoformat(), values
 
 
 def collect_eia_diesel():
     xls_bytes = fetch_bytes()
     date, values = parse(xls_bytes)
+    prev = values.pop("_prev", None)
     districts = {k: v for k, v in values.items() if k != "us_national"}
     data = {
         "date": date,  # week-ending date (Monday)
         "us_national_usd_gal": values["us_national"],
+        "previous_week": prev,  # {"date", "us_national_usd_gal"} or None
         "padds_usd_gal": districts,  # kept: existing pages read this key
         "districts": {
             key: {
