@@ -232,8 +232,10 @@ def build_brief(today=None, recent_posts=None):
             # rest of the brief writes "\u00a2" for anything per litre. Mixing the
             # two in one email reads as careless.
             val = str(i.get("value") or "").replace(f"{CENT}/L", CENT)
-            d = i.get("direction") or "steady"
-            md.append(f"- {label}: {val} ({d})")
+            # Only real moves get a direction. Levels (fuel cost, spreads) and unchanged
+            # readings are "flat", and "(flat)" after a dollar figure reads as noise.
+            d = i.get("direction")
+            md.append(f"- {label}: {val}" + (f" ({d})" if d in ("up", "down") else ""))
 
     md.append("## Read this week's posts")
     if recent_posts:

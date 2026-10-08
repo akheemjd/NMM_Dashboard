@@ -62,7 +62,8 @@ def collect_market_pulse():
                     "country": "ca",
                     "value": fmt.pct(mom_change),
                     "detail": f"${current/1000:.0f}B (chained 2017)",
-                    "direction": "up" if mom_change > 0 else "down",
+                    # Direction from the ROUNDED change: a 0.0% month is flat, not "down".
+                    "direction": ("up" if round(mom_change, 1) > 0 else "down" if round(mom_change, 1) < 0 else "flat"),
                     "source": "Statistics Canada",
                     "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
                 })
@@ -76,7 +77,7 @@ def collect_market_pulse():
                         "label": "GDP, year over year",
                         "country": "ca",
                         "value": fmt.pct(yoy_change),
-                        "direction": "up" if yoy_change > 0 else "down",
+                        "direction": ("up" if yoy_change > 0 else "down" if yoy_change < 0 else "flat"),
                         "source": "Statistics Canada",
                         "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
                     })
@@ -98,7 +99,7 @@ def collect_market_pulse():
             "country": "ca",
             "value": f"${cost_1000km:,.0f}",
             "detail": f"At {diesel_avg:.1f}¢/L and {BURN} L/100km",
-            "direction": "up" if diesel_avg > 200 else "down",
+            "direction": "flat",  # a level, not a trend; the brief printed "(up)" for it
             "source": "NRCan weekly diesel survey",
             "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
         })
@@ -112,7 +113,7 @@ def collect_market_pulse():
                 "label": "BC vs AB diesel spread",
                 "country": "ca",
                 "value": f"{spread:.1f}¢/L",
-                "direction": "up" if spread > 20 else "down",
+                "direction": "flat",
                 "source": "NRCan weekly diesel survey",
                 "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
             })
@@ -195,7 +196,8 @@ def collect_market_pulse():
     ups = sum(1 for i in pulse["indicators"] if i.get("direction") == "up")
     downs = sum(1 for i in pulse["indicators"] if i.get("direction") == "down")
     total = len(pulse["indicators"])
-    pulse["direction_summary"] = f"{ups}/{total} indicators trending up"
+    # Level readings (fuel cost, spreads) are "flat" and have no trend to count.
+    pulse["direction_summary"] = f"{ups} up · {downs} down · {total - ups - downs} steady or level"
 
     save_path = os.path.join(DATA_DIR, "market.json")
     os.makedirs(DATA_DIR, exist_ok=True)

@@ -663,7 +663,14 @@ var dist=$("dist"),burn=$("burn"),prov=$("prov"),custom=$("custom"),wrap=$("cust
 // gallon) to L/100km and back.
 var KM_MI=1.609344,MPG_L100=235.214583,L_GAL=3.785411784;
 function isUS(){return units&&units.value==="us";}
-function relabel(){$("distU").textContent=isUS()?"mi":"km";$("burnU").textContent=isUS()?"mpg":"L/100km";}
+// Currency follows the units. Every price is held in CAD cents/L; in US mode the money is
+// shown in US dollars at the Bank of Canada rate, and the operating cost is read as US$/mi.
+// It used to print a bare "$" that was always Canadian, which a US carrier reads as USD.
+var RATE=parseFloat("{{fx.usd_cad}}")||0;
+function usd(){return isUS()&&RATE>0;}
+function cash(cad){var v=usd()?cad/RATE:cad;return (usd()?"US$":"C$")+v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function priceTxt(cents){return usd()?("US$"+(cents/100*L_GAL/RATE).toFixed(3)+"/gal"):(cents.toFixed(1)+"¢/L CAD");}
+function relabel(){$("distU").textContent=isUS()?"mi":"km";$("burnU").textContent=isUS()?"mpg":"L/100km";$("opU").textContent=usd()?"US$/mi":"C$/mi";}
 var CITIES=__CITIES__;
 var DISTANCES=__DIST__,US_PADD=__PADD__,CODES=__CODES__;
 function fill(sel){var g={};Object.keys(CITIES).forEach(function(n){(g[CITIES[n].p]=g[CITIES[n].p]||[]).push(n);});Object.keys(g).sort().forEach(function(p){var og=document.createElement("optgroup");og.label=(p==="US"?"United States":p);g[p].sort().forEach(function(n){var o=document.createElement("option");o.value=n;o.textContent=n;og.appendChild(o);});sel.appendChild(og);});}
@@ -680,16 +687,17 @@ function fxs(v,unit){
 function calc(){var isC=prov.value==="custom";wrap.hidden=!isC;
 var cents=parseFloat(isC?custom.value:prov.value),d=parseFloat(dist.value),b=parseFloat(burn.value),op=parseFloat(opcost.value)||0;
 if(isUS()){d=d*KM_MI;b=b>0?MPG_L100/b:NaN;}
+if(usd()){op=op*RATE;}
 if(!isFinite(cents)||!isFinite(d)||!isFinite(b)||d<=0||b<=0||cents<=0){["rTotal","rLitres","rPerKm","rPerMi","rPrice","rOpMi","rFloor"].forEach(function(i){$(i).textContent="\\u2014";});return;}
 var litres=d/100*b,total=litres*(cents/100),perMi=total/d*1.609344,floor=perMi+op;
 $("rLitres").textContent=isUS()?((litres/L_GAL).toLocaleString("en-US",{maximumFractionDigits:1})+" gal"):(litres.toLocaleString("en-CA",{maximumFractionDigits:1})+" L");
-$("rTotal").innerHTML=fxs(total,"plain");
-$("rPerKm").innerHTML=fxs(total/d,"plain")+" /km";
-$("rPerMi").innerHTML=fxs(perMi,"plain")+" /mi";
-$("rOpMi").innerHTML=fxs(op,"plain")+" /mi";
-$("rFloor").innerHTML=fxs(floor,"plain")+" /mi";
+$("rTotal").textContent=cash(total);
+$("rPerKm").textContent=cash(total/d)+" /km";
+$("rPerMi").textContent=cash(perMi)+" /mi";
+$("rOpMi").textContent=cash(op)+" /mi";
+$("rFloor").textContent=cash(floor)+" /mi";
 var o=prov.options[prov.selectedIndex];
-$("rPrice").innerHTML=fxs(cents,"cpl")+" · "+(isC?"your price":o.getAttribute("data-name"));
+$("rPrice").textContent=priceTxt(cents)+" · "+(isC?"your price":o.getAttribute("data-name"));
 // calc() rebuilds its outputs as native-CAD spans, so ask the currency
 // layer to render them. Must live inside calc(): at IIFE top level it ran
 // once on load and every later recompute stayed in CAD.
@@ -697,8 +705,9 @@ if(window.NMFX&&window.NMFX.ready&&window.NMFX.ready()){try{window.NMFX.render()
 }
 [dist,burn,prov,custom,opcost].forEach(function(el){el.addEventListener("input",calc);el.addEventListener("change",calc);});
 if(units){units.addEventListener("change",function(){var d=parseFloat(dist.value),b=parseFloat(burn.value);
-if(isUS()){if(d>0)dist.value=Math.round(d/KM_MI);if(b>0)burn.value=(MPG_L100/b).toFixed(1);}
-else{if(d>0)dist.value=Math.round(d*KM_MI);if(b>0)burn.value=(MPG_L100/b).toFixed(1);}
+var o=parseFloat(opcost.value);
+if(isUS()){if(d>0)dist.value=Math.round(d/KM_MI);if(b>0)burn.value=(MPG_L100/b).toFixed(1);if(o>0&&RATE>0)opcost.value=(o/RATE).toFixed(2);}
+else{if(d>0)dist.value=Math.round(d*KM_MI);if(b>0)burn.value=(MPG_L100/b).toFixed(1);if(o>0&&RATE>0)opcost.value=(o*RATE).toFixed(2);}
 relabel();calc();});}
 // fx.js calls this after the reader switches currency, so the results
 // re-render in the new one. Without it the toggle would convert the static
@@ -726,7 +735,7 @@ write("fuel-cost-calculator",
   <div class="calc">
     <div>
       <div class="fld"><label for="origin">Lane</label><div class="lane"><div class="inp"><select id="origin"><option value="">From — pick a city</option></select></div><div class="inp"><select id="dest"><option value="">To — pick a city</option></select></div></div><p class="hint">Pick a Canadian or US lane and the distance and fuel price fill in automatically — real road distance where we have it, an estimate otherwise. US lanes use their EIA region price (excludes Canadian carbon tax).</p></div>
-      <div class="fld"><label for="units">Units</label><div class="inp"><select id="units"><option value="metric">Kilometres · L/100km</option><option value="us">Miles · miles per gallon</option></select></div></div>
+      <div class="fld"><label for="units">Units</label><div class="inp"><select id="units"><option value="metric">Kilometres · L/100km · CAD</option><option value="us">Miles · mpg · USD</option></select></div></div>
       <div class="fld"><label for="dist">Distance</label><div class="inp"><input id="dist" type="number" inputmode="decimal" min="0" step="1" value="500"><span class="unit" id="distU">km</span></div><p class="hint" id="distHint">Pick a lane above and this fills in automatically — or type the distance you know.</p></div>
       <div class="fld"><label for="burn">Fuel consumption</label><div class="inp"><input id="burn" type="number" inputmode="decimal" min="0" step="0.1" value="35"><span class="unit" id="burnU">L/100km</span></div><p class="hint">Use your own number from your own fuel records. We do not assume one for you.</p></div>
       <div class="fld"><label for="prov">Fuel price</label><div class="inp"><select id="prov">
@@ -737,7 +746,7 @@ write("fuel-cost-calculator",
         <option value="custom" data-name="Custom">Enter my own price</option>
       </select></div></div>
       <div class="fld" id="customwrap" hidden><label for="custom">Your price</label><div class="inp"><input id="custom" type="number" inputmode="decimal" min="0" step="0.1" value="{{fuel.national_diesel}}"><span class="unit">¢/L</span></div><p class="hint">If you run a fuel card, your real cost is usually below the retail survey average. Use the card price.</p></div>
-      <div class="fld"><label for="opcost">Fixed operating cost</label><div class="inp"><input id="opcost" type="number" inputmode="decimal" min="0" step="0.01" value="1.85"><span class="unit">$/mi</span></div><p class="hint">Truck payment, insurance, driver pay, maintenance — your all-in cost per mile before fuel. Pull it from your own books.</p></div>
+      <div class="fld"><label for="opcost">Fixed operating cost</label><div class="inp"><input id="opcost" type="number" inputmode="decimal" min="0" step="0.01" value="1.85"><span class="unit" id="opU">C$/mi</span></div><p class="hint">Truck payment, insurance, driver pay, maintenance — your all-in cost per mile before fuel. Pull it from your own books.</p></div>
     </div>
     <div class="out">
       <div class="big"><div class="ol">Rate floor</div><div class="ov" id="rFloor">—</div></div>
@@ -909,11 +918,11 @@ write("market-pulse",
   </section>
 
   <div class="rows">
-  <!--LOOP:market--><div class="r"><span class="k">{{name}}<small>{{what_it_means}} · {{source}}</small></span><span class="v {{value_class}}">{{value}}</span></div><!--/LOOP:market-->
+  <!--LOOP:market--><div class="r"><span class="k">{{country_prefix}}{{name}}<small>{{what_it_means}} · {{source}}</small></span><span class="v {{value_class}}">{{value}}</span></div><!--/LOOP:market-->
   </div>
   <p class="note">These indicators mix cost signals and demand signals, which move in opposite directions for a carrier. A rising number is not automatically good news and we do not colour them as though it were. <a href="/methodology/nmdi/">How the numbers are sourced</a></p>
 ''' + cite(
-        'Northern Mile market indicators: US diesel {{us_diesel}} per gallon, USD/CAD {{usd_cad}}. Statistics Canada, the US Energy Information Administration and the Bank of Canada. Northern Mile Media, dashboard.northernmilemedia.com/market-pulse/') + sponsor("sponsor_market") + subscribe("What moved, and what it cost",
+        'Northern Mile market indicators: Canadian diesel {{current_diesel}}¢/L, US diesel ${{us_diesel}}/gal, USD/CAD {{usd_cad}}. Statistics Canada, the US Energy Information Administration and the Bank of Canada. Northern Mile Media, dashboard.northernmilemedia.com/market-pulse/') + sponsor("sponsor_market") + subscribe("What moved, and what it cost",
    "Diesel, the border, freight demand, and one argument worth your time. Wednesday mornings.") + foot())
 
 # ═══ News ═════════════════════════════════════════════════════════════
