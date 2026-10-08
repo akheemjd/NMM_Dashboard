@@ -159,12 +159,30 @@ echo "=== Source-tree guard ==="
 # behind, which then blocks every deploy until someone notices. Those are not
 # source changes and must not gate the build.
 TREE_PATTERNS="scripts/ templates/ assets/ config/ *.yml *.sh"
-DIRTY=$(git status --porcelain -- $TREE_PATTERNS 2>/dev/null \
-  | grep -vE '(^|/)\.hermes-tmp\.|\.tmp$|~$' || true)
-if [ -n "$DIRTY" ]; then
+SCRATCH='(^|/)\.hermes-tmp\.|\.tmp$|~$'
+
+# git status reports METADATA; git diff reports CONTENT. On a rebuild every generator rewrites its
+# output file, which bumps the mtime and can leave git's stat cache stale, so status says "modified"
+# for a file whose bytes are identical once line endings are normalised. templates/404.template.html
+# did exactly this and blocked the 19:01 deploy on 2026-10-08 with nothing actually changed.
+#
+# Refuse on content: a file that really differs, or a genuinely untracked source file. A file that
+# is only stat-dirty is reported and stepped over, because blocking a deploy on it costs an hour of
+# stale data for no reason.
+DIRTY_META=$(git status --porcelain -- $TREE_PATTERNS 2>/dev/null | grep -vE "$SCRATCH" || true)
+DIRTY_CONTENT=$(git diff --name-only -- $TREE_PATTERNS 2>/dev/null | grep -vE "$SCRATCH" || true)
+DIRTY_NEW=$(git ls-files --others --exclude-standard -- $TREE_PATTERNS 2>/dev/null \
+  | grep -vE "$SCRATCH" || true)
+
+if [ -n "$DIRTY_CONTENT" ] || [ -n "$DIRTY_NEW" ]; then
   echo "FATAL: uncommitted source changes present." >&2
-  echo "$DIRTY"
+  [ -n "$DIRTY_CONTENT" ] && echo "$DIRTY_CONTENT"
+  [ -n "$DIRTY_NEW" ] && echo "$DIRTY_NEW" | sed 's/^/? /'
   exit 1
+fi
+if [ -n "$DIRTY_META" ]; then
+  echo "  note: $(echo "$DIRTY_META" | wc -l | tr -d ' ') file(s) stat-dirty but byte-identical" \
+       "- rebuilding differences, continuing"
 fi
 
 echo "=== Git pull & push ==="
