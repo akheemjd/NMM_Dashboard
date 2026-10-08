@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-317134",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at HWY 400, Toronto. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.716758,
+      "lng": -79.518581629,
+      "start": 1791466200,
+      "end": null,
+      "updated": 1791481260,
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103417",
       "province": "BC",
       "highway": "Highway 19A near Island Highway N",
@@ -373,23 +390,6 @@
       "end": 1793995200,
       "updated": 1791470220,
       "scheduled": true
-    },
-    {
-      "id": "ON-317134",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at HWY 400, Toronto. 3 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 right lanes and right shoulder closed",
-      "lat": 43.716758,
-      "lng": -79.518581629,
-      "start": 1791466200,
-      "end": null,
-      "updated": 1791470160,
-      "scheduled": false
     },
     {
       "id": "ON-317212",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-08T17:38:49.703901+00:00",
+  "updated": "2026-10-08T17:43:15.522391+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
