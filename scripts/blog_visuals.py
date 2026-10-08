@@ -862,11 +862,14 @@ def _wrap(draw, text, font, max_width):
 
 
 def hero_card(headline, eyebrow=None, stat_value=None, stat_label=None,
-              source=None, variant="paper"):
+              source=None, variant="paper", extra_stats=None):
     """Build a branded 1200x630 social/feature card with PIL.
 
     variant="paper" -> light editorial card (default)
     variant="signal" -> deep green card, for higher contrast in feeds
+    extra_stats=[(value, label), ...] -> more figures beside the first, same row.
+        Used where one country's number alone would misdescribe a two-country
+        story (the Brief's card showed Canadian diesel only).
     """
     from PIL import Image, ImageDraw
 
@@ -925,12 +928,14 @@ def hero_card(headline, eyebrow=None, stat_value=None, stat_label=None,
 
     if stat_value:
         y += 40
-        d.text((pad, y), str(stat_value),
-               font=_pil_font("mono", 600, 56), fill=accent)
-        y += 68
-        if stat_label:
-            d.text((pad, y), str(stat_label).upper(),
-                   font=_pil_font("body", 400, 21), fill=sub)
+        stats = [(stat_value, stat_label)] + list(extra_stats or [])
+        col_w = inner_w // max(2, len(stats)) if len(stats) > 1 else inner_w
+        for i, (val, lab) in enumerate(stats):
+            x = pad + i * col_w
+            d.text((x, y), str(val), font=_pil_font("mono", 600, 56), fill=accent)
+            if lab:
+                d.text((x, y + 68), str(lab).upper(),
+                       font=_pil_font("body", 400, 21), fill=sub)
 
     if source:
         sf = _pil_font("body", 400, 19)

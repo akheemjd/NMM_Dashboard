@@ -119,15 +119,29 @@ def brief_hero():
 
     nat = fuel.get("diesel_national_avg")
     stamp = fuel.get("print_date")
+    # The Brief covers both countries, so its card does too. It used to read
+    # "Canada's diesel average this week" with the Canadian figure alone.
+    try:
+        with open(ROOT / "data" / "eia_diesel.json", encoding="utf-8") as f:
+            eia = json.load(f)
+    except Exception:
+        eia = {}
+    us = eia.get("us_national_usd_gal")
+    us_week = eia.get("date")
+    extra = [(f"${float(us):.3f}", "US · $/gal national average")] if us else None
+    src = f"NRCan print {stamp}" if stamp else "NRCan weekly survey"
+    if us_week:
+        src += f" · EIA week {us_week}"
     try:
         img = blog_visuals.hero_card(
-            headline="Canada's diesel average this week",
+            headline=("Diesel this week, both sides of the border" if extra
+                      else "Canada's diesel average this week"),
             eyebrow="The Northern Mile Brief",
             stat_value=f"{nat}¢" if nat is not None else None,
-            stat_label="/L national average",
-            source=(f"NRCan weekly survey, print {stamp}" if stamp
-                    else "NRCan weekly survey"),
+            stat_label="Canada · ¢/L national average",
+            source=src,
             variant="paper",
+            extra_stats=extra,
         )
         path = blog_visuals.save_hero(img, "brief-hero")
     except Exception:
@@ -212,6 +226,8 @@ def main(argv=None):
     hero = brief_hero()
     if hero:
         payload["feature_image"] = hero
+        # Every Brief before 2026-10-08 shipped with no alt text on this image.
+        payload["feature_image_alt"] = "Card showing this week's national diesel averages from the Northern Mile Brief."
         print(f"      hero: {hero.rsplit('/', 1)[-1]}")
     else:
         print("      hero: NONE (image generation unavailable)")
