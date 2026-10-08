@@ -10,17 +10,17 @@
       "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
     },
     {
-      "name": "Year-over-year",
-      "note": "Longer-term freight demand trend.",
+      "name": "GDP, year over year",
+      "note": "GDP against the same month last year. The longer-term\u2026",
       "value": "+1.4%",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
+      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 km",
-      "note": "At 259.6\u00a2/L and 35 L/100km",
+      "note": "At 259.7\u00a2/L and 35 L/100km",
       "value": "$909",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
@@ -30,11 +30,29 @@
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "37.2\u00a2/L",
+      "value": "37.1\u00a2/L",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Industry surveys",
+      "source": "NRCan weekly diesel survey",
       "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
+    },
+    {
+      "name": "Fuel cost per 1,000 miles",
+      "note": "At $6.199/gal and 6.5 mpg",
+      "value": "$954",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "EIA weekly retail diesel survey",
+      "what_it_means": "Per-1,000-mile fuel cost at the US national average. Used directly in rate quotes."
+    },
+    {
+      "name": "California vs Lower Atlantic diesel spread",
+      "note": "The gap between the dearest and cheapest EIA district. Fuel\u2026",
+      "value": "$2.383/gal",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "EIA weekly retail diesel survey",
+      "what_it_means": "The gap between the dearest and cheapest EIA district. Fuel where Lower Atlantic prices it."
     },
     {
       "name": "USD/CAD vs 30-day average",
@@ -46,21 +64,22 @@
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
     },
     {
-      "name": "Border congestion",
+      "name": "Border congestion, into Canada",
       "country_prefix": "",
-      "note": "3 of 9 crossings slow",
+      "note": "3 of 9 crossings slow, Canada-bound",
       "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
     }
   ],
-  "direction_summary": "4/5 indicators trending up",
-  "weekly_read": "diesel at 259.6\u00a2/L, the loonie at 1.4257, GDP moving 0.0% last month.",
+  "direction_summary": "4/7 indicators trending up",
+  "weekly_read": "Canadian diesel at 259.7\u00a2/L, US diesel at $6.199/gal, the loonie at 1.4257, Canadian GDP moving 0.0% last month.",
   "fuel_pct_of_ops": "25-35%",
-  "current_diesel": 259.6,
+  "current_diesel": 259.7,
+  "us_diesel": "6.199",
   "usd_cad": 1.4257,
-  "updated_at": "2026-10-08 14:01",
-  "updated_iso": "2026-10-08T14:01:08+00:00",
-  "build_version": "1791468068"
+  "updated_at": "2026-10-08 16:18",
+  "updated_iso": "2026-10-08T16:18:30+00:00",
+  "build_version": "1791476310"
 }

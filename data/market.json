@@ -12,19 +12,19 @@
     },
     {
       "name": "GDP YoY",
-      "label": "Year-over-year",
+      "label": "GDP, year over year",
       "country": "ca",
       "value": "+1.4%",
       "direction": "up",
       "source": "Statistics Canada",
-      "what_it_means": "Longer-term freight demand trend."
+      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel Cost",
       "label": "Fuel cost per 1,000 km",
       "country": "ca",
       "value": "$909",
-      "detail": "At 259.6\u00a2/L and 35 L/100km",
+      "detail": "At 259.7\u00a2/L and 35 L/100km",
       "direction": "up",
       "source": "NRCan weekly diesel survey",
       "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
@@ -33,10 +33,29 @@
       "name": "Fuel Spread",
       "label": "BC vs AB diesel spread",
       "country": "ca",
-      "value": "37.2\u00a2/L",
+      "value": "37.1\u00a2/L",
       "direction": "up",
-      "source": "Industry surveys",
+      "source": "NRCan weekly diesel survey",
       "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
+    },
+    {
+      "name": "US Fuel Cost",
+      "label": "Fuel cost per 1,000 miles",
+      "country": "us",
+      "value": "$954",
+      "detail": "At $6.199/gal and 6.5 mpg",
+      "direction": "flat",
+      "source": "EIA weekly retail diesel survey",
+      "what_it_means": "Per-1,000-mile fuel cost at the US national average. Used directly in rate quotes."
+    },
+    {
+      "name": "US Fuel Spread",
+      "label": "California vs Lower Atlantic diesel spread",
+      "country": "us",
+      "value": "$2.383/gal",
+      "direction": "flat",
+      "source": "EIA weekly retail diesel survey",
+      "what_it_means": "The gap between the dearest and cheapest EIA district. Fuel where Lower Atlantic prices it."
     },
     {
       "name": "CAD Impact",
@@ -50,11 +69,11 @@
   ],
   "rates_snapshot": {
     "fuel_pct_of_ops": "25-35%",
-    "current_diesel": 259.6,
+    "current_diesel": 259.7,
     "usd_cad": 1.4257,
     "note": "Rate data from DAT/Loadlink requires paid subscription. These are operating cost indicators that drive rate floors."
   },
-  "updated": "2026-10-08T14:00:20.290890+00:00",
+  "updated": "2026-10-08T16:18:02.069858+00:00",
   "note": "Public data from Statistics Canada, Bank of Canada, and industry surveys.",
-  "direction_summary": "4/5 indicators trending up"
+  "direction_summary": "4/7 indicators trending up"
 }

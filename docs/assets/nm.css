@@ -667,3 +667,9 @@ aside.sp .c:hover { text-decoration: underline; }
   color: var(--muted); }
 .pickgap b { font-family: var(--data); font-size: 1.125rem; color: var(--ink);
   font-weight: 600; }
+
+/* Border rows carry both directions: into Canada (CBSA) and into the US (CBP). */
+.rows .r .v .dir { display: block; text-align: right; line-height: 1.4; }
+.rows .r .v .dir small { margin-left: 6px; color: var(--muted); font-size: .75rem; }
+.rows .r .v .dir.heavy { color: var(--up); }
+.rows .r .v .dir.na { color: var(--muted); }
