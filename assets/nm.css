@@ -1,37 +1,42 @@
-/* Northern Mile — design reference (home)
-   Stripe/Linear precision, warm paper, one deep-green accent. The spread rail
-   is the signature: it draws on load and is the one memorable element.
-   Light only. Every token clears 4.5:1 on paper. */
+/* Northern Mile dashboard. Highway signage: paper, ink, one green sign.
+   The spread rail is the sign on the home page. */
 
 :root {
-  --paper:   #FBFAF8;
+  /* Highway signage, approved 2026-10-08. One green sign per page, everything
+     else quiet. Light only. Every text token clears 4.5:1 on paper. */
+  --paper:   #F6F7F5;
   --raise:   #FFFFFF;
-  --sink:    #F3F1EC;
-  --ink:     #1A1A17;
-  --ink-2:   #45423C;
-  --muted:   #6B6862;
-  --line:    #E8E4DD;
-  --line-2:  #F0EDE7;
+  --sink:    #EEF1EE;
+  --ink:     #1F2421;
+  --ink-2:   #3A413D;
+  --muted:   #5B635E;
+  --line:    #DADFDB;
+  --line-2:  #E3E7E4;
+  --field:   #C5CCC7;
 
-  --signal:  #0B5D3B;   /* brand — deep forest */
-  --signal-2:#0A4E32;
-  --wash:    #EDF3EF;   /* signal at 8% for fills */
-  --amber:   #C8891A;   /* rare highlight, never the identity */
+  --signal:  #0E5A3B;   /* sign green */
+  --signal-2:#0A4430;
+  --on-sign: #D9EBE1;   /* quiet text on green */
+  --wash:    #E8F1EC;
+  --yellow:  #F2B91E;   /* fills only: slowest crossing, focus halo */
+  --amber:   #8C6200;   /* yellow's text-safe partner */
 
   --up:      #B3261E;   /* cost rising */
   --up-wash: #FBECEA;
-  --amber-wash:#F7ECD6;
-  --down:    #0B5D3B;   /* cost falling */
-  --down-wash:#EDF3EF;
+  --amber-wash:#FBF1D6;
+  --down:    #0E5A3B;   /* cost falling */
+  --down-wash:#E8F1EC;
+  --heavy:   #C2410C;
 
-  --focus:   #1C6FE0;
+  --focus:   #1F2421;
 
-  --display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
-  --body:    'Inter', ui-sans-serif, system-ui, sans-serif;
-  --data:    'IBM Plex Mono', ui-monospace, monospace;
+  --display: 'Overpass', ui-sans-serif, system-ui, sans-serif;
+  --body:    'Overpass', ui-sans-serif, system-ui, sans-serif;
+  --data:    'Overpass', ui-sans-serif, system-ui, sans-serif;
+  --serif:   'Source Serif 4', Georgia, serif;
 
-  --maxw: 1000px;
-  --pad:  clamp(20px, 5vw, 44px);
+  --maxw: 1040px;
+  --pad:  clamp(18px, 5vw, 44px);
   --v:    clamp(44px, 7vw, 80px);
 
   --ease: cubic-bezier(.22,.61,.36,1);
@@ -590,7 +595,7 @@ aside.sp .c:hover { text-decoration: underline; }
   flex: 0 0 auto; border: 1px solid var(--line); border-radius: 999px;
   overflow: hidden; background: var(--raise); }
 .fxtog button { appearance: none; border: 0; background: transparent; cursor: pointer;
-  font: 600 11px/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .04em;
+  font: 700 11px/1 var(--data); letter-spacing: 0;
   color: var(--muted); padding: 7px 11px; min-height: 30px; }
 .fxtog button:hover { color: var(--ink); background: var(--sink); }
 .fxtog button.on { background: var(--signal); color: #fff; }
@@ -673,3 +678,138 @@ aside.sp .c:hover { text-decoration: underline; }
 .rows .r .v .dir small { margin-left: 6px; color: var(--muted); font-size: .75rem; }
 .rows .r .v .dir.heavy { color: var(--up); }
 .rows .r .v .dir.na { color: var(--muted); }
+
+/* ── Highway signage layer (2026-10-08) ─────────────────────────────────
+   Restyles the parts above without changing markup. Overpass for headings,
+   labels and numbers; Source Serif 4 for reading text; pill controls; one
+   green sign per page; no capitalised labels. Keep this block last. */
+
+* { font-variant-numeric: tabular-nums lining-nums; }
+body { font-size: 1.0625rem; letter-spacing: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; box-shadow: 0 0 0 7px var(--yellow); border-radius: 8px; }
+
+/* Labels: sentence case everywhere. */
+.strip .hint, .figures .cn, .links-list .src, .cstat .l, .pickcard .pflag,
+.ipop-rows span { text-transform: none !important; letter-spacing: 0 !important; }
+
+/* Masthead and nav: white bar, ink text, green for the current place. */
+.hd, .nav { background: var(--raise); }
+.mark b { font-weight: 800; font-size: 1.1875rem; letter-spacing: -.01em; }
+.mark span { font-weight: 600; font-size: .9375rem; }
+.nav .ng { font-weight: 600; font-size: .9375rem; color: var(--ink-2); }
+.nav .ng.on { color: var(--signal); font-weight: 700; }
+.nav .ng.on::after { height: 3px; border-radius: 3px 3px 0 0; }
+.strip { background: var(--paper); }
+.strip a { font-weight: 600; font-size: .875rem; padding: 7px 14px; background: var(--raise); border: 1px solid var(--line); }
+.strip a.on { border-color: var(--signal); }
+.strip .hint { font-family: var(--body); font-size: .8125rem; font-weight: 600; color: var(--muted); }
+.navbtn { width: 44px; height: 44px; border-radius: 999px; border-color: var(--field); }
+.seg { background: var(--raise); border-color: var(--field); }
+.seg-opt { font-weight: 700; font-size: .875rem; padding: 6px 16px; }
+
+/* Type. */
+.eyebrow { font-family: var(--body); font-weight: 700; font-size: .9375rem; letter-spacing: 0; color: var(--signal); }
+.eyebrow::before { display: none; }
+h1 { font-weight: 700; letter-spacing: -.025em; line-height: 1.06; max-width: 20ch; }
+h2 { font-weight: 700; letter-spacing: -.015em; }
+h3 { font-weight: 700; letter-spacing: -.005em; }
+.stand { font-family: var(--serif); font-size: 1.1875rem; line-height: 1.55; color: var(--ink-2); }
+.reading p, .note { font-family: var(--serif); line-height: 1.65; }
+.reading p { font-size: 1.125rem; color: #262B28; }
+.sec > .lead { border-bottom-color: var(--line); }
+
+/* Hero figures: two white panels, one per country. */
+.figures { gap: 16px; }
+.figures .fg { background: var(--raise); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; }
+.figures .cn { font-family: var(--body); font-weight: 700; font-size: 1rem; color: var(--ink); }
+.figures .fsrc { font-family: var(--body); font-size: .875rem; }
+.figure .n { font-weight: 700; letter-spacing: -.03em; }
+.figure .u { font-family: var(--body); font-weight: 600; font-size: 1.125rem; }
+.figure .d { font-family: var(--body); font-weight: 700; font-size: .875rem; padding: 4px 11px; }
+.meta { font-family: var(--body); font-size: .875rem; }
+.meta b { font-weight: 700; }
+
+/* The sign. The spread rail is the one green element on the page. */
+.rail {
+  background: var(--signal); color: #FFFFFF; border: 0; border-radius: 18px;
+  padding: 30px 30px 24px;
+  box-shadow: inset 0 0 0 7px var(--signal), inset 0 0 0 9px rgba(255,255,255,.92);
+}
+.rail .cap h3 { color: #FFFFFF; font-size: 1.25rem; }
+.rail .cap .sp { font-family: var(--body); font-size: .9375rem; color: var(--on-sign); }
+.rail .cap .sp b { color: #FFFFFF; font-weight: 700; }
+.rail .row { color: #FFFFFF; }
+.rail .row .code { font-family: var(--body); font-weight: 700; font-size: .9375rem; color: var(--on-sign); }
+.rail .row:hover .code { color: #FFFFFF; }
+.rail .row .track::before { background: rgba(255,255,255,.22); }
+.rail .row .fill { background: #FFFFFF; }
+.rail .row .dot { background: var(--signal); border-color: #FFFFFF; }
+.rail .row .val { font-family: var(--body); font-weight: 700; font-size: 1rem; color: #FFFFFF; }
+.rail .row .val.up { color: #FFD3C4; }
+.rail .row .val.down { color: #C3E6D2; }
+.rail .mean { background: var(--yellow); }
+.rail .mean .lab { font-family: var(--body); font-weight: 700; color: var(--yellow); }
+
+/* Panels: white, hairline, 16px corners. */
+.cite, .stats, .viz-card, .chart-stats, .sub { border-radius: 16px; }
+.cite { background: var(--raise); }
+.cite .cl { font-family: var(--body); font-weight: 700; font-size: .9375rem; }
+.cite q { font-family: var(--serif); font-size: 1rem; color: var(--ink-2); }
+.stat .l, .stat .s, .cstat .l, .cstat .s { font-family: var(--body); font-size: .8125rem; }
+.stat .l { font-weight: 600; color: var(--ink-2); }
+.stat .v, .cstat b { font-weight: 700; }
+.sub { background: var(--raise); padding: 32px; }
+.sub .e { font-family: var(--body); font-weight: 700; font-size: .9375rem; }
+.sub p { font-family: var(--serif); font-size: 1.0625rem; }
+.sub .fine { font-family: var(--body); }
+
+/* Buttons: pills. */
+.btn, .sub-btn { font-family: var(--body); font-weight: 700; border-radius: 999px; min-height: 44px; padding: 0 20px; }
+.btn { border-color: var(--field); font-size: .9375rem; }
+.sub-btn { font-size: 1rem; min-height: 50px; padding: 0 24px; }
+.story button { font-family: var(--body); font-weight: 600; font-size: .8125rem; border-radius: 999px; padding: 6px 12px; }
+
+/* Rows: numbers in Overpass, keys in ink. */
+.rows .r { padding: 13px 4px; border-bottom-color: var(--line-2); }
+.rows .r .k { font-weight: 600; }
+.rows .r .k small { font-family: var(--body); font-weight: 400; font-size: .8125rem; }
+.rows .r .v { font-family: var(--body); font-weight: 700; font-size: 1rem; }
+.links-list a { font-weight: 600; }
+.links-list .src { font-family: var(--body); font-size: .8125rem; font-weight: 700; color: var(--signal); }
+
+/* Forms. */
+input, select, textarea { font-family: var(--body); }
+select, input[type="number"], input[type="text"], input[type="email"] { border-radius: 12px; border-color: var(--field); }
+
+/* Footer. */
+.ft { background: var(--raise); }
+.ft .brand .name { font-weight: 800; }
+.ft .brand .tag, .ft .bottom { font-family: var(--body); }
+
+/* Charts. */
+.chart-svg .line { stroke-width: 2.25; }
+.chart-svg .axis text, .ann-label { font-family: var(--body); }
+.chart-card .tip { font-family: var(--body); background: var(--ink); border-radius: 10px; }
+
+/* Home chooser: two white panels, then the gap as the page's sign. */
+.pickcard { border-radius: 16px; padding: 22px 24px 20px; }
+.pickcard .pflag { font-family: var(--body); font-weight: 700; font-size: 1rem; color: var(--ink); }
+.pickcard .pval { font-family: var(--display); font-weight: 700; font-size: clamp(2.75rem, 7vw, 3.5rem); line-height: 1; letter-spacing: -.03em; }
+.pickcard .pval em { font-weight: 600; font-size: 1.125rem; letter-spacing: 0; }
+.pickcard .pmeta { font-size: .875rem; }
+.pickcard .pgo { font-weight: 700; }
+.pickgap {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  margin: 16px 0 22px; padding: 24px 30px; border-radius: 18px;
+  background: var(--signal); color: #FFFFFF;
+  box-shadow: inset 0 0 0 7px var(--signal), inset 0 0 0 9px rgba(255,255,255,.92);
+}
+.pickgap .gl { font-weight: 700; font-size: 1.25rem; line-height: 1.25; }
+.pickgap .gl small { display: block; font-weight: 400; font-size: .9375rem; color: var(--on-sign); margin-top: 4px; }
+.pickgap b { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 6vw, 2.75rem); color: #FFFFFF; white-space: nowrap; }
+.stat .v .u2 { font-weight: 600; }
+.dgrp b { font-family: var(--body); font-size: .875rem; font-weight: 700; letter-spacing: 0; text-transform: none; color: var(--ink-2); }
+.dgrp .dg { font-weight: 600; }
+.rows .r .v .dir small { font-weight: 400; }
+.rows .r .v .dir.heavy { color: var(--heavy); }

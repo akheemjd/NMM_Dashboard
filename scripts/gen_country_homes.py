@@ -276,16 +276,16 @@ write(
         <span class="pflag">Canada</span>
         <span class="pval">{{fuel.national_diesel}}<em>¢/L</em></span>
         <span class="pmeta">Ten provinces · NRCan weekly survey · print {{fuel.print_date}}</span>
-        <span class="pgo">Canadian site →</span>
+        <span class="pgo">Canadian site</span>
       </a>
       <a class="pickcard" href="/us/">
         <span class="pflag">United States</span>
         <span class="pval">{{eia.us_national_usd_gal}}<em>$/gal</em></span>
         <span class="pmeta">Ten EIA districts · week ending {{eia.date}}</span>
-        <span class="pgo">US site →</span>
+        <span class="pgo">US site</span>
       </a>
     </div>
-    <p class="pickgap"><b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. The two national averages on one axis.</p>
+    <p class="pickgap"><span class="gl">{{eia.gap_word}}<small>The two national averages on one axis</small></span><b>{{eia.ca_us_gap}}¢/L</b></p>
     <p class="stand">Both trees are free and need no account. The <a href="#crossborder">cross-border
     figures</a> below are the same in either one.</p>
     <div class="meta"><span>Ten provinces · ten districts</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
@@ -356,13 +356,13 @@ write(
         <span class="pflag">Canada</span>
         <span class="pval">{{fuel.national_diesel}}<em>¢/L</em></span>
         <span class="pmeta">Ten provinces · NRCan weekly survey</span>
-        <span class="pgo">Canadian site →</span>
+        <span class="pgo">Canadian site</span>
       </a>
       <a class="pickcard" href="/us/">
         <span class="pflag">United States</span>
         <span class="pval">{{eia.us_national_usd_gal}}<em>$/gal</em></span>
         <span class="pmeta">Ten EIA districts</span>
-        <span class="pgo">US site →</span>
+        <span class="pgo">US site</span>
       </a>
     </div>
     <p class="note">Looking for a figure you saw cited? Every number carries its source and
