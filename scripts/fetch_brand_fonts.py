@@ -17,6 +17,8 @@ from pathlib import Path
 FONT_DIR = Path(__file__).resolve().parent.parent / "fonts"
 
 FAMILIES = {
+    "Overpass": "Overpass:wght@400;600;700;800",
+    "SourceSerif4": "Source+Serif+4:wght@400;600",
     "Inter": "Inter:wght@400;500;600;700",
     "SpaceGrotesk": "Space+Grotesk:wght@400;500;600;700",
     "IBMPlexMono": "IBM+Plex+Mono:wght@400;500;600",

@@ -816,15 +816,44 @@ def share_bar(segments, title=None, subtitle=None, source=None, unit=""):
 HERO_W, HERO_H = 1200, 630
 
 
+_brand_fetch_tried = False
+
+
+def _ensure_brand_fonts():
+    """Fetch Overpass and Source Serif 4 once if they are missing. Quiet on failure:
+    the older faces below still render a usable card. Tries once per run."""
+    global _brand_fetch_tried
+    if _brand_fetch_tried or (FONT_DIR / "Overpass-700.ttf").exists():
+        return
+    _brand_fetch_tried = True
+    try:
+        import contextlib, io
+        import fetch_brand_fonts
+        with contextlib.redirect_stdout(io.StringIO()):
+            fetch_brand_fonts.main()
+    except Exception:
+        pass
+
+
 def _pil_font(family, weight, size):
-    """Load a static brand TTF for PIL. Falls back through families."""
+    """Load a static brand TTF for PIL. Falls back through families.
+
+    Highway signage (2026-10-08): Overpass for everything on a card. The older
+    faces stay as fallbacks so a machine without the new files still renders.
+    """
     from PIL import ImageFont
+    _ensure_brand_fonts()
+    heavy = weight >= 700
     order = {
-        "display": ["SpaceGrotesk-600", "SpaceGrotesk-500", "SpaceGrotesk-400",
-                    "Inter-600", "Inter-500", "Inter-400"],
-        "body": ["Inter-400", "Inter-500", "SpaceGrotesk-400"],
-        "mono": ["IBMPlexMono-600", "IBMPlexMono-500", "IBMPlexMono-400"],
-    }.get(family, ["Inter-400"])
+        "display": (["Overpass-800", "Overpass-700"] if weight >= 800 else
+                    ["Overpass-700", "Overpass-600"] if heavy else
+                    ["Overpass-600", "Overpass-700"]) +
+                   ["SpaceGrotesk-700", "SpaceGrotesk-600", "Inter-700", "Inter-600"],
+        "body": (["Overpass-600"] if weight >= 600 else ["Overpass-400"]) +
+                ["Inter-500" if weight >= 600 else "Inter-400", "Inter-400"],
+        "mono": ["Overpass-700", "IBMPlexMono-600", "IBMPlexMono-500"],
+        "serif": ["SourceSerif4-400", "Inter-400"],
+    }.get(family, ["Overpass-400", "Inter-400"])
 
     for stem in order:
         p = FONT_DIR / f"{stem}.ttf"
@@ -834,7 +863,8 @@ def _pil_font(family, weight, size):
             except Exception:
                 continue
     # System fallbacks
-    for path in ("C:/Windows/Fonts/segoeuib.ttf", "C:/Windows/Fonts/arialbd.ttf"):
+    for path in ("C:/Windows/Fonts/segoeuib.ttf", "C:/Windows/Fonts/arialbd.ttf",
+                 "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
         if Path(path).exists():
             try:
                 return ImageFont.truetype(path, size)
@@ -861,87 +891,101 @@ def _wrap(draw, text, font, max_width):
     return lines
 
 
+SIGN = "#0E5A3B"
+SIGN_TEXT = "#D9EBE1"
+SIGN_PAPER = "#F6F7F5"
+
+
 def hero_card(headline, eyebrow=None, stat_value=None, stat_label=None,
               source=None, variant="paper", extra_stats=None):
-    """Build a branded 1200x630 social/feature card with PIL.
+    """A 1200x630 feature and share card in the highway signage style.
 
-    variant="paper" -> light editorial card (default)
-    variant="signal" -> deep green card, for higher contrast in feeds
-    extra_stats=[(value, label), ...] -> more figures beside the first, same row.
-        Used where one country's number alone would misdescribe a two-country
-        story (the Brief's card showed Canadian diesel only).
+    The card is one green road sign on paper: a thin white inner border, the
+    figures large in Overpass, the headline above them, quiet labels below.
+    When there is no figure the headline takes the whole sign.
+
+    extra_stats=[(value, label), ...] adds figures beside the first, same row,
+    for stories that need both countries. `variant` is kept for old callers;
+    every card now uses the sign.
     """
     from PIL import Image, ImageDraw
 
-    if variant == "signal":
-        bg, fg, sub, accent = SIGNAL, PAPER, "#CFE0D6", AMBER
-    else:
-        bg, fg, sub, accent = PAPER, INK, MUTED, SIGNAL
-
-    img = Image.new("RGB", (HERO_W, HERO_H), bg)
+    img = Image.new("RGB", (HERO_W, HERO_H), SIGN_PAPER)
     d = ImageDraw.Draw(img)
 
-    pad = 72
+    # The sign: green plate, white inner border, rounded like a highway panel.
+    m = 26
+    d.rounded_rectangle([m, m, HERO_W - m, HERO_H - m], radius=34, fill=SIGN)
+    b = m + 14
+    d.rounded_rectangle([b, b, HERO_W - b, HERO_H - b], radius=24,
+                        outline="#FFFFFF", width=4)
+
+    pad = 88
     inner_w = HERO_W - pad * 2
+    top = 86
 
-    # Top accent rule — a thin bar reads as editorial masthead
-    d.rectangle([0, 0, HERO_W, 8], fill=accent)
-
-    # ── Eyebrow (pinned top) ──
-    y_eyebrow = pad
-    eb = _pil_font("display", 600, 25)
-    d.text((pad, y_eyebrow), "NORTHERN MILE", font=eb, fill=accent)
-    w_label = d.textlength("NORTHERN MILE", font=eb)
+    # Masthead line: brand, then the section in sentence case.
+    mf = _pil_font("display", 800, 28)
+    d.text((pad, top), "Northern Mile", font=mf, fill="#FFFFFF")
     if eyebrow:
-        d.text((pad + w_label + 16, y_eyebrow + 2), f"/ {eyebrow.upper()}",
-               font=_pil_font("body", 400, 22), fill=sub)
+        x = pad + d.textlength("Northern Mile", font=mf) + 18
+        d.text((x, top + 2), str(eyebrow), font=_pil_font("body", 600, 26), fill=SIGN_TEXT)
 
-    # ── Headline (sized to fit) ──
-    hf = _pil_font("display", 600, 62)
-    avail = inner_w if not stat_value else inner_w * 0.82
-    lines = _wrap(d, headline, hf, avail)
-    while len(lines) > 4 and hf.size > 34:
-        hf = _pil_font("display", 600, hf.size - 4)
-        lines = _wrap(d, headline, hf, avail)
+    stats = [(stat_value, stat_label)] + list(extra_stats or []) if stat_value else []
+    stats = stats[:3]
 
-    line_h = int(hf.size * 1.18)
-    head_h = line_h * len(lines)
+    # Headline: big when it is alone on the sign, smaller above figures.
+    start, floor, max_lines = (64, 40, 4) if not stats else (44, 32, 2)
+    hf = _pil_font("display", 700, start)
+    lines = _wrap(d, headline, hf, inner_w)
+    while len(lines) > max_lines and hf.size > floor:
+        hf = _pil_font("display", 700, hf.size - 4)
+        lines = _wrap(d, headline, hf, inner_w)
+    if len(lines) > max_lines:
+        lines = lines[:max_lines]
+        lines[-1] = lines[-1].rstrip(".,") + "..."
+    line_h = int(hf.size * 1.16)
 
-    # ── Stat block dimensions ──
-    stat_h = 0
-    if stat_value:
-        stat_h = 52 + 58 + 40 + (30 if stat_label else 0)   # gap + figure + gap + label
+    source_h = 40 if source else 0
+    bottom = HERO_H - 78 - source_h
 
-    # ── Source sits at the bottom ──
-    source_h = 34 if source else 0
-    band_top = y_eyebrow + 62
-    band_bottom = HERO_H - pad - source_h
-    content_h = head_h + stat_h
+    if not stats:
+        y = top + 70 + max(0, (bottom - (top + 70) - line_h * len(lines)) // 2)
+        for ln in lines:
+            d.text((pad, y), ln, font=hf, fill="#FFFFFF")
+            y += line_h
+    else:
+        y = top + 66
+        for ln in lines:
+            d.text((pad, y), ln, font=hf, fill="#FFFFFF")
+            y += line_h
 
-    # Centre the headline+stat group in the band so the card reads balanced
-    # instead of leaving a hole between the two elements.
-    y = band_top + max(0, (band_bottom - band_top - content_h) // 2)
-
-    for ln in lines:
-        d.text((pad, y), ln, font=hf, fill=fg)
-        y += line_h
-
-    if stat_value:
-        y += 40
-        stats = [(stat_value, stat_label)] + list(extra_stats or [])
-        col_w = inner_w // max(2, len(stats)) if len(stats) > 1 else inner_w
+        # Figures sit on the lower half of the sign, divided by thin rules.
+        n = len(stats)
+        col_w = inner_w // n
+        vsize = 104 if n == 1 else 84 if n == 2 else 66
+        vf = _pil_font("mono", 700, vsize)
+        while any(d.textlength(str(v), font=vf) > col_w - 24 for v, _ in stats) and vf.size > 40:
+            vf = _pil_font("mono", 700, vf.size - 4)
+        lf = _pil_font("body", 400, 25)
+        fy = bottom - vf.size - 60
+        d.line([(pad, fy - 26), (HERO_W - pad, fy - 26)], fill="#3E7B62", width=2)
         for i, (val, lab) in enumerate(stats):
             x = pad + i * col_w
-            d.text((x, y), str(val), font=_pil_font("mono", 600, 56), fill=accent)
+            if i:
+                d.line([(x - 14, fy - 4), (x - 14, bottom)], fill="#3E7B62", width=2)
+            d.text((x, fy), str(val), font=vf, fill="#FFFFFF")
             if lab:
-                d.text((x, y + 68), str(lab).upper(),
-                       font=_pil_font("body", 400, 21), fill=sub)
+                lab_lines = _wrap(d, str(lab), lf, col_w - 30)[:2]
+                for j, ll in enumerate(lab_lines):
+                    d.text((x, fy + vf.size + 22 + j * 30), ll, font=lf, fill=SIGN_TEXT)
 
     if source:
-        sf = _pil_font("body", 400, 19)
+        sf = _pil_font("body", 400, 20)
         txt = f"Source: {source}"
-        tw = d.textlength(txt, font=sf)
-        d.text((HERO_W - pad - tw, HERO_H - pad - 22), txt, font=sf, fill=sub)
+        while d.textlength(txt, font=sf) > inner_w and len(txt) > 20:
+            txt = txt[:-4] + "..."
+        d.text((pad, HERO_H - 74 - 20), txt, font=sf, fill=SIGN_TEXT)
 
     return img
 

@@ -15,21 +15,21 @@ W, H = 1200, 630
 # dashboard looks like, so it carries the identity. It previously used the
 # retired dark/amber palette (#0B0D11 / #F5C518) and DejaVu, so a share of the
 # site looked like a different product to the site itself.
-PAPER = "#FBFAF8"
-INK = "#1A1A17"
-MUTED = "#6B6862"
-SIGNAL = "#0B5D3B"
-LINE = "#E8E4DD"
+PAPER = "#F6F7F5"
+INK = "#1F2421"
+MUTED = "#5B635E"
+SIGNAL = "#0E5A3B"
+LINE = "#DADFDB"
 
 # Build-only TTFs, the same set blog_visuals.py uses. assets/ is copied to the
 # published site, so fonts live in fonts/ and are never deployed.
 FONT_DIR = os.path.join(ROOT, "fonts")
 FACES = {
-    "display": ("SpaceGrotesk-600.ttf", "SpaceGrotesk-500.ttf"),
-    "display-bold": ("SpaceGrotesk-700.ttf", "SpaceGrotesk-600.ttf"),
-    "body": ("Inter-400.ttf", "Inter-500.ttf"),
-    "bold": ("Inter-600.ttf", "Inter-700.ttf"),
-    "number": ("IBMPlexMono-600.ttf", "IBMPlexMono-500.ttf"),
+    "display": ("Overpass-700.ttf", "SpaceGrotesk-600.ttf", "SpaceGrotesk-500.ttf"),
+    "display-bold": ("Overpass-800.ttf", "SpaceGrotesk-700.ttf", "SpaceGrotesk-600.ttf"),
+    "body": ("Overpass-400.ttf", "Inter-400.ttf", "Inter-500.ttf"),
+    "bold": ("Overpass-700.ttf", "Inter-600.ttf", "Inter-700.ttf"),
+    "number": ("Overpass-700.ttf", "IBMPlexMono-600.ttf", "IBMPlexMono-500.ttf"),
 }
 
 
@@ -56,7 +56,7 @@ def build_fuel_card():
     img = Image.new("RGB", (W, H), PAPER)
     d = ImageDraw.Draw(img)
 
-    d.text((70, 70), "NORTHERN MILE", font=font("display-bold", 28), fill=SIGNAL)
+    d.text((70, 70), "Northern Mile", font=font("display-bold", 28), fill=SIGNAL)
     d.text((70, 115), "Canadian Diesel Prices by Province",
            font=font("body", 34), fill=MUTED)
 
@@ -103,7 +103,7 @@ def build_home_card():
     img = Image.new("RGB", (W, H), PAPER)
     d = ImageDraw.Draw(img)
 
-    d.text((70, 70), "NORTHERN MILE", font=font("display-bold", 28), fill=SIGNAL)
+    d.text((70, 70), "Northern Mile", font=font("display-bold", 28), fill=SIGNAL)
     d.text((70, 115), "North American trucking data, published daily",
            font=font("body", 32), fill=MUTED)
 

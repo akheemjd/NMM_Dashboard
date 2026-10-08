@@ -128,17 +128,17 @@ def brief_hero():
         eia = {}
     us = eia.get("us_national_usd_gal")
     us_week = eia.get("date")
-    extra = [(f"${float(us):.3f}", "US · $/gal national average")] if us else None
+    extra = [(f"${float(us):.3f}", "US diesel, $/gal national average")] if us else None
     src = f"NRCan print {stamp}" if stamp else "NRCan weekly survey"
     if us_week:
-        src += f" · EIA week {us_week}"
+        src += f", EIA week {us_week}"
     try:
         img = blog_visuals.hero_card(
             headline=("Diesel this week, both sides of the border" if extra
                       else "Canada's diesel average this week"),
             eyebrow="The Northern Mile Brief",
             stat_value=f"{nat}¢" if nat is not None else None,
-            stat_label="Canada · ¢/L national average",
+            stat_label="Canadian diesel, ¢/L national average",
             source=src,
             variant="paper",
             extra_stats=extra,

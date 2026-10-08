@@ -315,6 +315,7 @@ def compose(topic_id, headline, keyword=None, eyebrow=None,
     }
 
     # ── Hero (always) ──
+    hero_extra = None
     if not stat_value:
         picked = topic_hero_stat(topic_id, keyword, fuel, exchange, border)
         if picked:
@@ -326,8 +327,13 @@ def compose(topic_id, headline, keyword=None, eyebrow=None,
             # Match the dashboard convention (¢/L, 16 uses on /fuel-prices/).
             # A bare "c" was ambiguous and inconsistent with the brand.
             stat_value = f"{nat}\u00a2/L"
-            stat_label = stat_label or "national diesel average"
+            stat_label = stat_label or "Canadian diesel, national average"
             source = source or "Natural Resources Canada weekly diesel survey"
+            # North American by default: the US figure sits beside the Canadian one.
+            us = (eia or {}).get("us_national_usd_gal")
+            if us:
+                hero_extra = [(f"${float(us):.3f}", "US diesel, $/gal national average")]
+                source = source + " and EIA"
 
     hero_img = bv.hero_card(
         headline=headline,
@@ -335,6 +341,7 @@ def compose(topic_id, headline, keyword=None, eyebrow=None,
         stat_value=stat_value,
         stat_label=stat_label,
         source=source,
+        extra_stats=hero_extra,
     )
     hero_path = bv.save_hero(hero_img, f"{topic_id}-hero", outdir)
     hero_url = None
