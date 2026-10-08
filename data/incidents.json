@@ -1,6 +1,23 @@
 {
   "incidents": [
     {
+      "id": "ON-317124",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 400 Northbound RAMP at ESSA RD / SIMCOE RD 27, Barrie. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 44.36172135,
+      "lng": -79.69543511,
+      "start": 1791465780,
+      "end": null,
+      "updated": 1791465780,
+      "scheduled": false
+    },
+    {
       "id": "ON-317118",
       "province": "ON",
       "highway": "HWY 403 MISSISSAUGA",
@@ -49,23 +66,6 @@
       "start": 1791464760,
       "end": null,
       "updated": 1791464760,
-      "scheduled": false
-    },
-    {
-      "id": "ON-317096",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at CAWTHRA ROAD, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.58185825,
-      "lng": -79.58355862,
-      "start": 1791464580,
-      "end": null,
-      "updated": 1791464580,
       "scheduled": false
     },
     {
@@ -186,6 +186,23 @@
       "end": null,
       "updated": 1791459360,
       "scheduled": false
+    },
+    {
+      "id": "ON-317123",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Continuous Maintenance on HWY 401 Westbound Collector between KEELE ST and JANE ST, Toronto. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.722652,
+      "lng": -79.48128,
+      "start": 1792029600,
+      "end": 1792054800,
+      "updated": 1791456900,
+      "scheduled": true
     },
     {
       "scheduled": false,
@@ -790,6 +807,23 @@
       "scheduled": true
     },
     {
+      "id": "ON-317121",
+      "province": "ON",
+      "highway": "HWY 9",
+      "direction": "Westbound",
+      "description": "Nightly Construction on HWY 9 Westbound  between 6TH LINE EAST, Caledon and NORTH JCT HWY 10-BUENA VISTA DRIVE, Orangeville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.94424,
+      "lng": -79.985054,
+      "start": 1792198800,
+      "end": 1792238400,
+      "updated": 1791400140,
+      "scheduled": true
+    },
+    {
       "id": "ON-317108",
       "province": "ON",
       "highway": "HWY 11",
@@ -804,6 +838,23 @@
       "start": 1793581200,
       "end": 1794052800,
       "updated": 1791400080,
+      "scheduled": true
+    },
+    {
+      "id": "ON-317122",
+      "province": "ON",
+      "highway": "HWY 9",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 9 Eastbound  between NORTH JCT HWY 10-BUENA VISTA DRIVE, Orangeville and 6TH LINE EAST, Caledon. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.919243,
+      "lng": -80.077156,
+      "start": 1792198800,
+      "end": 1792238400,
+      "updated": 1791400020,
       "scheduled": true
     },
     {
@@ -872,57 +923,6 @@
       "start": 1793577600,
       "end": 1794052800,
       "updated": 1791399060,
-      "scheduled": true
-    },
-    {
-      "id": "ON-317105",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 400 Southbound  between HWY 11 JCT, Springwater and MAPLEVIEW DRIVE, Barrie. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.427162,
-      "lng": -79.65115,
-      "start": 1793581200,
-      "end": 1794049200,
-      "updated": 1791398940,
-      "scheduled": true
-    },
-    {
-      "id": "ON-317114",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 400 Northbound  between MAPLEVIEW DRIVE, Barrie and HWY 11 JCT, Springwater. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.335453,
-      "lng": -79.68464,
-      "start": 1793581200,
-      "end": 1794049200,
-      "updated": 1791398880,
-      "scheduled": true
-    },
-    {
-      "id": "ON-317111",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Nightly Moving Maintenance Closure on HWY 400 Southbound  between MAPLEVIEW DRIVE, Barrie and CANAL RD., Bradford. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.335453,
-      "lng": -79.68464,
-      "start": 1793581200,
-      "end": 1794045600,
-      "updated": 1791398820,
       "scheduled": true
     },
     {
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-08T13:20:04.840309+00:00",
+  "updated": "2026-10-08T13:27:36.483802+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
