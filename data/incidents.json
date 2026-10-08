@@ -1,6 +1,40 @@
 {
   "incidents": [
     {
+      "id": "ON-317071",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at BAYVIEW AVE, Toronto. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.76343241,
+      "lng": -79.38732453,
+      "start": 1791460320,
+      "end": null,
+      "updated": 1791460320,
+      "scheduled": false
+    },
+    {
+      "id": "ON-317072",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 401 Eastbound  between STEWART BLVD (IC 696)/Leeds & Grenville CR 29 (Brockville) and North AUGUSTA RD (IC 698), Brockville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.59945,
+      "lng": -75.70122,
+      "start": 1791863940,
+      "end": 1792324800,
+      "updated": 1791460260,
+      "scheduled": true
+    },
+    {
       "id": "ON-317070",
       "province": "ON",
       "highway": "HWY 401",
@@ -32,23 +66,6 @@
       "start": "2026-10-08T02:38:35-07:00",
       "end": "",
       "updated": "2026-10-08T04:44:19-07:00",
-      "scheduled": false
-    },
-    {
-      "id": "ON-317067",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 400 Northbound  at NORTH OF 401 BEFORE SHEPPARD, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.72174659,
-      "lng": -79.52240528,
-      "start": 1791459660,
-      "end": null,
-      "updated": 1791459660,
       "scheduled": false
     },
     {
@@ -960,23 +977,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-316828",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 400 Northbound  between HWY 88 and 13TH CONCESSION, Bradford. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.099445,
-      "lng": -79.63101,
-      "start": 1792382400,
-      "end": 1792774800,
-      "updated": 1791394500,
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-103334",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-08T11:53:31.822460+00:00",
+  "updated": "2026-10-08T12:00:27.962501+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
