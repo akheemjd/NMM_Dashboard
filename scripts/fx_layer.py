@@ -757,8 +757,45 @@ def write_rate():
     return out
 
 
+def write_now():
+    """This week's headline figures, for the blog's "This week" sign.
+
+    The blog (Ghost) reads this file in the browser, so the sign on
+    northernmilemedia.com always shows what the dashboard shows. Built from the same
+    gather the Brief uses. A failure here never stops the build: the blog keeps
+    its last good numbers.
+    """
+    try:
+        import datetime as _dt
+        import sys as _sys
+        _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import weekly_brief as wb
+        g = wb._gather(_dt.date.today())
+        home = json.load(open(os.path.join(DATA, "home.norm.json"), encoding="utf-8"))
+        eia = home.get("eia") or {}
+        worst = None
+        for r in g.get("border") or []:
+            for mins, way in ((r.get("ca"), "into Canada"), (r.get("us"), "into the US")):
+                if mins and (worst is None or mins > worst["mins"]):
+                    worst = {"name": r.get("name"), "mins": int(mins), "dir": way}
+        out = {
+            "ca": g["ca"]["now"], "ca_d7": g["ca"]["d7"],
+            "us": g["us"]["now"], "us_d7": g["us"]["d7"],
+            "gap": eia.get("ca_us_gap"), "gap_word": eia.get("gap_word"),
+            "usd_cad": g["fx"]["now"],
+            "slowest": worst,
+            "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        }
+        with open(os.path.join(DOCS, "assets", "now.json"), "w", encoding="utf-8") as f:
+            json.dump(out, f, indent=2)
+        print(f"  now.json: CA {out['ca']} US {out['us']} gap {out['gap']}")
+    except Exception as e:  # noqa: BLE001
+        print(f"  now.json skipped: {e}")
+
+
 def main():
     info = write_rate()
+    write_now()
     pages = 0
     total = 0
     for dirpath, _dirs, files in os.walk(DOCS):
