@@ -1,23 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-317034",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at MISSISSAUGA RD, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.605926,
-      "lng": -79.7459784,
-      "start": 1791438180,
-      "end": null,
-      "updated": 1791438180,
-      "scheduled": false
-    },
-    {
       "id": "ON-317024",
       "province": "ON",
       "highway": "HWY 11",
@@ -490,6 +473,23 @@
       "lng": -79.11275,
       "start": 1791885600,
       "end": 1792792800,
+      "updated": 1791393900,
+      "scheduled": true
+    },
+    {
+      "id": "ON-316821",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Daily Construction on HWY 26 Westbound  between Lora Bay Drive / 11th Line and Lora Bay Drive / 11th Line, Thornbury. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.574776,
+      "lng": -80.49327,
+      "start": 1791889200,
+      "end": 1791928800,
       "updated": 1791393900,
       "scheduled": true
     },
@@ -1352,7 +1352,7 @@
     }
   ],
   "total": 75,
-  "updated": "2026-10-08T06:00:20.621196+00:00",
+  "updated": "2026-10-08T07:00:23.098733+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
