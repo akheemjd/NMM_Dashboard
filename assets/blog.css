@@ -17,7 +17,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #F2B9
 .gh-button:hover{background:#0A4430!important;opacity:1}
 
 /* home hero: headline + live sign, no photo */
-.home-template .gh-header{background:#F6F7F5!important;color:#1F2421!important;min-height:0!important;padding:72px 0!important}
+.home-template .gh-header{background:#F6F7F5!important;color:#1F2421!important;min-height:0!important;padding:72px clamp(20px,4vw,48px)!important}
 .home-template .gh-header-image{display:none!important}
 .home-template .gh-header::before,.home-template .gh-header::after{display:none!important}
 .home-template .gh-header-inner{display:grid!important;grid-template-columns:minmax(0,7fr) minmax(300px,5fr);gap:56px;align-items:center;text-align:left!important;max-width:1160px}
@@ -88,7 +88,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #F2B9
 .gh-footer-bar a{color:#0E5A3B}
 
 @media (max-width:767px){
-  .home-template .gh-header{padding:36px 0 40px!important}
+  .home-template .gh-header{padding:36px 20px 40px!important}
   .home-template .gh-header-inner{grid-template-columns:1fr;gap:28px}
   .nm-dek{font-size:18px}
   .nm-sign{padding:24px 24px 20px}
