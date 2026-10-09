@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-09 13:01",
-  "updated_iso": "2026-10-09T13:01:54+00:00",
-  "build_version": "1791550914",
+  "updated_at": "2026-10-09 14:01",
+  "updated_iso": "2026-10-09T14:01:47+00:00",
+  "build_version": "1791554507",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Blaine-Pacific Highway",
-    "us_max_wait": "40 min",
+    "us_max_name": "Thousand Islands Bridge",
+    "us_max_wait": "10 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 69,
+    "active_count": 73,
     "gauge_class": "warn",
-    "status_line": "Live now: 39 in the US, 39 in Canada.",
+    "status_line": "Live now: 39 in the US, 38 in Canada.",
     "incidents": [
       {
         "road": "LEMAY FERRY RD",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 71",
-        "what": "Highway Maintenance on HWY 71 Northbound  at MOORE RD (W), Nestor Falls. Lane\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Northbound  at WINDY POINT BR, Fort Frances. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,11 +375,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT",
+      "captured_at": "09:40 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:43 EDT",
+      "captured_at": "09:23 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -465,16 +465,16 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT",
+      "captured_at": "06:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "40 min",
-      "us_status_class": "heavy"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 9 crossings slow, US-bound",
-      "value": "7/9",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow, Canada-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "drivers",
-      "source": "The Trucker",
-      "headline": "\u2018Inattentive\u2019 driver hits rear of semi-truck in Missouri",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/inattentive-driver-hits-rear-of-semi-truck-in-missouri",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "industry",
+      "source": "Trucking Dive",
+      "headline": "Debts disrupt trucking companies in Oregon, Texas",
+      "url": "https://www.truckingdive.com/news/debts-disrupt-trucking-companies-in-oregon-texas/832466/",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "safety",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "ALAN activates for first Atlantic hurricane of 2026",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/alan-activates-for-first-atlantic-hurricane-of-2026",
-      "why": "Safety rules and blitzes hit the road on specific dates."
+      "headline": "CBP finds liquid meth inside fuel tank of semi-truck",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/cbp-finds-liquid-meth-inside-fuel-tank-of-semi-truck",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
