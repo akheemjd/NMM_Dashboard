@@ -110,3 +110,30 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #F2B9
   .home-template .gh-header .gh-form-input,.gh-footer-signup .gh-form-input{flex:0 0 auto!important;width:100%!important}
   .home-template .gh-header .gh-form .gh-button,.gh-footer-signup .gh-form .gh-button{width:100%!important}
 }
+
+/* ── One content column, so the hero and the feed share a left edge ──
+   The theme caps the hero container at 1020px and the feed container at 1320px. Two sibling
+   containers at two widths: on a 1264px screen the headline started at x=122 and the article
+   cards at x=25, a 97px mismatch running the whole length of the page. Nothing capped the page
+   either, so on a 1920px monitor the feed would have stretched to 1870px wide.
+
+   Both are pinned to 1160px here - the width the hero rules above already intended - so the hero
+   and the feed finally agree and the gutter scales instead of collapsing. !important because the
+   theme's own .gh-header-inner.gh-inner carries the same specificity as ours and is the value we
+   are deliberately overriding. */
+:root {
+  --nm-maxw: 1160px;
+  --nm-pad: clamp(20px, 4vw, 40px);
+}
+section.gh-header,
+section.gh-container {
+  padding-left: var(--nm-pad) !important;
+  padding-right: var(--nm-pad) !important;
+}
+.gh-header-inner.gh-inner,
+.gh-container-inner.gh-inner {
+  max-width: var(--nm-maxw) !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
