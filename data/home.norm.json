@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-09 22:02",
-  "updated_iso": "2026-10-09T22:02:20+00:00",
-  "build_version": "1791583340",
+  "updated_at": "2026-10-09 23:01",
+  "updated_iso": "2026-10-09T23:01:19+00:00",
+  "build_version": "1791586879",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
+    "gauge_class": "warn",
+    "heavy_count": 1,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
-    "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "15 min",
-    "ca_max_name": "Peace Bridge"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "35 min",
+    "us_max_name": "Peace Bridge",
+    "us_max_wait": "9 min",
+    "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
     "national_diesel": "259.1",
@@ -350,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 52,
+    "active_count": 66,
     "gauge_class": "warn",
-    "status_line": "Live now: 31 in the US, 28 in Canada.",
+    "status_line": "Live now: 47 in the US, 26 in Canada.",
     "incidents": [
       {
-        "road": "LEMAY FERRY RD",
-        "what": "Road closed on LEMAY FERRY RD northbound, MO. PAVEMENT REPAIR",
+        "road": "US 75",
+        "what": "Road closed on US 75 northbound, MN. Closed, Construction Work, Detour In\u2026",
         "severity_label": "Minor",
         "severity_class": "heavy",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound RAMP at REXDALE BLVD / DERRY ROAD, Toronto.\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound RAMP at EGLINTON AVE, Toronto. Centre\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,15 +375,15 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "35 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT",
+      "captured_at": "18:45 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "4 min",
+      "us_wait": "9 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "4 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:10 EDT",
+      "captured_at": "18:54 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:41 MDT",
+      "captured_at": "16:24 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT",
+      "captured_at": "15:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 CDT",
+      "captured_at": "17:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 9 crossings slow, US-bound",
-      "value": "7/9",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow, Canada-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
