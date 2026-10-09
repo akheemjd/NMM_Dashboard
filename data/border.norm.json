@@ -1,16 +1,16 @@
 {
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min",
     "us_max_name": "Ambassador Bridge",
     "us_max_wait": "15 min",
-    "ca_max_name": "Peace Bridge"
+    "ca_max_name": "Blaine-Pacific Highway"
   },
   "border_rows": [
     {
@@ -55,7 +55,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "1 min",
+      "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
@@ -70,7 +70,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "7 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -96,7 +96,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 MDT",
+      "captured_at": "15:02 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -107,11 +107,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT",
+      "captured_at": "14:20 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -192,7 +192,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "1 min",
+      "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
@@ -207,7 +207,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "7 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -233,7 +233,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 MDT",
+      "captured_at": "15:02 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -244,11 +244,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT",
+      "captured_at": "14:20 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -286,8 +286,8 @@
       "us_status_class": "ok"
     }
   ],
-  "updated_at": "2026-10-09 21:02",
-  "updated_iso": "2026-10-09T21:02:22+00:00",
-  "build_version": "1791579742",
-  "captured_at": "2026-10-09 21:02"
+  "updated_at": "2026-10-09 21:48",
+  "updated_iso": "2026-10-09T21:48:05+00:00",
+  "build_version": "1791582485",
+  "captured_at": "2026-10-09 21:48"
 }
