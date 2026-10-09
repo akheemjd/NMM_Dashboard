@@ -1,6 +1,42 @@
 {
   "incidents": [
     {
+      "id": "ON-317498",
+      "province": "ON",
+      "highway": "HWY 420",
+      "direction": "Westbound",
+      "description": "Collision on HWY 420 Westbound  at STANLEY AVE, Niagara Falls. Both shoulders and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "both shoulders and left lane closed",
+      "lat": 43.09621933,
+      "lng": -79.08540712,
+      "start": 1791537960,
+      "end": null,
+      "updated": 1791537960,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-103438",
+      "province": "BC",
+      "highway": "Highway 91 near Alex Fraser Bridge",
+      "direction": "",
+      "description": "Vehicle incident at Highway 91, In Delta and 96m North of Nordel Court. Reduced to one lane. Expect delays. Last update: October 9th, 2026 at 2:05am PDT. Next update: October 9th, 2026 at 3:30am PDT. Northbound left lane also blocked.",
+      "event_type": "incident",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.1502543,
+      "lng": -122.93902252,
+      "start": "2026-10-09T00:06:05-07:00",
+      "end": "",
+      "updated": "2026-10-09T02:05:05-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-317497",
       "province": "ON",
       "highway": "HWY 403 HAMILTON",
@@ -1012,24 +1048,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-317263",
-      "province": "ON",
-      "highway": "HWY 3",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 3 Eastbound  between Springwater Road, Orwell and Rogers Road, Aylmer. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 42.77528,
-      "lng": -81.03313,
-      "start": 1791504000,
-      "end": 1791536400,
-      "updated": 1791481260,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103417",
       "province": "BC",
       "highway": "Highway 19A near Island Highway N",
@@ -1624,24 +1642,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-101669",
-      "province": "BC",
-      "highway": "Other Roads near Durrell Road",
-      "direction": "",
-      "description": "Construction work from Durrell Road, 17km South of Quesnel and Highway 97 to At Dale Lake Road and Durrell Road. Starting Mon Jul 13. Watch for traffic control. Expect minor delays. Last update: September 15th, 2026 at 8:11pm PDT. Next update time Thu Oct 1 at 10:00 AM PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 52.87166,
-      "lng": -122.4334,
-      "start": "2026-08-25T14:41:23-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:11:00-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "IN-CARSy-606-1",
       "province": "IN",
       "country": "US",
@@ -2003,7 +2003,7 @@
     }
   ],
   "total": 107,
-  "updated": "2026-10-09T09:01:05.619980+00:00",
+  "updated": "2026-10-09T10:01:05.755651+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

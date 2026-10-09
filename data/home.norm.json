@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-09 09:01",
-  "updated_iso": "2026-10-09T09:01:23+00:00",
-  "build_version": "1791536483",
+  "updated_at": "2026-10-09 10:01",
+  "updated_iso": "2026-10-09T10:01:27+00:00",
+  "build_version": "1791540087",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Coutts-Sweetgrass",
-    "us_max_wait": "5 min",
+    "us_max_name": "Thousand Islands Bridge",
+    "us_max_wait": "10 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,7 +350,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 60,
+    "active_count": 62,
     "gauge_class": "warn",
     "status_line": "Live now: 39 in the US, 31 in Canada.",
     "incidents": [
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Spill on HWY 403 HAMILTON Eastbound  at Oak Park Road / Brant Road 27,\u2026",
+        "road": "HWY 420",
+        "what": "Collision on HWY 420 Westbound  at STANLEY AVE, Niagara Falls. Both shoulders\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -439,12 +439,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:17 EDT",
+      "captured_at": "05:48 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:40 PDT",
+      "captured_at": "02:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 CDT",
+      "captured_at": "04:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -503,8 +503,8 @@
       "route": "Lansdowne, ON \u2014 Alexandria Bay, NY",
       "label": "Thousand Islands Bridge",
       "route_both": "Alexandria Bay, NY and Lansdowne, ON",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     }
   ],
   "market": [
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 7 crossings slow, US-bound",
-      "value": "4/7",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Truck News",
-      "headline": "Arrive Logistics forecasts higher freight rate floor through 2027",
-      "url": "https://www.trucknews.com/business-management/arrive-logistics-forecasts-higher-freight-rate-floor-through-2027/1003223007/",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "regulations",
+      "source": "The Trucker",
+      "headline": "FMCSA clears way for driverless trucks to replace warning triangles with flashing beacons",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/fmcsa-clears-way-for-driverless-trucks-to-replace-warning-triangles-with-flashing-beacons",
+      "why": "Rules change compliance cost and driver hours."
     },
     {
-      "category": "technology",
-      "source": "Truck News",
-      "headline": "Isee, Holman partner to scale autonomous yard truck deployments",
-      "url": "https://www.trucknews.com/technology/isee-holman-partner-to-scale-autonomous-yard-truck-deployments/1003222980/",
-      "why": "Tech spend changes back-office and dispatch efficiency."
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Coast Counties Peterbilt expands into northern Nevada",
+      "url": "https://www.thetrucker.com/trucking-news/business/coast-counties-peterbilt-expands-into-northern-nevada",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
