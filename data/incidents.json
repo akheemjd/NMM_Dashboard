@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "drivebc.ca/RIDE-103438",
-      "province": "BC",
-      "highway": "Highway 91 near Alex Fraser Bridge",
-      "direction": "",
-      "description": "Vehicle incident at Highway 91, In Delta and 96m North of Nordel Court. Closed. Expect delays. Last update: October 9th, 2026 at 12:41am PDT. Next update: October 9th, 2026 at 1:30am PDT. Northbound reduced to 1 lane.",
-      "event_type": "incident",
-      "severity": "MAJOR",
+      "id": "ON-317497",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Eastbound",
+      "description": "Spill on HWY 403 HAMILTON Eastbound  at Oak Park Road / Brant Road 27, Brantford. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
       "closure": false,
-      "lanes": "",
-      "lat": 49.1502543,
-      "lng": -122.93902252,
-      "start": "2026-10-09T00:06:05-07:00",
-      "end": "",
-      "updated": "2026-10-09T00:41:39-07:00",
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.167613889,
+      "lng": -80.338525,
+      "start": 1791535080,
+      "end": null,
+      "updated": 1791535080,
       "country": "CA",
       "scheduled": false
     },
@@ -1048,24 +1048,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-317258",
-      "province": "ON",
-      "highway": "HWY 7",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 7 Eastbound  between Krug Street and Conestoga Parkway / Highway 7/Victoria Street, Kitchener. 2 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Right Lane(s)",
-      "lat": 43.454113,
-      "lng": -80.46817,
-      "start": 1791680400,
-      "end": 1791709200,
-      "updated": 1791479580,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
       "id": "drivebc.ca/RIDE-102766",
       "province": "BC",
       "highway": "Highway 5 near Six Mile Bridge",
@@ -1642,6 +1624,24 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-101669",
+      "province": "BC",
+      "highway": "Other Roads near Durrell Road",
+      "direction": "",
+      "description": "Construction work from Durrell Road, 17km South of Quesnel and Highway 97 to At Dale Lake Road and Durrell Road. Starting Mon Jul 13. Watch for traffic control. Expect minor delays. Last update: September 15th, 2026 at 8:11pm PDT. Next update time Thu Oct 1 at 10:00 AM PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 52.87166,
+      "lng": -122.4334,
+      "start": "2026-08-25T14:41:23-07:00",
+      "end": "",
+      "updated": "2026-09-15T20:11:00-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "IN-CARSy-606-1",
       "province": "IN",
       "country": "US",
@@ -2003,7 +2003,7 @@
     }
   ],
   "total": 107,
-  "updated": "2026-10-09T08:01:03.057166+00:00",
+  "updated": "2026-10-09T09:01:05.619980+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
