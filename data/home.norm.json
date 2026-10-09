@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-09 00:01",
-  "updated_iso": "2026-10-09T00:01:17+00:00",
-  "build_version": "1791504077",
+  "updated_at": "2026-10-09 01:01",
+  "updated_iso": "2026-10-09T01:01:35+00:00",
+  "build_version": "1791507695",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,11 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min",
+    "us_max_name": "Coutts-Sweetgrass",
+    "us_max_wait": "30 min",
+    "ca_max_name": "Peace Bridge"
   },
   "fuel": {
     "national_diesel": "259.0",
@@ -347,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 27,
+    "active_count": 70,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 400, I-5 in S",
+    "status_line": "Live now: 50 in the US, 5 in Canada.",
     "incidents": [
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR RAMP at BLACK CREEK DRIVE, Toronto.\u2026",
-        "severity_label": "Collision",
+        "road": "29N",
+        "what": "Lane closure on 29N northbound, ND. Watch for construction equipment and\u2026",
+        "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Southbound  at 401, Toronto. Left lane closed.",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -371,122 +374,149 @@
     {
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
-      "sub": "Windsor, ON \u2014 Detroit, MI \u00b7 ON-3 / I-75 \u00b7 FAST",
+      "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:51 EDT",
+      "captured_at": "20:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
-      "us_wait": "10 min",
+      "label": "Ambassador Bridge",
+      "route_both": "Detroit, MI and Windsor, ON",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
       "slug": "blue-water-bridge",
-      "sub": "Sarnia, ON \u2014 Port Huron, MI \u00b7 ON-402 / I-69 \u00b7 FAST",
+      "sub": "Port Huron, MI and Sarnia, ON \u00b7 I-69 / ON-402 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
       "captured_at": "17:15 EDT",
       "route": "Sarnia, ON \u2014 Port Huron, MI",
+      "label": "Blue Water Bridge",
+      "route_both": "Port Huron, MI and Sarnia, ON",
       "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
       "name": "Peace Bridge",
       "slug": "peace-bridge",
-      "sub": "Fort Erie, ON \u2014 Buffalo, NY \u00b7 QEW / I-190 \u00b7 FAST",
+      "sub": "Buffalo, NY and Fort Erie, ON \u00b7 I-190 / QEW \u00b7 FAST",
       "wait": "13 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
       "captured_at": "18:40 EDT",
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
-      "us_wait": "8 min",
-      "us_status_class": "mod"
+      "label": "Peace Bridge",
+      "route_both": "Buffalo, NY and Fort Erie, ON",
+      "us_wait": "24 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Queenston-Lewiston Bridge",
       "slug": "queenston-lewiston-bridge",
-      "sub": "Queenston, ON \u2014 Lewiston, NY \u00b7 ON-405 / I-190",
+      "sub": "Lewiston, NY and Queenston, ON \u00b7 I-190 / ON-405",
       "wait": "7 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
       "captured_at": "18:40 EDT",
       "route": "Queenston, ON \u2014 Lewiston, NY",
+      "label": "Queenston-Lewiston Bridge",
+      "route_both": "Lewiston, NY and Queenston, ON",
       "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
       "slug": "lacolle-border-crossing",
-      "sub": "Lacolle, QC \u2014 Champlain, NY \u00b7 A-15 / I-87 \u00b7 FAST",
+      "sub": "Champlain, NY and Lacolle, QC \u00b7 I-87 / A-15 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
       "captured_at": "19:47 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
+      "label": "Champlain-Lacolle",
+      "route_both": "Champlain, NY and Lacolle, QC",
       "us_wait": "No delay",
       "us_status_class": "ok"
     },
     {
       "name": "Coutts-Sweetgrass",
       "slug": "coutts-sweetgrass",
-      "sub": "Coutts, AB \u2014 Sweetgrass, MT \u00b7 AB-4 / I-15 \u00b7 FAST",
+      "sub": "Sweetgrass, MT and Coutts, AB \u00b7 I-15 / AB-4 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 MDT",
+      "captured_at": "18:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
-      "us_wait": "40 min",
+      "label": "Coutts-Sweetgrass",
+      "route_both": "Sweetgrass, MT and Coutts, AB",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
-      "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "15 min",
+      "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT",
+      "captured_at": "17:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
+      "label": "Blaine-Pacific Highway",
+      "route_both": "Blaine, WA and Surrey, BC",
       "us_wait": "No delay",
       "us_status_class": "ok"
     },
     {
       "name": "Emerson-Pembina",
       "slug": "emerson-pembina",
-      "sub": "Emerson, MB \u2014 Pembina, ND \u00b7 MB-75 / I-29 \u00b7 FAST",
+      "sub": "Pembina, ND and Emerson, MB \u00b7 I-29 / MB-75 \u00b7 FAST",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
       "captured_at": "18:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "label": "Emerson-Pembina",
+      "route_both": "Pembina, ND and Emerson, MB",
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Thousand Islands Bridge",
       "slug": "thousand-islands-bridge",
-      "sub": "Lansdowne, ON \u2014 Alexandria Bay, NY \u00b7 ON-137 / I-81",
+      "sub": "Alexandria Bay, NY and Lansdowne, ON \u00b7 I-81 / ON-137",
       "wait": "No delay",
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
       "captured_at": "18:15 EDT",
       "route": "Lansdowne, ON \u2014 Alexandria Bay, NY",
+      "label": "Thousand Islands Bridge",
+      "route_both": "Alexandria Bay, NY and Lansdowne, ON",
       "us_wait": "10 min",
       "us_status_class": "mod"
     }
   ],
   "market": [
+    {
+      "name": "Quarterly GDP",
+      "note": "Q2 2026, annualized, $24.4T (chained 2017)",
+      "value": "+2.2%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
+    },
     {
       "name": "Monthly GDP",
       "note": "$2372B (chained 2017)",
@@ -498,30 +528,21 @@
     },
     {
       "name": "GDP, year over year",
+      "note": "GDP against the same quarter last year. The longer-term\u2026",
+      "value": "+2.2%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
+    },
+    {
+      "name": "GDP, year over year",
       "note": "GDP against the same month last year. The longer-term\u2026",
       "value": "+1.4%",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
       "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
-    },
-    {
-      "name": "Fuel cost per 1,000 km",
-      "note": "At 259.0\u00a2/L and 35 L/100km",
-      "value": "$906",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "NRCan weekly diesel survey",
-      "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
-    },
-    {
-      "name": "BC vs AB diesel spread",
-      "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "38.0\u00a2/L",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "NRCan weekly diesel survey",
-      "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
     },
     {
       "name": "Fuel cost per 1,000 miles",
@@ -533,6 +554,15 @@
       "what_it_means": "Per-1,000-mile fuel cost at the US national average. Used directly in rate quotes."
     },
     {
+      "name": "Fuel cost per 1,000 km",
+      "note": "At 259.0\u00a2/L and 35 L/100km",
+      "value": "$906",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "NRCan weekly diesel survey",
+      "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
+    },
+    {
       "name": "California vs Lower Atlantic diesel spread",
       "note": "The gap between the dearest and cheapest EIA district. Fuel\u2026",
       "value": "$2.383/gal",
@@ -542,6 +572,33 @@
       "what_it_means": "The gap between the dearest and cheapest EIA district. Fuel where Lower Atlantic prices it."
     },
     {
+      "name": "BC vs AB diesel spread",
+      "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
+      "value": "38.0\u00a2/L",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "NRCan weekly diesel survey",
+      "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
+    },
+    {
+      "name": "Border congestion",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
+      "value_class": "flat",
+      "source": "CBP border wait times",
+      "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
+    },
+    {
+      "name": "Border congestion",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
+      "value_class": "flat",
+      "source": "CBSA commercial lane feed",
+      "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
+    },
+    {
       "name": "USD/CAD vs 30-day average",
       "note": "+0.0167 vs 30-day avg 1.4073",
       "value": "1.4240",
@@ -549,15 +606,6 @@
       "country_prefix": "",
       "source": "Bank of Canada",
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
-    },
-    {
-      "name": "Border congestion, into Canada",
-      "country_prefix": "",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
-      "value_class": "flat",
-      "source": "CBSA commercial lane feed",
-      "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
     }
   ],
   "theft": [],
@@ -594,6 +642,7 @@
     "us_national_cpl": "233.2",
     "nadi": "246.1",
     "ca_us_gap": "25.8",
+    "ca_us_gap_usd_gal": "0.69",
     "ca_higher": true,
     "gap_word": "Canada higher",
     "gap_clause": "Canada is 25.8\u00a2/L higher",

@@ -1,6 +1,15 @@
 {
   "market": [
     {
+      "name": "Quarterly GDP",
+      "note": "Q2 2026, annualized, $24.4T (chained 2017)",
+      "value": "+2.2%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
+    },
+    {
       "name": "Monthly GDP",
       "note": "$2372B (chained 2017)",
       "value": "0.0%",
@@ -8,6 +17,15 @@
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
       "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "GDP, year over year",
+      "note": "GDP against the same quarter last year. The longer-term\u2026",
+      "value": "+2.2%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
     },
     {
       "name": "GDP, year over year",
@@ -19,24 +37,6 @@
       "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
-      "name": "Fuel cost per 1,000 km",
-      "note": "At 259.0\u00a2/L and 35 L/100km",
-      "value": "$906",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "NRCan weekly diesel survey",
-      "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
-    },
-    {
-      "name": "BC vs AB diesel spread",
-      "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "38.0\u00a2/L",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "NRCan weekly diesel survey",
-      "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
-    },
-    {
       "name": "Fuel cost per 1,000 miles",
       "note": "At $6.199/gal and 6.5 mpg",
       "value": "$954",
@@ -44,6 +44,15 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "EIA weekly retail diesel survey",
       "what_it_means": "Per-1,000-mile fuel cost at the US national average. Used directly in rate quotes."
+    },
+    {
+      "name": "Fuel cost per 1,000 km",
+      "note": "At 259.0\u00a2/L and 35 L/100km",
+      "value": "$906",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "NRCan weekly diesel survey",
+      "what_it_means": "Per-1,000km fuel cost at current diesel prices. Used directly in rate quotes."
     },
     {
       "name": "California vs Lower Atlantic diesel spread",
@@ -55,6 +64,33 @@
       "what_it_means": "The gap between the dearest and cheapest EIA district. Fuel where Lower Atlantic prices it."
     },
     {
+      "name": "BC vs AB diesel spread",
+      "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
+      "value": "38.0\u00a2/L",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "NRCan weekly diesel survey",
+      "what_it_means": "Wide gaps create arbitrage on cross-province lanes. BC diesel runs higher than AB."
+    },
+    {
+      "name": "Border congestion",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
+      "value_class": "flat",
+      "source": "CBP border wait times",
+      "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
+    },
+    {
+      "name": "Border congestion",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
+      "value_class": "flat",
+      "source": "CBSA commercial lane feed",
+      "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
+    },
+    {
       "name": "USD/CAD vs 30-day average",
       "note": "+0.0167 vs 30-day avg 1.4073",
       "value": "1.4240",
@@ -62,24 +98,15 @@
       "country_prefix": "",
       "source": "Bank of Canada",
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
-    },
-    {
-      "name": "Border congestion, into Canada",
-      "country_prefix": "",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
-      "value_class": "flat",
-      "source": "CBSA commercial lane feed",
-      "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
     }
   ],
-  "direction_summary": "2 up \u00b7 0 down \u00b7 5 steady or level",
-  "weekly_read": "Canadian diesel at 259.0\u00a2/L, US diesel at $6.199/gal, the loonie at 1.424, Canadian GDP moving 0.0% last month.",
+  "direction_summary": "4 up \u00b7 0 down \u00b7 5 steady or level",
+  "weekly_read": "US diesel at $6.199/gal, Canadian diesel at 259.0\u00a2/L, the loonie at 1.424, US GDP moving +2.2% annualized last quarter, Canadian GDP moving 0.0% last month.",
   "fuel_pct_of_ops": "25-35%",
   "current_diesel": 259.0,
   "us_diesel": "6.199",
   "usd_cad": 1.424,
-  "updated_at": "2026-10-09 00:01",
-  "updated_iso": "2026-10-09T00:01:17+00:00",
-  "build_version": "1791504077"
+  "updated_at": "2026-10-09 01:01",
+  "updated_iso": "2026-10-09T01:01:35+00:00",
+  "build_version": "1791507695"
 }

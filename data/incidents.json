@@ -1,37 +1,129 @@
 {
   "incidents": [
     {
-      "id": "ON-317413",
+      "id": "ON-317441",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at BLACK CREEK DRIVE, Toronto. Right lane closed.",
+      "description": "Collision on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1 right lane and right shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.71735,
-      "lng": -79.52002269,
-      "start": 1791502200,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.64848042,
+      "lng": -79.63784681,
+      "start": 1791507420,
       "end": null,
-      "updated": 1791502200,
+      "updated": 1791507420,
+      "country": "CA",
       "scheduled": false
     },
     {
-      "id": "ON-317408",
+      "id": "ND-CN-24028",
+      "province": "ND",
+      "country": "US",
+      "highway": "29N",
+      "direction": "Northbound",
+      "description": "Lane closure on 29N northbound, ND. Watch for construction equipment and vehicles entering and exiting work. Reduce speeds when flaggers \r\n\r\n80FT Length and 11 FT width restriction applies to interchange at MP 138 (32nd Ave bridge) ONLY. Mainline I-29 width restriction is 12FT.",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 47.871151,
+      "lng": -97.087283,
+      "start": "2026-06-16T00:00:00-05:00",
+      "end": "2026-10-31T00:00:00-05:00",
+      "updated": "2026-10-08T19:56:29-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "ND-CN-24028",
+      "province": "ND",
+      "country": "US",
+      "highway": "29S",
+      "direction": "Southbound",
+      "description": "Lane closure on 29S southbound, ND. Watch for construction equipment and vehicles entering and exiting work. Reduce speeds when flaggers \r\n\r\n80FT Length and 11 FT width restriction applies to interchange at MP 138 (32nd Ave bridge) ONLY. Mainline I-29 width restriction is 12FT.",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 47.871163,
+      "lng": -97.087723,
+      "start": "2026-06-16T00:00:00-05:00",
+      "end": "2026-10-31T00:00:00-05:00",
+      "updated": "2026-10-08T19:56:29-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "ON-317436",
       "province": "ON",
       "highway": "HWY 400",
       "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at 401, Toronto. Left lane closed.",
+      "description": "Collision on HWY 400 Southbound  at FINCH AVENUE, Toronto. 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.71769839,
-      "lng": -79.52084421,
-      "start": 1791501300,
+      "lanes": "1 left lane closed",
+      "lat": 43.75425671,
+      "lng": -79.53072531,
+      "start": 1791506760,
       "end": null,
-      "updated": 1791501300,
+      "updated": 1791506760,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-103434",
+      "province": "BC",
+      "highway": "Highway 23 near Upper Arrow Lake Ferry",
+      "direction": "",
+      "description": "Expect delay of 20 minutes at Highway 23. Last update: October 8th, 2026 at 5:23pm PDT. Next update: October 8th, 2026 at 8:30pm PDT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.62905622,
+      "lng": -117.89701197,
+      "start": "2026-10-08T17:23:14-07:00",
+      "end": "",
+      "updated": "2026-10-08T17:23:14-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-317431",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound ON-RAMP at DIXIE ROAD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.648838,
+      "lng": -79.637535,
+      "start": 1791505200,
+      "end": null,
+      "updated": 1791505200,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-317426",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Disabled Vehicle on QEW Toronto bound  at NORTHSHORE BLVD, Burlington. 1 right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 right lane and right shoulder closed",
+      "lat": 43.3151755,
+      "lng": -79.8074452,
+      "start": 1791504540,
+      "end": null,
+      "updated": 1791504540,
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -49,6 +141,7 @@
       "start": 1791891000,
       "end": 1792166400,
       "updated": 1791494220,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -66,6 +159,7 @@
       "start": 1791896400,
       "end": 1792440000,
       "updated": 1791488460,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -83,6 +177,7 @@
       "start": 1791943200,
       "end": 1792141200,
       "updated": 1791488040,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -100,6 +195,7 @@
       "start": 1792465200,
       "end": 1792659600,
       "updated": 1791487440,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -117,6 +213,7 @@
       "start": 1791943200,
       "end": 1792141200,
       "updated": 1791487140,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -134,6 +231,7 @@
       "start": 1791543600,
       "end": 1792184400,
       "updated": 1791486300,
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -151,6 +249,7 @@
       "start": 1791889200,
       "end": 1792616400,
       "updated": 1791485760,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -168,6 +267,7 @@
       "start": 1791943200,
       "end": 1792227600,
       "updated": 1791482160,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -185,6 +285,7 @@
       "start": 1791543600,
       "end": 1792022400,
       "updated": 1791481980,
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -202,6 +303,7 @@
       "start": 1791943200,
       "end": 1792227600,
       "updated": 1791481860,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -219,6 +321,7 @@
       "start": 1791943200,
       "end": 1792749600,
       "updated": 1791481800,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -236,6 +339,7 @@
       "start": 1791943200,
       "end": 1792749600,
       "updated": 1791481800,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -253,6 +357,7 @@
       "start": 1791936000,
       "end": 1792749600,
       "updated": 1791481620,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -270,6 +375,7 @@
       "start": 1791943200,
       "end": 1792227600,
       "updated": 1791481560,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -287,6 +393,7 @@
       "start": 1792447200,
       "end": 1792836000,
       "updated": 1791481500,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -304,6 +411,7 @@
       "start": 1791936000,
       "end": 1792746000,
       "updated": 1791481440,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -321,6 +429,7 @@
       "start": 1791928800,
       "end": 1792231200,
       "updated": 1791481380,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -338,6 +447,7 @@
       "start": 1791946800,
       "end": 1792746000,
       "updated": 1791481380,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -355,6 +465,7 @@
       "start": 1791504000,
       "end": 1791536400,
       "updated": 1791481260,
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -372,6 +483,7 @@
       "start": "2026-10-08T10:24:58-07:00",
       "end": "",
       "updated": "2026-10-08T10:24:58-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -389,6 +501,7 @@
       "start": 1791680400,
       "end": 1791709200,
       "updated": 1791479580,
+      "country": "CA",
       "scheduled": true
     },
     {
@@ -406,41 +519,8 @@
       "start": 1792029600,
       "end": 1792141200,
       "updated": 1791478740,
+      "country": "CA",
       "scheduled": true
-    },
-    {
-      "id": "ON-317257",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Nightly Engineering Investigation on HWY 403 HAMILTON Westbound  between ABERDEEN AVE and LINCOLN M. ALEXANDER PARKWAY, Hamilton. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.25535,
-      "lng": -79.90704,
-      "start": 1792026000,
-      "end": 1792148400,
-      "updated": 1791478560,
-      "scheduled": true
-    },
-    {
-      "id": "ON-317235",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Westbound",
-      "description": "Nightly Maintenance on HWY 417 Westbound  between TERRY FOX DR (IC 140) and PALLADIUM DR (IC 142), Ottawa. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 45.30556,
-      "lng": -75.9117,
-      "start": 1791511200,
-      "end": 1791540000,
-      "updated": 1791475860,
-      "scheduled": false
     },
     {
       "scheduled": false,
@@ -460,7 +540,8 @@
       "lng": -121.3224,
       "start": "2024-07-08",
       "end": "2026-10-30",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -480,7 +561,8 @@
       "lng": -121.3236,
       "start": "2024-07-08",
       "end": "2026-10-30",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -500,7 +582,8 @@
       "lng": -121.321928,
       "start": "2024-07-08",
       "end": "2026-10-30",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -520,7 +603,8 @@
       "lng": -121.323741,
       "start": "2024-07-08",
       "end": "2026-10-30",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -540,7 +624,8 @@
       "lng": -121.358552,
       "start": "2026-10-11",
       "end": "2026-10-12",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -560,7 +645,8 @@
       "lng": -121.358552,
       "start": "2026-10-12",
       "end": "2026-10-13",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -580,7 +666,8 @@
       "lng": -121.358552,
       "start": "2026-10-13",
       "end": "2026-10-14",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -600,7 +687,8 @@
       "lng": -121.358552,
       "start": "2026-10-07",
       "end": "2026-10-08",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -620,7 +708,8 @@
       "lng": -121.358552,
       "start": "2026-10-14",
       "end": "2026-10-15",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -640,7 +729,8 @@
       "lng": -121.358552,
       "start": "2026-10-08",
       "end": "2026-10-09",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -660,7 +750,8 @@
       "lng": -121.397665,
       "start": "2026-10-11",
       "end": "2026-10-12",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -680,7 +771,8 @@
       "lng": -121.397665,
       "start": "2026-10-12",
       "end": "2026-10-13",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -700,7 +792,8 @@
       "lng": -121.397665,
       "start": "2026-10-13",
       "end": "2026-10-14",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -720,7 +813,8 @@
       "lng": -121.397665,
       "start": "2026-10-07",
       "end": "2026-10-08",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -740,7 +834,8 @@
       "lng": -121.397665,
       "start": "2026-10-14",
       "end": "2026-10-15",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -760,7 +855,8 @@
       "lng": -121.397665,
       "start": "2026-10-08",
       "end": "2026-10-09",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -780,7 +876,8 @@
       "lng": -121.44807,
       "start": "2026-10-11",
       "end": "2026-10-12",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -800,7 +897,8 @@
       "lng": -121.44807,
       "start": "2026-10-12",
       "end": "2026-10-13",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -820,7 +918,8 @@
       "lng": -121.44807,
       "start": "2026-10-13",
       "end": "2026-10-14",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -840,7 +939,8 @@
       "lng": -121.44807,
       "start": "2026-10-07",
       "end": "2026-10-08",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -860,7 +960,8 @@
       "lng": -121.44807,
       "start": "2026-10-14",
       "end": "2026-10-15",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": false,
@@ -880,7 +981,8 @@
       "lng": -121.44807,
       "start": "2026-10-08",
       "end": "2026-10-09",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -900,7 +1002,8 @@
       "lng": -121.398019,
       "start": "2026-10-11",
       "end": "2026-10-12",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -920,7 +1023,8 @@
       "lng": -121.398019,
       "start": "2026-10-12",
       "end": "2026-10-13",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "scheduled": true,
@@ -940,7 +1044,8 @@
       "lng": -121.398019,
       "start": "2026-10-13",
       "end": "2026-10-14",
-      "updated": "2026-10-08"
+      "updated": "2026-10-08",
+      "country": "US"
     },
     {
       "id": "drivebc.ca/RIDE-102766",
@@ -957,6 +1062,7 @@
       "start": "2026-09-24T11:08:17-07:00",
       "end": "",
       "updated": "2026-10-07T19:39:57-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -974,6 +1080,7 @@
       "start": "2026-10-07T10:45:19-07:00",
       "end": "",
       "updated": "2026-10-07T10:45:19-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -991,6 +1098,7 @@
       "start": "2026-10-07T10:35:50-07:00",
       "end": "",
       "updated": "2026-10-07T10:35:50-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1008,6 +1116,7 @@
       "start": "2026-10-07T10:33:09-07:00",
       "end": "",
       "updated": "2026-10-07T10:33:09-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1025,6 +1134,61 @@
       "start": "2026-10-06T18:21:56-07:00",
       "end": "",
       "updated": "2026-10-06T18:21:56-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-49-1",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 27",
+      "direction": "Northbound",
+      "description": "Lane closure on US 27 northbound, IN. Construction Work, Lane Closed, Shoulder Closed, Speed Restriction, Work On The Shoulder",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 41.124817,
+      "lng": -85.154697,
+      "start": "2026-10-01T11:00:00Z",
+      "end": "2026-10-29T21:00:00Z",
+      "updated": "2026-10-06T16:21:42.364Z",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-49-2",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 27",
+      "direction": "Southbound",
+      "description": "Lane closure on US 27 southbound, IN. Construction Work, Lane Closed, Shoulder Closed, Speed Restriction, Work On The Shoulder",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 41.124817,
+      "lng": -85.154697,
+      "start": "2026-10-01T11:00:00Z",
+      "end": "2026-10-29T21:00:00Z",
+      "updated": "2026-10-06T16:21:42.364Z",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-145608",
+      "province": "MN",
+      "country": "US",
+      "highway": "US 10",
+      "direction": "Westbound",
+      "description": "Road closed on US 10 westbound, MN. Paving Operations, Closed Intermittently, Consider Alternate Route",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 45.19542,
+      "lng": -93.337671,
+      "start": "2026-10-05T00:00:00Z",
+      "end": "2026-10-10T17:00:00Z",
+      "updated": "2026-10-05T18:45:54.358Z",
       "scheduled": false
     },
     {
@@ -1042,6 +1206,7 @@
       "start": "2026-10-05T09:45:20-07:00",
       "end": "",
       "updated": "2026-10-05T09:45:20-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1059,6 +1224,7 @@
       "start": "2026-08-26T09:42:32-07:00",
       "end": "",
       "updated": "2026-10-05T09:16:26-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1076,6 +1242,43 @@
       "start": "2026-10-05T06:52:35-07:00",
       "end": "",
       "updated": "2026-10-05T06:52:35-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "WI-c35430fb-2d10-ff55-9d62-51c79855deb5",
+      "province": "WI",
+      "country": "US",
+      "highway": "US 14 EB",
+      "direction": "Eastbound",
+      "description": "Road closed on US 14 EB eastbound, WI. Mainline Full Closure on US 14 EB from UNION RD to MADISON ST. Detour: USH 14 EB Detour Route: Travel north/west on USH 14.  Take the roundabout, turn left onto STH 92 and head west.  Turn left onto STH 104 and head south.  Turn left onto STH 59 and head east. ",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 42.8244827583716,
+      "lng": -89.3026883422241,
+      "start": "2026-10-01T05:00:00+00:00",
+      "end": "2026-11-01T04:59:59+00:00",
+      "updated": "2026-10-05T13:28:46.1+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "WI-9d02c0f1-f697-ba52-a2ee-0cd1afbaa01b",
+      "province": "WI",
+      "country": "US",
+      "highway": "US 14 WB",
+      "direction": "Westbound",
+      "description": "Road closed on US 14 WB westbound, WI. Mainline Full Closure on US 14 WB from MADISON ST to UNION RD. Detour: USH 14 WB Detour Route: Travel south on STH 59/STH 213.  Turn right onto STH 59 and head west.  Turn right onto STH 104 and head north.  Turn right onto STH 92 and head east.  Take the round",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 42.7876559885454,
+      "lng": -89.2994247853616,
+      "start": "2026-10-01T05:00:00+00:00",
+      "end": "2026-11-01T04:59:59+00:00",
+      "updated": "2026-10-05T13:28:46.1+00:00",
       "scheduled": false
     },
     {
@@ -1093,6 +1296,7 @@
       "start": "2026-10-03T18:08:50-07:00",
       "end": "",
       "updated": "2026-10-03T18:41:34-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1110,6 +1314,7 @@
       "start": "2026-10-01T15:13:28-07:00",
       "end": "",
       "updated": "2026-10-01T15:13:28-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1127,6 +1332,7 @@
       "start": "2026-09-23T13:22:33-07:00",
       "end": "",
       "updated": "2026-10-01T06:50:42-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1144,6 +1350,43 @@
       "start": "2026-09-29T07:18:21-07:00",
       "end": "",
       "updated": "2026-10-01T06:43:36-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-145471",
+      "province": "MN",
+      "country": "US",
+      "highway": "I-394",
+      "direction": "Eastbound",
+      "description": "Road closed on I-394 eastbound, MN. Entrance Ramp Closed, Closed Intermittently",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 44.973422,
+      "lng": -93.389098,
+      "start": "2026-10-08T14:00:00Z",
+      "end": "2026-10-09T20:00:00Z",
+      "updated": "2026-09-29T11:23:50.980Z",
+      "scheduled": false
+    },
+    {
+      "id": "ND-CN-22958",
+      "province": "ND",
+      "country": "US",
+      "highway": "94E",
+      "direction": "Eastbound",
+      "description": "Lane closure on 94E eastbound, ND. Traffic is reduced to a signal lane for both the westbound and eastbound directions while median work is completed.  Speed will be reduced in the work area.  Watch for slow exiting construction traffic.",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 46.834652,
+      "lng": -100.711808,
+      "start": "2026-03-30T00:00:00-05:00",
+      "end": "2026-10-10T00:00:00-05:00",
+      "updated": "2026-09-28T10:19:39-05:00",
       "scheduled": false
     },
     {
@@ -1161,6 +1404,7 @@
       "start": "2026-09-25T16:23:22-07:00",
       "end": "",
       "updated": "2026-09-25T16:23:22-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1178,6 +1422,25 @@
       "start": "2026-09-25T10:14:44-07:00",
       "end": "",
       "updated": "2026-09-25T10:14:44-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "WI-f9ec2abd-b29a-8253-b2a8-661b31ec5e98",
+      "province": "WI",
+      "country": "US",
+      "highway": "US 61 NB",
+      "direction": "Northbound",
+      "description": "Road closed on US 61 NB northbound, WI. Ramp Full Closure on US 61 NB at OFF RAMP TO BADGER RD. Detour: NB USH 61 use Exit 1 to EB STH 11, follow EB STH 11 to STH 35/Badger Road intersection, turn left to Badger Road",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 42.53404842998174,
+      "lng": -90.61180543856699,
+      "start": "2026-09-30T12:00:00+00:00",
+      "end": "2026-10-16T17:00:00+00:00",
+      "updated": "2026-09-25T13:44:35.123+00:00",
       "scheduled": false
     },
     {
@@ -1195,6 +1458,7 @@
       "start": "2026-09-24T11:11:18-07:00",
       "end": "",
       "updated": "2026-09-24T11:11:18-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1212,6 +1476,7 @@
       "start": "2026-09-24T11:02:28-07:00",
       "end": "",
       "updated": "2026-09-24T11:02:28-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1229,6 +1494,7 @@
       "start": "2026-09-24T10:24:26-07:00",
       "end": "",
       "updated": "2026-09-24T10:24:26-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1246,6 +1512,61 @@
       "start": "2026-09-24T09:04:19-07:00",
       "end": "",
       "updated": "2026-09-24T09:04:19-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ND-CN-23490",
+      "province": "ND",
+      "country": "US",
+      "highway": "29N",
+      "direction": "Northbound",
+      "description": "Lane closure on 29N northbound, ND. The right lane on Northbound & Southbound I-29 between RP 11.3 and RP 17.3 is closed for pavement repairs. Lane width reduced to 1 lane. Speed limit is reduced to 40 mph through the work zone. Width is restricted.",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 46.098265,
+      "lng": -96.835398,
+      "start": "2026-07-27T00:00:00-05:00",
+      "end": "2026-10-30T00:00:00-05:00",
+      "updated": "2026-09-23T10:08:45-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "ND-CN-23490",
+      "province": "ND",
+      "country": "US",
+      "highway": "29S",
+      "direction": "Southbound",
+      "description": "Lane closure on 29S southbound, ND. The right lane on Northbound & Southbound I-29 between RP 11.3 and RP 17.3 is closed for pavement repairs. Lane width reduced to 1 lane. Speed limit is reduced to 40 mph through the work zone. Width is restricted.",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 46.098279,
+      "lng": -96.835848,
+      "start": "2026-07-27T00:00:00-05:00",
+      "end": "2026-10-30T00:00:00-05:00",
+      "updated": "2026-09-23T10:08:45-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "MO-558410",
+      "province": "MO",
+      "country": "US",
+      "highway": "US54W TO RTW",
+      "direction": "Westbound",
+      "description": "Road closed on US54W TO RTW westbound, MO. NEW PAVEMENT CONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 38.5947788993149,
+      "lng": -92.1720063910757,
+      "start": "2026-09-23T05:00:00.0000000Z",
+      "end": "2026-12-01T06:00:00.0000000Z",
+      "updated": "2026-09-23T05:00:00.0000000Z",
       "scheduled": false
     },
     {
@@ -1263,6 +1584,7 @@
       "start": "2026-09-18T09:34:51-07:00",
       "end": "",
       "updated": "2026-09-21T08:55:27-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1280,6 +1602,7 @@
       "start": "2026-09-16T15:46:35-07:00",
       "end": "",
       "updated": "2026-09-16T15:46:52-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1297,6 +1620,7 @@
       "start": "2026-09-14T11:24:45-07:00",
       "end": "",
       "updated": "2026-09-15T20:12:12-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1314,6 +1638,7 @@
       "start": "2026-08-26T16:22:37-07:00",
       "end": "",
       "updated": "2026-09-15T20:12:03-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -1331,31 +1656,509 @@
       "start": "2026-09-01T14:14:15-07:00",
       "end": "",
       "updated": "2026-09-15T20:12:00-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-101669",
-      "province": "BC",
-      "highway": "Other Roads near Durrell Road",
-      "direction": "",
-      "description": "Construction work from Durrell Road, 17km South of Quesnel and Highway 97 to At Dale Lake Road and Durrell Road. Starting Mon Jul 13. Watch for traffic control. Expect minor delays. Last update: September 15th, 2026 at 8:11pm PDT. Next update time Thu Oct 1 at 10:00 AM PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
+      "id": "IN-CARSy-606-1",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 421",
+      "direction": "Northbound",
+      "description": "Lane closure on US 421 northbound, IN. Utility Work, Lane Closed",
+      "event_type": "lane closure",
+      "severity": "",
       "closure": false,
-      "lanes": "",
-      "lat": 52.87166,
-      "lng": -122.4334,
-      "start": "2026-08-25T14:41:23-07:00",
-      "end": "",
-      "updated": "2026-09-15T20:11:00-07:00",
+      "lanes": "some lanes closed",
+      "lat": 41.17219,
+      "lng": -86.891237,
+      "start": "2026-06-17T12:00:00Z",
+      "end": "2026-12-19T23:00:00Z",
+      "updated": "2026-09-15T18:09:00.169Z",
+      "scheduled": false
+    },
+    {
+      "id": "WI-84a136cf-0027-a356-abaa-980566f63da4",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 SB",
+      "direction": "Southbound",
+      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at OFF RAMP TO WIS 60. Detour: IH 41 Southbound Off-Ramp to STH 60 (Ramp B): Detour Ramp B traffic to STH 33, then west to STH 175, then south to STH 60 (Detour 2).",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.326006182252264,
+      "lng": -88.25314158027325,
+      "start": "2026-09-09T00:00:00+00:00",
+      "end": "2026-10-23T11:00:00+00:00",
+      "updated": "2026-09-10T06:52:48.157+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "WI-31ac2c94-7fb8-135a-b6a1-9f67351269e6",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 SB",
+      "direction": "Southbound",
+      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at ON RAMP FROM WIS 60. Detour: IH 41 Southbound On-Ramp from STH 60 (Ramp A):\r\nDetour Ramp A traffic south on STH 164 to STH 167then east to IH 41 (Detour 1).",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.32479516596926,
+      "lng": -88.2514801614238,
+      "start": "2026-09-08T11:00:00+00:00",
+      "end": "2026-10-23T11:00:00+00:00",
+      "updated": "2026-09-10T06:52:48.157+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-136733-1",
+      "province": "MN",
+      "country": "US",
+      "highway": "US 75",
+      "direction": "Northbound",
+      "description": "Road closed on US 75 northbound, MN. Closed, Intersection Closed, Road Construction, Detour In Operation",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.654269,
+      "lng": -96.212835,
+      "start": "2026-09-05T12:00:00Z",
+      "end": "2026-10-30T23:00:00Z",
+      "updated": "2026-09-01T20:07:18.760Z",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-136733-2",
+      "province": "MN",
+      "country": "US",
+      "highway": "US 75",
+      "direction": "Southbound",
+      "description": "Road closed on US 75 southbound, MN. Closed, Intersection Closed, Road Construction, Detour In Operation",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.654415,
+      "lng": -96.212832,
+      "start": "2026-09-05T12:00:00Z",
+      "end": "2026-10-30T23:00:00Z",
+      "updated": "2026-09-01T20:07:18.760Z",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-136731-1",
+      "province": "MN",
+      "country": "US",
+      "highway": "US 75",
+      "direction": "Northbound",
+      "description": "Road closed on US 75 northbound, MN. Closed, Construction Work, Detour In Operation",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.664093,
+      "lng": -96.212664,
+      "start": "2026-09-08T12:00:00Z",
+      "end": "2026-10-30T23:00:00Z",
+      "updated": "2026-09-01T19:54:33.504Z",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-136731-2",
+      "province": "MN",
+      "country": "US",
+      "highway": "US 75",
+      "direction": "Southbound",
+      "description": "Road closed on US 75 southbound, MN. Closed, Construction Work, Detour In Operation",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.669261,
+      "lng": -96.212551,
+      "start": "2026-09-08T12:00:00Z",
+      "end": "2026-10-30T23:00:00Z",
+      "updated": "2026-09-01T19:54:33.504Z",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-1726-1",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 24",
+      "direction": "Eastbound",
+      "description": "Lane closure on US 24 eastbound, IN. Utility Work, Lane Closed, Look Out For Flagger",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 40.752062,
+      "lng": -87.041541,
+      "start": "2026-09-14T13:00:00Z",
+      "end": "2026-10-16T22:00:00Z",
+      "updated": "2026-08-19T21:14:10.931Z",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-1726-2",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 24",
+      "direction": "Westbound",
+      "description": "Lane closure on US 24 westbound, IN. Utility Work, Lane Closed, Look Out For Flagger",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 40.750463,
+      "lng": -87.024446,
+      "start": "2026-09-14T13:00:00Z",
+      "end": "2026-10-16T22:00:00Z",
+      "updated": "2026-08-19T21:14:10.931Z",
+      "scheduled": false
+    },
+    {
+      "id": "WI-52c2f48f-20b3-5c51-b359-460b73702734",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-43 NB",
+      "direction": "Northbound",
+      "description": "Road closed on I-43 NB northbound, WI. Ramp Full Closure on I-43 NB at ON RAMP FROM WIS 164. Detour: STH 164 to W National Ave to S Racine Ave",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 42.911109899011215,
+      "lng": -88.21687881350778,
+      "start": "2026-08-19T10:30:00+00:00",
+      "end": "2026-11-06T02:00:00+00:00",
+      "updated": "2026-08-12T05:12:12.337+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "ND-CN-24805",
+      "province": "ND",
+      "country": "US",
+      "highway": "94E",
+      "direction": "Eastbound",
+      "description": "Lane closure on 94E eastbound, ND. Temporary ramp connections are being constructed at the McKenzie and Sterling Interchanges.",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 46.836454,
+      "lng": -100.421477,
+      "start": "2026-07-24T00:00:00-05:00",
+      "end": "2026-10-24T00:00:00-05:00",
+      "updated": "2026-08-10T07:00:29-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-837",
+      "province": "IN",
+      "country": "US",
+      "highway": "I-69",
+      "direction": "Southbound",
+      "description": "Lane closure on I-69 southbound, IN. Construction Work, Ramp Partially Blocked, Reduced To One Lane",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 39.897058,
+      "lng": -86.052219,
+      "start": "2026-07-21T13:19:13.124Z",
+      "end": "2027-01-04T11:00:00Z",
+      "updated": "2026-07-21T13:19:13.124Z",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-33-1",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 20",
+      "direction": "Eastbound",
+      "description": "Lane closure on US 20 eastbound, IN. Utility Work, Right Lane Closed",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 41.612206,
+      "lng": -87.097461,
+      "start": "2026-10-05T13:00:00Z",
+      "end": "2026-10-12T21:00:00Z",
+      "updated": "2026-07-20T21:36:01.559Z",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-33-2",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 20",
+      "direction": "Westbound",
+      "description": "Lane closure on US 20 westbound, IN. Utility Work, Right Lane Closed",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 41.612206,
+      "lng": -87.097461,
+      "start": "2026-10-05T13:00:00Z",
+      "end": "2026-10-12T21:00:00Z",
+      "updated": "2026-07-20T21:36:01.559Z",
+      "scheduled": false
+    },
+    {
+      "id": "MO-552962",
+      "province": "MO",
+      "country": "US",
+      "highway": "P",
+      "direction": "Southbound",
+      "description": "Road closed on P southbound, MO. BRIDGE RECONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 37.7795178149365,
+      "lng": -92.3187162287942,
+      "start": "2026-07-13T05:00:00.0000000Z",
+      "end": "2026-12-01T06:00:00.0000000Z",
+      "updated": "2026-07-13T05:00:00.0000000Z",
+      "scheduled": false
+    },
+    {
+      "id": "ND-CN-23102",
+      "province": "ND",
+      "country": "US",
+      "highway": "29N",
+      "direction": "Northbound",
+      "description": "Lane closure on 29N northbound, ND. Head-to-head traffic is active. Northbound I-29 traffic will be shifted onto the passing lane of the southbound roadway at mile 101. Southbound traffic will be restricted to the driving lane. Traffic will be directed with signs and devices. Speeds are reduced to 6",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 47.366425,
+      "lng": -97.051172,
+      "start": "2026-04-13T00:00:00-05:00",
+      "end": "2026-10-17T00:00:00-05:00",
+      "updated": "2026-06-17T09:58:47-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "ND-CN-23102",
+      "province": "ND",
+      "country": "US",
+      "highway": "29S",
+      "direction": "Southbound",
+      "description": "Lane closure on 29S southbound, ND. Head-to-head traffic is active. Northbound I-29 traffic will be shifted onto the passing lane of the southbound roadway at mile 101. Southbound traffic will be restricted to the driving lane. Traffic will be directed with signs and devices. Speeds are reduced to 6",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 47.366414,
+      "lng": -97.051643,
+      "start": "2026-04-13T00:00:00-05:00",
+      "end": "2026-10-17T00:00:00-05:00",
+      "updated": "2026-06-17T09:58:47-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "MO-545198",
+      "province": "MO",
+      "country": "US",
+      "highway": "I-70 DR SE",
+      "direction": "Eastbound",
+      "description": "Road closed on I-70 DR SE eastbound, MO. NEW PAVEMENT CONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 38.9612488139343,
+      "lng": -92.2851551518059,
+      "start": "2026-03-23T05:00:00.0000000Z",
+      "end": "2026-12-31T06:00:00.0000000Z",
+      "updated": "2026-03-23T05:00:00.0000000Z",
+      "scheduled": false
+    },
+    {
+      "id": "MO-545199",
+      "province": "MO",
+      "country": "US",
+      "highway": "I-70 DR SE",
+      "direction": "Westbound",
+      "description": "Road closed on I-70 DR SE westbound, MO. NEW PAVEMENT CONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 38.9603902227993,
+      "lng": -92.2771503356743,
+      "start": "2026-03-23T05:00:00.0000000Z",
+      "end": "2026-12-31T06:00:00.0000000Z",
+      "updated": "2026-03-23T05:00:00.0000000Z",
+      "scheduled": false
+    },
+    {
+      "id": "WI-d09c8972-24da-4456-b4ff-5fde86cb08ad",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-94 EB",
+      "direction": "Eastbound",
+      "description": "Road closed on I-94 EB eastbound, WI. Ramp Full Closure on I-94 EB at OFF RAMP TO HAWLEY RD. Detour: EB I-94 Exit to SB S. 70th St to EB Greenfield Ave to EB Bluemound Rd to Hawley Rd",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.0304758054139,
+      "lng": -87.9902544840683,
+      "start": "2025-11-05T03:00:00+00:00",
+      "end": "2027-11-15T11:30:00+00:00",
+      "updated": "2026-03-05T20:58:24.537+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "WI-d196cc5f-bc9d-1951-9b7c-800d9effbd77",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-94 EB",
+      "direction": "Eastbound",
+      "description": "Road closed on I-94 EB eastbound, WI. Ramp Full Closure on I-94 EB at ON RAMP FROM HAWLEY RD. Detour: NB N. Hawley Rd. to EB W. Bluemound Rd to EB W. Wisconsin Ave to SB 35th St",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.030462002589,
+      "lng": -87.9848013910793,
+      "start": "2025-11-05T03:00:00+00:00",
+      "end": "2028-11-15T11:30:00+00:00",
+      "updated": "2026-03-05T20:58:24.537+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-43373-1",
+      "province": "MN",
+      "country": "US",
+      "highway": "US 75",
+      "direction": "Northbound",
+      "description": "Road closed on US 75 northbound, MN. Bridge Is Closed, Construction Work",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 47.611398,
+      "lng": -96.814762,
+      "start": "2025-11-24T14:00:00Z",
+      "end": "2026-10-30T22:00:00Z",
+      "updated": "2025-11-21T21:30:06.490Z",
+      "scheduled": false
+    },
+    {
+      "id": "MN-CARSx-43373-2",
+      "province": "MN",
+      "country": "US",
+      "highway": "US 75",
+      "direction": "Southbound",
+      "description": "Road closed on US 75 southbound, MN. Bridge Is Closed, Construction Work",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 47.615496,
+      "lng": -96.814723,
+      "start": "2025-11-24T14:00:00Z",
+      "end": "2026-10-30T22:00:00Z",
+      "updated": "2025-11-21T21:30:06.490Z",
+      "scheduled": false
+    },
+    {
+      "id": "MO-533982",
+      "province": "MO",
+      "country": "US",
+      "highway": "BENTON BLVD",
+      "direction": "Northbound",
+      "description": "Road closed on BENTON BLVD northbound, MO. BRIDGE RECONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 39.0945854819476,
+      "lng": -94.5447117183604,
+      "start": "2025-06-06T05:00:00.0000000Z",
+      "end": "2027-08-15T05:00:00.0000000Z",
+      "updated": "2025-06-06T05:00:00.0000000Z",
+      "scheduled": false
+    },
+    {
+      "id": "MO-533983",
+      "province": "MO",
+      "country": "US",
+      "highway": "BENTON BLVD",
+      "direction": "Southbound",
+      "description": "Road closed on BENTON BLVD southbound, MO. BRIDGE RECONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 39.0968635320843,
+      "lng": -94.5445699323674,
+      "start": "2025-06-06T05:00:00.0000000Z",
+      "end": "2027-08-15T05:00:00.0000000Z",
+      "updated": "2025-06-06T05:00:00.0000000Z",
+      "scheduled": false
+    },
+    {
+      "id": "MO-532134",
+      "province": "MO",
+      "country": "US",
+      "highway": "US67N TO RTDW",
+      "direction": "Westbound",
+      "description": "Road closed on US67N TO RTDW westbound, MO. BRIDGE RECONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 38.6966500721306,
+      "lng": -90.4085889269215,
+      "start": "2025-05-05T05:00:00.0000000Z",
+      "end": "2026-11-06T06:00:00.0000000Z",
+      "updated": "2025-05-05T05:00:00.0000000Z",
+      "scheduled": false
+    },
+    {
+      "id": "MO-532138",
+      "province": "MO",
+      "country": "US",
+      "highway": "US67S TO RTDE",
+      "direction": "Eastbound",
+      "description": "Road closed on US67S TO RTDE eastbound, MO. BRIDGE RECONSTRUCTION",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 38.6958661417365,
+      "lng": -90.4088237142825,
+      "start": "2025-05-05T05:00:00.0000000Z",
+      "end": "2026-11-06T06:00:00.0000000Z",
+      "updated": "2025-05-05T05:00:00.0000000Z",
       "scheduled": false
     }
   ],
-  "total": 75,
-  "updated": "2026-10-09T00:00:47.323546+00:00",
+  "total": 115,
+  "updated": "2026-10-09T01:01:11.342659+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
-    "Caltrans LCS"
+    "Caltrans LCS",
+    "NY WZDx",
+    "WA WZDx",
+    "MN WZDx",
+    "ND WZDx",
+    "WI WZDx",
+    "IN WZDx",
+    "KY WZDx",
+    "MO WZDx"
   ]
 }

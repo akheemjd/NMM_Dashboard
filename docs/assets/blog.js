@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded',function(){
   var input=form&&form.querySelector('.gh-form-input'); if(input)input.placeholder='Your email';
   inner.insertBefore(left,inner.firstChild);
   var sign=document.createElement('div'); sign.className='nm-sign'; sign.setAttribute('aria-live','polite');
-  sign.innerHTML='<h2>This week</h2><div class="nm-row"><span>Canadian diesel</span><span>…</span></div><div class="nm-row"><span>US diesel</span><span>…</span></div><a href="https://dashboard.northernmilemedia.com/">Open the live dashboard</a>';
+  sign.innerHTML='<h2>This week</h2><div class="nm-row"><span>US diesel</span><span>…</span></div><div class="nm-row"><span>Canadian diesel</span><span>…</span></div><a href="https://dashboard.northernmilemedia.com/">Open the live dashboard</a>';
   inner.appendChild(sign);
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   fetch('https://dashboard.northernmilemedia.com/assets/now.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json();}).then(function(d){
     var rows=[];
-    if(d.ca!=null)rows.push(['Canadian diesel',Number(d.ca).toFixed(1)+'¢']);
-    if(d.us!=null)rows.push(['US diesel','$'+Number(d.us).toFixed(3)]);
-    if(d.gap!=null)rows.push([(d.gap_word==='US higher'?'US over Canada':'Canada over US'),d.gap+'¢']);
+    if(d.us!=null)rows.push(['US diesel','$'+Number(d.us).toFixed(3)+'/gal']);
+    if(d.ca!=null)rows.push(['Canadian diesel',Number(d.ca).toFixed(1)+'¢/L']);
+    if(d.gap!=null)rows.push([(/US higher/.test(d.gap_word||'')?'US over Canada':'Canada over US'),d.gap+'¢/L']);
     var h='<h2>This week</h2>';
     rows.forEach(function(r){h+='<div class="nm-row"><span>'+esc(r[0])+'</span><span>'+esc(r[1])+'</span></div>';});
     if(d.slowest&&d.slowest.mins>=10){h+='<div class="nm-row"><span>'+esc(d.slowest.name)+'<small>'+esc(d.slowest.dir)+'</small></span><span class="nm-hot">'+esc(d.slowest.mins)+' min</span></div>';}
