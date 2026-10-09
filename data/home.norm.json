@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-09 12:00",
-  "updated_iso": "2026-10-09T12:00:50+00:00",
-  "build_version": "1791547250",
+  "updated_at": "2026-10-09 13:01",
+  "updated_iso": "2026-10-09T13:01:54+00:00",
+  "build_version": "1791550914",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Blaine-Pacific Highway",
-    "us_max_wait": "30 min",
+    "us_max_wait": "40 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 71,
+    "active_count": 69,
     "gauge_class": "warn",
-    "status_line": "Live now: 47 in the US, 33 in Canada.",
+    "status_line": "Live now: 39 in the US, 39 in Canada.",
     "incidents": [
       {
         "road": "LEMAY FERRY RD",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Northbound  at HWY 401, Toronto. Right lane closed.",
+        "road": "HWY 71",
+        "what": "Highway Maintenance on HWY 71 Northbound  at MOORE RD (W), Nestor Falls. Lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT",
+      "captured_at": "08:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "4 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:45 EDT",
+      "captured_at": "08:43 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:39 MDT",
+      "captured_at": "06:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,15 +465,15 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT",
+      "captured_at": "05:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "30 min",
+      "us_wait": "40 min",
       "us_status_class": "heavy"
     },
     {
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 CDT",
+      "captured_at": "07:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
+      "category": "drivers",
       "source": "The Trucker",
-      "headline": "The heaviest load a trucker carries may be invisible",
-      "url": "https://www.thetrucker.com/trucking-news/perspective/mind-over-matter-by-hope-zvara/the-heaviest-load-a-trucker-carries-may-be-invisible",
-      "why": "Industry movement worth tracking."
+      "headline": "\u2018Inattentive\u2019 driver hits rear of semi-truck in Missouri",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/inattentive-driver-hits-rear-of-semi-truck-in-missouri",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "regulations",
+      "category": "safety",
       "source": "The Trucker",
-      "headline": "FMCSA clears way for driverless trucks to replace warning triangles with flashing beacons",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/fmcsa-clears-way-for-driverless-trucks-to-replace-warning-triangles-with-flashing-beacons",
-      "why": "Rules change compliance cost and driver hours."
+      "headline": "ALAN activates for first Atlantic hurricane of 2026",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/alan-activates-for-first-atlantic-hurricane-of-2026",
+      "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
   "theft_home_json": "[]",
