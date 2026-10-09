@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-09T02:02:28.531925",
+  "generated": "2026-10-09T03:02:29.680870",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -149,8 +149,8 @@
       "us": {
         "label": "Sweetgrass",
         "reported": true,
-        "delay": 0,
-        "captured": "10/8/2026 23:58:15"
+        "delay": 5,
+        "captured": "10/9/2026 00:58:41"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": true,
         "delay": 0,
-        "captured": "10/9/2026 00:58:15"
+        "captured": "10/9/2026 01:58:41"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 15,
-        "captured": "10/9/2026 01:58:15"
+        "delay": 5,
+        "captured": "10/9/2026 02:58:41"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": false,
         "delay": "",
-        "captured": "10/9/2026 01:58:15"
+        "captured": "10/9/2026 02:58:41"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": false,
         "delay": "",
-        "captured": "10/9/2026 01:58:15"
+        "captured": "10/9/2026 02:58:41"
       }
     },
     "pacific-blaine": {
@@ -910,7 +910,7 @@
         "label": "Pacific Highway",
         "reported": true,
         "delay": 0,
-        "captured": "10/8/2026 22:58:15"
+        "captured": "10/8/2026 23:58:41"
       }
     },
     "queenston-lewiston": {
@@ -1062,7 +1062,7 @@
         "label": "Lewiston Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/9/2026 01:58:15"
+        "captured": "10/9/2026 02:58:41"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/9/2026 01:58:15"
+        "captured": "10/9/2026 02:58:41"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/9/2026 01:58:15"
+        "captured": "10/9/2026 02:58:41"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -2106,12 +2106,12 @@
     },
     "us-buffalo-niagara-falls-peace-bridge": {
       "id": "us-buffalo-niagara-falls-peace-bridge",
-      "avg_delay": 7,
+      "avg_delay": 5,
       "min_delay": 3,
-      "max_delay": 15,
+      "max_delay": 7,
       "p50": 5.0,
-      "p75": 7.0,
-      "p90": 11.8,
+      "p75": 5.0,
+      "p90": 6.2,
       "observations": 5,
       "days_covered": 5,
       "hourly": {
@@ -2234,7 +2234,7 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 15,
+          "avg": 5,
           "count": 1,
           "label": "Fri"
         },
@@ -3429,14 +3429,14 @@
     },
     "us-el-paso-ysleta": {
       "id": "us-el-paso-ysleta",
-      "avg_delay": 31,
-      "min_delay": 10,
+      "avg_delay": 36,
+      "min_delay": 30,
       "max_delay": 45,
       "p50": 35.0,
-      "p75": 35.0,
-      "p90": 41.0,
-      "observations": 5,
-      "days_covered": 5,
+      "p75": 37.5,
+      "p90": 42.0,
+      "observations": 4,
+      "days_covered": 4,
       "hourly": {
         "0": {
           "avg": null,
@@ -3557,8 +3557,8 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 10,
-          "count": 1,
+          "avg": null,
+          "count": 0,
           "label": "Fri"
         },
         "5": {
@@ -3723,14 +3723,14 @@
     },
     "us-highgate-springs": {
       "id": "us-highgate-springs",
-      "avg_delay": 3,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 5,
-      "p50": 5.0,
+      "p50": 2.5,
       "p75": 5.0,
       "p90": 5.0,
-      "observations": 3,
-      "days_covered": 3,
+      "observations": 4,
+      "days_covered": 4,
       "hourly": {
         "0": {
           "avg": null,
@@ -3851,8 +3851,8 @@
           "label": "Thu"
         },
         "4": {
-          "avg": null,
-          "count": 0,
+          "avg": 0,
+          "count": 1,
           "label": "Fri"
         },
         "5": {
@@ -5781,14 +5781,14 @@
     },
     "us-san-luis-san-luis-ii": {
       "id": "us-san-luis-san-luis-ii",
-      "avg_delay": 4,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 10,
       "p50": 0.0,
-      "p75": 10.0,
-      "p90": 10.0,
-      "observations": 5,
-      "days_covered": 5,
+      "p75": 2.5,
+      "p90": 7.0,
+      "observations": 4,
+      "days_covered": 4,
       "hourly": {
         "0": {
           "avg": null,
@@ -5909,8 +5909,8 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 10,
-          "count": 1,
+          "avg": null,
+          "count": 0,
           "label": "Fri"
         },
         "5": {
@@ -5928,14 +5928,14 @@
     },
     "us-santa-teresa-santa-teresa-port-of-entry": {
       "id": "us-santa-teresa-santa-teresa-port-of-entry",
-      "avg_delay": 19,
+      "avg_delay": 20,
       "min_delay": 10,
       "max_delay": 35,
-      "p50": 15.0,
-      "p75": 20.0,
-      "p90": 29.0,
-      "observations": 5,
-      "days_covered": 5,
+      "p50": 17.5,
+      "p75": 23.8,
+      "p90": 30.5,
+      "observations": 4,
+      "days_covered": 4,
       "hourly": {
         "0": {
           "avg": null,
@@ -6056,8 +6056,8 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 15,
-          "count": 1,
+          "avg": null,
+          "count": 0,
           "label": "Fri"
         },
         "5": {
@@ -6369,8 +6369,8 @@
     },
     "us-sweetgrass": {
       "id": "us-sweetgrass",
-      "avg_delay": 28,
-      "min_delay": 0,
+      "avg_delay": 29,
+      "min_delay": 5,
       "max_delay": 40,
       "p50": 30.0,
       "p75": 40.0,
@@ -6497,7 +6497,7 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 0,
+          "avg": 5,
           "count": 1,
           "label": "Fri"
         },

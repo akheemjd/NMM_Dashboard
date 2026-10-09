@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-09 06:02",
-  "updated_iso": "2026-10-09T06:02:23+00:00",
-  "build_version": "1791525743",
+  "updated_at": "2026-10-09 07:02",
+  "updated_iso": "2026-10-09T07:02:25+00:00",
+  "build_version": "1791529345",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Peace Bridge",
-    "us_max_wait": "15 min",
+    "us_max_wait": "5 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 58,
+    "active_count": 59,
     "gauge_class": "warn",
-    "status_line": "Live now: 39 in the US, 29 in Canada.",
+    "status_line": "Live now: 39 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "LEMAY FERRY RD",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Collision on HWY 400 Northbound  at HWY 26/ BAYFIELD STREET, Barrie. 2 right\u2026",
+        "road": "HWY 401",
+        "what": "Vehicle Fire on HWY 401 Westbound COLLECTOR at HWY 400, Toronto. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 EDT",
+      "captured_at": "02:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:58 EDT",
+      "captured_at": "02:22 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,12 +454,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:44 MDT",
+      "captured_at": "00:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 PDT",
+      "captured_at": "23:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "1 of 7 crossings slow, US-bound",
-      "value": "1/7",
+      "note": "2 of 7 crossings slow, US-bound",
+      "value": "2/7",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."

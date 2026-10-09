@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-317493",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Vehicle Fire on HWY 401 Westbound COLLECTOR at HWY 400, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.716758,
+      "lng": -79.518581629,
+      "start": 1791528960,
+      "end": null,
+      "updated": 1791528960,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-317492",
       "province": "ON",
       "highway": "HWY 69",
@@ -501,24 +519,6 @@
       "start": 1791680400,
       "end": 1791709200,
       "updated": 1791479580,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
-      "id": "ON-317256",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Nightly Engineering Investigation on HWY 403 HAMILTON Eastbound  between LINCOLN M. ALEXANDER PARKWAY and ABERDEEN AVE, Hamilton. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 43.232258,
-      "lng": -79.950745,
-      "start": 1792029600,
-      "end": 1792141200,
-      "updated": 1791478740,
       "country": "CA",
       "scheduled": true
     },
@@ -2003,7 +2003,7 @@
     }
   ],
   "total": 107,
-  "updated": "2026-10-09T06:02:01.354781+00:00",
+  "updated": "2026-10-09T07:02:02.975347+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
