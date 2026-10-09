@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-09 19:01",
-  "updated_iso": "2026-10-09T19:01:40+00:00",
-  "build_version": "1791572500",
+  "updated_at": "2026-10-09 20:01",
+  "updated_iso": "2026-10-09T20:01:07+00:00",
+  "build_version": "1791576067",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Blaine-Pacific Highway",
-    "us_max_wait": "20 min",
+    "us_max_name": "Peace Bridge",
+    "us_max_wait": "8 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 64,
+    "active_count": 74,
     "gauge_class": "warn",
-    "status_line": "Live now: 39 in the US, 32 in Canada.",
+    "status_line": "Live now: 47 in the US, 34 in Canada.",
     "incidents": [
       {
-        "road": "I-5 in Stanislaus County",
-        "what": "Route 5 near Westley. Rest Area Work. All of 1 lanes closed.",
-        "severity_label": "Closed",
-        "severity_class": "ok",
+        "road": "US 75",
+        "what": "Road closed on US 75 northbound, MN. Closed, Construction Work, Detour In\u2026",
+        "severity_label": "Minor",
+        "severity_class": "heavy",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Southbound HOV at KING ROAD, King. Left lane closed.",
+        "road": "HWY 115",
+        "what": "Collision on HWY 115 Southbound  at PETERBOROUGH RD 10, Peterborough. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,16 +375,16 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:36 EDT",
+      "captured_at": "14:55 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "10 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "8 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "2 min",
+      "us_wait": "8 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:56 EDT",
+      "captured_at": "15:10 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 MDT",
+      "captured_at": "13:35 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT",
+      "captured_at": "12:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "20 min",
-      "us_status_class": "heavy"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "4 of 9 crossings slow, Canada-bound",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
+      "category": "regulations",
       "source": "The Trucker",
-      "headline": "U.S. intermodal freight volume remains elevated in October",
-      "url": "https://www.thetrucker.com/trucking-news/business/u-s-intermodal-freight-volume-remains-elevated-in-october",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "headline": "Geotab integrates J1979-2 protocol to California truck compliance offering",
+      "url": "https://www.thetrucker.com/trucking-news/business/geotab-integrates-j1979-2-protocol-to-california-truck-compliance-offering",
+      "why": "Rules change compliance cost and driver hours."
     },
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "Averitt named Regional Carrier of the Year by Transportation Insight and Nolan Transportation Group",
-      "url": "https://www.thetrucker.com/trucking-news/business/averitt-named-regional-carrier-of-the-year-by-transportation-insight-and-nolan-transportation-group",
+      "headline": "FDA finalizes oral fluid drug testing following ATA advocacy",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/fda-finalizes-oral-fluid-drug-testing-following-ata-advocacy",
       "why": "Industry movement worth tracking."
     }
   ],
