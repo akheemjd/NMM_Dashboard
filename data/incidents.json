@@ -1,54 +1,37 @@
 {
   "incidents": [
     {
-      "id": "ON-317401",
+      "id": "ON-317413",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1 centre lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 centre lane closed",
-      "lat": 43.64848042,
-      "lng": -79.63784681,
-      "start": 1791499440,
-      "end": null,
-      "updated": 1791499440,
-      "scheduled": false
-    },
-    {
-      "id": "ON-317396",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at HWY 400, Toronto. Right lane closed.",
+      "description": "Collision on HWY 401 Westbound COLLECTOR RAMP at BLACK CREEK DRIVE, Toronto. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "right lane closed",
-      "lat": 43.71597793,
-      "lng": -79.52035857,
-      "start": 1791499020,
+      "lat": 43.71735,
+      "lng": -79.52002269,
+      "start": 1791502200,
       "end": null,
-      "updated": 1791499020,
+      "updated": 1791502200,
       "scheduled": false
     },
     {
-      "id": "ON-317393",
+      "id": "ON-317408",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 401 Eastbound COLLECTOR at HWY 404, Toronto. Right lane and right shoulder closed.",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound  at 401, Toronto. Left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.767071,
-      "lng": -79.33800849,
-      "start": 1791498480,
+      "lanes": "left lane closed",
+      "lat": 43.71769839,
+      "lng": -79.52084421,
+      "start": 1791501300,
       "end": null,
-      "updated": 1791498480,
+      "updated": 1791501300,
       "scheduled": false
     },
     {
@@ -103,23 +86,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-317318",
-      "province": "ON",
-      "highway": "HWY 94",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 94 Both Directions  at N JCT TERRACE RD(E)MAIN ST(W), Corbeil. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 46.211253456,
-      "lng": -79.358870677,
-      "start": 1791487680,
-      "end": null,
-      "updated": 1791487680,
-      "scheduled": false
-    },
-    {
       "id": "ON-317328",
       "province": "ON",
       "highway": "QEW",
@@ -168,7 +134,7 @@
       "start": 1791543600,
       "end": 1792184400,
       "updated": 1791486300,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-317303",
@@ -219,7 +185,7 @@
       "start": 1791543600,
       "end": 1792022400,
       "updated": 1791481980,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-317284",
@@ -389,7 +355,7 @@
       "start": 1791504000,
       "end": 1791536400,
       "updated": 1791481260,
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "drivebc.ca/RIDE-103417",
@@ -441,6 +407,40 @@
       "end": 1792141200,
       "updated": 1791478740,
       "scheduled": true
+    },
+    {
+      "id": "ON-317257",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Nightly Engineering Investigation on HWY 403 HAMILTON Westbound  between ABERDEEN AVE and LINCOLN M. ALEXANDER PARKWAY, Hamilton. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 43.25535,
+      "lng": -79.90704,
+      "start": 1792026000,
+      "end": 1792148400,
+      "updated": 1791478560,
+      "scheduled": true
+    },
+    {
+      "id": "ON-317235",
+      "province": "ON",
+      "highway": "HWY 417",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 417 Westbound  between TERRY FOX DR (IC 140) and PALLADIUM DR (IC 142), Ottawa. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 45.30556,
+      "lng": -75.9117,
+      "start": 1791511200,
+      "end": 1791540000,
+      "updated": 1791475860,
+      "scheduled": false
     },
     {
       "scheduled": false,
@@ -1028,23 +1028,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-103217",
-      "province": "BC",
-      "highway": "Highway 97 near Highway 97 S",
-      "direction": "",
-      "description": "Road maintenance at Highway 97, 75km West of Chetwynd and 100km Northeast of Mackenzie. Starting Wed Oct 7 until Thu Oct 8. Single lane alternating traffic. Last update: October 5th, 2026 at 10:43am MST. Link Creek catchment wall maintenance, show down and watch for crews and equipment and crews.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 55.50463222,
-      "lng": -122.6368239,
-      "start": "2026-10-05T10:43:11-07:00",
-      "end": "",
-      "updated": "2026-10-05T10:43:11-07:00",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103213",
       "province": "BC",
       "highway": "Likely Road",
@@ -1349,10 +1332,27 @@
       "end": "",
       "updated": "2026-09-15T20:12:00-07:00",
       "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-101669",
+      "province": "BC",
+      "highway": "Other Roads near Durrell Road",
+      "direction": "",
+      "description": "Construction work from Durrell Road, 17km South of Quesnel and Highway 97 to At Dale Lake Road and Durrell Road. Starting Mon Jul 13. Watch for traffic control. Expect minor delays. Last update: September 15th, 2026 at 8:11pm PDT. Next update time Thu Oct 1 at 10:00 AM PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 52.87166,
+      "lng": -122.4334,
+      "start": "2026-08-25T14:41:23-07:00",
+      "end": "",
+      "updated": "2026-09-15T20:11:00-07:00",
+      "scheduled": false
     }
   ],
   "total": 75,
-  "updated": "2026-10-08T23:07:09.303363+00:00",
+  "updated": "2026-10-09T00:00:47.323546+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

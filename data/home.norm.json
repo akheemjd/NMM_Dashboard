@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-08 23:07",
-  "updated_iso": "2026-10-08T23:07:31+00:00",
-  "build_version": "1791500851",
+  "updated_at": "2026-10-09 00:01",
+  "updated_iso": "2026-10-09T00:01:17+00:00",
+  "build_version": "1791504077",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,8 +9,8 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min"
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "15 min"
   },
   "fuel": {
     "national_diesel": "259.0",
@@ -347,20 +347,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 29,
+    "active_count": 27,
     "gauge_class": "warn",
-    "status_line": "HWY 401, HWY 94",
+    "status_line": "HWY 401, HWY 400, I-5 in S",
     "incidents": [
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1\u2026",
+        "what": "Collision on HWY 401 Westbound COLLECTOR RAMP at BLACK CREEK DRIVE, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at HWY 400, Toronto. Right lane\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at 401, Toronto. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -391,7 +391,7 @@
       "url": "/border-wait-times/",
       "captured_at": "17:15 EDT",
       "route": "Sarnia, ON \u2014 Port Huron, MI",
-      "us_wait": "5 min",
+      "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
@@ -404,7 +404,7 @@
       "url": "/border-wait-times/",
       "captured_at": "18:40 EDT",
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
-      "us_wait": "3 min",
+      "us_wait": "8 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:45 EDT",
+      "captured_at": "19:47 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "us_wait": "No delay",
       "us_status_class": "ok"
@@ -443,18 +443,18 @@
       "url": "/border-wait-times/",
       "captured_at": "16:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "40 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Surrey, BC \u2014 Blaine, WA \u00b7 BC-15 / WA-543 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "15:40 PDT",
+      "captured_at": "16:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "us_wait": "No delay",
       "us_status_class": "ok"
@@ -467,10 +467,10 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 CDT",
+      "captured_at": "18:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Thousand Islands Bridge",
