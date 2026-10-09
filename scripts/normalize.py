@@ -680,8 +680,11 @@ incidents = {
     "active_count": len(incidents_active),
     "gauge_class": "good" if len(incidents_active) == 0 else "warn",
     "status_line": "all corridors clear" if len(incidents_active) == 0 else (
-        f"Live now: {sum(1 for i in incidents_active if _inc_country(i) == 'US' and not i.get('scheduled'))} in the US, "
-        f"{sum(1 for i in incidents_active if _inc_country(i) == 'CA' and not i.get('scheduled'))} in Canada."),
+        # Counted the same way on both sides: every live event the collectors kept (closures,
+        # collisions and lane-closing work). Counting only collision words made Canada's
+        # roadwork vanish from the count while US work zones stayed in it.
+        f"Live now: {sum(1 for i in incidents_raw if _inc_country(i) == 'US' and not i.get('scheduled'))} in the US, "
+        f"{sum(1 for i in incidents_raw if _inc_country(i) == 'CA' and not i.get('scheduled'))} in Canada."),
     "incidents": incidents_list,
 }
 
