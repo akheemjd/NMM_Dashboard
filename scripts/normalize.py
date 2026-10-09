@@ -264,6 +264,12 @@ except Exception:
     _cbp_ports = {}
 
 
+NEUTRAL_NAME_EARLY = {
+    "lacolle-champlain": "Champlain-Lacolle",
+    "pacific-blaine": "Blaine-Pacific Highway",
+}
+
+
 def _us_bound(crossing_id):
     """(text, css class) for the US-bound commercial wait. Unreported is never zero."""
     p = _cbp_ports.get(CBP_FOR_CROSSING.get(crossing_id, ""))
@@ -276,7 +282,38 @@ def _us_bound(crossing_id):
     return (f"{d} min" if d > 0 else "No delay"), ("heavy" if d > 15 else "mod" if d > 0 else "ok")
 
 
+# The busiest crossing in each direction, so no page names only the Canada-bound queue.
+_us_rows = []
+for _c in crossings:
+    _p = _cbp_ports.get(CBP_FOR_CROSSING.get(_c.get("id", ""), ""))
+    if _p and _p.get("commercial_reported") and _p.get("commercial_delay") is not None:
+        _us_rows.append((int(_p["commercial_delay"]), NEUTRAL_NAME_EARLY.get(_c.get("id", ""), _c.get("name", ""))))
+if _us_rows:
+    _ud, _un = max(_us_rows)
+    border["us_max_name"] = _un
+    border["us_max_wait"] = f"{_ud} min" if _ud > 0 else "No delay"
+else:
+    border["us_max_name"], border["us_max_wait"] = "not reported", "not reported"
+border["ca_max_name"] = NEUTRAL_NAME_EARLY.get(max_cross.get("id", ""), border["max_name"])
+
+
 # Crossing rows for border page (crossings loop) + home page
+# Names that read as one country's crossing get the pair name both sides use.
+NEUTRAL_NAME = NEUTRAL_NAME_EARLY
+
+
+def _route_us_first(route):
+    """'Windsor, ON — Detroit, MI' -> 'Detroit, MI and Windsor, ON'."""
+    parts = [p.strip() for p in re.split(r"\s+[\u2014\u2013-]\s+", route or "") if p.strip()]
+    if len(parts) != 2:
+        return route or ""
+    ca_codes = ("AB", "BC", "MB", "NB", "NL", "NS", "NT", "NU", "ON", "PE", "QC", "SK", "YT")
+    a, b = parts
+    if a.rsplit(",", 1)[-1].strip() in ca_codes:
+        a, b = b, a
+    return f"{a} and {b}"
+
+
 border_rows = []
 crossings_for_page = []
 for c in crossings[:12]:
@@ -295,13 +332,17 @@ for c in crossings[:12]:
     item = {
         "name": c.get("name",""),
         "slug": re.sub(r"[^a-z0-9]+", "-", c.get("name","").lower()).strip("-"),
-        "sub": f"{c.get('route','')} · {c.get('highway','')}" + (" · FAST" if c.get("fast_lanes") else ""),
+        "sub": f"{_route_us_first(c.get('route',''))} · {' / '.join(reversed(str(c.get('highway','')).split(' / ')))}" + (" · FAST" if c.get("fast_lanes") else ""),
         "wait": wait,
         "status_label": "Heavy" if d>15 else "Moderate" if d>0 else "Flowing",
         "status_class": cls,
         "url": "/border-wait-times/",
         "captured_at": cap_ts,
         "route": c.get("route", ""),
+        # Shared pages give both countries the same footing: the US city first (larger
+        # market), the Canadian city second, and a name that belongs to neither side.
+        "label": NEUTRAL_NAME.get(c.get("id", ""), c.get("name", "")),
+        "route_both": _route_us_first(c.get("route", "")),
     }
     item["us_wait"], item["us_status_class"] = _us_bound(c.get("id", ""))
     border_rows.append(item)
@@ -448,6 +489,8 @@ if _eia_usd is not None and fx_rate and not _eia_stale:
         "us_national_cpl": f"{_eia_cpl:.1f}",
         "nadi": f"{_nadi:.1f}",
         "ca_us_gap": f"{_gap:.1f}",
+        # The same gap in US units, so neither country has to do the conversion.
+        "ca_us_gap_usd_gal": f"{abs(_gap) / 100 * 3.78541 / fx_rate:.2f}",
         "ca_higher": _gap > 0,
         # Phrased to stand alone after a unit ("¢/L · Canada higher") and inside
         # a sentence after a preposition ("with Canada higher by"). The template
@@ -477,6 +520,7 @@ else:
         "us_national_cpl": "n/a",
         "nadi": "n/a",
         "ca_us_gap": "n/a",
+        "ca_us_gap_usd_gal": "n/a",
         "ca_higher": True,
         "gap_word": "",
         "date": "",
@@ -602,8 +646,25 @@ incidents_active = [
     if any(w in (i.get("event_type", "") + " " + i.get("description", "")).lower()
            for w in _ACTIVE_WORDS)
 ]
+# Home shows two: one American, one Canadian, US first. A single newest-two cut let
+# Ontario's epoch timestamps fill both slots every time.
+_CA_PROV = {"ON", "BC", "AB", "SK", "MB", "QC", "NB", "NS", "PE", "NL", "YT", "NT", "NU"}
+def _inc_country(i):
+    return i.get("country") or ("CA" if i.get("province") in _CA_PROV else "US")
+_live_first = [i for i in incidents_active if not i.get("scheduled")] + \
+              [i for i in incidents_active if i.get("scheduled")]
+_pick = []
+for _c in ("US", "CA"):
+    _hit = next((i for i in _live_first if _inc_country(i) == _c), None)
+    if _hit:
+        _pick.append(_hit)
+for i in _live_first:
+    if len(_pick) >= 2:
+        break
+    if i not in _pick:
+        _pick.append(i)
 incidents_list = []
-for i in incidents_active[:2]:  # home shows 2 collisions/closures
+for i in _pick[:2]:  # home shows 2 collisions/closures
     sev = i.get("severity","")
     cls = "heavy" if sev == "closed" else "mod" if sev == "heavy" else "ok"
     incidents_list.append({
@@ -618,7 +679,9 @@ incidents = {
 "none": len(incidents_list) == 0,
     "active_count": len(incidents_active),
     "gauge_class": "good" if len(incidents_active) == 0 else "warn",
-    "status_line": "all corridors clear" if len(incidents_active) == 0 else ", ".join(list(dict.fromkeys(i.get("highway","")[:8] for i in incidents_active[:4] if i.get("highway")))),
+    "status_line": "all corridors clear" if len(incidents_active) == 0 else (
+        f"Live now: {sum(1 for i in incidents_active if _inc_country(i) == 'US' and not i.get('scheduled'))} in the US, "
+        f"{sum(1 for i in incidents_active if _inc_country(i) == 'CA' and not i.get('scheduled'))} in Canada."),
     "incidents": incidents_list,
 }
 
@@ -626,7 +689,12 @@ incidents = {
 market = []
 mk_indicators = raw_market.get("indicators", [])
 dir_summary = raw_market.get("direction_summary", "")
-for ind in mk_indicators[:8]:
+# Both countries on equal footing: each signal appears as a US/Canada pair, US first.
+_TOPIC = {"US GDP Growth": 0, "GDP Growth": 1, "US GDP YoY": 2, "GDP YoY": 3,
+          "US Fuel Cost": 4, "Fuel Cost": 5, "US Fuel Spread": 6, "Fuel Spread": 7,
+          "CAD Impact": 20}
+mk_indicators = sorted(mk_indicators, key=lambda i: _TOPIC.get(i.get("name", ""), 30))
+for ind in mk_indicators[:12]:
     direction = ind.get("direction", "flat")
     # Market indicators mix cost and growth series, where "up" means the
     # opposite thing in each. Neutral until sentiment is modelled properly.
@@ -659,19 +727,35 @@ for ind in mk_indicators[:8]:
         "what_it_means": ind.get("what_it_means", ""),
     })
 
-# Border congestion — a live supply-chain friction signal from CBSA.
+# Border congestion in both directions: CBP for US-bound, CBSA for Canada-bound.
 _bc = border.get("heavy_count", 0) + border.get("moderate_count", 0)
 _tot = len(border_rows)
+_us_rep = [r for r in border_rows if r.get("us_status_class") != "na"]
+_us_slow = sum(1 for r in _us_rep if r.get("us_status_class") in ("mod", "heavy"))
+_fx_row = [m for m in market if "30-day average" in m["name"]]
+market = [m for m in market if m not in _fx_row]
+if _us_rep:
+    market.append({
+        "name": "Border congestion",
+        "country_prefix": "<span class=\"src\">US</span> ",
+        "note": f"{_us_slow} of {len(_us_rep)} crossings slow, US-bound",
+        "value": f"{_us_slow}/{len(_us_rep)}",
+        "value_class": "flat",
+        "source": "CBP border wait times",
+        "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes.",
+    })
 if _tot:
     market.append({
-        "name": "Border congestion, into Canada",
-"country_prefix": "",
+        "name": "Border congestion",
+        "country_prefix": "<span class=\"src\">Canada</span> ",
         "note": f"{_bc} of {_tot} crossings slow, Canada-bound",
         "value": f"{_bc}/{_tot}",
         "value_class": "flat",
         "source": "CBSA commercial lane feed",
         "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes.",
     })
+
+market.extend(_fx_row)
 
 # ===== THEFT =====
 theft = []
@@ -908,8 +992,8 @@ rates = raw_market.get("rates_snapshot", {})
 _wr = []
 # Both countries, named. This line used to read "diesel at 259.6¢/L ... GDP moving 0.0%"
 # with no country on either figure, on a dashboard that covers Canada and the US.
-if rates.get("current_diesel"):
-    _wr.append(f"Canadian diesel at {rates.get('current_diesel')}¢/L")
+_ca_diesel = (f"Canadian diesel at {rates.get('current_diesel')}¢/L"
+              if rates.get("current_diesel") else None)
 try:
     with open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                            "data", "eia_diesel.json"), encoding="utf-8") as _f:
@@ -918,8 +1002,13 @@ try:
         _wr.append(f"US diesel at ${float(_us):.3f}/gal")
 except Exception:
     pass
+if _ca_diesel:
+    _wr.append(_ca_diesel)
 if rates.get("usd_cad"):
     _wr.append(f"the loonie at {rates.get('usd_cad')}")
+_us_gdp = next((m["value"] for m in market if m["name"] == "Quarterly GDP"), None)
+if _us_gdp:
+    _wr.append(f"US GDP moving {_us_gdp} annualized last quarter")
 _gdp = next((m["value"] for m in market if m["name"] == "Monthly GDP"), None)
 if _gdp:
     _wr.append(f"Canadian GDP moving {_gdp} last month")

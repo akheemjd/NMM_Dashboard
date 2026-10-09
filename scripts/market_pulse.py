@@ -23,7 +23,7 @@ def collect_market_pulse():
         "indicators": [],
         "rates_snapshot": {},
         "updated": datetime.now(timezone.utc).isoformat(),
-        "note": "Public data from Statistics Canada, Bank of Canada, and industry surveys."
+        "note": "Public data from the US Bureau of Economic Analysis, EIA, Statistics Canada, NRCan and the Bank of Canada."
     }
 
     # 1. Monthly GDP growth (StatsCan table 36100434)
@@ -83,6 +83,52 @@ def collect_market_pulse():
                     })
     except Exception as e:
         print(f"  GDP: {e}")
+
+    # 1b. US GDP, so the pulse reads both economies. FRED serves BEA's series as CSV with no
+    # key: A191RL1Q225SBEA is the headline real GDP change (quarterly, annualized, the way
+    # BEA reports it) and GDPC1 is the real level for the year-over-year figure.
+    try:
+        def _fred(series):
+            raw = urllib.request.urlopen(urllib.request.Request(
+                f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}",
+                headers={"User-Agent": "Mozilla/5.0"}), timeout=30).read().decode("utf-8", "replace")
+            rows = []
+            for line in raw.strip().splitlines()[1:]:
+                parts = line.split(",")
+                try:
+                    rows.append((parts[0], float(parts[1])))
+                except (IndexError, ValueError):
+                    continue
+            return rows
+        qoq = _fred("A191RL1Q225SBEA")
+        lvl = _fred("GDPC1")
+        if qoq and lvl:
+            d, chg = qoq[-1]
+            q = (int(d[5:7]) - 1) // 3 + 1
+            pulse["indicators"].append({
+                "name": "US GDP Growth",
+                "label": "Quarterly GDP",
+                "country": "us",
+                "value": fmt.pct(round(chg, 1)),
+                "detail": f"Q{q} {d[:4]}, annualized, ${lvl[-1][1]/1000:.1f}T (chained 2017)",
+                "direction": ("up" if round(chg, 1) > 0 else "down" if round(chg, 1) < 0 else "flat"),
+                "source": "US Bureau of Economic Analysis, via FRED",
+                "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
+            })
+        if len(lvl) >= 5:
+            cur, ago = lvl[-1][1], lvl[-5][1]
+            yoy = round((cur - ago) / ago * 100, 1) if ago else 0
+            pulse["indicators"].append({
+                "name": "US GDP YoY",
+                "label": "GDP, year over year",
+                "country": "us",
+                "value": fmt.pct(yoy),
+                "direction": ("up" if yoy > 0 else "down" if yoy < 0 else "flat"),
+                "source": "US Bureau of Economic Analysis, via FRED",
+                "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
+            })
+    except Exception as e:
+        print(f"  US GDP: {e}")
 
     # 2. Fuel cost pressure (from our fuel data)
     try:

@@ -44,10 +44,10 @@ def shared_tail():
         '    <div class="lead"><h2>On the road</h2><p>What is in front of you right now.</p></div>\n'
         '    <div class="two">\n'
         '      <div><h3>Border crossings</h3><div class="rows">\n'
-        '      <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{name}}'
-        '<small>{{route}}</small></span><span class="v"><span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span>'
-        '<span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span></span></a><!--/LOOP:border_rows-->\n'
-        '      </div><p class="note">Commercial lanes. Into Canada is CBSA' + AP + 's figure, into the US is CBP' + AP + 's, each with the agency' + AP + 's own capture time. '
+        '      <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{label}}'
+        '<small>{{route_both}}</small></span><span class="v"><span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span>'
+        '<span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span></span></a><!--/LOOP:border_rows-->\n'
+        '      </div><p class="note">Commercial lanes. Into the US is CBP' + AP + 's figure, into Canada is CBSA' + AP + 's, each with the agency' + AP + 's own capture time. '
         '<a href="/border-wait-times/">All crossings</a></p></div>\n'
         '      <div><h3>Road incidents</h3>\n'
         '      <!--IF:incidents.none--><div class="empty"><b>Corridors clear</b>No major closures or '
@@ -72,7 +72,7 @@ def shared_tail():
         '{{category}}</span>{{headline}}</a><!--/LOOP:news-->\n'
         '      </div><p class="note"><a href="/industry-news/">All headlines</a></p></div>\n'
         '    </div>\n'
-        '    <p class="note">Diesel prices include all federal and provincial fuel, carbon, and sales taxes. '
+        '    <p class="note">Diesel prices include taxes on both sides: federal and state fuel taxes in the US (EIA), and federal and provincial fuel, carbon and sales taxes in Canada (NRCan). '
         '<a href="/fuel-cost-calculator/">Work out what a run costs</a></p>\n'
         '  </section>\n'
     )
@@ -285,7 +285,7 @@ write(
         <span class="pgo">US site</span>
       </a>
     </div>
-    <p class="pickgap"><span class="gl">{{eia.gap_word}}<small>The two national averages on one axis</small></span><b>{{eia.ca_us_gap}}¢/L</b></p>
+    <p class="pickgap"><span class="gl">{{eia.gap_word}}<small>US${{eia.ca_us_gap_usd_gal}} a gallon. The two national averages on one axis.</small></span><b>{{eia.ca_us_gap}}¢/L</b></p>
     <p class="stand">Both trees are free and need no account. The <a href="#crossborder">cross-border
     figures</a> below are the same in either one.</p>
     <div class="meta"><span>Ten provinces · ten districts</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
@@ -296,7 +296,7 @@ write(
     <div class="stats">
       <a class="stat" href="/methodology/nmdi/"><div class="l">Canada vs US</div>
         <div class="v">{{eia.ca_us_gap}}<span class="u2">¢/L</span></div>
-        <div class="s">{{eia.gap_word}} · Canadian ¢/L, compared on one axis</div></a>
+        <div class="s">{{eia.gap_word}} · US${{eia.ca_us_gap_usd_gal}} a gallon</div></a>
       <a class="stat" href="/methodology/nmdi/"><div class="l">North American index</div>
         <div class="v">{{eia.nadi}}<span class="u2">¢/L</span></div>
         <div class="s">CA + US, equal weight</div></a>

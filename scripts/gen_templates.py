@@ -380,8 +380,8 @@ write("index",
     <div class="lead"><h2>On the road</h2><p>What is in front of you right now.</p></div>
     <div class="two">
       <div><h3>Border crossings</h3><div class="rows">
-      <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{name}}<small>{{route}}</small></span><span class="v"><span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span><span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span></span></a><!--/LOOP:border_rows-->
-      </div><p class="note">Commercial lanes. Into Canada is CBSA's figure, into the US is CBP's, each with the agency's own capture time. <a href="/border-wait-times/">All crossings</a></p></div>
+      <!--LOOP:border_rows--><a class="r" href="/border-wait-times/"><span class="k">{{label}}<small>{{route_both}}</small></span><span class="v"><span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span><span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span></span></a><!--/LOOP:border_rows-->
+      </div><p class="note">Commercial lanes. Into the US is CBP's figure, into Canada is CBSA's, each with the agency's own capture time. <a href="/border-wait-times/">All crossings</a></p></div>
       <div><h3>Road incidents</h3>
       <!--IF:incidents.none--><div class="empty"><b>Corridors clear</b>No major closures or collisions on the corridors we monitor.</div><!--/IF:incidents.none-->
       <div class="links-list">
@@ -401,7 +401,7 @@ write("index",
         <!--LOOP:news--><a href="{{url}}" target="_blank" rel="noopener"><span class="src">{{category}}</span>{{headline}}</a><!--/LOOP:news-->
       </div><p class="note"><a href="/industry-news/">All headlines</a></p></div>
     </div>
-    <p class="note">Diesel prices include all federal and provincial fuel, carbon, and sales taxes. <a href="/fuel-cost-calculator/">Work out what a run costs</a></p>
+    <p class="note">Diesel prices include taxes on both sides: federal and state fuel taxes in the US (EIA), and federal and provincial fuel, carbon and sales taxes in Canada (NRCan). <a href="/fuel-cost-calculator/">Work out what a run costs</a></p>
   </section>
 ''' + subscribe("One email, Wednesday mornings",
    "What moved in diesel on both sides of the border, at the crossings, and in freight demand, with every figure dated and linked back to this dashboard. Written for people who move freight, not for people who write about it.")
@@ -511,7 +511,8 @@ write("freight-barometer",
     <a class="stat" href="/us/"><div class="l">US diesel</div><div class="v">{{eia.us_national_usd_gal}}</div><div class="s">$/gal · ten EIA districts · week {{eia.date}}</div></a>
     <a class="stat" href="/fuel-prices/"><div class="l">North American index</div><div class="v">{{eia.nadi}}</div><div class="s">¢/L · CA + US, equal weight</div></a>
     <a class="stat" href="/exchange-rate/"><div class="l">USD / CAD</div><div class="v">{{fx.usd_cad}}</div><div class="s">{{fx.direction}} {{fx.change}} · Bank of Canada</div></a>
-    <a class="stat" href="/border-wait-times/"><div class="l">Busiest crossing</div><div class="v">{{border.max_wait}}</div><div class="s">{{border.max_name}} · into Canada · CBSA</div></a>
+    <a class="stat" href="/border-wait-times/"><div class="l">Busiest into the US</div><div class="v">{{border.us_max_wait}}</div><div class="s">{{border.us_max_name}} · CBP</div></a>
+    <a class="stat" href="/border-wait-times/"><div class="l">Busiest into Canada</div><div class="v">{{border.max_wait}}</div><div class="s">{{border.ca_max_name}} · CBSA</div></a>
   </div>
 
   <section class="sec">
@@ -791,14 +792,14 @@ write("border-wait-times",
   <section class="hero">
     <span class="eyebrow">CBSA and CBP commercial lanes</span>
     <h1>Border wait times</h1>
-    <p class="stand">Busiest into Canada right now: <b>{{border.max_name}}</b> at <b>{{border.max_wait}}</b> — wait is idle time, and the faster crossing is usually the cheaper crossing. Polled every 30 minutes from CBSA's own capture times.</p>
+    <p class="stand">Busiest into the US right now: <b>{{border.us_max_name}}</b> at <b>{{border.us_max_wait}}</b>. Busiest into Canada: <b>{{border.ca_max_name}}</b> at <b>{{border.max_wait}}</b>. Wait is idle time, and the faster crossing is usually the cheaper crossing. Polled every 30 minutes, each figure with its agency's own capture time.</p>
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
   <div class="rows">
-  <!--LOOP:crossings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{name}}<small>{{sub}}</small></span><span class="v"><span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span><span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span></span></a><!--/LOOP:crossings-->
+  <!--LOOP:crossings--><a class="r" href="/border-wait-times/{{slug}}/"><span class="k">{{label}}<small>{{sub}}</small></span><span class="v"><span class="dir {{us_status_class}}">{{us_wait}}<small>into the US</small></span><span class="dir {{status_class}}">{{wait}}<small>into Canada</small></span></span></a><!--/LOOP:crossings-->
   </div>
-  <p class="note">Each crossing shows both directions. <b>Into Canada</b> is the Canada Border Services Agency (CBSA) commercial lane feed. <b>Into the US</b> is the US Customs and Border Protection (CBP) feed. Each agency measures only the traffic entering its own country, so the two queues are separate and often differ. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
+  <p class="note">Each crossing shows both directions. <b>Into the US</b> is the US Customs and Border Protection (CBP) feed. <b>Into Canada</b> is the Canada Border Services Agency (CBSA) commercial lane feed. Each agency measures only the traffic entering its own country, so the two queues are separate and often differ. Waits change quickly and a figure thirty minutes old may not describe the queue you arrive at.</p>
   <p class="note">Looking for the US-bound direction, or the Mexican border? We publish every port the US Customs and Border Protection feed carries — <a href="/border-wait-times/all-ports/">every US land border crossing</a>, including the commercial and FAST lanes.</p>
 ''' + cite(
         'Northern Mile border waits: commercial lane waits from the CBSA and US Customs and Border Protection feeds, each captured at its own source. Northern Mile Media, dashboard.northernmilemedia.com/border-wait-times/') + sponsor("sponsor_border") + subscribe("Border and diesel, weekly",
@@ -807,7 +808,7 @@ write("border-wait-times",
     <div class="lead"><h2>Reading these numbers</h2></div>
     <div class="reading">
       <p class="note" style="margin-top:0">These are commercial lane figures, not passenger lanes. A crossing showing a short wait can still be slow for a specific load if secondary inspection is busy, and the feed carries no visibility into that.</p>
-      <p class="note">We publish CBSA's capture time rather than our own so you can judge staleness yourself. If a crossing has not reported recently, that shows in the timestamp.</p>
+      <p class="note">We publish each agency's capture time (CBP and CBSA) rather than our own so you can judge staleness yourself. If a crossing has not reported recently, that shows in the timestamp.</p>
     </div>
   </section>
 ''' + foot())
@@ -958,7 +959,7 @@ INCIDENTS_MAP = '''
     <span class="eyebrow">Freight corridor closures</span>
     <h1>Road incidents</h1>
     <p class="stand">Closures and major collisions on the freight corridors we monitor. Click a pin or a row for detail.</p>
-    <p class="note">Currently Ontario, British Columbia, and three California districts: Central Valley, San Diego and Imperial, and Orange County and Los Angeles. We publish every source that is free and needs no key. Caltrans serves only some of its districts, and other state 511 services publish behind keys we do not hold, so this page is not yet coast to coast.</p>
+    <p class="note">In the US: lane and road closures from New York, Washington, Minnesota, North Dakota, Wisconsin, Indiana, Kentucky and Missouri on the federal work zone standard, plus three California districts (Central Valley, San Diego and Imperial, and Orange County and Los Angeles). In Canada: Ontario and British Columbia. We publish every source that is free and needs no key. Other states and provinces publish behind keys we do not hold, so this page is not yet coast to coast.</p>
     <div class="meta"><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 '''
@@ -1153,7 +1154,7 @@ INCIDENTS_JS = '''<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
 # Build incidents head with the extra leaflet stylesheet folded in.
 _inc_head = head(
     "Road Incidents & Closures, Canada and the US | Northern Mile",
-    "Live closures and major collisions on freight corridors in Ontario, British Columbia and California, on an interactive map. Click any incident for detail and the source report.",
+    "Live closures and major collisions on US and Canadian freight corridors, from eight states, California, Ontario and British Columbia, on an interactive map.",
     "/road-incidents/", "og.jpg",
     '{"@context":"https://schema.org","@graph":[' + crumb("Road incidents","/road-incidents/") + ']}', "article")
 _inc_head = _inc_head.replace('<link rel="stylesheet" href="/assets/nm.css',
@@ -1172,7 +1173,7 @@ write("road-incidents",
     <div class="reading">
       <p>A lane closure is not a delay, it is a decision. A single-lane night closure on a corridor carrying thousands of trucks a day moves the queue rather than removing it, and the cost lands as driver hours against a driving limit, not as a line on an invoice.</p>
       <p>Read the type before the location. <b>Closures</b> are the ones that reroute you. <b>Roadwork</b> is scheduled and usually carries a date range, so it belongs in planning rather than in today's decision. This page separates the two and invents neither: both come straight from the agency's own feed, with the coordinates the agency published.</p>
-      <p>Coverage is honest about its edges. Ontario, British Columbia and three California districts serve open feeds. Other states publish behind keys we do not hold, and Caltrans serves only some of its districts. Where a source is missing it is missing from the page, not estimated into it.</p>
+      <p>Coverage is honest about its edges. Eight states on the federal work zone standard, three California districts, Ontario and British Columbia serve open feeds. Other states and provinces publish behind keys we do not hold, and Caltrans serves only some of its districts. Where a source is missing it is missing from the page, not estimated into it.</p>
     </div>
   </section>
 
@@ -1220,7 +1221,7 @@ write("methodology",
     <p class="note">This dashboard contains information licensed under the <a href="https://open.canada.ca/en/open-government-licence-canada" rel="license">Open Government Licence – Canada</a>. Diesel prices originate with Natural Resources Canada.</p>
 
     <h2 style="margin-top:32px">Cadence</h2>
-    <p class="note" style="margin-top:8px">NRCan surveys weekly. The dashboard rebuilds every 30 minutes from the most recent survey, so the diesel figure holds steady between prints and deltas step once a week. The exchange rate reflects the most recent Bank of Canada observation, which is business-daily. Border wait times come from the live CBSA feed, polled every 30 minutes; the timestamp shown is CBSA's capture time for that crossing, not our fetch time, so it reflects how current CBSA's own data is.</p>
+    <p class="note" style="margin-top:8px">NRCan surveys weekly. The dashboard rebuilds every 30 minutes from the most recent survey, so the diesel figure holds steady between prints and deltas step once a week. The exchange rate reflects the most recent Bank of Canada observation, which is business-daily. Border wait times come from the live CBP and CBSA feeds, polled every 30 minutes; the timestamp shown is CBSA's capture time for that crossing, not our fetch time, so it reflects how current CBSA's own data is.</p>
 
     <h2 style="margin-top:32px">Revision history</h2>
     <p class="note" style="margin-top:8px"><b>2026-08-15</b> — Historical backfill. Weekly diesel prints from 2016 through the first live-collection date were reconstructed from Natural Resources Canada's annual city price tables, using the identical ten-province roll-up applied to live data. Prints from the first live-collection date onward come from live weekly collection. Both paths use the same NRCan source and the same method. Where NRCan revised a price after its first print, the reconstructed (revised) value is shown. For the 2026-08-11 print the provincial figures were revised by 0.1–0.9¢/L; the national index was unchanged at 222.2¢/L.</p>
@@ -1271,7 +1272,7 @@ write("press",
       <q id="citation">Northern Mile Canadian Diesel Index: {{fuel.national_diesel}}¢/L across ten Canadian provinces, NRCan weekly survey print {{fuel.print_date}}. Northern Mile Media, dashboard.northernmilemedia.com/methodology/nmdi/</q>
       <div class="row"><button class="btn btn--brand" type="button" data-copy="citation"><span class="cp">Copy citation</span></button><a class="btn" href="/methodology/nmdi/">Methodology</a></div>
     </div>
-    <p class="note">Every figure on the dashboard carries its own citation in the same format. We name the primary source (Natural Resources Canada, Bank of Canada, CBSA, EIA) and the observation date — never an un-dated number.</p>
+    <p class="note">Every figure on the dashboard carries its own citation in the same format. We name the primary source (EIA, CBP, Natural Resources Canada, Bank of Canada, CBSA) and the observation date — never an un-dated number.</p>
   </section>
 
   <section class="sec">

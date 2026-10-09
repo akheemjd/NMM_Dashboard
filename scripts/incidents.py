@@ -164,6 +164,104 @@ def _coords(geo):
         return None, None
 
 
+# ── US states: WZDx work-zone feeds ─────────────────────────────────────────────────────
+# The federal Work Zone Data Exchange standard. These states publish it free and unkeyed
+# (FHWA feed registry, data.transportation.gov 69qe-yiui). Picked for the freight
+# corridors and the northern border. Only live closures are kept: a work zone with every
+# lane open does not change a truck's day.
+WZDX_FEEDS = {
+    "NY": "https://511ny.org/api/wzdx",
+    "WA": "https://wzdx.wsdot.wa.gov/api/v4/WorkZoneFeed",
+    "MN": "https://mn.carsprogram.org/carsapi_v1/api/wzdx",
+    "ND": "https://travelfiles.dot.nd.gov/geojson_nc/wzdx_geojson.json",
+    "WI": "https://511wi.gov/api/wzdx",
+    "IN": "https://in.carsprogram.org/carsapi_v1/api/wzdx",
+    "KY": "https://storage.googleapis.com/kytc-its-2020-openrecords/public/feeds/WZDx/kytc_wzdx_v4.1.geojson",
+    "MO": "https://traveler.modot.org/timconfig/feed/desktop/mo_wzdx.json",
+}
+WZDX_PER_STATE = 8
+_WZ_IMPACT = {
+    "all-lanes-closed": ("road closure", "Road closed"),
+    "some-lanes-closed": ("lane closure", "Lane closure"),
+    "some-lanes-closed-merge-left": ("lane closure", "Lane closure"),
+    "some-lanes-closed-merge-right": ("lane closure", "Lane closure"),
+    "some-lanes-closed-split": ("lane closure", "Lane closure"),
+    "alternating-one-way": ("lane closure", "Alternating one-way traffic"),
+}
+_MAJOR_ROAD = re.compile(r"^(I|IH|US|Interstate)[- ]?\d", re.I)
+
+
+def _iso_ts(v):
+    try:
+        return datetime.fromisoformat(str(v).replace("Z", "+00:00")).timestamp()
+    except (TypeError, ValueError):
+        return None
+
+
+def _wzdx_point(geom):
+    """First coordinate of a WZDx geometry as (lat, lng)."""
+    try:
+        c = geom.get("coordinates")
+        while isinstance(c, list) and c and isinstance(c[0], list):
+            c = c[0]
+        return float(c[1]), float(c[0])
+    except Exception:
+        return None, None
+
+
+def _wzdx_state(state, url):
+    data = fetch_json(url, timeout=40)
+    feats = data.get("features", []) if isinstance(data, dict) else []
+    now = datetime.now(timezone.utc).timestamp()
+    out = []
+    for f in feats:
+        pr = f.get("properties") or {}
+        core = pr.get("core_details") or {}
+        impact = (pr.get("vehicle_impact") or "").lower()
+        if impact not in _WZ_IMPACT:
+            continue
+        st, en = _iso_ts(pr.get("start_date")), _iso_ts(pr.get("end_date"))
+        if en is not None and en < now:
+            continue
+        lat, lng = _wzdx_point(f.get("geometry") or {})
+        if lat is None:
+            continue
+        roads = core.get("road_names") or []
+        road = str(roads[0]).strip() if roads else ""
+        direction = (core.get("direction") or "").replace("bound", "bound").title()
+        etype, words = _WZ_IMPACT[impact]
+        desc = (core.get("description") or "").strip()
+        lead = f"{words} on {road}" + (f" {direction.lower()}" if direction and direction.lower() != "unknown" else "")
+        text = f"{lead}, {state}." + (f" {desc}" if desc and desc.lower() not in lead.lower() else "")
+        out.append({
+            "id": f"{state}-{f.get('id') or core.get('data_source_id') or len(out)}",
+            "province": state,
+            "country": "US",
+            "highway": road,
+            "direction": direction if direction.lower() != "unknown" else "",
+            "description": text[:300],
+            "event_type": etype,
+            "severity": "closed" if impact == "all-lanes-closed" else "",
+            "closure": impact == "all-lanes-closed",
+            "lanes": impact.replace("-", " "),
+            "lat": lat,
+            "lng": lng,
+            "start": pr.get("start_date") or "",
+            "end": pr.get("end_date") or "",
+            "updated": core.get("update_date") or pr.get("start_date") or "",
+            "_major": bool(_MAJOR_ROAD.match(road)),
+            "_full": impact == "all-lanes-closed",
+            "_live": st is None or st <= now,
+        })
+    # Live before planned, interstates and US routes first, full closures first.
+    out.sort(key=lambda i: (not i["_live"], not i["_major"], not i["_full"]))
+    kept = out[:WZDX_PER_STATE]
+    for i in kept:
+        for k in ("_major", "_full", "_live"):
+            i.pop(k, None)
+    return kept
+
+
 def collect_incidents():
     incidents = []
 
@@ -267,6 +365,20 @@ def collect_incidents():
         except Exception as e:
             print(f"  Caltrans D{_d}: {e}")
 
+    # US states on the WZDx standard.
+    for _st, _url in WZDX_FEEDS.items():
+        try:
+            got = _wzdx_state(_st, _url)
+            incidents.extend(got)
+            print(f"  WZDx {_st}: {len(got)} closures")
+        except Exception as e:
+            print(f"  WZDx {_st}: {e}")
+
+    # Every incident names its country, so pages can balance Canada and the US.
+    _CA_PROV = {"ON", "BC", "AB", "SK", "MB", "QC", "NB", "NS", "PE", "NL", "YT", "NT", "NU"}
+    for _i in incidents:
+        _i.setdefault("country", "CA" if _i.get("province") in _CA_PROV else "US")
+
     # Every source gets the same scheduled/active decision, so one rule runs the split.
     _today_s = _today()
     for _i in incidents:
@@ -318,7 +430,7 @@ def collect_incidents():
             "incidents": incidents,
             "total": len(incidents),
             "updated": datetime.now(timezone.utc).isoformat(),
-            "sources": ["Ontario 511", "BC DriveBC", "Caltrans LCS"],
+            "sources": ["Ontario 511", "BC DriveBC", "Caltrans LCS"] + [f"{k} WZDx" for k in WZDX_FEEDS],
         }, f, indent=2, default=str)
 
     by_prov = {}
