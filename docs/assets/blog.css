@@ -99,3 +99,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #F2B9
   .gh-footer-signup-header{font-size:28px!important}
   .nm-word{font-size:19px}
 }
+
+/* Signup forms: the theme fixes the form at 56px tall, so a wrapped button spilled out of
+   it on phones. Let the form grow, and stack it full width on narrow screens. */
+.gh-form{height:auto!important}
+.gh-footer-signup .gh-form-input{font-family:'Overpass',sans-serif!important;font-size:16px!important}
+.gh-form .gh-button{justify-content:center}
+@media (max-width:600px){
+  .home-template .gh-header .gh-form,.gh-footer-signup .gh-form{flex-direction:column;align-items:stretch;gap:10px}
+  .home-template .gh-header .gh-form-input,.gh-footer-signup .gh-form-input{flex:0 0 auto!important;width:100%!important}
+  .home-template .gh-header .gh-form .gh-button,.gh-footer-signup .gh-form .gh-button{width:100%!important}
+}

@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded',function(){
   /* Post pages: hide the old feature cards that repeat the headline as an image. Photos stay. */
   var fi=document.querySelector('.post-template .gh-feature-image');
   if(fi&&/-hero(-\d+)?\.(png|jpe?g|webp)/i.test(fi.currentSrc||fi.src)){var f=fi.closest('figure');if(f)f.classList.add('nm-hide-hero');}
+  /* Footer signup on every page: same wording as the hero form. */
+  var ff=document.querySelector('.gh-footer-signup .gh-form');
+  if(ff){var fi2=ff.querySelector('.gh-form-input');if(fi2)fi2.placeholder='Your email';var fb=ff.querySelector('.gh-button span span')||ff.querySelector('.gh-button span');if(fb&&!fb.querySelector('svg'))fb.textContent='Get the Brief';}
   if(!document.body.classList.contains('home-template'))return;
   var inner=document.querySelector('.gh-header-inner'); if(!inner)return;
   var title=inner.querySelector('.gh-header-title'), form=inner.querySelector('.gh-form');
