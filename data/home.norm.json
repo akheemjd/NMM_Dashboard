@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-10 00:01",
-  "updated_iso": "2026-10-10T00:01:07+00:00",
-  "build_version": "1791590467",
+  "updated_at": "2026-10-10 01:01",
+  "updated_iso": "2026-10-10T01:01:50+00:00",
+  "build_version": "1791594110",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -12,7 +12,7 @@
     "max_name": "Ambassador Bridge",
     "max_wait": "50 min",
     "us_max_name": "Coutts-Sweetgrass",
-    "us_max_wait": "60 min",
+    "us_max_wait": "45 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 69,
+    "active_count": 59,
     "gauge_class": "warn",
-    "status_line": "Live now: 47 in the US, 29 in Canada.",
+    "status_line": "Live now: 39 in the US, 27 in Canada.",
     "incidents": [
       {
-        "road": "US 75",
-        "what": "Road closed on US 75 northbound, MN. Closed, Construction Work, Detour In\u2026",
-        "severity_label": "Minor",
-        "severity_class": "heavy",
+        "road": "I-5 in Stanislaus County",
+        "what": "Route 5 near Westley. Rest Area Work. All of 1 lanes closed.",
+        "severity_label": "Closed",
+        "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Eastbound COLLECTOR RAMP at HWY 410, Mississauga. Right\u2026",
+        "what": "Collision on HWY 401 Westbound  at WESTNEY RD, Ajax. 1 centre lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "19:45 EDT",
+      "captured_at": "20:18 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "8 min",
+      "us_wait": "9 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "22 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:50 EDT",
+      "captured_at": "20:00 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,11 +454,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:24 MDT",
+      "captured_at": "18:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "60 min",
+      "us_wait": "45 min",
       "us_status_class": "heavy"
     },
     {
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT",
+      "captured_at": "17:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 CDT",
+      "captured_at": "19:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow, US-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
