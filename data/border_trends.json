@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T07:01:48.718382",
+  "generated": "2026-10-10T08:02:41.049037",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 0,
-        "captured": "10/10/2026 04:55:57"
+        "captured": "10/10/2026 06:01:29"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": true,
         "delay": 0,
-        "captured": "10/10/2026 05:55:57"
+        "captured": "10/10/2026 07:01:29"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 2,
-        "captured": "10/10/2026 06:55:57"
+        "delay": 6,
+        "captured": "10/10/2026 08:01:29"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/10/2026 06:55:57"
+        "captured": "10/10/2026 08:01:29"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/10/2026 06:55:57"
+        "captured": "10/10/2026 08:01:29"
       }
     },
     "pacific-blaine": {
@@ -910,7 +910,7 @@
         "label": "Pacific Highway",
         "reported": true,
         "delay": 5,
-        "captured": "10/10/2026 03:55:57"
+        "captured": "10/10/2026 05:01:29"
       }
     },
     "queenston-lewiston": {
@@ -1061,8 +1061,8 @@
       "us": {
         "label": "Lewiston Bridge",
         "reported": true,
-        "delay": 10,
-        "captured": "10/10/2026 06:55:57"
+        "delay": 0,
+        "captured": "10/10/2026 08:01:29"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/10/2026 06:55:57"
+        "captured": "10/10/2026 08:01:29"
       }
     },
     "windsor-detroit": {
@@ -1365,8 +1365,8 @@
       "us": {
         "label": "Ambassador Bridge",
         "reported": true,
-        "delay": 0,
-        "captured": "10/10/2026 06:55:57"
+        "delay": 5,
+        "captured": "10/10/2026 08:01:29"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1959,12 +1959,12 @@
     },
     "us-buffalo-niagara-falls-lewiston-bridge": {
       "id": "us-buffalo-niagara-falls-lewiston-bridge",
-      "avg_delay": 3,
+      "avg_delay": 2,
       "min_delay": 0,
-      "max_delay": 10,
-      "p50": 2.5,
-      "p75": 3.8,
-      "p90": 7.0,
+      "max_delay": 4,
+      "p50": 1.0,
+      "p75": 2.8,
+      "p90": 3.5,
       "observations": 6,
       "days_covered": 6,
       "hourly": {
@@ -2092,7 +2092,7 @@
           "label": "Fri"
         },
         "5": {
-          "avg": 10,
+          "avg": 0,
           "count": 1,
           "label": "Sat"
         },
@@ -2107,10 +2107,10 @@
     "us-buffalo-niagara-falls-peace-bridge": {
       "id": "us-buffalo-niagara-falls-peace-bridge",
       "avg_delay": 6,
-      "min_delay": 2,
+      "min_delay": 3,
       "max_delay": 12,
-      "p50": 4.5,
-      "p75": 6.5,
+      "p50": 5.5,
+      "p75": 6.8,
       "p90": 9.5,
       "observations": 6,
       "days_covered": 6,
@@ -2239,7 +2239,7 @@
           "label": "Fri"
         },
         "5": {
-          "avg": 2,
+          "avg": 6,
           "count": 1,
           "label": "Sat"
         },
@@ -2988,7 +2988,7 @@
     },
     "us-detroit-ambassador-bridge": {
       "id": "us-detroit-ambassador-bridge",
-      "avg_delay": 4,
+      "avg_delay": 5,
       "min_delay": 0,
       "max_delay": 10,
       "p50": 5.0,
@@ -3121,7 +3121,7 @@
           "label": "Fri"
         },
         "5": {
-          "avg": 0,
+          "avg": 5,
           "count": 1,
           "label": "Sat"
         },
@@ -3429,14 +3429,14 @@
     },
     "us-el-paso-ysleta": {
       "id": "us-el-paso-ysleta",
-      "avg_delay": 37,
-      "min_delay": 30,
+      "avg_delay": 32,
+      "min_delay": 10,
       "max_delay": 45,
       "p50": 35.0,
-      "p75": 40.0,
-      "p90": 43.0,
-      "observations": 5,
-      "days_covered": 5,
+      "p75": 38.8,
+      "p90": 42.5,
+      "observations": 6,
+      "days_covered": 6,
       "hourly": {
         "0": {
           "avg": null,
@@ -3562,8 +3562,8 @@
           "label": "Fri"
         },
         "5": {
-          "avg": null,
-          "count": 0,
+          "avg": 10,
+          "count": 1,
           "label": "Sat"
         },
         "6": {
