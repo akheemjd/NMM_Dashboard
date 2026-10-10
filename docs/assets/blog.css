@@ -118,12 +118,14 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #F2B9
    either, so on a 1920px monitor the feed would have stretched to 1870px wide.
 
    Both are pinned to 1160px here - the width the hero rules above already intended - so the hero
-   and the feed finally agree and the gutter scales instead of collapsing. !important because the
+   and the feed finally agree and the gutter scales instead of collapsing. The 48px ceiling
+   matches the hero padding set in the .home-template rules above; at 40px the feed sat 3px left
+   of the headline, which reads as a mistake rather than a decision. !important because the
    theme's own .gh-header-inner.gh-inner carries the same specificity as ours and is the value we
    are deliberately overriding. */
 :root {
   --nm-maxw: 1160px;
-  --nm-pad: clamp(20px, 4vw, 40px);
+  --nm-pad: clamp(20px, 4vw, 48px);
 }
 section.gh-header,
 section.gh-container {
