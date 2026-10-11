@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-11 04:01",
-  "updated_iso": "2026-10-11T04:01:22+00:00",
-  "build_version": "1791691282",
+  "updated_at": "2026-10-11 05:01",
+  "updated_iso": "2026-10-11T05:01:32+00:00",
+  "build_version": "1791694892",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 2,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "40 min",
-    "us_max_name": "Peace Bridge",
-    "us_max_wait": "40 min",
-    "ca_max_name": "Ambassador Bridge"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min",
+    "us_max_name": "Coutts-Sweetgrass",
+    "us_max_wait": "30 min",
+    "ca_max_name": "Peace Bridge"
   },
   "fuel": {
     "national_diesel": "259.1",
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 60,
+    "active_count": 63,
     "gauge_class": "warn",
-    "status_line": "Live now: 40 in the US, 27 in Canada.",
+    "status_line": "Live now: 40 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 17",
-        "what": "Collision on HWY 17 Westbound  at Hwy 7045(Macintyre Rd), Goulais River,\u2026",
+        "road": "HWY 410",
+        "what": "Disabled Vehicle on HWY 410 Northbound  at HWY 401, Mississauga. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,16 +375,16 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "40 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:25 EDT",
+      "captured_at": "00:52 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "30 min",
-      "us_status_class": "heavy"
+      "us_wait": "7 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "20 min",
-      "us_status_class": "heavy"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "40 min",
+      "us_wait": "27 min",
       "us_status_class": "heavy"
     },
     {
@@ -443,8 +443,8 @@
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -458,18 +458,18 @@
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "30 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "30 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT",
+      "captured_at": "21:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 CDT",
+      "captured_at": "23:30 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "4 of 8 crossings slow, US-bound",
+      "value": "4/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "4 of 9 crossings slow, Canada-bound",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
-      "source": "Truck News",
-      "headline": "Isaac names Mattison as Driver of the Year",
-      "url": "https://www.trucknews.com/transportation/isaac-names-mattison-as-driver-of-the-year/1003223043/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Pilot, Tesla open megacharger site in Georgia",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/pilot-tesla-open-megacharger-site-in-georgia",
+      "why": "Industry movement worth tracking."
     },
     {
       "category": "industry",
-      "source": "Truck News",
-      "headline": "Couche-Tard to acquire 18 Irving Oil commercial cardlocks in Quebec, Ontario",
-      "url": "https://www.trucknews.com/infrastructure/couche-tard-to-acquire-18-irving-oil-commercial-cardlocks-in-quebec-ontario/1003223050/",
+      "source": "The Trucker",
+      "headline": "Isaias weakens but flooding threats persist as hundreds of thousands grapple with power outages",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/isaias-weakens-but-flooding-threats-persist-as-hundreds-of-thousands-grapple-with-power-outages",
       "why": "Industry movement worth tracking."
     }
   ],
