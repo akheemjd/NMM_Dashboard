@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-11 01:00",
-  "updated_iso": "2026-10-11T01:00:50+00:00",
-  "build_version": "1791680450",
+  "updated_at": "2026-10-11 02:01",
+  "updated_iso": "2026-10-11T02:01:13+00:00",
+  "build_version": "1791684073",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 2,
-    "moderate_count": 3,
+    "heavy_count": 1,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
     "max_wait": "40 min",
     "us_max_name": "Coutts-Sweetgrass",
-    "us_max_wait": "45 min",
+    "us_max_wait": "20 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 520",
-        "what": "Debris on HWY 520 Westbound  at CHUR-LEE RD(S), Dunchurch. Lane and WEST\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR at ALLEN ROAD, Toronto. 3 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "7 min",
-      "us_status_class": "mod"
+      "us_wait": "16 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Peace Bridge",
@@ -458,18 +458,18 @@
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "45 min",
+      "us_wait": "20 min",
       "us_status_class": "heavy"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT",
+      "captured_at": "18:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,11 +484,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 CDT",
+      "captured_at": "19:56 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "8 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "4 of 9 crossings slow, US-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
