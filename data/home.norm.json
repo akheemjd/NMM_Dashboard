@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-11 00:01",
-  "updated_iso": "2026-10-11T00:01:34+00:00",
-  "build_version": "1791676894",
+  "updated_at": "2026-10-11 01:00",
+  "updated_iso": "2026-10-11T01:00:50+00:00",
+  "build_version": "1791680450",
   "border": {
     "gauge_class": "warn",
-    "heavy_count": 1,
+    "heavy_count": 2,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
@@ -12,7 +12,7 @@
     "max_name": "Ambassador Bridge",
     "max_wait": "40 min",
     "us_max_name": "Coutts-Sweetgrass",
-    "us_max_wait": "40 min",
+    "us_max_wait": "45 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 61,
+    "active_count": 70,
     "gauge_class": "warn",
-    "status_line": "Live now: 40 in the US, 28 in Canada.",
+    "status_line": "Live now: 48 in the US, 29 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KEELE ST, Toronto. 1 right\u2026",
+        "road": "HWY 520",
+        "what": "Debris on HWY 520 Westbound  at CHUR-LEE RD(S), Dunchurch. Lane and WEST\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "3 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "4 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:12 EDT",
+      "captured_at": "20:45 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -450,26 +450,26 @@
       "name": "Coutts-Sweetgrass",
       "slug": "coutts-sweetgrass",
       "sub": "Sweetgrass, MT and Coutts, AB \u00b7 I-15 / AB-4 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:57 MDT",
+      "captured_at": "18:50 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "40 min",
+      "us_wait": "45 min",
       "us_status_class": "heavy"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT",
+      "captured_at": "17:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "6 of 9 crossings slow, US-bound",
-      "value": "6/9",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "4 of 9 crossings slow, Canada-bound",
-      "value": "4/9",
+      "note": "5 of 9 crossings slow, Canada-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
