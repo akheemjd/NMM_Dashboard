@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-12 19:01",
-  "updated_iso": "2026-10-12T19:01:41+00:00",
-  "build_version": "1791831701",
+  "updated_at": "2026-10-12 20:01",
+  "updated_iso": "2026-10-12T20:01:05+00:00",
+  "build_version": "1791835265",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Emerson-Pembina",
-    "us_max_wait": "40 min",
+    "us_max_name": "Thousand Islands Bridge",
+    "us_max_wait": "15 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 63,
+    "active_count": 71,
     "gauge_class": "warn",
-    "status_line": "Live now: 44 in the US, 33 in Canada.",
+    "status_line": "Live now: 52 in the US, 33 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Southbound EXPRESS RAMP at QEW, Toronto. Right lane\u2026",
+        "road": "HWY 11",
+        "what": "Collision on HWY 11 Both Directions  between COLLINS RD(E), North Bay and HWY\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,11 +379,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:17 EDT",
+      "captured_at": "15:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "3 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "12 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "3 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -450,11 +450,11 @@
       "name": "Coutts-Sweetgrass",
       "slug": "coutts-sweetgrass",
       "sub": "Sweetgrass, MT and Coutts, AB \u00b7 I-15 / AB-4 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:17 MDT",
+      "captured_at": "12:57 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT",
+      "captured_at": "12:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 CDT",
+      "captured_at": "14:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "40 min",
-      "us_status_class": "heavy"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "8 of 9 crossings slow, US-bound",
-      "value": "8/9",
+      "note": "7 of 9 crossings slow, US-bound",
+      "value": "7/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "4 of 9 crossings slow, Canada-bound",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
