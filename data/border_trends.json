@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T06:01:45.991703",
+  "generated": "2026-10-12T07:02:26.656912",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 5,
-        "captured": "10/12/2026 03:55:07"
+        "captured": "10/12/2026 05:00:23"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": true,
         "delay": 0,
-        "captured": "10/12/2026 04:55:07"
+        "captured": "10/12/2026 06:00:23"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 3,
-        "captured": "10/12/2026 05:55:07"
+        "delay": 10,
+        "captured": "10/12/2026 07:00:23"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/12/2026 05:55:07"
+        "captured": "10/12/2026 07:00:23"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/12/2026 05:55:07"
+        "captured": "10/12/2026 07:00:23"
       }
     },
     "pacific-blaine": {
@@ -909,8 +909,8 @@
       "us": {
         "label": "Pacific Highway",
         "reported": true,
-        "delay": 5,
-        "captured": "10/12/2026 02:55:07"
+        "delay": 20,
+        "captured": "10/12/2026 04:00:23"
       }
     },
     "queenston-lewiston": {
@@ -1061,8 +1061,8 @@
       "us": {
         "label": "Lewiston Bridge",
         "reported": true,
-        "delay": 16,
-        "captured": "10/12/2026 05:55:07"
+        "delay": 5,
+        "captured": "10/12/2026 07:00:23"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/12/2026 05:55:07"
+        "captured": "10/12/2026 07:00:23"
       }
     },
     "windsor-detroit": {
@@ -1365,8 +1365,8 @@
       "us": {
         "label": "Ambassador Bridge",
         "reported": true,
-        "delay": 20,
-        "captured": "10/12/2026 05:55:07"
+        "delay": 5,
+        "captured": "10/12/2026 07:00:23"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1518,12 +1518,12 @@
     },
     "us-blaine-pacific-highway": {
       "id": "us-blaine-pacific-highway",
-      "avg_delay": 2,
+      "avg_delay": 4,
       "min_delay": 0,
-      "max_delay": 5,
+      "max_delay": 20,
       "p50": 0.0,
       "p75": 5.0,
-      "p90": 5.0,
+      "p90": 9.5,
       "observations": 8,
       "days_covered": 8,
       "hourly": {
@@ -1626,7 +1626,7 @@
       },
       "daily": {
         "0": {
-          "avg": 2,
+          "avg": 10,
           "count": 2,
           "label": "Mon"
         },
@@ -1959,12 +1959,12 @@
     },
     "us-buffalo-niagara-falls-lewiston-bridge": {
       "id": "us-buffalo-niagara-falls-lewiston-bridge",
-      "avg_delay": 3,
+      "avg_delay": 2,
       "min_delay": 0,
-      "max_delay": 16,
+      "max_delay": 5,
       "p50": 2.0,
       "p75": 3.2,
-      "p90": 7.6,
+      "p90": 4.3,
       "observations": 8,
       "days_covered": 8,
       "hourly": {
@@ -2067,7 +2067,7 @@
       },
       "daily": {
         "0": {
-          "avg": 10,
+          "avg": 4,
           "count": 2,
           "label": "Mon"
         },
@@ -2106,11 +2106,11 @@
     },
     "us-buffalo-niagara-falls-peace-bridge": {
       "id": "us-buffalo-niagara-falls-peace-bridge",
-      "avg_delay": 7,
+      "avg_delay": 8,
       "min_delay": 1,
       "max_delay": 19,
-      "p50": 4.5,
-      "p75": 8.2,
+      "p50": 6.0,
+      "p75": 10.5,
       "p90": 14.1,
       "observations": 8,
       "days_covered": 8,
@@ -2214,7 +2214,7 @@
       },
       "daily": {
         "0": {
-          "avg": 3,
+          "avg": 6,
           "count": 2,
           "label": "Mon"
         },
@@ -2988,12 +2988,12 @@
     },
     "us-detroit-ambassador-bridge": {
       "id": "us-detroit-ambassador-bridge",
-      "avg_delay": 7,
+      "avg_delay": 5,
       "min_delay": 0,
-      "max_delay": 20,
+      "max_delay": 10,
       "p50": 5.0,
-      "p75": 10.0,
-      "p90": 13.0,
+      "p75": 6.2,
+      "p90": 10.0,
       "observations": 8,
       "days_covered": 8,
       "hourly": {
@@ -3096,7 +3096,7 @@
       },
       "daily": {
         "0": {
-          "avg": 12,
+          "avg": 5,
           "count": 2,
           "label": "Mon"
         },
@@ -3135,11 +3135,11 @@
     },
     "us-detroit-gordie-howe-international-bridge": {
       "id": "us-detroit-gordie-howe-international-bridge",
-      "avg_delay": 1,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 5,
       "p50": 0.0,
-      "p75": 1.2,
+      "p75": 5.0,
       "p90": 5.0,
       "observations": 8,
       "days_covered": 8,
@@ -3243,7 +3243,7 @@
       },
       "daily": {
         "0": {
-          "avg": 2,
+          "avg": 5,
           "count": 2,
           "label": "Mon"
         },
@@ -4458,14 +4458,14 @@
     },
     "us-laredo-world-trade-bridge": {
       "id": "us-laredo-world-trade-bridge",
-      "avg_delay": 40,
-      "min_delay": 5,
+      "avg_delay": 35,
+      "min_delay": 0,
       "max_delay": 60,
       "p50": 45.0,
-      "p75": 57.5,
+      "p75": 56.2,
       "p90": 60.0,
-      "observations": 7,
-      "days_covered": 7,
+      "observations": 8,
+      "days_covered": 8,
       "hourly": {
         "0": {
           "avg": null,
@@ -4566,8 +4566,8 @@
       },
       "daily": {
         "0": {
-          "avg": 60,
-          "count": 1,
+          "avg": 30,
+          "count": 2,
           "label": "Mon"
         },
         "1": {
@@ -6935,6 +6935,153 @@
         "3": {
           "avg": 0,
           "count": 1,
+          "label": "Thu"
+        },
+        "4": {
+          "avg": null,
+          "count": 0,
+          "label": "Fri"
+        },
+        "5": {
+          "avg": null,
+          "count": 0,
+          "label": "Sat"
+        },
+        "6": {
+          "avg": null,
+          "count": 0,
+          "label": "Sun"
+        }
+      },
+      "us": null
+    },
+    "us-detroit-windsor-tunnel": {
+      "id": "us-detroit-windsor-tunnel",
+      "avg_delay": 5,
+      "min_delay": 5,
+      "max_delay": 5,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 0.0,
+      "observations": 1,
+      "days_covered": 1,
+      "hourly": {
+        "0": {
+          "avg": null,
+          "count": 0
+        },
+        "1": {
+          "avg": null,
+          "count": 0
+        },
+        "2": {
+          "avg": null,
+          "count": 0
+        },
+        "3": {
+          "avg": null,
+          "count": 0
+        },
+        "4": {
+          "avg": null,
+          "count": 0
+        },
+        "5": {
+          "avg": null,
+          "count": 0
+        },
+        "6": {
+          "avg": null,
+          "count": 0
+        },
+        "7": {
+          "avg": null,
+          "count": 0
+        },
+        "8": {
+          "avg": null,
+          "count": 0
+        },
+        "9": {
+          "avg": null,
+          "count": 0
+        },
+        "10": {
+          "avg": null,
+          "count": 0
+        },
+        "11": {
+          "avg": null,
+          "count": 0
+        },
+        "12": {
+          "avg": null,
+          "count": 0
+        },
+        "13": {
+          "avg": null,
+          "count": 0
+        },
+        "14": {
+          "avg": null,
+          "count": 0
+        },
+        "15": {
+          "avg": null,
+          "count": 0
+        },
+        "16": {
+          "avg": null,
+          "count": 0
+        },
+        "17": {
+          "avg": null,
+          "count": 0
+        },
+        "18": {
+          "avg": null,
+          "count": 0
+        },
+        "19": {
+          "avg": null,
+          "count": 0
+        },
+        "20": {
+          "avg": null,
+          "count": 0
+        },
+        "21": {
+          "avg": null,
+          "count": 0
+        },
+        "22": {
+          "avg": null,
+          "count": 0
+        },
+        "23": {
+          "avg": null,
+          "count": 0
+        }
+      },
+      "daily": {
+        "0": {
+          "avg": 5,
+          "count": 1,
+          "label": "Mon"
+        },
+        "1": {
+          "avg": null,
+          "count": 0,
+          "label": "Tue"
+        },
+        "2": {
+          "avg": null,
+          "count": 0,
+          "label": "Wed"
+        },
+        "3": {
+          "avg": null,
+          "count": 0,
           "label": "Thu"
         },
         "4": {
