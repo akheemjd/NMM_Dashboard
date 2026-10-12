@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-12 12:01",
-  "updated_iso": "2026-10-12T12:01:37+00:00",
-  "build_version": "1791806497",
+  "updated_at": "2026-10-12 13:02",
+  "updated_iso": "2026-10-12T13:02:33+00:00",
+  "build_version": "1791810153",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "3 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "4 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT",
+      "captured_at": "08:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT",
+      "captured_at": "05:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "16 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 9 crossings slow, US-bound",
-      "value": "4/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Brent crude tops $105 a barrel after Trump says US will buy Russian diesel",
+      "url": "https://www.thetrucker.com/trucking-news/business/brent-crude-tops-105-a-barrel-after-trump-says-us-will-buy-russian-diesel",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "industry",
       "source": "Trucking Dive",
       "headline": "The fast track to 6-figure driving: Why truckers should team up",
       "url": "https://www.truckingdive.com/spons/the-fast-track-to-6-figure-driving-why-truckers-should-team-up/832337/",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "safety",
-      "source": "The Trucker",
-      "headline": "Trucker killed in Arkansas crash involving two big rigs",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-killed-in-arkansas-crash-involving-two-big-rigs",
-      "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
   "theft_home_json": "[]",
