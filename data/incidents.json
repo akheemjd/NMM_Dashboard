@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-318623",
+      "id": "ON-318624",
       "province": "ON",
       "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at NEILSON ROAD, Toronto. Right lane and right shoulder closed.",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at ISLINGTON AVE, Toronto. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.79363237,
-      "lng": -79.21586112,
-      "start": 1791783000,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.7089653,
+      "lng": -79.5506716,
+      "start": 1791788160,
       "end": null,
-      "updated": 1791783000,
+      "updated": 1791788160,
       "country": "CA",
       "scheduled": false
     },
@@ -1156,6 +1156,24 @@
       "scheduled": false
     },
     {
+      "id": "WI-c40c57b4-628d-6c5a-9566-1fdb81aeb6a7",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-43 SB",
+      "direction": "Southbound",
+      "description": "Road closed on I-43 SB southbound, WI. Ramp Full Closure on I-43 SB at ON RAMP FROM BOWER RD. Daily from 10/12/2026 to 10/15/2026, 02:00 AM - 06:00 AM, M, T, W, Th",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 42.74737232515921,
+      "lng": -88.44667957619197,
+      "start": "2026-10-12T07:00:00+00:00",
+      "end": "2026-10-12T11:00:00+00:00",
+      "updated": "2026-10-07T20:58:50.217+00:00",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103336",
       "province": "BC",
       "highway": "Other Roads near Burnside Road W",
@@ -1768,24 +1786,6 @@
       "scheduled": false
     },
     {
-      "id": "WI-31ac2c94-7fb8-135a-b6a1-9f67351269e6",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-41 SB",
-      "direction": "Southbound",
-      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at ON RAMP FROM WIS 60. Detour: IH 41 Southbound On-Ramp from STH 60 (Ramp A):\r\nDetour Ramp A traffic south on STH 164 to STH 167then east to IH 41 (Detour 1).",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.32479516596926,
-      "lng": -88.2514801614238,
-      "start": "2026-09-08T11:00:00+00:00",
-      "end": "2026-10-23T11:00:00+00:00",
-      "updated": "2026-09-10T06:52:48.157+00:00",
-      "scheduled": false
-    },
-    {
       "id": "IN-CARSy-1726-1",
       "province": "IN",
       "country": "US",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-12T06:01:05.401394+00:00",
+  "updated": "2026-10-12T07:01:06.810935+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
