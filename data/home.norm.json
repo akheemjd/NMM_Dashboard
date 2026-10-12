@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-12 15:00",
-  "updated_iso": "2026-10-12T15:00:53+00:00",
-  "build_version": "1791817253",
+  "updated_at": "2026-10-12 16:00",
+  "updated_iso": "2026-10-12T16:00:52+00:00",
+  "build_version": "1791820852",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Thousand Islands Bridge",
-    "us_max_wait": "15 min",
+    "us_max_name": "Peace Bridge",
+    "us_max_wait": "19 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 68,
+    "active_count": 69,
     "gauge_class": "warn",
-    "status_line": "Live now: 52 in the US, 30 in Canada.",
+    "status_line": "Live now: 52 in the US, 31 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 671",
-        "what": "Highway Maintenance on HWY 671 Northbound  at HWY 17A, Kenora. Lane and NORTH\u2026",
+        "road": "HWY 11",
+        "what": "Highway Maintenance on HWY 11 Northbound  at SEINE R BR (EAST EXPANSION JOINT),\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT",
+      "captured_at": "11:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "8 min",
-      "us_status_class": "mod"
+      "us_wait": "19 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 MDT",
+      "captured_at": "09:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT",
+      "captured_at": "08:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,11 +484,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 CDT",
+      "captured_at": "10:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "6 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "regulations",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "DOT to issue loans for I-81 improvement project in Virginia",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/dot-to-give-virginia-loans-for-i-81-improvement-project",
-      "why": "Rules change compliance cost and driver hours."
+      "headline": "HUB International evolves its brand to reflect expanded capabilities",
+      "url": "https://www.thetrucker.com/trucking-news/business/hub-international-evolves-its-brand-to-reflect-expanded-capabilities",
+      "why": "Industry movement worth tracking."
     },
     {
       "category": "technology",
-      "source": "Trucking Dive",
-      "headline": "Werner backs autonomous trucks, but economic and liability hurdles remain",
-      "url": "https://www.truckingdive.com/news/werner-backs-autonomous-trucks-but-economic-and-liability-hurdles-remain/832549/",
+      "source": "The Trucker",
+      "headline": "Cargo theft has gone digital: 4 ways to build an effective prevention plan",
+      "url": "https://www.thetrucker.com/trucking-news/perspective/insurance-insights/cargo-theft-has-gone-digital-4-ways-to-build-an-effective-prevention-plan",
       "why": "Tech spend changes back-office and dispatch efficiency."
     }
   ],
