@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-13 11:01",
-  "updated_iso": "2026-10-13T11:01:11+00:00",
-  "build_version": "1791889271",
+  "updated_at": "2026-10-13 12:01",
+  "updated_iso": "2026-10-13T12:01:53+00:00",
+  "build_version": "1791892913",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Thousand Islands Bridge",
-    "us_max_wait": "10 min",
+    "us_max_name": "Queenston-Lewiston Bridge",
+    "us_max_wait": "11 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 68,
+    "active_count": 63,
     "gauge_class": "warn",
-    "status_line": "Live now: 53 in the US, 35 in Canada.",
+    "status_line": "Live now: 45 in the US, 38 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in Alpine County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BAYVIEW AVE, Toronto. 1 right\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound HOV at BURLOAK DRIVE, Burlington. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "5 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "3 min",
+      "us_wait": "11 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT",
+      "captured_at": "07:46 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 MDT",
+      "captured_at": "05:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT",
+      "captured_at": "04:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 CDT",
+      "captured_at": "06:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "7 of 9 crossings slow, US-bound",
+      "value": "7/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
