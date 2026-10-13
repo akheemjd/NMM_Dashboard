@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-13 12:01",
-  "updated_iso": "2026-10-13T12:01:53+00:00",
-  "build_version": "1791892913",
+  "updated_at": "2026-10-13 13:01",
+  "updated_iso": "2026-10-13T13:01:49+00:00",
+  "build_version": "1791896509",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Queenston-Lewiston Bridge",
-    "us_max_wait": "11 min",
+    "us_max_name": "Thousand Islands Bridge",
+    "us_max_wait": "10 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 63,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 45 in the US, 38 in Canada.",
+    "status_line": "Live now: 53 in the US, 38 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in Alpine County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound HOV at BURLOAK DRIVE, Burlington. All lanes\u2026",
+        "road": "HWY 403 HAMILTON",
+        "what": "Collision on HWY 403 HAMILTON Westbound  at YORK BLVD, Hamilton. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:52 EDT",
+      "captured_at": "08:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "7 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "11 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT",
+      "captured_at": "05:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 CDT",
+      "captured_at": "07:28 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "Registration now open for 2027 Best Fleets to Drive For education conference",
-      "url": "https://www.thetrucker.com/trucking-news/business/registration-now-open-for-2027-best-fleets-to-drive-for-education-conference",
-      "why": "Industry movement worth tracking."
-    },
-    {
       "category": "safety",
       "source": "The Trucker",
-      "headline": "CVSA transitions to new leadership for 2026-2027",
-      "url": "https://www.thetrucker.com/trucking-news/business/cvsa-transitions-to-new-leadership-for-2026-2027",
+      "headline": "Trucker dead in single-vehicle crash in Idaho",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-dead-in-single-vehicle-crash-in-idaho",
       "why": "Safety rules and blitzes hit the road on specific dates."
+    },
+    {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Trump\u2019s diesel deal with Putin draws criticism from a frustrated Congress",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/trumps-diesel-deal-with-putin-draws-criticism-from-a-frustrated-congress",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
