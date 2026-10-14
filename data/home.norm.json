@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-14 05:01",
-  "updated_iso": "2026-10-14T05:01:56+00:00",
-  "build_version": "1791954116",
+  "updated_at": "2026-10-14 06:01",
+  "updated_iso": "2026-10-14T06:01:13+00:00",
+  "build_version": "1791957673",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "45 min",
+    "us_max_wait": "15 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 72,
+    "active_count": 78,
     "gauge_class": "warn",
-    "status_line": "Live now: 47 in the US, 42 in Canada.",
+    "status_line": "Live now: 55 in the US, 42 in Canada.",
     "incidents": [
       {
         "road": "29N",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at KEELE ST, Toronto. 1 right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at BRIMLEY ROAD, Toronto. 2 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "45 min",
-      "us_status_class": "heavy"
+      "us_wait": "15 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "4 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 MDT",
+      "captured_at": "22:55 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT",
+      "captured_at": "22:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 7 crossings slow, US-bound",
-      "value": "4/7",
+      "note": "5 of 6 crossings slow, US-bound",
+      "value": "5/6",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
