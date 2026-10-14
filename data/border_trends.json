@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T03:01:22.663711",
+  "generated": "2026-10-14T04:01:23.775277",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 5,
-        "captured": "10/14/2026 01:00:03"
+        "captured": "10/14/2026 01:55:09"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": true,
         "delay": 0,
-        "captured": "10/14/2026 02:00:03"
+        "captured": "10/14/2026 02:55:09"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 3,
-        "captured": "10/14/2026 03:00:02"
+        "delay": 2,
+        "captured": "10/14/2026 03:55:09"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": false,
         "delay": "",
-        "captured": "10/14/2026 03:00:02"
+        "captured": "10/14/2026 03:55:09"
       }
     },
     "lansdowne-alexandria": {
@@ -756,9 +756,9 @@
       },
       "us": {
         "label": "Thousand Islands Bridge",
-        "reported": false,
-        "delay": "",
-        "captured": "10/14/2026 03:00:02"
+        "reported": true,
+        "delay": 10,
+        "captured": "10/14/2026 03:55:09"
       }
     },
     "pacific-blaine": {
@@ -908,9 +908,9 @@
       },
       "us": {
         "label": "Pacific Highway",
-        "reported": false,
-        "delay": "",
-        "captured": "10/14/2026 00:00:02"
+        "reported": true,
+        "delay": 5,
+        "captured": "10/14/2026 00:55:09"
       }
     },
     "queenston-lewiston": {
@@ -1062,7 +1062,7 @@
         "label": "Lewiston Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/14/2026 03:00:02"
+        "captured": "10/14/2026 03:55:09"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/14/2026 03:00:03"
+        "captured": "10/14/2026 03:55:09"
       }
     },
     "windsor-detroit": {
@@ -1365,8 +1365,8 @@
       "us": {
         "label": "Ambassador Bridge",
         "reported": true,
-        "delay": 10,
-        "captured": "10/14/2026 03:00:02"
+        "delay": 20,
+        "captured": "10/14/2026 03:55:09"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1376,9 +1376,9 @@
       "max_delay": 15,
       "p50": 0.0,
       "p75": 10.0,
-      "p90": 11.0,
-      "observations": 9,
-      "days_covered": 9,
+      "p90": 10.5,
+      "observations": 10,
+      "days_covered": 10,
       "hourly": {
         "0": {
           "avg": null,
@@ -1489,8 +1489,8 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 0,
-          "count": 1,
+          "avg": 5,
+          "count": 2,
           "label": "Wed"
         },
         "3": {
@@ -1518,14 +1518,14 @@
     },
     "us-blaine-pacific-highway": {
       "id": "us-blaine-pacific-highway",
-      "avg_delay": 1,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 5,
       "p50": 0.0,
-      "p75": 0.0,
+      "p75": 3.8,
       "p90": 5.0,
-      "observations": 9,
-      "days_covered": 9,
+      "observations": 10,
+      "days_covered": 10,
       "hourly": {
         "0": {
           "avg": null,
@@ -1637,7 +1637,7 @@
         },
         "2": {
           "avg": 5,
-          "count": 1,
+          "count": 2,
           "label": "Wed"
         },
         "3": {
@@ -2988,12 +2988,12 @@
     },
     "us-detroit-ambassador-bridge": {
       "id": "us-detroit-ambassador-bridge",
-      "avg_delay": 8,
+      "avg_delay": 10,
       "min_delay": 0,
       "max_delay": 40,
       "p50": 5.0,
       "p75": 10.0,
-      "p90": 13.0,
+      "p90": 22.0,
       "observations": 10,
       "days_covered": 10,
       "hourly": {
@@ -3106,7 +3106,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 5,
+          "avg": 10,
           "count": 2,
           "label": "Wed"
         },
@@ -3135,12 +3135,12 @@
     },
     "us-detroit-gordie-howe-international-bridge": {
       "id": "us-detroit-gordie-howe-international-bridge",
-      "avg_delay": 1,
+      "avg_delay": 2,
       "min_delay": 0,
-      "max_delay": 5,
+      "max_delay": 15,
       "p50": 0.0,
-      "p75": 0.0,
-      "p90": 5.0,
+      "p75": 3.8,
+      "p90": 6.0,
       "observations": 10,
       "days_covered": 10,
       "hourly": {
@@ -3253,7 +3253,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 0,
+          "avg": 8,
           "count": 2,
           "label": "Wed"
         },
@@ -6228,8 +6228,8 @@
       "p50": 0.0,
       "p75": 5.0,
       "p90": 5.0,
-      "observations": 8,
-      "days_covered": 8,
+      "observations": 9,
+      "days_covered": 9,
       "hourly": {
         "0": {
           "avg": null,
@@ -6341,7 +6341,7 @@
         },
         "2": {
           "avg": 0,
-          "count": 1,
+          "count": 2,
           "label": "Wed"
         },
         "3": {
