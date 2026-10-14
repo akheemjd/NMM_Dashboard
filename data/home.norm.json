@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-14 02:01",
-  "updated_iso": "2026-10-14T02:01:53+00:00",
-  "build_version": "1791943313",
+  "updated_at": "2026-10-14 03:01",
+  "updated_iso": "2026-10-14T03:01:51+00:00",
+  "build_version": "1791946911",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
     "max_wait": "40 min",
-    "us_max_name": "Coutts-Sweetgrass",
-    "us_max_wait": "35 min",
+    "us_max_name": "Ambassador Bridge",
+    "us_max_wait": "40 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,7 +350,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 72,
+    "active_count": 70,
     "gauge_class": "warn",
     "status_line": "Live now: 49 in the US, 42 in Canada.",
     "incidents": [
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 HAMILTON",
-        "what": "Disabled Vehicle on HWY 403 HAMILTON Westbound RAMP at LINCOLN M. ALEXANDER\u2026",
+        "road": "HWY 401",
+        "what": "Highway Maintenance on HWY 401 Westbound ON-RAMP at KEELE ST, Toronto. All\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
-      "us_status_class": "mod"
+      "us_wait": "40 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "8 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Peace Bridge",
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "30 min",
-      "us_status_class": "heavy"
+      "us_wait": "4 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "2 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 EDT",
+      "captured_at": "22:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,11 +454,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT",
+      "captured_at": "20:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "35 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT",
+      "captured_at": "19:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,11 +484,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 CDT",
+      "captured_at": "21:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "24 min",
+      "us_wait": "18 min",
       "us_status_class": "heavy"
     },
     {
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "8 of 9 crossings slow, US-bound",
-      "value": "8/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "technology",
-      "source": "Trucking Info",
-      "headline": "Volvo, Waabi Start Commercial Autonomous Operations in Texas",
-      "url": "https://www.truckinginfo.com/news/volvo-waabi-start-commercial-autonomous-operations-in-texas",
-      "why": "Tech spend changes back-office and dispatch efficiency."
+      "category": "markets",
+      "source": "Truck News",
+      "headline": "Engine Technology Forum advises fleets not all diesel fuels are interchangable",
+      "url": "https://www.trucknews.com/transportation/engine-technology-forum-advises-fleets-not-all-diesel-fuels-are-interchangable/1003223220/",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "technology",
-      "source": "Trucking Info",
-      "headline": "Samsara Launches Custom AI Agent Builder",
-      "url": "https://www.truckinginfo.com/news/samsara-launches-custom-ai-agent-builder",
-      "why": "Tech spend changes back-office and dispatch efficiency."
+      "category": "industry",
+      "source": "Truck News",
+      "headline": "Sagepoint Logistics doubles RNG fleet with 60 new trucks",
+      "url": "https://www.trucknews.com/sustainability/sagepoint-logistics-doubles-rng-fleet-with-60-new-trucks/1003223201/",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
