@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-15 19:00",
-  "updated_iso": "2026-10-15T19:00:43+00:00",
-  "build_version": "1792090843",
+  "updated_at": "2026-10-15 20:01",
+  "updated_iso": "2026-10-15T20:01:28+00:00",
+  "build_version": "1792094488",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
-    "us_max_name": "Emerson-Pembina",
-    "us_max_wait": "30 min",
-    "ca_max_name": "Peace Bridge"
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min",
+    "us_max_name": "Queenston-Lewiston Bridge",
+    "us_max_wait": "32 min",
+    "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
     "national_diesel": "263.7",
@@ -352,7 +352,7 @@
     "none": false,
     "active_count": 76,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 29 in Canada.",
+    "status_line": "Live now: 50 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Northbound EXPRESS at BURNHAMTHORPE ROAD, Toronto. Left\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MARKHAM ROAD, Toronto. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,16 +375,16 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 EDT",
+      "captured_at": "15:48 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
-      "us_status_class": "mod"
+      "us_wait": "25 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "10 min",
-      "us_status_class": "mod"
+      "us_wait": "28 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "2 min",
+      "us_wait": "9 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
-      "us_status_class": "mod"
+      "us_wait": "32 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:40 EDT",
+      "captured_at": "15:45 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:28 MDT",
+      "captured_at": "12:55 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT",
+      "captured_at": "12:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "15 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "30 min",
-      "us_status_class": "heavy"
+      "us_wait": "8 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -574,8 +574,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow, Canada-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -593,18 +593,18 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "ATS names Mike Omann vice president of enterprise sales",
-      "url": "https://www.thetrucker.com/trucking-news/business/ats-names-mike-omann-vice-president-of-enterprise-sales",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "headline": "What\u2019s in a name? States across the US get creative with snowplow monikers",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/whats-in-a-name-states-across-the-us-get-creative-with-snowplow-monikers",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "drivers",
-      "source": "The Trucker",
-      "headline": "Learning Bytes: CarriersEdge brings interactive learning to short-form driver training",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/learning-bytes-carriersedge-brings-interactive-learning-to-short-form-driver-training",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "business",
+      "source": "Trucking Dive",
+      "headline": "American Trucking Associations appoints new CEO",
+      "url": "https://www.truckingdive.com/news/american-trucking-associations-appoints-new-ceo/833123/",
+      "why": "Carrier and shipper moves shift capacity in the market."
     }
   ],
   "theft_home_json": "[]",
