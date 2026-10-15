@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-15 21:00",
-  "updated_iso": "2026-10-15T21:00:44+00:00",
-  "build_version": "1792098044",
+  "updated_at": "2026-10-15 22:01",
+  "updated_iso": "2026-10-15T22:01:39+00:00",
+  "build_version": "1792101699",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 4,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "15 min",
-    "us_max_name": "Queenston-Lewiston Bridge",
-    "us_max_wait": "68 min",
+    "max_wait": "20 min",
+    "us_max_name": "Emerson-Pembina",
+    "us_max_wait": "20 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 77,
+    "active_count": 66,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 31 in Canada.",
+    "status_line": "Live now: 42 in the US, 28 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at BRIMLEY ROAD, Toronto. 1 right\u2026",
+        "what": "Collision on HWY 401 Eastbound  at 407, Miss.-Halton. 3 right lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,11 +375,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "16:49 EDT",
+      "captured_at": "17:51 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "17 min",
-      "us_status_class": "heavy"
+      "us_wait": "6 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Peace Bridge",
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "24 min",
-      "us_status_class": "heavy"
+      "us_wait": "9 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "68 min",
-      "us_status_class": "heavy"
+      "us_wait": "6 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 EDT",
+      "captured_at": "17:45 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT",
+      "captured_at": "14:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "20 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -518,15 +518,6 @@
       "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
     },
     {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
       "name": "GDP, year over year",
       "note": "GDP against the same quarter last year. The longer-term\u2026",
       "value": "+2.2%",
@@ -534,15 +525,6 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "US Bureau of Economic Analysis, via FRED",
       "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
-    },
-    {
-      "name": "GDP, year over year",
-      "note": "GDP against the same month last year. The longer-term\u2026",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 miles",
@@ -583,8 +565,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -612,17 +594,17 @@
   "news": [
     {
       "category": "industry",
+      "source": "Trucking Info",
+      "headline": "What Will ATA\u2019s New Leader Bring to Trucking's Table?",
+      "url": "https://www.truckinginfo.com/news/what-will-atas-new-leader-bring-to-truckings-table",
+      "why": "Industry movement worth tracking."
+    },
+    {
+      "category": "industry",
       "source": "The Trucker",
       "headline": "What\u2019s in a name? States across the US get creative with snowplow monikers",
       "url": "https://www.thetrucker.com/trucking-news/the-nation/whats-in-a-name-states-across-the-us-get-creative-with-snowplow-monikers",
       "why": "Industry movement worth tracking."
-    },
-    {
-      "category": "business",
-      "source": "Trucking Dive",
-      "headline": "American Trucking Associations appoints new CEO",
-      "url": "https://www.truckingdive.com/news/american-trucking-associations-appoints-new-ceo/833123/",
-      "why": "Carrier and shipper moves shift capacity in the market."
     }
   ],
   "theft_home_json": "[]",
@@ -747,9 +729,9 @@
     "us_change_7d": "-0.020",
     "us_change_7d_class": "down",
     "us_change_7d_words": "down $0.020/gal",
-    "us_change_30d": "+0.0",
-    "nadi_change_7d": "+2.0",
+    "us_change_30d": "-1.1",
+    "nadi_change_7d": "+1.4",
     "nadi_change_7d_class": "up",
-    "nadi_change_30d": "-3.3"
+    "nadi_change_30d": "-3.9"
   }
 }
