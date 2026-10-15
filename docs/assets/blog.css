@@ -139,3 +139,17 @@ section.gh-container {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+/* Feed spacing (2026-10-14). The theme draws its own divider above each card (::before)
+   and a column rule (::after); with our border-top that made two lines per post. The
+   container also had no top padding (the "Latest" heading sat on its rule) and the theme's
+   margins left grey bands above the feed and the footer. */
+.gh-feed .gh-card::before,.gh-feed .gh-card::after{content:none!important;display:none!important}
+.home-template .gh-container,.archive-template .gh-container,.tag-template .gh-container{margin-top:0!important;padding-top:44px!important;padding-bottom:56px!important}
+.home-template .gh-footer,.archive-template .gh-footer,.tag-template .gh-footer{margin-top:0!important}
+.gh-container-title{margin-bottom:16px!important;padding-bottom:0!important}
+@media (max-width:767px){
+  .home-template .gh-container,.archive-template .gh-container,.tag-template .gh-container{padding-top:32px!important;padding-bottom:40px!important}
+}
+.gh-footer .gh-footer-signup{margin-top:40px!important}
+@media (max-width:767px){.gh-footer .gh-footer-signup{margin-top:28px!important}}
