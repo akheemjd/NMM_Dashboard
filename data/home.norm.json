@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-15 13:02",
-  "updated_iso": "2026-10-15T13:02:12+00:00",
-  "build_version": "1792069332",
+  "updated_at": "2026-10-15 14:02",
+  "updated_iso": "2026-10-15T14:02:26+00:00",
+  "build_version": "1792072946",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
@@ -350,7 +350,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 67,
+    "active_count": 71,
     "gauge_class": "warn",
     "status_line": "Live now: 42 in the US, 35 in Canada.",
     "incidents": [
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound RAMP at HWY 427, Toronto. Right lane and right\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH DR, Toronto. 2 left lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT",
+      "captured_at": "09:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "1 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 MDT",
+      "captured_at": "07:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT",
+      "captured_at": "06:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -480,11 +480,11 @@
       "name": "Emerson-Pembina",
       "slug": "emerson-pembina",
       "sub": "Pembina, ND and Emerson, MB \u00b7 I-29 / MB-75 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "10 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT",
+      "captured_at": "08:37 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -518,15 +518,6 @@
       "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
     },
     {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
       "name": "GDP, year over year",
       "note": "GDP against the same quarter last year. The longer-term\u2026",
       "value": "+2.2%",
@@ -534,15 +525,6 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "US Bureau of Economic Analysis, via FRED",
       "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
-    },
-    {
-      "name": "GDP, year over year",
-      "note": "GDP against the same month last year. The longer-term\u2026",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 miles",
@@ -592,8 +574,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow, Canada-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -613,15 +595,15 @@
     {
       "category": "industry",
       "source": "Truck News",
-      "headline": "Harkness named 2026 HR Leader of the Year by THRC",
-      "url": "https://www.trucknews.com/transportation/harkness-named-2026-hr-leader-of-the-year-by-thrc/1003223254/",
+      "headline": "THRC, Samsara award $10,000 in inaugural student scholarships",
+      "url": "https://www.trucknews.com/transportation/thrc-samsara-award-10000-in-inaugural-student-scholarships/1003223257/",
       "why": "Industry movement worth tracking."
     },
     {
       "category": "industry",
       "source": "Truck News",
-      "headline": "Trucking HR Canada recognizes 2026 Top Fleet Employers, award winners",
-      "url": "https://www.trucknews.com/human-resources/trucking-hr-canada-recognizes-2026-top-fleet-employers-award-winners/1003223248/",
+      "headline": "Westport rebrands as Aetherion Technologies, sharpens focus on heavy-duty clean transportation",
+      "url": "https://www.trucknews.com/sustainability/westport-rebrands-as-aetherion-technologies-sharpens-focus-on-heavy-duty-clean-transportation/1003223328/",
       "why": "Industry movement worth tracking."
     }
   ],
