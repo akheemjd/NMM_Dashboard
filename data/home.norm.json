@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-15 12:01",
-  "updated_iso": "2026-10-15T12:01:51+00:00",
-  "build_version": "1792065711",
+  "updated_at": "2026-10-15 13:02",
+  "updated_iso": "2026-10-15T13:02:12+00:00",
+  "build_version": "1792069332",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Peace Bridge",
-    "us_max_wait": "6 min",
+    "us_max_name": "Blaine-Pacific Highway",
+    "us_max_wait": "30 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 77,
+    "active_count": 67,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 39 in Canada.",
+    "status_line": "Live now: 42 in the US, 35 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR at RENFORTH DR, Toronto. Left shoulder\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound RAMP at HWY 427, Toronto. Right lane and right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "6 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:47 EDT",
+      "captured_at": "08:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT",
+      "captured_at": "05:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "30 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 CDT",
+      "captured_at": "07:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Trucking Dive",
-      "headline": "California diesel prices remain above $8 per gallon as truckers call for relief",
-      "url": "https://www.truckingdive.com/news/california-diesel-prices-remain-above-8-per-gallon-as-truckers-call-for-re/832808/",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "industry",
+      "source": "Truck News",
+      "headline": "Harkness named 2026 HR Leader of the Year by THRC",
+      "url": "https://www.trucknews.com/transportation/harkness-named-2026-hr-leader-of-the-year-by-thrc/1003223254/",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "drivers",
-      "source": "The Trucker",
-      "headline": "Over the line: How to build a distracted driving and impairment simulator for CDL training",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/over-the-line-how-to-build-a-distracted-driving-and-impairment-simulator-for-cdl-training",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "industry",
+      "source": "Truck News",
+      "headline": "Trucking HR Canada recognizes 2026 Top Fleet Employers, award winners",
+      "url": "https://www.trucknews.com/human-resources/trucking-hr-canada-recognizes-2026-top-fleet-employers-award-winners/1003223248/",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
