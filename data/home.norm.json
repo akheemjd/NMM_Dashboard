@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-15 16:01",
-  "updated_iso": "2026-10-15T16:01:47+00:00",
-  "build_version": "1792080107",
+  "updated_at": "2026-10-15 17:02",
+  "updated_iso": "2026-10-15T17:02:37+00:00",
+  "build_version": "1792083757",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "5 min",
+    "us_max_name": "Emerson-Pembina",
+    "us_max_wait": "58 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 83,
+    "active_count": 69,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 33 in Canada.",
+    "status_line": "Live now: 42 in the US, 28 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at MORNINGSIDE AVE, Toronto.\u2026",
+        "road": "HWY 5",
+        "what": "Collision on HWY 5 Westbound  between BROCK ROAD / HAM/WENT ROAD 504 and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT",
+      "captured_at": "12:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "2 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "3 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:45 EDT",
+      "captured_at": "12:40 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT",
+      "captured_at": "09:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -480,16 +480,16 @@
       "name": "Emerson-Pembina",
       "slug": "emerson-pembina",
       "sub": "Pembina, ND and Emerson, MB \u00b7 I-29 / MB-75 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:02 CDT",
+      "captured_at": "11:33 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "58 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -518,15 +518,6 @@
       "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
     },
     {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
       "name": "GDP, year over year",
       "note": "GDP against the same quarter last year. The longer-term\u2026",
       "value": "+2.2%",
@@ -534,15 +525,6 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "US Bureau of Economic Analysis, via FRED",
       "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
-    },
-    {
-      "name": "GDP, year over year",
-      "note": "GDP against the same month last year. The longer-term\u2026",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 miles",
@@ -583,8 +565,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 9 crossings slow, US-bound",
-      "value": "4/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +574,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "4 of 9 crossings slow, Canada-bound",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +593,18 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
+      "category": "drivers",
       "source": "The Trucker",
-      "headline": "ATA names Mark Colson as next president and CEO",
-      "url": "https://www.thetrucker.com/trucking-news/business/ata-names-mark-colson-as-next-president-and-ceo",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "headline": "Learning Bytes: CarriersEdge brings interactive learning to short-form driver training",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/learning-bytes-carriersedge-brings-interactive-learning-to-short-form-driver-training",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "industry",
-      "source": "Trucking Dive",
-      "headline": "$200M in federal funds to aid truck parking in 12 states",
-      "url": "https://www.truckingdive.com/news/200m-in-federal-funds-to-aid-truck-parking-in-12-states/833091/",
-      "why": "Industry movement worth tracking."
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "FTR\u2019s Shippers Conditions Index fell in August due to fuel costs",
+      "url": "https://www.thetrucker.com/trucking-news/business/ftrs-shippers-conditions-index-fell-in-august-due-to-fuel-costs",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
