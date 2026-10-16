@@ -37,24 +37,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-320424",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MORNINGSIDE AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.7960784,
-      "lng": -79.19675755,
-      "start": 1792119540,
-      "end": null,
-      "updated": 1792119540,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-320222",
       "province": "ON",
       "highway": "HWY 7/8",
@@ -519,6 +501,24 @@
       "start": 1792641540,
       "end": 1792746000,
       "updated": 1792082520,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-320251",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Nightly Maintenance on HWY 401 Eastbound Collector Off-ramp at TRAFALGAR ROAD, Halton-Milton. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 43.57108,
+      "lng": -79.82946,
+      "start": 1792641540,
+      "end": 1792746000,
+      "updated": 1792082400,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-16T06:00:50.518491+00:00",
+  "updated": "2026-10-16T07:00:36.809519+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

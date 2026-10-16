@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-16 06:01",
-  "updated_iso": "2026-10-16T06:01:25+00:00",
-  "build_version": "1792130485",
+  "updated_at": "2026-10-16 07:00",
+  "updated_iso": "2026-10-16T07:00:58+00:00",
+  "build_version": "1792134058",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Peace Bridge",
-    "us_max_wait": "6 min",
+    "us_max_wait": "5 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 73,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 29 in Canada.",
+    "status_line": "Live now: 50 in the US, 28 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at MORNINGSIDE AVE, Toronto. 1\u2026",
+        "road": "HWY 7/8",
+        "what": "Collision on HWY 7/8 Both Directions  between Road 104, Shakespeare and Road\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "6 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:54 EDT",
+      "captured_at": "02:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 PDT",
+      "captured_at": "23:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -518,6 +518,15 @@
       "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
     },
     {
+      "name": "Monthly GDP",
+      "note": "$2372B (chained 2017)",
+      "value": "0.0%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
       "name": "GDP, year over year",
       "note": "GDP against the same quarter last year. The longer-term\u2026",
       "value": "+2.2%",
@@ -525,6 +534,15 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "US Bureau of Economic Analysis, via FRED",
       "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
+    },
+    {
+      "name": "GDP, year over year",
+      "note": "GDP against the same month last year. The longer-term\u2026",
+      "value": "+1.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 miles",
