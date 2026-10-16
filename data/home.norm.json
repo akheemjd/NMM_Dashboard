@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-16 10:01",
-  "updated_iso": "2026-10-16T10:01:26+00:00",
-  "build_version": "1792144886",
+  "updated_at": "2026-10-16 11:01",
+  "updated_iso": "2026-10-16T11:01:05+00:00",
+  "build_version": "1792148465",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Blaine-Pacific Highway",
-    "us_max_wait": "5 min",
+    "us_max_name": "Queenston-Lewiston Bridge",
+    "us_max_wait": "7 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 74,
+    "active_count": 76,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 29 in Canada.",
+    "status_line": "Live now: 50 in the US, 31 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 7182",
-        "what": "Debris on HWY 7182 Both Directions  at SHAWANAGA RD(E), Shawanaga. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound  at HWY 427 SOUTH, Toronto. 2 right lanes and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT",
+      "captured_at": "06:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 PDT",
+      "captured_at": "03:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
