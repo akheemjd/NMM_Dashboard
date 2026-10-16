@@ -1,27 +1,27 @@
 {
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
+    "gauge_class": "ok",
+    "heavy_count": 0,
     "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "50 min",
-    "us_max_name": "Peace Bridge",
-    "us_max_wait": "20 min",
-    "ca_max_name": "Ambassador Bridge"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min",
+    "us_max_name": "Blaine-Pacific Highway",
+    "us_max_wait": "10 min",
+    "ca_max_name": "Peace Bridge"
   },
   "border_rows": [
     {
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "50 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:11 EDT",
+      "captured_at": "22:41 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -55,8 +55,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "20 min",
-      "us_status_class": "heavy"
+      "us_wait": "3 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -70,8 +70,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -96,7 +96,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT",
+      "captured_at": "20:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -111,12 +111,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT",
+      "captured_at": "19:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -154,11 +154,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "50 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:11 EDT",
+      "captured_at": "22:41 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -192,8 +192,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "20 min",
-      "us_status_class": "heavy"
+      "us_wait": "3 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -207,8 +207,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -233,7 +233,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT",
+      "captured_at": "20:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -248,12 +248,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT",
+      "captured_at": "19:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -286,8 +286,8 @@
       "us_status_class": "ok"
     }
   ],
-  "updated_at": "2026-10-16 02:00",
-  "updated_iso": "2026-10-16T02:00:52+00:00",
-  "build_version": "1792116052",
-  "captured_at": "2026-10-16 02:00"
+  "updated_at": "2026-10-16 03:01",
+  "updated_iso": "2026-10-16T03:01:33+00:00",
+  "build_version": "1792119693",
+  "captured_at": "2026-10-16 03:01"
 }
