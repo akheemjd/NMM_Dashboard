@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-16 17:01",
-  "updated_iso": "2026-10-16T17:01:16+00:00",
-  "build_version": "1792170076",
+  "updated_at": "2026-10-16 18:01",
+  "updated_iso": "2026-10-16T18:01:56+00:00",
+  "build_version": "1792173716",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -12,15 +12,15 @@
     "max_name": "Ambassador Bridge",
     "max_wait": "55 min",
     "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "10 min",
+    "us_max_wait": "28 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
-    "national_diesel": "263.7",
+    "national_diesel": "264.1",
     "series": "NMDI",
-    "national_nmdi": "263.7",
+    "national_nmdi": "264.1",
     "print_date": "Tue, 13 Oct 2026",
-    "national_pct": 51.5,
+    "national_pct": 52.3,
     "change_7d": "+4.6",
     "change_7d_band": "material",
     "change_7d_class": "up",
@@ -28,9 +28,9 @@
     "low_code": "AB",
     "low": "232.9",
     "high_code": "QC",
-    "high": "292.7",
-    "spread": "59.8",
-    "spread_dollars_500l": "299",
+    "high": "292.5",
+    "spread": "59.6",
+    "spread_dollars_500l": "298",
     "fuel_cost_per_km": "$0.92",
     "fuel_cost_per_mi": "$1.49",
     "fuel_top": [
@@ -42,7 +42,7 @@
         "pct": 0.0,
         "change": "+3.8",
         "change_class": "up",
-        "vs_national": "-30.8",
+        "vs_national": "-31.2",
         "vs_class": "lo",
         "rowclass": "lo"
       },
@@ -50,11 +50,11 @@
         "code": "SK",
         "name": "Saskatchewan",
         "slug": "saskatchewan",
-        "price": "251.4",
-        "pct": 30.9,
+        "price": "250.5",
+        "pct": 29.5,
         "change": "+4.9",
         "change_class": "up",
-        "vs_national": "-12.3",
+        "vs_national": "-13.6",
         "vs_class": "lo",
         "rowclass": ""
       },
@@ -62,11 +62,11 @@
         "code": "MB",
         "name": "Manitoba",
         "slug": "manitoba",
-        "price": "251.5",
-        "pct": 31.1,
+        "price": "252.0",
+        "pct": 32.0,
         "change": "+8.0",
         "change_class": "up",
-        "vs_national": "-12.2",
+        "vs_national": "-12.1",
         "vs_class": "lo",
         "rowclass": ""
       },
@@ -74,23 +74,11 @@
         "code": "ON",
         "name": "Ontario",
         "slug": "ontario",
-        "price": "259.2",
-        "pct": 44.0,
+        "price": "259.4",
+        "pct": 44.5,
         "change": "+6.8",
         "change_class": "up",
-        "vs_national": "-4.5",
-        "vs_class": "lo",
-        "rowclass": ""
-      },
-      {
-        "code": "NS",
-        "name": "Nova Scotia",
-        "slug": "nova-scotia",
-        "price": "263.5",
-        "pct": 51.2,
-        "change": "-3.2",
-        "change_class": "down",
-        "vs_national": "-0.2",
+        "vs_national": "-4.7",
         "vs_class": "lo",
         "rowclass": ""
       },
@@ -99,11 +87,23 @@
         "name": "PEI",
         "slug": "prince-edward-island",
         "price": "263.6",
-        "pct": 51.3,
+        "pct": 51.5,
         "change": "+7.3",
         "change_class": "up",
-        "vs_national": "-0.1",
+        "vs_national": "-0.5",
         "vs_class": "lo",
+        "rowclass": ""
+      },
+      {
+        "code": "NS",
+        "name": "Nova Scotia",
+        "slug": "nova-scotia",
+        "price": "266.7",
+        "pct": 56.7,
+        "change": "-3.2",
+        "change_class": "down",
+        "vs_national": "+2.6",
+        "vs_class": "hi",
         "rowclass": ""
       }
     ]
@@ -117,7 +117,7 @@
       "pct": 0.0,
       "change": "+3.8",
       "change_class": "up",
-      "vs_national": "-30.8",
+      "vs_national": "-31.2",
       "vs_class": "lo",
       "rowclass": "lo"
     },
@@ -125,11 +125,11 @@
       "code": "SK",
       "name": "Saskatchewan",
       "slug": "saskatchewan",
-      "price": "251.4",
-      "pct": 30.9,
+      "price": "250.5",
+      "pct": 29.5,
       "change": "+4.9",
       "change_class": "up",
-      "vs_national": "-12.3",
+      "vs_national": "-13.6",
       "vs_class": "lo",
       "rowclass": ""
     },
@@ -137,11 +137,11 @@
       "code": "MB",
       "name": "Manitoba",
       "slug": "manitoba",
-      "price": "251.5",
-      "pct": 31.1,
+      "price": "252.0",
+      "pct": 32.0,
       "change": "+8.0",
       "change_class": "up",
-      "vs_national": "-12.2",
+      "vs_national": "-12.1",
       "vs_class": "lo",
       "rowclass": ""
     },
@@ -149,23 +149,11 @@
       "code": "ON",
       "name": "Ontario",
       "slug": "ontario",
-      "price": "259.2",
-      "pct": 44.0,
+      "price": "259.4",
+      "pct": 44.5,
       "change": "+6.8",
       "change_class": "up",
-      "vs_national": "-4.5",
-      "vs_class": "lo",
-      "rowclass": ""
-    },
-    {
-      "code": "NS",
-      "name": "Nova Scotia",
-      "slug": "nova-scotia",
-      "price": "263.5",
-      "pct": 51.2,
-      "change": "-3.2",
-      "change_class": "down",
-      "vs_national": "-0.2",
+      "vs_national": "-4.7",
       "vs_class": "lo",
       "rowclass": ""
     },
@@ -174,34 +162,34 @@
       "name": "PEI",
       "slug": "prince-edward-island",
       "price": "263.6",
-      "pct": 51.3,
+      "pct": 51.5,
       "change": "+7.3",
       "change_class": "up",
-      "vs_national": "-0.1",
+      "vs_national": "-0.5",
       "vs_class": "lo",
+      "rowclass": ""
+    },
+    {
+      "code": "NS",
+      "name": "Nova Scotia",
+      "slug": "nova-scotia",
+      "price": "266.7",
+      "pct": 56.7,
+      "change": "-3.2",
+      "change_class": "down",
+      "vs_national": "+2.6",
+      "vs_class": "hi",
       "rowclass": ""
     },
     {
       "code": "NB",
       "name": "New Brunswick",
       "slug": "new-brunswick",
-      "price": "270.1",
-      "pct": 62.2,
+      "price": "270.4",
+      "pct": 62.9,
       "change": "+3.5",
       "change_class": "up",
-      "vs_national": "+6.4",
-      "vs_class": "hi",
-      "rowclass": ""
-    },
-    {
-      "code": "NL",
-      "name": "Newfoundland",
-      "slug": "newfoundland-and-labrador",
-      "price": "275.4",
-      "pct": 71.1,
-      "change": "+4.7",
-      "change_class": "up",
-      "vs_national": "+11.7",
+      "vs_national": "+6.3",
       "vs_class": "hi",
       "rowclass": ""
     },
@@ -209,11 +197,23 @@
       "code": "BC",
       "name": "British Columbia",
       "slug": "british-columbia",
-      "price": "276.3",
-      "pct": 72.6,
+      "price": "276.2",
+      "pct": 72.7,
       "change": "+8.1",
       "change_class": "up",
-      "vs_national": "+12.6",
+      "vs_national": "+12.1",
+      "vs_class": "hi",
+      "rowclass": ""
+    },
+    {
+      "code": "NL",
+      "name": "Newfoundland",
+      "slug": "newfoundland-and-labrador",
+      "price": "276.8",
+      "pct": 73.7,
+      "change": "+4.7",
+      "change_class": "up",
+      "vs_national": "+12.7",
       "vs_class": "hi",
       "rowclass": ""
     },
@@ -221,11 +221,11 @@
       "code": "QC",
       "name": "Quebec",
       "slug": "quebec",
-      "price": "292.7",
+      "price": "292.5",
       "pct": 100.0,
       "change": "+1.8",
       "change_class": "up",
-      "vs_national": "+29.0",
+      "vs_national": "+28.4",
       "vs_class": "hi",
       "rowclass": "hi"
     }
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 96,
+    "active_count": 86,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 30 in Canada.",
+    "status_line": "Live now: 42 in the US, 31 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at HWY 10/HURONTARIO, Mississauga.\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS HOV at EAST OF WINSTON CHURCHILL BLVD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
+      "us_wait": "15 min",
       "us_status_class": "mod"
     },
     {
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "10 min",
-      "us_status_class": "mod"
+      "us_wait": "28 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "7 min",
+      "us_wait": "3 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "1 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:13 EDT",
+      "captured_at": "13:22 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 MDT",
+      "captured_at": "11:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT",
+      "captured_at": "10:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "ACERTUS launches new fuel card for carriers",
+      "url": "https://www.thetrucker.com/trucking-news/business/acertus-launches-new-fuel-card-for-carriers",
+      "why": "Industry movement worth tracking."
+    },
+    {
       "category": "business",
       "source": "The Trucker",
       "headline": "ATRI names Page Siplon as next president and COO",
       "url": "https://www.thetrucker.com/trucking-news/business/atri-names-page-siplon-as-next-president-and-coo",
       "why": "Carrier and shipper moves shift capacity in the market."
-    },
-    {
-      "category": "industry",
-      "source": "Trucking Dive",
-      "headline": "JB Hunt reports 22% YoY drop in dedicated Q3 operating income",
-      "url": "https://www.truckingdive.com/news/jb-hunt-reports-22-yoy-drop-in-dedicated-q3-operating-income/833126/",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
@@ -640,12 +640,12 @@
     "us_national_usd_gal": "6.179",
     "us_national_cad_gal": "8.772",
     "us_national_cpl": "231.7",
-    "nadi": "247.7",
-    "ca_us_gap": "32.0",
-    "ca_us_gap_usd_gal": "0.85",
+    "nadi": "247.9",
+    "ca_us_gap": "32.4",
+    "ca_us_gap_usd_gal": "0.86",
     "ca_higher": true,
     "gap_word": "Canada higher",
-    "gap_clause": "Canada is 32.0\u00a2/L higher",
+    "gap_clause": "Canada is 32.4\u00a2/L higher",
     "date": "2026-10-12",
     "padds_usd_gal": {
       "east_coast": 5.908,

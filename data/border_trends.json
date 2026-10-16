@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16T13:01:21.895176",
+  "generated": "2026-10-16T14:02:01.687134",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 5,
-        "captured": "10/16/2026 10:51:30"
+        "captured": "10/16/2026 12:01:43"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": true,
         "delay": 0,
-        "captured": "10/16/2026 11:51:30"
+        "captured": "10/16/2026 13:01:43"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 7,
-        "captured": "10/16/2026 12:51:30"
+        "delay": 3,
+        "captured": "10/16/2026 14:01:43"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/16/2026 12:51:30"
+        "captured": "10/16/2026 14:01:43"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/16/2026 12:51:30"
+        "captured": "10/16/2026 14:01:43"
       }
     },
     "pacific-blaine": {
@@ -910,7 +910,7 @@
         "label": "Pacific Highway",
         "reported": true,
         "delay": 5,
-        "captured": "10/16/2026 09:51:30"
+        "captured": "10/16/2026 11:01:43"
       }
     },
     "queenston-lewiston": {
@@ -1061,8 +1061,8 @@
       "us": {
         "label": "Lewiston Bridge",
         "reported": true,
-        "delay": 0,
-        "captured": "10/16/2026 12:51:30"
+        "delay": 1,
+        "captured": "10/16/2026 14:01:43"
       }
     },
     "sarnia-port-huron": {
@@ -1213,8 +1213,8 @@
       "us": {
         "label": "Bluewater Bridge",
         "reported": true,
-        "delay": 10,
-        "captured": "10/16/2026 12:51:30"
+        "delay": 28,
+        "captured": "10/16/2026 14:01:43"
       }
     },
     "windsor-detroit": {
@@ -1365,8 +1365,8 @@
       "us": {
         "label": "Ambassador Bridge",
         "reported": true,
-        "delay": 5,
-        "captured": "10/16/2026 12:51:30"
+        "delay": 15,
+        "captured": "10/16/2026 14:01:43"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1962,7 +1962,7 @@
       "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 12,
-      "p50": 0.5,
+      "p50": 1.0,
       "p75": 2.2,
       "p90": 3.9,
       "observations": 12,
@@ -2106,11 +2106,11 @@
     },
     "us-buffalo-niagara-falls-peace-bridge": {
       "id": "us-buffalo-niagara-falls-peace-bridge",
-      "avg_delay": 6,
+      "avg_delay": 5,
       "min_delay": 0,
       "max_delay": 19,
-      "p50": 4.0,
-      "p75": 7.0,
+      "p50": 3.5,
+      "p75": 5.5,
       "p90": 11.5,
       "observations": 12,
       "days_covered": 12,
@@ -2234,7 +2234,7 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 10,
+          "avg": 8,
           "count": 2,
           "label": "Fri"
         },
@@ -2988,12 +2988,12 @@
     },
     "us-detroit-ambassador-bridge": {
       "id": "us-detroit-ambassador-bridge",
-      "avg_delay": 7,
+      "avg_delay": 8,
       "min_delay": 0,
       "max_delay": 40,
       "p50": 5.0,
-      "p75": 6.2,
-      "p90": 10.0,
+      "p75": 10.0,
+      "p90": 14.5,
       "observations": 12,
       "days_covered": 12,
       "hourly": {
@@ -3116,7 +3116,7 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 5,
+          "avg": 10,
           "count": 2,
           "label": "Fri"
         },
@@ -3282,14 +3282,14 @@
     },
     "us-eagle-pass-bridge-ii": {
       "id": "us-eagle-pass-bridge-ii",
-      "avg_delay": 14,
+      "avg_delay": 15,
       "min_delay": 1,
       "max_delay": 60,
       "p50": 10.0,
-      "p75": 13.8,
-      "p90": 19.5,
-      "observations": 10,
-      "days_covered": 10,
+      "p75": 15.0,
+      "p90": 24.0,
+      "observations": 9,
+      "days_covered": 9,
       "hourly": {
         "0": {
           "avg": null,
@@ -3410,8 +3410,8 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 3,
-          "count": 2,
+          "avg": 5,
+          "count": 1,
           "label": "Fri"
         },
         "5": {
@@ -4757,9 +4757,9 @@
       "max_delay": 2,
       "p50": 0.0,
       "p75": 0.0,
-      "p90": 1.8,
-      "observations": 12,
-      "days_covered": 12,
+      "p90": 2.0,
+      "observations": 11,
+      "days_covered": 11,
       "hourly": {
         "0": {
           "avg": null,
@@ -4881,7 +4881,7 @@
         },
         "4": {
           "avg": 0,
-          "count": 2,
+          "count": 1,
           "label": "Fri"
         },
         "5": {
@@ -5052,8 +5052,8 @@
       "p50": 0.0,
       "p75": 0.0,
       "p90": 0.0,
-      "observations": 11,
-      "days_covered": 11,
+      "observations": 12,
+      "days_covered": 12,
       "hourly": {
         "0": {
           "avg": null,
@@ -5175,7 +5175,7 @@
         },
         "4": {
           "avg": 0,
-          "count": 1,
+          "count": 2,
           "label": "Fri"
         },
         "5": {
@@ -5634,12 +5634,12 @@
     },
     "us-port-huron-bluewater-bridge": {
       "id": "us-port-huron-bluewater-bridge",
-      "avg_delay": 6,
+      "avg_delay": 8,
       "min_delay": 0,
-      "max_delay": 25,
+      "max_delay": 28,
       "p50": 2.5,
-      "p75": 10.8,
-      "p90": 15.7,
+      "p75": 13.8,
+      "p90": 24.1,
       "observations": 12,
       "days_covered": 12,
       "hourly": {
@@ -5762,7 +5762,7 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 12,
+          "avg": 20,
           "count": 2,
           "label": "Fri"
         },
@@ -5784,11 +5784,11 @@
       "avg_delay": 3,
       "min_delay": 0,
       "max_delay": 10,
-      "p50": 0.0,
+      "p50": 2.5,
       "p75": 5.0,
-      "p90": 6.0,
-      "observations": 9,
-      "days_covered": 9,
+      "p90": 6.5,
+      "observations": 8,
+      "days_covered": 8,
       "hourly": {
         "0": {
           "avg": null,
@@ -5909,8 +5909,8 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 2,
-          "count": 2,
+          "avg": 5,
+          "count": 1,
           "label": "Fri"
         },
         "5": {
@@ -5928,10 +5928,10 @@
     },
     "us-santa-teresa-santa-teresa-port-of-entry": {
       "id": "us-santa-teresa-santa-teresa-port-of-entry",
-      "avg_delay": 28,
+      "avg_delay": 30,
       "min_delay": 10,
       "max_delay": 50,
-      "p50": 20.0,
+      "p50": 35.0,
       "p75": 45.0,
       "p90": 46.0,
       "observations": 9,
@@ -6056,7 +6056,7 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 30,
+          "avg": 40,
           "count": 2,
           "label": "Fri"
         },
@@ -6663,12 +6663,12 @@
     },
     "us-nogales-mariposa": {
       "id": "us-nogales-mariposa",
-      "avg_delay": 0,
+      "avg_delay": 5,
       "min_delay": 0,
-      "max_delay": 0,
+      "max_delay": 20,
       "p50": 0.0,
-      "p75": 0.0,
-      "p90": 0.0,
+      "p75": 5.0,
+      "p90": 14.0,
       "observations": 4,
       "days_covered": 4,
       "hourly": {
@@ -6791,7 +6791,7 @@
           "label": "Thu"
         },
         "4": {
-          "avg": 0,
+          "avg": 20,
           "count": 1,
           "label": "Fri"
         },
