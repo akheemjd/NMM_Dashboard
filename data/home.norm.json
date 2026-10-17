@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-17 05:01",
-  "updated_iso": "2026-10-17T05:01:31+00:00",
-  "build_version": "1792213291",
+  "updated_at": "2026-10-17 06:01",
+  "updated_iso": "2026-10-17T06:01:34+00:00",
+  "build_version": "1792216894",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Peace Bridge",
-    "us_max_wait": "1 min",
+    "us_max_wait": "8 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 71,
+    "active_count": 69,
     "gauge_class": "warn",
-    "status_line": "Live now: 44 in the US, 28 in Canada.",
+    "status_line": "Live now: 44 in the US, 26 in Canada.",
     "incidents": [
       {
         "road": "I-43 NB",
@@ -362,9 +362,9 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 403 MISSISSAUGA",
-        "what": "Police Investigation on HWY 403 MISSISSAUGA Westbound  at MAVIS ROAD,\u2026",
-        "severity_label": "Collision",
+        "road": "Highway 93 near Highway 93 And 95",
+        "what": "Road construction from Highway 93, In Radium Hot Springs and 800m South of Jctn\u2026",
+        "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
       }
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "1 min",
+      "us_wait": "8 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:47 EDT",
+      "captured_at": "01:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT",
+      "captured_at": "22:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 CDT",
+      "captured_at": "00:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "1 of 6 crossings slow, US-bound",
-      "value": "1/6",
+      "note": "3 of 5 crossings slow, US-bound",
+      "value": "3/5",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
