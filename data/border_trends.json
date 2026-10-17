@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T06:01:42.987287",
+  "generated": "2026-10-17T07:01:43.979703",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 5,
-        "captured": "10/17/2026 04:00:17"
+        "captured": "10/17/2026 05:00:28"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": false,
         "delay": "",
-        "captured": "10/17/2026 05:00:17"
+        "captured": "10/17/2026 06:00:28"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 0,
-        "captured": "10/17/2026 06:00:17"
+        "delay": 3,
+        "captured": "10/17/2026 07:00:28"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": false,
         "delay": "",
-        "captured": "10/17/2026 06:00:17"
+        "captured": "10/17/2026 07:00:28"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 10,
-        "captured": "10/17/2026 06:00:16"
+        "captured": "10/17/2026 07:00:28"
       }
     },
     "pacific-blaine": {
@@ -909,8 +909,8 @@
       "us": {
         "label": "Pacific Highway",
         "reported": true,
-        "delay": 30,
-        "captured": "10/17/2026 03:00:16"
+        "delay": 5,
+        "captured": "10/17/2026 04:00:28"
       }
     },
     "queenston-lewiston": {
@@ -1062,7 +1062,7 @@
         "label": "Lewiston Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/17/2026 06:00:16"
+        "captured": "10/17/2026 07:00:28"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/17/2026 06:00:17"
+        "captured": "10/17/2026 07:00:28"
       }
     },
     "windsor-detroit": {
@@ -1364,9 +1364,9 @@
       },
       "us": {
         "label": "Ambassador Bridge",
-        "reported": true,
-        "delay": 0,
-        "captured": "10/17/2026 06:00:17"
+        "reported": false,
+        "delay": "",
+        "captured": "10/17/2026 07:00:28"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1518,12 +1518,12 @@
     },
     "us-blaine-pacific-highway": {
       "id": "us-blaine-pacific-highway",
-      "avg_delay": 5,
+      "avg_delay": 3,
       "min_delay": 0,
-      "max_delay": 30,
+      "max_delay": 10,
       "p50": 0.0,
       "p75": 5.0,
-      "p90": 9.0,
+      "p90": 5.0,
       "observations": 13,
       "days_covered": 13,
       "hourly": {
@@ -1651,7 +1651,7 @@
           "label": "Fri"
         },
         "5": {
-          "avg": 15,
+          "avg": 2,
           "count": 2,
           "label": "Sat"
         },
@@ -2239,7 +2239,7 @@
           "label": "Fri"
         },
         "5": {
-          "avg": 0,
+          "avg": 2,
           "count": 2,
           "label": "Sat"
         },
@@ -2988,14 +2988,14 @@
     },
     "us-detroit-ambassador-bridge": {
       "id": "us-detroit-ambassador-bridge",
-      "avg_delay": 6,
+      "avg_delay": 7,
       "min_delay": 0,
       "max_delay": 40,
       "p50": 5.0,
-      "p75": 5.0,
+      "p75": 6.2,
       "p90": 10.0,
-      "observations": 13,
-      "days_covered": 13,
+      "observations": 12,
+      "days_covered": 12,
       "hourly": {
         "0": {
           "avg": null,
@@ -3122,7 +3122,7 @@
         },
         "5": {
           "avg": 0,
-          "count": 2,
+          "count": 1,
           "label": "Sat"
         },
         "6": {
