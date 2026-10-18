@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-18 12:01",
-  "updated_iso": "2026-10-18T12:01:16+00:00",
-  "build_version": "1792324876",
+  "updated_at": "2026-10-18 13:01",
+  "updated_iso": "2026-10-18T13:01:47+00:00",
+  "build_version": "1792328507",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Peace Bridge",
-    "us_max_wait": "15 min",
+    "us_max_wait": "7 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 72,
+    "active_count": 73,
     "gauge_class": "warn",
-    "status_line": "Live now: 44 in the US, 32 in Canada.",
+    "status_line": "Live now: 44 in the US, 33 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at WEST OF HWY 409, Toronto. 2 right lanes and\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Fort Erie bound  at BRANT STREET, Burlington. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT",
+      "captured_at": "08:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "15 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 MDT",
+      "captured_at": "06:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT",
+      "captured_at": "05:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 CDT",
+      "captured_at": "07:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 8 crossings slow, US-bound",
-      "value": "4/8",
+      "note": "3 of 8 crossings slow, US-bound",
+      "value": "3/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "Best dash cams for truckers: Check out Kurt the CyberGuy\u2019s pros, cons and top picks",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/best-dash-cams-for-truckers-check-out-kurt-the-cyberguys-pros-cons-and-top-picks",
-      "why": "Industry movement worth tracking."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Phillips Connect launches two smart trailer tools to improve uptime, simplify inspections",
+      "url": "https://www.trucknews.com/equipment/phillips-connect-launches-two-smart-trailer-tools-to-improve-uptime-simplify-inspections/1003223528/",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
       "category": "industry",
-      "source": "The Trucker",
-      "headline": "Retail price impacts from the Iran war are uneven but add up for US households before midterms",
-      "url": "https://www.thetrucker.com/trucking-news/business/retail-price-impacts-from-the-iran-war-are-uneven-but-add-up-for-us-households-before-midterms",
+      "source": "Truck News",
+      "headline": "Penske Automotive Group to go private in $16.3-billion deal",
+      "url": "https://www.trucknews.com/equipment/penske-automotive-group-to-go-private-in-16-3-billion-deal/1003223526/",
       "why": "Industry movement worth tracking."
     }
   ],

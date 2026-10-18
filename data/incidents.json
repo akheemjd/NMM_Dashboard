@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-321300",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Collision on QEW Fort Erie bound  at BRANT STREET, Burlington. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.34178984,
+      "lng": -79.82255958,
+      "start": 1792327380,
+      "end": null,
+      "updated": 1792327380,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-321291",
       "province": "ON",
       "highway": "HWY 401",
@@ -954,24 +972,6 @@
       "start": 1792407600,
       "end": 1792810800,
       "updated": 1792192740,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
-      "id": "ON-320915",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Daily Construction on HWY 401 Westbound  between HWY 416 (IC 721A), Prescott and HALLECKS RD, Brockville. 1 Right Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Right Lane(s)",
-      "lat": 44.74777,
-      "lng": -75.48829,
-      "start": 1792407600,
-      "end": 1792710000,
-      "updated": 1792192440,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-18T12:00:56.522900+00:00",
+  "updated": "2026-10-18T13:01:31.614546+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
