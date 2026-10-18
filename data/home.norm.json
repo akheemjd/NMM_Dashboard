@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-18 03:01",
-  "updated_iso": "2026-10-18T03:01:06+00:00",
-  "build_version": "1792292466",
+  "updated_at": "2026-10-18 04:01",
+  "updated_iso": "2026-10-18T04:01:25+00:00",
+  "build_version": "1792296085",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "15 min",
+    "us_max_name": "Emerson-Pembina",
+    "us_max_wait": "14 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -379,11 +379,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:56 EDT",
+      "captured_at": "23:28 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Peace Bridge",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:56 EDT",
+      "captured_at": "23:11 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 MDT",
+      "captured_at": "21:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "19:40 PDT",
+      "captured_at": "20:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:15 CDT",
+      "captured_at": "22:52 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 9 crossings slow, US-bound",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow, US-bound",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -612,17 +612,17 @@
   "news": [
     {
       "category": "industry",
-      "source": "The Trucker",
-      "headline": "Retail price impacts from the Iran war are uneven but add up for US households before midterms",
-      "url": "https://www.thetrucker.com/trucking-news/business/retail-price-impacts-from-the-iran-war-are-uneven-but-add-up-for-us-households-before-midterms",
+      "source": "Truck News",
+      "headline": "Penske Automotive Group to go private in $16.3-billion deal",
+      "url": "https://www.trucknews.com/equipment/penske-automotive-group-to-go-private-in-16-3-billion-deal/1003223526/",
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "safety",
-      "source": "The Trucker",
-      "headline": "One person injured in Idaho crash involving 18-wheeler",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/one-person-injured-in-idaho-crash-involving-18-wheeler",
-      "why": "Safety rules and blitzes hit the road on specific dates."
+      "category": "technology",
+      "source": "Truck News",
+      "headline": "Takeaways from Isaac founders on AI, automation and fleet technology",
+      "url": "https://www.trucknews.com/transportation/takeaways-from-isaac-founders-on-ai-automation-and-fleet-technology/1003223509/",
+      "why": "Tech spend changes back-office and dispatch efficiency."
     }
   ],
   "theft_home_json": "[]",
