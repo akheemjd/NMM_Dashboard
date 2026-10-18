@@ -23,8 +23,9 @@ OUT = os.path.join(HERE, "..", "templates")
 
 GA = "G-NDXR7ERL80"
 BASE = "https://dashboard.northernmilemedia.com"
-ORG_URL = "https://northernmilemedia.com"
-SUB = "https://www.northernmilemedia.com/subscribe/"
+ORG_URL = "https://dashboard.northernmilemedia.com"
+# The Northern Mile Brief newsletter was hosted on Ghost, which was cancelled 2026-10-15.
+# There is no subscribe endpoint to point at until a new list exists.
 
 FONTS = ("https://fonts.googleapis.com/css2?"
          "family=Overpass:wght@400;600;700;800&"
@@ -101,7 +102,6 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 <link rel="stylesheet" href="/assets/nm.css?v={{{{build_version}}}}">
 {ld_block}<script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA}');</script>
-<script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.69/umd/portal.min.js" data-i18n="true" data-ghost="https://www.northernmilemedia.com/" data-key="995d6f9b3eeb1574dbebd63ce5" data-api="https://northern-mile-media.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -139,7 +139,7 @@ def foot(extra_script=""):
   <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live North American trucking data</span></div>
   <nav class="flinks" aria-label="Footer">{flinks}</nav>
   <nav class="flinks biz" aria-label="Company">{blinks}</nav>
-  <div class="bottom"><span>&copy; {year} Northern Mile Media</span><a href="{SUB}" data-portal="signup">Subscribe free</a><span>Updated {{{{updated_at}}}} UTC</span></div>
+  <div class="bottom"><span>&copy; {year} Northern Mile Media</span><span>Updated {{{{updated_at}}}} UTC</span></div>
 </div></footer>
 
 <script src="/assets/nm.js?v={{{{build_version}}}}"></script>
@@ -291,13 +291,13 @@ CHART_SCRIPT = ('<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3
 
 
 def subscribe(heading, body):
-    return (f'\n  <section class="sub" aria-labelledby="brief">\n'
-            f'    <div class="e">The Northern Mile Brief</div>\n'
-            f'    <h2 id="brief">{heading}</h2>\n'
-            f'    <p>{body}</p>\n'
-            f'    <a class="sub-btn" href="{SUB}" data-portal="signup">Subscribe free</a>\n'
-            f'    <div class="fine">One email a week. Unsubscribe any time.</div>\n'
-            f'  </section>\n')
+    """The newsletter band. Retired 2026-10-15 with the Ghost account.
+
+    Every caller stays valid and renders nothing, so the 21 call sites do not need touching and a
+    rebuilt list needs a change in exactly one place. The arguments are kept in the signature to
+    make that obvious rather than making callers guess.
+    """
+    return ""
 
 
 def write(name, body):
