@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-18 06:02",
-  "updated_iso": "2026-10-18T06:02:00+00:00",
-  "build_version": "1792303320",
+  "updated_at": "2026-10-18 07:01",
+  "updated_iso": "2026-10-18T07:01:08+00:00",
+  "build_version": "1792306868",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Queenston-Lewiston Bridge",
-    "us_max_wait": "No delay",
+    "us_max_name": "Thousand Islands Bridge",
+    "us_max_wait": "10 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 62,
+    "active_count": 71,
     "gauge_class": "warn",
-    "status_line": "Live now: 36 in the US, 31 in Canada.",
+    "status_line": "Live now: 44 in the US, 32 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Vehicle Fire on HWY 401 Eastbound  at SERVICE CENTER E8 E/B (Mallorytown\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at RENFORTH, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,12 +379,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:15 EDT",
+      "captured_at": "02:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "1 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 MDT",
+      "captured_at": "00:42 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 PDT",
+      "captured_at": "23:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -503,8 +503,8 @@
       "route": "Lansdowne, ON \u2014 Alexandria Bay, NY",
       "label": "Thousand Islands Bridge",
       "route_both": "Alexandria Bay, NY and Lansdowne, ON",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     }
   ],
   "market": [
@@ -518,6 +518,15 @@
       "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
     },
     {
+      "name": "Monthly GDP",
+      "note": "$2372B (chained 2017)",
+      "value": "0.0%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
       "name": "GDP, year over year",
       "note": "GDP against the same quarter last year. The longer-term\u2026",
       "value": "+2.2%",
@@ -525,6 +534,15 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "US Bureau of Economic Analysis, via FRED",
       "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
+    },
+    {
+      "name": "GDP, year over year",
+      "note": "GDP against the same month last year. The longer-term\u2026",
+      "value": "+1.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 miles",
@@ -565,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "0 of 7 crossings slow, US-bound",
-      "value": "0/7",
+      "note": "3 of 8 crossings slow, US-bound",
+      "value": "3/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
