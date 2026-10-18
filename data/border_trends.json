@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18T10:02:49.548868",
+  "generated": "2026-10-18T11:01:29.835074",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 0,
-        "captured": "10/18/2026 07:55:24"
+        "captured": "10/18/2026 08:55:32"
       }
     },
     "emerson-pembina": {
@@ -301,8 +301,8 @@
       "us": {
         "label": "Pembina",
         "reported": true,
-        "delay": 0,
-        "captured": "10/18/2026 08:55:24"
+        "delay": 4,
+        "captured": "10/18/2026 09:55:32"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 12,
-        "captured": "10/18/2026 09:55:24"
+        "delay": 13,
+        "captured": "10/18/2026 10:55:32"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/18/2026 09:55:24"
+        "captured": "10/18/2026 10:55:32"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/18/2026 09:55:24"
+        "captured": "10/18/2026 10:55:32"
       }
     },
     "pacific-blaine": {
@@ -909,8 +909,8 @@
       "us": {
         "label": "Pacific Highway",
         "reported": true,
-        "delay": 5,
-        "captured": "10/18/2026 06:55:24"
+        "delay": 30,
+        "captured": "10/18/2026 07:55:32"
       }
     },
     "queenston-lewiston": {
@@ -1061,8 +1061,8 @@
       "us": {
         "label": "Lewiston Bridge",
         "reported": true,
-        "delay": 5,
-        "captured": "10/18/2026 09:55:24"
+        "delay": 1,
+        "captured": "10/18/2026 10:55:32"
       }
     },
     "sarnia-port-huron": {
@@ -1213,8 +1213,8 @@
       "us": {
         "label": "Bluewater Bridge",
         "reported": true,
-        "delay": 0,
-        "captured": "10/18/2026 09:55:24"
+        "delay": 10,
+        "captured": "10/18/2026 10:55:32"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 5,
-        "captured": "10/18/2026 09:55:24"
+        "captured": "10/18/2026 10:55:32"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1518,12 +1518,12 @@
     },
     "us-blaine-pacific-highway": {
       "id": "us-blaine-pacific-highway",
-      "avg_delay": 2,
+      "avg_delay": 4,
       "min_delay": 0,
-      "max_delay": 10,
+      "max_delay": 30,
       "p50": 0.0,
       "p75": 5.0,
-      "p90": 5.0,
+      "p90": 8.5,
       "observations": 14,
       "days_covered": 14,
       "hourly": {
@@ -1656,7 +1656,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 2,
+          "avg": 15,
           "count": 2,
           "label": "Sun"
         }
@@ -1962,9 +1962,9 @@
       "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 12,
-      "p50": 1.5,
-      "p75": 2.8,
-      "p90": 4.7,
+      "p50": 1.0,
+      "p75": 2.0,
+      "p90": 3.7,
       "observations": 14,
       "days_covered": 14,
       "hourly": {
@@ -2097,7 +2097,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 4,
+          "avg": 2,
           "count": 2,
           "label": "Sun"
         }
@@ -2111,7 +2111,7 @@
       "max_delay": 19,
       "p50": 4.0,
       "p75": 6.5,
-      "p90": 12.0,
+      "p90": 12.7,
       "observations": 14,
       "days_covered": 14,
       "hourly": {
@@ -3579,11 +3579,11 @@
       "avg_delay": 10,
       "min_delay": 0,
       "max_delay": 35,
-      "p50": 7.5,
+      "p50": 5.0,
       "p75": 10.0,
-      "p90": 26.0,
-      "observations": 10,
-      "days_covered": 10,
+      "p90": 25.0,
+      "observations": 11,
+      "days_covered": 11,
       "hourly": {
         "0": {
           "avg": null,
@@ -3714,8 +3714,8 @@
           "label": "Sat"
         },
         "6": {
-          "avg": null,
-          "count": 0,
+          "avg": 5,
+          "count": 1,
           "label": "Sun"
         }
       },
@@ -3723,14 +3723,14 @@
     },
     "us-highgate-springs": {
       "id": "us-highgate-springs",
-      "avg_delay": 1,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 5,
       "p50": 0.0,
-      "p75": 2.5,
+      "p75": 3.8,
       "p90": 5.0,
-      "observations": 7,
-      "days_covered": 7,
+      "observations": 6,
+      "days_covered": 6,
       "hourly": {
         "0": {
           "avg": null,
@@ -3861,8 +3861,8 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 0,
-          "count": 1,
+          "avg": null,
+          "count": 0,
           "label": "Sun"
         }
       },
@@ -4314,11 +4314,11 @@
       "avg_delay": 6,
       "min_delay": 0,
       "max_delay": 30,
-      "p50": 0.0,
+      "p50": 2.5,
       "p75": 10.0,
-      "p90": 15.0,
-      "observations": 11,
-      "days_covered": 11,
+      "p90": 14.5,
+      "observations": 12,
+      "days_covered": 12,
       "hourly": {
         "0": {
           "avg": null,
@@ -4449,8 +4449,8 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 0,
-          "count": 1,
+          "avg": 2,
+          "count": 2,
           "label": "Sun"
         }
       },
@@ -4458,14 +4458,14 @@
     },
     "us-laredo-world-trade-bridge": {
       "id": "us-laredo-world-trade-bridge",
-      "avg_delay": 39,
-      "min_delay": 5,
+      "avg_delay": 36,
+      "min_delay": 0,
       "max_delay": 60,
       "p50": 45.0,
-      "p75": 47.5,
-      "p90": 59.5,
-      "observations": 12,
-      "days_covered": 12,
+      "p75": 45.0,
+      "p90": 59.0,
+      "observations": 13,
+      "days_covered": 13,
       "hourly": {
         "0": {
           "avg": null,
@@ -4596,8 +4596,8 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 10,
-          "count": 1,
+          "avg": 5,
+          "count": 2,
           "label": "Sun"
         }
       },
@@ -4752,12 +4752,12 @@
     },
     "us-madawaska": {
       "id": "us-madawaska",
-      "avg_delay": 0,
+      "avg_delay": 1,
       "min_delay": 0,
-      "max_delay": 2,
+      "max_delay": 10,
       "p50": 0.0,
       "p75": 0.0,
-      "p90": 1.4,
+      "p90": 2.0,
       "observations": 14,
       "days_covered": 14,
       "hourly": {
@@ -4890,7 +4890,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 0,
+          "avg": 5,
           "count": 2,
           "label": "Sun"
         }
@@ -5490,7 +5490,7 @@
       "avg_delay": 5,
       "min_delay": 0,
       "max_delay": 18,
-      "p50": 1.0,
+      "p50": 2.0,
       "p75": 10.0,
       "p90": 14.0,
       "observations": 14,
@@ -5625,7 +5625,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 0,
+          "avg": 2,
           "count": 2,
           "label": "Sun"
         }
@@ -5634,11 +5634,11 @@
     },
     "us-port-huron-bluewater-bridge": {
       "id": "us-port-huron-bluewater-bridge",
-      "avg_delay": 5,
+      "avg_delay": 6,
       "min_delay": 0,
       "max_delay": 25,
-      "p50": 0.0,
-      "p75": 6.5,
+      "p50": 2.5,
+      "p75": 9.2,
       "p90": 15.1,
       "observations": 14,
       "days_covered": 14,
@@ -5772,7 +5772,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 4,
+          "avg": 8,
           "count": 2,
           "label": "Sun"
         }
@@ -7107,11 +7107,11 @@
       "avg_delay": 5,
       "min_delay": 5,
       "max_delay": 5,
-      "p50": 5.0,
-      "p75": 5.0,
-      "p90": 5.0,
-      "observations": 2,
-      "days_covered": 2,
+      "p50": 0.0,
+      "p75": 0.0,
+      "p90": 0.0,
+      "observations": 1,
+      "days_covered": 1,
       "hourly": {
         "0": {
           "avg": null,
@@ -7242,8 +7242,8 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 5,
-          "count": 1,
+          "avg": null,
+          "count": 0,
           "label": "Sun"
         }
       },
