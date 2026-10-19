@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-19 15:00",
-  "updated_iso": "2026-10-19T15:00:55+00:00",
-  "build_version": "1792422055",
+  "updated_at": "2026-10-19 16:01",
+  "updated_iso": "2026-10-19T16:01:40+00:00",
+  "build_version": "1792425700",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 79,
+    "active_count": 68,
     "gauge_class": "warn",
-    "status_line": "Live now: 49 in the US, 40 in Canada.",
+    "status_line": "Live now: 41 in the US, 37 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Northbound RAMP at HWY 401, Toronto. Right lane and\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound  at INNISFIL BEACH RD - SIMCOE ROAD 21,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:28 EDT",
+      "captured_at": "11:04 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:22 MDT",
+      "captured_at": "09:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT",
+      "captured_at": "08:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "32 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 9 crossings slow, US-bound",
-      "value": "7/9",
+      "note": "8 of 9 crossings slow, US-bound",
+      "value": "8/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "safety",
+      "source": "Truck News",
+      "headline": "Truck accident verdicts, settlements average $16.8M in US Chamber report",
+      "url": "https://www.trucknews.com/transportation/truck-accident-verdicts-settlements-average-16-8m-in-us-chamber-report/1003223601/",
+      "why": "Safety rules and blitzes hit the road on specific dates."
+    },
+    {
       "category": "business",
       "source": "Truck News",
       "headline": "Mullen Group to acquire Willson International, adding $80M in annual revenue",
       "url": "https://www.trucknews.com/transportation/mullen-group-to-acquire-willson-international-adding-80m-in-annual-revenue/1003223597/",
       "why": "Carrier and shipper moves shift capacity in the market."
-    },
-    {
-      "category": "markets",
-      "source": "Truck News",
-      "headline": "Volvo Trucks\u2019 Silver Service Contract to cover maintenance, powertrain repairs",
-      "url": "https://www.trucknews.com/equipment/volvo-trucks-launches-silver-service-contract-covering-maintenance-powertrain-repairs/1003223449/",
-      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
