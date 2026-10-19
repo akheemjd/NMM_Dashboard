@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T05:01:31.442557",
+  "generated": "2026-10-19T06:01:32.283020",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 5,
-        "captured": "10/19/2026 02:53:17"
+        "captured": "10/19/2026 03:58:47"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": false,
         "delay": "",
-        "captured": "10/19/2026 03:53:17"
+        "captured": "10/19/2026 04:58:47"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 2,
-        "captured": "10/19/2026 04:53:17"
+        "delay": 11,
+        "captured": "10/19/2026 05:58:47"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/19/2026 04:53:17"
+        "captured": "10/19/2026 05:58:47"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 10,
-        "captured": "10/19/2026 04:53:17"
+        "captured": "10/19/2026 05:58:47"
       }
     },
     "pacific-blaine": {
@@ -910,7 +910,7 @@
         "label": "Pacific Highway",
         "reported": true,
         "delay": 5,
-        "captured": "10/19/2026 01:53:17"
+        "captured": "10/19/2026 02:58:47"
       }
     },
     "queenston-lewiston": {
@@ -1062,7 +1062,7 @@
         "label": "Lewiston Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/19/2026 04:53:17"
+        "captured": "10/19/2026 05:58:47"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/19/2026 04:53:17"
+        "captured": "10/19/2026 05:58:47"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 10,
-        "captured": "10/19/2026 04:53:17"
+        "captured": "10/19/2026 05:58:47"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -2110,8 +2110,8 @@
       "min_delay": 0,
       "max_delay": 19,
       "p50": 4.0,
-      "p75": 5.0,
-      "p90": 10.0,
+      "p75": 6.0,
+      "p90": 11.6,
       "observations": 15,
       "days_covered": 15,
       "hourly": {
@@ -2214,7 +2214,7 @@
       },
       "daily": {
         "0": {
-          "avg": 2,
+          "avg": 5,
           "count": 3,
           "label": "Mon"
         },
@@ -3135,11 +3135,11 @@
     },
     "us-detroit-gordie-howe-international-bridge": {
       "id": "us-detroit-gordie-howe-international-bridge",
-      "avg_delay": 1,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 5,
       "p50": 0.0,
-      "p75": 2.5,
+      "p75": 5.0,
       "p90": 5.0,
       "observations": 15,
       "days_covered": 15,
@@ -3243,7 +3243,7 @@
       },
       "daily": {
         "0": {
-          "avg": 2,
+          "avg": 3,
           "count": 3,
           "label": "Mon"
         },
@@ -4757,7 +4757,7 @@
       "max_delay": 2,
       "p50": 0.0,
       "p75": 0.0,
-      "p90": 1.2,
+      "p90": 2.0,
       "observations": 15,
       "days_covered": 15,
       "hourly": {
@@ -4860,7 +4860,7 @@
       },
       "daily": {
         "0": {
-          "avg": 0,
+          "avg": 1,
           "count": 3,
           "label": "Mon"
         },
@@ -7104,14 +7104,14 @@
     },
     "us-detroit-windsor-tunnel": {
       "id": "us-detroit-windsor-tunnel",
-      "avg_delay": 5,
-      "min_delay": 5,
+      "avg_delay": 2,
+      "min_delay": 0,
       "max_delay": 5,
-      "p50": 0.0,
-      "p75": 0.0,
-      "p90": 0.0,
-      "observations": 1,
-      "days_covered": 1,
+      "p50": 2.5,
+      "p75": 3.8,
+      "p90": 4.5,
+      "observations": 2,
+      "days_covered": 2,
       "hourly": {
         "0": {
           "avg": null,
@@ -7212,8 +7212,8 @@
       },
       "daily": {
         "0": {
-          "avg": null,
-          "count": 0,
+          "avg": 0,
+          "count": 1,
           "label": "Mon"
         },
         "1": {
