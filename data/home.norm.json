@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-19 00:01",
-  "updated_iso": "2026-10-19T00:01:43+00:00",
-  "build_version": "1792368103",
+  "updated_at": "2026-10-19 01:01",
+  "updated_iso": "2026-10-19T01:01:30+00:00",
+  "build_version": "1792371690",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 72,
+    "active_count": 74,
     "gauge_class": "warn",
-    "status_line": "Live now: 49 in the US, 40 in Canada.",
+    "status_line": "Live now: 49 in the US, 41 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at MARKHAM ROAD, Toronto.\u2026",
+        "road": "HWY 427",
+        "what": "Disabled Vehicle on HWY 427 Southbound COLLECTOR at BLOOR STREET, Toronto.\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:36 EDT",
+      "captured_at": "20:46 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 MDT",
+      "captured_at": "18:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "16:40 PDT",
+      "captured_at": "17:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "17:15 CDT",
+      "captured_at": "19:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "3 of 9 crossings slow, US-bound",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow, US-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "technology",
-      "source": "The Trucker",
-      "headline": "AI boom creates pockets of strength in sluggish freight economy",
-      "url": "https://www.thetrucker.com/trucking-news/business/ai-boom-creates-pockets-of-strength-in-sluggish-freight-economy",
-      "why": "Tech spend changes back-office and dispatch efficiency."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "BeyondTrucks launches new Compatibility Engine to aid dispatching",
+      "url": "https://www.trucknews.com/transportation/beyondtrucks-launches-new-compatibility-engine-to-aid-dispatching/1003223564/",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "ATA welcomes 14 emerging trucking leaders to LEAD ATA program",
-      "url": "https://www.thetrucker.com/trucking-news/business/ata-welcomes-14-emerging-trucking-leaders-to-lead-ata-program",
-      "why": "Industry movement worth tracking."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "FlowBelow launches redesigned trailer AeroSlider, promises 3 gallons in fuel savings per 1,000 miles",
+      "url": "https://www.trucknews.com/equipment/flowbelow-launches-redesigned-trailer-aeroslider-promises-3-gallons-in-fuel-savings-per-1000-miles/1003223560/",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
