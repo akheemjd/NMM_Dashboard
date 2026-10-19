@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-19 21:01",
-  "updated_iso": "2026-10-19T21:01:09+00:00",
-  "build_version": "1792443669",
+  "updated_at": "2026-10-19 23:01",
+  "updated_iso": "2026-10-19T23:01:06+00:00",
+  "build_version": "1792450866",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 74,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 49 in the US, 31 in Canada.",
+    "status_line": "Live now: 49 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "US 41",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at WALKERS LINE, Burlington. Left lane closed.",
+        "road": "HWY 17",
+        "what": "Highway Maintenance on HWY 17 Westbound  at MELGUND RD #3-MELGUND TWP,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "48 min",
+      "us_wait": "39 min",
       "us_status_class": "heavy"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:15 EDT",
+      "captured_at": "18:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 MDT",
+      "captured_at": "15:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT",
+      "captured_at": "15:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 CDT",
+      "captured_at": "17:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "58 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -747,9 +747,9 @@
     "us_change_7d": "-0.020",
     "us_change_7d_class": "down",
     "us_change_7d_words": "down $0.020/gal",
-    "us_change_30d": "-1.8",
-    "nadi_change_7d": "+1.2",
+    "us_change_30d": "-2.7",
+    "nadi_change_7d": "+0.8",
     "nadi_change_7d_class": "up",
-    "nadi_change_30d": "-4.1"
+    "nadi_change_30d": "-4.5"
   }
 }
