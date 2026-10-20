@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-20 11:01",
-  "updated_iso": "2026-10-20T11:01:53+00:00",
-  "build_version": "1792494113",
+  "updated_at": "2026-10-20 12:01",
+  "updated_iso": "2026-10-20T12:01:56+00:00",
+  "build_version": "1792497716",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Blaine-Pacific Highway",
-    "us_max_wait": "15 min",
+    "us_max_wait": "30 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 76,
+    "active_count": 77,
     "gauge_class": "warn",
-    "status_line": "Live now: 54 in the US, 36 in Canada.",
+    "status_line": "Live now: 54 in the US, 37 in Canada.",
     "incidents": [
       {
         "road": "US36E TO IS229N",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Collision on HWY 404 Southbound  at MULOCK DRIVE, Newmarket. Left shoulder and\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Disabled Vehicle on HWY 403 MISSISSAUGA Eastbound HOV at CAWTHRA ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "11 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "2 min",
+      "us_wait": "3 min",
       "us_status_class": "mod"
     },
     {
@@ -439,12 +439,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT",
+      "captured_at": "07:49 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 MDT",
+      "captured_at": "05:29 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,16 +465,16 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT",
+      "captured_at": "04:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "15 min",
-      "us_status_class": "mod"
+      "us_wait": "30 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 CDT",
+      "captured_at": "06:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 7 crossings slow, US-bound",
-      "value": "4/7",
+      "note": "4 of 8 crossings slow, US-bound",
+      "value": "4/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "safety",
+      "source": "The Trucker",
+      "headline": "Idaho police looking into big rig crash",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/idaho-police-looking-into-big-rig-crash",
+      "why": "Safety rules and blitzes hit the road on specific dates."
+    },
+    {
       "category": "equipment",
       "source": "The Trucker",
       "headline": "Snow happens: A trucker\u2019s state-by-state guide to tire chain laws for 2026-27",
       "url": "https://www.thetrucker.com/trucking-news/the-nation/snow-happens-a-truckers-state-by-state-guide-to-tire-chain-laws-for-2026-27",
       "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
-      "category": "regulations",
-      "source": "Trucking Info",
-      "headline": "BeyondTrucks Adds Rules Checks to Dispatch",
-      "url": "https://www.truckinginfo.com/news/beyondtrucks-adds-rules-checks-to-dispatch",
-      "why": "Rules change compliance cost and driver hours."
     }
   ],
   "theft_home_json": "[]",
