@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T20:01:25.234297",
+  "generated": "2026-10-19T21:01:56.782172",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -149,8 +149,8 @@
       "us": {
         "label": "Sweetgrass",
         "reported": true,
-        "delay": 0,
-        "captured": "10/19/2026 17:56:06"
+        "delay": 30,
+        "captured": "10/19/2026 18:56:19"
       }
     },
     "emerson-pembina": {
@@ -301,8 +301,8 @@
       "us": {
         "label": "Pembina",
         "reported": true,
-        "delay": 40,
-        "captured": "10/19/2026 18:56:06"
+        "delay": 18,
+        "captured": "10/19/2026 19:56:19"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 4,
-        "captured": "10/19/2026 19:56:06"
+        "delay": 22,
+        "captured": "10/19/2026 20:56:19"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/19/2026 19:56:06"
+        "captured": "10/19/2026 20:56:19"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/19/2026 19:56:06"
+        "captured": "10/19/2026 20:56:19"
       }
     },
     "pacific-blaine": {
@@ -910,7 +910,7 @@
         "label": "Pacific Highway",
         "reported": true,
         "delay": 5,
-        "captured": "10/19/2026 16:56:06"
+        "captured": "10/19/2026 17:56:19"
       }
     },
     "queenston-lewiston": {
@@ -1062,7 +1062,7 @@
         "label": "Lewiston Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/19/2026 19:56:06"
+        "captured": "10/19/2026 20:56:19"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 38,
-        "captured": "10/19/2026 19:56:06"
+        "captured": "10/19/2026 20:56:19"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 10,
-        "captured": "10/19/2026 19:56:06"
+        "captured": "10/19/2026 20:56:19"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -2106,12 +2106,12 @@
     },
     "us-buffalo-niagara-falls-peace-bridge": {
       "id": "us-buffalo-niagara-falls-peace-bridge",
-      "avg_delay": 5,
+      "avg_delay": 6,
       "min_delay": 0,
-      "max_delay": 19,
+      "max_delay": 22,
       "p50": 4.0,
-      "p75": 5.0,
-      "p90": 10.0,
+      "p75": 6.0,
+      "p90": 16.2,
       "observations": 15,
       "days_covered": 15,
       "hourly": {
@@ -2214,7 +2214,7 @@
       },
       "daily": {
         "0": {
-          "avg": 2,
+          "avg": 8,
           "count": 3,
           "label": "Mon"
         },
@@ -2400,12 +2400,12 @@
     },
     "us-calexico-east": {
       "id": "us-calexico-east",
-      "avg_delay": 33,
+      "avg_delay": 35,
       "min_delay": 5,
       "max_delay": 110,
       "p50": 15.0,
-      "p75": 52.5,
-      "p90": 75.0,
+      "p75": 61.2,
+      "p90": 78.5,
       "observations": 8,
       "days_covered": 8,
       "hourly": {
@@ -2508,7 +2508,7 @@
       },
       "daily": {
         "0": {
-          "avg": 80,
+          "avg": 88,
           "count": 2,
           "label": "Mon"
         },
@@ -5487,9 +5487,9 @@
     },
     "us-pembina": {
       "id": "us-pembina",
-      "avg_delay": 7,
+      "avg_delay": 6,
       "min_delay": 0,
-      "max_delay": 40,
+      "max_delay": 18,
       "p50": 2.0,
       "p75": 13.0,
       "p90": 16.4,
@@ -5595,7 +5595,7 @@
       },
       "daily": {
         "0": {
-          "avg": 17,
+          "avg": 10,
           "count": 3,
           "label": "Mon"
         },
@@ -5928,11 +5928,11 @@
     },
     "us-santa-teresa-santa-teresa-port-of-entry": {
       "id": "us-santa-teresa-santa-teresa-port-of-entry",
-      "avg_delay": 29,
+      "avg_delay": 28,
       "min_delay": 10,
       "max_delay": 50,
       "p50": 27.5,
-      "p75": 45.0,
+      "p75": 43.8,
       "p90": 45.5,
       "observations": 10,
       "days_covered": 10,
@@ -6036,7 +6036,7 @@
       },
       "daily": {
         "0": {
-          "avg": 28,
+          "avg": 25,
           "count": 2,
           "label": "Mon"
         },
@@ -6369,10 +6369,10 @@
     },
     "us-sweetgrass": {
       "id": "us-sweetgrass",
-      "avg_delay": 21,
+      "avg_delay": 23,
       "min_delay": 0,
       "max_delay": 40,
-      "p50": 25.0,
+      "p50": 30.0,
       "p75": 30.0,
       "p90": 40.0,
       "observations": 15,
@@ -6477,7 +6477,7 @@
       },
       "daily": {
         "0": {
-          "avg": 12,
+          "avg": 22,
           "count": 3,
           "label": "Mon"
         },
@@ -6522,8 +6522,8 @@
       "p50": 1.0,
       "p75": 1.0,
       "p90": 1.0,
-      "observations": 3,
-      "days_covered": 3,
+      "observations": 2,
+      "days_covered": 2,
       "hourly": {
         "0": {
           "avg": null,
@@ -6624,8 +6624,8 @@
       },
       "daily": {
         "0": {
-          "avg": 1,
-          "count": 1,
+          "avg": null,
+          "count": 0,
           "label": "Mon"
         },
         "1": {
