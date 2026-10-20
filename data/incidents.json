@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-321985",
+      "id": "ON-321989",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at BOWMANVILLE AVE / DURHAM REGION RD 57, Clarington. Right lane and right shoulder closed.",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Disabled Vehicle on QEW Fort Erie bound  at RED HILL CREEK EXPRESSWAY, Hamilton. 1 right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.89456449,
-      "lng": -78.68963251,
-      "start": 1792482300,
+      "lanes": "1 right lane closed",
+      "lat": 43.24840071,
+      "lng": -79.76106825,
+      "start": 1792485900,
       "end": null,
-      "updated": 1792482300,
+      "updated": 1792485900,
       "country": "CA",
       "scheduled": false
     },
@@ -724,24 +724,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-321952",
-      "province": "ON",
-      "highway": "GARDINER EXPWY",
-      "direction": "Eastbound",
-      "description": "Highway Maintenance on GARDINER EXPWY Eastbound COLLECTOR at KIPLING AVENUE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.617608,
-      "lng": -79.52625,
-      "start": 1792462920,
-      "end": null,
-      "updated": 1792462920,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-321923",
       "province": "ON",
       "highway": "HWY 17",
@@ -1044,6 +1026,24 @@
       "start": 1792634400,
       "end": 1793786400,
       "updated": 1792424160,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-321739",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Nightly Maintenance on HWY 404 Southbound  between 16TH AVE and HWY 7, Markham-Richmondhill . 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.865196,
+      "lng": -79.37536,
+      "start": 1792641600,
+      "end": 1793786400,
+      "updated": 1792423800,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-20T08:00:59.998517+00:00",
+  "updated": "2026-10-20T09:01:28.528433+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
