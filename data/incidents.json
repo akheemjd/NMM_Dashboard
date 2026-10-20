@@ -1,20 +1,20 @@
 {
   "incidents": [
     {
-      "id": "ON-321908",
+      "id": "ON-321914",
       "province": "ON",
-      "highway": "HWY 17",
-      "direction": "Westbound",
-      "description": "Highway Maintenance on HWY 17 Westbound  at MELGUND RD #3-MELGUND TWP, Dinorwic. Lane and WEST shoulder closed.",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Highway Maintenance on HWY 11 Northbound  at LINE 11, Oro Medonte. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "lane and WEST shoulder closed",
-      "lat": 49.5871263,
-      "lng": -92.3663279,
-      "start": 1792450140,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 44.506561,
+      "lng": -79.476241,
+      "start": 1792453260,
       "end": null,
-      "updated": 1792450140,
+      "updated": 1792453260,
       "country": "CA",
       "scheduled": false
     },
@@ -142,7 +142,7 @@
       "end": 1792798200,
       "updated": 1792434660,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-321814",
@@ -376,7 +376,7 @@
       "end": 1792530000,
       "updated": 1792423140,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-321728",
@@ -394,7 +394,7 @@
       "end": 1792515600,
       "updated": 1792422960,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-321717",
@@ -613,7 +613,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-20",
       "end_date": "2026-10-21",
       "id": "CA-C5HB-0003-2026-10-20-20:01:00",
@@ -697,7 +697,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-20",
       "end_date": "2026-10-21",
       "id": "CA-C5HB-0009-2026-10-20-20:01:00",
@@ -781,7 +781,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-20",
       "end_date": "2026-10-21",
       "id": "CA-C5HB-0015-2026-10-20-21:01:00",
@@ -865,7 +865,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-20",
       "end_date": "2026-10-21",
       "id": "CA-C5HB-0021-2026-10-20-20:01:00",
@@ -949,7 +949,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-20",
       "end_date": "2026-10-21",
       "id": "CA-C5HB-0027-2026-10-20-20:01:00",
@@ -1081,6 +1081,60 @@
       "end": "",
       "updated": "2026-10-15T18:41:51-07:00",
       "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "WI-acd63fab-2bf3-4657-81f9-7f37b5e231fa",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 NB",
+      "direction": "Northbound",
+      "description": "Road closed on I-41 NB northbound, WI. Ramp Full Closure on I-41 NB at OFF RAMP TO WIS 60 WB. Daily from 10/19/2026 to 10/20/2026, 07:00 PM - 06:00 AM, M, T",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.3242604055274,
+      "lng": -88.25038436406605,
+      "start": "2026-10-20T00:00:00+00:00",
+      "end": "2026-10-20T11:00:00+00:00",
+      "updated": "2026-10-15T21:44:04.193+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "WI-880cf8e2-3cc5-c458-bc91-cb956c48b60e",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 NB",
+      "direction": "Northbound",
+      "description": "Road closed on I-41 NB northbound, WI. Ramp Full Closure on I-41 NB at OFF RAMP TO WIS 60 EB. Daily from 10/19/2026 to 10/20/2026, 07:00 PM - 06:00 AM, M, T",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.32237283023841,
+      "lng": -88.24776268098074,
+      "start": "2026-10-20T00:00:00+00:00",
+      "end": "2026-10-20T11:00:00+00:00",
+      "updated": "2026-10-15T21:44:04.193+00:00",
+      "scheduled": false
+    },
+    {
+      "id": "WI-bde61504-081d-d958-ad4f-9624800e9659",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 NB",
+      "direction": "Northbound",
+      "description": "Road closed on I-41 NB northbound, WI. Ramp Full Closure on I-41 NB at ON RAMP FROM WIS 60. Daily from 10/19/2026 to 10/20/2026, 07:00 PM - 06:00 AM, M, T",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.32383959637988,
+      "lng": -88.2497848421462,
+      "start": "2026-10-20T00:00:00+00:00",
+      "end": "2026-10-20T11:00:00+00:00",
+      "updated": "2026-10-15T21:44:04.193+00:00",
       "scheduled": false
     },
     {
@@ -1462,6 +1516,24 @@
       "scheduled": false
     },
     {
+      "id": "WI-1ab115bb-dcad-ad59-ba58-944bf053c3c0",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 SB",
+      "direction": "Southbound",
+      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at ON RAMP FROM COUNTY E. Daily from 10/19/2026 to 10/23/2026, 07:00 PM - 06:00 AM, M, T, W, Th, F. Detour: Go south to County OO/Northland Ave. Turn right and go west to I-41 SB",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 44.298331707351934,
+      "lng": -88.38244695968594,
+      "start": "2026-10-20T00:00:00+00:00",
+      "end": "2026-10-20T11:00:00+00:00",
+      "updated": "2026-10-12T05:13:57.45+00:00",
+      "scheduled": false
+    },
+    {
       "id": "ND-CN-22958",
       "province": "ND",
       "country": "US",
@@ -1660,42 +1732,6 @@
       "scheduled": false
     },
     {
-      "id": "WI-c35430fb-2d10-ff55-9d62-51c79855deb5",
-      "province": "WI",
-      "country": "US",
-      "highway": "US 14 EB",
-      "direction": "Eastbound",
-      "description": "Road closed on US 14 EB eastbound, WI. Mainline Full Closure on US 14 EB from UNION RD to MADISON ST. Detour: USH 14 EB Detour Route: Travel north/west on USH 14.  Take the roundabout, turn left onto STH 92 and head west.  Turn left onto STH 104 and head south.  Turn left onto STH 59 and head east. ",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 42.8244827583716,
-      "lng": -89.3026883422241,
-      "start": "2026-10-01T05:00:00+00:00",
-      "end": "2026-11-01T04:59:59+00:00",
-      "updated": "2026-10-05T13:28:46.1+00:00",
-      "scheduled": false
-    },
-    {
-      "id": "WI-9d02c0f1-f697-ba52-a2ee-0cd1afbaa01b",
-      "province": "WI",
-      "country": "US",
-      "highway": "US 14 WB",
-      "direction": "Westbound",
-      "description": "Road closed on US 14 WB westbound, WI. Mainline Full Closure on US 14 WB from MADISON ST to UNION RD. Detour: USH 14 WB Detour Route: Travel south on STH 59/STH 213.  Turn right onto STH 59 and head west.  Turn right onto STH 104 and head north.  Turn right onto STH 92 and head east.  Take the round",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 42.7876559885454,
-      "lng": -89.2994247853616,
-      "start": "2026-10-01T05:00:00+00:00",
-      "end": "2026-11-01T04:59:59+00:00",
-      "updated": "2026-10-05T13:28:46.1+00:00",
-      "scheduled": false
-    },
-    {
       "id": "WI-f9ec2abd-b29a-8253-b2a8-661b31ec5e98",
       "province": "WI",
       "country": "US",
@@ -1837,42 +1873,6 @@
       "start": "2026-09-21T11:00:00Z",
       "end": "2026-11-01T21:00:00Z",
       "updated": "2026-09-10T13:06:23.937Z",
-      "scheduled": false
-    },
-    {
-      "id": "WI-84a136cf-0027-a356-abaa-980566f63da4",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-41 SB",
-      "direction": "Southbound",
-      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at OFF RAMP TO WIS 60. Detour: IH 41 Southbound Off-Ramp to STH 60 (Ramp B): Detour Ramp B traffic to STH 33, then west to STH 175, then south to STH 60 (Detour 2).",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.326006182252264,
-      "lng": -88.25314158027325,
-      "start": "2026-09-09T00:00:00+00:00",
-      "end": "2026-10-23T11:00:00+00:00",
-      "updated": "2026-09-10T06:52:48.157+00:00",
-      "scheduled": false
-    },
-    {
-      "id": "WI-31ac2c94-7fb8-135a-b6a1-9f67351269e6",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-41 SB",
-      "direction": "Southbound",
-      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at ON RAMP FROM WIS 60. Detour: IH 41 Southbound On-Ramp from STH 60 (Ramp A):\r\nDetour Ramp A traffic south on STH 164 to STH 167then east to IH 41 (Detour 1).",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.32479516596926,
-      "lng": -88.2514801614238,
-      "start": "2026-09-08T11:00:00+00:00",
-      "end": "2026-10-23T11:00:00+00:00",
-      "updated": "2026-09-10T06:52:48.157+00:00",
       "scheduled": false
     },
     {
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-19T23:00:45.935247+00:00",
+  "updated": "2026-10-20T00:00:57.941928+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
