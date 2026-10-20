@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-10-20 16:01",
-  "updated_iso": "2026-10-20T16:01:27+00:00",
-  "build_version": "1792512087",
+  "updated_at": "2026-10-20 17:01",
+  "updated_iso": "2026-10-20T17:01:35+00:00",
+  "build_version": "1792515695",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "20 min",
+    "us_max_wait": "35 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 75,
+    "active_count": 76,
     "gauge_class": "warn",
-    "status_line": "Live now: 54 in the US, 33 in Canada.",
+    "status_line": "Live now: 54 in the US, 34 in Canada.",
     "incidents": [
       {
         "road": "29N",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 105",
-        "what": "Disabled Vehicle on HWY 105 Northbound  at HANDGUN CLUB RD (E), Ear Falls. Lane\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at EASTPORT DRIVE, Hamilton. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,15 +375,15 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "10 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
       "captured_at": "Invalid Date ime",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "20 min",
+      "us_wait": "35 min",
       "us_status_class": "heavy"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "8 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "1 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 8 crossings slow, US-bound",
-      "value": "5/8",
+      "note": "6 of 8 crossings slow, US-bound",
+      "value": "6/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "4 of 9 crossings slow, Canada-bound",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
-      "source": "Truck News",
-      "headline": "Von Minor receives Trucking Cares Foundation award",
-      "url": "https://www.trucknews.com/transportation/von-minor-receives-trucking-cares-foundation-award/1003223713/",
-      "why": "Industry movement worth tracking."
+      "category": "markets",
+      "source": "Trucking Dive",
+      "headline": "Diesel price volatility is trucking\u2019s top issue in 2026: ATRI",
+      "url": "https://www.truckingdive.com/news/diesel-price-volatility-is-truckings-top-issue-in-2026-atri/833310/",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
-      "category": "equipment",
-      "source": "Truck News",
-      "headline": "Trinetra Guard combines trailer theft prevention with automated landing gear",
-      "url": "https://www.trucknews.com/equipment/trinetra-guard-combines-trailer-theft-prevention-with-automated-landing-gear/1003223549/",
-      "why": "Equipment cost and availability shape fleet economics."
+      "category": "drivers",
+      "source": "The Trucker",
+      "headline": "TCA Professional Drivers of the Year Awards now accepting nominations",
+      "url": "https://www.thetrucker.com/trucking-news/business/tca-professional-drivers-of-the-year-awards-now-accepting-nominations",
+      "why": "Driver supply and pay shape capacity and rates."
     }
   ],
   "theft_home_json": "[]",
