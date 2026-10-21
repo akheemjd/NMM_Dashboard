@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-21 07:00",
-  "updated_iso": "2026-10-21T07:00:51+00:00",
-  "build_version": "1792566051",
+  "updated_at": "2026-10-21 08:01",
+  "updated_iso": "2026-10-21T08:01:18+00:00",
+  "build_version": "1792569678",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "15 min",
+    "us_max_name": "Blaine-Pacific Highway",
+    "us_max_wait": "5 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -355,15 +355,15 @@
     "status_line": "Live now: 58 in the US, 32 in Canada.",
     "incidents": [
       {
-        "road": "29N",
-        "what": "Lane closure on 29N northbound, ND. Head-to-head traffic is active. Northbound\u2026",
-        "severity_label": "Minor",
+        "road": "I-5 in Stanislaus County",
+        "what": "Route 5 near Westley. Rest Area Work. All of 1 lanes closed.",
+        "severity_label": "Closed",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound  at REXDALE BLVD / DERRY ROAD, Toronto. Right\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound  at HWY 89/SIMCOE ROAD 89, Innisfil. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,11 +379,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT",
+      "captured_at": "03:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "4 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "01:15 EDT",
+      "captured_at": "03:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "23:40 PDT",
+      "captured_at": "00:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "2 of 7 crossings slow, US-bound",
-      "value": "2/7",
+      "note": "3 of 7 crossings slow, US-bound",
+      "value": "3/7",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
