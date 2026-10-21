@@ -5,16 +5,34 @@
       "province": "ON",
       "highway": "QEW",
       "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. 1 right lane closed.",
+      "description": "Disabled Vehicle on QEW Toronto bound  at CAWTHRA ROAD, Mississauga. 2 right lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "1 right lane closed",
+      "lanes": "2 right lanes closed",
       "lat": 43.58355731,
       "lng": -79.58300598,
       "start": 1792536600,
       "end": null,
-      "updated": 1792536600,
+      "updated": 1792540320,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-322451",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 HAMILTON Westbound  at KING ROAD, Burlington. 2 right lanes and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes and right shoulder closed",
+      "lat": 43.32877732,
+      "lng": -79.84265921,
+      "start": 1792538040,
+      "end": null,
+      "updated": 1792538400,
       "country": "CA",
       "scheduled": false
     },
@@ -33,24 +51,6 @@
       "start": 1792536540,
       "end": null,
       "updated": 1792536540,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-322420",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound COLLECTOR at BASKET WEAVE/JANE ST, Toronto. 3 right lanes and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 right lanes and right shoulder closed",
-      "lat": 43.719549529,
-      "lng": -79.499816895,
-      "start": 1792533780,
-      "end": null,
-      "updated": 1792535940,
       "country": "CA",
       "scheduled": false
     },
@@ -87,42 +87,6 @@
       "start": 1792427820,
       "end": null,
       "updated": 1792535340,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-322426",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 HAMILTON Westbound  at WATERDOWN ROAD, Burlington. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.31209876,
-      "lng": -79.86012323,
-      "start": 1792534680,
-      "end": null,
-      "updated": 1792534680,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-322421",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 HAMILTON Westbound  at Middle Townline Road, Woodstock. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.134605556,
-      "lng": -80.512861111,
-      "start": 1792534080,
-      "end": null,
-      "updated": 1792534080,
       "country": "CA",
       "scheduled": false
     },
@@ -196,7 +160,7 @@
       "end": 1792789200,
       "updated": 1792525200,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-322355",
@@ -394,7 +358,7 @@
       "end": 1792616400,
       "updated": 1792518000,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-322298",
@@ -483,6 +447,42 @@
       "start": 1792893600,
       "end": 1794045600,
       "updated": 1792513740,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-322282",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Northbound",
+      "description": "Nightly Maintenance on HWY 404 Northbound  between STEELES AVE, Toronto-Markham and 407, Markham. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.813137,
+      "lng": -79.35215,
+      "start": 1792886400,
+      "end": 1794045600,
+      "updated": 1792513380,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-322252",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Continuous Maintenance on HWY 401 Eastbound  between SIR JOHN A MACDONALD BLVD (IC 615) and DIVISION ST (IC 617) CR 10/Perth Rd, Kingston. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 44.27185,
+      "lng": -76.51836,
+      "start": 1793278800,
+      "end": 1793304000,
+      "updated": 1792511700,
       "country": "CA",
       "scheduled": true
     },
@@ -652,7 +652,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-21",
       "end_date": "2026-10-22",
       "id": "CA-C5HB-0004-2026-10-21-20:01:00",
@@ -736,7 +736,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-21",
       "end_date": "2026-10-22",
       "id": "CA-C5HB-0010-2026-10-21-20:01:00",
@@ -820,7 +820,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-21",
       "end_date": "2026-10-22",
       "id": "CA-C5HB-0016-2026-10-21-21:01:00",
@@ -904,7 +904,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-21",
       "end_date": "2026-10-22",
       "id": "CA-C5HB-0022-2026-10-21-20:01:00",
@@ -988,7 +988,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-21",
       "end_date": "2026-10-22",
       "id": "CA-C5HB-0028-2026-10-21-20:01:00",
@@ -1462,6 +1462,24 @@
       "scheduled": false
     },
     {
+      "id": "WI-86bd64a7-fee6-bf5e-b953-b49cf2e9fbb1",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 SB",
+      "direction": "Southbound",
+      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at ON RAMP FROM COUNTY E. Daily from 10/19/2026 to 10/23/2026, 07:00 PM - 06:00 AM, M, T, W, Th, F. Detour: Go south to County OO/Northland Ave. Turn right and go west to I-41 SB",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 44.298331707351934,
+      "lng": -88.38244695968594,
+      "start": "2026-10-21T00:00:00+00:00",
+      "end": "2026-10-21T11:00:00+00:00",
+      "updated": "2026-10-12T05:13:57.45+00:00",
+      "scheduled": false
+    },
+    {
       "id": "ND-CN-22958",
       "province": "ND",
       "country": "US",
@@ -1876,24 +1894,6 @@
       "scheduled": false
     },
     {
-      "id": "WI-31ac2c94-7fb8-135a-b6a1-9f67351269e6",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-41 SB",
-      "direction": "Southbound",
-      "description": "Road closed on I-41 SB southbound, WI. Ramp Full Closure on I-41 SB at ON RAMP FROM WIS 60. Detour: IH 41 Southbound On-Ramp from STH 60 (Ramp A):\r\nDetour Ramp A traffic south on STH 164 to STH 167then east to IH 41 (Detour 1).",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.32479516596926,
-      "lng": -88.2514801614238,
-      "start": "2026-09-08T11:00:00+00:00",
-      "end": "2026-10-30T11:00:00+00:00",
-      "updated": "2026-09-10T06:52:48.157+00:00",
-      "scheduled": false
-    },
-    {
       "id": "WI-52c2f48f-20b3-5c51-b359-460b73702734",
       "province": "WI",
       "country": "US",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-20T23:00:46.062532+00:00",
+  "updated": "2026-10-21T00:00:45.797642+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
