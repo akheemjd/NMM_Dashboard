@@ -109,11 +109,14 @@ def page(head_html, body_html, tail):
 def render_index(posts):
     rows = []
     for p in posts:
+        # The frontmatter of a few older posts carries a trailing ">" - a leftover from the Ghost
+        # editor's block syntax. Strip it and any stray markup before it reaches a reader.
+        desc = re.sub(r"\s*[<>]+\s*$", "", p.get("description", "")).strip()
         rows.append(
             f'      <a href="/blog/{html.escape(p["slug"])}/">'
-            f'<span class="src">{html.escape(p["category"])}</span>'
+            f'<span class="src">{html.escape(p["category"])}</span> '
             f'<b>{html.escape(p["title"])}</b><br>'
-            f'{html.escape(p.get("description", ""))}'
+            f'{html.escape(desc)}'
             f'<small class="meta" style="display:block;margin-top:6px">{html.escape(p["date"])}</small></a>'
         )
     count = len(posts)
