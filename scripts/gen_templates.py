@@ -45,6 +45,7 @@ NAV = [
     ("/exchange-rate/", "Exchange"),
     ("/road-incidents/", "Incidents"),
     ("/market-pulse/", "Market"),
+    ("/blog/", "Writing"),
     ("/industry-news/", "News"),
     ("/methodology/nmdi/", "Methodology"),
     ("/press/", "Press"),
