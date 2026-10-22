@@ -58,6 +58,41 @@ fi
 mkdir -p docs/assets && cp -r assets/. docs/assets/
 cp assets/favicon.ico docs/favicon.ico
 
+# One deploy at a time.
+#
+# Two concurrent deploys share the git index, docs/ and the build's temp state. When they overlap
+# one loses the race and dies from an interrupt, which surfaces as exit 3221225786
+# (0xC000013A STATUS_CONTROL_C_EXIT) - a code that says nothing about the cause, and that was for
+# three days being reported to the operator as a provider rate limit.
+#
+# Measured before this was added: 5 failures in 50 runs, all the same interrupt, none of them a
+# real build error. The loser now waits for the winner instead of being killed.
+LOCKDIR=".deploy.lock"
+ACQUIRED=0
+if mkdir "$LOCKDIR" 2>/dev/null; then
+  ACQUIRED=1
+elif [ -d "$LOCKDIR" ] && [ -z "$(find "$LOCKDIR" -maxdepth 0 -mmin -60 2>/dev/null)" ]; then
+  # A lock older than an hour is stale - a run died without reaching its trap.
+  echo "Removing stale deploy lock."
+  rm -rf "$LOCKDIR"
+  if mkdir "$LOCKDIR" 2>/dev/null; then ACQUIRED=1; fi
+fi
+
+if [ "$ACQUIRED" -eq 0 ]; then
+  echo "Another deploy holds the lock; waiting up to 10 minutes."
+  waited=0
+  while [ -d "$LOCKDIR" ] && [ "$waited" -lt 600 ]; do
+    sleep 10; waited=$((waited + 10))
+  done
+  if [ -d "$LOCKDIR" ]; then
+    echo "FATAL: another deploy has held the lock for 10 minutes. Not running a second one."
+    exit 1
+  fi
+  mkdir "$LOCKDIR" 2>/dev/null || true
+fi
+echo "$$" > "$LOCKDIR/pid" 2>/dev/null || true
+trap 'rm -rf "$LOCKDIR"' EXIT INT TERM
+
 $PYTHON scripts/gen_templates.py && $PYTHON scripts/gen_country_homes.py && $PYTHON scripts/build_chart_data.py && $PYTHON scripts/build_templates.py && $PYTHON scripts/build_provinces.py && $PYTHON scripts/build_city_pages.py && $PYTHON scripts/build_us_pages.py && $PYTHON scripts/build_border_pages.py && $PYTHON scripts/build_cbp_ports.py && $PYTHON scripts/build_ifta_page.py && $PYTHON scripts/build_us_states.py && $PYTHON scripts/build_border_trends.py && $PYTHON scripts/build_og.py && $PYTHON scripts/build_blog.py && $PYTHON scripts/build_sitemap.py && $PYTHON scripts/fx_layer.py && $PYTHON scripts/trim_descriptions.py && $PYTHON scripts/check_coherence.py && $PYTHON scripts/check_links.py && $PYTHON scripts/check_data_integrity.py && $PYTHON scripts/check_head_markup.py && $PYTHON scripts/check_cross_border.py && $PYTHON scripts/audit_reader_view.py --strict && $PYTHON scripts/audit_reader_deep.py 2>&1
 
 # 2. Health check
