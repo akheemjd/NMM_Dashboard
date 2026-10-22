@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-22 17:01",
-  "updated_iso": "2026-10-22T17:01:31+00:00",
-  "build_version": "1792688491",
+  "updated_at": "2026-10-22 18:00",
+  "updated_iso": "2026-10-22T18:00:40+00:00",
+  "build_version": "1792692040",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
     "max_wait": "15 min",
-    "us_max_name": "Emerson-Pembina",
-    "us_max_wait": "24 min",
+    "us_max_name": "Blue Water Bridge",
+    "us_max_wait": "25 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -40,7 +40,7 @@
         "slug": "alberta",
         "price": "230.8",
         "pct": 0.0,
-        "change": "-2.1",
+        "change": "-1.4",
         "change_class": "down",
         "vs_national": "-32.9",
         "vs_class": "lo",
@@ -52,7 +52,7 @@
         "slug": "saskatchewan",
         "price": "248.7",
         "pct": 29.6,
-        "change": "-2.1",
+        "change": "-1.2",
         "change_class": "down",
         "vs_national": "-15.0",
         "vs_class": "lo",
@@ -64,7 +64,7 @@
         "slug": "manitoba",
         "price": "251.3",
         "pct": 33.9,
-        "change": "-0.9",
+        "change": "-0.2",
         "change_class": "down",
         "vs_national": "-12.4",
         "vs_class": "lo",
@@ -88,7 +88,7 @@
         "slug": "ontario",
         "price": "258.1",
         "pct": 45.2,
-        "change": "-0.2",
+        "change": "-1.3",
         "change_class": "down",
         "vs_national": "-5.6",
         "vs_class": "lo",
@@ -115,7 +115,7 @@
       "slug": "alberta",
       "price": "230.8",
       "pct": 0.0,
-      "change": "-2.1",
+      "change": "-1.4",
       "change_class": "down",
       "vs_national": "-32.9",
       "vs_class": "lo",
@@ -127,7 +127,7 @@
       "slug": "saskatchewan",
       "price": "248.7",
       "pct": 29.6,
-      "change": "-2.1",
+      "change": "-1.2",
       "change_class": "down",
       "vs_national": "-15.0",
       "vs_class": "lo",
@@ -139,7 +139,7 @@
       "slug": "manitoba",
       "price": "251.3",
       "pct": 33.9,
-      "change": "-0.9",
+      "change": "-0.2",
       "change_class": "down",
       "vs_national": "-12.4",
       "vs_class": "lo",
@@ -163,7 +163,7 @@
       "slug": "ontario",
       "price": "258.1",
       "pct": 45.2,
-      "change": "-0.2",
+      "change": "-1.3",
       "change_class": "down",
       "vs_national": "-5.6",
       "vs_class": "lo",
@@ -187,7 +187,7 @@
       "slug": "nova-scotia",
       "price": "273.2",
       "pct": 70.2,
-      "change": "+5.0",
+      "change": "+4.9",
       "change_class": "up",
       "vs_national": "+9.5",
       "vs_class": "hi",
@@ -211,7 +211,7 @@
       "slug": "newfoundland-and-labrador",
       "price": "280.8",
       "pct": 82.8,
-      "change": "+4.6",
+      "change": "+4.4",
       "change_class": "up",
       "vs_national": "+17.1",
       "vs_class": "hi",
@@ -223,7 +223,7 @@
       "slug": "quebec",
       "price": "291.2",
       "pct": 100.0,
-      "change": "-0.6",
+      "change": "-1.1",
       "change_class": "down",
       "vs_national": "+27.5",
       "vs_class": "hi",
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 73,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 64 in the US, 9 in Canada.",
+    "status_line": "Live now: 64 in the US, 7 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at NEILSON ROAD, Toronto.\u2026",
+        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at BROCK ROAD, Pickering. 1\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "7 min",
-      "us_status_class": "mod"
+      "us_wait": "25 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "20 min",
-      "us_status_class": "heavy"
+      "us_wait": "15 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT",
+      "captured_at": "10:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 CDT",
+      "captured_at": "12:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "24 min",
-      "us_status_class": "heavy"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -574,7 +574,7 @@
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "44.4\u00a2/L",
+      "value": "43.7\u00a2/L",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "NRCan weekly diesel survey",
