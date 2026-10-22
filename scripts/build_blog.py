@@ -106,34 +106,63 @@ def page(head_html, body_html, tail):
     return out
 
 
+MONTHS = ("January", "February", "March", "April", "May", "June", "July",
+          "August", "September", "October", "November", "December")
+
+
+def human_date(iso):
+    """"2026-10-16" -> "16 October 2026". A list of ISO stamps reads like a changelog."""
+    try:
+        y, m, d = iso.split("-")
+        return f"{int(d)} {MONTHS[int(m) - 1]} {y}"
+    except (ValueError, IndexError):
+        return iso
+
+
 def render_index(posts):
-    rows = []
-    for p in posts:
-        # The frontmatter of a few older posts carries a trailing ">" - a leftover from the Ghost
-        # editor's block syntax. Strip it and any stray markup before it reaches a reader.
-        desc = re.sub(r"\s*[<>]+\s*$", "", p.get("description", "")).strip()
-        rows.append(
-            f'      <a href="/blog/{html.escape(p["slug"])}/">'
-            f'<span class="src">{html.escape(p["category"])}</span> '
-            f'<b>{html.escape(p["title"])}</b><br>'
-            f'{html.escape(desc)}'
-            f'<small class="meta" style="display:block;margin-top:6px">{html.escape(p["date"])}</small></a>'
+    if not posts:
+        body = ('\n  <section class="sec"><div class="lead"><h1>Writing</h1></div>'
+                '\n    <p class="note">Nothing published yet.</p></section>\n')
+        return page(G.head("Writing | Northern Mile", "Writing on cross-border trucking.",
+                           BASE + "/blog/", "/og.jpg", ""), body, G.foot())
+
+    def clean(p):
+        return re.sub(r"\s*[<>]+\s*$", "", p.get("description", "")).strip()
+
+    def card(p, heading, extra=""):
+        return (
+            f'        <a class="pickcard" href="/blog/{html.escape(p["slug"])}/">'
+            f'<span class="pflag">{html.escape(p["category"])} · {human_date(p["date"])}</span>'
+            f'<{heading}>{html.escape(p["title"])}</{heading}>'
+            + (f'<p class="pmeta">{html.escape(clean(p))}</p>' if clean(p) else "")
+            + extra + '</a>'
         )
+
+    lead, rest = posts[0], posts[1:]
+    featured = card(lead, "h2", '<span class="pgo">Read it &rarr;</span>')
+    grid = "\n".join(card(p, "h3") for p in rest)
+
     count = len(posts)
     body = f"""
   <section class="sec">
     <div class="lead"><h1>Writing</h1><p>{count} pieces on cross-border trucking, from the data.</p></div>
     <div class="reading">
-      <p>Every piece here starts from a published figure and names where it came from. No press
-      releases, no sponsored copy. When a number is in a sentence, the source is at the bottom of
-      the page.</p>
+      <p>Every piece starts from a published figure and names where it came from. No press releases,
+      no sponsored copy. Where a number appears in a sentence, its source is at the foot of the page.</p>
     </div>
   </section>
 
   <section class="sec">
     <div class="lead"><h2>Latest</h2></div>
-    <div class="links-list">
-{chr(10).join(rows) if rows else '      <p class="note">Nothing published yet.</p>'}
+    <div class="pick" style="grid-template-columns:1fr">
+{featured}
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="lead"><h2>More writing</h2></div>
+    <div class="pick">
+{grid}
     </div>
   </section>
 """
