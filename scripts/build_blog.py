@@ -142,10 +142,13 @@ def render_index(posts):
         cut = body[:150].rsplit(" ", 1)[0]
         return cut.rstrip(",;:") + "…"
 
-    def card(p, heading, extra=""):
+    def card(p, heading, extra="", span=False):
+        # span lets the final card take the full row when the grid count is odd, instead of
+        # leaving a half-width card stranded beside empty space.
+        style = ' style="grid-column:1/-1"' if span else ""
         return (
-            f'        <a class="pickcard" href="/blog/{html.escape(p["slug"])}/">'
-            f'<span class="pflag">{html.escape(p["category"])} · {human_date(p["date"])}</span>'
+            f'        <a class="pickcard" href="/blog/{html.escape(p["slug"])}/"{style}'
+            f'><span class="pflag">{html.escape(p["category"])} · {human_date(p["date"])}</span>'
             f'<{heading}>{html.escape(p["title"])}</{heading}>'
             + (f'<p class="pmeta">{html.escape(clean(p))}</p>' if clean(p) else "")
             + extra + '</a>'
@@ -153,7 +156,12 @@ def render_index(posts):
 
     lead, rest = posts[0], posts[1:]
     featured = card(lead, "h2", '<span class="pgo">Read it &rarr;</span>')
-    grid = "\n".join(card(p, "h3") for p in rest)
+
+    # A 2-column grid with an odd number of cards leaves one alone on the last row. Let that card
+    # span both columns instead - it reads as a deliberate close rather than a gap.
+    odd = len(rest) % 2 == 1
+    cards = [card(p, "h3", span=(odd and i == len(rest) - 1)) for i, p in enumerate(rest)]
+    grid = "\n".join(cards)
 
     count = len(posts)
     body = f"""
@@ -205,7 +213,7 @@ def render_post(p):
     # The writer's copy often opens with its own H1; the page supplies one.
     body_html = re.sub(r"^\s*<h1[^>]*>.*?</h1>\s*", "", body_html, count=1, flags=re.S)
 
-    meta_line = " · ".join(x for x in (html.escape(p["date"]), html.escape(p["category"])) if x)
+    meta_line = " · ".join(x for x in (human_date(p["date"]), html.escape(p["category"])) if x)
     tags = p.get("tags", "")
     tag_line = (f'      <p class="note">Filed under {html.escape(tags)}.</p>' if tags else "")
 
@@ -229,7 +237,10 @@ def render_post(p):
     <p class="note"><a href="/blog/">All writing</a> · <a href="/methodology/">How the numbers are made</a></p>
   </section>
 """
-    return page(G.head(p.get("seo_title") or p["title"], p.get("description", ""), canon, "/og.jpg", ld, og_type="article"),
+    # Not seo_title: in these frontmatters that field is the raw target keyword ("cbp entry filing
+    # for trucking"), which is what a tab and a search result would then show. The headline is the
+    # title a reader should see.
+    return page(G.head(f'{p["title"]} | Northern Mile', p.get("description", ""), canon, "/og.jpg", ld, og_type="article"),
                 body, G.foot())
 
 
