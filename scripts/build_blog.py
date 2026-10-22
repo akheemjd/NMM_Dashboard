@@ -100,7 +100,7 @@ def page(head_html, body_html, tail):
     out = out.replace("{{updated_iso}}", stamp_iso)
     out = out.replace("{{updated_at}}", stamp_human)
 
-    leftover = re.findall(r"\{\{[a-z0-9_]+\}\}", out)
+    leftover = re.findall(r"\{\{[^}]*\}\}", out)
     if leftover:
         raise SystemExit(f"blog: unresolved template tokens {sorted(set(leftover))}")
     return out
@@ -148,7 +148,16 @@ def render_index(posts):
 def render_post(p):
     slug = html.escape(p["slug"])
     canon = f"{BASE}/blog/{slug}/"
-    body_html = markdown.markdown(p["body"], extensions=["extra", "sane_lists"])
+
+    # Ghost-era figure macros, e.g. {{figure:provincial-spread}}. The images they pointed at were
+    # uploaded to Ghost and went with the cancelled account, so there is nothing to resolve them to
+    # and they would print as literal braces. Dropped rather than left dangling; the prose around
+    # them still reads, and the charts themselves live on the dashboard. Alternates ("figure-x" /
+    # "alt-x") and anything on their own line or inside a paragraph both go.
+    body_md = re.sub(r"\{\{figure:[^}]*\}\}", "", p["body"])
+    body_md = re.sub(r"\n{3,}", "\n\n", body_md)
+
+    body_html = markdown.markdown(body_md, extensions=["extra", "sane_lists"])
     # The writer's copy often opens with its own H1; the page supplies one.
     body_html = re.sub(r"^\s*<h1[^>]*>.*?</h1>\s*", "", body_html, count=1, flags=re.S)
 
