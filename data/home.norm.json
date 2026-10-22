@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-22 15:02",
-  "updated_iso": "2026-10-22T15:02:07+00:00",
-  "build_version": "1792681327",
+  "updated_at": "2026-10-22 16:01",
+  "updated_iso": "2026-10-22T16:01:27+00:00",
+  "build_version": "1792684887",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
     "max_wait": "15 min",
-    "us_max_name": "Peace Bridge",
-    "us_max_wait": "13 min",
+    "us_max_name": "Emerson-Pembina",
+    "us_max_wait": "24 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 65,
+    "active_count": 76,
     "gauge_class": "warn",
-    "status_line": "Live now: 56 in the US, 10 in Canada.",
+    "status_line": "Live now: 64 in the US, 12 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Highway Maintenance on HWY 404 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE,\u2026",
+        "road": "HWY 409",
+        "what": "Emergency Roadwork on HWY 409 Westbound RAMP at HWY 427, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "5 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "13 min",
+      "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "11 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT",
+      "captured_at": "08:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 CDT",
+      "captured_at": "10:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "us_wait": "24 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -518,6 +518,15 @@
       "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
     },
     {
+      "name": "Monthly GDP",
+      "note": "$2372B (chained 2017)",
+      "value": "0.0%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
       "name": "GDP, year over year",
       "note": "GDP against the same quarter last year. The longer-term\u2026",
       "value": "+2.2%",
@@ -525,6 +534,15 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "US Bureau of Economic Analysis, via FRED",
       "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
+    },
+    {
+      "name": "GDP, year over year",
+      "note": "GDP against the same month last year. The longer-term\u2026",
+      "value": "+1.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">Canada</span> ",
+      "source": "Statistics Canada",
+      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 miles",
@@ -565,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "6 of 9 crossings slow, US-bound",
-      "value": "6/9",
+      "note": "7 of 9 crossings slow, US-bound",
+      "value": "7/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -593,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "safety",
-      "source": "Trucking Info",
-      "headline": "Platform Science Adds Dispatch and Safety Tools",
-      "url": "https://www.truckinginfo.com/news/platform-science-adds-dispatch-and-safety-tools",
-      "why": "Safety rules and blitzes hit the road on specific dates."
+      "category": "drivers",
+      "source": "Truck News",
+      "headline": "The journey to becoming a \u2018Best Fleet\u2019 starts before a driver\u2019s first day",
+      "url": "https://www.trucknews.com/transportation/the-journey-to-becoming-a-best-fleet-starts-before-a-drivers-first-day/1003223848/",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "safety",
-      "source": "Trucking Info",
-      "headline": "PrePass Intelligence Mines Fleet Bypass, Toll and Safety Data",
-      "url": "https://www.truckinginfo.com/news/prepass-intelligence-mines-fleet-bypass-toll-and-safety-data",
-      "why": "Safety rules and blitzes hit the road on specific dates."
+      "category": "industry",
+      "source": "Truck News",
+      "headline": "Armed Quebec highway enforcement officers resume patrols after 19-month hiatus",
+      "url": "https://www.trucknews.com/regulations/armed-quebec-highway-enforcement-officers-resume-patrols-after-19-month-hiatus/1003223858/",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
