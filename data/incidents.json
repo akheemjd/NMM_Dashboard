@@ -1,20 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-323046",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Southbound",
+      "description": "Collision on HWY 427 Southbound  at REXDALE BLVD / DERRY ROAD, Toronto. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.71827852,
+      "lng": -79.6202767,
+      "start": 1792666080,
+      "end": null,
+      "updated": 1792666380,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-323028",
       "province": "ON",
       "highway": "HWY 9",
-      "direction": "Both Directions",
-      "description": "Vehicle Fire on HWY 9 Both Directions  at HWY 400, Kettleby. All lanes closed.",
+      "direction": "Eastbound",
+      "description": "Vehicle Fire on HWY 9 Eastbound  at HWY 400, Kettleby. 2 lanes and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
+      "closure": false,
+      "lanes": "2 lanes and EAST shoulder closed",
       "lat": 44.029063,
       "lng": -79.59489,
       "start": 1792662180,
       "end": null,
-      "updated": 1792662180,
+      "updated": 1792665060,
       "country": "CA",
       "scheduled": false
     },
@@ -958,24 +976,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-322820",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 401 Westbound  between Highway 6 South / Brock Road / Wellington Rd 46 (299KM) and Highway 6 South / Brock Road / Wellington Rd 46 (299KM), Morriston. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.45316,
-      "lng": -80.12471,
-      "start": 1793055600,
-      "end": 1796814000,
-      "updated": 1792608180,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
       "id": "ND-CN-23102",
       "province": "ND",
       "country": "US",
@@ -1697,7 +1697,7 @@
     }
   ],
   "total": 90,
-  "updated": "2026-10-22T10:01:06.923485+00:00",
+  "updated": "2026-10-22T11:01:05.723959+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
