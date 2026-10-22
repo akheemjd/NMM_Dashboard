@@ -109,13 +109,12 @@ def page(head_html, body_html, tail):
 def render_index(posts):
     rows = []
     for p in posts:
-        when = p["date"]
         rows.append(
-            f'      <a class="r" href="/blog/{html.escape(p["slug"])}/">'
-            f'<span class="k">{html.escape(p["category"])}</span>'
-            f'<span class="t">{html.escape(p["title"])}</span>'
-            f'<span class="d">{html.escape(p.get("description", "")[:150])}</span>'
-            f'<span class="m">{when}</span></a>'
+            f'      <a href="/blog/{html.escape(p["slug"])}/">'
+            f'<span class="src">{html.escape(p["category"])}</span>'
+            f'<b>{html.escape(p["title"])}</b><br>'
+            f'{html.escape(p.get("description", ""))}'
+            f'<small class="meta" style="display:block;margin-top:6px">{html.escape(p["date"])}</small></a>'
         )
     count = len(posts)
     body = f"""
@@ -130,7 +129,7 @@ def render_index(posts):
 
   <section class="sec">
     <div class="lead"><h2>Latest</h2></div>
-    <div class="rows">
+    <div class="links-list">
 {chr(10).join(rows) if rows else '      <p class="note">Nothing published yet.</p>'}
     </div>
   </section>
