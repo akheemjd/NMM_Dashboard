@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-323134",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound RAMP at GUELPH LINE, Milton. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.49256227,
+      "lng": -79.9862499,
+      "start": 1792672800,
+      "end": null,
+      "updated": 1792672800,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-323132",
       "province": "ON",
       "highway": "HWY 17",
@@ -958,24 +976,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-322851",
-      "province": "ON",
-      "highway": "HWY 7A",
-      "direction": "Westbound",
-      "description": "Daily Construction on HWY 7A Westbound  between NESBITT LINE ROAD and REGIONAL ROAD 57 SOUTH, Port Perry. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 44.15459,
-      "lng": -78.73721,
-      "start": 1793008800,
-      "end": 1793390400,
-      "updated": 1792611000,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
       "id": "ND-CN-23102",
       "province": "ND",
       "country": "US",
@@ -1697,7 +1697,7 @@
     }
   ],
   "total": 90,
-  "updated": "2026-10-22T12:41:59.370267+00:00",
+  "updated": "2026-10-22T12:45:01.593804+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
