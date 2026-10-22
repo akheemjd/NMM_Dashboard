@@ -127,7 +127,20 @@ def render_index(posts):
                            BASE + "/blog/", "/og.jpg", ""), body, G.foot())
 
     def clean(p):
-        return re.sub(r"\s*[<>]+\s*$", "", p.get("description", "")).strip()
+        """A card needs a line of copy. Four posts have no description in their frontmatter, and an
+        empty card reads as a rendering fault rather than a choice - so fall back to the opening of
+        the piece itself, trimmed at a word boundary."""
+        desc = re.sub(r"\s*[<>]+\s*$", "", p.get("description", "")).strip()
+        if desc:
+            return desc
+        body = re.sub(r"^#+ .*$", "", p.get("body", ""), flags=re.M)
+        body = re.sub(r"\{\{[^}]*\}\}", "", body)
+        body = re.sub(r"[*_`>#]", "", body)
+        body = " ".join(body.split())
+        if len(body) <= 150:
+            return body
+        cut = body[:150].rsplit(" ", 1)[0]
+        return cut.rstrip(",;:") + "…"
 
     def card(p, heading, extra=""):
         return (
