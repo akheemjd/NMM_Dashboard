@@ -1,6 +1,24 @@
 {
   "market": [
     {
+      "name": "Quarterly GDP",
+      "note": "Q2 2026, annualized, $24.4T (chained 2017)",
+      "value": "+2.2%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "GDP, year over year",
+      "note": "GDP against the same quarter last year. The longer-term\u2026",
+      "value": "+2.2%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
+    },
+    {
       "name": "Fuel cost per 1,000 miles",
       "note": "At $6.276/gal and 6.5 mpg",
       "value": "$966",
@@ -39,8 +57,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "3 of 9 crossings slow, US-bound",
-      "value": "3/9",
+      "note": "3 of 7 crossings slow, US-bound",
+      "value": "3/7",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -64,13 +82,13 @@
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
     }
   ],
-  "direction_summary": "0 up \u00b7 1 down \u00b7 4 steady or level",
-  "weekly_read": "US diesel at $6.276/gal, Canadian diesel at 263.7\u00a2/L, the loonie at 1.4057.",
+  "direction_summary": "2 up \u00b7 1 down \u00b7 4 steady or level",
+  "weekly_read": "US diesel at $6.276/gal, Canadian diesel at 263.7\u00a2/L, the loonie at 1.4057, US GDP moving +2.2% annualized last quarter.",
   "fuel_pct_of_ops": "25-35%",
   "current_diesel": 263.7,
   "us_diesel": "6.276",
   "usd_cad": 1.4057,
-  "updated_at": "2026-10-22 04:01",
-  "updated_iso": "2026-10-22T04:01:08+00:00",
-  "build_version": "1792641668"
+  "updated_at": "2026-10-22 05:01",
+  "updated_iso": "2026-10-22T05:01:52+00:00",
+  "build_version": "1792645312"
 }
