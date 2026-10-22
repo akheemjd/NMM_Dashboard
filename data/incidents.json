@@ -1,6 +1,42 @@
 {
   "incidents": [
     {
+      "id": "ON-322960",
+      "province": "ON",
+      "highway": "HWY 403 MISSISSAUGA",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 MISSISSAUGA Westbound  at HWY 5 / DUNDAS STREET, Mississauga. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.51195024,
+      "lng": -79.69314879,
+      "start": 1792625460,
+      "end": null,
+      "updated": 1792625460,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-322953",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Northbound",
+      "description": "Daily Engineering Investigation on HWY 11 Northbound  between SEC HWY 613 - DEVLIN and BARWICK RD ( N) - RIVERVIEW PARK RD (S), Emo. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 48.620575,
+      "lng": -93.67196,
+      "start": 1793016000,
+      "end": 1794265200,
+      "updated": 1792623720,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
       "id": "ON-322947",
       "province": "ON",
       "highway": "HWY 599",
@@ -33,24 +69,6 @@
       "start": 1792621860,
       "end": null,
       "updated": 1792622100,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-322929",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at BROCK ROAD, Pickering. 1 right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane closed",
-      "lat": 43.840052294,
-      "lng": -79.068383574,
-      "start": 1792620180,
-      "end": null,
-      "updated": 1792620180,
       "country": "CA",
       "scheduled": false
     },
@@ -178,7 +196,7 @@
       "end": 1792702800,
       "updated": 1792615440,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-322889",
@@ -433,24 +451,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-322801",
-      "province": "ON",
-      "highway": "HWY 9",
-      "direction": "Westbound",
-      "description": "Nightly Construction on HWY 9 Westbound  between 6TH LINE EAST, Caledon and NORTH JCT HWY 10-BUENA VISTA DRIVE, Orangeville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.94424,
-      "lng": -79.985054,
-      "start": 1792886400,
-      "end": 1792933200,
-      "updated": 1792606740,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
       "scheduled": true,
       "start_date": "2026-10-23",
       "end_date": "2026-10-25",
@@ -598,7 +598,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-22",
       "end_date": "2026-10-23",
       "id": "CA-C5HB-0005-2026-10-22-20:01:00",
@@ -661,7 +661,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-22",
       "end_date": "2026-10-23",
       "id": "CA-C5HB-0011-2026-10-22-20:01:00",
@@ -724,7 +724,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-22",
       "end_date": "2026-10-23",
       "id": "CA-C5HB-0017-2026-10-22-21:01:00",
@@ -787,7 +787,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-22",
       "end_date": "2026-10-23",
       "id": "CA-C5HB-0023-2026-10-22-20:01:00",
@@ -850,7 +850,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-22",
       "end_date": "2026-10-23",
       "id": "CA-C5HB-0029-2026-10-22-20:01:00",
@@ -913,7 +913,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-22",
       "end_date": "2026-10-23",
       "id": "CA-C5HB-0035-2026-10-22-20:01:00",
@@ -1117,78 +1117,6 @@
       "start": "2026-03-30T00:00:00-05:00",
       "end": "2026-11-20T00:00:00-06:00",
       "updated": "2026-10-11T06:37:47-05:00",
-      "scheduled": false
-    },
-    {
-      "id": "MN-CARSx-136731-1",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 75",
-      "direction": "Northbound",
-      "description": "Road closed on US 75 northbound, MN. Closed, Construction Work, Detour In Operation",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.664093,
-      "lng": -96.212664,
-      "start": "2026-09-08T12:00:00Z",
-      "end": "2026-10-30T23:00:00Z",
-      "updated": "2026-10-09T15:09:28.878Z",
-      "scheduled": false
-    },
-    {
-      "id": "MN-CARSx-136731-2",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 75",
-      "direction": "Southbound",
-      "description": "Road closed on US 75 southbound, MN. Closed, Construction Work, Detour In Operation",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.669261,
-      "lng": -96.212551,
-      "start": "2026-09-08T12:00:00Z",
-      "end": "2026-10-30T23:00:00Z",
-      "updated": "2026-10-09T15:09:28.878Z",
-      "scheduled": false
-    },
-    {
-      "id": "MN-CARSx-136733-1",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 75",
-      "direction": "Northbound",
-      "description": "Road closed on US 75 northbound, MN. Closed, Road Construction, Detour In Operation",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.654361,
-      "lng": -96.212833,
-      "start": "2026-09-05T12:00:00Z",
-      "end": "2026-10-30T23:00:00Z",
-      "updated": "2026-10-09T15:07:41.230Z",
-      "scheduled": false
-    },
-    {
-      "id": "MN-CARSx-136733-2",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 75",
-      "direction": "Southbound",
-      "description": "Road closed on US 75 southbound, MN. Closed, Road Construction, Detour In Operation",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.655294,
-      "lng": -96.21281,
-      "start": "2026-09-05T12:00:00Z",
-      "end": "2026-10-30T23:00:00Z",
-      "updated": "2026-10-09T15:07:41.230Z",
       "scheduled": false
     },
     {
@@ -1480,42 +1408,6 @@
       "scheduled": false
     },
     {
-      "id": "MN-CARSx-70309-1",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 61",
-      "direction": "Northbound",
-      "description": "Road closed on US 61 northbound, MN. Closed, Construction Work",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 44.963054,
-      "lng": -93.066032,
-      "start": "2026-06-29T17:15:00Z",
-      "end": "2026-10-30T22:00:00Z",
-      "updated": "2026-06-29T17:17:34.905Z",
-      "scheduled": false
-    },
-    {
-      "id": "MN-CARSx-70309-2",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 61",
-      "direction": "Southbound",
-      "description": "Road closed on US 61 southbound, MN. Closed, Construction Work",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 44.967137,
-      "lng": -93.066,
-      "start": "2026-06-29T17:15:00Z",
-      "end": "2026-10-30T22:00:00Z",
-      "updated": "2026-06-29T17:17:34.905Z",
-      "scheduled": false
-    },
-    {
       "id": "MO-545198",
       "province": "MO",
       "country": "US",
@@ -1585,42 +1477,6 @@
       "start": "2025-11-05T03:00:00+00:00",
       "end": "2028-11-15T11:30:00+00:00",
       "updated": "2026-03-05T20:58:24.537+00:00",
-      "scheduled": false
-    },
-    {
-      "id": "MN-CARSx-43373-1",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 75",
-      "direction": "Northbound",
-      "description": "Road closed on US 75 northbound, MN. Bridge Is Closed, Construction Work",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 47.611398,
-      "lng": -96.814762,
-      "start": "2025-11-24T14:00:00Z",
-      "end": "2026-10-30T22:00:00Z",
-      "updated": "2025-11-21T21:30:06.490Z",
-      "scheduled": false
-    },
-    {
-      "id": "MN-CARSx-43373-2",
-      "province": "MN",
-      "country": "US",
-      "highway": "US 75",
-      "direction": "Southbound",
-      "description": "Road closed on US 75 southbound, MN. Bridge Is Closed, Construction Work",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 47.615496,
-      "lng": -96.814723,
-      "start": "2025-11-24T14:00:00Z",
-      "end": "2026-10-30T22:00:00Z",
-      "updated": "2025-11-21T21:30:06.490Z",
       "scheduled": false
     },
     {
@@ -1696,8 +1552,8 @@
       "scheduled": false
     }
   ],
-  "total": 90,
-  "updated": "2026-10-21T23:00:49.263588+00:00",
+  "total": 82,
+  "updated": "2026-10-22T00:01:28.866742+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
