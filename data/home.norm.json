@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-23 16:01",
-  "updated_iso": "2026-10-23T16:01:27+00:00",
-  "build_version": "1792771287",
+  "updated_at": "2026-10-23 17:01",
+  "updated_iso": "2026-10-23T17:01:05+00:00",
+  "build_version": "1792774865",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,9 +10,9 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "40 min",
+    "max_wait": "35 min",
     "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "60 min",
+    "us_max_wait": "90 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 75,
+    "active_count": 78,
     "gauge_class": "warn",
-    "status_line": "Live now: 65 in the US, 31 in Canada.",
+    "status_line": "Live now: 65 in the US, 35 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in San Joaquin County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 637",
-        "what": "Highway Maintenance on HWY 637 Eastbound  at Sunfish Lake, Killarney,\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound  at MCKAY ROAD, Innisfil. Right lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,11 +375,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "40 min",
+      "wait": "35 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:55 EDT",
+      "captured_at": "12:39 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "60 min",
+      "us_wait": "90 min",
       "us_status_class": "heavy"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "8 min",
       "us_status_class": "mod"
     },
     {
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:24 MDT",
+      "captured_at": "10:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT",
+      "captured_at": "09:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -612,17 +612,17 @@
   "news": [
     {
       "category": "industry",
-      "source": "The Trucker",
-      "headline": "Truckers\u2019 strike halts Italy\u2019s buffalo mozzarella production, costing millions",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/truckers-strike-halts-italys-buffalo-mozzarella-production-costing-millions",
+      "source": "Truck News",
+      "headline": "Stolen identities, fraudulent brokers add to growing cargo theft threat",
+      "url": "https://www.trucknews.com/business-management/stolen-identities-fraudulent-brokers-add-to-growing-cargo-theft-threat/1003223921/",
       "why": "Industry movement worth tracking."
     },
     {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "WIT\u2019s Accelerate! conference rolls into Dallas for four days of learning, networking and fun",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/wits-accelerate-conference-rolls-into-dallas-for-four-days-of-learning-networking-and-fun",
-      "why": "Industry movement worth tracking."
+      "category": "business",
+      "source": "Truck News",
+      "headline": "Hyundai Translead boosts Illinois investment to $600M",
+      "url": "https://www.trucknews.com/transportation/hyundai-translead-boosts-illinois-investment-to-600m/1003223916/",
+      "why": "Carrier and shipper moves shift capacity in the market."
     }
   ],
   "theft_home_json": "[]",
