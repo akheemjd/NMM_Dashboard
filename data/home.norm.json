@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-23 11:01",
-  "updated_iso": "2026-10-23T11:01:09+00:00",
-  "build_version": "1792753269",
+  "updated_at": "2026-10-23 12:00",
+  "updated_iso": "2026-10-23T12:00:54+00:00",
+  "build_version": "1792756854",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "20 min",
     "us_max_name": "Thousand Islands Bridge",
     "us_max_wait": "10 min",
-    "ca_max_name": "Peace Bridge"
+    "ca_max_name": "Blaine-Pacific Highway"
   },
   "fuel": {
     "national_diesel": "263.7",
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 73,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 65 in the US, 30 in Canada.",
+    "status_line": "Live now: 65 in the US, 29 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in San Joaquin County",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 427",
-        "what": "Collision on HWY 427 Southbound  at REXDALE BLVD / DERRY ROAD, Toronto. Right\u2026",
+        "what": "Disabled Vehicle on HWY 427 Southbound  at FINCH AVENUE, Toronto. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 EDT",
+      "captured_at": "07:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "2 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 MDT",
+      "captured_at": "05:33 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,15 +465,15 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "20 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT",
+      "captured_at": "04:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Indiana cops revoke 11 oversized load permits during enforcement operation",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/indiana-cops-revoke-11-oversized-load-permits-during-enforcement-operation",
+      "why": "Industry movement worth tracking."
+    },
+    {
       "category": "drivers",
       "source": "The Trucker",
       "headline": "Samsara expands AI fleet management tools, adds voice support for drivers",
       "url": "https://www.thetrucker.com/trucking-news/business/samsara-expands-ai-fleet-management-tools-adds-voice-support-for-drivers",
       "why": "Driver supply and pay shape capacity and rates."
-    },
-    {
-      "category": "markets",
-      "source": "The Trucker",
-      "headline": "Howes study reveals significant differences in diesel fuel quality at the pump",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/howes-study-reveals-significant-differences-in-diesel-fuel-quality-at-the-pump",
-      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
