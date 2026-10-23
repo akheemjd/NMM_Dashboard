@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-23 05:00",
-  "updated_iso": "2026-10-23T05:00:43+00:00",
-  "build_version": "1792731643",
+  "updated_at": "2026-10-23 06:00",
+  "updated_iso": "2026-10-23T06:00:48+00:00",
+  "build_version": "1792735248",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "25 min",
-    "us_max_name": "Ambassador Bridge",
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min",
+    "us_max_name": "Peace Bridge",
     "us_max_wait": "5 min",
-    "ca_max_name": "Blaine-Pacific Highway"
+    "ca_max_name": "Peace Bridge"
   },
   "fuel": {
     "national_diesel": "263.7",
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 77,
+    "active_count": 75,
     "gauge_class": "warn",
-    "status_line": "Live now: 65 in the US, 34 in Canada.",
+    "status_line": "Live now: 65 in the US, 33 in Canada.",
     "incidents": [
       {
         "road": "I-43 South",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound TRANSFER at Morningside Express to Collector,\u2026",
+        "what": "Collision on HWY 401 Westbound COLLECTOR RAMP at HWY 404, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,11 +379,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT",
+      "captured_at": "01:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "25 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT",
+      "captured_at": "22:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "2 of 7 crossings slow, US-bound",
-      "value": "2/7",
+      "note": "2 of 6 crossings slow, US-bound",
+      "value": "2/6",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
-      "source": "Truck News",
-      "headline": "Hyundai Translead boosts Illinois investment to $600M",
-      "url": "https://www.trucknews.com/transportation/hyundai-translead-boosts-illinois-investment-to-600m/1003223916/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "industry",
+      "source": "Trucking Info",
+      "headline": "Why This Trucking Recovery Is Different",
+      "url": "https://www.truckinginfo.com/news/why-this-trucking-recovery-is-different",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "industry",
-      "source": "Truck News",
-      "headline": "Two charged after 127 kg of suspected cocaine seized from truck at Ambassador Bridge",
-      "url": "https://www.trucknews.com/security/two-charged-after-127-kg-of-suspected-cocaine-seized-from-truck-at-ambassador-bridge/1003223909/",
-      "why": "Industry movement worth tracking."
+      "category": "drivers",
+      "source": "The Trucker",
+      "headline": "Double Nickel launches AI tool to speed up truck driver employment verifications",
+      "url": "https://www.thetrucker.com/trucking-news/business/double-nickel-launches-ai-tool-to-speed-up-truck-driver-employment-verifications",
+      "why": "Driver supply and pay shape capacity and rates."
     }
   ],
   "theft_home_json": "[]",
