@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-23 19:01",
-  "updated_iso": "2026-10-23T19:01:48+00:00",
-  "build_version": "1792782108",
+  "updated_at": "2026-10-23 20:01",
+  "updated_iso": "2026-10-23T20:01:36+00:00",
+  "build_version": "1792785696",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "55 min",
+    "max_wait": "45 min",
     "us_max_name": "Blue Water Bridge",
     "us_max_wait": "30 min",
     "ca_max_name": "Ambassador Bridge"
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 65,
+    "active_count": 74,
     "gauge_class": "warn",
-    "status_line": "Live now: 57 in the US, 32 in Canada.",
+    "status_line": "Live now: 65 in the US, 34 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in San Joaquin County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 6",
-        "what": "Highway Maintenance on HWY 6 Southbound  at UPPER JAMES, Hamilton. Right lane\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at HWY 427, Toronto. 1 centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,15 +375,15 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "55 min",
+      "wait": "45 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "14:11 EDT",
+      "captured_at": "15:05 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "4 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT",
+      "captured_at": "12:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,11 +484,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "12:15 CDT",
+      "captured_at": "14:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "6 min",
+      "us_wait": "8 min",
       "us_status_class": "mod"
     },
     {
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 9 crossings slow, US-bound",
-      "value": "7/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
+      "category": "drivers",
       "source": "The Trucker",
-      "headline": "ACT: Used Class 8 truck retail sales decline in September",
-      "url": "https://www.thetrucker.com/trucking-news/business/act-used-class-8-truck-retail-sales-decline-in-september",
-      "why": "Industry movement worth tracking."
+      "headline": "Wyoming Highway Patrol to truckers and other drivers: Don\u2019t park on the shoulder",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/wyoming-highway-patrol-to-truckers-and-other-drivers-dont-park-on-the-shoulder",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "markets",
+      "category": "industry",
       "source": "The Trucker",
-      "headline": "Thinking about buying a truck? Higher freight rates don\u2019t guarantee higher profits",
-      "url": "https://www.thetrucker.com/trucking-news/owner-operator-survival-guide/thinking-about-buying-a-truck-higher-freight-rates-dont-guarantee-higher-profits",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "headline": "Lytx helps fleets act on the difference between legal speed and safe speed",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/lytx-helps-fleets-act-on-the-difference-between-legal-speed-and-safe-speed",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
