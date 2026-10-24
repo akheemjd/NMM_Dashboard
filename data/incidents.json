@@ -1,6 +1,42 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-104194",
+      "province": "BC",
+      "highway": "Highway 17",
+      "direction": "",
+      "description": "Vehicle incident at Highway 17, In Delta and 125m Northeast of 25 Kilometre Post. Left lane blocked. Last update: October 24th, 2026 at 5:20am PDT. Next update: October 24th, 2026 at 6:30am PDT. Eastbound right lane partially blocked.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.15952384,
+      "lng": -122.93769698,
+      "start": "2026-10-24T05:20:23-07:00",
+      "end": "",
+      "updated": "2026-10-24T05:20:23-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-324091",
+      "province": "ON",
+      "highway": "DON VALLEY PKWY",
+      "direction": "Southbound",
+      "description": "Highway Maintenance on DON VALLEY PKWY Southbound RAMP at YORK MILLS ROAD, Toronto. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.75715293,
+      "lng": -79.33624428,
+      "start": 1792843200,
+      "end": null,
+      "updated": 1792843200,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-324088",
       "province": "ON",
       "highway": "HWY 12",
@@ -19,24 +55,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-324086",
-      "province": "ON",
-      "highway": "HWY 410",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 410 Northbound COLLECTOR at COURTNEY PARK DRIVE, Mississauga. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.6521625,
-      "lng": -79.6775215,
-      "start": 1792842960,
-      "end": null,
-      "updated": 1792842960,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-324087",
       "province": "ON",
       "highway": "HWY 12",
@@ -51,24 +69,6 @@
       "start": 1792842960,
       "end": null,
       "updated": 1792842960,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-324082",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Vehicle Fire on HWY 401 Westbound COLLECTOR at WHITES ROAD, Pickering. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.81674829,
-      "lng": -79.11498161,
-      "start": 1792842900,
-      "end": null,
-      "updated": 1792842900,
       "country": "CA",
       "scheduled": false
     },
@@ -1030,6 +1030,24 @@
       "scheduled": false
     },
     {
+      "id": "ON-323793",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 6 Southbound  between Wellington 6th Line and Wellington Road 51 / Guelph-Nichol Townline, Guelph. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.65767,
+      "lng": -80.33029,
+      "start": 1793966400,
+      "end": 1794002400,
+      "updated": 1792781940,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-104150",
       "province": "BC",
       "highway": "Highway 16 near Prince George Highway 16 E",
@@ -1660,24 +1678,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-103417",
-      "province": "BC",
-      "highway": "Highway 19A near Island Highway N",
-      "direction": "",
-      "description": "Utility work from Highway 19A, at Huband Road to Williams Beach Road. Starting Tue Oct 13 until Tue Oct 27. Watch for traffic control. Single lane alternating traffic. Last update: October 8th, 2026 at 10:24am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.72543,
-      "lng": -124.99447,
-      "start": "2026-10-08T10:24:58-07:00",
-      "end": "",
-      "updated": "2026-10-08T10:24:58-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "WI-c35430fb-2d10-ff55-9d62-51c79855deb5",
       "province": "WI",
       "country": "US",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-24T12:01:17.024822+00:00",
+  "updated": "2026-10-24T13:00:42.366717+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
