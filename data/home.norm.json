@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-24 04:01",
-  "updated_iso": "2026-10-24T04:01:25+00:00",
-  "build_version": "1792814485",
+  "updated_at": "2026-10-24 05:01",
+  "updated_iso": "2026-10-24T05:01:36+00:00",
+  "build_version": "1792818096",
   "border": {
-    "gauge_class": "ok",
-    "heavy_count": 0,
-    "moderate_count": 3,
+    "gauge_class": "warn",
+    "heavy_count": 1,
+    "moderate_count": 2,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "30 min",
     "us_max_name": "Coutts-Sweetgrass",
-    "us_max_wait": "25 min",
-    "ca_max_name": "Peace Bridge"
+    "us_max_wait": "15 min",
+    "ca_max_name": "Blaine-Pacific Highway"
   },
   "fuel": {
     "national_diesel": "264.0",
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 70,
+    "active_count": 69,
     "gauge_class": "warn",
-    "status_line": "Live now: 65 in the US, 27 in Canada.",
+    "status_line": "Live now: 46 in the US, 26 in Canada.",
     "incidents": [
       {
         "road": "29N",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 3",
-        "what": "Collision on HWY 3 Westbound  at GORHAM ROAD/VICTORIA ROAD/NIAGARA ROAD 116,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at WARDEN AVE, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:43 EDT",
+      "captured_at": "00:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "13 min",
+      "us_wait": "3 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "3 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -443,8 +443,8 @@
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -458,18 +458,18 @@
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "25 min",
-      "us_status_class": "heavy"
+      "us_wait": "15 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "30 min",
+      "status_label": "Heavy",
+      "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT",
+      "captured_at": "21:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "4 min",
-      "us_status_class": "mod"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -503,8 +503,8 @@
       "route": "Lansdowne, ON \u2014 Alexandria Bay, NY",
       "label": "Thousand Islands Bridge",
       "route_both": "Alexandria Bay, NY and Lansdowne, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     }
   ],
   "market": [
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 9 crossings slow, US-bound",
-      "value": "4/9",
+      "note": "2 of 6 crossings slow, US-bound",
+      "value": "2/6",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -612,16 +612,16 @@
   "news": [
     {
       "category": "industry",
-      "source": "Truck News",
-      "headline": "North Perth, Ont., inspections put 12 trucks out of service",
-      "url": "https://www.trucknews.com/regulations/north-perth-ont-inspections-put-12-trucks-out-of-service/1003223936/",
+      "source": "The Trucker",
+      "headline": "\u2018I love truckers\u2019: Incoming ATA chief Mark Colson shares his vision for the industry",
+      "url": "https://www.thetrucker.com/trucking-news/business/i-love-truckers-incoming-ata-chief-mark-colson-shares-his-vision-for-the-industry",
       "why": "Industry movement worth tracking."
     },
     {
       "category": "industry",
-      "source": "Truck News",
-      "headline": "Stolen identities, fraudulent brokers add to growing cargo theft threat",
-      "url": "https://www.trucknews.com/business-management/stolen-identities-fraudulent-brokers-add-to-growing-cargo-theft-threat/1003223921/",
+      "source": "Trucking Info",
+      "headline": "Oil Crisis Squeezes Trucking Lubricant Supplies",
+      "url": "https://www.truckinginfo.com/news/oil-crisis-squeezes-trucking-lubricant-supplies",
       "why": "Industry movement worth tracking."
     }
   ],
