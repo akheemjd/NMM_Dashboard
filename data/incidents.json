@@ -1,24 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-324522",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 403 HAMILTON Eastbound  at WATERDOWN ROAD, Burlington. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.31208216,
-      "lng": -79.85974017,
-      "start": 1792911960,
-      "end": null,
-      "updated": 1792911960,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "scheduled": false,
       "start_date": "2026-10-23",
       "end_date": "2026-10-25",
@@ -1044,6 +1026,24 @@
       "start": 1793019600,
       "end": 1793048400,
       "updated": 1792780740,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-323797",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Continuous Construction on HWY 3 Eastbound  between Gosfield Townline West / Arner Townline, Essex and Marsh Road / Road 8 West, Cottam. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 42.155132,
+      "lng": -82.8146,
+      "start": 1793106000,
+      "end": 1793134800,
+      "updated": 1792780500,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-25T08:00:42.715027+00:00",
+  "updated": "2026-10-25T09:01:11.942301+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
