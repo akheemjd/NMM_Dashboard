@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-25 12:01",
-  "updated_iso": "2026-10-25T12:01:42+00:00",
-  "build_version": "1792929702",
+  "updated_at": "2026-10-25 13:01",
+  "updated_iso": "2026-10-25T13:01:05+00:00",
+  "build_version": "1792933265",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Peace Bridge",
-    "us_max_wait": "7 min",
+    "us_max_name": "Emerson-Pembina",
+    "us_max_wait": "18 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 64,
+    "active_count": 73,
     "gauge_class": "warn",
-    "status_line": "Live now: 42 in the US, 29 in Canada.",
+    "status_line": "Live now: 50 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in San Joaquin County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 6",
-        "what": "Emergency Roadwork on HWY 6 Northbound  at YORK ROAD, Hamilton. Left shoulder\u2026",
+        "road": "HWY 404",
+        "what": "Highway Maintenance on HWY 404 Southbound  at WOODBINE AVE, Gwillimbury. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EDT",
+      "captured_at": "08:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "04:40 PDT",
+      "captured_at": "05:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "18 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "3 of 8 crossings slow, US-bound",
-      "value": "3/8",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
