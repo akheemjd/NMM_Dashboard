@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T18:01:22.919752",
+  "generated": "2026-10-25T19:01:38.608651",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 5,
-        "captured": "10/25/2026 16:01:14"
+        "captured": "10/25/2026 16:56:20"
       }
     },
     "emerson-pembina": {
@@ -301,8 +301,8 @@
       "us": {
         "label": "Pembina",
         "reported": true,
-        "delay": 20,
-        "captured": "10/25/2026 17:01:14"
+        "delay": 8,
+        "captured": "10/25/2026 17:56:20"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 5,
-        "captured": "10/25/2026 18:01:13"
+        "delay": 15,
+        "captured": "10/25/2026 18:56:20"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/25/2026 18:01:14"
+        "captured": "10/25/2026 18:56:20"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/25/2026 18:01:13"
+        "captured": "10/25/2026 18:56:20"
       }
     },
     "pacific-blaine": {
@@ -910,7 +910,7 @@
         "label": "Pacific Highway",
         "reported": true,
         "delay": 5,
-        "captured": "10/25/2026 15:01:13"
+        "captured": "10/25/2026 15:56:20"
       }
     },
     "queenston-lewiston": {
@@ -1061,8 +1061,8 @@
       "us": {
         "label": "Lewiston Bridge",
         "reported": true,
-        "delay": 17,
-        "captured": "10/25/2026 18:01:13"
+        "delay": 11,
+        "captured": "10/25/2026 18:56:20"
       }
     },
     "sarnia-port-huron": {
@@ -1213,8 +1213,8 @@
       "us": {
         "label": "Bluewater Bridge",
         "reported": true,
-        "delay": 81,
-        "captured": "10/25/2026 18:01:14"
+        "delay": 55,
+        "captured": "10/25/2026 18:56:20"
       }
     },
     "windsor-detroit": {
@@ -1365,8 +1365,8 @@
       "us": {
         "label": "Ambassador Bridge",
         "reported": true,
-        "delay": 5,
-        "captured": "10/25/2026 18:01:14"
+        "delay": 10,
+        "captured": "10/25/2026 18:56:20"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1961,10 +1961,10 @@
       "id": "us-buffalo-niagara-falls-lewiston-bridge",
       "avg_delay": 3,
       "min_delay": 0,
-      "max_delay": 17,
+      "max_delay": 13,
       "p50": 1.0,
       "p75": 4.0,
-      "p90": 12.0,
+      "p90": 11.0,
       "observations": 21,
       "days_covered": 21,
       "hourly": {
@@ -2097,7 +2097,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 6,
+          "avg": 4,
           "count": 3,
           "label": "Sun"
         }
@@ -2106,12 +2106,12 @@
     },
     "us-buffalo-niagara-falls-peace-bridge": {
       "id": "us-buffalo-niagara-falls-peace-bridge",
-      "avg_delay": 5,
+      "avg_delay": 6,
       "min_delay": 0,
       "max_delay": 19,
       "p50": 4.0,
-      "p75": 6.0,
-      "p90": 12.0,
+      "p75": 7.0,
+      "p90": 15.0,
       "observations": 21,
       "days_covered": 21,
       "hourly": {
@@ -2244,7 +2244,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 10,
+          "avg": 13,
           "count": 3,
           "label": "Sun"
         }
@@ -3126,7 +3126,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 5,
+          "avg": 7,
           "count": 3,
           "label": "Sun"
         }
@@ -5487,12 +5487,12 @@
     },
     "us-pembina": {
       "id": "us-pembina",
-      "avg_delay": 6,
+      "avg_delay": 5,
       "min_delay": 0,
-      "max_delay": 20,
+      "max_delay": 18,
       "p50": 2.0,
-      "p75": 12.5,
-      "p90": 18.0,
+      "p75": 9.0,
+      "p90": 14.4,
       "observations": 20,
       "days_covered": 20,
       "hourly": {
@@ -5625,7 +5625,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 7,
+          "avg": 3,
           "count": 3,
           "label": "Sun"
         }
@@ -5634,9 +5634,9 @@
     },
     "us-port-huron-bluewater-bridge": {
       "id": "us-port-huron-bluewater-bridge",
-      "avg_delay": 11,
+      "avg_delay": 10,
       "min_delay": 0,
-      "max_delay": 81,
+      "max_delay": 55,
       "p50": 5.0,
       "p75": 13.0,
       "p90": 25.0,
@@ -5772,7 +5772,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 34,
+          "avg": 25,
           "count": 3,
           "label": "Sun"
         }
