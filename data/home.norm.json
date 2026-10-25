@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-25 19:01",
-  "updated_iso": "2026-10-25T19:01:16+00:00",
-  "build_version": "1792954876",
+  "updated_at": "2026-10-25 20:01",
+  "updated_iso": "2026-10-25T20:01:17+00:00",
+  "build_version": "1792958477",
   "border": {
-    "gauge_class": "warn",
-    "heavy_count": 1,
-    "moderate_count": 3,
+    "gauge_class": "ok",
+    "heavy_count": 0,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "20 min",
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min",
     "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "50 min",
-    "ca_max_name": "Blaine-Pacific Highway"
+    "us_max_wait": "48 min",
+    "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
     "national_diesel": "264.0",
@@ -352,18 +352,18 @@
     "none": false,
     "active_count": 74,
     "gauge_class": "warn",
-    "status_line": "Live now: 49 in the US, 31 in Canada.",
+    "status_line": "Live now: 50 in the US, 31 in Canada.",
     "incidents": [
       {
-        "road": "I-5 in Stanislaus County",
-        "what": "Route 5 near Westley. Rest Area Work. All of 1 lanes closed.",
+        "road": "SR-4 in San Joaquin County",
+        "what": "Old River Bridge-Contra Costa/San Joaquin County Line near Discovery Bay.\u2026",
         "severity_label": "Closed",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at VICTORIA PARK AVE, Toronto. 1\u2026",
+        "road": "HWY 7",
+        "what": "Collision on HWY 7 Both Directions  at Shantz Station Road / County Road 30,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "50 min",
+      "us_wait": "48 min",
       "us_status_class": "heavy"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "26 min",
+      "us_wait": "16 min",
       "us_status_class": "heavy"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "5 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:03 MDT",
+      "captured_at": "13:06 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "20 min",
-      "status_label": "Heavy",
-      "status_class": "heavy",
+      "wait": "5 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT",
+      "captured_at": "12:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
