@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-25 05:00",
-  "updated_iso": "2026-10-25T05:00:49+00:00",
-  "build_version": "1792904449",
+  "updated_at": "2026-10-25 06:01",
+  "updated_iso": "2026-10-25T06:01:30+00:00",
+  "build_version": "1792908090",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -11,7 +11,7 @@
     "min_wait": "No delay",
     "max_name": "Pacific Highway Crossing",
     "max_wait": "20 min",
-    "us_max_name": "Ambassador Bridge",
+    "us_max_name": "Peace Bridge",
     "us_max_wait": "2 min",
     "ca_max_name": "Blaine-Pacific Highway"
   },
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 71,
+    "active_count": 61,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 28 in Canada.",
+    "status_line": "Live now: 42 in the US, 26 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in San Joaquin County",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Emergency Roadwork on HWY 401 Westbound EXPRESS at LIVERPOOL ROAD, Pickering.\u2026",
+        "what": "Collision on HWY 401 Westbound RAMP at HWY 427, Toronto. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT",
+      "captured_at": "01:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:36 MDT",
+      "captured_at": "23:03 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT",
+      "captured_at": "22:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "22:15 CDT",
+      "captured_at": "00:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
