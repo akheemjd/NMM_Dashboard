@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T09:01:09.337536",
+  "generated": "2026-10-25T10:01:10.330948",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 5,
-        "captured": "10/25/2026 06:55:23"
+        "captured": "10/25/2026 08:00:31"
       }
     },
     "emerson-pembina": {
@@ -301,8 +301,8 @@
       "us": {
         "label": "Pembina",
         "reported": true,
-        "delay": 18,
-        "captured": "10/25/2026 07:55:23"
+        "delay": 0,
+        "captured": "10/25/2026 09:00:31"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 7,
-        "captured": "10/25/2026 08:55:22"
+        "delay": 3,
+        "captured": "10/25/2026 10:00:31"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "10/25/2026 08:55:23"
+        "captured": "10/25/2026 10:00:31"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/25/2026 08:55:22"
+        "captured": "10/25/2026 10:00:31"
       }
     },
     "pacific-blaine": {
@@ -909,8 +909,8 @@
       "us": {
         "label": "Pacific Highway",
         "reported": true,
-        "delay": 5,
-        "captured": "10/25/2026 05:55:22"
+        "delay": 20,
+        "captured": "10/25/2026 07:00:31"
       }
     },
     "queenston-lewiston": {
@@ -1061,8 +1061,8 @@
       "us": {
         "label": "Lewiston Bridge",
         "reported": true,
-        "delay": 2,
-        "captured": "10/25/2026 08:55:22"
+        "delay": 1,
+        "captured": "10/25/2026 10:00:31"
       }
     },
     "sarnia-port-huron": {
@@ -1213,8 +1213,8 @@
       "us": {
         "label": "Bluewater Bridge",
         "reported": true,
-        "delay": 0,
-        "captured": "10/25/2026 08:55:23"
+        "delay": 10,
+        "captured": "10/25/2026 10:00:31"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "10/25/2026 08:55:23"
+        "captured": "10/25/2026 10:00:31"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1520,10 +1520,10 @@
       "id": "us-blaine-pacific-highway",
       "avg_delay": 3,
       "min_delay": 0,
-      "max_delay": 10,
+      "max_delay": 20,
       "p50": 0.0,
       "p75": 5.0,
-      "p90": 5.0,
+      "p90": 10.0,
       "observations": 21,
       "days_covered": 21,
       "hourly": {
@@ -1656,7 +1656,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 2,
+          "avg": 7,
           "count": 3,
           "label": "Sun"
         }
@@ -2110,7 +2110,7 @@
       "min_delay": 0,
       "max_delay": 19,
       "p50": 4.0,
-      "p75": 7.0,
+      "p75": 6.0,
       "p90": 12.0,
       "observations": 21,
       "days_covered": 21,
@@ -2244,7 +2244,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 10,
+          "avg": 9,
           "count": 3,
           "label": "Sun"
         }
@@ -3581,9 +3581,9 @@
       "max_delay": 35,
       "p50": 10.0,
       "p75": 10.0,
-      "p90": 28.0,
-      "observations": 15,
-      "days_covered": 15,
+      "p90": 27.5,
+      "observations": 16,
+      "days_covered": 16,
       "hourly": {
         "0": {
           "avg": null,
@@ -3714,8 +3714,8 @@
           "label": "Sat"
         },
         "6": {
-          "avg": null,
-          "count": 0,
+          "avg": 5,
+          "count": 1,
           "label": "Sun"
         }
       },
@@ -5487,12 +5487,12 @@
     },
     "us-pembina": {
       "id": "us-pembina",
-      "avg_delay": 6,
+      "avg_delay": 5,
       "min_delay": 0,
       "max_delay": 18,
-      "p50": 2.0,
-      "p75": 12.5,
-      "p90": 18.0,
+      "p50": 1.0,
+      "p75": 6.0,
+      "p90": 14.4,
       "observations": 20,
       "days_covered": 20,
       "hourly": {
@@ -5625,7 +5625,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 6,
+          "avg": 0,
           "count": 3,
           "label": "Sun"
         }
@@ -5772,7 +5772,7 @@
           "label": "Sat"
         },
         "6": {
-          "avg": 7,
+          "avg": 10,
           "count": 3,
           "label": "Sun"
         }
