@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-25 15:01",
-  "updated_iso": "2026-10-25T15:01:05+00:00",
-  "build_version": "1792940465",
+  "updated_at": "2026-10-25 16:01",
+  "updated_iso": "2026-10-25T16:01:21+00:00",
+  "build_version": "1792944081",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min",
     "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "21 min",
-    "ca_max_name": "Peace Bridge"
+    "us_max_wait": "30 min",
+    "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
     "national_diesel": "264.0",
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 73,
+    "active_count": 71,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 30 in Canada.",
+    "status_line": "Live now: 50 in the US, 28 in Canada.",
     "incidents": [
       {
         "road": "SR-4 in San Joaquin County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 404",
-        "what": "Disabled Vehicle on HWY 404 Northbound  at STOUFFVILLE ROAD,\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Northbound  at HWY 9, Kettleby. Left shoulder and 1 left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,16 +375,16 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT",
+      "captured_at": "11:39 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "21 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT",
+      "captured_at": "08:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:16 CDT",
+      "captured_at": "10:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -518,15 +518,6 @@
       "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
     },
     {
-      "name": "Monthly GDP",
-      "note": "$2372B (chained 2017)",
-      "value": "0.0%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
       "name": "GDP, year over year",
       "note": "GDP against the same quarter last year. The longer-term\u2026",
       "value": "+2.2%",
@@ -534,15 +525,6 @@
       "country_prefix": "<span class=\"src\">US</span> ",
       "source": "US Bureau of Economic Analysis, via FRED",
       "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
-    },
-    {
-      "name": "GDP, year over year",
-      "note": "GDP against the same month last year. The longer-term\u2026",
-      "value": "+1.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">Canada</span> ",
-      "source": "Statistics Canada",
-      "what_it_means": "GDP against the same month last year. The longer-term freight demand trend."
     },
     {
       "name": "Fuel cost per 1,000 miles",
@@ -583,8 +565,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +574,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow, Canada-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -613,15 +595,15 @@
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "Rooftop rescues and evacuations as severe flooding soaks Four Corners region",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/rooftop-rescues-and-evacuations-as-severe-flooding-soaks-four-corners-region",
+      "headline": "Trucker hits rear end of Mini Cooper stopped in traffic",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-hits-rear-end-of-mini-cooper-stopped-in-traffic",
       "why": "Industry movement worth tracking."
     },
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "CAT Scale Rig of the Week | Dawson and Bobbie Taylor\u2019s \u2018Roll of the Dice\u2019 is frightfully fun",
-      "url": "https://www.thetrucker.com/trucking-news/rig-of-the-week/cat-scale-rig-of-the-week-dawson-and-bobby-taylors-roll-of-the-dice-is-frightfully-fun",
+      "headline": "Rooftop rescues and evacuations as severe flooding soaks Four Corners region",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/rooftop-rescues-and-evacuations-as-severe-flooding-soaks-four-corners-region",
       "why": "Industry movement worth tracking."
     }
   ],
