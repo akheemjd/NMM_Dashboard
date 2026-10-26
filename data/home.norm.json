@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-26 15:00",
-  "updated_iso": "2026-10-26T15:00:42+00:00",
-  "build_version": "1793026842",
+  "updated_at": "2026-10-26 18:01",
+  "updated_iso": "2026-10-26T18:01:05+00:00",
+  "build_version": "1793037665",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 77,
+    "active_count": 80,
     "gauge_class": "warn",
-    "status_line": "Live now: 52 in the US, 36 in Canada.",
+    "status_line": "Live now: 46 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound  at WINSTON CHURCHILL BLVD, Mississauga.\u2026",
+        "road": "HWY 427",
+        "what": "Highway Maintenance on HWY 427 Northbound RAMP at REXDALE BLVD / DERRY ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,11 +379,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT",
+      "captured_at": "12:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
+      "us_wait": "15 min",
       "us_status_class": "mod"
     },
     {
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "45 min",
-      "us_status_class": "heavy"
+      "us_wait": "15 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Peace Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "12 min",
+      "us_wait": "3 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "7 min",
+      "us_wait": "3 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 EDT",
+      "captured_at": "12:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 MDT",
+      "captured_at": "10:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT",
+      "captured_at": "10:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "20 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 CDT",
+      "captured_at": "11:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "14 min",
-      "us_status_class": "mod"
+      "us_wait": "20 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
+      "category": "business",
       "source": "The Trucker",
-      "headline": "FlowBelow\u2019s redesigned trailer AeroSlider targets 3-gallon fuel savings per 1,000 miles",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/flowbelows-redesigned-trailer-aeroslider-targets-3-gallon-fuel-savings-per-1000-miles",
-      "why": "Equipment cost and availability shape fleet economics."
+      "headline": "JB Hunt CEO Shelley Simpson puts people, trust at heart of future-ready leadership",
+      "url": "https://www.thetrucker.com/trucking-news/business/jb-hunt-ceo-shelley-simpson-puts-people-trust-at-heart-of-future-ready-leadership",
+      "why": "Carrier and shipper moves shift capacity in the market."
     },
     {
-      "category": "technology",
-      "source": "Trucking Dive",
-      "headline": "LTL carriers have a new tool to resolve shipment tracking issues",
-      "url": "https://www.truckingdive.com/news/ltl-carriers-have-a-new-tool-to-resolve-shipment-tracking-issues/833224/",
-      "why": "Tech spend changes back-office and dispatch efficiency."
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Truckstop, FTR: Spot rates remain seasonally sluggish in the latest week",
+      "url": "https://www.thetrucker.com/trucking-news/business/truckstop-ftr-spot-rates-remain-seasonally-sluggish-in-the-latest-week",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
