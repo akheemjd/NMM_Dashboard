@@ -19,24 +19,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-325528",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at ISLINGTON AVE, Toronto. Left shoulder and left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.70943894,
-      "lng": -79.55241593,
-      "start": 1792979520,
-      "end": null,
-      "updated": 1792979520,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-325517",
       "province": "ON",
       "highway": "HWY 401",
@@ -87,24 +69,6 @@
       "start": 1792973520,
       "end": null,
       "updated": 1792973520,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-325501",
-      "province": "ON",
-      "highway": "HWY 19",
-      "direction": "Both Directions",
-      "description": "Collision on HWY 19 Both Directions  between Prouse Line, Mt Elgin and Duffy Road, Ostrander. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 42.931665635,
-      "lng": -80.771175921,
-      "start": 1792972680,
-      "end": null,
-      "updated": 1792972680,
       "country": "CA",
       "scheduled": false
     },
@@ -1030,6 +994,24 @@
       "scheduled": true
     },
     {
+      "id": "ON-323796",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Westbound",
+      "description": "Continuous Construction on HWY 3 Westbound  between Union Ave / Olinda Side Road, Leamington and Graham Sideroad, Kingsville. 1 Left Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Left Lane(s)",
+      "lat": 42.06873,
+      "lng": -82.67083,
+      "start": 1793019600,
+      "end": 1793048400,
+      "updated": 1792781400,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-104150",
       "province": "BC",
       "highway": "Highway 16 near Prince George Highway 16 E",
@@ -1046,6 +1028,24 @@
       "updated": "2026-10-23T11:46:06-07:00",
       "country": "CA",
       "scheduled": false
+    },
+    {
+      "id": "ON-323795",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Daily Construction on HWY 3 Eastbound  between Road 4 East / County Road 18 and Graham Sideroad, Kingsville. 1 Right Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Right Lane(s)",
+      "lat": 42.076183,
+      "lng": -82.706795,
+      "start": 1793106000,
+      "end": 1793134800,
+      "updated": 1792781160,
+      "country": "CA",
+      "scheduled": true
     },
     {
       "id": "drivebc.ca/RIDE-104147",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-26T02:01:13.645643+00:00",
+  "updated": "2026-10-26T03:01:13.470516+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
