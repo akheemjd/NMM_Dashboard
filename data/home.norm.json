@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-26 10:00",
-  "updated_iso": "2026-10-26T10:00:59+00:00",
-  "build_version": "1793008859",
+  "updated_at": "2026-10-26 11:00",
+  "updated_iso": "2026-10-26T11:00:35+00:00",
+  "build_version": "1793012435",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,7 +350,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 70,
+    "active_count": 71,
     "gauge_class": "warn",
     "status_line": "Live now: 52 in the US, 33 in Canada.",
     "incidents": [
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Police Investigation on HWY 400 Southbound HOV at LLOYDTOWN-AURORA RD,\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Eastbound  at JAMES SNOW PKWY, Milton. 1 right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,11 +379,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT",
+      "captured_at": "06:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "3 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT",
+      "captured_at": "06:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 PDT",
+      "captured_at": "03:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 CDT",
+      "captured_at": "05:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "First tanker of Russian diesel sets sail for the US in Trump\u2019s controversial deal with Putin",
+      "url": "https://www.thetrucker.com/trucking-news/business/first-tanker-of-russian-diesel-sets-sail-for-the-us-in-trumps-controversial-deal-with-putin",
+      "why": "Rate direction is the difference between profit and loss on a lane."
+    },
+    {
       "category": "regulations",
       "source": "The Trucker",
       "headline": "Want more flexible HOS rules? Here\u2019s your chance to speak up",
       "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/want-more-flexible-hos-rules-heres-your-chance-to-speak-up",
       "why": "Rules change compliance cost and driver hours."
-    },
-    {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "Trucker hits rear end of Mini Cooper stopped in traffic",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucker-hits-rear-end-of-mini-cooper-stopped-in-traffic",
-      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
