@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-27 10:01",
-  "updated_iso": "2026-10-27T10:01:12+00:00",
-  "build_version": "1793095272",
+  "updated_at": "2026-10-27 11:01",
+  "updated_iso": "2026-10-27T11:01:10+00:00",
+  "build_version": "1793098870",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 77,
+    "active_count": 79,
     "gauge_class": "warn",
-    "status_line": "Live now: 54 in the US, 32 in Canada.",
+    "status_line": "Live now: 54 in the US, 34 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 9",
-        "what": "Collision on HWY 9 Both Directions  at HEARTLAKE ROAD, Caledon. All lanes\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at VICTORIA PARK AVE, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "1 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "3 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -443,8 +443,8 @@
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 MDT",
+      "captured_at": "04:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 PDT",
+      "captured_at": "03:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 CDT",
+      "captured_at": "05:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 7 crossings slow, US-bound",
-      "value": "4/7",
+      "note": "5 of 8 crossings slow, US-bound",
+      "value": "5/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
