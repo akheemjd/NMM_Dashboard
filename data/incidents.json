@@ -616,24 +616,6 @@
       "scheduled": false
     },
     {
-      "id": "IN-CARSy-3019",
-      "province": "IN",
-      "country": "US",
-      "highway": "I-465",
-      "direction": "Westbound",
-      "description": "Lane closure on I-465 westbound, IN. Reduced To One Lane",
-      "event_type": "lane closure",
-      "severity": "",
-      "closure": false,
-      "lanes": "some lanes closed",
-      "lat": 39.930028,
-      "lng": -86.171411,
-      "start": "2026-10-27T01:00:00Z",
-      "end": "2026-10-27T10:00:00Z",
-      "updated": "2026-10-26T23:17:52.477Z",
-      "scheduled": false
-    },
-    {
       "id": "ON-325873",
       "province": "ON",
       "highway": "HWY 85",
@@ -1276,6 +1258,24 @@
       "lanes": "some lanes closed",
       "lat": 38.391868,
       "lng": -87.598401,
+      "start": "2026-03-16T05:00:00Z",
+      "end": "2026-11-06T05:59:00Z",
+      "updated": "2026-10-19T17:28:01.951Z",
+      "scheduled": false
+    },
+    {
+      "id": "IN-CARSy-170-2",
+      "province": "IN",
+      "country": "US",
+      "highway": "US 41",
+      "direction": "Southbound",
+      "description": "Lane closure on US 41 southbound, IN. Reduced To One Lane, Bridge Construction",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 38.405952,
+      "lng": -87.596136,
       "start": "2026-03-16T05:00:00Z",
       "end": "2026-11-06T05:59:00Z",
       "updated": "2026-10-19T17:28:01.951Z",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-27T09:00:56.396850+00:00",
+  "updated": "2026-10-27T10:00:57.596402+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
