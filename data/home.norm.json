@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-27 21:01",
-  "updated_iso": "2026-10-27T21:01:28+00:00",
-  "build_version": "1793134888",
+  "updated_at": "2026-10-27 22:02",
+  "updated_iso": "2026-10-27T22:02:27+00:00",
+  "build_version": "1793138547",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Ambassador Bridge",
     "max_wait": "15 min",
     "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "98 min",
+    "us_max_wait": "117 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 79,
+    "active_count": 75,
     "gauge_class": "warn",
-    "status_line": "Live now: 53 in the US, 36 in Canada.",
+    "status_line": "Live now: 53 in the US, 33 in Canada.",
     "incidents": [
       {
         "road": "US 75",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Collision on HWY 427 Northbound RAMP at REXDALE BLVD / DERRY ROAD, Toronto.\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound RAMP at WALKERS LINE, Burlington. Left\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "20 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "98 min",
+      "us_wait": "117 min",
       "us_status_class": "heavy"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "4 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "6 min",
+      "us_wait": "7 min",
       "us_status_class": "mod"
     },
     {
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "13:15 MDT",
+      "captured_at": "15:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "13:40 PDT",
+      "captured_at": "14:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Emerson-Pembina",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 9 crossings slow, US-bound",
-      "value": "7/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "Kenworth enhances Class 8 truck lineup with new in-cab tech and interior design",
-      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kenworth-enhances-class-8-truck-lineup-with-new-in-cab-tech-and-interior-design",
-      "why": "Industry movement worth tracking."
+      "category": "markets",
+      "source": "Truck News",
+      "headline": "Newfoundland and Labrador to eliminate diesel tax for four months",
+      "url": "https://www.trucknews.com/transportation/newfoundland-and-labrador-to-eliminate-diesel-tax-for-four-months/1003224144/",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
       "category": "markets",
-      "source": "The Trucker",
-      "headline": "Double-digit spikes in some regions, moderate drops in others, keep average diesel prices going up",
-      "url": "https://www.thetrucker.com/trucking-news/business/double-digit-spikes-in-some-regions-moderate-drops-in-others-keep-average-diesel-prices-going-up",
+      "source": "Truck News",
+      "headline": "Western Canadian inland ports form alliance to strengthen trade corridors",
+      "url": "https://www.trucknews.com/supply-chain/western-canadian-inland-ports-form-alliance-to-strengthen-trade-corridors/1003224131/",
       "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
@@ -747,9 +747,9 @@
     "us_change_7d": "+0.076",
     "us_change_7d_class": "up",
     "us_change_7d_words": "up $0.076/gal",
-    "us_change_30d": "-5.0",
-    "nadi_change_7d": "+1.5",
+    "us_change_30d": "-4.7",
+    "nadi_change_7d": "+1.6",
     "nadi_change_7d_class": "up",
-    "nadi_change_30d": "-0.7"
+    "nadi_change_30d": "-0.6"
   }
 }
