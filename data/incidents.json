@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-325914",
+      "province": "ON",
+      "highway": "HWY 652",
+      "direction": "Northbound",
+      "description": "Collision on HWY 652 Northbound  at S BRANCH LOUIS R CULV, Cochrane. Lane and NORTH shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "lane and NORTH shoulder closed",
+      "lat": 49.29073087,
+      "lng": -80.556325411,
+      "start": 1793060160,
+      "end": null,
+      "updated": 1793060160,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-104330",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -19,6 +37,24 @@
       "scheduled": false
     },
     {
+      "id": "IN-CARSy-3019",
+      "province": "IN",
+      "country": "US",
+      "highway": "I-465",
+      "direction": "Westbound",
+      "description": "Lane closure on I-465 westbound, IN. Reduced To One Lane",
+      "event_type": "lane closure",
+      "severity": "",
+      "closure": false,
+      "lanes": "some lanes closed",
+      "lat": 39.930028,
+      "lng": -86.171411,
+      "start": "2026-10-27T01:00:00Z",
+      "end": "2026-10-27T10:00:00Z",
+      "updated": "2026-10-26T23:17:52.477Z",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-104354",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway W",
@@ -33,24 +69,6 @@
       "start": "2026-10-26T15:13:22-07:00",
       "end": "",
       "updated": "2026-10-26T15:13:22-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-325560",
-      "province": "ON",
-      "highway": "HWY 652",
-      "direction": "Northbound",
-      "description": "Collision on HWY 652 Northbound  at SEC HWY 574-BROWER TWP, Cochrane. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 49.0586012,
-      "lng": -80.832562315,
-      "start": 1793009400,
-      "end": null,
-      "updated": 1793050260,
       "country": "CA",
       "scheduled": false
     },
@@ -105,6 +123,24 @@
       "start": "2026-10-26T13:27:42-07:00",
       "end": "",
       "updated": "2026-10-26T13:33:57-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-104348",
+      "province": "BC",
+      "highway": "Other Roads near Downes Road",
+      "direction": "",
+      "description": "Construction work at Downes Road, In Abbotsford and At Bradner Road and Downes Road. Starting 7:00 PM MST on Friday November 6, 2026 until 5:00 AM MST on Monday November 9, 2026. Closed. Last update: October 26th, 2026 at 1:32pm PDT. Bradner/Downes Road south intersection will be closed. Bradner Road will remain open with single lane alternating traffic. Drivers asked to slow down and allow extra travel time. Watch for signage and roadside workers.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.07496042,
+      "lng": -122.42682745,
+      "start": "2026-10-26T13:32:11-07:00",
+      "end": "",
+      "updated": "2026-10-26T13:32:11-07:00",
       "country": "CA",
       "scheduled": false
     },
@@ -557,24 +593,6 @@
       "updated": 1793031000,
       "country": "CA",
       "scheduled": true
-    },
-    {
-      "id": "drivebc.ca/RIDE-104079",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Bridge maintenance from Highway 1, In Hope and Flood Hope overhead bridge. Starting 8:30 AM PDT on Monday October 26, 2026 until 5:00 PM PDT on Monday October 26, 2026. From 8:30 AM to 5:00 PM PDT, Monday. Right lane closed. Watch for traffic control. Last update: October 26th, 2026 at 7:05am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.37323,
-      "lng": -121.44171,
-      "start": "2026-10-22T13:21:49-07:00",
-      "end": "",
-      "updated": "2026-10-26T07:05:20-07:00",
-      "country": "CA",
-      "scheduled": false
     },
     {
       "scheduled": false,
@@ -1282,24 +1300,6 @@
       "scheduled": false
     },
     {
-      "id": "IN-CARSy-170-2",
-      "province": "IN",
-      "country": "US",
-      "highway": "US 41",
-      "direction": "Southbound",
-      "description": "Lane closure on US 41 southbound, IN. Reduced To One Lane, Bridge Construction",
-      "event_type": "lane closure",
-      "severity": "",
-      "closure": false,
-      "lanes": "some lanes closed",
-      "lat": 38.405952,
-      "lng": -87.596136,
-      "start": "2026-03-16T05:00:00Z",
-      "end": "2026-11-06T05:59:00Z",
-      "updated": "2026-10-19T17:28:01.951Z",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103782",
       "province": "BC",
       "highway": "Highway 16 near McBride Street",
@@ -1372,6 +1372,24 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-103704",
+      "province": "BC",
+      "highway": "Highway 40 near Lillooet-Pioneer Road",
+      "direction": "",
+      "description": "Construction work from Lillooet-Pioneer Road, At Lillooet-Pioneer Road and Yalakom Road and Yalakom Road  to Gold Bridge. Starting Thu Oct 1 until Mon Nov 30. From 6:00 AM to 7:00 PM PDT, every day. Single lane alternating traffic. Shoulder closed. Watch for traffic control. Last update: October 15th, 2026 at 8:05am PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.86421,
+      "lng": -122.16331,
+      "start": "2026-10-15T08:05:02-07:00",
+      "end": "",
+      "updated": "2026-10-15T08:05:02-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-102538",
       "province": "BC",
       "highway": "Highway 3A",
@@ -1404,24 +1422,6 @@
       "start": "2026-08-06T11:51:33-07:00",
       "end": "",
       "updated": "2026-10-15T06:44:22-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-103601",
-      "province": "BC",
-      "highway": "Other Roads near Mission Mountain Road",
-      "direction": "",
-      "description": "Rock slope stabilization at Mission Mountain Road, 49km Northwest of Lillooet. Starting Thu Oct 22 until Mon Oct 26. From 7:00 AM to 5:00 PM PDT, every day. Single lane alternating traffic. Watch for traffic control. Last update: October 13th, 2026 at 4:12pm PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.78558342,
-      "lng": -122.22399609,
-      "start": "2026-10-13T16:12:07-07:00",
-      "end": "",
-      "updated": "2026-10-13T16:12:07-07:00",
       "country": "CA",
       "scheduled": false
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-27T00:00:43.061208+00:00",
+  "updated": "2026-10-27T01:00:52.208322+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
