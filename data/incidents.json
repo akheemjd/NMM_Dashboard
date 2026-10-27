@@ -1,24 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-325939",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound COLLECTOR RAMP at MARKHAM ROAD, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.7868707,
-      "lng": -79.23262544,
-      "start": 1793079120,
-      "end": null,
-      "updated": 1793079120,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-325914",
       "province": "ON",
       "highway": "HWY 652",
@@ -555,6 +537,24 @@
       "start": 1794787200,
       "end": 1795258800,
       "updated": 1793031060,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-325771",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 26 Westbound  between CARSON ROAD, Springwater and LAKEVIEW AVENUE, Clearview. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.42869,
+      "lng": -79.7241,
+      "start": 1794790800,
+      "end": 1795262400,
+      "updated": 1793031000,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-27T06:00:51.728548+00:00",
+  "updated": "2026-10-27T07:00:52.113000+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
