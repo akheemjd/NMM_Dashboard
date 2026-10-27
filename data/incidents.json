@@ -1,24 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-326105",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Disabled Vehicle on QEW Fort Erie bound  at WALKERS LINE, Burlington. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 43.36644963,
-      "lng": -79.78811842,
-      "start": 1793129400,
-      "end": null,
-      "updated": 1793129400,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-326101",
       "province": "ON",
       "highway": "HWY 427",
@@ -33,24 +15,6 @@
       "start": 1793128380,
       "end": null,
       "updated": 1793128380,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-326100",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Highway Maintenance on HWY 427 Southbound COLLECTOR RAMP at ERINGATE DRIVE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.66365744,
-      "lng": -79.57240475,
-      "start": 1793128260,
-      "end": null,
-      "updated": 1793128260,
       "country": "CA",
       "scheduled": false
     },
@@ -1228,6 +1192,42 @@
       "scheduled": true
     },
     {
+      "id": "ON-325773",
+      "province": "ON",
+      "highway": "HWY 12",
+      "direction": "Northbound",
+      "description": "Daily Moving Maintenance Closure on HWY 12 Northbound  between DURHAM RD 50, Ramara and ATHERLEY RD, Orillia. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.496002,
+      "lng": -79.156,
+      "start": 1794837600,
+      "end": 1795118400,
+      "updated": 1793031360,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-325766",
+      "province": "ON",
+      "highway": "HWY 11",
+      "direction": "Southbound",
+      "description": "Daily Moving Maintenance Closure on HWY 11 Southbound  between SEVERN RIVER BRIDGE/WEST BRANCH, Severn and LACLIE STREET, Orillia. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.762962,
+      "lng": -79.33468,
+      "start": 1794837600,
+      "end": 1795122000,
+      "updated": 1793031240,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-104150",
       "province": "BC",
       "highway": "Highway 16 near Prince George Highway 16 E",
@@ -1462,24 +1462,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-103717",
-      "province": "BC",
-      "highway": "Highway 19A near Island Highway",
-      "direction": "",
-      "description": "Utility work from Highway 19A, Maple St to Spit Rd. Starting Tue Oct 27 until Tue Oct 27. Watch for traffic control. Centre lane closed. Last update: October 15th, 2026 at 10:10am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 50.03259,
-      "lng": -125.26322,
-      "start": "2026-10-15T10:10:20-07:00",
-      "end": "",
-      "updated": "2026-10-15T10:10:20-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "drivebc.ca/RIDE-103704",
       "province": "BC",
       "highway": "Highway 40 near Lillooet-Pioneer Road",
@@ -1693,6 +1675,24 @@
       "start": "2026-06-16T00:00:00-05:00",
       "end": "2026-10-31T00:00:00-05:00",
       "updated": "2026-10-08T19:56:29-05:00",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-103417",
+      "province": "BC",
+      "highway": "Highway 19A near Island Highway N",
+      "direction": "",
+      "description": "Utility work from Highway 19A, at Huband Road to Williams Beach Road. Starting Tue Oct 13 until Tue Oct 27. Watch for traffic control. Single lane alternating traffic. Last update: October 8th, 2026 at 10:24am PDT.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.72543,
+      "lng": -124.99447,
+      "start": "2026-10-08T10:24:58-07:00",
+      "end": "",
+      "updated": "2026-10-08T10:24:58-07:00",
+      "country": "CA",
       "scheduled": false
     },
     {
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-27T20:01:28.792128+00:00",
+  "updated": "2026-10-27T21:01:13.775680+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
