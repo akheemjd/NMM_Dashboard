@@ -1,20 +1,38 @@
 {
   "incidents": [
     {
-      "id": "ON-325889",
-      "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound RAMP at SB exit 224- Bowes St-McDougall Rd, PARRYSOUND, Parry Sound. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.348237,
-      "lng": -80.004183,
-      "start": 1793051580,
-      "end": null,
-      "updated": 1793051580,
+      "id": "drivebc.ca/RIDE-104330",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Paving operations from Highway 1, In Abbotsford and Sumas Way to In Chilliwack and Vedder Canal. Starting 7:00 PM PDT on Monday October 26, 2026 until 6:00 AM PDT on Thursday October 29, 2026. From 7:00 PM to 6:00 AM PDT the next day, weekdays and Sunday. Reduced to one lane. Last update: October 26th, 2026 at 4:35pm PDT. Eastbound on/off-ramps closed for paving. All on/off ramps within given parameters will be closed during this time.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.03335,
+      "lng": -122.26636,
+      "start": "2026-10-26T09:10:16-07:00",
+      "end": "",
+      "updated": "2026-10-26T16:35:12-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-104354",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway W",
+      "direction": "",
+      "description": "Paving operations at Highway 1, In Revelstoke and At Highway 23. Starting 9:00 AM PDT on Monday October 26, 2026 until 5:00 PM MST on Monday November 30, 2026. Last update: October 26th, 2026 at 3:13pm PDT. Paving Oct 26 to Nov 8. Single lane alternating traffic. Expect 20 minute delays. Columbia Rest Area closed until Nov 30. Use alternate rest area.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 51.01062353,
+      "lng": -118.21039664,
+      "start": "2026-10-26T15:13:22-07:00",
+      "end": "",
+      "updated": "2026-10-26T15:13:22-07:00",
       "country": "CA",
       "scheduled": false
     },
@@ -109,24 +127,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-104330",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Paving operations from Highway 1, In Abbotsford and Sumas Way to In Chilliwack and Vedder Canal. Starting 7:00 PM PDT on Monday October 26, 2026 until 6:00 AM PDT on Thursday October 29, 2026. From 7:00 PM to 6:00 AM PDT the next day, weekdays and Sunday. Reduced to one lane. Last update: October 26th, 2026 at 1:20pm PDT. All on and off ramps within given parameters will be paved during this time. Motorists obey posted speed limits, traffic signs, and traffic personnel.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 49.03335,
-      "lng": -122.26636,
-      "start": "2026-10-26T09:10:16-07:00",
-      "end": "",
-      "updated": "2026-10-26T13:20:37-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-325850",
       "province": "ON",
       "highway": "HWY 10",
@@ -142,7 +142,7 @@
       "end": 1793138400,
       "updated": 1793044080,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-325849",
@@ -250,7 +250,7 @@
       "end": 1793120400,
       "updated": 1793032020,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-325785",
@@ -541,6 +541,24 @@
       "scheduled": true
     },
     {
+      "id": "ON-325771",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Nightly Maintenance on HWY 26 Westbound  between CARSON ROAD, Springwater and LAKEVIEW AVENUE, Clearview. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.42869,
+      "lng": -79.7241,
+      "start": 1794790800,
+      "end": 1795262400,
+      "updated": 1793031000,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-104079",
       "province": "BC",
       "highway": "Highway 1 near Trans-Canada Highway",
@@ -555,24 +573,6 @@
       "start": "2026-10-22T13:21:49-07:00",
       "end": "",
       "updated": "2026-10-26T07:05:20-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-104307",
-      "province": "BC",
-      "highway": "Highway 1 near Trans-Canada Highway",
-      "direction": "",
-      "description": "Road maintenance from Highway 1, At West Boundary of Yoho National Park to Anderson Road,. Starting 8:00 AM MDT on Monday October 26, 2026 until 4:00 PM MDT on Monday October 26, 2026. Last update: October 26th, 2026 at 7:32am MDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.23893,
-      "lng": -116.6523,
-      "start": "2026-10-26T06:32:44-07:00",
-      "end": "",
-      "updated": "2026-10-26T06:32:44-07:00",
       "country": "CA",
       "scheduled": false
     },
@@ -682,7 +682,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-28",
       "id": "CA-C580BA-0004-2026-10-27-21:01:00",
@@ -724,7 +724,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-28",
       "id": "CA-C580BA-0008-2026-10-27-21:01:00",
@@ -787,7 +787,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-28",
       "id": "CA-C580BA-0013-2026-10-27-21:01:00",
@@ -850,7 +850,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-28",
       "id": "CA-C580BA-0024-2026-10-27-19:01:00",
@@ -913,7 +913,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-28",
       "id": "CA-C580BA-0030-2026-10-27-19:01:00",
@@ -976,7 +976,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-28",
       "id": "CA-C580BA-0034-2026-10-27-21:01:00",
@@ -997,7 +997,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-28",
       "id": "CA-C580BA-0035-2026-10-27-19:01:00",
@@ -1081,7 +1081,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-10-27",
       "end_date": "2026-10-27",
       "id": "CA-M99EA-0002-2026-10-27-08:01:00",
@@ -1372,6 +1372,24 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-102538",
+      "province": "BC",
+      "highway": "Highway 3A",
+      "direction": "",
+      "description": "Road construction at Highway 3A. Starting Mon Sep 21. From 7:00 AM to 5:00 PM PDT, Monday to Saturday. Last update: October 15th, 2026 at 8:01am PDT. Speed reduced to 30km/h, lanes shifted, one lane on gravel surface.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.52481218,
+      "lng": -117.27313433,
+      "start": "2026-09-18T17:23:21-07:00",
+      "end": "",
+      "updated": "2026-10-15T08:01:51-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-101117",
       "province": "BC",
       "highway": "Highway 93 near Highway 93 And 95",
@@ -1531,24 +1549,6 @@
       "start": "2026-03-30T00:00:00-05:00",
       "end": "2026-11-20T00:00:00-06:00",
       "updated": "2026-10-11T06:37:47-05:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102899",
-      "province": "BC",
-      "highway": "Highway 16 near Highway 16 W",
-      "direction": "",
-      "description": "Construction work from Highway 16. Starting Mon Sep 28 until Tue Dec 1. From 7:00 AM to 5:00 PM PDT, every day. Expect 10 minutes delay. Expect delays. Lane closures in both directions. Single lane alternating traffic. Watch for traffic control. Speed Limit restriction: 50km. Last update: October 10th, 2026 at 2:29pm PDT. Use caution when passing crew and equipment on highway.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 54.40192,
-      "lng": -126.06468,
-      "start": "2026-09-28T07:24:12-07:00",
-      "end": "",
-      "updated": "2026-10-10T14:29:44-07:00",
-      "country": "CA",
       "scheduled": false
     },
     {
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-26T22:00:38.623572+00:00",
+  "updated": "2026-10-27T00:00:43.061208+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
