@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-28 15:01",
-  "updated_iso": "2026-10-28T15:01:30+00:00",
-  "build_version": "1793199690",
+  "updated_at": "2026-10-28 16:01",
+  "updated_iso": "2026-10-28T16:01:28+00:00",
+  "build_version": "1793203288",
   "border": {
     "gauge_class": "warn",
     "heavy_count": 1,
@@ -10,7 +10,7 @@
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
-    "max_wait": "25 min",
+    "max_wait": "40 min",
     "us_max_name": "Thousand Islands Bridge",
     "us_max_wait": "11 min",
     "ca_max_name": "Ambassador Bridge"
@@ -350,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 76,
+    "active_count": 80,
     "gauge_class": "warn",
-    "status_line": "Live now: 49 in the US, 36 in Canada.",
+    "status_line": "Live now: 49 in the US, 39 in Canada.",
     "incidents": [
       {
-        "road": "I-70",
-        "what": "Lane closure on I-70 westbound, IN. Reduced To One Lane, Right Lane Closed,\u2026",
+        "road": "US 59",
+        "what": "Road closed on US 59 northbound, MN. Closed, Construction Work",
         "severity_label": "Minor",
-        "severity_class": "ok",
+        "severity_class": "heavy",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Emergency Roadwork on QEW Fort Erie bound  at MOUNTAINVIEW ROAD, Lincoln. Left\u2026",
+        "road": "HWY 5",
+        "what": "Collision on HWY 5 Westbound  at MIDDLETOWN ROAD, Hamilton. All lanes closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,11 +375,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "25 min",
+      "wait": "40 min",
       "status_label": "Heavy",
       "status_class": "heavy",
       "url": "/border-wait-times/",
-      "captured_at": "10:09 EDT",
+      "captured_at": "11:03 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 EDT",
+      "captured_at": "11:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 MDT",
+      "captured_at": "09:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:40 PDT",
+      "captured_at": "08:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "drivers",
-      "source": "Trucking Dive",
-      "headline": "ATRI to study truck driver health, carriers\u2019 medical costs",
-      "url": "https://www.truckingdive.com/news/atri-to-study-truck-driver-health-carriers-medical-costs/833504/",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "See three trucking legends inducted into ATHS Hall of Fame",
+      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/see-three-trucking-legends-inducted-into-aths-hall-of-fame",
+      "why": "Industry movement worth tracking."
     },
     {
-      "category": "industry",
+      "category": "business",
       "source": "Trucking Dive",
-      "headline": "CSX sees rail conversion opportunities from battered trucking market",
-      "url": "https://www.truckingdive.com/news/csx-sees-rail-conversion-opportunities-from-battered-trucking-market/872764/",
-      "why": "Industry movement worth tracking."
+      "headline": "Werner revenue jumps 23% as fleet efficiency improves",
+      "url": "https://www.truckingdive.com/news/werner-revenue-jumps-23-as-fleet-efficiency-improves/872894/",
+      "why": "Carrier and shipper moves shift capacity in the market."
     }
   ],
   "theft_home_json": "[]",
