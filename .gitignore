@@ -28,3 +28,6 @@ visuals/
 # Generated digest output
 output/
 assets/fx.json
+
+# Transient deploy lock (see deploy.sh). Never commit it.
+.deploy.lock/
