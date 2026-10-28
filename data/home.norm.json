@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-28 01:00",
-  "updated_iso": "2026-10-28T01:00:35+00:00",
-  "build_version": "1793149235",
+  "updated_at": "2026-10-28 03:21",
+  "updated_iso": "2026-10-28T03:21:27+00:00",
+  "build_version": "1793157687",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
     "max_wait": "15 min",
-    "us_max_name": "Blue Water Bridge",
-    "us_max_wait": "78 min",
+    "us_max_name": "Peace Bridge",
+    "us_max_wait": "16 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 73,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 50 in the US, 36 in Canada.",
+    "status_line": "Live now: 49 in the US, 36 in Canada.",
     "incidents": [
       {
         "road": "US 75",
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at MAVIS ROAD, Mississauga. Right\u2026",
+        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR RAMP at RENFORTH DR, Toronto. 2\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "78 min",
-      "us_status_class": "heavy"
+      "us_wait": "15 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Peace Bridge",
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "13 min",
-      "us_status_class": "mod"
+      "us_wait": "16 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:45 EDT",
+      "captured_at": "22:45 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "18:15 MDT",
+      "captured_at": "19:20 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "17:40 PDT",
+      "captured_at": "20:00 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -484,11 +484,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "19:15 CDT",
+      "captured_at": "21:30 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "14 min",
+      "us_wait": "12 min",
       "us_status_class": "mod"
     },
     {
@@ -503,8 +503,8 @@
       "route": "Lansdowne, ON \u2014 Alexandria Bay, NY",
       "label": "Thousand Islands Bridge",
       "route_both": "Alexandria Bay, NY and Lansdowne, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     }
   ],
   "market": [
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Truck News",
-      "headline": "Newfoundland and Labrador to eliminate diesel tax for four months",
-      "url": "https://www.trucknews.com/transportation/newfoundland-and-labrador-to-eliminate-diesel-tax-for-four-months/1003224144/",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "drivers",
+      "source": "Trucking Info",
+      "headline": "Roehl Offers Truck Drivers $10,000 Retention Incentive",
+      "url": "https://www.truckinginfo.com/news/roehl-offers-truck-drivers-10000-retention-incentive",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "markets",
-      "source": "Truck News",
-      "headline": "Western Canadian inland ports form alliance to strengthen trade corridors",
-      "url": "https://www.trucknews.com/supply-chain/western-canadian-inland-ports-form-alliance-to-strengthen-trade-corridors/1003224131/",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Kenworth enhances Class 8 truck lineup with new in-cab tech and interior design",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/kenworth-enhances-class-8-truck-lineup-with-new-in-cab-tech-and-interior-design",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
