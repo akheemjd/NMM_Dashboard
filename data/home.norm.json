@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-28 11:01",
-  "updated_iso": "2026-10-28T11:01:18+00:00",
-  "build_version": "1793185278",
+  "updated_at": "2026-10-28 12:01",
+  "updated_iso": "2026-10-28T12:01:06+00:00",
+  "build_version": "1793188866",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "30 min",
+    "us_max_name": "Blaine-Pacific Highway",
+    "us_max_wait": "15 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 68,
+    "active_count": 71,
     "gauge_class": "warn",
-    "status_line": "Live now: 49 in the US, 32 in Canada.",
+    "status_line": "Live now: 49 in the US, 36 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 49",
-        "what": "Collision on HWY 49 Both Directions  between LOWER SLASH RD and YORK RD -\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound RAMP at BLACK CREEK, Toronto. Left lane closed.",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "30 min",
-      "us_status_class": "heavy"
+      "us_wait": "15 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "6 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "4 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 EDT",
+      "captured_at": "07:45 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 MDT",
+      "captured_at": "05:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "03:40 PDT",
+      "captured_at": "04:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
+      "us_wait": "15 min",
       "us_status_class": "mod"
     },
     {
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "safety",
-      "source": "The Trucker",
-      "headline": "Indiana man dies after crash with semi-truck",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/indiana-man-dies-after-crash-with-semi-truck",
-      "why": "Safety rules and blitzes hit the road on specific dates."
+      "category": "equipment",
+      "source": "Truck News",
+      "headline": "Great Dane\u2019s Wayne plant marks 40 years with 150,000th refrigerated trailer",
+      "url": "https://www.trucknews.com/equipment/great-danes-wayne-plant-marks-40-years-with-150000th-refrigerated-trailer/1003224154/",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
       "category": "markets",
-      "source": "The Trucker",
-      "headline": "CBP finds cocaine inside big rig at commercial import lot",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/cbp-finds-cocaine-inside-big-rig-at-commercial-import-lot",
+      "source": "Truck News",
+      "headline": "Newfoundland and Labrador to eliminate diesel tax for four months",
+      "url": "https://www.trucknews.com/transportation/newfoundland-and-labrador-to-eliminate-diesel-tax-for-four-months/1003224144/",
       "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
