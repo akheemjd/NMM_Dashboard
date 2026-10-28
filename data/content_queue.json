@@ -25,13 +25,6 @@
         "source": "NRCan weekly diesel survey"
       },
       {
-        "id": "market-us-cheapest-district",
-        "title": "Where American diesel is cheapest this week",
-        "keyword": "cheapest diesel prices us",
-        "angle": "Rank the ten EIA districts, name the cheapest and dearest, and price the gap on a 200-gallon fill.",
-        "source": "EIA"
-      },
-      {
         "id": "market-week-ahead",
         "title": "The week ahead for North American freight",
         "keyword": "canada us trucking fuel costs",
@@ -431,10 +424,16 @@
       "pillar": "ops",
       "title": "Detention: the unpaid hour that decides whether a lane works",
       "completed_on": "2026-10-26"
+    },
+    {
+      "id": "market-us-cheapest-district",
+      "pillar": "market",
+      "title": "Where American diesel is cheapest this week",
+      "completed_on": "2026-10-28"
     }
   ],
   "last_published": {
-    "market": "2026-10-12",
+    "market": "2026-10-28",
     "deep": "2026-10-14",
     "rules": "2026-10-16",
     "ops": "2026-10-26",
