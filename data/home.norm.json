@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-29 19:01",
-  "updated_iso": "2026-10-29T19:01:02+00:00",
-  "build_version": "1793300462",
+  "updated_at": "2026-10-29 20:01",
+  "updated_iso": "2026-10-29T20:01:19+00:00",
+  "build_version": "1793304079",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 4,
+    "moderate_count": 3,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Ambassador Bridge",
-    "max_wait": "15 min",
-    "us_max_name": "Queenston-Lewiston Bridge",
-    "us_max_wait": "11 min",
-    "ca_max_name": "Ambassador Bridge"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min",
+    "us_max_name": "Blue Water Bridge",
+    "us_max_wait": "52 min",
+    "ca_max_name": "Peace Bridge"
   },
   "fuel": {
     "national_diesel": "264.2",
@@ -350,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 77,
+    "active_count": 80,
     "gauge_class": "warn",
-    "status_line": "Live now: 45 in the US, 33 in Canada.",
+    "status_line": "Live now: 45 in the US, 36 in Canada.",
     "incidents": [
       {
-        "road": "US40W TO IS70W",
-        "what": "Road closed on US40W TO IS70W westbound, MO. NEW PAVEMENT CONSTRUCTION",
+        "road": "29N",
+        "what": "Lane closure on 29N northbound, ND. Traffic is restricted to the driving lanes\u2026",
         "severity_label": "Minor",
-        "severity_class": "heavy",
+        "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 502",
-        "what": "Disabled Vehicle on HWY 502 Northbound  at CROWROCK BEACH RD (E), Fort Frances.\u2026",
+        "road": "HWY 401",
+        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at RENFORTH DR, Toronto. 1 right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,16 +375,16 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "15 min",
-      "status_label": "Moderate",
-      "status_class": "mod",
+      "wait": "No delay",
+      "status_label": "Flowing",
+      "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:23 EDT",
+      "captured_at": "15:36 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "10 min",
-      "us_status_class": "mod"
+      "us_wait": "20 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "52 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Peace Bridge",
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "11 min",
+      "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
@@ -443,8 +443,8 @@
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "11:40 PDT",
+      "captured_at": "12:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "6 of 9 crossings slow, US-bound",
-      "value": "6/9",
+      "note": "8 of 9 crossings slow, US-bound",
+      "value": "8/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "4 of 9 crossings slow, Canada-bound",
-      "value": "4/9",
+      "note": "3 of 9 crossings slow, Canada-bound",
+      "value": "3/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "regulations",
+      "source": "The Trucker",
+      "headline": "DOT Consortium expands compliance platform with new return-to-duty and follow-up testing drug and alcohol testing packag",
+      "url": "https://www.thetrucker.com/trucking-news/business/dot-consortium-expands-compliance-platform-with-new-return-to-duty-and-follow-up-testing-drug-and-alcohol-testing-packages",
+      "why": "Rules change compliance cost and driver hours."
+    },
+    {
       "category": "drivers",
       "source": "The Trucker",
       "headline": "Beyond the hiring pitch: What makes truck drivers stay?",
       "url": "https://www.thetrucker.com/trucking-news/business/beyond-the-hiring-pitch-what-makes-truck-drivers-stay",
       "why": "Driver supply and pay shape capacity and rates."
-    },
-    {
-      "category": "business",
-      "source": "Trucking Dive",
-      "headline": "XPO Q3 revenue rises 12% as focus on higher-margin freight pays off",
-      "url": "https://www.truckingdive.com/news/xpo-q3-revenue-rises-12-as-focus-on-higher-margin-freight-pays-off/873129/",
-      "why": "Carrier and shipper moves shift capacity in the market."
     }
   ],
   "theft_home_json": "[]",
