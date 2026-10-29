@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-29 22:00",
-  "updated_iso": "2026-10-29T22:00:53+00:00",
-  "build_version": "1793311253",
+  "updated_at": "2026-10-29 23:01",
+  "updated_iso": "2026-10-29T23:01:45+00:00",
+  "build_version": "1793314905",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "40 min",
+    "us_max_wait": "30 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 75,
+    "active_count": 65,
     "gauge_class": "warn",
-    "status_line": "Live now: 45 in the US, 31 in Canada.",
+    "status_line": "Live now: 37 in the US, 29 in Canada.",
     "incidents": [
       {
         "road": "29N",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Disabled Vehicle on HWY 400 Southbound  at DUCKWORTH STREET, Barrie. Left\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at ALLEN ROAD, Toronto. Centre lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "40 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "2 min",
+      "us_wait": "6 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "16:45 EDT",
+      "captured_at": "18:32 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "14:15 MDT",
+      "captured_at": "16:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:40 PDT",
+      "captured_at": "15:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "15:15 CDT",
+      "captured_at": "17:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "industry",
-      "source": "Truck News",
-      "headline": "Kenworth T680 hauling U.S. Capitol Christmas tree from Idaho to Washington",
-      "url": "https://www.trucknews.com/equipment/kenworth-t680-hauling-u-s-capitol-christmas-tree-from-idaho-to-washington/1003224292/",
-      "why": "Industry movement worth tracking."
+      "category": "drivers",
+      "source": "Trucking Info",
+      "headline": "Why Hiring Truck Drivers Is Getting Harder",
+      "url": "https://www.truckinginfo.com/news/why-hiring-truck-drivers-is-getting-harder",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "drivers",
-      "source": "Truck News",
-      "headline": "Bridgestone opens $3 million Bandag retread training center in Akron",
-      "url": "https://www.trucknews.com/equipment/bridgestone-opens-3-million-bandag-retread-training-center-in-akron/1003224288/",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "regulations",
+      "source": "The Trucker",
+      "headline": "DOT Consortium expands compliance platform with new return-to-duty and follow-up testing drug and alcohol testing packag",
+      "url": "https://www.thetrucker.com/trucking-news/business/dot-consortium-expands-compliance-platform-with-new-return-to-duty-and-follow-up-testing-drug-and-alcohol-testing-packages",
+      "why": "Rules change compliance cost and driver hours."
     }
   ],
   "theft_home_json": "[]",
