@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-29 10:00",
-  "updated_iso": "2026-10-29T10:00:46+00:00",
-  "build_version": "1793268046",
+  "updated_at": "2026-10-29 11:00",
+  "updated_iso": "2026-10-29T11:00:45+00:00",
+  "build_version": "1793271645",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,7 +350,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 69,
+    "active_count": 70,
     "gauge_class": "warn",
     "status_line": "Live now: 47 in the US, 28 in Canada.",
     "incidents": [
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at BURLINGTON SKYWAY, Burlington. 1\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Eastbound EXPRESS at MARKHAM ROAD, Toronto. All lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "13 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "1 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "04:15 EDT",
+      "captured_at": "06:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 MDT",
+      "captured_at": "04:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 PDT",
+      "captured_at": "03:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "03:15 CDT",
+      "captured_at": "05:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "3 of 7 crossings slow, US-bound",
-      "value": "3/7",
+      "note": "4 of 7 crossings slow, US-bound",
+      "value": "4/7",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
-      "source": "Trucking Dive",
-      "headline": "Old Dominion revenue jumps 13% as density increases",
-      "url": "https://www.truckingdive.com/news/old-dominion-revenue-jumps-13-as-density-increases/873020/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "drivers",
+      "source": "The Trucker",
+      "headline": "Pickup truck driver loses control on icy bridge, is hit by CMV",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/pickup-truck-driver-loses-control-on-icy-bridge-is-hit-by-cmv",
+      "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "industry",
+      "category": "safety",
       "source": "The Trucker",
-      "headline": "FAIR sues New York DMV again over its refusal to disclose basic CDL records",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/fair-sues-new-york-dmv-again-over-its-refusal-to-disclose-basic-cdl-records",
-      "why": "Industry movement worth tracking."
+      "headline": "Two log truck drivers killed in Oregon crash",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/two-log-truck-drivers-killed-in-oregon-crash",
+      "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
   "theft_home_json": "[]",
