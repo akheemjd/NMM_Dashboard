@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-29 02:00",
-  "updated_iso": "2026-10-29T02:00:49+00:00",
-  "build_version": "1793239249",
+  "updated_at": "2026-10-29 03:00",
+  "updated_iso": "2026-10-29T03:00:29+00:00",
+  "build_version": "1793242829",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Coutts-Sweetgrass",
-    "us_max_wait": "30 min",
+    "us_max_name": "Ambassador Bridge",
+    "us_max_wait": "20 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 72,
+    "active_count": 71,
     "gauge_class": "warn",
-    "status_line": "Live now: 51 in the US, 29 in Canada.",
+    "status_line": "Live now: 48 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "29N",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at LESLIE STREET, Toronto.\u2026",
+        "road": "HWY 48",
+        "what": "Collision on HWY 48 Southbound ON-RAMP at BLOOMINGTON ROAD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
-      "us_status_class": "mod"
+      "us_wait": "20 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "6 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Peace Bridge",
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -458,8 +458,8 @@
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "30 min",
-      "us_status_class": "heavy"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "18:40 PDT",
+      "captured_at": "19:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "20:49 CDT",
+      "captured_at": "21:52 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 9 crossings slow, US-bound",
-      "value": "7/9",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "business",
-      "source": "Trucking Dive",
-      "headline": "Old Dominion revenue jumps 13% as density increases",
-      "url": "https://www.truckingdive.com/news/old-dominion-revenue-jumps-13-as-density-increases/873020/",
-      "why": "Carrier and shipper moves shift capacity in the market."
+      "category": "technology",
+      "source": "Truck News",
+      "headline": "Kodiak, DTL announce deal to deploy 75 driverless trucks",
+      "url": "https://www.trucknews.com/transportation/kodiak-dtl-announce-deal-to-deploy-75-driverless-trucks/1003224215/",
+      "why": "Tech spend changes back-office and dispatch efficiency."
     },
     {
-      "category": "industry",
-      "source": "The Trucker",
-      "headline": "FAIR sues New York DMV again over its refusal to disclose basic CDL records",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/fair-sues-new-york-dmv-again-over-its-refusal-to-disclose-basic-cdl-records",
-      "why": "Industry movement worth tracking."
+      "category": "safety",
+      "source": "Truck News",
+      "headline": "Samsara, Together for Safer Roads launch fleet safety program for food banks",
+      "url": "https://www.trucknews.com/technology/samsara-together-for-safer-roads-launch-fleet-safety-program-for-food-banks/1003224211/",
+      "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
   "theft_home_json": "[]",
