@@ -1,25 +1,25 @@
 {
-  "generated_utc": "2026-10-29T17:00:59.240646+00:00",
+  "generated_utc": "2026-10-29T18:01:20.274767+00:00",
   "print_date": "Tue, 27 Oct 2026",
-  "national": "263.9",
-  "build_version": "20261029170059",
+  "national": "264.2",
+  "build_version": "20261029180120",
   "provinces": {
     "ON": {
       "code": "ON",
       "name": "Ontario",
       "slug": "ontario",
       "price": "253.5",
-      "national": "263.9",
-      "vs_national": "-10.4",
+      "national": "264.2",
+      "vs_national": "-10.7",
       "vs_national_class": "down",
       "vs_national_word": "below",
-      "vs_national_abs": "10.4",
+      "vs_national_abs": "10.7",
       "city_count": "19",
       "low_city": "Kitchener",
-      "low_price": "245.9",
+      "low_price": "246.9",
       "high_city": "Sault Ste Marie",
-      "high_price": "264.3",
-      "spread": "18.4",
+      "high_price": "264.5",
+      "spread": "17.6",
       "us": {
         "label": "Central Atlantic (PADD 1B)",
         "label_short": "Central Atlantic",
@@ -32,18 +32,11 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Kitchener",
           "city_slug": "kitchener",
-          "price": "245.9",
-          "vs_prov": "-7.6",
-          "vs_class": "down"
-        },
-        {
-          "city": "Kingston",
-          "city_slug": "kingston",
           "price": "246.9",
           "vs_prov": "-6.6",
           "vs_class": "down"
@@ -51,36 +44,57 @@
         {
           "city": "Windsor",
           "city_slug": "windsor",
-          "price": "248.6",
-          "vs_prov": "-4.9",
+          "price": "247.9",
+          "vs_prov": "-5.6",
           "vs_class": "down"
         },
         {
-          "city": "Guelph",
-          "city_slug": "guelph",
-          "price": "249.7",
-          "vs_prov": "-3.8",
-          "vs_class": "down"
-        },
-        {
-          "city": "Toronto",
-          "city_slug": "toronto",
-          "price": "249.9",
-          "vs_prov": "-3.6",
+          "city": "Kingston",
+          "city_slug": "kingston",
+          "price": "247.9",
+          "vs_prov": "-5.6",
           "vs_class": "down"
         },
         {
           "city": "Barrie",
           "city_slug": "barrie",
-          "price": "250.6",
-          "vs_prov": "-2.9",
+          "price": "249.1",
+          "vs_prov": "-4.4",
+          "vs_class": "down"
+        },
+        {
+          "city": "Guelph",
+          "city_slug": "guelph",
+          "price": "249.9",
+          "vs_prov": "-3.6",
           "vs_class": "down"
         },
         {
           "city": "Oshawa",
           "city_slug": "oshawa",
-          "price": "251.3",
-          "vs_prov": "-2.2",
+          "price": "250.1",
+          "vs_prov": "-3.4",
+          "vs_class": "down"
+        },
+        {
+          "city": "Toronto",
+          "city_slug": "toronto",
+          "price": "250.6",
+          "vs_prov": "-2.9",
+          "vs_class": "down"
+        },
+        {
+          "city": "London",
+          "city_slug": "london",
+          "price": "251.8",
+          "vs_prov": "-1.7",
+          "vs_class": "down"
+        },
+        {
+          "city": "Brantford",
+          "city_slug": "brantford",
+          "price": "252.7",
+          "vs_prov": "-0.8",
           "vs_class": "down"
         },
         {
@@ -93,29 +107,22 @@
         {
           "city": "Hamilton",
           "city_slug": "hamilton",
-          "price": "253.2",
-          "vs_prov": "-0.3",
-          "vs_class": "down"
-        },
-        {
-          "city": "Brantford",
-          "city_slug": "brantford",
-          "price": "253.2",
-          "vs_prov": "-0.3",
-          "vs_class": "down"
-        },
-        {
-          "city": "London",
-          "city_slug": "london",
-          "price": "253.3",
-          "vs_prov": "-0.2",
-          "vs_class": "down"
+          "price": "253.6",
+          "vs_prov": "+0.1",
+          "vs_class": "up"
         },
         {
           "city": "North Bay",
           "city_slug": "north-bay",
-          "price": "254.0",
-          "vs_prov": "+0.5",
+          "price": "254.1",
+          "vs_prov": "+0.6",
+          "vs_class": "up"
+        },
+        {
+          "city": "Sudbury",
+          "city_slug": "sudbury",
+          "price": "254.7",
+          "vs_prov": "+1.2",
           "vs_class": "up"
         },
         {
@@ -126,13 +133,6 @@
           "vs_class": "up"
         },
         {
-          "city": "Sudbury",
-          "city_slug": "sudbury",
-          "price": "255.9",
-          "vs_prov": "+2.4",
-          "vs_class": "up"
-        },
-        {
           "city": "Peterborough",
           "city_slug": "peterborough",
           "price": "256.6",
@@ -140,17 +140,10 @@
           "vs_class": "up"
         },
         {
-          "city": "Thunder Bay",
-          "city_slug": "thunder-bay",
-          "price": "258.1",
-          "vs_prov": "+4.6",
-          "vs_class": "up"
-        },
-        {
           "city": "Ottawa",
           "city_slug": "ottawa",
-          "price": "258.2",
-          "vs_prov": "+4.7",
+          "price": "257.2",
+          "vs_prov": "+3.7",
           "vs_class": "up"
         },
         {
@@ -161,32 +154,39 @@
           "vs_class": "up"
         },
         {
+          "city": "Thunder Bay",
+          "city_slug": "thunder-bay",
+          "price": "262.4",
+          "vs_prov": "+8.9",
+          "vs_class": "up"
+        },
+        {
           "city": "Sault Ste Marie",
           "city_slug": "sault-ste-marie",
-          "price": "264.3",
-          "vs_prov": "+10.8",
+          "price": "264.5",
+          "vs_prov": "+11.0",
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "AB": {
       "code": "AB",
       "name": "Alberta",
       "slug": "alberta",
-      "price": "229.2",
-      "national": "263.9",
-      "vs_national": "-34.7",
+      "price": "231.2",
+      "national": "264.2",
+      "vs_national": "-33.0",
       "vs_national_class": "down",
       "vs_national_word": "below",
-      "vs_national_abs": "34.7",
+      "vs_national_abs": "33.0",
       "city_count": "6",
       "low_city": "Grande Prairie",
-      "low_price": "219.6",
-      "high_city": "Lloydminster",
-      "high_price": "234.7",
-      "spread": "15.1",
+      "low_price": "227.6",
+      "high_city": "Edmonton",
+      "high_price": "234.8",
+      "spread": "7.2",
       "us": {
         "label": "Rocky Mountain (PADD 4)",
         "label_short": "Rocky Mountain",
@@ -199,70 +199,70 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Grande Prairie",
           "city_slug": "grande-prairie",
-          "price": "219.6",
-          "vs_prov": "-9.6",
-          "vs_class": "down"
-        },
-        {
-          "city": "Calgary",
-          "city_slug": "calgary",
-          "price": "225.5",
-          "vs_prov": "-3.7",
+          "price": "227.6",
+          "vs_prov": "-3.6",
           "vs_class": "down"
         },
         {
           "city": "Red Deer",
           "city_slug": "red-deer",
-          "price": "228.4",
-          "vs_prov": "-0.8",
+          "price": "228.2",
+          "vs_prov": "-3.0",
+          "vs_class": "down"
+        },
+        {
+          "city": "Calgary",
+          "city_slug": "calgary",
+          "price": "228.7",
+          "vs_prov": "-2.5",
           "vs_class": "down"
         },
         {
           "city": "Lethbridge",
           "city_slug": "lethbridge",
           "price": "233.4",
-          "vs_prov": "+4.2",
-          "vs_class": "up"
-        },
-        {
-          "city": "Edmonton",
-          "city_slug": "edmonton",
-          "price": "233.6",
-          "vs_prov": "+4.4",
+          "vs_prov": "+2.2",
           "vs_class": "up"
         },
         {
           "city": "Lloydminster",
           "city_slug": "lloydminster",
           "price": "234.7",
-          "vs_prov": "+5.5",
+          "vs_prov": "+3.5",
+          "vs_class": "up"
+        },
+        {
+          "city": "Edmonton",
+          "city_slug": "edmonton",
+          "price": "234.8",
+          "vs_prov": "+3.6",
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "BC": {
       "code": "BC",
       "name": "British Columbia",
       "slug": "british-columbia",
-      "price": "271.0",
-      "national": "263.9",
-      "vs_national": "+7.1",
+      "price": "271.9",
+      "national": "264.2",
+      "vs_national": "+7.7",
       "vs_national_class": "up",
       "vs_national_word": "above",
-      "vs_national_abs": "7.1",
+      "vs_national_abs": "7.7",
       "city_count": "7",
       "low_city": "Fort St. John",
-      "low_price": "255.9",
+      "low_price": "261.9",
       "high_city": "Vancouver",
-      "high_price": "285.4",
-      "spread": "29.5",
+      "high_price": "283.8",
+      "spread": "21.9",
       "us": {
         "label": "West Coast (PADD 5)",
         "label_short": "West Coast",
@@ -275,77 +275,77 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Fort St. John",
           "city_slug": "fort-st-john",
-          "price": "255.9",
-          "vs_prov": "-15.1",
+          "price": "261.9",
+          "vs_prov": "-10.0",
           "vs_class": "down"
         },
         {
           "city": "Kelowna",
           "city_slug": "kelowna",
-          "price": "261.7",
-          "vs_prov": "-9.3",
+          "price": "263.4",
+          "vs_prov": "-8.5",
           "vs_class": "down"
         },
         {
           "city": "Prince George",
           "city_slug": "prince-george",
           "price": "266.3",
-          "vs_prov": "-4.7",
+          "vs_prov": "-5.6",
           "vs_class": "down"
-        },
-        {
-          "city": "Kamloops",
-          "city_slug": "kamloops",
-          "price": "272.1",
-          "vs_prov": "+1.1",
-          "vs_class": "up"
         },
         {
           "city": "Abbotsford",
           "city_slug": "abbotsford",
-          "price": "272.9",
-          "vs_prov": "+1.9",
+          "price": "272.1",
+          "vs_prov": "+0.2",
+          "vs_class": "up"
+        },
+        {
+          "city": "Kamloops",
+          "city_slug": "kamloops",
+          "price": "273.0",
+          "vs_prov": "+1.1",
           "vs_class": "up"
         },
         {
           "city": "Victoria",
           "city_slug": "victoria",
-          "price": "282.4",
-          "vs_prov": "+11.4",
+          "price": "282.9",
+          "vs_prov": "+11.0",
           "vs_class": "up"
         },
         {
           "city": "Vancouver",
           "city_slug": "vancouver",
-          "price": "285.4",
-          "vs_prov": "+14.4",
+          "price": "283.8",
+          "vs_prov": "+11.9",
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "SK": {
       "code": "SK",
       "name": "Saskatchewan",
       "slug": "saskatchewan",
-      "price": "247.3",
-      "national": "263.9",
-      "vs_national": "-16.6",
+      "price": "249.7",
+      "national": "264.2",
+      "vs_national": "-14.5",
       "vs_national_class": "down",
       "vs_national_word": "below",
-      "vs_national_abs": "16.6",
+      "vs_national_abs": "14.5",
       "city_count": "4",
       "low_city": "Prince Albert",
       "low_price": "246.3",
-      "high_city": "Regina",
-      "high_price": "248.7",
-      "spread": "2.4",
+      "high_city": "Moose Jaw",
+      "high_price": "253.4",
+      "spread": "7.1",
       "us": {
         "label": "Rocky Mountain (PADD 4)",
         "label_short": "Rocky Mountain",
@@ -358,56 +358,56 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Prince Albert",
           "city_slug": "prince-albert",
           "price": "246.3",
-          "vs_prov": "-1.0",
+          "vs_prov": "-3.4",
           "vs_class": "down"
         },
         {
           "city": "Saskatoon",
           "city_slug": "saskatoon",
-          "price": "246.7",
+          "price": "249.1",
           "vs_prov": "-0.6",
           "vs_class": "down"
         },
         {
-          "city": "Moose Jaw",
-          "city_slug": "moose-jaw",
-          "price": "247.4",
-          "vs_prov": "+0.1",
+          "city": "Regina",
+          "city_slug": "regina",
+          "price": "249.9",
+          "vs_prov": "+0.2",
           "vs_class": "up"
         },
         {
-          "city": "Regina",
-          "city_slug": "regina",
-          "price": "248.7",
-          "vs_prov": "+1.4",
+          "city": "Moose Jaw",
+          "city_slug": "moose-jaw",
+          "price": "253.4",
+          "vs_prov": "+3.7",
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "MB": {
       "code": "MB",
       "name": "Manitoba",
       "slug": "manitoba",
-      "price": "257.3",
-      "national": "263.9",
-      "vs_national": "-6.6",
+      "price": "257.8",
+      "national": "264.2",
+      "vs_national": "-6.4",
       "vs_national_class": "down",
       "vs_national_word": "below",
-      "vs_national_abs": "6.6",
+      "vs_national_abs": "6.4",
       "city_count": "2",
-      "low_city": "Brandon",
-      "low_price": "257.2",
-      "high_city": "Winnipeg",
-      "high_price": "257.3",
-      "spread": "0.1",
+      "low_city": "Winnipeg",
+      "low_price": "255.3",
+      "high_city": "Brandon",
+      "high_price": "260.2",
+      "spread": "4.9",
       "us": {
         "label": "Rocky Mountain (PADD 4)",
         "label_short": "Rocky Mountain",
@@ -420,42 +420,42 @@
       "has_spread": false,
       "thin_survey": "2 survey cities",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
-        {
-          "city": "Brandon",
-          "city_slug": "brandon",
-          "price": "257.2",
-          "vs_prov": "-0.1",
-          "vs_class": "down"
-        },
         {
           "city": "Winnipeg",
           "city_slug": "winnipeg",
-          "price": "257.3",
-          "vs_prov": "+0.0",
-          "vs_class": "flat"
+          "price": "255.3",
+          "vs_prov": "-2.5",
+          "vs_class": "down"
+        },
+        {
+          "city": "Brandon",
+          "city_slug": "brandon",
+          "price": "260.2",
+          "vs_prov": "+2.4",
+          "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "QC": {
       "code": "QC",
       "name": "Quebec",
       "slug": "quebec",
       "price": "290.2",
-      "national": "263.9",
-      "vs_national": "+26.3",
+      "national": "264.2",
+      "vs_national": "+26.0",
       "vs_national_class": "up",
       "vs_national_word": "above",
-      "vs_national_abs": "26.3",
+      "vs_national_abs": "26.0",
       "city_count": "10",
       "low_city": "Chicoutimi",
-      "low_price": "282.4",
+      "low_price": "281.8",
       "high_city": "Val d'Or",
       "high_price": "296.9",
-      "spread": "14.5",
+      "spread": "15.1",
       "us": {
         "label": "New England (PADD 1A)",
         "label_short": "New England",
@@ -468,13 +468,13 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Chicoutimi",
           "city_slug": "chicoutimi",
-          "price": "282.4",
-          "vs_prov": "-7.8",
+          "price": "281.8",
+          "vs_prov": "-8.4",
           "vs_class": "down"
         },
         {
@@ -506,31 +506,31 @@
           "vs_class": "down"
         },
         {
-          "city": "Sherbrooke",
-          "city_slug": "sherbrooke",
-          "price": "290.2",
-          "vs_prov": "+0.0",
-          "vs_class": "flat"
-        },
-        {
           "city": "Gatineau",
           "city_slug": "gatineau",
-          "price": "290.5",
-          "vs_prov": "+0.3",
+          "price": "290.4",
+          "vs_prov": "+0.2",
+          "vs_class": "up"
+        },
+        {
+          "city": "Sherbrooke",
+          "city_slug": "sherbrooke",
+          "price": "290.4",
+          "vs_prov": "+0.2",
           "vs_class": "up"
         },
         {
           "city": "Trois-Rivi\u00e8res",
           "city_slug": "trois-rivieres",
-          "price": "291.4",
-          "vs_prov": "+1.2",
+          "price": "290.7",
+          "vs_prov": "+0.5",
           "vs_class": "up"
         },
         {
           "city": "Montreal",
           "city_slug": "montreal",
-          "price": "291.4",
-          "vs_prov": "+1.2",
+          "price": "291.9",
+          "vs_prov": "+1.7",
           "vs_class": "up"
         },
         {
@@ -541,25 +541,25 @@
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "NB": {
       "code": "NB",
       "name": "New Brunswick",
       "slug": "new-brunswick",
-      "price": "272.6",
-      "national": "263.9",
-      "vs_national": "+8.7",
+      "price": "272.3",
+      "national": "264.2",
+      "vs_national": "+8.1",
       "vs_national_class": "up",
       "vs_national_word": "above",
-      "vs_national_abs": "8.7",
+      "vs_national_abs": "8.1",
       "city_count": "10",
       "low_city": "Bathurst",
       "low_price": "267.1",
       "high_city": "Grand Falls",
-      "high_price": "284.3",
-      "spread": "17.2",
+      "high_price": "281.1",
+      "spread": "14.0",
       "us": {
         "label": "New England (PADD 1A)",
         "label_short": "New England",
@@ -572,92 +572,92 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Bathurst",
           "city_slug": "bathurst",
           "price": "267.1",
-          "vs_prov": "-5.5",
+          "vs_prov": "-5.2",
           "vs_class": "down"
         },
         {
           "city": "Saint John",
           "city_slug": "saint-john",
-          "price": "269.2",
-          "vs_prov": "-3.4",
+          "price": "269.1",
+          "vs_prov": "-3.2",
           "vs_class": "down"
         },
         {
           "city": "Fredericton",
           "city_slug": "fredericton",
           "price": "270.6",
-          "vs_prov": "-2.0",
+          "vs_prov": "-1.7",
           "vs_class": "down"
         },
         {
           "city": "Moncton",
           "city_slug": "moncton",
           "price": "270.7",
-          "vs_prov": "-1.9",
+          "vs_prov": "-1.6",
           "vs_class": "down"
         },
         {
           "city": "Sussex",
           "city_slug": "sussex",
           "price": "270.7",
-          "vs_prov": "-1.9",
+          "vs_prov": "-1.6",
           "vs_class": "down"
         },
         {
           "city": "Edmundston",
           "city_slug": "edmundston",
           "price": "271.8",
-          "vs_prov": "-0.8",
+          "vs_prov": "-0.5",
           "vs_class": "down"
         },
         {
           "city": "Miramichi",
           "city_slug": "miramichi",
           "price": "272.6",
-          "vs_prov": "+0.0",
-          "vs_class": "flat"
+          "vs_prov": "+0.3",
+          "vs_class": "up"
         },
         {
           "city": "Campbellton",
           "city_slug": "campbellton",
           "price": "273.6",
-          "vs_prov": "+1.0",
+          "vs_prov": "+1.3",
           "vs_class": "up"
         },
         {
           "city": "Woodstock",
           "city_slug": "woodstock",
           "price": "275.2",
-          "vs_prov": "+2.6",
+          "vs_prov": "+2.9",
           "vs_class": "up"
         },
         {
           "city": "Grand Falls",
           "city_slug": "grand-falls",
-          "price": "284.3",
-          "vs_prov": "+11.7",
+          "price": "281.1",
+          "vs_prov": "+8.8",
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "NS": {
       "code": "NS",
       "name": "Nova Scotia",
       "slug": "nova-scotia",
       "price": "270.6",
-      "national": "263.9",
-      "vs_national": "+6.7",
+      "national": "264.2",
+      "vs_national": "+6.4",
       "vs_national_class": "up",
       "vs_national_word": "above",
-      "vs_national_abs": "6.7",
+      "vs_national_abs": "6.4",
       "city_count": "6",
       "low_city": "Kentville",
       "low_price": "268.3",
@@ -676,7 +676,7 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Kentville",
@@ -721,19 +721,19 @@
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "PE": {
       "code": "PE",
       "name": "Prince Edward Island",
       "slug": "prince-edward-island",
       "price": "264.2",
-      "national": "263.9",
-      "vs_national": "+0.3",
-      "vs_national_class": "up",
-      "vs_national_word": "above",
-      "vs_national_abs": "0.3",
+      "national": "264.2",
+      "vs_national": "+0.0",
+      "vs_national_class": "flat",
+      "vs_national_word": "level with",
+      "vs_national_abs": "0.0",
       "city_count": "1",
       "low_city": "Charlottetown",
       "low_price": "264.2",
@@ -752,7 +752,7 @@
       "has_spread": false,
       "thin_survey": "1 survey city",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "Charlottetown",
@@ -762,24 +762,24 @@
           "vs_class": "flat"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     },
     "NL": {
       "code": "NL",
       "name": "Newfoundland and Labrador",
       "slug": "newfoundland-and-labrador",
-      "price": "283.3",
-      "national": "263.9",
-      "vs_national": "+19.4",
+      "price": "280.4",
+      "national": "264.2",
+      "vs_national": "+16.2",
       "vs_national_class": "up",
       "vs_national_word": "above",
-      "vs_national_abs": "19.4",
+      "vs_national_abs": "16.2",
       "city_count": "4",
       "low_city": "St. John's",
-      "low_price": "280.5",
+      "low_price": "277.4",
       "high_city": "Labrador City",
-      "high_price": "290.2",
+      "high_price": "287.1",
       "spread": "9.7",
       "us": {
         "label": "New England (PADD 1A)",
@@ -793,39 +793,39 @@
       "has_spread": true,
       "thin_survey": "",
       "print_date": "Tue, 27 Oct 2026",
-      "build_version": "20261029170059",
+      "build_version": "20261029180120",
       "cities": [
         {
           "city": "St. John's",
           "city_slug": "st-john-s",
-          "price": "280.5",
-          "vs_prov": "-2.8",
-          "vs_class": "down"
-        },
-        {
-          "city": "Gander",
-          "city_slug": "gander",
-          "price": "280.7",
-          "vs_prov": "-2.6",
+          "price": "277.4",
+          "vs_prov": "-3.0",
           "vs_class": "down"
         },
         {
           "city": "Corner Brook",
           "city_slug": "corner-brook",
-          "price": "281.6",
+          "price": "278.4",
+          "vs_prov": "-2.0",
+          "vs_class": "down"
+        },
+        {
+          "city": "Gander",
+          "city_slug": "gander",
+          "price": "278.7",
           "vs_prov": "-1.7",
           "vs_class": "down"
         },
         {
           "city": "Labrador City",
           "city_slug": "labrador-city",
-          "price": "290.2",
-          "vs_prov": "+6.9",
+          "price": "287.1",
+          "vs_prov": "+6.7",
           "vs_class": "up"
         }
       ],
-      "updated_at": "2026-10-29 17:00",
-      "updated_iso": "2026-10-29T17:00:57+00:00"
+      "updated_at": "2026-10-29 18:01",
+      "updated_iso": "2026-10-29T18:01:17+00:00"
     }
   }
 }
