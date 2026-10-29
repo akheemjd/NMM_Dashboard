@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-29 06:01",
-  "updated_iso": "2026-10-29T06:01:18+00:00",
-  "build_version": "1793253678",
+  "updated_at": "2026-10-29 07:00",
+  "updated_iso": "2026-10-29T07:00:38+00:00",
+  "build_version": "1793257238",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,11 +9,11 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min",
-    "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "15 min",
-    "ca_max_name": "Blaine-Pacific Highway"
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min",
+    "us_max_name": "Queenston-Lewiston Bridge",
+    "us_max_wait": "2 min",
+    "ca_max_name": "Peace Bridge"
   },
   "fuel": {
     "national_diesel": "263.9",
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 62,
+    "active_count": 69,
     "gauge_class": "warn",
-    "status_line": "Live now: 39 in the US, 29 in Canada.",
+    "status_line": "Live now: 47 in the US, 28 in Canada.",
     "incidents": [
       {
         "road": "US40W TO IS70W",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 427",
-        "what": "Disabled Vehicle on HWY 427 Southbound EXPRESS at RATHBURN ROAD, Toronto. Left\u2026",
+        "road": "HWY 400",
+        "what": "Collision on HWY 400 Southbound RAMP at INNISFIL BEACH RD - SIMCOE ROAD 21,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Blue Water Bridge",
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "00:17 EDT",
+      "captured_at": "02:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 MDT",
+      "captured_at": "00:25 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "22:40 PDT",
+      "captured_at": "23:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 CDT",
+      "captured_at": "01:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
