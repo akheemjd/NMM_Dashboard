@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-30 10:01",
-  "updated_iso": "2026-10-30T10:01:17+00:00",
-  "build_version": "1793354477",
+  "updated_at": "2026-10-30 11:01",
+  "updated_iso": "2026-10-30T11:01:19+00:00",
+  "build_version": "1793358079",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "15 min",
+    "us_max_name": "Coutts-Sweetgrass",
+    "us_max_wait": "5 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,7 +350,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 72,
+    "active_count": 73,
     "gauge_class": "warn",
     "status_line": "Live now: 45 in the US, 31 in Canada.",
     "incidents": [
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Eastbound COLLECTOR at HWY 400, Toronto. Centre lane\u2026",
+        "road": "HWY 141",
+        "what": "Collision on HWY 141 Both Directions  between NORTH SANDY PLAINS RD, Humphrey\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,7 +383,7 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "02:40 PDT",
+      "captured_at": "03:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 7 crossings slow, US-bound",
-      "value": "4/7",
+      "note": "5 of 7 crossings slow, US-bound",
+      "value": "5/7",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -613,16 +613,16 @@
     {
       "category": "drivers",
       "source": "The Trucker",
-      "headline": "PAM Transport seeks exemption to put new drivers behind the wheel sooner",
-      "url": "https://www.thetrucker.com/trucking-news/truck-driving-jobs-news/pam-transport-seeks-exemption-to-put-new-drivers-behind-the-wheel-sooner",
+      "headline": "Wrong-way driver hits big rig on Interstate 44 in Missouri",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/wrong-way-driver-hits-big-rig-on-interstate-44-in-missouri",
       "why": "Driver supply and pay shape capacity and rates."
     },
     {
-      "category": "drivers",
-      "source": "Trucking Info",
-      "headline": "Why Hiring Truck Drivers Is Getting Harder",
-      "url": "https://www.truckinginfo.com/news/why-hiring-truck-drivers-is-getting-harder",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Georgia inland port means reduction in truck traffic",
+      "url": "https://www.thetrucker.com/trucking-news/business/georgia-inland-port-means-reduction-in-truck-traffic",
+      "why": "Industry movement worth tracking."
     }
   ],
   "theft_home_json": "[]",
