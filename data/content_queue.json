@@ -104,13 +104,6 @@
         "source": "NRCan weekly diesel survey"
       },
       {
-        "id": "deep-us-fuel-tax-map",
-        "title": "American fuel tax, state by state",
-        "keyword": "us fuel tax by state for trucking",
-        "angle": "Every state's diesel rate, the federal rate on top, and the arithmetic of what a state line costs a 300-gallon fill. Heavy data, simplified: lead with what the number means to the reader, then show the number. Never present a raw figure without saying what it implies for someone running a truck.",
-        "source": "EIA motor fuel tax"
-      },
-      {
         "id": "deep-crossing-deep-dive",
         "title": "One crossing, examined properly",
         "keyword": "ambassador bridge wait times",
@@ -430,11 +423,17 @@
       "pillar": "market",
       "title": "Where American diesel is cheapest this week",
       "completed_on": "2026-10-28"
+    },
+    {
+      "id": "deep-us-fuel-tax-map",
+      "pillar": "deep",
+      "title": "American fuel tax, state by state",
+      "completed_on": "2026-10-30"
     }
   ],
   "last_published": {
     "market": "2026-10-28",
-    "deep": "2026-10-14",
+    "deep": "2026-10-30",
     "rules": "2026-10-16",
     "ops": "2026-10-26",
     "lanes": "2026-10-22",
