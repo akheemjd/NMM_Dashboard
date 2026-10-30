@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-330284",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS HOV at MISSISSAUGA RD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.6057234,
+      "lng": -79.7458254,
+      "start": 1793361360,
+      "end": null,
+      "updated": 1793361360,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-330273",
       "province": "ON",
       "highway": "HWY 141",
@@ -33,24 +51,6 @@
       "start": 1793356500,
       "end": null,
       "updated": 1793356500,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-330260",
-      "province": "ON",
-      "highway": "HWY 404",
-      "direction": "Northbound",
-      "description": "Collision on HWY 404 Northbound  at FINCH AVE, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.79518786,
-      "lng": -79.34344722,
-      "start": 1793351280,
-      "end": null,
-      "updated": 1793354940,
       "country": "CA",
       "scheduled": false
     },
@@ -598,24 +598,6 @@
       "country": "US"
     },
     {
-      "id": "ON-330068",
-      "province": "ON",
-      "highway": "HWY 502",
-      "direction": "Northbound",
-      "description": "Disabled Vehicle on HWY 502 Northbound  at CROWROCK BEACH RD (E), Fort Frances. Lane and NORTH shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "lane and NORTH shoulder closed",
-      "lat": 48.783417462,
-      "lng": -93.052720474,
-      "start": 1793297940,
-      "end": null,
-      "updated": 1793332080,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-330214",
       "province": "ON",
       "highway": "HWY 522",
@@ -1026,6 +1008,24 @@
       "start": 1793363400,
       "end": 1793390400,
       "updated": 1793302080,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-330101",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Northbound",
+      "description": "Daily Construction on HWY 400 Northbound  between HWY 12 N JCT and QUARRY RD/SIMCOE 59, Tay. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.706245,
+      "lng": -79.66114,
+      "start": 1793332800,
+      "end": 1793386800,
+      "updated": 1793301960,
       "country": "CA",
       "scheduled": false
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-30T11:01:05.095968+00:00",
+  "updated": "2026-10-30T12:01:07.115324+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
