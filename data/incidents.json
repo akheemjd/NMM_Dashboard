@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "MO-559540",
+      "province": "MO",
+      "country": "US",
+      "highway": "US67S TO RTCC",
+      "direction": "Westbound",
+      "description": "Road closed on US67S TO RTCC westbound, MO. INTERSECTION IMPROVEMENTS",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 38.1927950513674,
+      "lng": -90.412046830177,
+      "start": "2026-10-30T05:00:00.0000000Z",
+      "end": "2026-11-13T06:00:00.0000000Z",
+      "updated": "2026-10-30T05:00:00.0000000Z",
+      "scheduled": false
+    },
+    {
       "id": "ON-330068",
       "province": "ON",
       "highway": "HWY 502",
@@ -2110,24 +2128,6 @@
       "scheduled": false
     },
     {
-      "id": "MO-527692",
-      "province": "MO",
-      "country": "US",
-      "highway": "CHEROKEE ST TO IS55S",
-      "direction": "Southbound",
-      "description": "Road closed on CHEROKEE ST TO IS55S southbound, MO. BRIDGE RECONSTRUCTION",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 38.5920446460595,
-      "lng": -90.2156810862832,
-      "start": "2025-01-17T06:00:00.0000000Z",
-      "end": "2026-12-31T06:00:00.0000000Z",
-      "updated": "2025-01-17T06:00:00.0000000Z",
-      "scheduled": false
-    },
-    {
       "id": "MO-484264",
       "province": "MO",
       "country": "US",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-30T05:01:22.195977+00:00",
+  "updated": "2026-10-30T06:01:00.952095+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
