@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-30 13:01",
-  "updated_iso": "2026-10-30T13:01:24+00:00",
-  "build_version": "1793365284",
+  "updated_at": "2026-10-30 14:01",
+  "updated_iso": "2026-10-30T14:01:37+00:00",
+  "build_version": "1793368897",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -12,7 +12,7 @@
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
     "us_max_name": "Blaine-Pacific Highway",
-    "us_max_wait": "30 min",
+    "us_max_wait": "40 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -363,7 +363,7 @@
       },
       {
         "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound COLLECTOR at DIXIE ROAD, Mississauga. 1\u2026",
+        "what": "Highway Maintenance on HWY 401 Westbound RAMP at WESTNEY ROAD, Ajax. Left lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,12 +379,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT",
+      "captured_at": "09:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EDT",
+      "captured_at": "09:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 MDT",
+      "captured_at": "07:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT",
+      "captured_at": "06:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "30 min",
+      "us_wait": "40 min",
       "us_status_class": "heavy"
     },
     {
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 CDT",
+      "captured_at": "08:22 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -538,7 +538,7 @@
     {
       "name": "GDP, year over year",
       "note": "GDP against the same month last year. The longer-term\u2026",
-      "value": "+1.4%",
+      "value": "+1.5%",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 8 crossings slow, US-bound",
-      "value": "4/8",
+      "note": "5 of 8 crossings slow, US-bound",
+      "value": "5/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
+      "category": "regulations",
+      "source": "Trucking Dive",
+      "headline": "ATA calls on members to shape next cycle of trucking, regulation",
+      "url": "https://www.truckingdive.com/news/ata-calls-on-members-to-shape-next-cycle-of-trucking-regulation/833900/",
+      "why": "Rules change compliance cost and driver hours."
+    },
+    {
       "category": "technology",
       "source": "The Trucker",
       "headline": "Blue-green lights could signal driverless operation under NHTSA proposal",
       "url": "https://www.thetrucker.com/trucking-news/equipment-tech/blue-green-lights-could-signal-driverless-operation-under-nhtsa-proposal",
       "why": "Tech spend changes back-office and dispatch efficiency."
-    },
-    {
-      "category": "drivers",
-      "source": "The Trucker",
-      "headline": "Wrong-way driver hits big rig on Interstate 44 in Missouri",
-      "url": "https://www.thetrucker.com/trucking-news/the-nation/wrong-way-driver-hits-big-rig-on-interstate-44-in-missouri",
-      "why": "Driver supply and pay shape capacity and rates."
     }
   ],
   "theft_home_json": "[]",
