@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-30 17:01",
-  "updated_iso": "2026-10-30T17:01:25+00:00",
-  "build_version": "1793379685",
+  "updated_at": "2026-10-30 18:01",
+  "updated_iso": "2026-10-30T18:01:29+00:00",
+  "build_version": "1793383289",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,11 +9,11 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Pacific Highway Crossing",
-    "max_wait": "15 min",
+    "max_name": "Peace Bridge",
+    "max_wait": "13 min",
     "us_max_name": "Emerson-Pembina",
     "us_max_wait": "10 min",
-    "ca_max_name": "Blaine-Pacific Highway"
+    "ca_max_name": "Peace Bridge"
   },
   "fuel": {
     "national_diesel": "264.2",
@@ -355,15 +355,15 @@
     "status_line": "Live now: 45 in the US, 32 in Canada.",
     "incidents": [
       {
-        "road": "US67S TO RTCC",
-        "what": "Road closed on US67S TO RTCC westbound, MO. INTERSECTION IMPROVEMENTS",
+        "road": "29N",
+        "what": "Lane closure on 29N northbound, ND. Traffic is restricted to the driving lanes\u2026",
         "severity_label": "Minor",
-        "severity_class": "heavy",
+        "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
         "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound  at REGIONAL ROAD 25, Milton. Left shoulder and\u2026",
+        "what": "Collision on HWY 401 Eastbound COLLECTOR RAMP at YONGE ST, Toronto. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:15 EDT",
+      "captured_at": "13:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "11:46 EDT",
+      "captured_at": "13:45 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "09:15 MDT",
+      "captured_at": "11:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,15 +465,15 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "15 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "09:40 PDT",
+      "captured_at": "10:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "10:15 CDT",
+      "captured_at": "12:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "equipment",
-      "source": "The Trucker",
-      "headline": "PACCAR Parts, Kenworth honor top dealerships at 2026 meeting",
-      "url": "https://www.thetrucker.com/trucking-news/business/paccar-parts-kenworth-honor-top-dealerships-at-2026-meeting",
-      "why": "Equipment cost and availability shape fleet economics."
-    },
-    {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "Trucking sees signs of recovery \u2014 but fuel costs cloud the outlook",
-      "url": "https://www.thetrucker.com/trucking-news/business/trucking-sees-signs-of-recovery-but-fuel-costs-cloud-the-outlook",
+      "headline": "NACFE report finds untapped fuel savings in truck aerodynamics",
+      "url": "https://www.thetrucker.com/trucking-news/business/nacfe-report-finds-untapped-fuel-savings-in-truck-aerodynamics",
       "why": "Industry movement worth tracking."
+    },
+    {
+      "category": "markets",
+      "source": "The Trucker",
+      "headline": "Schneider and Norfolk Southern partner to expand domestic intermodal capacity across the eastern U.S",
+      "url": "https://www.thetrucker.com/trucking-news/business/schneider-and-norfolk-southern-partner-to-expand-domestic-intermodal-capacity-across-the-eastern-u-s",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
   "theft_home_json": "[]",
