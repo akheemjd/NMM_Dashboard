@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-30 16:01",
-  "updated_iso": "2026-10-30T16:01:28+00:00",
-  "build_version": "1793376088",
+  "updated_at": "2026-10-30 17:01",
+  "updated_iso": "2026-10-30T17:01:25+00:00",
+  "build_version": "1793379685",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -9,11 +9,11 @@
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
-    "us_max_name": "Blue Water Bridge",
+    "max_name": "Pacific Highway Crossing",
+    "max_wait": "15 min",
+    "us_max_name": "Emerson-Pembina",
     "us_max_wait": "10 min",
-    "ca_max_name": "Peace Bridge"
+    "ca_max_name": "Blaine-Pacific Highway"
   },
   "fuel": {
     "national_diesel": "264.2",
@@ -350,7 +350,7 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 75,
+    "active_count": 76,
     "gauge_class": "warn",
     "status_line": "Live now: 45 in the US, 32 in Canada.",
     "incidents": [
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Toronto bound  at ROYAL WINDSOR DRIVE, Oakville. 1\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound  at REGIONAL ROAD 25, Milton. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -383,8 +383,8 @@
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,7 +398,7 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "10 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "1 min",
+      "us_wait": "2 min",
       "us_status_class": "mod"
     },
     {
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "15 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:40 PDT",
+      "captured_at": "09:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -488,7 +488,7 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "6 of 9 crossings slow, US-bound",
-      "value": "6/9",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "markets",
-      "source": "Trucking Dive",
-      "headline": "FedEx Freight Q3 shipments dip slightly following spinoff",
-      "url": "https://www.truckingdive.com/news/fedex-freight-q3-shipments-dip-slightly-following-spinoff/873256/",
-      "why": "Rate direction is the difference between profit and loss on a lane."
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "PACCAR Parts, Kenworth honor top dealerships at 2026 meeting",
+      "url": "https://www.thetrucker.com/trucking-news/business/paccar-parts-kenworth-honor-top-dealerships-at-2026-meeting",
+      "why": "Equipment cost and availability shape fleet economics."
     },
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "From the office to the finish line: How one trucking executive took control of his health",
-      "url": "https://www.thetrucker.com/trucking-news/perspective/the-trucker-trainer-by-bob-perry/from-the-office-to-the-finish-line-how-one-trucking-executive-took-control-of-his-health",
+      "headline": "Trucking sees signs of recovery \u2014 but fuel costs cloud the outlook",
+      "url": "https://www.thetrucker.com/trucking-news/business/trucking-sees-signs-of-recovery-but-fuel-costs-cloud-the-outlook",
       "why": "Industry movement worth tracking."
     }
   ],
