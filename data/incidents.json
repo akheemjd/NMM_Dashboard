@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-330641",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Vehicle Fire on HWY 401 Westbound  at Cedar Creek Road / Waterloo Rd 97, Kitchener. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.331933333,
+      "lng": -80.444625,
+      "start": 1793449800,
+      "end": null,
+      "updated": 1793449800,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-330607",
       "province": "ON",
       "highway": "HWY 403 HAMILTON",
@@ -1048,24 +1066,6 @@
       "scheduled": true
     },
     {
-      "id": "ON-330379",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Construction on HWY 427 Northbound  between CAMPUS ROAD/FASKEN DRIVE and DISCO ROAD/GOREWAY, Toronto. 3 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "3 Alternating Lane(s)",
-      "lat": 43.689365,
-      "lng": -79.60321,
-      "start": 1793840400,
-      "end": 1793962800,
-      "updated": 1793378940,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
       "id": "MO-559540",
       "province": "MO",
       "country": "US",
@@ -1189,24 +1189,6 @@
       "start": "2026-06-15T00:00:00-05:00",
       "end": "2026-11-06T00:00:00-06:00",
       "updated": "2026-10-29T11:26:58-05:00",
-      "scheduled": false
-    },
-    {
-      "id": "WI-f293ef4e-18ba-7850-a3dd-2bd5b45d92af",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-41 NB",
-      "direction": "Northbound",
-      "description": "Road closed on I-41 NB northbound, WI. Ramp Full Closure on I-41 NB at OFF RAMP TO WIS 100 / W SILVER SPRING DR / CTH E. Daily from 10/30/2026 to 10/31/2026, 11:00 PM - 08:00 AM, F, Sat",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.116962802671964,
-      "lng": -88.0572463565087,
-      "start": "2026-10-31T04:00:00+00:00",
-      "end": "2026-10-31T13:00:00+00:00",
-      "updated": "2026-10-29T11:44:17.2+00:00",
       "scheduled": false
     },
     {
@@ -1588,6 +1570,24 @@
       "scheduled": false
     },
     {
+      "id": "drivebc.ca/RIDE-100556",
+      "province": "BC",
+      "highway": "Highway 1 near Trans-Canada Highway",
+      "direction": "",
+      "description": "Road construction from Highway 1, In Saanich and At Mckenzie Ave / Admirals Rd U/P to In View Royal and At West Burnside Rd U/P (Colwood Bridge). Starting Tue Jul 14. From 8:00 PM to 5:00 AM PDT the next day, weekdays. Watch for traffic control. Speed Limit restriction: 50 kmh. Last update: October 16th, 2026 at 2:29pm PDT. Bus on Shoulder project. No impact during day. Periodic night work with 5min stoppages.",
+      "event_type": "construction",
+      "severity": "MAJOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 48.4598,
+      "lng": -123.40498,
+      "start": "2026-07-15T13:37:20-07:00",
+      "end": "",
+      "updated": "2026-10-16T14:29:44-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "drivebc.ca/RIDE-103782",
       "province": "BC",
       "highway": "Highway 16 near McBride Street",
@@ -1620,6 +1620,24 @@
       "start": "2026-10-02T10:43:40-07:00",
       "end": "",
       "updated": "2026-10-16T13:46:02-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "drivebc.ca/RIDE-103725",
+      "province": "BC",
+      "highway": "Highway 99",
+      "direction": "",
+      "description": "Utility work from Highway 99, In-Shuck-CH Forest Service Road to In Pemberton and At Harrow Road. Starting Tue Oct 13 until Mon Nov 30. From 8:00 AM to 4:00 PM PDT, every day. Single lane alternating traffic. Last update: October 15th, 2026 at 12:55pm PDT. Tree trimming for BC Hydro.",
+      "event_type": "construction",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 50.30358,
+      "lng": -122.59369,
+      "start": "2026-10-15T12:32:52-07:00",
+      "end": "",
+      "updated": "2026-10-15T12:55:46-07:00",
       "country": "CA",
       "scheduled": false
     },
@@ -1786,24 +1804,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-101705",
-      "province": "BC",
-      "highway": "Highway 97",
-      "direction": "",
-      "description": "Construction work from Highway 97, 34km North of Quesnel to In Quesnel. Starting Mon Jul 20 until Sun Nov 15. Single lane alternating traffic. Watch for traffic control. Last update: October 5th, 2026 at 9:16am PDT. Widening, drainage improvements and construction of the northbound left turn lane at the Highway 97-Olson Road intersection in addition to culvert replacement .",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 53.22268,
-      "lng": -122.43087,
-      "start": "2026-08-26T09:42:32-07:00",
-      "end": "",
-      "updated": "2026-10-05T09:16:26-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "WI-c35430fb-2d10-ff55-9d62-51c79855deb5",
       "province": "WI",
       "country": "US",
@@ -1837,24 +1837,6 @@
       "start": "2026-10-01T05:00:00+00:00",
       "end": "2026-11-01T04:59:59+00:00",
       "updated": "2026-10-05T13:28:46.1+00:00",
-      "scheduled": false
-    },
-    {
-      "id": "drivebc.ca/RIDE-102767",
-      "province": "BC",
-      "highway": "Highway 5 near Avola Bridge",
-      "direction": "",
-      "description": "Bridge maintenance from Highway 5, At Avola Overhead Bridge to At Avola Bridge. Starting Thu Sep 24. From 6:00 AM to 9:00 PM PDT, weekdays. Single lane alternating traffic. Watch for traffic control. Last update: September 24th, 2026 at 11:11am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.78579,
-      "lng": -119.32135,
-      "start": "2026-09-24T11:11:18-07:00",
-      "end": "",
-      "updated": "2026-09-24T11:11:18-07:00",
-      "country": "CA",
       "scheduled": false
     },
     {
@@ -2074,6 +2056,24 @@
       "scheduled": false
     },
     {
+      "id": "WI-ecf8ebe4-8c35-a553-b598-d889b27865e5",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-94 EB",
+      "direction": "Eastbound",
+      "description": "Road closed on I-94 EB eastbound, WI. Ramp Full Closure on I-94 EB at OFF RAMP TO 26TH ST",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 43.0338862941732,
+      "lng": -87.9484132128041,
+      "start": "2026-02-03T03:00:00+00:00",
+      "end": "2027-01-05T05:59:59+00:00",
+      "updated": "2026-03-05T20:58:24.537+00:00",
+      "scheduled": false
+    },
+    {
       "id": "MO-533982",
       "province": "MO",
       "country": "US",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-31T12:00:43.405571+00:00",
+  "updated": "2026-10-31T13:00:44.026388+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
