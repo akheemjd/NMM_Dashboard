@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-10-31 14:01",
-  "updated_iso": "2026-10-31T14:01:00+00:00",
-  "build_version": "1793455260",
+  "updated_at": "2026-10-31 15:00",
+  "updated_iso": "2026-10-31T15:00:57+00:00",
+  "build_version": "1793458857",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
-    "moderate_count": 3,
+    "moderate_count": 4,
     "closed_count": 0,
     "min_name": "Thousand Islands Bridge",
     "min_wait": "No delay",
-    "max_name": "Peace Bridge",
-    "max_wait": "13 min",
+    "max_name": "Ambassador Bridge",
+    "max_wait": "15 min",
     "us_max_name": "Thousand Islands Bridge",
     "us_max_wait": "15 min",
-    "ca_max_name": "Peace Bridge"
+    "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
     "national_diesel": "264.2",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 410",
-        "what": "Collision on HWY 410 Southbound  at WILLIAMS PKWY, Brampton. Left shoulder and\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR at HWY 403, Mississauga. 2 right lanes\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -375,11 +375,11 @@
       "name": "Ambassador Bridge",
       "slug": "ambassador-bridge",
       "sub": "Detroit, MI and Windsor, ON \u00b7 I-75 / ON-3 \u00b7 FAST",
-      "wait": "No delay",
-      "status_label": "Flowing",
-      "status_class": "ok",
+      "wait": "15 min",
+      "status_label": "Moderate",
+      "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "08:15 EDT",
+      "captured_at": "10:51 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "5 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -454,12 +454,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 MDT",
+      "captured_at": "08:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Pacific Highway Crossing",
@@ -469,11 +469,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT",
+      "captured_at": "07:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "15 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 9 crossings slow, US-bound",
-      "value": "5/9",
+      "note": "6 of 9 crossings slow, US-bound",
+      "value": "6/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -592,8 +592,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">Canada</span> ",
-      "note": "3 of 9 crossings slow, Canada-bound",
-      "value": "3/9",
+      "note": "4 of 9 crossings slow, Canada-bound",
+      "value": "4/9",
       "value_class": "flat",
       "source": "CBSA commercial lane feed",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "Specially wrapped Kenworth T680 to haul U.S. Capitol Christmas Tree for 13th year",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/specially-wrapped-kenworth-t680-to-haul-u-s-capitol-christmas-tree-for-13th-year",
+      "why": "Industry movement worth tracking."
+    },
+    {
       "category": "markets",
       "source": "The Trucker",
       "headline": "Frightful fuel costs: Diesel prices expected to haunt trucking industry heading into 2027",
       "url": "https://www.thetrucker.com/trucking-news/business/frightful-fuel-costs-diesel-prices-expected-to-haunt-trucking-industry-heading-into-2027",
-      "why": "Rate direction is the difference between profit and loss on a lane."
-    },
-    {
-      "category": "markets",
-      "source": "Trucking Dive",
-      "headline": "Data centers, consumers are keeping trucking demand afloat",
-      "url": "https://www.truckingdive.com/news/data-centers-consumers-are-keeping-trucking-demand-afloat/833904/",
       "why": "Rate direction is the difference between profit and loss on a lane."
     }
   ],
