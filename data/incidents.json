@@ -1,38 +1,56 @@
 {
   "incidents": [
     {
-      "id": "ON-330788",
+      "id": "ON-330803",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR RAMP at YONGE ST, Toronto. Right lane and right shoulder closed.",
+      "description": "Disabled Vehicle on HWY 401 Eastbound  at DIXON ROAD, Toronto. Left shoulder and 1 left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.75132219,
-      "lng": -79.41086637,
-      "start": 1793486520,
+      "lanes": "left shoulder and 1 left lane closed",
+      "lat": 43.69381372,
+      "lng": -79.56746367,
+      "start": 1793491020,
       "end": null,
-      "updated": 1793486520,
+      "updated": 1793491020,
       "country": "CA",
       "scheduled": false
     },
     {
-      "id": "ON-330787",
+      "id": "ON-330793",
       "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound COLLECTOR at ISLINGTON AVE, Toronto. Left shoulder and left lane closed.",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Vehicle Fire on HWY 403 HAMILTON Westbound  at HWY 407, Burlington. Right lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "left shoulder and left lane closed",
-      "lat": 43.70916343,
-      "lng": -79.55209794,
-      "start": 1793486340,
+      "lanes": "right lane closed",
+      "lat": 43.333919,
+      "lng": -79.837217,
+      "start": 1793488380,
       "end": null,
-      "updated": 1793486340,
+      "updated": 1793490840,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-330801",
+      "province": "ON",
+      "highway": "HWY 400",
+      "direction": "Southbound",
+      "description": "Collision on HWY 400 Southbound ON-RAMP at MAJOR MACKENZIE DRIVE, Vaughan. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.847259,
+      "lng": -79.549089,
+      "start": 1793489820,
+      "end": null,
+      "updated": 1793490240,
       "country": "CA",
       "scheduled": false
     },
@@ -124,7 +142,7 @@
       "end": 1793538000,
       "updated": 1793456640,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330661",
@@ -142,7 +160,7 @@
       "end": 1793538000,
       "updated": 1793456220,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330655",
@@ -328,7 +346,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-01",
       "end_date": "2026-11-02",
       "id": "CA-C580BA-0001-2026-11-01-21:01:00",
@@ -433,7 +451,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-01",
       "end_date": "2026-11-02",
       "id": "CA-C580BA-0006-2026-11-01-21:01:00",
@@ -538,7 +556,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-01",
       "end_date": "2026-11-02",
       "id": "CA-C580BA-0016-2026-11-01-21:01:00",
@@ -643,7 +661,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-01",
       "end_date": "2026-11-02",
       "id": "CA-C580BA-0021-2026-11-01-21:01:00",
@@ -1026,24 +1044,6 @@
       "start": 1793595600,
       "end": 1794200340,
       "updated": 1793381400,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
-      "id": "ON-330392",
-      "province": "ON",
-      "highway": "HWY 416",
-      "direction": "Southbound",
-      "description": "Daily Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.19425,
-      "lng": -75.72434,
-      "start": 1793595600,
-      "end": 1794200340,
-      "updated": 1793381280,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-10-31T23:00:58.133303+00:00",
+  "updated": "2026-11-01T00:00:59.741530+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
