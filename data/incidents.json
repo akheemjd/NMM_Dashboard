@@ -19,24 +19,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-331020",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at HWY 400, Toronto. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.7165622,
-      "lng": -79.518742561,
-      "start": 1793573640,
-      "end": null,
-      "updated": 1793573640,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-331008",
       "province": "ON",
       "highway": "HWY 17",
@@ -1082,6 +1064,24 @@
       "end": "2026-11-06T00:00:00-06:00",
       "updated": "2026-10-30T12:00:18-05:00",
       "scheduled": false
+    },
+    {
+      "id": "ON-330433",
+      "province": "ON",
+      "highway": "HWY 409",
+      "direction": "Eastbound",
+      "description": "Nightly Construction on HWY 409 Eastbound  between HWY 427 and CARLINGVIEW DRIVE, Toronto. 2 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 Alternating Lane(s)",
+      "lat": 43.696983,
+      "lng": -79.60716,
+      "start": 1793926800,
+      "end": 1794045600,
+      "updated": 1793379180,
+      "country": "CA",
+      "scheduled": true
     },
     {
       "id": "MO-559540",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-01T23:04:42.235565+00:00",
+  "updated": "2026-11-01T23:08:29.428414+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
