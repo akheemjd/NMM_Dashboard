@@ -253,12 +253,19 @@ def build_table_rows(trends):
             us_cell = "not reported"
         else:
             us_cell = "&mdash;"
-        # Link the crossing to its own page. Every crossing in this table has one, and a table
-        # of nine crossings that linked to none of them was a dead end for the reader and for a
-        # crawler alike.
+        # Link the crossing to its own page, but ONLY when that page exists.
+        #
+        # The original comment claimed "every crossing in this table has one" and linked
+        # unconditionally. That was true when only Canadian-side crossings appeared here; the CBP
+        # feed also carries US-side and Mexico-border ports (us-sumas, us-laredo-...), which have no
+        # detail page because they were never built. The result was 37 links on this page pointing
+        # at 404s - a dead end for the reader and a link-rot signal for a crawler.
         _slug = "border-wait-times/" + TREND_PAGE_SLUG.get(cid, slugify_name(name))
+        _built = os.path.isdir(os.path.join(DOCS, "border-wait-times",
+                                            _slug.split("border-wait-times/", 1)[1]))
+        _cell = (f'<a href="/{_slug}/">{name}</a>' if _built else name)
         rows_html += f'''      <tr class="{cls}">
-        <td><strong><a href="/{_slug}/">{name}</a></strong></td>
+        <td><strong>{_cell}</strong></td>
         <td>{avg} min</td>
         <td>{p75} min</td>
         <td>{p90} min</td>

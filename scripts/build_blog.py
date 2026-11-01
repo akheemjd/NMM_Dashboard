@@ -238,7 +238,7 @@ def render_post(p):
 {tag_line}  </section>
 
   <section class="sec">
-    <p class="note"><a href="/blog/">All writing</a> · <a href="/methodology/">How the numbers are made</a></p>
+    <p class="note"><a href="/blog/">All writing</a> · <a href="/methodology/nmdi/">How the numbers are made</a></p>
   </section>
 """
     # Not seo_title: in these frontmatters that field is the raw target keyword ("cbp entry filing
