@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-330998",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Disabled Vehicle on HWY 401 Westbound EXPRESS at WESTON ROAD, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.71336345,
+      "lng": -79.53623766,
+      "start": 1793567880,
+      "end": null,
+      "updated": 1793567880,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-330991",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,24 +33,6 @@
       "start": 1793566500,
       "end": null,
       "updated": 1793566500,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-330976",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Fort Erie Bound",
-      "description": "Collision on QEW Fort Erie bound  at WINSTON CHURCHILL BLVD, Oakville. Left shoulder and 2 left lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 2 left lanes closed",
-      "lat": 43.50973936,
-      "lng": -79.66403068,
-      "start": 1793564940,
-      "end": null,
-      "updated": 1793565480,
       "country": "CA",
       "scheduled": false
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-01T21:00:30.577786+00:00",
+  "updated": "2026-11-01T21:35:09.621653+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
