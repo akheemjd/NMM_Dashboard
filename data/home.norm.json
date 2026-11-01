@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-01 05:01",
-  "updated_iso": "2026-11-01T05:01:22+00:00",
-  "build_version": "1793509282",
+  "updated_at": "2026-11-01 07:01",
+  "updated_iso": "2026-11-01T07:01:23+00:00",
+  "build_version": "1793516483",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Ambassador Bridge",
-    "us_max_wait": "4 min",
+    "us_max_name": "Thousand Islands Bridge",
+    "us_max_wait": "11 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 5",
-        "what": "Collision on HWY 5 Eastbound  at HWY 52, Hamilton. Left lane closed.",
+        "road": "HWY 410",
+        "what": "Collision on HWY 410 Southbound RAMP at 401, Mississauga. Left shoulder and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,12 +379,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT",
+      "captured_at": "01:15 EDT",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "4 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Blue Water Bridge",
@@ -398,8 +398,8 @@
       "route": "Sarnia, ON \u2014 Port Huron, MI",
       "label": "Blue Water Bridge",
       "route_both": "Port Huron, MI and Sarnia, ON",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Peace Bridge",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 EDT",
+      "captured_at": "01:15 EDT",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 MDT",
+      "captured_at": "00:19 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,11 +465,11 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "21:40 PDT",
+      "captured_at": "23:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,12 +484,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "23:15 CDT",
+      "captured_at": "01:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "not reported",
+      "us_status_class": "na"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -503,20 +503,11 @@
       "route": "Lansdowne, ON \u2014 Alexandria Bay, NY",
       "label": "Thousand Islands Bridge",
       "route_both": "Alexandria Bay, NY and Lansdowne, ON",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "11 min",
+      "us_status_class": "mod"
     }
   ],
   "market": [
-    {
-      "name": "Quarterly GDP",
-      "note": "Q3 2026, annualized, $24.6T (chained 2017)",
-      "value": "+3.4%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">US</span> ",
-      "source": "US Bureau of Economic Analysis, via FRED",
-      "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
-    },
     {
       "name": "Monthly GDP",
       "note": "$2372B (chained 2017)",
@@ -525,15 +516,6 @@
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
       "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
-    },
-    {
-      "name": "GDP, year over year",
-      "note": "GDP against the same quarter last year. The longer-term\u2026",
-      "value": "+2.1%",
-      "value_class": "flat",
-      "country_prefix": "<span class=\"src\">US</span> ",
-      "source": "US Bureau of Economic Analysis, via FRED",
-      "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
     },
     {
       "name": "GDP, year over year",
@@ -583,8 +565,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "1 of 7 crossings slow, US-bound",
-      "value": "1/7",
+      "note": "1 of 8 crossings slow, US-bound",
+      "value": "1/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
