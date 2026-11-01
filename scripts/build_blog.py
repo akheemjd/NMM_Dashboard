@@ -31,7 +31,8 @@ import markdown
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-import gen_templates as G  # noqa: E402  (imported for head()/foot(); see module docstring)
+import gen_templates as G
+import signup  # noqa: E402  (imported for head()/foot(); see module docstring)
 
 POSTS_DIR = os.path.join(HERE, "..", "content", "blog-posts")
 OUT_DIR = os.path.join(HERE, "..", "docs", "blog")
@@ -40,21 +41,63 @@ BASE = "https://dashboard.northernmilemedia.com"
 FRONTMATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.S)
 
 
+
+def seo_title(headline, suffix=" | Northern Mile", limit=60):
+    """Keep the <title> inside 60 characters so Google does not truncate the differentiator.
+
+    41 of the site's titles ran past 60. The cause was uniform: a long headline plus the 16-character
+    brand suffix. Dropping the suffix on the long ones keeps the words that earn the click - the
+    headline - and loses only the brand, which the domain in the result already shows.
+    """
+    full = f"{headline}{suffix}"
+    if len(full) <= limit:
+        return full
+    # Do NOT truncate with an ellipsis. A headline cut mid-phrase by me reads worse than one Google
+    # shortens on its own, and Google rewrites titles anyway. Dropping the suffix is the whole fix.
+    return headline
+
+
 def parse_post(path):
-    """Frontmatter + body. The frontmatter here is flat key: value with a few [lists]."""
+    """Frontmatter + body. Flat key: value, [lists], and YAML block scalars (> and |).
+
+    The block-scalar case is not optional: four posts write `description: >` followed by indented
+    lines, which is standard YAML for a folded string. The original naive parser split on the first
+    colon and stored ">" as the description, so those pages shipped <meta description=">"> - and
+    Google would have used ">" as the search snippet.
+    """
     raw = open(path, encoding="utf-8").read()
     m = FRONTMATTER.match(raw)
     if not m:
         return None
+
     meta = {}
-    for line in m.group(1).splitlines():
-        if ":" not in line:
+    lines = m.group(1).splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        i += 1
+        if ":" not in line or line.lstrip().startswith("#"):
             continue
         k, v = line.split(":", 1)
-        v = v.strip().strip('"').strip("'")
-        if v.startswith("[") and v.endswith("]"):
-            v = ", ".join(x.strip() for x in v[1:-1].split(",") if x.strip())
-        meta[k.strip()] = v
+        key = k.strip()
+        val = v.strip()
+
+        # YAML block scalar: `key: >` or `key: |`, value is the indented block beneath it.
+        if val in (">", "|", ">-", "|-", ">+", "|+"):
+            block = []
+            while i < len(lines):
+                nxt = lines[i]
+                if nxt.strip() and not nxt.startswith((" ", "\t")):
+                    break          # a new top-level key starts here
+                block.append(nxt.strip())
+                i += 1
+            val = (" " if val.startswith(">") else "\n").join(x for x in block if x).strip()
+        else:
+            val = val.strip('"').strip("'")
+            if val.startswith("[") and val.endswith("]"):
+                val = ", ".join(x.strip() for x in val[1:-1].split(",") if x.strip())
+        meta[key] = val
+
     body = raw[m.end():].strip()
     if not meta.get("slug") or not body:
         return None
@@ -237,6 +280,8 @@ def render_post(p):
     </div>
 {tag_line}  </section>
 
+{signup.band()}
+
   <section class="sec">
     <p class="note"><a href="/blog/">All writing</a> · <a href="/methodology/nmdi/">How the numbers are made</a></p>
   </section>
@@ -244,7 +289,7 @@ def render_post(p):
     # Not seo_title: in these frontmatters that field is the raw target keyword ("cbp entry filing
     # for trucking"), which is what a tab and a search result would then show. The headline is the
     # title a reader should see.
-    return page(G.head(f'{p["title"]} | Northern Mile', p.get("description", ""), canon, "/og.jpg", ld, og_type="article"),
+    return page(G.head(seo_title(p["title"]), p.get("description", ""), canon, "/og.jpg", ld, og_type="article"),
                 body, G.foot())
 
 
