@@ -1,20 +1,38 @@
 {
   "incidents": [
     {
+      "id": "ON-330902",
+      "province": "ON",
+      "highway": "HWY 10",
+      "direction": "Northbound",
+      "description": "Collision on HWY 10 Northbound  at HWY. 24/CHARLESTON SIDEROAD, Caledon. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.860024,
+      "lng": -79.996091,
+      "start": 1793544300,
+      "end": null,
+      "updated": 1793544300,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-330880",
       "province": "ON",
       "highway": "HWY 17",
       "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 17 Eastbound  at BISSETT CREEK RD, Bissett Creek. Lane closed.",
+      "description": "Disabled Vehicle on HWY 17 Eastbound  at BISSETT CREEK RD, Bissett Creek. Lane and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
-      "lanes": "lane closed",
+      "lanes": "lane and EAST shoulder closed",
       "lat": 46.21765,
       "lng": -78.0463,
       "start": 1793538960,
       "end": null,
-      "updated": 1793538960,
+      "updated": 1793541900,
       "country": "CA",
       "scheduled": false
     },
@@ -1064,24 +1082,6 @@
       "end": "2026-11-06T00:00:00-06:00",
       "updated": "2026-10-30T12:00:18-05:00",
       "scheduled": false
-    },
-    {
-      "id": "ON-330433",
-      "province": "ON",
-      "highway": "HWY 409",
-      "direction": "Eastbound",
-      "description": "Nightly Construction on HWY 409 Eastbound  between HWY 427 and CARLINGVIEW DRIVE, Toronto. 2 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "2 Alternating Lane(s)",
-      "lat": 43.696983,
-      "lng": -79.60716,
-      "start": 1793926800,
-      "end": 1794045600,
-      "updated": 1793379180,
-      "country": "CA",
-      "scheduled": true
     },
     {
       "id": "MO-559540",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-01T14:00:19.877718+00:00",
+  "updated": "2026-11-01T15:00:21.879247+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
