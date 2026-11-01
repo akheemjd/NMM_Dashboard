@@ -32,7 +32,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
 import gen_templates as G
-import signup  # noqa: E402  (imported for head()/foot(); see module docstring)
+import signup
+import blog_index  # noqa: E402  (imported for head()/foot(); see module docstring)
 
 POSTS_DIR = os.path.join(HERE, "..", "content", "blog-posts")
 OUT_DIR = os.path.join(HERE, "..", "docs", "blog")
@@ -185,57 +186,19 @@ def render_index(posts):
         cut = body[:150].rsplit(" ", 1)[0]
         return cut.rstrip(",;:") + "…"
 
-    def card(p, heading, extra="", span=False):
-        # span lets the final card take the full row when the grid count is odd, instead of
-        # leaving a half-width card stranded beside empty space.
-        style = ' style="grid-column:1/-1"' if span else ""
-        return (
-            f'        <a class="pickcard" href="/blog/{html.escape(p["slug"])}/"{style}'
-            f'><span class="pflag">{html.escape(p["category"])} · {human_date(p["date"])}</span>'
-            f'<{heading}>{html.escape(p["title"])}</{heading}>'
-            + (f'<p class="pmeta">{html.escape(clean(p))}</p>' if clean(p) else "")
-            + extra + '</a>'
-        )
+    # The card grid this replaced used to define title/desc/ld inline. Those are still needed by
+    # head(), so they are set here now that the markup lives in blog_index.py.
+    title = "Writing | Northern Mile"
+    desc = (f"{len(posts)} pieces on cross-border trucking, built from published figures. "
+            "Diesel, border wait times, cost per mile and the rules, with every number sourced.")
+    ld = ('{"@context":"https://schema.org","@type":"Blog",'
+          '"@id":"' + BASE + '/blog/#blog",'
+          '"name":"Northern Mile writing",'
+          '"description":' + _json(desc) + ','
+          '"url":"' + BASE + '/blog/",'
+          '"publisher":{"@type":"Organization","name":"Northern Mile Media","url":"' + BASE + '/"}}')
 
-    lead, rest = posts[0], posts[1:]
-    featured = card(lead, "h2", '<span class="pgo">Read it &rarr;</span>')
-
-    # A 2-column grid with an odd number of cards leaves one alone on the last row. Let that card
-    # span both columns instead - it reads as a deliberate close rather than a gap.
-    odd = len(rest) % 2 == 1
-    cards = [card(p, "h3", span=(odd and i == len(rest) - 1)) for i, p in enumerate(rest)]
-    grid = "\n".join(cards)
-
-    count = len(posts)
-    body = f"""
-  <section class="sec">
-    <div class="lead"><h1>Writing</h1><p>{count} pieces on cross-border trucking, from the data.</p></div>
-    <div class="reading">
-      <p>Every piece starts from a published figure and names where it came from. No press releases,
-      no sponsored copy. Where a number appears in a sentence, its source is at the foot of the page.</p>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="lead"><h2>Latest</h2></div>
-    <div class="pick" style="grid-template-columns:1fr">
-{featured}
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="lead"><h2>More writing</h2></div>
-    <div class="pick">
-{grid}
-    </div>
-  </section>
-"""
-    ld = ('{"@type":"Blog","@id":"' + BASE + '/blog/#blog","name":"Northern Mile Media writing",'
-          '"url":"' + BASE + '/blog/","publisher":{"@type":"Organization","name":"Northern Mile Media",'
-          '"url":"' + BASE + '/"},"inLanguage":"en-CA"}')
-    title = "Writing — cross-border trucking, from the data | Northern Mile"
-    desc = (f"{count} pieces on Canadian and US diesel prices, border wait times and cross-border "
-            "trucking costs, each one built from a published source.")
+    body = blog_index.build_index_markup(posts, clean, human_date, html.escape)
     return page(G.head(title, desc, "/blog/", "/og.jpg", ld),
                 body, G.foot())
 
