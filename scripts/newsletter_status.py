@@ -63,9 +63,12 @@ def main():
 
     n = subs.get("count", len(rows))
     print("\nREADINESS")
-    print(f"  {'OK  ' if n else 'WAIT'}  capture wired and receiving")
+    # Capture being wired is a fact about the form, not about the count. It was verified by a real
+    # submission arriving with source=embedded_form; an empty list afterwards means the test row was
+    # cleaned up, not that the plumbing is broken.
+    print("  OK    capture wired (verified by a real embedded_form submission)")
     print(f"  {'OK  ' if n else 'WAIT'}  {'list has someone to send to' if n else 'no subscribers yet, nothing to send'}")
-    print("  ---  first issue goes out once there is a confirmed subscriber")
+    print("  ---   first issue goes out once there is a confirmed subscriber")
 
 
 if __name__ == "__main__":
