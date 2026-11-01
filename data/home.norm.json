@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-01 09:01",
-  "updated_iso": "2026-11-01T09:01:24+00:00",
-  "build_version": "1793523684",
+  "updated_at": "2026-11-01 10:01",
+  "updated_iso": "2026-11-01T10:01:24+00:00",
+  "build_version": "1793527284",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 70,
+    "active_count": 69,
     "gauge_class": "warn",
-    "status_line": "Live now: 49 in the US, 30 in Canada.",
+    "status_line": "Live now: 49 in the US, 29 in Canada.",
     "incidents": [
       {
-        "road": "I-35W",
-        "what": "Road closed on I-35W southbound, MN. Closed, Police Activity, Closed To All\u2026",
-        "severity_label": "Minor",
-        "severity_class": "heavy",
+        "road": "I-5 in Stanislaus County",
+        "what": "Route 5 near Westley. Rest Area Work. All of 1 lanes closed.",
+        "severity_label": "Closed",
+        "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Collision on QEW Toronto bound  at CENTENNIAL PKWY, Hamilton. Right lane and\u2026",
+        "road": "HWY 401",
+        "what": "Collision on HWY 401 Westbound COLLECTOR RAMP at HWY 410, Mississauga. Right\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,12 +379,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 EST",
+      "captured_at": "04:15 EST",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "2 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Blue Water Bridge",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "7 min",
+      "us_wait": "9 min",
       "us_status_class": "mod"
     },
     {
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "02:15 EST",
+      "captured_at": "04:15 EST",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -469,7 +469,7 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "01:40 PDT",
+      "captured_at": "02:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 8 crossings slow, US-bound",
-      "value": "5/8",
+      "note": "4 of 8 crossings slow, US-bound",
+      "value": "4/8",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
