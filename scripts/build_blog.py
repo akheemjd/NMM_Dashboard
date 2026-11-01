@@ -124,7 +124,7 @@ def render_index(posts):
         body = ('\n  <section class="sec"><div class="lead"><h1>Writing</h1></div>'
                 '\n    <p class="note">Nothing published yet.</p></section>\n')
         return page(G.head("Writing | Northern Mile", "Writing on cross-border trucking.",
-                           BASE + "/blog/", "/og.jpg", ""), body, G.foot())
+                           "/blog/", "/og.jpg", ""), body, G.foot())
 
     def clean(p):
         """A card needs a line of copy. Four posts have no description in their frontmatter, and an
@@ -193,13 +193,17 @@ def render_index(posts):
     title = "Writing — cross-border trucking, from the data | Northern Mile"
     desc = (f"{count} pieces on Canadian and US diesel prices, border wait times and cross-border "
             "trucking costs, each one built from a published source.")
-    return page(G.head(title, desc, BASE + "/blog/", "/og.jpg", ld),
+    return page(G.head(title, desc, "/blog/", "/og.jpg", ld),
                 body, G.foot())
 
 
 def render_post(p):
     slug = html.escape(p["slug"])
-    canon = f"{BASE}/blog/{slug}/"
+    # head() emits <link rel="canonical" href="{BASE}{canon}">, so it wants a PATH. Passing a full
+    # URL produced https://dashboard...comhttps://dashboard...com/blog/<slug>/ - a canonical that
+    # resolves to nothing, which means Google ignores it and the page competes with its own twin.
+    canon = f"/blog/{slug}/"
+    canon_url = f"{BASE}{canon}"
 
     # Ghost-era figure macros, e.g. {{figure:provincial-spread}}. The images they pointed at were
     # uploaded to Ghost and went with the cancelled account, so there is nothing to resolve them to
@@ -223,7 +227,7 @@ def render_post(p):
           '"datePublished":"' + p["date"] + '",'
           '"author":{"@type":"Organization","name":"Northern Mile Media"},'
           '"publisher":{"@type":"Organization","name":"Northern Mile Media","url":"' + BASE + '/"},'
-          '"mainEntityOfPage":"' + canon + '","inLanguage":"en-CA"}')
+          '"mainEntityOfPage":"' + canon_url + '","inLanguage":"en-CA"}')
 
     body = f"""
   <section class="sec">
