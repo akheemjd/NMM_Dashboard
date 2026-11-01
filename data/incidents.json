@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-331003",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Toronto Bound",
+      "description": "Collision on QEW Toronto bound  at MOUNTAIN ROAD, Niagara Falls. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.13515641,
+      "lng": -79.13149957,
+      "start": 1793569740,
+      "end": null,
+      "updated": 1793569740,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-330998",
       "province": "ON",
       "highway": "HWY 401",
@@ -15,24 +33,6 @@
       "start": 1793567880,
       "end": null,
       "updated": 1793567880,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-330991",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound TRANSFER at 400 Collector to Express, Toronto. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.71829004,
-      "lng": -79.50052254,
-      "start": 1793566500,
-      "end": null,
-      "updated": 1793566500,
       "country": "CA",
       "scheduled": false
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-01T21:35:09.621653+00:00",
+  "updated": "2026-11-01T21:53:28.213553+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",

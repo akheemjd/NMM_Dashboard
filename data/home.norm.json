@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-01 21:35",
-  "updated_iso": "2026-11-01T21:35:26+00:00",
-  "build_version": "1793568926",
+  "updated_at": "2026-11-01 21:53",
+  "updated_iso": "2026-11-01T21:53:41+00:00",
+  "build_version": "1793570021",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,7 +11,7 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Blue Water Bridge",
+    "us_max_name": "Emerson-Pembina",
     "us_max_wait": "30 min",
     "ca_max_name": "Peace Bridge"
   },
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Disabled Vehicle on HWY 401 Westbound EXPRESS at WESTON ROAD, Toronto. Right\u2026",
+        "road": "QEW",
+        "what": "Collision on QEW Toronto bound  at MOUNTAIN ROAD, Niagara Falls. Right lane and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "8 min",
+      "us_wait": "5 min",
       "us_status_class": "mod"
     },
     {
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "14:20 PDT",
+      "captured_at": "14:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Emerson-Pembina",
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "30 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 9 crossings slow, US-bound",
-      "value": "7/9",
+      "note": "8 of 9 crossings slow, US-bound",
+      "value": "8/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -618,11 +618,11 @@
       "why": "Rules change compliance cost and driver hours."
     },
     {
-      "category": "safety",
-      "source": "Truck News",
-      "headline": "Arkansas truck enforcement blitz sidelines 393 drivers, vehicles, results in 44 arrests",
-      "url": "https://www.trucknews.com/regulations/arkansas-truck-enforcement-blitz-sidelines-393-drivers-vehicles-results-in-44-arrests/1003224353/",
-      "why": "Safety rules and blitzes hit the road on specific dates."
+      "category": "equipment",
+      "source": "The Trucker",
+      "headline": "Heavy rains expected to bring flooding risk to already saturated parts of the US Southwest",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/heavy-rains-expected-to-bring-flooding-risk-to-already-saturated-parts-of-the-us-southwest",
+      "why": "Equipment cost and availability shape fleet economics."
     }
   ],
   "theft_home_json": "[]",
