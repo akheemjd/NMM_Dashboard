@@ -21,7 +21,7 @@ Until the endpoint is set the form is inert - it renders, so the design is revie
 """
 import pathlib
 
-BRIEF_ENDPOINT = ""          # e.g. "https://buttondown.email/api/emails/embed-subscribe/northernmile"
+BRIEF_ENDPOINT = "https://buttondown.email/api/emails/embed-subscribe/northern"
 BRIEF_NAME = "The Northern Mile Brief"
 BRIEF_PITCH = ("One email a week: what diesel did on both sides of the border, "
                "where the crossings are backing up, and what changed in the rules.")
