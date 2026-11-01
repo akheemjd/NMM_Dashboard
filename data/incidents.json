@@ -55,24 +55,6 @@
       "scheduled": false
     },
     {
-      "id": "ON-331003",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Collision on QEW Toronto bound  at MOUNTAIN ROAD, Niagara Falls. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.13515641,
-      "lng": -79.13149957,
-      "start": 1793569740,
-      "end": null,
-      "updated": 1793569740,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-330998",
       "province": "ON",
       "highway": "HWY 401",
@@ -1044,6 +1026,24 @@
       "start": 1793595600,
       "end": 1794200340,
       "updated": 1793381400,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-330392",
+      "province": "ON",
+      "highway": "HWY 416",
+      "direction": "Southbound",
+      "description": "Daily Construction on HWY 416 Southbound  between CENTURY RD / PRINCE OF WALES DR (CR 73), Ottawa and L & G RD 43 (IC 34) (KEMPTVILLE), Kemptville. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 45.19425,
+      "lng": -75.72434,
+      "start": 1793595600,
+      "end": 1794200340,
+      "updated": 1793381280,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-01T22:00:30.358362+00:00",
+  "updated": "2026-11-01T22:01:39.262197+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
