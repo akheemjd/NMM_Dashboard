@@ -1098,7 +1098,10 @@ def check_citation_coverage():
     exempt = {"/methodology/nmdi/", "/advertise/", "/contact/", "/industry-news/",
               # The blog index is a list of links. It quotes figures inside post blurbs, but the
               # provenance lives on the posts themselves, which each carry their own Sources line.
-              "/blog/"}
+              "/blog/",
+              # /report/ publishes a PRICE, not a data figure. A citation block on a sales page
+              # would be noise; the report it sells carries its own sources page.
+              "/report/"}
     missing = []
     total = 0
     for dirpath, _d, files in os.walk(docs):
