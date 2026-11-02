@@ -88,6 +88,6 @@ US diesel: US Energy Information Administration, 14 September 2026.
 
 Border wait times: Canada Border Services Agency, live at time of writing.
 
-Full methodology at https://dashboard.northernmilemedia.com/methodology/.
+Full methodology at https://dashboard.northernmilemedia.com/methodology/nmdi/.
 
 Sources: Natural Resources Canada weekly retail diesel survey, and Bank of Canada exchange rates. Every published figure is built and dated at https://dashboard.northernmilemedia.com/methodology/nmdi/.
