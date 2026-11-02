@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-331081",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Westbound",
+      "description": "Collision on HWY 401 Westbound  at NEWTONVILLE ROAD, Newtonville. 2 right lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "2 right lanes closed",
+      "lat": 43.9311645,
+      "lng": -78.48899812,
+      "start": 1793597640,
+      "end": null,
+      "updated": 1793597640,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-331075",
       "province": "ON",
       "highway": "HWY 407",
@@ -1028,24 +1046,6 @@
       "updated": 1793381280,
       "country": "CA",
       "scheduled": false
-    },
-    {
-      "id": "ON-330388",
-      "province": "ON",
-      "highway": "HWY 6",
-      "direction": "Southbound",
-      "description": "Continuous Construction on HWY 6 Southbound  between Wellington 6th Line and Wellington Road 51 / Guelph-Nichol Townline, Guelph. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.65767,
-      "lng": -80.33029,
-      "start": 1794312000,
-      "end": 1794348000,
-      "updated": 1793380080,
-      "country": "CA",
-      "scheduled": true
     },
     {
       "id": "ND-CN-23102",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-02T05:15:03.517862+00:00",
+  "updated": "2026-11-02T06:00:40.787297+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
