@@ -427,6 +427,40 @@ def main():
 
     html = fill(template, data)
 
+    # Take only the page content and wrap it in the SHARED chrome.
+    #
+    # templates/border-trends.template.html carries its own copy of the header, nav and footer. That
+    # copy drifted three times (no Writing link, no .bottom block, an older nav without the chevron
+    # spans) because nothing regenerates this template while gen_templates.py regenerates the other
+    # 26. The result was the coherence guard reporting two chrome variants on every deploy, ignored
+    # for weeks because the deploy could not fail.
+    #
+    # Patching the copy was the wrong shape: it drifts again the next time the nav changes. So the
+    # forked markup is discarded and the content is wrapped in gen_templates' own head() and foot(),
+    # which is what the module docstring always claimed was happening.
+    import gen_templates as G
+
+    m = re.search(r"<main\b.*?</main>", html, re.S)
+    if not m:
+        raise SystemExit("border-trends: template has no <main> to wrap")
+    _ld = ('{"@context":"https://schema.org","@type":"WebPage",'
+           '"name":"Border wait time trends",'
+           '"url":"https://dashboard.northernmilemedia.com/border-trends/"}')
+    html = (G.head("Border Wait Time Trends — Northern Mile",
+                   "Historical border wait time averages for Canada-US crossings. "
+                   "Average, P75 and P90 by port, from CBSA and CBP readings.",
+                   "/border-trends/", "/og.jpg", _ld)
+            + m.group(0) + G.foot())
+
+    # head()/foot() carry build tokens the fill engine resolves for generated templates, which this
+    # builder bypasses by wrapping directly. Substitute them here, the same way build_blog.py does.
+    import datetime as _dt
+    _now = _dt.datetime.now(_dt.timezone.utc)
+    html = (html
+            .replace("{{build_version}}", _now.strftime("%Y-%m-%d-%H%M"))
+            .replace("{{updated_iso}}", _now.strftime("%Y-%m-%dT%H:%M:%SZ"))
+            .replace("{{updated_at}}", _now.strftime("%Y-%m-%d %H:%M")))
+
     # fill() resolves {{tokens}} and <!--LOOP:--> and nothing else, so this placeholder
     # passed straight through for the life of the page: the table shipped with a header and an
     # empty body while build_table_rows() computed rows every run. Substitute it here, and fail
