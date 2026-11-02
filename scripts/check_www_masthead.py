@@ -35,6 +35,9 @@ if WWW_DIR.exists():
     pages = list(WWW_DIR.rglob("*.html"))
     for f in pages:
         for href in MASTHEAD.findall(f.read_text(encoding="utf-8", errors="replace")):
+            # Allow the brand home; forbid any other off-host destination.
+            if href.startswith("https://www.northernmilemedia.com/"):
+                continue
             if "dashboard." in href:
                 rel = f.relative_to(WWW_DIR).as_posix()
                 failures.append(f"MASTHEAD LEAVES BLOG: {rel} -> {href}")
