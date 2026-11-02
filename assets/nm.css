@@ -928,3 +928,9 @@ body { font-size: 1.0625rem; line-height: 1.62; }
 /* Small labels stay uppercase and small, but stop shouting in green. */
 .pickcard .pflag, .links-list .src, .cstat .l { color: var(--muted); font-weight: 700;
   font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+
+/* Alignment: the blog masthead headline was rendering 62px narrower than its siblings
+   (.nm-mast .dek and .nm-list are 952px, the h1 890px), so its right edge lined up with nothing.
+   Measured live at 1264px viewport. Force every block in the masthead to the same measure. */
+.nm-mast h1{max-width:none!important}
+.nm-mast .dek,.nm-list,.nm-hero{max-width:none}
