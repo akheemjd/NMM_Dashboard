@@ -184,8 +184,11 @@ def build():
 
     surcharge_txt = "n/a"
     if isinstance(national, (int, float)) and isinstance(us_nat, (int, float)):
-        # A defensible surcharge basis: the cross-border spread a carrier must recover.
-        surcharge_txt = f"{abs(national - us_nat):.1f} between the two headline prices"
+        # Both sides on one basis before subtracting: cents per litre.
+        us_in_cad_cpl = (us_nat * rate) / 3.78541 * 100 if isinstance(rate, (int, float)) else None
+        if us_in_cad_cpl is not None:
+            surcharge_txt = (f"{abs(national - us_in_cad_cpl):.1f} cents per litre "
+                             f"({'Canada higher' if national > us_in_cad_cpl else 'US higher'})")
 
     html = f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
@@ -220,8 +223,8 @@ One page you can hand to a shipper.</p>
 <div class="big" style="margin-top:18px;">{money(us_cad_per_1000, 'C$', 0) if us_cad_per_1000 else 'n/a'}</div>
 <p class="mean">US diesel on the same basis, converted at {rate if rate else 'n/a'} USD/CAD, so the two
 numbers are directly comparable and you are not doing the arithmetic mid-quote.</p>
-<p class="src">Canadian figure: {money(national, '&cent;/L')} national average.
-US figure: {money(us_nat, '$/gal')} national average, EIA week {us_date}.</p>
+<p class="src">Canadian figure: {money(national, '&cent;/L', 1)} national average.
+US figure: {money(us_nat, '$/gal', 3)} national average, EIA week {us_date}.</p>
 
 <h2>2. The gap you are quoting against</h2>
 <div class="big">{gap_txt}</div>
@@ -236,9 +239,9 @@ cross-border carrier should be topping up before the return leg.</p>
 <p class="src">Natural Resources Canada weekly retail diesel survey.</p>
 
 <h2>4. Your crossings this month</h2>
-<table><thead><tr><th>Crossing</th><th class="num">Average wait</th><th class="num">Longest</th></tr></thead>
+<table><thead><tr><th>Crossing</th><th class="num">Canada side</th><th class="num">US side</th></tr></thead>
 <tbody>{corr_html}</tbody></table>
-<p class="mean">Average is what to plan on. The longest is what to protect the appointment against.
+<p class="mean">Both sides of the same crossing. A carrier crossing northbound faces the Canadian booth; southbound, the US booth. Whichever is longer is the one to build the appointment around.
 Every minute a tractor sits at a primary booth is a minute it is not earning.</p>
 <p class="src">CBSA and US Customs and Border Protection published wait times.</p>
 
