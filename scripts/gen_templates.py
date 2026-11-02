@@ -108,7 +108,7 @@ def head(title, desc, canon, og_img, ld, og_type="website"):
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="hd"><div class="wrap">
-  <a class="mark" href="/"><img class="logo" src="/assets/logo.png" width="32" height="32" alt=""><b>Northern Mile</b><span>North American trucking data</span></a>
+  <a class="mark" href="https://www.northernmilemedia.com/"><img class="logo" src="/assets/logo.png" width="32" height="32" alt=""><b>Northern Mile</b><span>North American trucking data</span></a>
   <button class="navbtn" type="button" id="navbtn" aria-expanded="false" aria-controls="drawer"><span class="sr">Sections</span><span class="bars" aria-hidden="true"></span></button>
 </div></header>
 
@@ -137,7 +137,7 @@ def foot(extra_script=""):
 </main>
 
 <footer class="ft"><div class="wrap">
-  <div class="brand"><a class="name" href="/">Northern Mile Media</a><span class="tag">live North American trucking data</span></div>
+  <div class="brand"><a class="name" href="https://www.northernmilemedia.com/">Northern Mile Media</a><span class="tag">live North American trucking data</span></div>
   <nav class="flinks" aria-label="Footer">{flinks}</nav>
   <nav class="flinks biz" aria-label="Company">{blinks}</nav>
   <div class="bottom"><span>&copy; {year} Northern Mile Media</span><span>Updated {{{{updated_at}}}} UTC</span></div>

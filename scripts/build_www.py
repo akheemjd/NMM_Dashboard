@@ -87,20 +87,31 @@ LOGO = re.compile(r'<(a)[^>]*class="(?:mark|name)"[^>]*href="[^"]*"')
 for f in DST.rglob("*.html"):
     t = f.read_text(encoding="utf-8")
     fixed = LOGO.sub(lambda m: m.group(0).replace(
-        re.search(r'href="[^"]*"', m.group(0)).group(0), 'href="/blog/"'), t)
+        re.search(r'href="[^"]*"', m.group(0)).group(0),
+        'href="https://www.northernmilemedia.com/"'), t)
     if fixed != t:
         f.write_text(fixed, encoding="utf-8", newline="\n")
-print("  masthead anchors point at /blog/")
+print("  masthead anchors point at the brand home")
 
 
-# root redirect
-(DST / "index.html").write_text(
-    '<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8">'
-    '<title>Northern Mile Media</title>'
-    f'<link rel="canonical" href="{WWW}/blog/">'
-    '<meta http-equiv="refresh" content="0; url=/blog/">'
-    '</head><body><p><a href="/blog/">Writing</a></p></body></html>\n',
-    encoding="utf-8", newline="\n")
+# Root: the brand home, not a redirect to the blog.
+#
+# It used to redirect to /blog/, which meant "www.northernmilemedia.com" secretly meant "the blog".
+# Combined with the dashboard's logo pointing at its own chooser, there was nowhere for a masthead
+# to send a reader except back into the half of the site they were already in.
+_home = SRC / "home.html"
+if _home.exists():
+    (DST / "index.html").write_bytes(_home.read_bytes())
+    print("  www root serves the brand home")
+else:
+    (DST / "index.html").write_text(
+        '<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8">'
+        '<title>Northern Mile Media</title>'
+        f'<link rel="canonical" href="{WWW}/blog/">'
+        '<meta http-equiv="refresh" content="0; url=/blog/">'
+        '</head><body><p><a href="/blog/">Writing</a></p></body></html>\n',
+        encoding="utf-8", newline="\n")
+    print("  WARNING: brand home missing, fell back to the old redirect")
 
 # sitemap + robots
 urls = [f"{WWW}/blog/"] + [f"{WWW}/blog/{d.name}/" for d in sorted((DST / "blog").iterdir()) if d.is_dir()]
