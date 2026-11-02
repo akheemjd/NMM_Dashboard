@@ -67,6 +67,21 @@ def load_pages():
     return pages
 
 
+def _is_redirect_stub(url):
+    """True when the page is a meta-refresh redirect into the site.
+
+    They exist to receive inbound links and hand the reader on; they are not navigation targets, so
+    neither "linked from the homepage" nor "has its own canonical" applies to them.
+    """
+    import os
+    p = os.path.join(DOCS, url.strip("/"), "index.html")
+    try:
+        with open(p, encoding="utf-8", errors="replace") as f:
+            return 'http-equiv="refresh"' in f.read(4000)
+    except OSError:
+        return False
+
+
 def main():
     pages = load_pages()
     if not pages:
@@ -103,6 +118,11 @@ def main():
                 q.append(nxt)
 
     orphans = sorted(set(pages) - seen)
+    # Redirect stubs are excluded from reachability on purpose. The five restored Ghost URLs exist to
+    # catch inbound links from Google and old bookmarks; linking them from the homepage would be
+    # wrong, since each one immediately hands the reader to the surviving article. They are reachable
+    # from the outside, which is the only direction that matters for them.
+    orphans = [o for o in orphans if not _is_redirect_stub(o)]
     if orphans:
         print(f"LINKCHECK FATAL: {len(orphans)} page(s) unreachable from the homepage")
         for o in orphans[:15]:
