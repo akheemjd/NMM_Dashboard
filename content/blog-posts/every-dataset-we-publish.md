@@ -127,3 +127,5 @@ calculated.
 If you find a number that looks wrong, tell us. Corrections are published.
 
 [Contact](https://dashboard.northernmilemedia.com/contact/)
+
+Sources: every figure on this site comes from Natural Resources Canada, US Energy Information Administration, the Bank of Canada, Canada Border Services Agency, US Customs and Border Protection, or IFTA Inc. Each dataset and its refresh cadence is documented at https://dashboard.northernmilemedia.com/methodology/nmdi/.

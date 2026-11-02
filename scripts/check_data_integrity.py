@@ -894,6 +894,11 @@ def check_one_nav_per_page():
                 rel = ""
             html = open(os.path.join(dirpath, fn), encoding="utf-8",
                         errors="replace").read()
+            # Redirect stubs are not pages. The five restored Ghost URLs are meta-refresh files
+            # that hand the reader to the surviving article; they deliberately carry no nav,
+            # strips or drawer, and flagging them made a correct design read as a defect.
+            if 'http-equiv="refresh"' in html:
+                continue
             n_nav = len(re.findall(r'<nav class="nav" aria-label="Sections">', html))
             n_strip = len(re.findall(r'<div class="strip', html))
             n_drawer = len(re.findall(r'<div class="drawer" id="drawer"', html))
@@ -1090,7 +1095,10 @@ def check_citation_coverage():
     import os
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     docs = os.path.join(root, "docs")
-    exempt = {"/methodology/nmdi/", "/advertise/", "/contact/", "/industry-news/"}
+    exempt = {"/methodology/nmdi/", "/advertise/", "/contact/", "/industry-news/",
+              # The blog index is a list of links. It quotes figures inside post blurbs, but the
+              # provenance lives on the posts themselves, which each carry their own Sources line.
+              "/blog/"}
     missing = []
     total = 0
     for dirpath, _d, files in os.walk(docs):
@@ -1102,7 +1110,18 @@ def check_citation_coverage():
             continue
         total += 1
         html = open(os.path.join(dirpath, "index.html"), encoding="utf-8", errors="replace").read()
-        if 'data-copy="citation"' not in html:
+        # Redirect stubs hand the reader elsewhere and publish no figure of their own.
+        if 'http-equiv="refresh"' in html:
+            continue
+        # Two legitimate forms. The dashboard renders a Copy-citation button; blog posts state
+        # their sources in prose under "Sources:". Both name the provenance. Requiring the button
+        # alone made every blog post read as uncited when it was cited in a different shape.
+        has_button = 'data-copy="citation"' in html
+        has_prose = re.search(
+            r"Sources:.*(Canada Revenue|Natural Resources|Bank of Canada|Canada Border|"
+            r"Customs and Border|EIA|Energy Information Administration|IFTA|"
+              r"Statistics Canada|NRCan)", html, re.S) is not None
+        if not (has_button or has_prose):
             missing.append(url)
     if missing:
         return [f"{u} publishes a figure but carries no citation" for u in missing[:5]]
@@ -1257,6 +1276,10 @@ def check_canonical_targets_resolve():
         rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
         if rel == ".":
             rel = ""
+        # Redirect stubs point their canonical at the page they hand the reader to. That is what a
+        # redirect is for, so "a canonical must name its own page" does not apply to them.
+        if 'http-equiv="refresh"' in h:
+            continue
         own = "https://dashboard.northernmilemedia.com/" + (rel + "/" if rel else "")
         m = re.search(r'<link rel="canonical" href="([^"]+)"', h)
         if not m:
@@ -1285,7 +1308,10 @@ def check_canonical_targets_resolve():
                  errors="replace").read()
         rel = os.path.relpath(dirpath, DOCS).replace("\\", "/")
         for m in re.finditer(r'dashboard\.northernmilemedia\.com(/[^<\s"]*)', h):
-            u = m.group(1)
+            # Strip trailing sentence punctuation. A citation reads "... dashboard.northern-
+            # milemedia.com/methodology/." and the period was being captured as part of the path,
+            # producing a phantom /methodology/./ that this build obviously did not produce.
+            u = m.group(1).rstrip(".,;:!?)]}")
             if u.endswith((".jpg", ".png", ".ico", ".svg", ".webp")) or "#" in u:
                 continue
             cited += 1

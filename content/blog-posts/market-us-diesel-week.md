@@ -77,3 +77,5 @@ Check the crossing clock before a tight delivery, not after. The distance betwee
 Run your own numbers. Cost per kilometre is your burn rate multiplied by the price you paid, and only one half of that is published here. The [fuel cost calculator](https://dashboard.northernmilemedia.com/fuel-cost-calculator/) takes your own figure.
 
 That is the shape of US diesel prices this week. One national average, ten districts, and a wide distance between the two ends of the map. Every district and every crossing sits live on the dashboard, and your own lane is one calculation away from being a number a dispatcher can use.
+
+Sources: US Energy Information Administration weekly retail diesel survey, by PADD district, and Bank of Canada exchange rates for the cross-border comparison. Method at https://dashboard.northernmilemedia.com/methodology/nmdi/.

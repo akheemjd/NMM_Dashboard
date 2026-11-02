@@ -93,7 +93,40 @@ fi
 echo "$$" > "$LOCKDIR/pid" 2>/dev/null || true
 trap 'rm -rf "$LOCKDIR"' EXIT INT TERM
 
-$PYTHON scripts/gen_templates.py && $PYTHON scripts/gen_country_homes.py && $PYTHON scripts/build_chart_data.py && $PYTHON scripts/build_templates.py && $PYTHON scripts/build_provinces.py && $PYTHON scripts/build_city_pages.py && $PYTHON scripts/build_us_pages.py && $PYTHON scripts/build_border_pages.py && $PYTHON scripts/build_cbp_ports.py && $PYTHON scripts/build_ifta_page.py && $PYTHON scripts/build_us_states.py && $PYTHON scripts/build_border_trends.py && $PYTHON scripts/build_og.py && $PYTHON scripts/build_blog.py && $PYTHON scripts/build_sitemap.py && $PYTHON scripts/fx_layer.py && $PYTHON scripts/trim_descriptions.py && $PYTHON scripts/check_coherence.py && $PYTHON scripts/check_links.py && $PYTHON scripts/check_data_integrity.py && $PYTHON scripts/check_www_masthead.py && $PYTHON scripts/check_head_markup.py && $PYTHON scripts/check_cross_border.py && $PYTHON scripts/audit_reader_view.py --strict && $PYTHON scripts/audit_reader_deep.py 2>&1
+# Each check runs as its own statement with an explicit exit. Do not collapse this back into a
+# && chain: `set -e` is ignored for every command of an AND-OR list except the last, which is how
+# a failing guard came to leave the deploy exiting 0.
+run_step() {
+  if ! "$@" 2>&1; then
+    echo "  FATAL: $1 failed - deploy aborted" >&2
+    exit 1
+  fi
+}
+$PYTHON scripts/gen_templates.py || { echo '    FAILED: scripts/gen_templates.py' >&2; exit 1; }
+$PYTHON scripts/gen_country_homes.py || { echo '    FAILED: scripts/gen_country_homes.py' >&2; exit 1; }
+$PYTHON scripts/build_chart_data.py || { echo '    FAILED: scripts/build_chart_data.py' >&2; exit 1; }
+$PYTHON scripts/build_templates.py || { echo '    FAILED: scripts/build_templates.py' >&2; exit 1; }
+$PYTHON scripts/build_provinces.py || { echo '    FAILED: scripts/build_provinces.py' >&2; exit 1; }
+$PYTHON scripts/build_city_pages.py || { echo '    FAILED: scripts/build_city_pages.py' >&2; exit 1; }
+$PYTHON scripts/build_us_pages.py || { echo '    FAILED: scripts/build_us_pages.py' >&2; exit 1; }
+$PYTHON scripts/build_border_pages.py || { echo '    FAILED: scripts/build_border_pages.py' >&2; exit 1; }
+$PYTHON scripts/build_cbp_ports.py || { echo '    FAILED: scripts/build_cbp_ports.py' >&2; exit 1; }
+$PYTHON scripts/build_ifta_page.py || { echo '    FAILED: scripts/build_ifta_page.py' >&2; exit 1; }
+$PYTHON scripts/build_us_states.py || { echo '    FAILED: scripts/build_us_states.py' >&2; exit 1; }
+$PYTHON scripts/build_border_trends.py || { echo '    FAILED: scripts/build_border_trends.py' >&2; exit 1; }
+$PYTHON scripts/build_og.py || { echo '    FAILED: scripts/build_og.py' >&2; exit 1; }
+$PYTHON scripts/build_blog.py || { echo '    FAILED: scripts/build_blog.py' >&2; exit 1; }
+$PYTHON scripts/build_sitemap.py || { echo '    FAILED: scripts/build_sitemap.py' >&2; exit 1; }
+$PYTHON scripts/fx_layer.py || { echo '    FAILED: scripts/fx_layer.py' >&2; exit 1; }
+$PYTHON scripts/trim_descriptions.py || { echo '    FAILED: scripts/trim_descriptions.py' >&2; exit 1; }
+$PYTHON scripts/check_coherence.py || { echo '    FAILED: scripts/check_coherence.py' >&2; exit 1; }
+$PYTHON scripts/check_links.py || { echo '    FAILED: scripts/check_links.py' >&2; exit 1; }
+$PYTHON scripts/check_data_integrity.py || { echo '    FAILED: scripts/check_data_integrity.py' >&2; exit 1; }
+$PYTHON scripts/check_www_masthead.py || { echo '    FAILED: scripts/check_www_masthead.py' >&2; exit 1; }
+$PYTHON scripts/check_head_markup.py || { echo '    FAILED: scripts/check_head_markup.py' >&2; exit 1; }
+$PYTHON scripts/check_cross_border.py || { echo '    FAILED: scripts/check_cross_border.py' >&2; exit 1; }
+$PYTHON scripts/audit_reader_view.py --strict || { echo '    FAILED: --strict' >&2; exit 1; }
+$PYTHON scripts/audit_reader_deep.py || { echo '    FAILED: scripts/audit_reader_deep.py' >&2; exit 1; }
 
 # 2. Health check
 $PYTHON -c "
