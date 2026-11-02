@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T15:21:56.645035",
+  "generated": "2026-11-02T16:01:15.576969",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -150,7 +150,7 @@
         "label": "Sweetgrass",
         "reported": true,
         "delay": 60,
-        "captured": "11/2/2026 13:21:06"
+        "captured": "11/2/2026 13:56:10"
       }
     },
     "emerson-pembina": {
@@ -301,8 +301,8 @@
       "us": {
         "label": "Pembina",
         "reported": true,
-        "delay": 30,
-        "captured": "11/2/2026 14:21:06"
+        "delay": 5,
+        "captured": "11/2/2026 14:56:10"
       }
     },
     "fort-erie-buffalo": {
@@ -454,7 +454,7 @@
         "label": "Peace Bridge",
         "reported": true,
         "delay": 2,
-        "captured": "11/2/2026 15:21:06"
+        "captured": "11/2/2026 15:56:10"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "11/2/2026 15:21:06"
+        "captured": "11/2/2026 15:56:10"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "11/2/2026 15:21:05"
+        "captured": "11/2/2026 15:56:10"
       }
     },
     "pacific-blaine": {
@@ -910,7 +910,7 @@
         "label": "Pacific Highway",
         "reported": true,
         "delay": 5,
-        "captured": "11/2/2026 12:21:05"
+        "captured": "11/2/2026 12:56:10"
       }
     },
     "queenston-lewiston": {
@@ -1062,7 +1062,7 @@
         "label": "Lewiston Bridge",
         "reported": true,
         "delay": 1,
-        "captured": "11/2/2026 15:21:06"
+        "captured": "11/2/2026 15:56:10"
       }
     },
     "sarnia-port-huron": {
@@ -1213,8 +1213,8 @@
       "us": {
         "label": "Bluewater Bridge",
         "reported": true,
-        "delay": 45,
-        "captured": "11/2/2026 15:21:06"
+        "delay": 40,
+        "captured": "11/2/2026 15:56:10"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 10,
-        "captured": "11/2/2026 15:21:06"
+        "captured": "11/2/2026 15:56:10"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -2400,10 +2400,10 @@
     },
     "us-calexico-east": {
       "id": "us-calexico-east",
-      "avg_delay": 33,
+      "avg_delay": 35,
       "min_delay": 5,
       "max_delay": 110,
-      "p50": 17.5,
+      "p50": 25.0,
       "p75": 60.0,
       "p90": 73.5,
       "observations": 12,
@@ -2508,7 +2508,7 @@
       },
       "daily": {
         "0": {
-          "avg": 65,
+          "avg": 69,
           "count": 4,
           "label": "Mon"
         },
@@ -3875,7 +3875,7 @@
       "max_delay": 6,
       "p50": 2.0,
       "p75": 3.0,
-      "p90": 3.4,
+      "p90": 5.0,
       "observations": 29,
       "days_covered": 29,
       "hourly": {
@@ -5487,12 +5487,12 @@
     },
     "us-pembina": {
       "id": "us-pembina",
-      "avg_delay": 5,
+      "avg_delay": 4,
       "min_delay": 0,
-      "max_delay": 30,
+      "max_delay": 18,
       "p50": 2.0,
-      "p75": 6.8,
-      "p90": 15.2,
+      "p75": 5.0,
+      "p90": 14.0,
       "observations": 28,
       "days_covered": 28,
       "hourly": {
@@ -5595,7 +5595,7 @@
       },
       "daily": {
         "0": {
-          "avg": 12,
+          "avg": 7,
           "count": 5,
           "label": "Mon"
         },
@@ -5636,7 +5636,7 @@
       "id": "us-port-huron-bluewater-bridge",
       "avg_delay": 8,
       "min_delay": 0,
-      "max_delay": 45,
+      "max_delay": 40,
       "p50": 0.0,
       "p75": 13.0,
       "p90": 26.4,
@@ -5742,7 +5742,7 @@
       },
       "daily": {
         "0": {
-          "avg": 15,
+          "avg": 14,
           "count": 5,
           "label": "Mon"
         },
@@ -8121,153 +8121,6 @@
         "5": {
           "avg": 0,
           "count": 1,
-          "label": "Sat"
-        },
-        "6": {
-          "avg": null,
-          "count": 0,
-          "label": "Sun"
-        }
-      },
-      "us": null
-    },
-    "us-el-paso-bridge-of-the-americas-bota": {
-      "id": "us-el-paso-bridge-of-the-americas-bota",
-      "avg_delay": 0,
-      "min_delay": 0,
-      "max_delay": 0,
-      "p50": 0.0,
-      "p75": 0.0,
-      "p90": 0.0,
-      "observations": 1,
-      "days_covered": 1,
-      "hourly": {
-        "0": {
-          "avg": null,
-          "count": 0
-        },
-        "1": {
-          "avg": null,
-          "count": 0
-        },
-        "2": {
-          "avg": null,
-          "count": 0
-        },
-        "3": {
-          "avg": null,
-          "count": 0
-        },
-        "4": {
-          "avg": null,
-          "count": 0
-        },
-        "5": {
-          "avg": null,
-          "count": 0
-        },
-        "6": {
-          "avg": null,
-          "count": 0
-        },
-        "7": {
-          "avg": null,
-          "count": 0
-        },
-        "8": {
-          "avg": null,
-          "count": 0
-        },
-        "9": {
-          "avg": null,
-          "count": 0
-        },
-        "10": {
-          "avg": null,
-          "count": 0
-        },
-        "11": {
-          "avg": null,
-          "count": 0
-        },
-        "12": {
-          "avg": null,
-          "count": 0
-        },
-        "13": {
-          "avg": null,
-          "count": 0
-        },
-        "14": {
-          "avg": null,
-          "count": 0
-        },
-        "15": {
-          "avg": null,
-          "count": 0
-        },
-        "16": {
-          "avg": null,
-          "count": 0
-        },
-        "17": {
-          "avg": null,
-          "count": 0
-        },
-        "18": {
-          "avg": null,
-          "count": 0
-        },
-        "19": {
-          "avg": null,
-          "count": 0
-        },
-        "20": {
-          "avg": null,
-          "count": 0
-        },
-        "21": {
-          "avg": null,
-          "count": 0
-        },
-        "22": {
-          "avg": null,
-          "count": 0
-        },
-        "23": {
-          "avg": null,
-          "count": 0
-        }
-      },
-      "daily": {
-        "0": {
-          "avg": 0,
-          "count": 1,
-          "label": "Mon"
-        },
-        "1": {
-          "avg": null,
-          "count": 0,
-          "label": "Tue"
-        },
-        "2": {
-          "avg": null,
-          "count": 0,
-          "label": "Wed"
-        },
-        "3": {
-          "avg": null,
-          "count": 0,
-          "label": "Thu"
-        },
-        "4": {
-          "avg": null,
-          "count": 0,
-          "label": "Fri"
-        },
-        "5": {
-          "avg": null,
-          "count": 0,
           "label": "Sat"
         },
         "6": {
