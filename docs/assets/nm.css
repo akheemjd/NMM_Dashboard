@@ -110,12 +110,17 @@ a { color: inherit; }
    subordinate to the group row without needing a border. */
 .strip { background: var(--wash); border-bottom: 1px solid var(--line); }
 .strip[hidden] { display: none; }
-.strip .wrap { display: flex; align-items: center; gap: 7px; padding: 9px var(--pad); }
-.strip a { font-family: var(--body); font-size: .8125rem; font-weight: 500; line-height: 1;
+.strip .wrap { display: flex; align-items: center; gap: 0; padding: 4px var(--pad); }
+/* Square, ruled and separated. These were 999px pills with a 72%-opaque white fill that was
+   invisible against the wash, so three destinations read as one sentence of green text. */
+.strip a { font-family: var(--body); font-size: .8125rem; font-weight: 600; line-height: 1;
   color: var(--signal); text-decoration: none; white-space: nowrap;
-  padding: 5px 11px; border-radius: 999px; background: rgba(255,255,255,.72); }
-.strip a:hover { background: #fff; }
-.strip a.on { background: var(--signal); color: #fff; }
+  padding: 9px 16px; border-radius: 0; background: none;
+  border-bottom: 2px solid transparent; position: relative; }
+.strip a + a::before { content: ""; position: absolute; left: 0; top: 50%;
+  transform: translateY(-50%); width: 1px; height: 11px; background: var(--line); }
+.strip a:hover { border-bottom-color: var(--signal); }
+.strip a.on { color: #0b3d28; border-bottom-color: var(--signal); background: none; }
 .strip .hint { margin-left: auto; font-family: var(--data); font-size: .6875rem;
   font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: #5f7d6c; }
 

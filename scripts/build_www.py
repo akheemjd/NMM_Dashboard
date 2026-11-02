@@ -100,18 +100,16 @@ print("  masthead anchors point at the brand home")
 # Combined with the dashboard's logo pointing at its own chooser, there was nowhere for a masthead
 # to send a reader except back into the half of the site they were already in.
 _home = (SRC.parent / "output" / "www" / "home.html") if (SRC.parent / "output" / "www" / "home.html").exists() else SRC / "home.html"
-if _home.exists():
-    (DST / "index.html").write_bytes(_home.read_bytes())
-    print("  www root serves the brand home")
-else:
-    (DST / "index.html").write_text(
-        '<!DOCTYPE html><html lang="en-CA"><head><meta charset="UTF-8">'
-        '<title>Northern Mile Media</title>'
-        f'<link rel="canonical" href="{WWW}/blog/">'
-        '<meta http-equiv="refresh" content="0; url=/blog/">'
-        '</head><body><p><a href="/blog/">Writing</a></p></body></html>\n',
-        encoding="utf-8", newline="\n")
-    print("  WARNING: brand home missing, fell back to the old redirect")
+_idx = DST / "index.html"
+_idx.write_bytes(_home.read_bytes())
+# The home page carries the SHARED chrome, which is full of root-relative links like
+# /fuel-prices/ that only exist on the dashboard host. The relink pass above runs before this
+# copy, so run it here too or every nav item 404s.
+_t = _idx.read_text(encoding="utf-8")
+_t = CANON.sub(lambda m: m.group(1) + WWW + m.group(2) + '"', _t)
+_t = ROOTLINK.sub(relink, _t)
+_idx.write_text(_t, encoding="utf-8", newline="\n")
+print("  www root serves the brand home")
 
 # sitemap + robots
 urls = [f"{WWW}/blog/"] + [f"{WWW}/blog/{d.name}/" for d in sorted((DST / "blog").iterdir()) if d.is_dir()]
