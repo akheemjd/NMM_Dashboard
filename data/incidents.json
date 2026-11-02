@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-331030",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Vehicle Fire on HWY 401 Eastbound COLLECTOR RAMP at MISSISSAUGA RD, Mississauga. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.6039972,
+      "lng": -79.7486801,
+      "start": 1793577300,
+      "end": null,
+      "updated": 1793577480,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-331008",
       "province": "ON",
       "highway": "HWY 17",
@@ -15,24 +33,6 @@
       "start": 1793570160,
       "end": null,
       "updated": 1793577420,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-331030",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Vehicle Fire on HWY 401 Eastbound COLLECTOR RAMP at MISSISSAUGA RD, Mississauga. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.6039972,
-      "lng": -79.7486801,
-      "start": 1793577300,
-      "end": null,
-      "updated": 1793577300,
       "country": "CA",
       "scheduled": false
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-02T00:00:47.485190+00:00",
+  "updated": "2026-11-02T00:02:53.745311+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
