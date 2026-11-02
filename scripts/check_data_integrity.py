@@ -1355,7 +1355,12 @@ def check_og_images_exist():
         h = f.read_text(encoding="utf-8", errors="replace")
         for m in _re.finditer(r'<meta property="og:image" content="([^"]+)"', h):
             url = m.group(1)
-            rel = url.split("dashboard.northernmilemedia.com/", 1)[-1]
+            # Strip whichever host the page uses. Blog pages point at
+            # www.northernmilemedia.com/og.jpg, which the dashboard-only split did not match,
+            # so the whole URL became the "path" and every blog page reported a false failure.
+            # lstrip("/") matters too: a leading slash makes (docs / rel) an ABSOLUTE path, which
+            # never exists under docs, so the check failed even with the host stripped.
+            rel = re.sub(r"^https?://[^/]+/", "", url).lstrip("/")
             if not (docs / rel).exists():
                 missing.append(f"{f.parent.relative_to(docs)} -> {rel}")
     return missing

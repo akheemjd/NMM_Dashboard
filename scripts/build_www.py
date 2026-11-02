@@ -49,6 +49,10 @@ for item in list(DST.iterdir()):
     shutil.rmtree(item) if item.is_dir() else item.unlink()
 shutil.copytree(SRC / "blog", DST / "blog")
 shutil.copytree(SRC / "assets", DST / "assets", dirs_exist_ok=True)
+# og.jpg lives at the docs root, not in assets/, so the asset copy missed it and every blog post
+# offered a social card image that 404ed on this host.
+if (SRC / "og.jpg").exists():
+    shutil.copy2(SRC / "og.jpg", DST / "og.jpg")
 for s in OLD:
     if (SRC / s / "index.html").exists():
         (DST / s).mkdir(parents=True, exist_ok=True)
