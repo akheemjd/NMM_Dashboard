@@ -99,7 +99,7 @@ print("  masthead anchors point at the brand home")
 # It used to redirect to /blog/, which meant "www.northernmilemedia.com" secretly meant "the blog".
 # Combined with the dashboard's logo pointing at its own chooser, there was nowhere for a masthead
 # to send a reader except back into the half of the site they were already in.
-_home = SRC / "home.html"
+_home = (SRC.parent / "output" / "www" / "home.html") if (SRC.parent / "output" / "www" / "home.html").exists() else SRC / "home.html"
 if _home.exists():
     (DST / "index.html").write_bytes(_home.read_bytes())
     print("  www root serves the brand home")

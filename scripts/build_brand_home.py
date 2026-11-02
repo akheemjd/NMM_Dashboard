@@ -16,7 +16,7 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
-OUT = os.path.join(ROOT, "docs")
+OUT = os.path.join(ROOT, "output", "www")
 BRAND = "https://www.northernmilemedia.com/"
 
 
@@ -141,6 +141,7 @@ def build():
 
 def main():
     html = build()
+    os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, "home.html")
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
