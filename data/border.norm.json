@@ -8,8 +8,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Emerson-Pembina",
-    "us_max_wait": "50 min",
+    "us_max_name": "Blaine-Pacific Highway",
+    "us_max_wait": "40 min",
     "ca_max_name": "Peace Bridge"
   },
   "border_rows": [
@@ -21,12 +21,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EST",
+      "captured_at": "09:15 EST",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -55,7 +55,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "2 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -70,8 +70,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -81,7 +81,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:46 EST",
+      "captured_at": "09:15 EST",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -111,11 +111,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT",
+      "captured_at": "07:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "30 min",
+      "us_wait": "40 min",
       "us_status_class": "heavy"
     },
     {
@@ -126,11 +126,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT",
+      "captured_at": "09:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "50 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -158,12 +158,12 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 EST",
+      "captured_at": "09:15 EST",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "10 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Blue Water Bridge",
@@ -192,7 +192,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "2 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -207,8 +207,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "1 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -218,7 +218,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:46 EST",
+      "captured_at": "09:15 EST",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -248,11 +248,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "06:40 PDT",
+      "captured_at": "07:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "30 min",
+      "us_wait": "40 min",
       "us_status_class": "heavy"
     },
     {
@@ -263,11 +263,11 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "07:15 CDT",
+      "captured_at": "09:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "50 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -286,8 +286,8 @@
       "us_status_class": "na"
     }
   ],
-  "updated_at": "2026-11-02 14:01",
-  "updated_iso": "2026-11-02T14:01:09+00:00",
-  "build_version": "1793628069",
-  "captured_at": "2026-11-02 14:01"
+  "updated_at": "2026-11-02 14:52",
+  "updated_iso": "2026-11-02T14:52:38+00:00",
+  "build_version": "1793631158",
+  "captured_at": "2026-11-02 14:52"
 }
