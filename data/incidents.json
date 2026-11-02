@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "drivebc.ca/RIDE-105038",
+      "province": "BC",
+      "highway": "Highway 1 near Port Mann Bridge",
+      "direction": "",
+      "description": "Vehicle stall at Highway 1, In Coquitlam. Right lane blocked. Last update: November 1st, 2026 at 8:09pm PCT. Next update: November 1st, 2026 at 8:34pm PCT.",
+      "event_type": "incident",
+      "severity": "MINOR",
+      "closure": false,
+      "lanes": "",
+      "lat": 49.22570004,
+      "lng": -122.81745784,
+      "start": "2026-11-01T21:09:05-07:00",
+      "end": "",
+      "updated": "2026-11-01T21:09:05-07:00",
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-331066",
       "province": "ON",
       "highway": "HWY 427",
@@ -15,24 +33,6 @@
       "start": 1793587500,
       "end": null,
       "updated": 1793587500,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-331063",
-      "province": "ON",
-      "highway": "QEW",
-      "direction": "Toronto Bound",
-      "description": "Disabled Vehicle on QEW Toronto bound RAMP at NIKOLA TESLA, Hamilton. Right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane and right shoulder closed",
-      "lat": 43.2585035,
-      "lng": -79.7657876,
-      "start": 1793584680,
-      "end": null,
-      "updated": 1793584680,
       "country": "CA",
       "scheduled": false
     },
@@ -1048,6 +1048,24 @@
       "scheduled": false
     },
     {
+      "id": "ON-330388",
+      "province": "ON",
+      "highway": "HWY 6",
+      "direction": "Southbound",
+      "description": "Continuous Construction on HWY 6 Southbound  between Wellington 6th Line and Wellington Road 51 / Guelph-Nichol Townline, Guelph. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.65767,
+      "lng": -80.33029,
+      "start": 1794312000,
+      "end": 1794348000,
+      "updated": 1793380080,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
       "id": "ND-CN-23102",
       "province": "ND",
       "country": "US",
@@ -1894,24 +1912,6 @@
       "scheduled": false
     },
     {
-      "id": "drivebc.ca/RIDE-102765",
-      "province": "BC",
-      "highway": "Highway 5 near Avola Bridge",
-      "direction": "",
-      "description": "Mowing from Highway 5, At Avola Overhead Bridge to At Blue River Bridge. Starting Thu Sep 24. From 7:00 AM to 7:00 PM PDT, weekdays. Watch for traffic control. Last update: September 24th, 2026 at 11:02am PDT.",
-      "event_type": "construction",
-      "severity": "MINOR",
-      "closure": false,
-      "lanes": "",
-      "lat": 51.78582,
-      "lng": -119.32122,
-      "start": "2026-09-24T11:02:28-07:00",
-      "end": "",
-      "updated": "2026-09-24T11:02:28-07:00",
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "MO-558410",
       "province": "MO",
       "country": "US",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-02T03:00:38.389259+00:00",
+  "updated": "2026-11-02T03:15:36.438243+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
