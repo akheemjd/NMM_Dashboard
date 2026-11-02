@@ -54,7 +54,7 @@ def load_provinces():
     return rows
 
 
-def diesel_series(weeks=104):
+def diesel_series(weeks=None):
     """Canada national diesel, weekly, oldest first. Reads data/history/series.csv.
 
     The chart is the page's visual anchor: without it the home page was a column of text, which is
@@ -74,39 +74,152 @@ def diesel_series(weeks=104):
     except OSError:
         return []
     rows.sort()
-    return rows[-weeks:]
+    return rows[-weeks:] if weeks else rows
 
 
-def sparkline(points, w=1040, h=150):
-    """Inline SVG, no library. One line, a filled area, and the latest point marked."""
+def sparkline(points, w=1000, h=200):
+    """Inline SVG with an axis, a reference line and a stated finding.
+
+    The first version was a bare line with a caption. A visitor could see it went up but could not
+    tell you by how much, against what, or since when - which is decoration, not information. This
+    version carries a y-axis, the ten-year average as a reference line, a labelled latest point, and
+    a headline sentence computed from the series itself.
+    """
     if len(points) < 3:
         return ""
+    import statistics
     vals = [v for _, v in points]
     lo, hi = min(vals), max(vals)
-    span = (hi - lo) or 1
-    pad = 8
-    n = len(points)
-    coords = []
-    for i, v in enumerate(vals):
-        x = pad + (i / (n - 1)) * (w - 2 * pad)
-        y = h - pad - ((v - lo) / span) * (h - 2 * pad)
-        coords.append((x, y))
+    avg = statistics.mean(vals)
+    today_v = vals[-1]
+    pct_vs_avg = (today_v - avg) / avg * 100
+
+    # Axis from a round floor to a round ceiling, ticks every 50 cents.
+    a_lo = int(lo // 50) * 50
+    a_hi = int((hi // 50) + 1) * 50
+    span = a_hi - a_lo
+
+    L, R, T, B = 46, 54, 10, 26          # margins: left for axis labels, right for the last point
+    pw, ph = w - L - R, h - T - B
+
+    def x_at(i):
+        return L + (i / (len(vals) - 1)) * pw
+
+    def y_at(v):
+        return T + (1 - (v - a_lo) / span) * ph
+
+    coords = [(x_at(i), y_at(v)) for i, v in enumerate(vals)]
     line = " ".join(f"{'M' if i == 0 else 'L'}{x:.1f},{y:.1f}" for i, (x, y) in enumerate(coords))
-    area = f"{line} L{coords[-1][0]:.1f},{h - pad} L{coords[0][0]:.1f},{h - pad} Z"
+    area = f"{line} L{coords[-1][0]:.1f},{T + ph} L{coords[0][0]:.1f},{T + ph} Z"
+
+    ticks = ""
+    t = a_lo
+    while t <= a_hi:
+        y = y_at(t)
+        ticks += (f'<line x1="{L}" y1="{y:.1f}" x2="{w - R}" y2="{y:.1f}" '
+                  f'stroke="#dfe3e0" stroke-width="1"/>'
+                  f'<text x="{L - 8}" y="{y + 3.5:.1f}" text-anchor="end" '
+                  f'font-family="system-ui,sans-serif" font-size="10" fill="#8a8a8a">{t}</text>')
+        t += 50
+
+    avg_y = y_at(avg)
     lx, ly = coords[-1]
+
+    # Year labels at the first point of each calendar year we have.
+    xlabels = ""
+    seen = set()
+    for i, (d, _) in enumerate(points):
+        yr = d[:4]
+        if yr not in seen and (i == 0 or d[5:7] <= "01"):
+            seen.add(yr)
+            xlabels += (f'<text x="{x_at(i):.1f}" y="{h - 6}" text-anchor="middle" '
+                        f'font-family="system-ui,sans-serif" font-size="10" fill="#8a8a8a">{yr}</text>')
+
     first, last = points[0][0], points[-1][0]
     return f"""<figure class="chart">
-  <svg viewBox="0 0 {w} {h}" preserveAspectRatio="none" role="img"
-       aria-label="Canadian national diesel, {first} to {last}, {lo:.1f} to {hi:.1f} cents per litre">
-    <path d="{area}" fill="#0a5c3b" fill-opacity="0.08"/>
-    <path d="{line}" fill="none" stroke="#0a5c3b" stroke-width="2.5" stroke-linejoin="round"/>
-    <circle cx="{lx:.1f}" cy="{ly:.1f}" r="4.5" fill="#0a5c3b"/>
-  </svg>
-  <figcaption>
-    <span>Canadian national diesel, weekly</span>
-    <span>{first} to {last} &nbsp;·&nbsp; low {lo:.1f}&cent;/L, high {hi:.1f}&cent;/L</span>
+  <figcaption class="chead">
+    <b>Diesel is {abs(pct_vs_avg):.0f}% {'above' if pct_vs_avg > 0 else 'below'} its ten-year average.</b>
+    <span>{today_v:.1f}&cent;/L today against a {avg:.1f}&cent;/L average since {first[:4]}.</span>
   </figcaption>
+  <svg viewBox="0 0 {w} {h}" role="img"
+       aria-label="Canadian national diesel, {first} to {last}. Today {today_v:.1f} cents per litre,
+       ten-year average {avg:.1f}. Range {lo:.1f} to {hi:.1f}.">
+    {ticks}
+    <path d="{area}" fill="#0a5c3b" fill-opacity="0.07"/>
+    <path d="{line}" fill="none" stroke="#0a5c3b" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="{L}" y1="{avg_y:.1f}" x2="{w - R}" y2="{avg_y:.1f}"
+          stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4 3" stroke-opacity="0.55"/>
+    <text x="{w - R + 6}" y="{avg_y + 3.5:.1f}" font-family="system-ui,sans-serif"
+          font-size="10" fill="#5c5c5c">avg</text>
+    <circle cx="{lx:.1f}" cy="{ly:.1f}" r="4" fill="#0a5c3b"/>
+    <text x="{lx + 8}" y="{ly + 3.5:.1f}" font-family="system-ui,sans-serif" font-size="10.5"
+          font-weight="600" fill="#0a5c3b">today</text>
+    {xlabels}
+  </svg>
+  <div class="cfoot">
+    <span>Canadian national diesel, weekly, cents per litre</span>
+    <span>Low {lo:.1f} &middot; high {hi:.1f}</span>
+  </div>
 </figure>"""
+
+
+
+PAGE_CSS = """
+  /* Page-scoped rules for the home view only. Loaded AFTER nm.css so they win where they overlap;
+     nothing here redeclares the header or footer, which stay shared. */
+  .home{max-width:1000px;margin:0 auto;padding:0 24px}
+  .home .hero{padding:46px 0 34px}
+  .home .kick{font:700 11px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.16em;
+             color:#0a5c3b;margin-bottom:16px}
+  .home .hero h1{font:600 clamp(30px,4.6vw,50px)/1.08 Georgia,serif;letter-spacing:-.025em;
+                margin:0 0 18px;max-width:17ch}
+  .home .sub{font-size:18px;line-height:1.6;color:#333;max-width:40em;margin:0;
+            border:0;background:none;padding:0}
+  .home .sub b{font-weight:600;color:#1a1a1a}
+  .home .strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #1a1a1a;
+              border-bottom:1px solid #d8d8d8;margin:0}
+  .home .cell{padding:18px 22px;border-right:1px solid #d8d8d8;background:none}
+  .home .cell:first-child{padding-left:0}
+  .home .cell:last-child{border-right:0;padding-right:0}
+  .home .cell .lab{font:600 10px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.11em;
+                  color:#5c5c5c;margin-bottom:9px}
+  .home .cell .v{font:600 30px/1 Georgia,serif;letter-spacing:-.02em;color:#1a1a1a}
+  .home .cell .v em{font-style:normal;font-size:12px;color:#5c5c5c;margin-left:3px}
+  .home .cell .d{font-size:11.5px;color:#5c5c5c;margin-top:7px}
+  .home .chart{margin:26px 0 0;padding:0;border:0;background:none}
+  .home .chart .chead{display:block;margin:0 0 12px;font:400 14px/1.5 system-ui,sans-serif;color:#5c5c5c}
+  .home .chart .chead b{display:block;font:600 19px/1.3 Georgia,serif;color:#1a1a1a;margin-bottom:4px}
+  .home .chart svg{display:block;width:100%;height:200px}
+  .home .chart .cfoot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
+                     font:400 11.5px/1.5 system-ui,sans-serif;color:#5c5c5c;
+                     border-top:1px solid #d8d8d8;padding-top:8px;margin-top:4px}
+  .home .sec{padding:34px 0;border-bottom:1px solid #d8d8d8;background:none;margin:0}
+  .home .sec .row{display:block}
+  .home .sec .lab{font:700 10.5px/1.5 system-ui,sans-serif;text-transform:uppercase;
+                 letter-spacing:.14em;color:#0a5c3b;margin:0 0 10px;padding:0}
+  .home .sec h2{font:600 27px/1.2 Georgia,serif;letter-spacing:-.015em;margin:0 0 10px;
+               padding:0;border:0}
+  .home .sec p{margin:0 0 14px;color:#3a3a3a;max-width:44em;font-size:16px;line-height:1.6}
+  .home .sec .go{display:inline-block;font:600 13px/1 system-ui,sans-serif;text-decoration:none;
+                border-bottom:2px solid #1a1a1a;padding-bottom:4px;color:#1a1a1a;background:none}
+  .home .facts{margin:16px 0 0;padding:0;list-style:none;font-size:14px;color:#3a3a3a}
+  .home .facts li{padding:7px 0;border-bottom:1px solid #e8e8e8;background:none}
+  .home .facts li:last-child{border-bottom:0}
+  .home .foot{padding:30px 0 54px;font-size:12.5px;line-height:1.75;color:#5c5c5c;
+             border:0;background:none;margin:0}
+  @media(max-width:820px){
+    .home .strip{grid-template-columns:1fr 1fr}
+    .home .cell:nth-child(2){border-right:0}
+    .home .cell:nth-child(1),.home .cell:nth-child(2){border-bottom:1px solid #d8d8d8}
+  }
+  @media(max-width:520px){
+    .home .strip{grid-template-columns:1fr 1fr}
+    .home .cell{padding:14px 12px}
+    .home .cell .v{font-size:26px}
+    .home .hero h1{font-size:clamp(28px,8vw,38px);max-width:none}
+    .home .sec h2{font-size:22px}
+  }
+"""
 
 
 def build():
@@ -183,18 +296,14 @@ def build():
   *{{box-sizing:border-box}}
   body{{margin:0;background:var(--paper);color:var(--ink);
        font:16px/1.6 Georgia,'Source Serif 4',serif;-webkit-font-smoothing:antialiased}}
-  .wrap{{max-width:1080px;margin:0 auto;padding:0 24px}}
+  .wrap{{max-width:1000px;margin:0 auto;padding:0 24px}}
   a{{color:inherit}}
 
   /* Masthead: name, then the one sentence that says what this is. */
-  .top{{border-bottom:2px solid var(--ink);padding:22px 0 0}}
-  .top .brand{{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px}}
-  .top .name{{font:600 17px/1 Georgia,serif;letter-spacing:-.01em;text-decoration:none}}
-  .top .name span{{font:400 11px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;
-                  color:var(--mute);margin-left:10px}}
-  .top .nav{{font:500 12px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1em}}
-  .top .nav a{{text-decoration:none;margin-left:20px;padding-bottom:3px;border-bottom:2px solid transparent}}
-  .top .nav a:hover{{border-bottom-color:var(--ink)}}
+              flex-wrap:wrap;gap:16px;min-height:74px}}
+             font:600 21px/1 Georgia,serif;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}}
+            font:600 12px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.11em}}
+              transition:color .12s,border-color .12s}}
 
   .hero{{padding:42px 0 34px}}
   .hero .kick{{font:700 11px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.16em;
@@ -206,7 +315,8 @@ def build():
   /* The numbers. Real, dated, on screen. This is what the site is. */
   .strip{{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);
          border-bottom:1px solid var(--rule)}}
-  .cell{{padding:18px 16px 18px 0;border-right:1px solid var(--rule)}}
+  .cell{{padding:18px 22px 18px 22px;border-right:1px solid var(--rule)}}
+  .cell:first-child{{padding-left:0}}
   .cell:last-child{{border-right:0;padding-right:0}}
   .cell .lab{{font:600 10px/1 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.11em;
              color:var(--mute);margin-bottom:9px}}
@@ -216,9 +326,9 @@ def build():
 
   /* Sections: ruled, not boxed. Square corners throughout. */
   .sec{{padding:34px 0;border-bottom:1px solid var(--rule)}}
-  .sec .row{{display:grid;grid-template-columns:190px 1fr;gap:32px;align-items:start}}
+  .sec .row{{display:block}}
   .sec .lab{{font:700 10.5px/1.5 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;
-            color:var(--accent);padding-top:5px}}
+            color:var(--accent);margin:0 0 10px}}
   .sec h2{{font:600 27px/1.2 Georgia,serif;letter-spacing:-.015em;margin:0 0 10px}}
   .sec p{{margin:0 0 14px;color:#3a3a3a;max-width:44em}}
   .sec .go{{display:inline-block;font:600 13px/1 system-ui,sans-serif;text-decoration:none;
@@ -229,8 +339,14 @@ def build():
   .facts li:last-child{{border-bottom:0}}
   .facts b{{font-weight:600;font-variant-numeric:tabular-nums}}
 
-  .chart{{margin:30px 0 0;padding:0}}
-  .chart svg{{display:block;width:100%;height:150px}}
+  .chart{{margin:26px 0 0;padding:0}}
+  .chart .chead{{display:block;margin:0 0 12px;font:400 14px/1.5 system-ui,sans-serif;color:var(--mute)}}
+  .chart .chead b{{display:block;font:600 19px/1.3 Georgia,serif;color:var(--ink);margin-bottom:4px;
+                  letter-spacing:-.01em}}
+  .chart .cfoot{{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
+                font:400 11.5px/1.5 system-ui,sans-serif;color:var(--mute);
+                border-top:1px solid var(--rule);padding-top:8px;margin-top:4px}}
+  .chart svg{{display:block;width:100%;height:200px}}
   .chart figcaption{{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;
                      font:400 11.5px/1.5 system-ui,sans-serif;color:var(--mute);
                      border-top:1px solid var(--rule);padding-top:9px;margin-top:6px}}
@@ -242,17 +358,16 @@ def build():
     .strip{{grid-template-columns:repeat(2,1fr)}}
     .cell:nth-child(2){{border-right:0}}
     .cell:nth-child(1),.cell:nth-child(2){{border-bottom:1px solid var(--rule)}}
-    .sec .row{{grid-template-columns:1fr;gap:10px}}
+    .sec .row{{display:block}}
     .hero{{padding:38px 0 32px}}
   }}
   @media(max-width:520px){{
     /* Keep the 2x2. Four stacked rows pushed the numbers past a full screen. */
     .strip{{grid-template-columns:1fr 1fr}}
-    .cell{{padding:14px 10px 14px 0}}
-    .cell:nth-child(odd){{padding-right:10px}}
+    .cell{{padding:14px 14px 14px 0}}
+    .cell:nth-child(odd){{padding-right:16px}}
     .cell .v{{font-size:26px}}
-    .top .nav a{{margin:0 12px 0 0}}
-    .hero h1{{font-size:clamp(28px,8vw,38px);max-width:none}}
+        .hero h1{{font-size:clamp(28px,8vw,38px);max-width:none}}
     .hero .sub{{font-size:16.5px}}
     .sec h2{{font-size:22px}}
     .sec{{padding:30px 0}}
@@ -261,15 +376,6 @@ def build():
 </head>
 <body>
 
-<div class="top"><div class="wrap"><div class="brand">
-  <a class="name" href="{BRAND}">Northern Mile Media<span>Est. 2026</span></a>
-  <nav class="nav">
-    <a href="{DASH}/">Data</a>
-    <a href="/blog/">Writing</a>
-    <a href="{DASH}/report/">The Brief</a>
-    <a href="{DASH}/methodology/nmdi/">Method</a>
-  </nav>
-</div></div></div>
 
 <div class="wrap">
 
@@ -309,38 +415,40 @@ def build():
   <div class="sec"><div class="row">
     <div class="lab">The data</div>
     <div>
-      <h2>One page that updates itself, from primary sources.</h2>
-      <p>Canadian diesel by province and city, US diesel by EIA district, border waits at every
-      Canada-US crossing, exchange rate, IFTA rates and fuel tax by jurisdiction. No account, no
-      paywall, no tracking.</p>
+      <h2>Quote a load without guessing at the fuel.</h2>
+      <p>A cross-border quote needs two numbers that agree: what diesel costs where you load, and
+      what it costs where you deliver. Most carriers price one side and hope. This gives you both,
+      converted to the same basis, on the day the source published it.</p>
       <ul class="facts">
-        <li>Cheapest province this week: <b>{f'{cheap[0]} at {cheap[1]:.1f}¢/L' if cheap else 'n/a'}</b></li>
-        <li>Dearest: <b>{f'{dear[0]} at {dear[1]:.1f}¢/L' if dear else 'n/a'}</b></li>
-        <li>Longest wait reporting right now: <b>{f'{worst[1]}, {worst[0]} min' if worst else 'n/a'}</b></li>
+        <li>{f'Cheapest fuel right now is <b>{cheap[0]} at {cheap[1]:.1f}&cent;/L</b>. If your return leg runs through it, that is where to fill.' if cheap else 'n/a'}</li>
+        <li>{f'The {dear[0]} figure is <b>{dear[1]:.1f}&cent;/L</b>, {dear[1] - cheap[1]:.1f}&cent; above it. That gap is what a single tank can move.' if cheap and dear else ''}</li>
+        <li>{f'Longest booth wait reporting is <b>{worst[1]} at {worst[0]} min</b>. Build the appointment around that one, not the average.' if worst else 'n/a'}</li>
+        <li>Free, no account, no paywall. Every figure carries the date the source published it.</li>
       </ul>
-      <a class="go" href="{DASH}/">Open the dashboard</a>
+      <a class="go" href="{DASH}/">See today&rsquo;s numbers</a>
     </div>
   </div></div>
 
   <div class="sec"><div class="row">
     <div class="lab">The writing</div>
     <div>
-      <h2>The part a price table cannot tell you.</h2>
-      <p>Why the two numbers are not comparable as published. What the CRA asks before it calls your
-      corporation a personal services business. Which IFTA filing mistakes trigger an audit, and what
-      they cost. Written for the person running the truck, not the person writing about it.</p>
-      <a class="go" href="/blog/">Read the writing</a>
+      <h2>Why the two numbers are not comparable as published.</h2>
+      <p>Canada quotes diesel by the litre, the US by the gallon, and neither is a price you can
+      compare until you convert both. That is the easy one. The harder ones are what the CRA asks
+      before it calls your corporation a personal services business, and which IFTA filing mistakes
+      trigger an audit. Written for the person running the truck.</p>
+      <a class="go" href="/blog/">Read the pieces</a>
     </div>
   </div></div>
 
   <div class="sec"><div class="row">
     <div class="lab">The Brief</div>
     <div>
-      <h2>For carriers running Ontario to Michigan or New York.</h2>
-      <p>A monthly page you can quote from: what a tractor burns per 1,000 km on each side of the
-      border, the spread to carry into a fuel surcharge, provincial prices where you fuel before the
-      return leg, and the booth waits on your own crossings. <b>$249 a month.</b></p>
-      <a class="go" href="{DASH}/report/">See the report</a>
+      <h2>One page a month, so your surcharge has a number behind it.</h2>
+      <p>Built for US carriers running Ontario to Michigan or New York. What a tractor burns per
+      1,000 km on each side, the spread to carry into a fuel surcharge, provincial prices where you
+      fuel before the return leg, and the booth waits on your own crossings. <b>$249 a month.</b></p>
+      <a class="go" href="{DASH}/report/">See what is in it</a>
     </div>
   </div></div>
 
@@ -366,6 +474,38 @@ def build():
 def main():
     os.makedirs(OUT, exist_ok=True)
     html = build()
+
+    # Take only the page content and wrap it in gen_templates' own head() and foot(), so the header
+    # and footer are byte-identical to every dashboard page and cannot drift again.
+    import sys
+    sys.path.insert(0, os.path.join(ROOT, "scripts"))
+    import gen_templates as G
+    import re as _re
+    import datetime as _dt
+
+    m = _re.search(r"<body>(.*?)</body>", html, _re.S)
+    body = m.group(1) if m else html
+    # The page CSS is scoped under .home. Removing the old header took the wrapper with it, so every
+    # .home .strip rule matched nothing and nm.css styled the whole page. Guarantee the wrapper here
+    # rather than relying on the markup surviving a future edit.
+    if 'class="home"' not in body:
+        body = '<div class="home">' + body + "</div>"
+    ld = ('{"@context":"https://schema.org","@type":"WebPage",'
+          '"name":"Northern Mile Media",'
+          f'"url":"{BRAND}"}}')
+    html = (G.head("Northern Mile Media — Canadian and US diesel, border and rate data",
+                   "Canadian provincial diesel next to US district diesel, live Canada-US border "
+                   "wait times and the Bank of Canada rate. Free, from primary sources.",
+                   "/", "/og.jpg", ld)
+            + body + G.foot())
+    # Page CSS goes in AFTER the shared stylesheet link so the home view can size its own blocks
+    # without fighting nm.css, and without redeclaring the header or footer.
+    html = html.replace("</head>", f"<style>{PAGE_CSS}</style></head>", 1)
+    _now = _dt.datetime.now(_dt.timezone.utc)
+    html = (html
+            .replace("{{build_version}}", _now.strftime("%Y-%m-%d-%H%M"))
+            .replace("{{updated_iso}}", _now.strftime("%Y-%m-%dT%H:%M:%SZ"))
+            .replace("{{updated_at}}", _now.strftime("%Y-%m-%d %H:%M")))
     path = os.path.join(OUT, "home.html")
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
