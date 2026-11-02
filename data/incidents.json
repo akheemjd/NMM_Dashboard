@@ -1,38 +1,38 @@
 {
   "incidents": [
     {
-      "id": "ON-331022",
-      "province": "ON",
-      "highway": "HWY 417",
-      "direction": "Eastbound",
-      "description": "Collision on HWY 417 Eastbound RAMP at ROCHESTER ST  (IC 121B), Ottawa. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 45.4026519,
-      "lng": -75.7114441,
-      "start": 1793573760,
-      "end": null,
-      "updated": 1793573760,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-331008",
       "province": "ON",
       "highway": "HWY 17",
-      "direction": "Both Directions",
-      "description": "Disabled Vehicle on HWY 17 Both Directions  at WHITE RIVER E LTS, White River. All lanes closed.",
+      "direction": "Eastbound",
+      "description": "Disabled Vehicle on HWY 17 Eastbound  at WHITE RIVER E LTS, White River. 2 lanes and EAST shoulder closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
+      "closure": false,
+      "lanes": "2 lanes and EAST shoulder closed",
       "lat": 48.588967404,
       "lng": -85.265317266,
       "start": 1793570160,
       "end": null,
-      "updated": 1793573160,
+      "updated": 1793577420,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-331030",
+      "province": "ON",
+      "highway": "HWY 401",
+      "direction": "Eastbound",
+      "description": "Vehicle Fire on HWY 401 Eastbound COLLECTOR RAMP at MISSISSAUGA RD, Mississauga. Left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left lane closed",
+      "lat": 43.6039972,
+      "lng": -79.7486801,
+      "start": 1793577300,
+      "end": null,
+      "updated": 1793577300,
       "country": "CA",
       "scheduled": false
     },
@@ -52,7 +52,7 @@
       "end": 1793743200,
       "updated": 1793556720,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "scheduled": false,
@@ -160,7 +160,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-02",
       "end_date": "2026-11-02",
       "id": "CA-C49QA-0001-2026-11-02-07:01:00",
@@ -223,7 +223,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-02",
       "end_date": "2026-11-03",
       "id": "CA-C580BA-0002-2026-11-02-21:01:00",
@@ -328,7 +328,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-02",
       "end_date": "2026-11-03",
       "id": "CA-C580BA-0007-2026-11-02-21:01:00",
@@ -433,7 +433,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-02",
       "end_date": "2026-11-03",
       "id": "CA-C580BA-0017-2026-11-02-19:01:00",
@@ -538,7 +538,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-02",
       "end_date": "2026-11-03",
       "id": "CA-C580BA-0022-2026-11-02-19:01:00",
@@ -667,7 +667,7 @@
       "end": 1793829600,
       "updated": 1793416380,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "drivebc.ca/RIDE-104874",
@@ -757,7 +757,7 @@
       "end": 1794607200,
       "updated": 1793396820,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330504",
@@ -775,7 +775,7 @@
       "end": 1794607200,
       "updated": 1793395560,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330500",
@@ -793,7 +793,7 @@
       "end": 1793995200,
       "updated": 1793394240,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330497",
@@ -829,7 +829,7 @@
       "end": 1793656800,
       "updated": 1793387220,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330418",
@@ -847,7 +847,7 @@
       "end": 1793656800,
       "updated": 1793384820,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330496",
@@ -865,7 +865,7 @@
       "end": 1793656800,
       "updated": 1793384700,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330417",
@@ -919,7 +919,7 @@
       "end": 1793916000,
       "updated": 1793382840,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330405",
@@ -937,7 +937,7 @@
       "end": 1793664000,
       "updated": 1793382660,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330401",
@@ -955,7 +955,7 @@
       "end": 1794218400,
       "updated": 1793382000,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330395",
@@ -973,7 +973,7 @@
       "end": 1794200340,
       "updated": 1793381400,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330392",
@@ -991,7 +991,7 @@
       "end": 1794200340,
       "updated": 1793381280,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-330388",
@@ -1027,7 +1027,7 @@
       "end": 1794002400,
       "updated": 1793379780,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ND-CN-23102",
@@ -1441,6 +1441,24 @@
       "end": "",
       "updated": "2026-10-26T11:49:57-07:00",
       "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "WI-38195fb3-adc3-9957-b7ef-7b92eef61566",
+      "province": "WI",
+      "country": "US",
+      "highway": "US 10 EB",
+      "direction": "Eastbound",
+      "description": "Road closed on US 10 EB eastbound, WI. System Interchange Full Closure on US 10 EB at US 10 EB TO I-41 SB (RAMP). Daily from 11/01/2026 to 11/02/2026, 06:00 PM - 06:00 AM, Sun, M",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 44.21823382271215,
+      "lng": -88.47829912157985,
+      "start": "2026-11-02T00:00:00+00:00",
+      "end": "2026-11-02T12:00:00+00:00",
+      "updated": "2026-10-25T05:14:15.893+00:00",
       "scheduled": false
     },
     {
@@ -2056,24 +2074,6 @@
       "scheduled": false
     },
     {
-      "id": "WI-658b2369-baa7-7a5d-88fa-ebb6a21f9a9a",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-94 EB",
-      "direction": "Eastbound",
-      "description": "Road closed on I-94 EB eastbound, WI. Ramp Full Closure on I-94 EB at ON RAMP FROM 35TH ST. Detour: Exit at 35th St to NB 35th St to EB Wisconsin Ave to SB 27th St to EB Clybourn St to SB 25th St to I-94 E",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 43.0322288244859,
-      "lng": -87.9566615603516,
-      "start": "2026-03-10T02:00:00+00:00",
-      "end": "2027-01-04T12:00:00+00:00",
-      "updated": "2026-03-05T20:58:24.537+00:00",
-      "scheduled": false
-    },
-    {
       "id": "MO-533982",
       "province": "MO",
       "country": "US",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-01T23:31:27.626206+00:00",
+  "updated": "2026-11-02T00:00:47.485190+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
