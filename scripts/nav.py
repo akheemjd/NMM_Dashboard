@@ -49,6 +49,9 @@ NAV_GROUPS = [
     ("About", "/methodology/nmdi/", "", [
         ("/methodology/nmdi/", "Methodology", "Every source and revision"),
         ("/press/", "Press", "Citable data and citations"),
+        # The paid product. In the footer rather than the top nav: it is an offer, not a section,
+        # and putting it on every page keeps /report/ crawlable from the whole site.
+        ("/report/", "The Brief", "The Cross-Border Cost Brief, $249/month"),
         ("/contact/", "Contact", "Corrections and sponsorship"),
     ]),
 ]

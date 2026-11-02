@@ -362,8 +362,11 @@ write("index",
         <span class="cn">United States</span>
         <div class="figure"><span class="n">{{eia.us_national_usd_gal}}</span><span class="u">$/gal</span><span class="d {{eia.us_change_7d_class}}">{{eia.us_change_7d}} · 7d</span></div>
         <span class="fsrc">EIA weekly retail survey · priced in USD per gallon · ten districts, not states</span>
-      </div>
-    </div>
+        </div>
+        </div>
+        <p class="stand" style="margin-top:22px">For carriers running Ontario to Michigan or New York:
+        <a href="/report/"><b>The Cross-Border Cost Brief</b></a> puts the fuel spread, provincial prices
+        and your crossings on one page each month. $249/month.</p>
     <p class="stand">Canada to the US: <b>{{eia.ca_us_gap}}¢/L</b> · {{eia.gap_word}}. At 35 L/100km the Canadian figure is <b>{{fuel.fuel_cost_per_km}} per km</b> — the fuel half of your rate floor. <a href="/fuel-cost-calculator/">Work out your lane's full floor</a></p>
     <div class="meta"><span>Ten provinces · ten districts</span><span>NRCan print <b>{{fuel.print_date}}</b></span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
 ''' + rail() + chart_summary() + cite() + '''

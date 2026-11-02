@@ -288,6 +288,9 @@ write(
     <p class="pickgap"><span class="gl">{{eia.gap_word}}<small>US${{eia.ca_us_gap_usd_gal}} a gallon. The two national averages on one axis.</small></span><b>{{eia.ca_us_gap}}¢/L</b></p>
     <p class="stand">Both trees are free and need no account. The <a href="#crossborder">cross-border
     figures</a> below are the same in either one.</p>
+    <p class="stand">For carriers running Ontario to Michigan or New York:
+    <a href="/report/"><b>The Cross-Border Cost Brief</b></a> puts the fuel spread, provincial prices
+    and your own crossings on one page each month. $249/month.</p>
     <div class="meta"><span>Ten provinces · ten districts</span><span>Rebuilt <b>{{updated_at}}</b> UTC</span></div>
   </section>
 
