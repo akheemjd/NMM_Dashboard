@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-331420",
+      "province": "ON",
+      "highway": "HWY 403 HAMILTON",
+      "direction": "Westbound",
+      "description": "Collision on HWY 403 HAMILTON Westbound  at HWY 52, Hamilton. Right lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane closed",
+      "lat": 43.20120296,
+      "lng": -80.04529238,
+      "start": 1793687880,
+      "end": null,
+      "updated": 1793687880,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-331416",
       "province": "ON",
       "highway": "HWY 400",
@@ -447,24 +465,6 @@
       "start": 1794114000,
       "end": 1795255200,
       "updated": 1793644260,
-      "country": "CA",
-      "scheduled": true
-    },
-    {
-      "id": "ON-331256",
-      "province": "ON",
-      "highway": "HWY 11",
-      "direction": "Northbound",
-      "description": "Daily Construction on HWY 11 Northbound  between NORTH WASEOSA LK RD (W)/ROCKHAVEN RD(E) IC UP and NORTH WASEOSA LK RD (W)/ROCKHAVEN RD(E) IC UP, Huntsville. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 45.410778,
-      "lng": -79.23957,
-      "start": 1793793600,
-      "end": 1797033600,
-      "updated": 1793643780,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-03T06:01:06.025288+00:00",
+  "updated": "2026-11-03T07:01:09.019243+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
