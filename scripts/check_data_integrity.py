@@ -1438,7 +1438,29 @@ def check_fx_markers():
     return out
 
 
+def check_no_placeholder_text():
+    """No built page publishes an internal placeholder or an unsold ad slot.
+
+    Until 2026-11-03 all eight slots in data/sponsors.json carried the name
+    "This slot is open", so eight unsold slots rendered on ten live pages as
+    though a sponsor existed - a sales note printed for visitors to read.
+
+    The drop path already worked: build_templates.load_sponsors() skips a slot
+    whose name is empty. Nothing asserted that the file used it, so a slot
+    marked "open" looked exactly like a sold one. This is that assertion.
+    """
+    banned = ("This slot is open", "SPONSOR SLOT", "Lorem ipsum", "TODO:", "FIXME:")
+    hits = []
+    for f in sorted(pathlib.Path(DOCS).rglob("*.html")):
+        text = f.read_text(encoding="utf-8", errors="ignore")
+        for b in banned:
+            if b in text:
+                hits.append(f"{os.path.relpath(f, DOCS)} -> {b!r}")
+    return hits
+
+
 CHECKS = (
+    ("no page publishes a placeholder or an unsold ad slot", check_no_placeholder_text),
     ("every og:image resolves to a built file", check_og_images_exist),
     ("the currency layer is complete and non-nesting", check_fx_markers),
         ("history is fresh", check_history_is_fresh),
