@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-04 13:00",
-  "updated_iso": "2026-11-04T13:00:58+00:00",
-  "build_version": "1793797258",
+  "updated_at": "2026-11-04 14:00",
+  "updated_iso": "2026-11-04T14:00:55+00:00",
+  "build_version": "1793800855",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Peace Bridge",
     "max_wait": "13 min",
-    "us_max_name": "Emerson-Pembina",
-    "us_max_wait": "20 min",
+    "us_max_name": "Blaine-Pacific Highway",
+    "us_max_wait": "30 min",
     "ca_max_name": "Peace Bridge"
   },
   "fuel": {
@@ -350,20 +350,20 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 71,
+    "active_count": 75,
     "gauge_class": "warn",
-    "status_line": "Live now: 52 in the US, 29 in Canada.",
+    "status_line": "Live now: 52 in the US, 33 in Canada.",
     "incidents": [
       {
-        "road": "I-5 in Stanislaus County",
-        "what": "Route 5 near Westley. Rest Area Work. All of 1 lanes closed.",
-        "severity_label": "Closed",
+        "road": "94E",
+        "what": "Lane closure on 94E eastbound, ND. Traffic is reduced to a single lane for\u2026",
+        "severity_label": "Minor",
         "severity_class": "ok",
         "url": "/road-incidents/"
       },
       {
-        "road": "QEW",
-        "what": "Disabled Vehicle on QEW Fort Erie bound  at BOWEN ROAD, Fort Erie. Left\u2026",
+        "road": "HWY 403 MISSISSAUGA",
+        "what": "Collision on HWY 403 MISSISSAUGA Eastbound  at WINSTON CHURCHILL BLVD,\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,7 +379,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:15 EST",
+      "captured_at": "08:15 EST",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
@@ -413,7 +413,7 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "3 min",
+      "us_wait": "4 min",
       "us_status_class": "mod"
     },
     {
@@ -428,7 +428,7 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "4 min",
+      "us_wait": "1 min",
       "us_status_class": "mod"
     },
     {
@@ -443,8 +443,8 @@
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
-      "us_wait": "not reported",
-      "us_status_class": "na"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Coutts-Sweetgrass",
@@ -469,12 +469,12 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT",
+      "captured_at": "06:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "5 min",
-      "us_status_class": "mod"
+      "us_wait": "30 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Emerson-Pembina",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "06:57 CDT",
+      "captured_at": "08:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "6 of 6 crossings slow, US-bound",
-      "value": "6/6",
+      "note": "6 of 7 crossings slow, US-bound",
+      "value": "6/7",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "drivers",
+      "category": "markets",
       "source": "The Trucker",
-      "headline": "Driving well: Driver health starts with the environment fleets create",
-      "url": "https://www.thetrucker.com/trucking-news/truckload-authority/trends-in-trucking/driving-well-driver-health-starts-with-the-environment-fleets-create",
-      "why": "Driver supply and pay shape capacity and rates."
+      "headline": "Truck capacity drives freight toward intermodal as 2027 uncertainty looms",
+      "url": "https://www.thetrucker.com/trucking-news/business/truck-capacity-drives-freight-toward-intermodal-as-2027-uncertainty-looms",
+      "why": "Rate direction is the difference between profit and loss on a lane."
     },
     {
       "category": "industry",
       "source": "The Trucker",
-      "headline": "US job postings jumped sharply in September, potentially a good sign for anyone seeking employment",
-      "url": "https://www.thetrucker.com/trucking-news/business/us-job-postings-jumped-sharply-in-september-potentially-a-good-sign-for-anyone-seeking-employment",
+      "headline": "Trucking company owner Mike Collins defeated soundly in Georgia Senate race",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/trucking-company-owner-mike-collins-defeated-soundly-in-georgia-senate-race",
       "why": "Industry movement worth tracking."
     }
   ],
