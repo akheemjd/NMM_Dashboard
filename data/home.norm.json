@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-04 04:00",
-  "updated_iso": "2026-11-04T04:00:54+00:00",
-  "build_version": "1793764854",
+  "updated_at": "2026-11-04 05:01",
+  "updated_iso": "2026-11-04T05:01:14+00:00",
+  "build_version": "1793768474",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 69,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 52 in the US, 27 in Canada.",
+    "status_line": "Live now: 52 in the US, 30 in Canada.",
     "incidents": [
       {
         "road": "US 75",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 401",
-        "what": "Collision on HWY 401 Westbound COLLECTOR RAMP at WINSTON CHURCHILL BLVD,\u2026",
+        "road": "QEW",
+        "what": "Disabled Vehicle on QEW Fort Erie bound  at GRAYS ROAD, Hamilton. Right lane\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "16 min",
-      "us_status_class": "heavy"
+      "us_wait": "2 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -439,7 +439,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:54 EST",
+      "captured_at": "23:15 EST",
       "route": "Lacolle, QC \u2014 Champlain, NY",
       "label": "Champlain-Lacolle",
       "route_both": "Champlain, NY and Lacolle, QC",
@@ -454,22 +454,22 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:15 MDT",
+      "captured_at": "22:48 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "5 min",
+      "us_status_class": "mod"
     },
     {
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "5 min",
+      "wait": "10 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "20:40 PDT",
+      "captured_at": "21:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
@@ -484,7 +484,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "21:50 CDT",
+      "captured_at": "23:15 CDT",
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
@@ -583,8 +583,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "4 of 9 crossings slow, US-bound",
-      "value": "4/9",
+      "note": "5 of 9 crossings slow, US-bound",
+      "value": "5/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -611,17 +611,17 @@
   "theft": [],
   "news": [
     {
-      "category": "drivers",
-      "source": "Truck News",
-      "headline": "Toronto truck driver wins $50,000 after finding forgotten lottery ticket",
-      "url": "https://www.trucknews.com/human-resources/toronto-truck-driver-wins-50000-after-finding-forgotten-lottery-ticket/1003224469/",
-      "why": "Driver supply and pay shape capacity and rates."
+      "category": "industry",
+      "source": "The Trucker",
+      "headline": "New West Truck Centres joins Velocity, expanding network to 24 locations in western Canada",
+      "url": "https://www.thetrucker.com/trucking-news/equipment-tech/new-west-truck-centres-joins-velocity-expanding-network-to-24-locations-in-western-canada",
+      "why": "Industry movement worth tracking."
     },
     {
       "category": "safety",
-      "source": "Truck News",
-      "headline": "FMCSA offers $7 million in truck safety research grants",
-      "url": "https://www.trucknews.com/transportation/fmcsa-offers-7-million-in-truck-safety-research-grants/1003224464/",
+      "source": "The Trucker",
+      "headline": "Beyond the crash report: FMCSA study to examine factors in fatal truck crashes",
+      "url": "https://www.thetrucker.com/trucking-news/the-nation/beyond-the-crash-report-fmcsa-study-to-examine-factors-in-fatal-truck-crashes",
       "why": "Safety rules and blitzes hit the road on specific dates."
     }
   ],
