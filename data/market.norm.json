@@ -47,8 +47,8 @@
     },
     {
       "name": "Fuel cost per 1,000 km",
-      "note": "At 263.8\u00a2/L and 35 L/100km",
-      "value": "$923",
+      "note": "At 263.4\u00a2/L and 35 L/100km",
+      "value": "$922",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "NRCan weekly diesel survey",
@@ -66,7 +66,7 @@
     {
       "name": "BC vs AB diesel spread",
       "note": "Wide gaps create arbitrage on cross-province lanes. BC\u2026",
-      "value": "39.5\u00a2/L",
+      "value": "39.0\u00a2/L",
       "value_class": "flat",
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "NRCan weekly diesel survey",
@@ -75,8 +75,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "7 of 8 crossings slow, US-bound",
-      "value": "7/8",
+      "note": "7 of 9 crossings slow, US-bound",
+      "value": "7/9",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -92,8 +92,8 @@
     },
     {
       "name": "USD/CAD vs 30-day average",
-      "note": "-0.0145 vs 30-day avg 1.4123",
-      "value": "1.3978",
+      "note": "-0.0117 vs 30-day avg 1.4111",
+      "value": "1.3994",
       "value_class": "flat",
       "country_prefix": "",
       "source": "Bank of Canada",
@@ -101,12 +101,12 @@
     }
   ],
   "direction_summary": "3 up \u00b7 1 down \u00b7 5 steady or level",
-  "weekly_read": "US diesel at $6.292/gal, Canadian diesel at 263.8\u00a2/L, the loonie at 1.3978, US GDP moving +3.4% annualized last quarter, Canadian GDP moving 0.0% last month.",
+  "weekly_read": "US diesel at $6.292/gal, Canadian diesel at 263.4\u00a2/L, the loonie at 1.3994, US GDP moving +3.4% annualized last quarter, Canadian GDP moving 0.0% last month.",
   "fuel_pct_of_ops": "25-35%",
-  "current_diesel": 263.8,
+  "current_diesel": 263.4,
   "us_diesel": "6.292",
-  "usd_cad": 1.3978,
-  "updated_at": "2026-11-03 17:06",
-  "updated_iso": "2026-11-03T17:06:04+00:00",
-  "build_version": "1793725564"
+  "usd_cad": 1.3994,
+  "updated_at": "2026-11-04 00:08",
+  "updated_iso": "2026-11-04T00:08:21+00:00",
+  "build_version": "1793750901"
 }
