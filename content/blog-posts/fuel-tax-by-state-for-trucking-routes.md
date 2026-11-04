@@ -63,7 +63,7 @@ The tax side is where the Canadian corridor gets strange. The IFTA matrix prints
 
 Read the diesel column while you are in that matrix, not the gasoline column. British Columbia prints 0.406 for diesel against 0.3924 for gasoline. The wrong line files the wrong number.
 
-## What the district price cannot tell you
+## Fuel tax by state for trucking routes tells you where to buy
 
 EIA's districts are built around supply, not around routes. On the Newark to Chicago run the retail district changes once, at the Ohio line. Central Atlantic covers New Jersey and Pennsylvania at 6.486. Midwest covers Ohio, Indiana, Illinois and Michigan at 6.402. The tax changes four times on that same run, so the district figure cannot tell you which side of the Pennsylvania line to buy on. The tax table can.
 
