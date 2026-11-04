@@ -1,24 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-331795",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound EXPRESS at McCOWAN ROAD, Toronto. Left shoulder and 1 left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.78103077,
-      "lng": -79.25480516,
-      "start": 1793771340,
-      "end": null,
-      "updated": 1793771340,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-331784",
       "province": "ON",
       "highway": "HWY 401",
@@ -537,6 +519,24 @@
       "start": 1796047200,
       "end": 1796328000,
       "updated": 1793719380,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
+      "id": "ON-331583",
+      "province": "ON",
+      "highway": "HWY 26",
+      "direction": "Westbound",
+      "description": "Daily Maintenance on HWY 26 Westbound  between CARSON ROAD, Springwater and POPLAR SIDEROAD, Clearview. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 44.42869,
+      "lng": -79.7241,
+      "start": 1796047200,
+      "end": 1796328000,
+      "updated": 1793719320,
       "country": "CA",
       "scheduled": true
     },
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-04T06:00:44.738574+00:00",
+  "updated": "2026-11-04T07:00:45.627200+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
