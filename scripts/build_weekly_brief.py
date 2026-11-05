@@ -272,6 +272,125 @@ def format_incidents(incidents_data):
     return major[:5]
 
 
+def format_theft(theft):
+    theft = theft or {}
+    rows = theft.get("incidents") or []
+    if not rows:
+        return ["*Theft feed returned 0 incidents this run.*",
+                "*Do not publish a cargo-theft figure from this: a post built on an empty feed "
+                "invents its own evidence.*"]
+    out = [f"**Published theft incidents in the feed:** {len(rows)}"]
+    for r in rows[:5]:
+        if isinstance(r, dict):
+            title = r.get("title") or r.get("headline") or ""
+            out.append(f"- {title}".rstrip())
+    return out
+
+
+def format_cbp(cbp):
+    """US-bound commercial lanes at every CBP port polled.
+
+    The CBP feed publishes a figure for roughly a third of ports at any given hour. Absent is
+    not zero, which is why this section prints the "reported" count before any delay number.
+    """
+    cbp = cbp or {}
+    counts = cbp.get("counts") or {}
+    ports = cbp.get("ports") or []
+    if not counts or not ports:
+        return ["*CBP port feed returned nothing this run - do not quote a port figure.*"]
+    out = [
+        f"**Ports polled:** {counts.get('total')} ({counts.get('canadian')} Canadian border, "
+        f"{counts.get('mexican')} Mexican border)",
+        f"**Reported a commercial delay at fetch time:** {counts.get('commercial_delay_reported')}",
+        "",
+    ]
+    reported = [p for p in ports
+                if p.get("commercial_reported") and p.get("commercial_delay") is not None]
+    reported.sort(key=lambda p: p["commercial_delay"], reverse=True)
+    if reported:
+        out.append("**Deepest reported commercial delays (minutes):**")
+        for p in reported[:5]:
+            out.append(f"- {p.get('label')} ({p.get('us_state') or 'US'}): "
+                       f"{p['commercial_delay']} min")
+        out.append("")
+    if cbp.get("source_note"):
+        out.append(f"*{cbp['source_note']}*")
+    return out
+
+
+def format_ifta(ifta, us_fuel_tax=None):
+    """Quarterly IFTA rates by jurisdiction.
+
+    The matrix quotes US jurisdictions per gallon and Canadian ones per litre. High and low are
+    computed inside each country and never across them - subtracting one from the other produces
+    a spread number that does not mean anything.
+    """
+    ifta = ifta or {}
+    rows = ifta.get("jurisdictions") or []
+    counts = ifta.get("counts") or {}
+    if not rows:
+        return ["*IFTA matrix unavailable this run - do not quote a rate.*"]
+    out = [
+        f"**Matrix quarter:** {ifta.get('quarter', 'n/a')} "
+        f"(requested {ifta.get('quarter_requested', 'n/a')})",
+        f"**Jurisdictions:** {counts.get('total', len(rows))} "
+        f"({counts.get('canadian', 'n/a')} Canadian, {counts.get('us', 'n/a')} US)",
+        "",
+    ]
+    # The matrix publishes a per-litre conversion for EVERY jurisdiction, not just the Canadian
+    # ones, so filtering on "has a ca rate" put California in the Canadian high/low. Split on the
+    # is_canadian flag instead. A 0.0 in either field is a jurisdiction with no rate in the matrix
+    # (Oregon carries ifta_number null), not a zero rate, so exclude it and say how many were
+    # excluded rather than letting it become the "low".
+    def _split(rows):
+        return ([r for r in rows if r[1]], [r for r in rows if not r[1]])
+
+    us = [(j.get("name"), (j.get("us") or {}).get("diesel")) for j in rows
+          if not j.get("is_canadian") and (j.get("us") or {}).get("diesel") is not None]
+    ca = [(j.get("name"), (j.get("ca") or {}).get("diesel")) for j in rows
+          if j.get("is_canadian") and (j.get("ca") or {}).get("diesel") is not None]
+
+    us_nz, us_zero = _split(us)
+    if us_nz:
+        hi, lo = max(us_nz, key=lambda x: x[1]), min(us_nz, key=lambda x: x[1])
+        out.append(f"**US diesel rate, high/low ($/gal):** {hi[0]} {hi[1]} / {lo[0]} {lo[1]}"
+                   + (f" ({len(us_zero)} jurisdiction(s) quote 0.0 - no rate in the matrix, "
+                      f"not a zero rate)" if us_zero else ""))
+    ca_nz, ca_zero = _split(ca)
+    if ca_nz:
+        hi, lo = max(ca_nz, key=lambda x: x[1]), min(ca_nz, key=lambda x: x[1])
+        out.append(f"**Canadian diesel rate, high/low ($/L):** {hi[0]} {hi[1]} / {lo[0]} {lo[1]}"
+                   + (f" ({len(ca_zero)} quote 0.0)" if ca_zero else ""))
+
+    if us_fuel_tax:
+        out.append("")
+        out.append(f"**EIA state motor fuel taxes:** sheet {us_fuel_tax.get('sheet', 'n/a')}, "
+                   f"source dated {us_fuel_tax.get('updated', 'n/a')}")
+    return out
+
+
+def format_border_history(trends):
+    """What the border archive says, as opposed to what this hour says."""
+    rows = [c for c in ((trends or {}).get("crossings") or {}).values()
+            if isinstance(c, dict) and c.get("observations")]
+    if not rows:
+        return ["*Border archive empty this run.*"]
+    rows.sort(key=lambda c: c.get("observations") or 0, reverse=True)
+    b = rows[0]
+    out = [
+        f"**Crossings with archived readings:** {len(rows)}",
+        f"**Deepest archive:** {b.get('id')} - {b.get('observations')} readings over "
+        f"{b.get('days_covered')} days: average {b.get('avg_delay')} min, "
+        f"p90 {b.get('p90')} min, worst {b.get('max_delay')} min",
+        "",
+        "**Longest archives (readings / days / avg / p90 / worst, minutes):**",
+    ]
+    for c in rows[:8]:
+        out.append(f"- {c.get('id')}: {c.get('observations')} / {c.get('days_covered')} / "
+                   f"{c.get('avg_delay')} / {c.get('p90')} / {c.get('max_delay')}")
+    return out
+
+
 def generate_brief(today_override=None):
     """Build the complete weekly brief."""
     today = today_override or datetime.now(timezone.utc).date()
@@ -288,6 +407,10 @@ def generate_brief(today_override=None):
     eia = load_json("eia_diesel")
     border_trends = load_json("border_trends")
     home = load_json("home.norm.json")
+    cbp = load_json("cbp_border")
+    ifta = load_json("ifta")
+    us_fuel_tax = load_json("us_fuel_tax")
+    theft = load_json("theft")
     
     # Build sections
     sections = []
@@ -358,10 +481,21 @@ def generate_brief(today_override=None):
     # ── Section 5: Active Incidents ──
     active_majors = format_incidents(incidents_data)
     sections.append(("ACTIVE INCIDENTS", "Road closures disrupting freight", active_majors))
-    
+
+    # ── Sections 6-9: the subjects that are not fuel ──
+    # These datasets were collected, published as single dashboard leaves, and then never
+    # reached the writing desk, because nothing in this brief read them. Every angle the brief
+    # offered was a diesel angle, so every post came back to diesel. The data was never the gap.
+    sections.append(("CBP PORT DELAYS", "US-bound commercial lanes, every port polled", format_cbp(cbp)))
+    sections.append(("IFTA AND FUEL TAX", "Quarterly rates by jurisdiction", format_ifta(ifta, us_fuel_tax)))
+    sections.append(("BORDER ARCHIVE", "What the history says, not what this hour says", format_border_history(border_trends)))
+    sections.append(("CARGO THEFT", "Published incidents in the feed", format_theft(theft)))
+
     # ── Generate blog angles ──
-    angles = _generate_angles(fuel_info, fx_info, border_info, econ_signals, news_analysis, active_majors, date_str)
-    
+    angles = _generate_angles(fuel_info, fx_info, border_info, econ_signals, news_analysis,
+                              active_majors, date_str, cbp=cbp, ifta=ifta,
+                              trends=border_trends, incidents=incidents_data)
+
     # ── Suggested keywords ──
     keywords = _suggest_keywords(fuel_info, fx_info, border_info, news_analysis)
     
@@ -369,7 +503,7 @@ def generate_brief(today_override=None):
     BRIEF_DIR.mkdir(parents=True, exist_ok=True)
     brief_path = BRIEF_DIR / f"brief_{date_str}.md"
     
-    content = _format_brief(date_str, sections, angles, keywords, fuel_info, fx_info, border_info, news_analysis, raw={"exchange": exchange, "border": border, "news": news})
+    content = _format_brief(date_str, sections, angles, keywords, fuel_info, fx_info, border_info, news_analysis, raw={"exchange": exchange, "border": border, "news": news, "cbp": cbp, "ifta": ifta, "theft": theft})
     
     with open(brief_path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -381,8 +515,15 @@ def generate_brief(today_override=None):
     return str(brief_path), angles, keywords
 
 
-def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
-    """Generate 3-5 story angles based on data conditions."""
+def _generate_angles(fuel, fx, border, econ, news, majors, date_str, cbp=None, ifta=None,
+                     trends=None, incidents=None):
+    """Generate story angles based on data conditions.
+
+    Every angle carries a ``lane``. The brief prints two fuel angles and two from anywhere else,
+    because for months it printed the first four and the first four were all diesel - which is
+    how a pipeline with 85 CBP ports, 58 IFTA jurisdictions and 115 incidents produced a blog
+    that read like a fuel-price feed.
+    """
     angles = []
     
     # Angle 1: Fuel price movement
@@ -392,6 +533,7 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
             angles.append({
                 "headline": "Canada's diesel price gap is wider than ever — where are you paying the most?",
                 "focus": "Provincial dispersion analysis",
+                "lane": "fuel",
                 "data_used": ["diesel_spread", "provincial_rankings"],
                 "angle_text": f"Nationwide spread of {spread}¢/L between cheapest ({fuel['lowest'][0]} at {fuel['lowest'][1]}¢/L) and most expensive ({fuel['highest'][0]} at {fuel['highest'][1]}¢/L). That gap matters more than the national average.",
             })
@@ -399,6 +541,7 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
             angles.append({
                 "headline": "Diesel prices holding steady — but the map still tells half the story",
                 "focus": "Stability with regional nuance",
+                "lane": "fuel",
                 "data_used": ["diesel_national", "regional_comparison"],
                 "angle_text": f"National average at {fuel['national_avg']}¢/L. Moderate spread of {spread}¢/L suggests supply chains are functioning but local dynamics persist.",
             })
@@ -406,6 +549,7 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
             angles.append({
                 "headline": "Diesel prices flat — what's keeping pumps stable this week",
                 "focus": "Price stability analysis",
+                "lane": "fuel",
                 "data_used": ["diesel_stable"],
                 "angle_text": f"All provinces clustered within {spread}¢/L. Supply-demand balance at near-term equilibrium.",
             })
@@ -416,6 +560,7 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
         angles.append({
             "headline": f"Canadian dollar shifts {abs(fx.get('change_pct', 0)):.1f}% — what it means at the pump",
             "focus": "FX impact on diesel costs",
+            "lane": "fuel",
             "data_used": ["fx_change_pct", "usd_cad_rate"],
             "angle_text": f"CAD moved {direction} against USD. At {fx['current']}, every barrel of crude imported costs {'more' if fx['change_pct'] > 0 else 'less'} in Canadian terms. Cross-reference with NRCan data for full picture.",
         })
@@ -426,6 +571,7 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
         angles.append({
             "headline": "Multiple border ports showing critical wait times — schedule your hauls accordingly",
             "focus": "Border disruption logistics",
+            "lane": "border",
             "data_used": ["border_alerts", "port_delays"],
             "angle_text": f"{alert_count} ports flagged with ALERT-level delays. If you haul US-bound freight, consider alternate routes or timing adjustments.",
         })
@@ -437,10 +583,95 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
                 angles.append({
                     "headline": theme["angle"].capitalize(),
                     "focus": theme["topic"],
+                    "lane": "rules",
+                    "specific": False,
                     "data_used": ["news_categories", "canadian_headlines"],
                     "angle_text": theme["angle"],
                 })
+
     
+    # ── Angles that are not about the pump ──
+    #
+    # Each one is grounded in a dataset already on disk, and each states the field it rests on so
+    # the writer can quote it without recomputing anything.
+
+    # Border operations, from the archive rather than this hour's reading.
+    archive = [c for c in ((trends or {}).get("crossings") or {}).values()
+               if isinstance(c, dict) and c.get("observations")]
+    if archive:
+        archive.sort(key=lambda c: c.get("observations") or 0, reverse=True)
+        b = archive[0]
+        angles.append({
+            "headline": f"{b.get('id')} has {b.get('observations')} archived readings, and the average hides the day",
+            "focus": "Border operations from the archive",
+            "lane": "border",
+            "data_used": ["border_archive", "avg_delay", "p90", "max_delay"],
+            "angle_text": (
+                f"{len(archive)} crossings carry archived readings; {b.get('id')} has the deepest at "
+                f"{b.get('observations')} over {b.get('days_covered')} days. Its average is "
+                f"{b.get('avg_delay')} min, p90 {b.get('p90')} min, worst {b.get('max_delay')} min. "
+                f"The gap between the average and the worst reading is the story: an average wait "
+                f"tells a driver nothing about the hour he is planning around."
+            ),
+        })
+
+    # CBP port coverage - the American side of the border.
+    counts = (cbp or {}).get("counts") or {}
+    ports = (cbp or {}).get("ports") or []
+    if counts.get("total"):
+        reported = [p for p in ports
+                    if p.get("commercial_reported") and p.get("commercial_delay") is not None]
+        reported.sort(key=lambda p: p["commercial_delay"], reverse=True)
+        deepest = reported[0] if reported else None
+        angles.append({
+            "headline": f"{counts.get('commercial_delay_reported')} of {counts.get('total')} CBP ports published a commercial delay",
+            "focus": "American port coverage and what the blank hours mean",
+            "lane": "ops",
+            "data_used": ["cbp_ports", "commercial_delay_reported", "commercial_delay"],
+            "angle_text": (
+                f"CBP polls {counts.get('total')} ports ({counts.get('canadian')} Canadian border, "
+                f"{counts.get('mexican')} Mexican border); {counts.get('commercial_delay_reported')} "
+                f"reported a commercial delay at fetch time"
+                + (f", deepest {deepest.get('label')} at {deepest.get('commercial_delay')} min."
+                   if deepest else ".")
+                + " The ports with no figure are not zero - say so, because a carrier planning a "
+                  "run reads a blank as a clear lane."
+            ),
+        })
+
+    # IFTA - the tax side of the same gallon.
+    ifta_counts = (ifta or {}).get("counts") or {}
+    if ifta_counts.get("total"):
+        angles.append({
+            "headline": f"IFTA covers {ifta_counts.get('total')} jurisdictions and the rate is not the same twice",
+            "focus": "Fuel tax exposure across jurisdictions",
+            "lane": "rules",
+            "data_used": ["ifta_matrix", "us_diesel_rate", "ca_diesel_rate"],
+            "angle_text": (
+                f"Matrix quarter {ifta.get('quarter', 'n/a')} carries "
+                f"{ifta_counts.get('total')} jurisdictions ({ifta_counts.get('canadian')} Canadian, "
+                f"{ifta_counts.get('us')} US). US rates are quoted per gallon and Canadian ones per "
+                f"litre, so never subtract one from the other - do the comparison inside each "
+                f"country and say which unit you are in."
+            ),
+        })
+
+    # Incidents - the road, not the pump.
+    inc_rows = (incidents or {}).get("incidents") or []
+    if inc_rows:
+        sources = (incidents or {}).get("sources") or []
+        angles.append({
+            "headline": f"{len(inc_rows)} active road incidents are sitting in the feed right now",
+            "focus": "Road closures and what they do to a lane",
+            "lane": "ops",
+            "data_used": ["incidents", "severity", "province"],
+            "angle_text": (
+                f"{len(inc_rows)} incidents are live from {len(sources) or 'n/a'} sources, "
+                f"{len(majors or [])} of them major. This is the dataset a driver would use, and "
+                f"it currently gets one page on the site and no post."
+            ),
+        })
+
     # Angle 5: Week-at-a-glance
     data_refs = []
     if fuel.get("national_avg"):
@@ -456,6 +687,8 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
     angles.append({
         "headline": "Week-in-review: fuel, borders, and the numbers that matter for truckers",
         "focus": "Weekly roundup",
+        "lane": "roundup",
+        "specific": False,
         "data_used": data_refs,
         "angle_text": f"Fuel: {fuel.get('print_date', 'n/a')}, national avg {fuel.get('national_avg', 'n/a')}¢/L. FX: {fx.get('current')} on {fx.get('obs_date', 'n/a')}. Borders: {total_crossings} crossings tracked.",
     })
@@ -464,36 +697,55 @@ def _generate_angles(fuel, fx, border, econ, news, majors, date_str):
 
 
 def _suggest_keywords(fuel, fx, border, news):
-    """Suggest search-targeting keywords based on current data."""
-    kw = []
-    
+    """Suggest search-targeting keywords based on current data.
+
+    Interleaved on purpose. The list used to be truncated to eight, and the fuel terms were added
+    first, so the non-fuel keywords were cut off every single week and the published keyword set
+    was always fuel.
+    """
+    fuel_kw = []
+    other_kw = []
+
     if fuel.get("national_avg"):
-        kw.append(f"canada diesel price")
-        kw.append(f"diesel price today")
-        kw.append(f"truck fuel cost calculator")
-    
+        fuel_kw.append(f"canada diesel price")
+        fuel_kw.append(f"diesel price today")
+        fuel_kw.append(f"truck fuel cost calculator")
+
     if fx.get("current") and abs(fx.get("change_pct", 0)) > 0.2:
-        kw.append("cad usd exchange rate")
-        kw.append("canadian dollar trucking")
-    
+        fuel_kw.append("cad usd exchange rate")
+        fuel_kw.append("canadian dollar trucking")
+
     if border.get("alerts"):
-        kw.append("border wait times")
-        kw.append("ambassador bridge wait time")
-        kw.append("canada us border crossing")
-    
+        other_kw.append("border wait times")
+        other_kw.append("ambassador bridge wait time")
+        other_kw.append("canada us border crossing")
+        other_kw.append("cbp port wait times")
+
+    other_kw.append("ifta rates by state")
+    other_kw.append("road closures trucking")
+
     # From news themes
     themes = news.get("emerging_themes", [])
     for t in themes:
         if "Tariff" in t["topic"] or "Trade" in t["topic"]:
-            kw.append("tariffs canada trucking")
-            kw.append("us canada trade policy")
+            other_kw.append("tariffs canada trucking")
+            other_kw.append("us canada trade policy")
         if "Regulation" in t["topic"]:
-            kw.append("trucking regulations canada")
-            kw.append("hours of service changes")
+            other_kw.append("trucking regulations canada")
+            other_kw.append("hours of service changes")
         if "Economy" in t["topic"]:
-            kw.append("economic outlook trucking")
-    
-    return list(dict.fromkeys(kw))[:8]
+            other_kw.append("economic outlook trucking")
+
+    # Round-robin so both lanes survive the eight-item cut.
+    fuel_kw = list(dict.fromkeys(fuel_kw))
+    other_kw = list(dict.fromkeys(other_kw))
+    merged = []
+    for i in range(max(len(fuel_kw), len(other_kw))):
+        if i < len(fuel_kw):
+            merged.append(fuel_kw[i])
+        if i < len(other_kw):
+            merged.append(other_kw[i])
+    return merged[:8]
 
 
 def _format_brief(date_str, sections, angles, keywords, fuel, fx, border, news, raw=None):
@@ -527,6 +779,9 @@ def _format_brief(date_str, sections, angles, keywords, fuel, fx, border, news, 
         "CBSA Border": _first_stamp(_raw("border"), ("updated",)),
         "RSS News": _first_stamp(_raw("news"), ("updated",)),
         "Incidents": incidents_status(),
+        "CBP ports": _first_stamp(_raw("cbp"), ("updated", "fetched_at", "as_of")),
+        "IFTA matrix": _first_stamp(_raw("ifta"), ("updated", "fetched_date", "fetched_at")),
+        "Cargo theft feed": _first_stamp(_raw("theft"), ("updated",)),
     }
     
     lines.append("| Source | Last Update | Status |")
@@ -608,6 +863,12 @@ def _format_brief(date_str, sections, angles, keywords, fuel, fx, border, news, 
                 lines.append("")
             else:
                 lines.append("*No active major incidents.*\n")
+
+        elif isinstance(section_data, list) and all(isinstance(x, str) for x in section_data):
+            # Plain line sections: CBP ports, IFTA/tax, border archive, cargo theft.
+            for ln in section_data:
+                lines.append(ln)
+            lines.append("")
     
     lines.append("---\n")
     
@@ -615,13 +876,45 @@ def _format_brief(date_str, sections, angles, keywords, fuel, fx, border, news, 
     lines.append("## BLOG ANGLE OPTIONS\n")
     lines.append("Select ONE angle per article. Each angle includes a headline suggestion, data to cite, and writing notes.\n")
     
-    for i, angle in enumerate(angles[:4], 1):
+    # Two non-fuel angles and one fuel angle always make the cut, and ISO-week parity decides
+    # which lane leads. Before this the print was angles[:4]: angle 1 is always diesel, angle 3 is
+    # only border when a port was slow, and angle 4 is a news category - so the four on offer were
+    # fuel, fuel, maybe border, vague policy. The first angle is also the one that gets written.
+    lead_nonfuel = datetime.now(timezone.utc).isocalendar()[1] % 2 == 0
+    fuel_lane = [a for a in angles if a.get("lane") == "fuel"]
+    specific_other = [a for a in angles if a.get("lane") != "fuel" and a.get("specific", True)]
+    vague_other = [a for a in angles if a.get("lane") != "fuel" and not a.get("specific", True)]
+    nonfuel = specific_other + vague_other
+    if lead_nonfuel:
+        picked = nonfuel[:2] + fuel_lane[:2]
+    else:
+        picked = fuel_lane[:2] + nonfuel[:2]
+
+    seen = set()
+    unique = []
+    for a in picked:
+        if a["headline"] not in seen:
+            seen.add(a["headline"])
+            unique.append(a)
+    picked = unique[:4]
+    if len(picked) < 4:
+        picked += [a for a in angles if a["headline"] not in seen][:4 - len(picked)]
+
+
+    for i, angle in enumerate(picked, 1):
         lines.append(f"### Angle {i}: {angle['headline']}\n")
-        lines.append(f"**Focus:** {angle['focus']}")
+        lines.append(f"**Lane:** {angle.get('lane', 'other')} | **Focus:** {angle['focus']}")
         lines.append(f"**Data used:** {', '.join(angle['data_used'])}")
         lines.append(f"**Writing notes:** {angle['angle_text']}")
         lines.append(f"**Suggested keyword:** {keywords[i-1] if i <= len(keywords) else keywords[-1] if keywords else 'generic'}")
         lines.append("")
+
+    # Nothing below the fold should be fuel-only either: naming the lanes makes the mix visible
+    # at a glance instead of something you have to count.
+    lanes = {}
+    for a in angles:
+        lanes[a.get("lane", "other")] = lanes.get(a.get("lane", "other"), 0) + 1
+    lines.append(f"*Angles available by lane: {', '.join(f'{k} {v}' for k, v in sorted(lanes.items()))}*\n")
     
     # Keywords
     lines.append("---\n")
@@ -632,10 +925,10 @@ def _format_brief(date_str, sections, angles, keywords, fuel, fx, border, news, 
     # Content type recommendation
     lines.append("---\n")
     lines.append("## CONTENT TYPE RECOMMENDATION\n")
-    lines.append(f"Primary article: {angles[0]['focus'] if angles else 'weekly roundup'}")
+    lines.append(f"Primary article: {picked[0]['focus'] if picked else 'weekly roundup'}")
     lines.append(f"Suggested length: 1,000–1,500 words")
     lines.append(f"Publish day: Wednesday morning (best engagement window)")
-    lines.append(f"Internal links: /fuel-prices/, /border-wait-times/, /freight-barometer/\n")
+    lines.append(f"Internal links: /border-wait-times/, /road-incidents/, /ifta-rates/, /fuel-tax-rates/, /freight-barometer/\n")
     
     return "\n".join(lines)
 
