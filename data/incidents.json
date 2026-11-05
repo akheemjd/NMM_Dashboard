@@ -1,38 +1,56 @@
 {
   "incidents": [
     {
-      "id": "ON-332116",
+      "id": "ON-332158",
       "province": "ON",
-      "highway": "HWY 400",
-      "direction": "Southbound",
-      "description": "Collision on HWY 400 Southbound  at FINCH AVENUE, Toronto. Left shoulder and 1 left lane closed.",
+      "highway": "HWY 407",
+      "direction": "Westbound",
+      "description": "Collision on HWY 407 Westbound RAMP at THICKSON RD, Whitby. All lanes closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
-      "closure": false,
-      "lanes": "left shoulder and 1 left lane closed",
-      "lat": 43.75425671,
-      "lng": -79.53072531,
-      "start": 1793832000,
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.951214,
+      "lng": -78.94093,
+      "start": 1793835960,
       "end": null,
-      "updated": 1793832000,
+      "updated": 1793835960,
       "country": "CA",
       "scheduled": false
     },
     {
-      "id": "ON-332114",
+      "id": "ON-332157",
       "province": "ON",
       "highway": "HWY 401",
       "direction": "Eastbound",
-      "description": "Collision on HWY 401 Eastbound COLLECTOR at MISSISSAUGA RD, Mississauga. Left shoulder and left lane closed.",
+      "description": "Collision on HWY 401 Eastbound  at JAMES SNOW PKWY, Milton. Left shoulder and left lane closed.",
       "event_type": "accidentsandincidents",
       "severity": "Unknown",
       "closure": false,
       "lanes": "left shoulder and left lane closed",
-      "lat": 43.605153,
-      "lng": -79.7463043,
-      "start": 1793831520,
+      "lat": 43.5389389,
+      "lng": -79.8718722,
+      "start": 1793835900,
       "end": null,
-      "updated": 1793831520,
+      "updated": 1793835900,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "ON-332155",
+      "province": "ON",
+      "highway": "HWY 407",
+      "direction": "Eastbound",
+      "description": "Collision on HWY 407 Eastbound RAMP at THICKSON RD, Whitby. All lanes closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "All lanes closed",
+      "lat": 43.951527,
+      "lng": -78.940852,
+      "start": 1793835840,
+      "end": null,
+      "updated": 1793835840,
       "country": "CA",
       "scheduled": false
     },
@@ -51,24 +69,6 @@
       "start": 1793830920,
       "end": null,
       "updated": 1793830920,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-332067",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Eastbound",
-      "description": "Disabled Vehicle on HWY 401 Eastbound  at BLESSINGTON CREEK BRIDGE, Belleville. Right lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "right lane closed",
-      "lat": 44.22174,
-      "lng": -77.28386,
-      "start": 1793823000,
-      "end": null,
-      "updated": 1793829600,
       "country": "CA",
       "scheduled": false
     },
@@ -448,7 +448,7 @@
       "end": 1793923200,
       "updated": 1793799660,
       "country": "CA",
-      "scheduled": true
+      "scheduled": false
     },
     {
       "id": "ON-332034",
@@ -595,7 +595,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-05",
       "end_date": "2026-11-06",
       "id": "CA-C5HB-0002-2026-11-05-20:01:00",
@@ -637,7 +637,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-05",
       "end_date": "2026-11-06",
       "id": "CA-C5HB-0004-2026-11-05-21:01:00",
@@ -679,7 +679,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-05",
       "end_date": "2026-11-06",
       "id": "CA-C5HB-0006-2026-11-05-21:01:00",
@@ -742,7 +742,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-05",
       "end_date": "2026-11-06",
       "id": "CA-C5HB-0008-2026-11-05-21:01:00",
@@ -784,7 +784,7 @@
       "country": "US"
     },
     {
-      "scheduled": true,
+      "scheduled": false,
       "start_date": "2026-11-05",
       "end_date": "2026-11-06",
       "id": "CA-C5HB-0010-2026-11-05-21:01:00",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-04T23:00:42.130672+00:00",
+  "updated": "2026-11-05T00:01:23.853703+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
