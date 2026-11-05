@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-05 13:00",
-  "updated_iso": "2026-11-05T13:00:54+00:00",
-  "build_version": "1793883654",
+  "updated_at": "2026-11-05 14:00",
+  "updated_iso": "2026-11-05T14:00:57+00:00",
+  "build_version": "1793887257",
   "border": {
     "gauge_class": "ok",
     "heavy_count": 0,
@@ -11,8 +11,8 @@
     "min_wait": "No delay",
     "max_name": "Ambassador Bridge",
     "max_wait": "15 min",
-    "us_max_name": "Blaine-Pacific Highway",
-    "us_max_wait": "20 min",
+    "us_max_name": "Peace Bridge",
+    "us_max_wait": "39 min",
     "ca_max_name": "Ambassador Bridge"
   },
   "fuel": {
@@ -350,9 +350,9 @@
   },
   "incidents": {
     "none": false,
-    "active_count": 70,
+    "active_count": 72,
     "gauge_class": "warn",
-    "status_line": "Live now: 54 in the US, 29 in Canada.",
+    "status_line": "Live now: 54 in the US, 31 in Canada.",
     "incidents": [
       {
         "road": "I-5 in Stanislaus County",
@@ -362,8 +362,8 @@
         "url": "/road-incidents/"
       },
       {
-        "road": "HWY 400",
-        "what": "Highway Maintenance on HWY 400 Northbound  at SB EXIT 156/Honey Harbour Rd/Port\u2026",
+        "road": "HWY 599",
+        "what": "Highway Maintenance on HWY 599 Southbound  between PICKLE LAKE RD (W) and\u2026",
         "severity_label": "Collision",
         "severity_class": "ok",
         "url": "/road-incidents/"
@@ -379,11 +379,11 @@
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "07:45 EST",
+      "captured_at": "08:54 EST",
       "route": "Windsor, ON \u2014 Detroit, MI",
       "label": "Ambassador Bridge",
       "route_both": "Detroit, MI and Windsor, ON",
-      "us_wait": "5 min",
+      "us_wait": "10 min",
       "us_status_class": "mod"
     },
     {
@@ -413,8 +413,8 @@
       "route": "Fort Erie, ON \u2014 Buffalo, NY",
       "label": "Peace Bridge",
       "route_both": "Buffalo, NY and Fort Erie, ON",
-      "us_wait": "10 min",
-      "us_status_class": "mod"
+      "us_wait": "39 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Queenston-Lewiston Bridge",
@@ -428,8 +428,8 @@
       "route": "Queenston, ON \u2014 Lewiston, NY",
       "label": "Queenston-Lewiston Bridge",
       "route_both": "Lewiston, NY and Queenston, ON",
-      "us_wait": "7 min",
-      "us_status_class": "mod"
+      "us_wait": "No delay",
+      "us_status_class": "ok"
     },
     {
       "name": "Lacolle Border Crossing",
@@ -454,7 +454,7 @@
       "status_label": "Flowing",
       "status_class": "ok",
       "url": "/border-wait-times/",
-      "captured_at": "05:15 MDT",
+      "captured_at": "07:15 MDT",
       "route": "Coutts, AB \u2014 Sweetgrass, MT",
       "label": "Coutts-Sweetgrass",
       "route_both": "Sweetgrass, MT and Coutts, AB",
@@ -465,15 +465,15 @@
       "name": "Pacific Highway Crossing",
       "slug": "pacific-highway-crossing",
       "sub": "Blaine, WA and Surrey, BC \u00b7 WA-543 / BC-15 \u00b7 FAST",
-      "wait": "10 min",
+      "wait": "5 min",
       "status_label": "Moderate",
       "status_class": "mod",
       "url": "/border-wait-times/",
-      "captured_at": "05:40 PDT",
+      "captured_at": "06:40 PDT",
       "route": "Surrey, BC \u2014 Blaine, WA",
       "label": "Blaine-Pacific Highway",
       "route_both": "Blaine, WA and Surrey, BC",
-      "us_wait": "20 min",
+      "us_wait": "30 min",
       "us_status_class": "heavy"
     },
     {
@@ -488,8 +488,8 @@
       "route": "Emerson, MB \u2014 Pembina, ND",
       "label": "Emerson-Pembina",
       "route_both": "Pembina, ND and Emerson, MB",
-      "us_wait": "No delay",
-      "us_status_class": "ok"
+      "us_wait": "24 min",
+      "us_status_class": "heavy"
     },
     {
       "name": "Thousand Islands Bridge",
@@ -611,18 +611,18 @@
   "theft": [],
   "news": [
     {
-      "category": "drivers",
+      "category": "regulations",
       "source": "The Trucker",
-      "headline": "Appreciation in action: TCA\u2019s Elevate class fills goodie bags to share with professional drivers",
-      "url": "https://www.thetrucker.com/trucking-news/truckload-authority/talking-tca/appreciation-in-action-tcas-elevate-class-fills-goodie-bags-to-share-with-professional-drivers",
-      "why": "Driver supply and pay shape capacity and rates."
+      "headline": "TCA Truckload Forum to address economy, regulations and cross-border challenges",
+      "url": "https://www.thetrucker.com/trucking-news/truckload-authority/talking-tca/tca-truckload-forum-to-address-economy-regulations-and-cross-border-challenges",
+      "why": "Rules change compliance cost and driver hours."
     },
     {
-      "category": "industry",
+      "category": "drivers",
       "source": "The Trucker",
-      "headline": "Ray Stevens: Country music\u2019s funny man keeps audiences in stitches",
-      "url": "https://www.thetrucker.com/trucking-news/perspective/rhythm-of-the-road-by-kris-rutherford/ray-stevens-country-musics-funny-man-keeps-audiences-in-stitches",
-      "why": "Industry movement worth tracking."
+      "headline": "Drivers are trucking\u2019s greatest strength: Appreciation should be more than a week on the calendar",
+      "url": "https://www.thetrucker.com/trucking-news/truckload-authority/talking-tca/drivers-are-truckings-greatest-strength-appreciation-should-be-more-than-a-week-on-the-calendar",
+      "why": "Driver supply and pay shape capacity and rates."
     }
   ],
   "theft_home_json": "[]",
