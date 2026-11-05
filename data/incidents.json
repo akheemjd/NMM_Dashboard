@@ -1,42 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-332210",
-      "province": "ON",
-      "highway": "HWY 403 HAMILTON",
-      "direction": "Westbound",
-      "description": "Collision on HWY 403 HAMILTON Westbound  at YORK BLVD, Hamilton. Left lane closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "left lane closed",
-      "lat": 43.28407869,
-      "lng": -79.89515305,
-      "start": 1793857320,
-      "end": null,
-      "updated": 1793857320,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
-      "id": "ON-332209",
-      "province": "ON",
-      "highway": "HWY 401",
-      "direction": "Westbound",
-      "description": "Collision on HWY 401 Westbound  at WESTNEY ROAD, Ajax. 1 right lane and right shoulder closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 right lane and right shoulder closed",
-      "lat": 43.84921037,
-      "lng": -79.04076625,
-      "start": 1793857200,
-      "end": null,
-      "updated": 1793857200,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "WI-f816178c-d44c-db5d-96e2-9045921cff50",
       "province": "WI",
       "country": "US",
@@ -1012,6 +976,24 @@
       "scheduled": true
     },
     {
+      "id": "ON-331741",
+      "province": "ON",
+      "highway": "HWY 3",
+      "direction": "Eastbound",
+      "description": "Daily Engineering Investigation on HWY 3 Eastbound  between Talbot Road and Talbot Road, Maidstone. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 42.211994,
+      "lng": -82.902954,
+      "start": 1794229200,
+      "end": 1795208400,
+      "updated": 1793749440,
+      "country": "CA",
+      "scheduled": true
+    },
+    {
       "id": "drivebc.ca/RIDE-105234",
       "province": "BC",
       "highway": "Other Roads near Whatcom Road Onramp",
@@ -1028,6 +1010,24 @@
       "updated": "2026-11-03T15:29:50-07:00",
       "country": "CA",
       "scheduled": false
+    },
+    {
+      "id": "ON-331945",
+      "province": "ON",
+      "highway": "HWY 427",
+      "direction": "Northbound",
+      "description": "Nightly Engineering Investigation on HWY 427 Northbound Off-ramp at DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "1 Alternating Lane(s)",
+      "lat": 43.68615,
+      "lng": -79.6001,
+      "start": 1795662000,
+      "end": 1795777200,
+      "updated": 1793744160,
+      "country": "CA",
+      "scheduled": true
     },
     {
       "id": "ND-MA-100603",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-05T06:00:40.075667+00:00",
+  "updated": "2026-11-05T07:00:40.583168+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
