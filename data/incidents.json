@@ -1,24 +1,6 @@
 {
   "incidents": [
     {
-      "id": "ON-332195",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Southbound",
-      "description": "Collision on HWY 427 Southbound ON-RAMP at FINCH AVENUE, Toronto. All lanes closed.",
-      "event_type": "accidentsandincidents",
-      "severity": "Unknown",
-      "closure": true,
-      "lanes": "All lanes closed",
-      "lat": 43.733999,
-      "lng": -79.627409,
-      "start": 1793846760,
-      "end": null,
-      "updated": 1793846760,
-      "country": "CA",
-      "scheduled": false
-    },
-    {
       "id": "ON-332189",
       "province": "ON",
       "highway": "RED HILL CREEK EXPRESSWAY",
@@ -467,6 +449,24 @@
       "updated": 1793799660,
       "country": "CA",
       "scheduled": false
+    },
+    {
+      "id": "ON-332034",
+      "province": "ON",
+      "highway": "QEW",
+      "direction": "Fort Erie Bound",
+      "description": "Continuous Construction on QEW Fort Erie Bound Off-ramp at SODOM ROAD, Niagara Falls. ALL LANES CLOSED.",
+      "event_type": "roadwork",
+      "severity": "Unknown",
+      "closure": true,
+      "lanes": "ALL LANES CLOSED",
+      "lat": 42.989857,
+      "lng": -79.05711,
+      "start": 1794222000,
+      "end": 1794610800,
+      "updated": 1793793360,
+      "country": "CA",
+      "scheduled": true
     },
     {
       "scheduled": false,
@@ -1192,6 +1192,24 @@
       "scheduled": false
     },
     {
+      "id": "WI-64320055-fb51-9753-9d32-9b0ede574346",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 NB",
+      "direction": "Northbound",
+      "description": "Road closed on I-41 NB northbound, WI. Mainline Full Closure on I-41 NB from OFF RAMP TO WIS 96 to OFF RAMP TO COUNTY E. Daily from 11/03/2026 to 11/05/2026, 10:00 PM - 04:30 AM, T, W (excluding Th). Detour: Exit I-41 NB at WIS 96/Wisconsin Avenue.  Turn Right and travel East to Lynndale Dr.  Turn L",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 44.2715893929354,
+      "lng": -88.466436406368,
+      "start": "2026-11-05T04:00:00+00:00",
+      "end": "2026-11-05T10:30:00+00:00",
+      "updated": "2026-10-29T20:59:17.517+00:00",
+      "scheduled": false
+    },
+    {
       "id": "MN-CARSx-70309-1",
       "province": "MN",
       "country": "US",
@@ -1279,24 +1297,6 @@
       "start": "2026-06-15T00:00:00-05:00",
       "end": "2026-11-06T00:00:00-06:00",
       "updated": "2026-10-29T11:26:58-05:00",
-      "scheduled": false
-    },
-    {
-      "id": "WI-53b5a5d5-e7bb-355d-b563-0cb960e04c76",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-41 NB",
-      "direction": "Northbound",
-      "description": "Road closed on I-41 NB northbound, WI. System Interchange Full Closure on I-41 NB at I-41 NB TO WIS 441 SB (RAMP). Daily from 11/01/2026 to 11/07/2026, 09:00 PM - 05:00 AM, Sun, M, T, W, Th, F (excluding Sat)",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 44.29792953142643,
-      "lng": -88.35760497108056,
-      "start": "2026-11-05T03:00:00+00:00",
-      "end": "2026-11-05T11:00:00+00:00",
-      "updated": "2026-10-28T20:29:15.64+00:00",
       "scheduled": false
     },
     {
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-05T03:00:43.465537+00:00",
+  "updated": "2026-11-05T04:01:02.093717+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
