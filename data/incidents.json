@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-332231",
+      "province": "ON",
+      "highway": "HWY 406",
+      "direction": "Northbound",
+      "description": "Collision on HWY 406 Northbound  at 4TH AVE, St. Catharines. Left shoulder and left lane closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "left shoulder and left lane closed",
+      "lat": 43.15742436,
+      "lng": -79.26028734,
+      "start": 1793876100,
+      "end": null,
+      "updated": 1793876160,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "scheduled": false,
       "start_date": "2024-07-08",
       "end_date": "2026-11-15",
@@ -526,24 +544,6 @@
       "country": "US"
     },
     {
-      "id": "WI-f816178c-d44c-db5d-96e2-9045921cff50",
-      "province": "WI",
-      "country": "US",
-      "highway": "I-41 North",
-      "direction": "Northbound",
-      "description": "Road closed on I-41 North northbound, WI. I-41 North CLOSED from Wisconsin Ave to Ramp from Ballard Rd because of road work until Thursday, November 5 at 4:30 am.",
-      "event_type": "road closure",
-      "severity": "closed",
-      "closure": true,
-      "lanes": "all lanes closed",
-      "lat": 44.270778,
-      "lng": -88.466165,
-      "start": "2026-11-05T04:00:00+00:00",
-      "end": "2026-11-05T10:30:00+00:00",
-      "updated": "2026-11-05T04:02:03.9834153+00:00",
-      "scheduled": false
-    },
-    {
       "id": "ON-332166",
       "province": "ON",
       "highway": "HWY 417",
@@ -1010,24 +1010,6 @@
       "updated": "2026-11-03T15:29:50-07:00",
       "country": "CA",
       "scheduled": false
-    },
-    {
-      "id": "ON-331945",
-      "province": "ON",
-      "highway": "HWY 427",
-      "direction": "Northbound",
-      "description": "Nightly Engineering Investigation on HWY 427 Northbound Off-ramp at DIXON ROAD/AIRPORT ROAD, Toronto. 1 Alternating Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Alternating Lane(s)",
-      "lat": 43.68615,
-      "lng": -79.6001,
-      "start": 1795662000,
-      "end": 1795777200,
-      "updated": 1793744160,
-      "country": "CA",
-      "scheduled": true
     },
     {
       "id": "ND-MA-100603",
@@ -1531,6 +1513,24 @@
       "end": "",
       "updated": "2026-10-26T11:49:57-07:00",
       "country": "CA",
+      "scheduled": false
+    },
+    {
+      "id": "WI-7aec5c67-c4d0-9054-bb7f-6c5740f7f2ca",
+      "province": "WI",
+      "country": "US",
+      "highway": "I-41 NB",
+      "direction": "Northbound",
+      "description": "Road closed on I-41 NB northbound, WI. Ramp Full Closure on I-41 NB at OFF RAMP TO WIS 15 / CTH 00 / W NORTHLAND AVE. Daily from 11/02/2026 to 11/07/2026, 07:00 PM - 06:00 AM, M, T, W, Th, F (excluding Sat). Detour: Exit I-41 NB at WIS 96/Wisconsin Avenue. Turn Right and travel East to Lynndale Dr. ",
+      "event_type": "road closure",
+      "severity": "closed",
+      "closure": true,
+      "lanes": "all lanes closed",
+      "lat": 44.28522646981727,
+      "lng": -88.46607150161218,
+      "start": "2026-11-05T01:00:00+00:00",
+      "end": "2026-11-05T12:00:00+00:00",
+      "updated": "2026-10-26T15:49:18.02+00:00",
       "scheduled": false
     },
     {
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-05T10:00:42.797016+00:00",
+  "updated": "2026-11-05T11:00:42.404323+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
