@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04T20:01:45.140525",
+  "generated": "2026-11-04T21:01:03.122337",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -149,8 +149,8 @@
       "us": {
         "label": "Sweetgrass",
         "reported": true,
-        "delay": 45,
-        "captured": "11/4/2026 17:51:39"
+        "delay": 15,
+        "captured": "11/4/2026 18:52:00"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": true,
         "delay": 17,
-        "captured": "11/4/2026 18:51:39"
+        "captured": "11/4/2026 19:52:00"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 6,
-        "captured": "11/4/2026 19:51:38"
+        "delay": 21,
+        "captured": "11/4/2026 20:52:00"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "11/4/2026 19:51:38"
+        "captured": "11/4/2026 20:52:00"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": true,
         "delay": 15,
-        "captured": "11/4/2026 19:51:38"
+        "captured": "11/4/2026 20:52:00"
       }
     },
     "pacific-blaine": {
@@ -909,8 +909,8 @@
       "us": {
         "label": "Pacific Highway",
         "reported": true,
-        "delay": 10,
-        "captured": "11/4/2026 16:51:38"
+        "delay": 0,
+        "captured": "11/4/2026 17:52:00"
       }
     },
     "queenston-lewiston": {
@@ -1061,8 +1061,8 @@
       "us": {
         "label": "Lewiston Bridge",
         "reported": true,
-        "delay": 0,
-        "captured": "11/4/2026 19:51:38"
+        "delay": 4,
+        "captured": "11/4/2026 20:52:00"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "11/4/2026 19:51:39"
+        "captured": "11/4/2026 20:52:00"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 5,
-        "captured": "11/4/2026 19:51:39"
+        "captured": "11/4/2026 20:52:00"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1523,7 +1523,7 @@
       "max_delay": 20,
       "p50": 0.0,
       "p75": 5.0,
-      "p90": 10.0,
+      "p90": 5.0,
       "observations": 31,
       "days_covered": 31,
       "hourly": {
@@ -1636,7 +1636,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 5,
+          "avg": 3,
           "count": 5,
           "label": "Wed"
         },
@@ -1959,11 +1959,11 @@
     },
     "us-buffalo-niagara-falls-lewiston-bridge": {
       "id": "us-buffalo-niagara-falls-lewiston-bridge",
-      "avg_delay": 2,
+      "avg_delay": 3,
       "min_delay": 0,
       "max_delay": 13,
       "p50": 1.0,
-      "p75": 2.5,
+      "p75": 3.0,
       "p90": 7.0,
       "observations": 31,
       "days_covered": 31,
@@ -2106,11 +2106,11 @@
     },
     "us-buffalo-niagara-falls-peace-bridge": {
       "id": "us-buffalo-niagara-falls-peace-bridge",
-      "avg_delay": 5,
+      "avg_delay": 6,
       "min_delay": 0,
-      "max_delay": 19,
+      "max_delay": 21,
       "p50": 4.0,
-      "p75": 6.5,
+      "p75": 7.0,
       "p90": 16.0,
       "observations": 31,
       "days_covered": 31,
@@ -2224,7 +2224,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 3,
+          "avg": 6,
           "count": 5,
           "label": "Wed"
         },
@@ -3135,11 +3135,11 @@
     },
     "us-detroit-gordie-howe-international-bridge": {
       "id": "us-detroit-gordie-howe-international-bridge",
-      "avg_delay": 2,
+      "avg_delay": 1,
       "min_delay": 0,
-      "max_delay": 10,
+      "max_delay": 5,
       "p50": 0.0,
-      "p75": 5.0,
+      "p75": 4.5,
       "p90": 5.0,
       "observations": 31,
       "days_covered": 31,
@@ -3253,7 +3253,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 4,
+          "avg": 2,
           "count": 5,
           "label": "Wed"
         },
@@ -3579,7 +3579,7 @@
       "avg_delay": 9,
       "min_delay": 0,
       "max_delay": 35,
-      "p50": 7.5,
+      "p50": 5.0,
       "p75": 10.0,
       "p90": 23.5,
       "observations": 22,
@@ -3694,7 +3694,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 9,
+          "avg": 8,
           "count": 5,
           "label": "Wed"
         },
@@ -4311,12 +4311,12 @@
     },
     "us-laredo-colombia-solidarity": {
       "id": "us-laredo-colombia-solidarity",
-      "avg_delay": 5,
+      "avg_delay": 6,
       "min_delay": 0,
       "max_delay": 30,
       "p50": 0.0,
       "p75": 10.0,
-      "p90": 13.5,
+      "p90": 18.5,
       "observations": 24,
       "days_covered": 24,
       "hourly": {
@@ -4429,7 +4429,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 4,
+          "avg": 10,
           "count": 5,
           "label": "Wed"
         },
@@ -6222,7 +6222,7 @@
     },
     "us-sumas": {
       "id": "us-sumas",
-      "avg_delay": 3,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 20,
       "p50": 0.0,
@@ -6340,7 +6340,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 5,
+          "avg": 2,
           "count": 5,
           "label": "Wed"
         },
@@ -6369,12 +6369,12 @@
     },
     "us-sweetgrass": {
       "id": "us-sweetgrass",
-      "avg_delay": 21,
+      "avg_delay": 20,
       "min_delay": 0,
       "max_delay": 60,
       "p50": 15.0,
-      "p75": 35.0,
-      "p90": 45.0,
+      "p75": 30.0,
+      "p90": 40.0,
       "observations": 31,
       "days_covered": 31,
       "hourly": {
@@ -6487,7 +6487,7 @@
           "label": "Tue"
         },
         "2": {
-          "avg": 17,
+          "avg": 11,
           "count": 5,
           "label": "Wed"
         },
