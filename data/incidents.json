@@ -1,6 +1,24 @@
 {
   "incidents": [
     {
+      "id": "ON-332359",
+      "province": "ON",
+      "highway": "HWY 404",
+      "direction": "Southbound",
+      "description": "Collision on HWY 404 Southbound ON-RAMP at STEELES AVE / WOODBINE AVE, Toronto. Right lane and right shoulder closed.",
+      "event_type": "accidentsandincidents",
+      "severity": "Unknown",
+      "closure": false,
+      "lanes": "right lane and right shoulder closed",
+      "lat": 43.81251,
+      "lng": -79.348472,
+      "start": 1793894280,
+      "end": null,
+      "updated": 1793894280,
+      "country": "CA",
+      "scheduled": false
+    },
+    {
       "id": "ON-332356",
       "province": "ON",
       "highway": "HWY 559",
@@ -974,24 +992,6 @@
       "end": "2026-11-06T00:00:00-06:00",
       "updated": "2026-11-04T13:19:35-06:00",
       "scheduled": false
-    },
-    {
-      "id": "ON-332062",
-      "province": "ON",
-      "highway": "HWY 412",
-      "direction": "Southbound",
-      "description": "Nightly Maintenance on HWY 412 Southbound  between ROSSLAND RD and DUNDAS ST W, Whitby. 1 Left Lane(s).",
-      "event_type": "roadwork",
-      "severity": "Unknown",
-      "closure": false,
-      "lanes": "1 Left Lane(s)",
-      "lat": 43.888657,
-      "lng": -78.98895,
-      "start": 1794279600,
-      "end": 1794394800,
-      "updated": 1793819880,
-      "country": "CA",
-      "scheduled": true
     },
     {
       "id": "drivebc.ca/RIDE-105234",
@@ -2147,7 +2147,7 @@
     }
   ],
   "total": 115,
-  "updated": "2026-11-05T16:00:40.821777+00:00",
+  "updated": "2026-11-05T16:02:06.880141+00:00",
   "sources": [
     "Ontario 511",
     "BC DriveBC",
