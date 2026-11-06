@@ -1,6 +1,15 @@
 {
   "market": [
     {
+      "name": "Quarterly GDP",
+      "note": "Q3 2026, annualized, $24.6T (chained 2017)",
+      "value": "+3.4%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "Broadest measure of US economic activity. GDP growth = more freight moving."
+    },
+    {
       "name": "Monthly GDP",
       "note": "$2372B (chained 2017)",
       "value": "0.0%",
@@ -8,6 +17,15 @@
       "country_prefix": "<span class=\"src\">Canada</span> ",
       "source": "Statistics Canada",
       "what_it_means": "Broadest measure of economic activity. GDP growth = more freight moving."
+    },
+    {
+      "name": "GDP, year over year",
+      "note": "GDP against the same quarter last year. The longer-term\u2026",
+      "value": "+2.1%",
+      "value_class": "flat",
+      "country_prefix": "<span class=\"src\">US</span> ",
+      "source": "US Bureau of Economic Analysis, via FRED",
+      "what_it_means": "GDP against the same quarter last year. The longer-term freight demand trend."
     },
     {
       "name": "GDP, year over year",
@@ -57,8 +75,8 @@
     {
       "name": "Border congestion",
       "country_prefix": "<span class=\"src\">US</span> ",
-      "note": "5 of 8 crossings slow, US-bound",
-      "value": "5/8",
+      "note": "5 of 6 crossings slow, US-bound",
+      "value": "5/6",
       "value_class": "flat",
       "source": "CBP border wait times",
       "what_it_means": "Backed-up crossings add idle time and late-delivery risk on cross-border lanes."
@@ -82,13 +100,13 @@
       "what_it_means": "Weaker CAD = more competitive cross-border exports, higher input costs. Stronger CAD = cheaper US equipment/parts."
     }
   ],
-  "direction_summary": "1 up \u00b7 1 down \u00b7 5 steady or level",
-  "weekly_read": "US diesel at $6.292/gal, Canadian diesel at 258.1\u00a2/L, the loonie at 1.3989, Canadian GDP moving 0.0% last month.",
+  "direction_summary": "3 up \u00b7 1 down \u00b7 5 steady or level",
+  "weekly_read": "US diesel at $6.292/gal, Canadian diesel at 258.1\u00a2/L, the loonie at 1.3989, US GDP moving +3.4% annualized last quarter, Canadian GDP moving 0.0% last month.",
   "fuel_pct_of_ops": "25-35%",
   "current_diesel": 258.1,
   "us_diesel": "6.292",
   "usd_cad": 1.3989,
-  "updated_at": "2026-11-06 05:01",
-  "updated_iso": "2026-11-06T05:01:20+00:00",
-  "build_version": "1793941280"
+  "updated_at": "2026-11-06 06:01",
+  "updated_iso": "2026-11-06T06:01:30+00:00",
+  "build_version": "1793944890"
 }
