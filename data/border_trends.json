@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T21:01:41.738561",
+  "generated": "2026-11-05T22:01:29.635070",
   "crossings": {
     "coutts-sweetgrass": {
       "id": "coutts-sweetgrass",
@@ -149,8 +149,8 @@
       "us": {
         "label": "Sweetgrass",
         "reported": true,
-        "delay": 45,
-        "captured": "11/5/2026 18:53:32"
+        "delay": 60,
+        "captured": "11/5/2026 19:58:43"
       }
     },
     "emerson-pembina": {
@@ -302,7 +302,7 @@
         "label": "Pembina",
         "reported": true,
         "delay": 0,
-        "captured": "11/5/2026 19:53:32"
+        "captured": "11/5/2026 20:58:43"
       }
     },
     "fort-erie-buffalo": {
@@ -453,8 +453,8 @@
       "us": {
         "label": "Peace Bridge",
         "reported": true,
-        "delay": 2,
-        "captured": "11/5/2026 20:53:32"
+        "delay": 3,
+        "captured": "11/5/2026 21:58:43"
       }
     },
     "lacolle-champlain": {
@@ -606,7 +606,7 @@
         "label": "Champlain",
         "reported": true,
         "delay": 0,
-        "captured": "11/5/2026 20:53:32"
+        "captured": "11/5/2026 21:58:43"
       }
     },
     "lansdowne-alexandria": {
@@ -758,7 +758,7 @@
         "label": "Thousand Islands Bridge",
         "reported": false,
         "delay": "",
-        "captured": "11/5/2026 20:53:32"
+        "captured": "11/5/2026 21:58:43"
       }
     },
     "pacific-blaine": {
@@ -909,8 +909,8 @@
       "us": {
         "label": "Pacific Highway",
         "reported": true,
-        "delay": 0,
-        "captured": "11/5/2026 17:53:32"
+        "delay": 5,
+        "captured": "11/5/2026 18:58:43"
       }
     },
     "queenston-lewiston": {
@@ -1062,7 +1062,7 @@
         "label": "Lewiston Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "11/5/2026 20:53:32"
+        "captured": "11/5/2026 21:58:43"
       }
     },
     "sarnia-port-huron": {
@@ -1214,7 +1214,7 @@
         "label": "Bluewater Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "11/5/2026 20:53:32"
+        "captured": "11/5/2026 21:58:43"
       }
     },
     "windsor-detroit": {
@@ -1366,7 +1366,7 @@
         "label": "Ambassador Bridge",
         "reported": true,
         "delay": 0,
-        "captured": "11/5/2026 20:53:32"
+        "captured": "11/5/2026 21:58:43"
       }
     },
     "us-alexandria-bay-thousand-islands-bridge": {
@@ -1518,10 +1518,10 @@
     },
     "us-blaine-pacific-highway": {
       "id": "us-blaine-pacific-highway",
-      "avg_delay": 4,
+      "avg_delay": 5,
       "min_delay": 0,
       "max_delay": 45,
-      "p50": 0.0,
+      "p50": 2.5,
       "p75": 5.0,
       "p90": 9.5,
       "observations": 32,
@@ -1641,7 +1641,7 @@
           "label": "Wed"
         },
         "3": {
-          "avg": 4,
+          "avg": 5,
           "count": 5,
           "label": "Thu"
         },
@@ -3432,7 +3432,7 @@
       "avg_delay": 28,
       "min_delay": 10,
       "max_delay": 45,
-      "p50": 27.5,
+      "p50": 30.0,
       "p75": 35.0,
       "p90": 40.0,
       "observations": 24,
@@ -3552,7 +3552,7 @@
           "label": "Wed"
         },
         "3": {
-          "avg": 29,
+          "avg": 30,
           "count": 5,
           "label": "Thu"
         },
@@ -3576,12 +3576,12 @@
     },
     "us-hidalgo-pharr-pharr": {
       "id": "us-hidalgo-pharr-pharr",
-      "avg_delay": 10,
+      "avg_delay": 9,
       "min_delay": 0,
       "max_delay": 35,
-      "p50": 10.0,
+      "p50": 5.0,
       "p75": 10.0,
-      "p90": 24.0,
+      "p90": 22.0,
       "observations": 23,
       "days_covered": 23,
       "hourly": {
@@ -3699,7 +3699,7 @@
           "label": "Wed"
         },
         "3": {
-          "avg": 10,
+          "avg": 7,
           "count": 5,
           "label": "Thu"
         },
@@ -3870,10 +3870,10 @@
     },
     "us-houlton": {
       "id": "us-houlton",
-      "avg_delay": 1,
+      "avg_delay": 2,
       "min_delay": 0,
       "max_delay": 6,
-      "p50": 0.0,
+      "p50": 1.0,
       "p75": 3.0,
       "p90": 3.0,
       "observations": 32,
@@ -3993,7 +3993,7 @@
           "label": "Wed"
         },
         "3": {
-          "avg": 1,
+          "avg": 2,
           "count": 5,
           "label": "Thu"
         },
@@ -5340,12 +5340,12 @@
     },
     "us-otay-mesa-commercial": {
       "id": "us-otay-mesa-commercial",
-      "avg_delay": 19,
+      "avg_delay": 18,
       "min_delay": 0,
       "max_delay": 60,
       "p50": 20.0,
       "p75": 25.0,
-      "p90": 44.0,
+      "p90": 34.0,
       "observations": 27,
       "days_covered": 27,
       "hourly": {
@@ -5463,7 +5463,7 @@
           "label": "Wed"
         },
         "3": {
-          "avg": 20,
+          "avg": 14,
           "count": 5,
           "label": "Thu"
         },
@@ -5928,10 +5928,10 @@
     },
     "us-santa-teresa-santa-teresa-port-of-entry": {
       "id": "us-santa-teresa-santa-teresa-port-of-entry",
-      "avg_delay": 34,
+      "avg_delay": 33,
       "min_delay": 10,
       "max_delay": 50,
-      "p50": 40.0,
+      "p50": 35.0,
       "p75": 45.0,
       "p90": 49.0,
       "observations": 23,
@@ -6051,7 +6051,7 @@
           "label": "Wed"
         },
         "3": {
-          "avg": 33,
+          "avg": 32,
           "count": 5,
           "label": "Thu"
         },
@@ -6374,7 +6374,7 @@
       "max_delay": 60,
       "p50": 15.0,
       "p75": 32.5,
-      "p90": 44.5,
+      "p90": 58.0,
       "observations": 32,
       "days_covered": 32,
       "hourly": {
@@ -6492,7 +6492,7 @@
           "label": "Wed"
         },
         "3": {
-          "avg": 19,
+          "avg": 22,
           "count": 5,
           "label": "Thu"
         },
@@ -6816,8 +6816,8 @@
       "p50": 0.0,
       "p75": 0.0,
       "p90": 0.0,
-      "observations": 8,
-      "days_covered": 8,
+      "observations": 7,
+      "days_covered": 7,
       "hourly": {
         "0": {
           "avg": null,
@@ -6934,7 +6934,7 @@
         },
         "3": {
           "avg": 0,
-          "count": 3,
+          "count": 2,
           "label": "Thu"
         },
         "4": {
