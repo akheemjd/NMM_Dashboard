@@ -8,6 +8,20 @@ ROOT = os.path.dirname(HERE)
 STORE = os.path.join(ROOT, "data", "history", "border.csv")
 FIELDS = ["date", "crossing_id", "delay_minutes", "observation_time"]
 
+# Every observation, not one per day.
+#
+# border.csv is deliberately one row per crossing per day: the pages, border_trends.json and the
+# averages all read it that way, and changing its shape would silently reweight every published
+# p90. So the daily rollup stays exactly as it was and this file sits beside it.
+#
+# It exists because a "wait at 6am Tuesday" forecast needs intraday readings and there are none.
+# Measured 2026-11-06: 1,549 rows, 88 days, 55 crossings, and exactly one reading per
+# crossing-day, because record_run() drops the whole day and writes the last fetch. The collector
+# runs hourly, so 23 of every 24 readings were being thrown away. Anything built on border.csv
+# can only ever say what the wait was at whatever hour the collection happened to land.
+INTRADAY = os.path.join(ROOT, "data", "history", "border_intraday.csv")
+INTRADAY_FIELDS = ["date", "crossing_id", "delay_minutes", "observation_time"]
+
 
 def _ensure():
     os.makedirs(os.path.dirname(STORE), exist_ok=True)
@@ -48,6 +62,43 @@ def record_run(crossings, run_date=None):
         for r in sorted(set(rows)):
             f.write(r + "\n")
     os.replace(tmp, STORE)
+
+    _append_intraday(crossings, run_date)
+
+
+def _append_intraday(crossings, run_date):
+    """Append every reading to the intraday store, skipping ones already recorded.
+
+    Kept separate from the daily rollup so a forecast model can see the shape of a day. Nothing
+    reads this yet; it is being recorded now because the readings cannot be recovered later.
+    """
+    seen = set()
+    if os.path.exists(INTRADAY):
+        with open(INTRADAY) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("date"):
+                    seen.add(line)
+    else:
+        with open(INTRADAY, "w") as f:
+            f.write(",".join(INTRADAY_FIELDS) + "\n")
+
+    new_rows = []
+    for c in crossings:
+        delay = c.get("delay_minutes")
+        if delay is None:
+            continue
+        row = (f"{run_date},{c.get('id', c.get('name', 'unknown'))},{delay},"
+               f"{c.get('captured_utc', '')}")
+        if row in seen:
+            continue
+        seen.add(row)
+        new_rows.append(row)
+
+    if new_rows:
+        with open(INTRADAY, "a") as f:
+            for row in new_rows:
+                f.write(row + "\n")
 
 
 def span_days(crossing_id=None):
