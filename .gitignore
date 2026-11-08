@@ -22,6 +22,10 @@ templates/*.template.html
 .env.*
 !.env.example
 
+# Repo-owned interpreter. Created locally by `python3 -m venv .venv` so a Hermes update cannot
+# take the deploy's dependencies away with it. 232 MB, never committed.
+.venv/
+
 # Generated visuals (charts, hero cards) — rebuilt on demand, not source
 visuals/
 

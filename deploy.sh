@@ -27,9 +27,26 @@ cd "$REPO_DIR" || { echo "FATAL: cannot cd to repo dir $REPO_DIR"; exit 1; }
 echo "=== Deploy $(date) ==="
 
 # Auto-detect Python — venv path is absolute and doesn't depend on PATH
-PYTHON="/c/Users/Akheem/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe"
-[ -x "$PYTHON" ] || PYTHON="python"
+# The repo owns its interpreter.
+#
+# This used to point at the Hermes install's venv, and a Hermes update deleted that venv on
+# 2026-11-07. The test then failed, the fallback `python` resolved to a bare 3.14 with none of
+# the dependencies, and every build step would have died at the first import. A venv inside the
+# repo survives updates to anything else, so it is preferred and the old path stays only as a
+# second try.
+REPO_PYTHON="$REPO_DIR/.venv/Scripts/python.exe"
+LEGACY_PYTHON="/c/Users/Akheem/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe"
+if [ -x "$REPO_PYTHON" ]; then
+  PYTHON="$REPO_PYTHON"
+elif [ -x "$LEGACY_PYTHON" ]; then
+  PYTHON="$LEGACY_PYTHON"
+elif command -v python3 >/dev/null 2>&1; then
+  PYTHON="python3"
+else
+  PYTHON="python"
+fi
 echo "  Using Python: $PYTHON"
+
 
 # 1. Collect fresh data
 # Collection is a REQUIRED step. It used to be one `&&` chain, and bash's `set -e`

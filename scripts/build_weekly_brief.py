@@ -391,9 +391,20 @@ def format_border_history(trends):
     return out
 
 
+def _today():
+    """The publication date, on the clock the person writing and reading it live on.
+
+    This was datetime.now(timezone.utc).date(). A run at 20:00 Eastern is already the next day in
+    UTC, so a briefing written on 7 November was dated 8 November. The ISO week for the angle
+    rotation rolled over early for the same reason. A daily product carries the date its reader
+    is living in, so read the local clock.
+    """
+    return datetime.now().date()
+
+
 def generate_brief(today_override=None):
     """Build the complete weekly brief."""
-    today = today_override or datetime.now(timezone.utc).date()
+    today = today_override or _today()
     date_str = today.isoformat()
     
     print(f"=== Generating Weekly Brief {date_str} ===\n")
@@ -880,7 +891,7 @@ def _format_brief(date_str, sections, angles, keywords, fuel, fx, border, news, 
     # which lane leads. Before this the print was angles[:4]: angle 1 is always diesel, angle 3 is
     # only border when a port was slow, and angle 4 is a news category - so the four on offer were
     # fuel, fuel, maybe border, vague policy. The first angle is also the one that gets written.
-    lead_nonfuel = datetime.now(timezone.utc).isocalendar()[1] % 2 == 0
+    lead_nonfuel = _today().isocalendar()[1] % 2 == 0
     fuel_lane = [a for a in angles if a.get("lane") == "fuel"]
     specific_other = [a for a in angles if a.get("lane") != "fuel" and a.get("specific", True)]
     vague_other = [a for a in angles if a.get("lane") != "fuel" and not a.get("specific", True)]
