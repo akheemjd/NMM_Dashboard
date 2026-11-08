@@ -1,1 +1,0 @@
-The Ambassador Bridge between Windsor and Detroit is the busiest commercial crossing on the Canada–US border, carrying a large share of all truck trade between the two countries. It ties the Ontario auto corridor into the I-75 spine that runs the length of Michigan. When this crossing slows, it moves the whole corridor.

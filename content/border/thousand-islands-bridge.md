@@ -1,1 +1,0 @@
-The Thousand Islands Bridge links the ON-401 near Lansdowne to I-81 in upstate New York. It is the eastern Ontario corridor's main crossing for freight running between Toronto, Montreal, and the US interior.
